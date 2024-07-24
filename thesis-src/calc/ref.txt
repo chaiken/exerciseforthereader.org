@@ -1,0 +1,158 @@
+% -*- mode: text -*-
+References:
+1) J.E. Fischer, C.D. Fuerst, and H.J. Kim, Mat. Res. Soc. Symp. 20,
+   169 (1983).
+2) M. El Makrini, thesis, Universite de Nancy, 1980.
+3) M.G. Alexander, D.P. Goshorn, D. Guerard, P. Lagrange, M. El Makrini, and
+   D.G. Onn, Sol. State Comm. 38, 103 (1981).
+4) G. Timp, T.C. Chieu, P.D. Dresselhaus, and G. Dresselhaus,  Phys. Rev. B29,
+   6940 (1984).
+5) M. Tinkham, Introduction to Superconductivity, Robert E. Krieger
+Publishing Co., Huntington, NY, 1980. 
+6) Werthamer, Helfand, and Hohenberg, Phys. Rev. 147, 299 (1966).
+7) K. Maki, Physics 1, 137 (1964).
+8) M.H. Yang, P.A. Charron, R.E. Heinz, and P.C. Eklund, Phys. Rev. B37,
+1711 (1988).
+9) M.E Preil, L.A. Grunes, J.J. Ritsko, and J.E. Fischer, Phys. Rev. B30,
+5852 (1984). 
+10) J. Conard, H. Estrade-Szwarckopf, P. Laguinie, M. El Makrini, P. Lagrange,
+    and D. Guerard, Physica 105B, 290 (1981).
+11) J.J. Hopfield, Superconductivity in d- and f-Band Metals, ed. D.H.
+Douglass (AIP, 1972), p. 358. 
+12) G. Timp, B.S. Elman, R. Al-Jishi, and G. Dresselhaus, Sol. State Comm.
+44, 987 (1982). 
+13) K. Suzuki, I. Tsujikawa, M. Kobayashi, H. Inokuchi, Y. Oda, A.
+Sumiyama, H. Nagano, Y. Kimishima, Synth. Met. 12, 389 (1985).
+14) S. Kaneiwa, M. Kobayashi, and I. Tsujikawa, J. Phys. Soc. Jpn. 51, 2375
+(1982).
+15) M. Kobayashi and I. Tsujikawa, J. Phys. Soc. Jpn. 50, 3245 (1981).
+16) M. Sano, H. Inokuchi, M. Kobayshi, S. Kaneiwa, and I. Tsujikawa, J.
+Chem Phys. 72, 3841 (1980).
+17) T. Enoki, M. Sano, and H. Inokuchi, Phys. Rev. B32, 2497 (1985).
+18) U. Mizutani, T. Kondow, and T.B. Massalski, Phys. Rev. B17, 3165 (1978).
+19) M.G. Alexander, D.P. Goshorn, and D.G. Onn, Phys. Rev. B22, 4535 (1980).
+20) M. Suganuma, T. Kndow, and U. Mizutani, Phys. Rev. B23, 706 (1981).
+21) M. Kobayashi, T. Enoki, H. Inokuchi, M. Sano, A. Sumiyama, Y. Oda, and
+H. Nagano, J. Phys. Soc. Jpn. 54, 2359 (1985).
+22) S. Miyajima, T. Chiba, T. Enoki, H. Inokuchi, and M. Sano, Phys. Rev.
+B37, 3246 (1988).
+23) M. Kobayashi, T. Enoki, H. Inokuchi, M. Sano, A. Sumiyama, Y. Oda, and
+H. Nagano, Synth. Met. 12, 341 (1985).
+24) Y. Koike, S. Tanuma, H. Suematsu, and K, Higuchi, J. Phys. Chem. Sol.
+41, 1111 (1980).
+25) Y. Koike, H. Suematsu, K. Higuchi, and S. Tanuma, Sol. State Comm. 27,
+623 (1978).
+26) Y. Koike, H. Suematsu, K. Higuchi, and S. Tanuma, Physica 99B, 502 (1980).
+27) M. Kobayashi and I. Tsujikawa, J. Phys. Soc. Jpn. 46, 1945 (1979).
+28) M. Sano, Chem. Lett. 1979, 405 (1979).
+29) M. Kobayashi and I. Tsujikawa, Physica 105B, 439 (1981).
+30) S. Tanuma, Y. Iye and Y. Koike, Physics of Intercalation Compounds,
+eds. L. Pietronero and E. Tosatti, Springer Series in Solid-State Physics
+38, 298 (1981).
+31) N.B. Hannay, T.H. Geballe, B.T. Matthias, K. Andres, P. Schmidt and D.
+Macnair, Phys. Rev. Lett. 14, 225 (1965).
+32) J. Poitrenaud, Rev. Phys. Appl. 5, 275 (1970).
+33) L.A. Pendrys, R. Wachnik, F.L. Vogel, P. Lagrange, G. Furdin, M. El
+Makrini, and A. Herold, Sol. State Comm. 38, 677 (1981).
+34) Y. Koike and S. Tanuma, J. Phys. Soc. Jpn. 50, 1964 (1981).
+35) Y. Iye and S. Tanuma, Phys. Rev. B25, 4583 (1982).
+36) F.L. Vogel, R. Wachnik, and L.A. Pendrys, in Physics of Intercalation
+Compounds, eds. L. Pietronero and E. Tosatti, Springer Series in Solid-Stae
+Physics 38, 288 (1981).
+37) Y. Iye and S. Tanuma, Synth. Met. 5, 257 (1983).
+38) B.W. Roberts, J. Phys. Chem Ref. Data 5, 581 (1976).
+39) T. Enoki, K. Imaeda, H. Inokuchi, S. Miyajima, T. Chiba, and M. Sano,
+Ext. Abstracts of Symp. on GIC's, eds. M.S. Dresselhaus, G. Dresselhaus,
+and S.A. Solin, 63 (1986).
+40) W.A. Kamitakahara, G. Doll, and P.C. Eklund, Ext. Abstracts of Symp. on
+GIC's, eds. M.S. Dresselhaus, G. Dresselhaus, and S.A. Solin, 69  (1986).
+41) T. Takahashi, N. Gunasehara, T. Sagawa, and H. Suematsu, Ext. Abstracts of Symp. on GIC's, eds. M.S. Dresselhaus, G. Dresselhaus,
+and S.A. Solin, 77 (1986).
+42) S.B. Dicenzo, E.H. Hartford, Jr., and J.E. Fischer, Ext. Abstracts of Symp. on GIC's, eds. M.S. Dresselhaus, G. Dresselhaus,
+and S.A. Solin, 83 (1986).
+43) M.G. Alexander, D.P. Goshorn, D. Guerard, P. Lagrange, M. El Makrini,
+and D.G. Onn, Synth. Met. 2, 203 (1980).
+44) L.A. Pendrys, R.A. Wachnik, F.L. Vogel, and P. Lagrange, Synth. Met. 5,
+277 (1983).
+45) N.W. Ashcroft and N.D. Mermin, Solid State Physics, Holt, Rinehart and
+Winston, Philadelphia, 1976. 
+46) P.B. Allen et al., Phys. Rev. Lett. 40, 1532 (1978).
+47) B.M. Klein et al., Superconductivity in d- and f-Band Metals, eds. H.
+Suhl and M.B. Maple, (Academic Press, 1980), p. 455.
+48) R.C. Morris and R.V. Coleman, Phys. Rev. B7, 991 (1973).
+49) S. Tanuma, Physica 105B, 486, (1981).
+50) R.A. Wachnik, L.A. Pendrys, F.L. Vogel and P. Lagrange, Sol. State Comm.
+43, 5 (1982).
+51) M.E Preil and J.E. Fischer, Phys. Rev. Lett. 52, 1141 (1984).
+52) K. Nomura, T. Saito, K.Kume and H. Suematsu, Sol. State Comm. 63, 1059
+(1987). 
+53) T. Enoki, H. Inokuchi, and M. Sano, Chem. Phys. Lett. 80, 285 (1982).
+54) S.B. Dicenzo, Synth. Met. 12, 251 (1985).
+55) T. Enoki, M. Sano, and H. Inokuchi, J. Chem. Phys. 78, 2017 (1983).
+56) R. Nicklow, N. Wakabayashi, and H.G. Smith, Phys. Rev. B5, 951 (1962).
+57) H.J. Kim, H. Mertwoy, T. Koch, J.E. Fischer, D.B. McWhan,  and J.D.
+Axe, Phys. Rev. B29, 5947 (1984).
+58) S.B. Dicenzo, P.A. Rosenthal, H.J. Kim, and J.E. Fischer, Phys. Rev.
+B34, ??? (1986).
+59) M.E Preil and J.E. Fischer, Synth. Met. 8, 149 (1983).
+60) M.S. Dresselhaus and G. Dresselhaus, Adv. Phys. 30, 139 (1981).
+61) M.E Preil, J.E. Fischer, and P. Lagrange, Sol. State Comm. 44, 357 (1981).
+62) J.E. Fischer, J.M. Bloch, C.C. Shieh, M.E Preil, and K. Jelley, Phys.
+Rev. B31, 4773 (1985).
+63) L.A. Grunes and J.J. Ritsko, Phys. Rev. B28, 3439 (1983).
+64) L.A. Grunes, I.P. Gates, J.J. Ritsko, E.J. Mele, D.P. DiVincenzo, M.E
+Preil, and J.E. Fischer, Phys. Rev. B28, 6681 (1983).
+65) L.E. Delong, V. Yeh, V. Tondiglia, P.C. Eklund, S.E. Lambert, and M.B.
+Maple, Phys. Rev. B26, 6315 (1982).
+66) L.E. Delong, V. Yeh, and P.C. Eklund, Sol. State Comm. 44, 1185 (1982).
+Maple, Materials Research Society Proceedings 20, 195 (1983).
+67) L.E. Delong and P.C. Eklund, Synth. Met. 8, 291 (1983).
+68) R.E. Heinz and P.C. Eklund, Materials Research Society Proceedings 20,
+81 (1983).
+69) W.A. Kamitakahara, L.E. Delong, P.C. Eklund, and R.M. Nicklow, Phys.
+Rev. B29, 460 (1984).
+70) N. Wada, R. Clarke, and S.A. Solin, Sol. State Comm. 35, 675 (1980).
+71) L.E. Delong, V. Yeh, and P.C. Eklund, Sol. State Comm. 44, 1145 (1982).
+72) W.A. Kamitakahara, N. Wada, and S.A. Solin, Sol. State Comm. 44, 297 (1982).
+73) D. Guerard, G.M.T. Foley, M. Zanini, and J.E. Fischer, Nuovo Cimento
+38B, 410 (1977).
+74) S. Ikehata, H. Suematsu, and S. Tanuma, Sol. State Comm. 50, 375 (1984).
+75) M. El Makrini, G. Furdin, P. Lagrange, J.F. Mareche, E. McRae, and A.
+Herold, Synth. Met. 2, 197 (1980).
+76) P. Delhaes, Mat. Sci. and Eng. 31, 225 (1977).
+77) R. Clarke and C.T. Uher, Adv. Phys. 33, 469 (1984).
+78) V.V. Avdeev, O.V. Zharikov, V.A. Nalimova, A.V. Palnichenko, and K.N.
+Smenenko, Sov. Phys. JETP 65, 800 (1987).
+79) V.V. Avdeev, O.V. Zharikov, V.A. Nalimova, A.V. Palnichenko, and K.N.
+Semenenko, JETP Lett. 43, 484 (1986).
+80) T. Enoki, N.-C. Yeh, S.-T. Chen, and M.S. Dresselhaus, Phys. Rev. B33,
+1292 (1986).
+81) N.C. Yeh, T. Enoki, L. McNeil, L. Salamanca-Riba, M. Endo, and G.
+Dresselhaus,  Ext. Abstr. 1984 Fall Meeting of MRS, eds. P.C. Eklund, M.S.
+Dresselhaus, and G. Dresselhaus (MRS, Pittsburgh, PA, 1984), p. 246.
+82) N.-C. Yeh, K. Sugihara, M.S. Dresselhaus, and G. Dresselhaus, Phys.
+Rev.B, to be published (1988). (susceptibility of KH paper)
+83) G.L. Doll, M.H. Yang, and P.C. Eklund, Phys. Rev. B35, 9790 (1987).
+84) E. McRae, J.F. Mareche, A. Bedriss-Rerhraye, P. Lagrange, and M.
+Lelaurin, Annales de Physique 11, 13 (1986).
+85) P. Lagrange, A. Bendriss-Rerhraye, J.F. Mareche, and E. McRae, Synth.
+Met. 12, 201 (1985).
+86) A. Chaiken, N.C. Yeh, G. Dresselhaus, and P. Tedrow, Ext. Abstr. 1984
+Fall Meeting of MRS, eds. M.S. Dresselhaus and G. Dresselhaus, (MRS,
+Pittsburgh, PA, 1986), p. 158.
+87) M. Lagues, D. Marchand, C. Fretigny, and A.P. Legrand, Sol. State Comm.
+49, 739 (1984).
+88) C. Fretigny, D. Marchand, and M. Lagues, Phys. Rev. B32, 8462 (1985).
+89) M.H. Yang and P.C. Eklund, Bulletin of the APS 31, 8462 (1985).
+90) I. Stang, K. Luders, V. Geiser, and H.-J. Guntherodt, ISGIC-4, (1987).
+91) A. Bendriss-Rerhrhaye, PhD thesis, L'Universite de Nancy I, 1986 (unpdblished).
+92) J. Poitrenaud, Rev. Phys. Appl. 5, 275 (1970).
+93)  J. Conard, H. Estrade-Szwarckopf, P. Laguinie, M. El Makrini, P. Lagrange,
+    and D. Guerard, Synth. Met. 2, 261 (1980).
+94) E. McRae and J.F. Mareche, J. Mater. Res. 3, 75 (1988).
+95) Y. Takada, J. Phys. Soc. Jpn. 51, 63 (1982).
+96) R. Al Jishi, Phys. Rev. B28, 112 (1983).
+97) T. Enoki, H. Inokuchi, and M. Sano, Phys. Rev. B37, 9163 (1988).
+98) T. Enoki, K. Imaeda, H. Inokuchi, and M. Sano, Phys. Rev. B35, 9399 (1987).
+99) T.P. Orlando, E.J. McNiff, S. Foner, and M.R. Beasley, Phys. Rev. B19,
+4545 (1979).

@@ -1,0 +1,967 @@
+
+
+
+
+
+
+
+
+
+ 
+ 
+  
+
+
+<HTML>
+<HEAD>
+<TITLE>
+        
+        
+        
+        
+        
+        
+                Science --  Taubes 291 (5513): 2538
+        
+</TITLE>
+
+	
+<script type="text/javascript">
+
+
+<!-- 
+
+// Set Booleans for Browser Type
+
+var isNavPC;
+var isNavMac;
+var isIEMac;
+var isIEPC;
+
+if (parseInt(navigator.appVersion) >= 4) {
+
+        isNavMac = ((navigator.appName == "Netscape") && (navigator.platform.indexOf("Mac") != -1));
+        isNavPC = ((navigator.appName == "Netscape") && (navigator.platform.indexOf("Win") != -1));
+        isIEMac = ((navigator.appName.indexOf("Microsoft") != -1) && (navigator.platform.indexOf("Mac") != -1));
+        isIEPC = ((navigator.appName.indexOf("Microsoft") != -1) && (navigator.platform.indexOf("Win") != -1));
+
+} 
+
+
+// Set Booleans for DHTML
+
+var isLayers = ((isNavPC) || (isNavMac)); // Netscape 4, 5
+var isDivs = ((isIEPC) || (isIEMac));  // IE 4, 5
+var isOther = ((!isLayers) && (!isDivs)); // All Else
+
+
+// Set IE4 "all" and "style" for cross-platform functionality
+
+var coll = "";
+var stylo = ""; 
+
+if (isDivs) { 
+        coll = "all.";
+        stylo = ".style";
+}
+
+// Set Global Variables
+
+mName = new Array(); // name of menu
+menuX1 = new Array(); // top left X of layer
+menuY1 = new Array(); // top left Y of layer
+menuX2 = new Array(); // bottom right X of layer
+menuY2 = new Array(); // bottom right Y of layer
+menuX3 = new Array(); // point of right "L" in layer
+menuY3 = new Array(); // point of right "L" in layer
+menuX4 = new Array(); // point of left "L" in layer
+menuY4 = new Array(); // point of left "L" in layer
+
+
+mName[0] = "search";
+menuX1[0] = 202;
+menuY1[0] = 115;
+menuX2[0] = 376;
+menuY2[0] = 205;
+menuX3[0] = 339;
+menuY3[0] = 135;
+menuX4[0] = 202;
+menuY4[0] = 135;
+
+mName[1] = "browse";
+menuX1[1] = 338;
+menuY1[1] = 115;
+menuX2[1] = 533;
+menuY2[1] = 205;
+menuX3[1] = 447;
+menuY3[1] = 135;
+menuX4[1] = 338;
+menuY4[1] = 135;
+
+
+
+var mNum = -1; // says mouse is roaming, not on a menu at all
+
+
+// Start collecting Mouse Move Events
+
+if (!isOther) { 
+
+        if (isLayers) { document.captureEvents(Event.MOUSEMOVE); }
+        document.onmousemove = whereami;
+
+}
+
+// whereami function to track mousemoving
+
+function whereami(e) {
+
+        if (mNum == -1) { return; }
+        
+        if (isLayers) { x = e.pageX; y = e.pageY; }
+        if (isDivs) { 
+                x = event.clientX + document.body.scrollLeft; 
+                y = event.clientY + document.body.scrollTop; 
+        }
+
+        if ((( x > menuX3[mNum]) && ( y < menuY3[mNum])) || ((x < menuX1[mNum]) || (x > menuX2[mNum]) || (y < menuY1[mNum]) || (y > menuY2[mNum])) || ((x < menuX4[mNum]) && (y < menuY4[mNum]))) { 
+                hidez(mName[0]);
+                hidez(mName[1]);
+                mNum = -1;
+        }
+        
+} // End whereami function
+
+
+// Turn On New menu, turn off all others
+
+function menuOn(menuNum) {
+
+        for (i=0; i<2; i++) {
+        
+                if (i != menuNum) { hidez(mName[i]); }
+        
+        }       
+
+        showz(mName[menuNum]);
+        
+}
+
+                
+// Show layer/div
+
+function showz(mname) {
+
+        var obj = makeobj(mname);
+
+        if (isLayers) { 
+                obj.visibility = "show"; 
+        } else if (isDivs) { 
+                obj.visibility = "visible"; 
+        }
+        
+        return false;
+
+} // End showz function
+
+
+// Hide layers/divs
+
+function hidez(mname) {
+
+        var obj = makeobj(mname);
+        if (isLayers) { 
+                obj.visibility = "hide"; 
+        } else if (isDivs) { 
+                obj.visibility = "hidden"; 
+        }       
+
+} // End Hidez Function
+
+
+// General make object function for cross platform compatibility
+
+function makeobj(objname) {
+
+        var newobj;
+        
+        if (typeof objname == "string") {
+                newobj = eval("document." + coll + objname + stylo);
+        } else { newobj = objname; }
+        
+        return newobj;
+        
+} // End makeobj function
+
+// -->
+
+
+</script>
+
+
+<script type="text/javascript">
+
+
+<!-- 
+
+// Set Netscape Redraw
+
+if (isLayers) {         
+        var oWidth = innerWidth; 
+        var oHeight = innerHeight; 
+        window.onResize = navReload(); }
+
+function navReload() { 
+
+        if ((window.innerWidth != oWidth) || (window.innerHeight != oHeight)) { 
+                document.location=document.location; 
+        }
+        
+} // end navReload()
+
+// -->
+
+
+</script>
+
+<script language="JavaScript">
+
+
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+
+
+</script>
+
+<script language="JavaScript">
+
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+   document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+// -->
+
+</script>
+
+
+</HEAD>
+<body bgcolor="#eeeeee" text="#000000" link="#0000cc" vlink="#0000cc" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<A NAME="top"><!-- null --></A>
+
+	 
+	<!-- BEGIN MAIN TABLE - CONTAINER -->
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+	<!-- BEGIN BANNER ADS -->
+	<tr bgcolor="#666666" valign="top" align="center"> 
+
+		<!-- height hardcoded in case of missing ads -->
+		<td height="40"><a name="top"></a>
+<A HREF="http://oas.highwire.org:80/RealMedia/ads/click_lx.ads/www.sciencemag.org/cgi/content/full/291/5513/21430/TopLeft/sci/SOL-AAASBusinessHouseAds/grantsnet1.gif/34313030643738633361643532343230?tw_country_code=US" target="_top"><IMG border=1 SRC="http://oas.highwire.org:80/RealMedia/ads//adstream_lx.ads/www.sciencemag.org/cgi/content/full/291/5513/21430/TopLeft/sci/SOL-AAASBusinessHouseAds/grantsnet1.gif/34313030643738633361643532343230?tw_country_code=US"  ALT="GrantsNet" width=220 height=40 BORDER="0"></A>
+<img src="/icons1/global_images/shim.png" width="5" height="1">
+<A HREF="http://oas.highwire.org:80/RealMedia/ads/click_lx.ads/www.sciencemag.org/cgi/content/full/291/5513/22309/TopRight/sci/SOL-AAASHouseAds/membership-galaxy.gif/34313030643738633361643532343230?tw_country_code=US" target="_top"><IMG border=1 SRC="http://oas.highwire.org:80/RealMedia/ads//adstream_lx.ads/www.sciencemag.org/cgi/content/full/291/5513/22309/TopRight/sci/SOL-AAASHouseAds/membership-galaxy.gif/34313030643738633361643532343230?tw_country_code=US"  ALT="Join AAAS" width=220 height=40 BORDER="0"></A>
+</td>
+	</tr>
+	<tr bgcolor="#666666" align="left" valign="top"> 
+		<td height="10" width="600"><img src="/icons1/global_images/shim.png" width="1" height="10" align="left"></td>
+	</tr>
+	<!-- END BANNER ADS -->
+	<!-- BEGIN TOP NAV --> 
+	<tr bgcolor="#4b4b4b" align="left" valign="top"> 
+		<td height="18" width="600"><A HREF="http://www.scienceonline.org"><img src="/icons1/global_images/scionline_home_top1_off.png" width="85" height="19" BORDER="0"></A><A HREF="/"><img src="/icons/global_images/scionline_home_top2_on.png" width="121" height="19" BORDER="0"></A><A HREF="http://sciencenow.sciencemag.org"><img src="/icons/global_images/scionline_home_top3_off.png" width="71" height="19" BORDER="0"></A><A HREF="http://nextwave.sciencemag.org"><img src="/icons/global_images/scionline_home_top4_off.png" width="63" height="19" BORDER="0"></A><A HREF="http://www.stke.org"><img src="/icons/global_images/scionline_home_top5_off.png" width="76" height="19" BORDER="0"></A><A HREF="http://recruit.sciencemag.org"><img src="/icons/global_images/scionline_home_top6_off.png" width="92" height="19" BORDER="0"></A><A HREF="/feature/e-market/"><img src="/icons/global_images/scionline_home_top7_off.png" width="89" height="19" BORDER="0"></A></td>
+	</tr>
+	<!-- END TOP NAV -->
+	<!-- BEGIN USER INFO BAR (BLANK) -->
+	<tr bgcolor="#999999"> 
+		<td height="20"><img src="/icons1/global_images/shim.png" width="1" height="1"><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif" size="1"><img src="/icons/global_images/shim.png" width="8" height="1">
+	
+	
+	
+	
+	
+		
+			<b>ALISON CHAIKEN</b> <font color="#666666">|</font>
+		
+		<A TARGET="_top" style="text-decoration:no" HREF="/sub/usermaint/changepwd/basic"><FONT COLOR="#000000">Change Password</FONT></A> <font color="#666666">|</font>
+		<A TARGET="_top" style="text-decoration:no" HREF="/sub/usermaint/changeuserinfo/basic"><FONT COLOR="#000000">Change User Info</FONT></A>
+		 <font color="#666666">|</font> <A TARGET="_top" style="text-decoration:no" HREF="/cgi/ctmain"><FONT COLOR="#000000">CiteTrack Alerts</FONT></A> <font color="#666666">|</font>
+		<A TARGET="_top" style="text-decoration:no" HREF="/subscriptions/accessinfo.dtl"><FONT COLOR="#000000">Subscription Help</FONT></A> <font color="#666666">|</font>
+		<b><A TARGET="_top" style="text-decoration:no" HREF="/cgi/logout"><FONT COLOR="#000000">Sign Out</FONT></A></b>
+	<!-- INDV -->
+	<!-- USER.PFA -->
+	<!-- USER.PFABSAIC -->
+	<!-- NOT GUEST -->
+	
+
+	
+</font></td>
+	</tr>
+	<!-- END USER INFO BAR (BLANK) -->
+	<tr valign="top" align="left"> 
+		<td> 
+	<!-- BEGIN NESTED TABLE 1 - Science, magazine logos, DHTML MENUS -->      
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		<td rowspan="2" align="left" valign="top"><A HREF="/"><img src="/icons1/science_logo_sm.png" width="110" height="34" BORDER="0"><img src="/icons/magazine_sm2.png" width="120" height="34" align="top" BORDER="0"></A></td>
+		<td width="100%" bgcolor="#cccccc" height="25" align="left" valign="bottom"><a href="/help/"><img src="/icons1/global_images/help.png" width="54" height="24" border="0" alt=""></a><a href="/subscriptions/accessinfo.dtl"><img src="/icons/global_images/subscriptions.png" width="95" height="24" border="0" alt=""></a><a href="/cgi/feedback"><img src="/icons/global_images/feedback.png" width="70" height="24" border="0" alt=""></a><a href="/cgi/login?uri=/subscriptions/signedin.shtml"><img src="/icons/global_images/signin.png" width="57" height="24" border="0" alt=""></a></td>
+		</tr>
+		<tr>
+		<td width="100%" height="19" align="left" valign="top"><a href="/search.dtl" onMouseOver="mNum=0; menuOn(mNum)"><img src="/icons1/global_images/search2.png" width="108" height="20" border="0"></a><a href="/contents-by-date.0.shtml" onMouseOver="mNum=1; menuOn(mNum)"><img src="/icons/browse_sm.png" width="109" height="20" border="0"></a><a href="/cgi/order"><img src="/icons/order_article.png" width="154" height="18" border="0"></a></td>
+		</tr>
+		</table>
+	<!-- END NESTED TABLE 1 - Science, magazine logos, DHTML MENUS --> 
+	<!-- BEGIN NESTED TABLE 2 - PAGE CONTENT cellpadding must be 7 or text will not wrap correctly-->
+		<table width="100%" border="0" cellspacing="0" cellpadding="7">
+		<tr> 
+			<td valign="top" align="left" width="100%"><img src="/icons1/global_images/shim.png" width="5" height="1" align="right"><br>
+
+
+
+
+
+         
+                
+        
+
+
+
+        
+                
+
+
+         
+ 
+
+ 
+
+ 
+	  
+		
+	
+
+
+	
+		<!-- beginning of outer tables -->
+		<table width="215" border="0" cellspacing="0" cellpadding="0" align="right">
+		<tr bgcolor="#ffffff"><td> 
+		<!-- beginning of inner table -->
+			<table width="212" border="0" cellspacing="0" cellpadding="3">
+				
+		
+		
+		
+			
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+				<A HREF="/cgi/content/summary/291/5513/2538"><b>Summary</b> of this Article</A>
+			</font></td></tr>
+		
+		
+
+		
+
+		
+
+		
+		
+		
+
+		
+		
+
+                
+                
+		
+		
+
+				
+		
+		 
+		 
+		
+		
+		
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+			<A HREF="#related">Related articles in Science</A>
+		</font></td></tr>
+		
+
+
+
+	
+	
+	
+	
+	
+		
+		
+		
+		
+	
+		
+		
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+			Similar articles found in:
+				<BR><A HREF="/cgi/search?qbe=sci;291/5513/2538&journalcode=sci&minscore=50"><FONT SIZE="-1">SCIENCE Online</FONT></A>
+				
+				
+				
+		</font></td></tr>
+		
+		
+		
+
+		
+		
+
+
+
+		
+
+		
+
+		
+
+		
+		
+
+		
+		
+		
+
+		
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+			Search Medline for articles by:<BR>
+			
+			
+				<A HREF="/cgi/external_ref?access_num=Taubes+G&link_type=AUTHORSEARCH">Taubes, G.</A>
+				
+			
+		</font></td></tr>
+		
+
+		
+
+
+
+		
+
+
+		
+
+		
+		
+		
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+		Alert me when:
+		<BR><A HREF="/cgi/ctalert?alertType=citedby&resid=sci;291/5513/2538&page_name=options&return_type=article&return_url=%2Fcgi%2Fcontent%2Ffull%2F291%2F5513%2F2538"><FONT SIZE="-1">new articles cite this article</FONT></A><BR>
+		</font></td></tr>
+		
+		
+
+		
+			
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+			<A HREF="/cgi/citmgr?gca=sci;291/5513/2538">Download to Citation Manager</A>
+			</font></td></tr>
+		
+
+		
+			<tr>
+			<td width="4" align="left" valign="top" bgcolor="#FFFFFF" height="1">&nbsp;</td>
+			<td width="12" align="left" valign="top" bgcolor="#FFFFFF" height="1"><img src="/icons1/global_images/shim.png" width="1" height="1"></td>
+			<td bgcolor="#FFFFFF" height="1">&nbsp;</td>
+			</tr>
+			
+			
+				
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+					
+						Collections under which this article appears:<BR>
+					
+					<b>
+					
+					<A HREF="/cgi/collection/epidemiology">Epidemiology</A>
+					</b>
+					
+					<BR>
+				</font></td></tr>
+			
+				
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+					
+					<b>
+					
+					<A HREF="/cgi/collection/physiology">Physiology</A>
+					</b>
+					
+					
+				</font></td></tr>
+			
+			
+			
+			
+		</tr>
+		
+        
+        
+	</table> 
+	</td></tr> <!-- end of inner content box -->
+	</table>	 <!-- end of outer content box -->
+	
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+	
+	
+	
+		<!-- FULL -->
+<H2 NAME=HEADLINE>What If Americans Ate Less Saturated Fat?</H2>
+<STRONG>Gary Taubes</STRONG><P>
+
+Eat less saturated fat, live longer. For 30 years, this has stood as one cornerstone of nutritional advice given to Americans (see <A HREF="/cgi/content/short/291/5513/2536">main text</A>). But how much longer? Between 1987 and 1992, three independent research groups used computer models to work out the answer. All three analyses agreed, but their conclusions have been buried in the literature, rarely if ever cited.<P>
+All three models estimated how much longer people might expect to live, on average, if only 10% of their calories came from saturated fat as recommended. In the process their total fat intake would drop to the recommended 30% of calories. All three models assumed that LDL cholesterol--the &quot;bad cholesterol&quot;--levels would drop accordingly and that this diet would have no adverse effects, although that was optimistic at the time and has become considerably more so since then. All three combined national vital statistics data with cholesterol risk factor data from the Framingham Heart Study.<P>
+The first study came out of Harvard Medical School and was published in the <EM>Annals of Internal Medicine</EM> in April 1987. Led by William Taylor, it concluded that individuals with a high risk of heart disease--smokers, for instance, with high blood pressure--could expect to gain, on average, one extra year by shunning saturated fat. Healthy nonsmokers, however, might add 3 days to 3 months. &quot;Although there are undoubtedly persons who would choose to participate in a lifelong regimen of dietary change to achieve results of this magnitude, we suspect that some might not,&quot; wrote Taylor and his colleagues.<P>
+The following year, the U.S. Surgeon General's Office funded a study at the University of California, San Francisco, with the expectation that its results would counterbalance those of the Harvard analysis. Led by epidemiologist Warren Browner, this study concluded that cutting fat consumption in America would <EM>delay</EM> 42,000 deaths each year, but the net increase in life expectancy would average out to only 3 to 4 months. The key word was &quot;delay,&quot; for death, like diet, is a trade-off: Everyone has to die of something. &quot;Deaths are not prevented, they are merely delayed,&quot; Browner later wrote. &quot;The 'saved' people mainly die of the same things everyone else dies of; they do so a little later in life.&quot; To be precise, a woman who might otherwise die at 65 could expect to live two extra weeks after a lifetime of avoiding saturated fat. If she lived to be 90, she could expect 10 additional weeks. The third study, from researchers at McGill University in Montreal, came to virtually identical conclusions.<P>
+Browner reported his results to the Surgeon General's Office, then submitted a paper to The Journal of the American Medical Association (JAMA). Meanwhile, the Surgeon General's Office--his source of funding--contacted JAMA and tried to prevent publication, claiming that the analysis was deeply flawed. JAMA reviewers disagreed and published his article, entitled &quot;What If Americans Ate Less Fat?&quot; in June 1991. As for Browner, he was left protecting his work from his own funding agents. &quot;Shooting the messenger,&quot; he wrote to the Surgeon General's Office, &quot;or creating a smoke screen--does not change those estimates.&quot;	<P>
+
+ 
+		
+
+
+ 
+
+
+
+
+<BR CLEAR=ALL>
+
+
+	
+	 
+		  
+			
+	
+
+
+	
+		<!-- beginning of outer tables -->
+		<table width="215" border="0" cellspacing="0" cellpadding="0">
+		<tr bgcolor="#ffffff"><td> 
+		<!-- beginning of inner table -->
+			<table width="212" border="0" cellspacing="0" cellpadding="3">
+				
+		
+		
+		
+			
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+				<A HREF="/cgi/content/summary/291/5513/2538"><b>Summary</b> of this Article</A>
+			</font></td></tr>
+		
+		
+
+		
+
+		
+
+		
+		
+		
+
+		
+		
+
+                
+                
+		
+		
+
+				
+		
+		 
+		 
+		
+		
+		
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+			<A HREF="#related">Related articles in Science</A>
+		</font></td></tr>
+		
+
+
+
+	
+	
+	
+	
+	
+		
+		
+		
+		
+	
+		
+		
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+			Similar articles found in:
+				<BR><A HREF="/cgi/search?qbe=sci;291/5513/2538&journalcode=sci&minscore=50"><FONT SIZE="-1">SCIENCE Online</FONT></A>
+				
+				
+				
+		</font></td></tr>
+		
+		
+		
+
+		
+		
+
+
+
+		
+
+		
+
+		
+
+		
+		
+
+		
+		
+		
+
+		
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+			Search Medline for articles by:<BR>
+			
+			
+				<A HREF="/cgi/external_ref?access_num=Taubes+G&link_type=AUTHORSEARCH">Taubes, G.</A>
+				
+			
+		</font></td></tr>
+		
+
+		
+
+
+
+		
+
+
+		
+
+		
+		
+		
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+		Alert me when:
+		<BR><A HREF="/cgi/ctalert?alertType=citedby&resid=sci;291/5513/2538&page_name=options&return_type=article&return_url=%2Fcgi%2Fcontent%2Ffull%2F291%2F5513%2F2538"><FONT SIZE="-1">new articles cite this article</FONT></A><BR>
+		</font></td></tr>
+		
+		
+
+		
+			
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+			<A HREF="/cgi/citmgr?gca=sci;291/5513/2538">Download to Citation Manager</A>
+			</font></td></tr>
+		
+
+		
+			<tr>
+			<td width="4" align="left" valign="top" bgcolor="#FFFFFF" height="1">&nbsp;</td>
+			<td width="12" align="left" valign="top" bgcolor="#FFFFFF" height="1"><img src="/icons1/global_images/shim.png" width="1" height="1"></td>
+			<td bgcolor="#FFFFFF" height="1">&nbsp;</td>
+			</tr>
+			
+			
+				
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+					
+						Collections under which this article appears:<BR>
+					
+					<b>
+					
+					<A HREF="/cgi/collection/epidemiology">Epidemiology</A>
+					</b>
+					
+					<BR>
+				</font></td></tr>
+			
+				
+	<tr>
+	<td width="4" align="left" valign="top" bgcolor="#FFFFFF"><img src="/icons1/global_images/shim.png" width="4" height="1"></td>
+	<td width="12" align="left" valign="top" bgcolor="#eeeeee"><img src="/icons1/gray_arr_gray.png" width="12" height="11"></td>
+	<td align="left" valign="top" bgcolor="#eeeeee">
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+
+					
+					<b>
+					
+					<A HREF="/cgi/collection/physiology">Physiology</A>
+					</b>
+					
+					
+				</font></td></tr>
+			
+			
+			
+			
+		</tr>
+		
+        
+        
+	</table> 
+	</td></tr> <!-- end of inner content box -->
+	</table>	 <!-- end of outer content box -->
+	
+
+
+					
+	
+
+
+
+
+
+
+<A NAME="related"><!-- null --></A>
+<P>
+
+<H3>Related articles in Science:</H3>
+
+<P>
+<DL>
+	
+	<DT><STRONG><font size=-1>NUTRITION:</font><BR>The Soft Science of Dietary Fat.</STRONG><BR>
+	<DD>
+	Gary Taubes
+	<BR>
+	Science 2001 291: 2536-2545. 
+	(in News Focus)
+	<NOBR>
+	
+	<A HREF="/cgi/content/summary/291/5513/2536">[Summary]</A>
+	<A HREF="/cgi/content/full/291/5513/2536">[Full Text]</A>
+	&nbsp;</NOBR>
+	<P>
+	
+	<DT><STRONG>The Epidemic That Wasn't?.</STRONG><BR>
+	<DD>
+	Gary Taubes
+	<BR>
+	Science 2001 291: 2540. 
+	(in News Focus)
+	<NOBR>
+	
+	<A HREF="/cgi/content/summary/291/5513/2540">[Summary]</A>
+	<A HREF="/cgi/content/full/291/5513/2540">[Full Text]</A>
+	&nbsp;</NOBR>
+	<P>
+	
+</DL>
+<BR CLEAR=ALL>
+
+
+     
+	<font face="Verdana, Arial, Helvetica, sans-serif" size="1" COLOR="#000000">
+	Volume 291,
+	Number 5513,
+	Issue of 30 Mar 2001,
+	p. 2538.
+	
+    
+	<BR><A STYLE="text-decoration:no" HREF="/misc/copyright.dtl"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" COLOR="#000000">Copyright &copy; 2001 by The American Association for the Advancement of Science.</font></A>
+	</font>
+	
+	
+	        <br>
+	        </td>
+	<!-- END ARTICLE ABSTRACT TEXT -->
+	    </tr>
+	        </table>
+	<!-- END NESTED TABLE 2 - PAGE CONTENT -->
+	<!-- BEGIN NESTED TABLE 3 - PAGE FOOTER -->     
+	        <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#eeeeee" valign="top" align="center">
+
+                <!-- height hardcoded in case of missing ads -->
+                <td height="40"><a name="top"></a>
+<A HREF="http://oas.highwire.org:80/RealMedia/ads/click_lx.ads/www.sciencemag.org/cgi/content/full/291/5513/4662/BottomLeft/sci/SOL-AAASHouseAdsFooter/aaasmember.gif/34313030643738633361643532343230?tw_country_code=US" target="_top"><IMG border=1 SRC="http://oas.highwire.org:80/RealMedia/ads//adstream_lx.ads/www.sciencemag.org/cgi/content/full/291/5513/4662/BottomLeft/sci/SOL-AAASHouseAdsFooter/aaasmember.gif/34313030643738633361643532343230?tw_country_code=US"  ALT="AAAS Member Only Site" width=220 height=40 BORDER="0"></A>
+<img src="/icons1/global_images/shim.png" width="5" height="1">
+<A HREF="http://oas.highwire.org:80/RealMedia/ads/click_lx.ads/www.sciencemag.org/cgi/content/full/291/5513/30293/BottomRight/sci/SOL-AAASBusinessAdsFooter/resume.gif/34313030643738633361643532343230?tw_country_code=US" target="_top"><IMG border=1 SRC="http://oas.highwire.org:80/RealMedia/ads//adstream_lx.ads/www.sciencemag.org/cgi/content/full/291/5513/30293/BottomRight/sci/SOL-AAASBusinessAdsFooter/resume.gif/34313030643738633361643532343230?tw_country_code=US"  ALT="Resume Database" width=220 height=40 BORDER="0"></A>
+</td>
+        </tr>
+        <tr bgcolor="#eeeeee" align="left" valign="top">
+                <td height="10" width="600"><img src="/icons1/global_images/shim.png" width="1" height="10" align="left"></td>
+        </tr>
+	    <tr align="left" valign="middle" bgcolor="#eeeeee"> 
+	                <td><img src="/icons1/global_images/greydot_cccccc.png" width="100%" height="2"><br>
+	        <br>
+	        <img src="/icons1/global_images/shim.png" width="7" height="1"><a href="#top"><img src="/icons/global_images/page_top.png" width="70" height="11" border="0"></a><img src="/icons/global_images/shim.png" width="39" height="1"> 
+	        
+	        <br>
+	        </td>
+	        </tr>
+	        <tr align="left" valign="middle" bgcolor="#eeeeee" height="100%"> 
+	                <td><img src="/icons1/global_images/shim.png" width="1" height="100%"></td>
+	        </tr>
+	    </table>
+	<!-- END NESTED TABLE 3 - PAGE FOOTER -->
+	    </td>
+	</tr>
+	</table>
+	<!-- END MAIN TABLE - CONTAINER -->
+	
+	
+	<script>
+	if (!isOther) { 
+	        var search_menu = '';
+	        search_menu += '<img src="/icons1/global_images/shim.png" width="1" height="19"><br>';
+	        search_menu += '<a href="http://www.sciencemag.org/search.dtl" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage(&#039;science_magazine&#039;,&#039;&#039;,&#039;/icons1/sci_mag_roll_over.gif&#039;,0)"><img name="science_magazine" border="0" src="/icons/sci_mag_roll_up.png" width="146" height="18"></a><br>';
+	        search_menu += '<a href="http://www.sciencenow.org/search.dtl" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage(&#039;science_now&#039;,&#039;&#039;,&#039;/icons1/sci_now_roll_over.gif&#039;,0)"><img name="science_now" border="0" src="/icons/sci_now_roll_up.png" width="146" height="17"></a><br>';
+	        search_menu += '<a href="http://www.nextwave.org/search.dtl" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage(&#039;science_next_wave&#039;,&#039;&#039;,&#039;/icons1/next_wave_roll_over.gif&#039;,0)"><img name="science_next_wave" border="0" src="/icons/next_wave_roll_up.png" width="146" height="17"></a><br>';
+	        search_menu += '<a href="/searchall/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage(&#039;highwire&#039;,&#039;&#039;,&#039;/icons1/highwire_roll_over.gif&#039;,0)"><img name="highwire" border="0" src="/icons/highwire_roll_up.png" width="146" height="17"></a><br>';
+	        if (isLayers) { document.write('<layer name="search" left=230 top=116 z-index=15 visibility="hidden">' + search_menu + '</layer>'); 
+	        } else if (isDivs) { document.write('<div id="search" style="position:absolute; left:230px; top:116px; z-index:15; visibility:hidden">' + search_menu + '</div>'); }
+	}
+	</script>
+	<script>
+	if (!isOther) { 
+	        var browse_menu = '';
+	        browse_menu += '<img src="/icons1/global_images/shim.png" width="1" height="19"><br>';
+	        browse_menu += '<a href="/content/current" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage(&#039;browse_button&#039;,&#039;&#039;,&#039;/icons1/current_issue_roll_over.gif&#039;,1)"><img name="browse_button" border="0" src="/icons/current_issue_roll_up.png" width="194" height="17"></a><br>';
+	        browse_menu += '<a href="/contents-by-date.0.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage(&#039;archives&#039;,&#039;&#039;,&#039;/icons1/archives_roll_over.gif&#039;,1)"><img name="archives" border="0" src="/icons/archives_roll_up.png" width="194" height="17"></a><br>';
+	        browse_menu += '<a href="/collections/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage(&#039;subject&#039;,&#039;&#039;,&#039;/icons1/subject_roll_over.gif&#039;,1)"><img name="subject" border="0" src="/icons/subject_roll_up.png" width="194" height="17"></a><br>';
+			browse_menu += '<a href="http://sciencenow.sciencemag.org/archives.shtml" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage(&#039;nowarc&#039;,&#039;&#039;,&#039;/icons1/scinow_arc_roll_over.gif&#039;,1)"><img name="nowarc" border="0" src="/icons/scinow_arc_roll_up.png" width="194" height="17"></a><br>';
+	        if (isLayers) { document.write('<layer name="browse" left=339 top=116 z-index=15 visibility="hidden">' + browse_menu + '</layer>'); 
+	        } else if (isDivs) { document.write('<div id="browse" style="position:absolute; left:339px; top:116px; z-index:15; visibility:hidden">' + browse_menu + '</div>'); }
+	}
+	</script>
+
+
+
+
+
+
+<a href="/baddream/dillon/">.</a><a
+href="mailto:briana@aardvark.wsrcc.com">.</a>
+</BODY>
+</HTML>

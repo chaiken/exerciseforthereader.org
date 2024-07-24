@@ -1,0 +1,26 @@
+This dirty limit calculation of kappa for the  in-plane direction is wrong!
+but keep a copy anyway.
+
+in-plane Ginzburg-Landau kappa parameter [first, try dirty limit]
+kappa = (* 0.715 lambda_london)/mean_free_path ;DIRTY limit [Ref. 5, p. 114]
+Here, use lambda_pi along with l_a in order to get the in-plane kappa,
+since the penetration depth should be related to the mean_free_path
+in the direction parallel to the applied field, rather than perpendicular to
+it.  This is in contrast to the critical field, which is related to the
+characteristic lengths in the perpendicular plane.
+(/ (* 0.715 529) 1195)
+3.17e-01 ;indicates type I behavior in-plane!
+(/ 1.0 (sqrt 2))
+7.07e-01 ;lower limit for type II behavior
+
+Now suppose that the kappa which should be calculated with the pi-electron
+kappa is the out-of-plane kappa, since screening currents induced by a field
+applied along the c-axis run in the plane.  Then, in the DIRTY limit,
+out-of-plane, kappa is:
+(/ (* 0.715 529) 1.7923e+01)
+2.11e+01 ;now this is an indication of strongly type II behavior!
+
+Zero-T coherence length should be = (* 0.9 (sqrt (* ksi_0 ell)))
+(* 0.9 (sqrt (* 8551.0 5018)))
+5895 ;using ksi_0 is 8551 Ang. and l_a = 5018 Ang. (at 4.2 K)
+[For H par. c since l_a and pi transport are involved.  Pi parameters are used in calculation of ksi_0.]

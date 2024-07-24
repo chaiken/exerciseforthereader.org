@@ -1,0 +1,183 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;									     ;;
+;;	File:     volume.record						     ;;
+;;	Author:   Alison Chaiken					     ;;
+;;	Created:  Fri May 27 17:25:51 EDT 1988				     ;;
+;;	Contents: calculation of various parameters concerning density,      ;;
+;;                stoichiometry, and structure of C_4KHg_x and C_8KHg_x.     ;;
+;;									     ;;
+;;	Copyright (c) 1988 Alison Chaiken.				     ;;
+;;	All rights reserved.						     ;;
+;;									     ;;
+;;	$Log$								     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;volume per unit cell of C_4KHg 
+;V = 2 * (sqrt3) * squared(a) * I_c
+(setq float-output-format "4e")
+"4e"
+(setq a-zero 2.46)
+2.46
+(* 2 (sqrt 3.0))
+3.464
+(* 3.464 (squared 2.46))
+2.0963e+01 ;area of (2X2) unit cell in Ang. squared
+(* 2.0963e+01 10.24)
+2.1466e+02 ;volume of (2X2) unit cell in Ang. cubed
+(* 2.1466e+02 1e-24)
+2.1466e-22
+(setq v 2.1466e-22)
+2.1466e-22 ;volume of (2X2) unit cell in cm^3
+
+;mass per unit cell of C_4KHg_x
+;in one unit cell there are 2 formula units
+;M = m_{proton} * [(8 * m_C) + (2 * m_K) + (2 * x * m_{Hg)]
+(setq mcarbon 12.011)
+1.2011e+01
+(setq mK 39.083)
+3.9083e+01
+(setq mHg 200.59)
+2.0059e+02
+1.6730e-24 ; in grams
+(defun mass (x)
+  "mass of C_4KHg_x as a function of x in grams per unit cell"
+  (* 2 mproton (+ (* 4 mcarbon) mK (* x mHg)))
+)
+(mass 1.0)
+9.6270e-22 ;mass of C_4KHg_{1.0} per unit cell in grams
+(mass 0)
+2.9153e-22 ;mass of C_4K per unit cell in grams
+
+(defun density (x)
+  "density of C_4KHg_x as a function of x in grams per cm^3"
+  (/ (mass x) v)
+)
+(density 1.0)
+4.4848e+00 ;of C_4KHg_{1.0} in grams per cm^3
+;agrees with 4.49 g/cm^3 in El Makrini, C.R. Acad. Sci. Par. 288, 303 (1979)
+(density 0.7)
+3.5468e+00 ;of C_4KHg_{0.7}
+(density 0.5)
+2.9214e+00
+;density of graphite is 2.25 grams per cm^3
+(/ (density 1.0) 2.25)
+1.9932e+00 ;C_4KHg_{1.0} is 2.0 times as dense as graphite
+
+;molar weight calculations
+;molar weight mw of C_4KHg_x is (* (/ avogadro# 6) (/ (mass x) 2))
+(defun mw (x)
+  "molar weight of C_4KHg_x as a function of x in grams per mole"
+  (/ (* phys-avogadro (mass x)) 12)
+)
+(mw 1.0)
+4.8312e+01 ;molar weight of C_4KHg_x in grams per mole
+(mw 0.5)
+3.1471e+01
+(mw 0.7)
+3.8207e+01
+
+;molar volume of C_4KHg_x assuming that the compound has the same (2X2)
+;structure for all x values and taking into account that not all Hg sites
+;may be filled.  Fraction of filled sites is (/ (+ 5 x) 6).  Number of atoms
+;per (2X2) cell is 12 * (fraction of filled sites)
+(defun mv (x)
+  "molar volume of C_4KHg_x as a function of x"
+(/ (* phys-avogadro v) (* 12 (/ (+ 5.0 x) 6.0)))
+)
+(mv 1)
+1.0772e+01 ;cm^3 per mole of C_4KHg_{1.0}
+(mv 0.5)
+1.1752e+01 ;cm^3 per mole of C_4KHg_{0.5}
+
+;number density of atoms in C_4KHg_x = (/ phys-avogadro mv) *(fraction of sites
+;that are filled)
+(defun nd (x)
+  "number density of atoms in C_4KHg_x as a function of x"
+  (/  phys-avogadro (mv x))
+)
+(nd 1.0)
+5.5902e+22 ;atoms per cm^3 of C_4KHg_{1.0}
+(nd 0.5)
+5.1244e+22 ;atoms per cm^3 of C_4KHg_{0.5}.  Number is smaller due to Hg
+;vacancies.
+(nd 0.7)
+5.3107e+22
+
+;number density of Hg per unit volume is (number density of atoms) * (fraction
+;of atoms which are Hg)
+(defun ndhg (x)
+  "number density of Hg as a function of x in C_4KHg_x"
+  (* x (/ (nd x) (+ 5.0 x)))
+)
+(ndhg 1.0)
+9.3171e+21 ;Hg atoms per cm^3 of C_4KHg_{1.0}
+(ndhg 0.5)
+4.6585e+21 ;Hg atoms per cm^3 of C_4KHg_{0.5}
+
+
+;C_8KHg_x calculations
+;same calculation for C_8KHg_x
+(setq vII (* 13.54 (/ v 10.24)))
+2.8384e-22 ;in cm^3
+;now in each cell there are 16 C, 2 K, and 2x Hg
+(defun massII (x)
+  "mass of C_8KHg_x as a function of x in grams per unit cell"
+  (* 2 mproton (+ (* 8 mcarbon) mK (* x mHg)))
+)
+(massII 1)
+1.1235e-21 ;mass of C_8KHg_{1.0} in grams per unit cell
+
+;density of C_8KHg_x in grams per cm^3 as a function of x
+(defun densII (x)
+  "density of C_8KHg_x as a function of x in grams per cm^3"
+  (/ (massII x) vII)
+)
+(densII 1.0)
+3.9581e+00 ;grams per cm^3 of C_8KHg_{1.0}
+(densII 0.5)
+2.7758e+00
+
+;molar weight of C_8KHg_x as a function of x; 20 is the number of atoms in
+;the unit cell, of which massII is the mass
+(defun mwII (x)
+  "molar weight of C_8KHg_x as a function of x in grams per mole"
+  (/ (* phys-avogadro (massII x)) 20)
+)
+(mwII 1)
+3.3827e+01 ;grams per mole of C_8KHg_{1.0}
+
+;molar volume of C_8KHg_x
+(defun mvII (x)
+  "molar volume of C_8KHg_x as a function of x"
+(/ (* phys-avogadro vII) (* 20 (/ (+ 9.0 x) 10.0)))
+)
+(mvII 1.0)
+8.5463e+00 ;cm^3 per mole of C_8KHg_{1.0}
+(/ 1 8.5463e+00)
+1.1701e-01 ;moles per cm^3 of C_8KHg_{1.0}
+
+;number density of C_8KHg_x as a function of x = (/ phys-avogadro mv) * 
+;(fraction of sites that are filled)
+(defun ndII (x)
+  "number density of atoms in C_8KHg_x as a function of x"
+  (/  phys-avogadro (mvII x))
+)
+(ndII 1)
+7.0463e+22 ;atoms per cm^3 of C_8KHg_{1.0}
+(ndII 0.5)
+6.6940e+22 ; atoms per cm^3 of C_8KHg_{0.5}
+
+;number density of Hg per unit volume is (number density of atoms) * (fraction
+;of atoms which are Hg)
+(defun ndhgII (x)
+  "number density of Hg as a function of x in C_8KHg_x"
+  (* x (/ (ndII x) (+ 9.0 x)))
+)
+(ndhgII 1)
+7.0463e+21 ;Hg atoms per cm^3 of C_8KHg_{1.0}
+(ndhgII 0.5)
+3.5231e+21 ;Hg atoms per cm^3 of C_8KHg_{0.5}
+
+
+
+

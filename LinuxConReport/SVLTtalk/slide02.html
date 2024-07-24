@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script src="navigate.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="GNU Emacs 23.2.1 (x86_64-redhat-linux-gnu, GTK+ Version 2.20.1) of 2010-05-13 on x86-07.phx2.fedoraproject.org"/>
+
+<link rel="stylesheet" href="slides.css" type="text/css"/>
+
+<title>LinuxCon Highlights, August 2010</title>
+
+</head>
+<body onkeydown="keyAlert(event);" onclick="whichButton(event);">
+
+    <h1 class="title">Additions to existing runtime power management patch</h1>
+
+<ul class="spaced">
+
+<li>Linux ACPI has replaced earlier BIOS-based APM.</li>
+
+<li>Kernel already has support for underclocking (cpu_freq == "P states") and
+  hibernation (cpu_idle == "C states")</li>
+
+<li>Next step is to implement per-bus and per-device granularity.</li>
+
+<li>Traditional device-driver approach is addition of new
+  dev_pm_ops methods to API.</li>
+
+<li>Runtime power management framework provides the kernel interface
+  for the new driver methods.</a>
+
+</ul>
+
+
+
+
+</body>
+
+</html>

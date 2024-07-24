@@ -1,0 +1,32 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\beginpicture
+%6b x-rays, no H
+\setcoordinatesystem units <0.6653cm,0.8cm>
+\setplotarea x from 2 to 26, y from 0 to 10
+\axis bottom label {2$\theta$} ticks 
+	numbered from 2 to 26 by 6
+	unlabeled short quantity 25 /
+%6b x-rays, with H
+\setcoordinatesystem units <0.6653cm,0.8cm> point at 0 12 
+\setplotarea x from 2 to 26, y from 0 to 10
+\axis bottom label {2$\theta$} ticks 
+	numbered from 2 to 26 by 6
+	unlabeled short quantity 25 /
+\endpicture
+\caption[$(00\ell)$ x-ray scans before and after hydrogenation for a gold
+$\rm C_4KHg$ sample.]{$(00\ell)$ x-ray scans before and after hydrogenation
+for a gold $\rm C_4KHg$ sample.  The  broad  hump from about 6$^{\circ}$ to
+14$^{\circ}$ is due to the glass tube that the sample  is in.  Before: $\rm
+T_c$ = 0.84  K gold $\rm C_4KHg$ sample.   $\rm  I_c$  = $(10.24 \pm 0.03)$
+\AA.  After:  Same sample as in ``Before''  picture, only after exposure to
+200 torr hydrogen  gas.  $\rm T_c$  = 1.535 K.   $I_c$ = $(10.24 \pm  0.03)$
+\AA.}
+\label{hydxrd}
+\end{figure}
+\end{document}

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="GNU Emacs 23.2.1 (x86_64-redhat-linux-gnu, GTK+ Version 2.20.1) of 2010-05-13 on x86-07.phx2.fedoraproject.org"/>
+<meta name="keywords" content="linux kernel gnome social cloud webapp
+			       redhat virtualization kvm kdb kgdb
+			       debug WindRiver LWN Android bootloader
+			       java preload class Dalvik JVM ADP1 NexusOne"/>
+<link rel="stylesheet" href="chaiken.css" type="text/css"/>
+<title>LinuxCon Notes August 13, 2010</title>
+</head>
+<body>
+<h1>Day 3 Notes, LinuxCon 2010</h1>
+
+<h2>Thursday August 13, 2010<br/>Boston, MA</h2>
+
+Prepared by <a href="mailto:alchaiken@gmail.com">Alison Chaiken.</a>
+and offered under <a href=" http://creativecommons.org/licenses/by-sa/3.0/">cc-by-sa</a>
+
+<h3>"Your Desktop is Free but Where's Your Data?"</h3>
+Stormy Peters, Gnome Foundation<br/>
+
+<p>Peters emphasized the point that users often have no control over, and
+even limited access to, data that they have provided to web
+applications.  While Gmail, for example, straightforwardly allows
+users to download contacts and messages, many other services (notably
+Twitter and Facebook) do not.  While LinuxCon attendees understand
+the question of data control and have at least some concern, the
+average user is only beginning to understand the issue.</p>
+
+<p>Even those who aren't concerned about privacy or having copies of some
+of their data should be worried about being denied access to their
+accounts due to technical failures or vendor lock-out.    Users tend to
+panic when shut out of their main email accounts.   </p>
+
+<p>Linux in general and Gnome in particular must do better at providing
+open alternates to proprietary services.   Notably Identica offers an
+open alternative to Twitter and Firefox Sync allows browser settings
+to be stored to and accessed from the Cloud.    Gnome is planning
+Tomboy Online, an auto-syncing note-taking service.</p>
+
+<p>Desktop integration with the Cloud is essential for the future of
+Linux and Gnome.   Writing the middleware that makes the integration
+possible can be a hard sell for developers, who prefer to write cool
+desktop or web applications. [Notably Peters did not comment on
+Ubuntu One, Canonical's cloud-sync offering.]</p>
+
+
+<h3>"KVM: The Latest from the Development Team"</h3>
+Chris Wright, Red Hat<br/>
+
+<p>[The Linux kernel team has selected KVM as its virtualization
+  framework, effectively replacing Xen after its purchase by Citrix.]</p>
+
+<p>The KVM hypervisor performs all device I/O via Qemu, exemplifying
+Linux code reuse at its best.  Memory barriers are currently supported
+in KVM, although they appear to be about to leave the kernel.  Right
+now virtual guest machines can read and write at > 80% native speed
+via asynchronous I/O.</p>
+
+<p>Qemu was designed to emulate embedded systems and has been
+significantly repurposed to work with KVM.  Qemu_kvm is a rapidly
+evolving part of KVM and efforts to upstream changes to the Qemu
+project are underway.  A fundamental part of Qemu_kvm is QMP, the Qemu
+Monitor Protocol, whose default paradigm is one machine (the host)
+controlling another (the guest) rather than the typical Qemu model of
+a human at a serial console controlling a target machine.</p>
+
+<p>Qemu runs in user space.    Virtio relays messages from qemu and the
+network to the kernel.    More of virtio code has been moved into
+kernel mainline recently, meaning fewer context switches in a running
+KVM instance.   Two guests on the same host may now send each other
+packets through a virtual network via a virtual switch in the
+hypervisor.   SR_IOV can directly assign hardware to a guest.
+PowerPC will be a supported guest on KVM soon.</p>
+
+<p>Scheduling and locking in a guest's VCPUs can create problems, as the
+host can decide to take resources away from the guest right after a
+thread has taken a lock.  The host knows little about the guest's
+state and how to interrupt it with minimal performance degradation.
+Guests need to communicate their lock needs better to the host.  KVM
+may borrow some code from Xen to solve the problem.  One way to
+improve performance is lazy swapping of registers.</p>
+
+<p>KVM supports direct PCI device assignment to a guest.  Some PCI
+cards have virtualization on-board via SR_IOV.  Card-level
+virtualization requires EPT/NPT.  Hardware virtualization interfaces
+include VT_X for x86 and AMD_V for AMD CPUs.  </p>
+
+<h3>"The State of Kernel Debugging Technology"</h3>
+Jason Wessel, Wind River<br/>
+
+<p>[Jason Wessel is one of the most enthusiastic presenters I've seen in
+some time.    His excitement makes the most jaded audience members
+want to run out and try kdb.]</p>
+
+<p>kgdb and kdb are debugging tools of last resort.  Smart kernel
+developers will try JTAG/ICE, emulators and KVM, printk, trace_printk,
+kprobe, jprobes, ftrace, etc. first, but kgdb and kdb are useful when
+all else fails.  The SIMICS emulator that allows reverse execution is
+particularly useful.  kdb was just incorporated into the mainline
+kernel as of 2.6.35.</p>
+
+<p>Recently, incorporation of more of the graphics stack into the
+kernel has been the particular cause of difficult debugging problems.
+To trap bugs, program execution must revert back to a text console.
+kdb can help here.  After running backtrace to find the address where
+the hang occurs, lsmod can identify loaded drivers, and <br/>
+
+<pre>
+add-symbol-file &#60;badmodule.ko&#62; &#60;0xbadaddress&#62;
+</pre>
+
+in regular gdb can be used to view source.   kdb is not a source-level
+debugger as kgdb and gdb are.   Use bph command to get a hardware
+breakpoint or single-step trap.</p>
+
+<p>kdb runs directly on the target and communicates back to the host
+over the serial port, while kgdb executes on the host and talks to the
+target over the serial port. A convenient new feature is agent_proxy,
+which enables serial port multiplexing.  The serial port is used
+alternately by kgdb and by kdb without disconnecting.</p>
+
+<p>An EHCI Debug Port can be used with a special USB port when there is
+no serial port on a device.  "Atomic mode kernel setting" is needed
+for EHCI Debug support.   Unlike source-level debugging, kdb can run
+even with highly optimized code.   [kdb sounds very useful for
+reverse-engineering, although of course the DMCA has taught us that
+reverse-engineering is wrong.]</p>
+
+<p>The fact that USB support for a keyboard is not always available in
+the kernel is a difficulty for kdb.  Atomic level kernel mode setting
+is a solution.  kdump can show source code listing at the address
+where a backtrace shows an error.  kdump can even be invoked from a
+watchdog timer.  Interruption of the target by kdb almost always means
+a subsequent reboot.  To watch the normal flow of control, use an
+emulator instead.</p>
+
+<p>Future plans for kgdb include an earlyprint mode to debug
+suspend/resume problems with acpi.    kgdb allows must avoid
+preemption or it will hang.   kdb will even allows setting of a
+breakpoint in a module that has not yet been loaded.</p>
+
+<p>Can use gdb with kvm guest via
+
+<pre>
+gdb> tar rem localhost:2222
+</pre>
+
+if guest connects to port 2222.</p>
+
+<h3>"The Kernel Report"</h3>
+Jon Corbet, LWN<br/>
+
+<p>Qualcomm's new membership in the Linux Foundation is a sign of
+  progress.</p>
+
+<p>Kernel 2.6.35 included 4574 drivers, with an average of 170 new
+  drivers per release.   New support for memory defragmentation not
+  only makes big mallocs easier but also can save power, as less of
+  address space will need to be scanned for a given allocation.
+  2.6.35 also includes CPU idle pattern and timer slack detection.
+</p>
+
+<p>The <a href="LinuxConTuesNotes.html#garrett">Android wakelock controversy</a> is a symptom of a larger probelm
+  with embedded.    The result is out-of-tree code and lack of
+  community input.    
+</p>
+
+<p>The kernel now incorporates prof, gprof and perf-profilers tracing
+  tools.   perf and ftrace will be mainlined soon.   2.6.36 will see
+  incorporation of AppArmor and fanotify for virus
+  scanning.   <a href="http://kernelnewbies.org/">kernelnewbies</a>
+  has helpful explanations of what release notes mean.</p>
+
+<p>Surprisingly, it's Wall Street, not embedded, that drives the
+  development of real-time kernel extensions.   Real-time extensions
+  represent the largest and most important patch set.    Real-time
+  development is important because it is usually the arena in which
+  scalability problems are identified.  
+</p>
+
+<p>Deadline scheduling will eventually be merged into the mainline
+  kernel.  The SCHED_DEADLINE extension includes as parameters a
+  deadline, a period and worse-case execution time.  The SMP
+  scalability of SCHED_DEADLINE remains an unanswered question.
+</p>
+
+
+<h3>"Improving Android Boot-Up Time"</h3>
+Tim Bird, Sony<br/>
+
+<p>Bird began by confessing that his hope when he submitted the
+  abstract was to figure out a way to greatly speed up Android boot
+  time before the conference.  While he managed to change the amount
+  of time that various parts of the boot sequence took, he was not
+  able to shorten the overall execution time. [Nonetheless his
+  presentation offered interesting insights into the boot-up of the
+  curious chimera that is Android.]   Bird cited a toothpaste-tube
+  frustration metaphor, where lots of squeezing changes the shape of
+  the tube but does not decrease the volume by ejecting any paste.
+  Idea for future: preload only stubs of classes, with subsequent full
+  loads on demand.
+</p>
+
+<p>Hardware used in study: HTC Android Developer Phone 1 (unlocked HTC
+  G1); unlocked Nexus One; OMAP evaluation board.  Tools used: plain
+  old stopwatch; message loggers like grabserial (on OMAP), printks,
+  android system log; bootchart; ftrace and strace; Dalvik method
+  tracer (didn't actually work).  The Android logs contain statistics
+  that are generated by
+  the <a href="LinuxConTuesNotes.html#garrett">controversial wakelock
+  patch</a>.  The verbosity of the messages is controlled by a kernel
+  flag such as Printk_times=1 at boot. The detailed results of Bird's
+  testing
+  are <a href="http://www.eLinux.org/Printk_times">available</a>.
+  Messages show up in a file in /sys.  Messages written to /dev/kmsg
+  by custom test scripts show up in the kernel log.  Also change
+  "loglevel 3" to "loglevel 7" in /init.rc to increase the verbosity.
+  strace is part of Android since Eclair (2.0).  bootchart is enabled
+  via a kernel compile option
+  (<a href="http://eLinux.org/Bootchart">Bird's results</a>).   Use
+  logcat to see system messages from the adb console.
+</p>
+
+<p>Android's boot sequence starts out in a very ordinary way, with a
+  bootloader starting the kernel, which then runs init, whose params
+  are specified in /init.rc and /init.&#60;platform&#62;.rc.  The
+  static logo display at first power-on corresponds to the bootloader
+  running.  Next the Java initializer Zygote loads classes and the
+  package manager.  All Java apps that run subsequently are new Zygote
+  instances (JVMs) forked from the initial Zygote process.  The
+  service manager is next to start.  Init starts the radio daemon that
+  talks to the baseband processor, the graphics subsystem and any
+  other drivers.  A lot of system files are memory-mapped at boot.
+</p>
+
+<p>Results: HTC G1 got to home screen in 57 seconds; Nexus 1 took 36
+  seconds running Froyo (2.6.32).  The kernel load in both cases takes
+  about 6 seconds, which should be faster.  Most of boot time is
+  occupied by Zygote, which takes 20 seconds to start plus 20 seconds
+  further for package scanning.  Zygote's start is followed by a
+  low-CPU, high I/O period, which one would think could somehow be
+  interlaced with Zygote's CPU-intensive, low-I/O initialization.  The
+  HTC G1/ADP1 has 1514 pre-loaded classes while the N1 has 1942, and
+  all these packages are scanned.   Class pre-loading is the main
+  contributor to boot time but skipping it results in longer execution
+  time when the classes are needed.   
+</p>
+
+<p>The class invocation itself appears a bit inefficient.  Just to
+  read 4 B from the manifest file, a sequence of 25 Java and C#
+  classes must be invoked.  The entire manifest is then unzipped and
+  is paged in.    Running the Music.apk package loads a whole bunch of
+  optional wallpapers!
+</p>
+
+[Ironically preloading of Java classes is one the technologies that
+<a href="http://www.scribd.com/doc/35811761/Oracle-s-complaint-against-Google-for-Java-patent-infringement">Oracle
+  claims is covered by a patent that Google is infringing.</a>]
+
+<h3><a href="index.html">Back to Top</a></h3>
+
+</body>
+</html>

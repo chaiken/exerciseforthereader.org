@@ -1,0 +1,166 @@
+/* Common to all pages */
+body {
+	margin: 0;
+	padding: 0.5em;
+	font: 12px Verdana, Arial, Helvetica, sans-serif;
+}
+td {
+	font: 12px Verdana, Arial, Helvetica, sans-serif;
+	vertical-align: top;
+}
+h1 {
+	font-size: 18px;
+	background: #e8f0ff;
+}
+h2 {
+	font-size: 16px;
+	color: blue;
+}
+h3 {
+	font-size: 14px;
+	color: black;
+}
+
+a:link, a:visited  {
+	color: #003399;
+	text-decoration: none;
+}
+a:hover   {
+    color:#CC0000;
+	text-decoration:underline
+}
+ul, li {
+	margin-left: 1em;
+	padding-left: 0.3em;
+}
+ul.plain li {
+/*	list-style-type: none; */
+	margin-bottom: .3em;
+}
+ul li {
+	margin-bottom: .3em;
+} 
+
+ol li {
+	margin-bottom: .3em;
+}
+form {margin: 5px ;}
+
+iframe {margin-bottom: 10px;}
+input {
+	background: #efefef;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+}
+/* img {
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+img.right {
+	display: block; 
+    	text-align: right;
+}
+img.left{
+	display: block; 
+    	text-align: right;
+} */
+select {
+	background: #fff;
+	font-size: 10px;
+}
+
+.small {font-size: 10px;}
+
+div.figure {
+float: center;
+  width: 25%;
+  border: thin silver solid;
+  margin: 0;
+  padding: 0;
+}
+div.figure p {
+  text-align: center;
+  font-size: smaller;
+  text-indent: 0;
+}
+
+/* header and footer elements */
+#header {
+	position: relative; 
+	height: auto; 
+	clear: both;
+}
+#logo {
+	float: left;
+	position: relative;
+	top: 0;
+	left: 0;
+	background: #00309C url(../images/logo_bg.jpg) no-repeat;
+	width: 530px;
+	min-width: 530px;
+	height: 72px;
+	min-height: 72px;
+	color: #ffffff;
+}
+#footer {
+	position: relative;
+	text-align: center;
+	clear: both;
+	background: #efefef;
+	padding: .2em;
+	width: auto;
+	vertical-align: middle;
+	font-size: 10px;
+}
+#hrow1 {
+	background: #efefef;
+	position: relative;
+	margin: 0;
+	clear: both;
+	width: auto;
+	top: 0;
+	left: 0;
+	height: 67px;
+	padding: 2px;
+}
+#hrow2 {
+	background: #003399; 
+	width: auto;
+	position: relative;
+	top: 0;
+	left: 0;
+	clear: both;
+	margin: 0;
+	height: 72px;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+#footer ul, #subscriber_nav ul {
+	margin: 0;
+	padding: 0;
+}
+#footer li, #subscriber_nav li {
+	display: inline;
+	padding: 5px;
+	vertical-align: middle;
+}
+
+#ptimg {
+	float: left; 
+	text-align: center; 
+	margin: 10px; 
+	padding-top: 5px; 
+	width: 100px; 
+	clear: left;
+}
+
+
+#searchfrm {
+	float: right;
+	width: auto;
+	position: absolute;
+	right: 20px;
+	vertical-align: middle;
+	z-index: 100;
+	margin-top: 20px;
+}

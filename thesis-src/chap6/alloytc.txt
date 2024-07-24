@@ -1,0 +1,33 @@
+###############################################################################
+##									     ##
+##	File:     alloytc.txt						     ##
+##	Author:   Alison Chaiken					     ##
+##	Created:  Tue Jul 19 13:45:41 EDT 1988				     ##
+##	Contents: T_c's of CsBi-GIC's as a function of starting alloy        ##
+##                composition.                                               ##
+##									     ##
+##	Copyright (c) 1988 Alison Chaiken.				     ##
+##	All rights reserved.						     ##
+##									     ##
+##	$Log: alloytc.txt,v $
+##	Revision 1.1  1997/12/14 09:10:06  wolfgang
+##	initial commit
+##									     ##
+###############################################################################
+
+0.563 <0.05 #stang88 #stage I alpha
+0.8 <1.5 #yang88 #stage I alpha
+0.8 <0.5 #MIT #stage I alpha
+0.8 <1.2  #MIT #stage I (alpha + beta)
+0.8 <1.5 #yang88 #stage II beta 
+1.0 4.55 #stang88 #stage I (alpha + beta)
+1.0 4.69 #stang88 #stage I (alpha + beta)
+1.0 <1.5 #yang88 #stage I beta
+1.08 4.69 #stang88 #stage I (alpha + beta)
+1.08 4.69 #stang88 #stage I (alpha + beta)
+1.08 <0.05 #stang88 #stage I (alpha + beta)
+1.56 4.73 #stang88 #stage II beta 
+1.56 4.71 stang88 #stage III beta
+1.56 <0.05 #stang88 #stage III beta 
+1.56 4.72 #stang88 #stage III beta
+2.0 4.75 #mcrae85 #alloy

@@ -1,0 +1,55 @@
+_Why we sleep_ by Matthew Walker
+
+"Hard problems care little about what motivates their interrogators; they meter out their lessons of difficulty all the same."
+
+"the placebo effect is, after all, the most reliable effect in all of pharmacology."
+
+Adenosine, the biochemical manifestation of sleep debt, accumulates during waking hours and decreases during sleep with an RC time dependence. Circadian rhythms, OTOH, are governed by an oscillator and are strict sinusoids. Adenosine levels can rise over several days, making the "debt" concept precise.
+
+Caffeine persists for 5-7 hours, longer than people think.
+
+"slow neural recounting of the day's events is the best evidence we have to date explaining our own protracted experience of time in human REM sleep."
+
+Perhaps not enough working memory to perform all housekeeping in one pass? "the uneven back-and-forth interplay between NREM and REM sleep is necessary to elegantly remodel and update our neural circuits at night, and in doing so manage the finite storage space within the brain. Forced by the known storage capacity imposed by a set number of neurons and connections within their memory structures, our brains must find the "sweet spot" between retention of old information and leaving sufficient room for the new. Balancing this storage equation requires identifying which memories are fresh and salient, and which memories that currently exist are overlapping, redundant, or simply no longer relevant."
+
+"a key function of deep NREM sleep, which predominates early in the night, is to do the work of weeding out and removing unnecessary neural connections. In contrast, the dreaming stage of REM sleep, which prevails later in the night, plays a role in strengthening those connections."
+
+"instead of waking up at eight a.m., getting a full eight hours of sleep, you must wake up at six a.m. . . . What percent of sleep will you lose? The logical answer is 25 percent, since waking up at six a.m. will lop off two hours of sleep from what would otherwise be a normal eight hours. But that's not entirely true. Since your brain desires most of its REM sleep in the last part of the night, which is to say the late-morning hours, you will lose 60 to 90 percent of all your REM sleep, even though you are losing 25 percent of your total sleep time."
+
+"We therefore consider waking brainwave activity as that principally concerned with the reception of the outside sensory world, while the state of deep NREM slow-wave sleep donates a state of inward reflection—one that fosters information transfer and the distillation of memories."
+
+'As the geneticist Theodosius Dobzhansky once said, "Nothing in biology makes sense except in light of evolution."'
+
+"Adopt this perspective, and we can pose a very different theory: sleep was the first state of life on this planet, and it was from sleep that wakefulness emerged."
+
+"REM sleep may therefore have been birthed twice in the course of evolution: once for birds and once for mammals. A common evolutionary pressure may still have created REM sleep in both, in the same way that eyes have evolved separately and independently numerous times across different phyla throughout evolution for the common purpose of visual perception."
+
+"The brain will consume a far larger portion of deep NREM sleep than of REM sleep on the first night after total sleep deprivation, expressing a lopsided hunger." Maybe NREM must always come first?
+
+"In-flight, migrating birds will grab remarkably brief periods of sleep lasting only seconds in duration." Just like human drivers' "microsleeps."
+
+"At least two features define human beings relative to other primates. I posit that both have been beneficially and causally shaped by the hand of sleep, and specifically our intense degree of REM sleep relative to all other mammals: (1) our degree of sociocultural complexity, and (2) our cognitive intelligence. REM sleep, and the act of dreaming itself, lubricates both of these human traits." Not listing our language skills, which enable sociocultural complexity, but also much more.
+
+"The chimpanzees—our nearest living primate relatives—have been around approximately 5 million years longer than we have; some of the great apes preceded us by at least 10 million years. Despite aeons of opportunity time, neither species has visited the moon, created computers, or developed vaccines. Humbly, we humans have." What's so great about visiting the moon or even creating computers, from the point of view of species survival? We shouldn't conflate productivity and economic growth with reproductive fitness.
+
+"we observed a strikingly reliable loop of electrical current pulsing throughout the brain that repeated every 100 to 200 milliseconds. The pulses kept weaving a path back and forth between the hippocampus, with its short-term, limited storage space, and the far larger, long-term storage site of the cortex (analogous to a large-memory hard drive).II In that moment, we had just become privy to an electrical transaction occurring in the quiet secrecy of sleep: one that was shifting fact-based memories from the temporary storage depot (the hippocampus) to a long-term secure vault (the cortex)." "the more sleep spindles an individual has at night, the greater the restoration of overnight learning ability come the next morning." "For fact-based, textbook-like memory, the result was clear. It was early-night sleep, rich in deep NREM, that won out in terms of providing superior memory retention savings relative to late-night, REM-rich sleep." "Using MRI scans, we have since looked deep into the brains of participants to see where those memories are being retrieved from before sleep relative to after sleep. It turns out that those information packets were being recalled from very different geographical locations within the brain at the two different times. Before having slept, participants were fetching memories from the short-term storage site of the hippocampus—that temporary warehouse, which is a vulnerable place to live for any long duration of time if you are a new memory. But things looked very different by the next morning. The memories had moved. After the full night of sleep, participants were now retrieving that same information from the neocortex, which sits at the top of the brain—a region that serves as the long-term storage site for fact-based memories, where they can now live safely, perhaps in perpetuity."
+
+"wakefulness is low-level brain damage, while sleep is neurological sanitation."
+
+"do we hold the dreamer responsible for what they dream?"
+
+Freud not falsifiable: "A theory that cannot be discerned true or false in this way will always be abandoned by science, and that is precisely what happened to Freud and his psychoanalytic practices." "psychoanalysts all gave remarkably different interpretations of this same dream, without any statistically significant similarity between them."
+
+"the psychoanalytic method built on Freudian theory is nonscientific and holds no repeatable, reliable, or systematic power for decoding dreams."
+
+"Of a total of 299 dream reports that Stickgold collected from these individuals across the fourteen days, a clear rerun of prior waking life events—day residue—was found in just 1 to 2 percent."
+
+Dreams strip emotional content away from events, allowing traumatic ones to be safely recalled. "The theory proposed that a contributing mechanism underlying the PTSD is the excessively high levels of noradrenaline within the brain that blocks the ability of these patients from entering and maintaining normal REM-sleep dreaming. As a consequence, their brain at night cannot strip away the emotion from the trauma memory, since the stress chemical environment is too high."
+
+"As an example, let's say that I teach you a simple relationship between two objects, A and B, such that A should be chosen over object B (A>B). Then I teach you another relationship, which is that object B should be chosen over object C (B>C). Two separate, isolated premises. If I then show you A and C together, and ask you which you would choose, you would very likely pick A over C because your brain made an inferential leap. You took two preexisting memories (A>B and B>C) and, by flexibly interrelating them (A>B>C), came up with a completely novel answer to a previously unasked question (A>C). This is the power of relational memory processing, and it is one that receives an accelerated boost from REM sleep." It's easy to think of cases where A>C is false if, for example, A and C are subclasses of B's class and A and C share an overriding comparison that differs from B's.
+
+"Emotions make us do things, as the name suggests (remove the first letter from the word)."
+
+'we will have smart technology inside of cars that may help us know, from a driver's reactions, eyes, driving behavior, and the nature of the crash, what the prototypical "signature" is of a clearly drowsy-driving accident.' Better, there's already technology to prevent such accidents, and Euro-NCAP will require it.
+
+"silent sleep loss epidemic is the greatest public health challenge we face in the twenty-first century in developed nations." Worse than sedentary lifestyle?

@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="description" content="HPL linux hints and tips" />
+<meta name="keywords" content="linux, RedHat, RHEL, HPL, Hewlett-Packard,
+Exchange, Outlook, Thunderbird, Mozilla, Sunbird, CAD, Qcad,
+Contivity, Wireless, Evo, Wlan 200, VPN, rdesktop, hplip, iptables,
+LinuxCOE, RIT, Palo Alto, CD, DVD, mkisofs, backup script, VPN,
+tunnel, calendar, Mozilla" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="GENERATOR" content="GNU Emacs 21.1.2" />
+<title>HPL Linux Tips</title>
+<link rel="stylesheet" type="text/css" href="http://www.wsrcc.com/chaiken.css" />
+</head>
+
+<body>
+
+<h1>HPL-Specific Linux Tips </h1>
+
+<p>
+Here is some wisdom about how to set up system and applications
+software on a RedHat Enterprise Linux system at HPL Palo Alto.  Some
+of the details will be specific to my distro (RHEL4WS; kernel
+2.6.9-11) and some may be specific to Palo Alto.
+</p>
+
+<h2>I-drive and Samba</h2>
+
+<p>Samba is Linux's program for communicating with the Windows SMB
+file system protocol.  In order to get Samba working, you will need to
+edit the /etc/samba/smb.conf file.  Some instructions are in <a
+href="http://kbase.hpl.hp.com/default.asp?docid=KB22846">RIT
+KB22846</a>: RIT Recommended Samba Configuration for HPL-Palo Alto.
+This RIT webpage contains one important error: the workgroup should be
+americas, not labs!  You can test your smb.conf file using the
+<tt>testparm</tt> command.
+</p>
+
+<p>
+To get to the I: drive: <br />
+<tt>
+smbclient //spica/tmp --workgroup=americas -U YOURNAME <br/>
+</tt>
+Use with Windows password.
+</p>
+
+<p>
+Get to /home/YOURNAMEHERE on spica:<br />
+<tt>
+smbclient //spica/YOURNAME --workgroup=americas -U chaiken<br/>
+Domain=[LABS] OS=[Unix] Server=[Samba 2.2.8a based HP CIFS Server A.01.10]<br/>
+</tt>
+</p>
+
+<p>Once the connection to spica or the I-drive has been made, files
+can be transferred with the get and put commands.  Read the smbclient
+man page for more info.
+</p>
+
+<p> You can also mount the Windows file system using smbmount but
+you must be root to do so.   You must create an empty directory with
+the same name that you want to call the mount first:
+</p>
+
+<p>
+<tt>
+chaiken@dhcp-4u-146 ;-) sudo mkdir /spicadirs<br />
+root@dhcp-4u-146 ;-) smbmount //spica/chaiken /spicadirs -o workgroup=americas,username=chaiken <br />
+Password:  [Windows]
+</tt>
+</p>
+
+<p> Once the Windows file system is mounted, you should be able to
+transfer files with the regular Unix cp and mv commands. Unfortunately
+the ownership of the mount cannot be changed to anyone other than
+root.
+</p>
+
+<p>
+<tt>
+root@dhcp-4u-146 ;-) chown chaiken /spicadirs <br />
+chown: changing ownership of `/spicadirs': Operation not permitted<br />
+</tt>
+</p>
+
+<p>Messages about the smbfs appear in /var/log/samba/smbmount.log:</p>
+
+<p>
+<tt>
+[2005/10/06 07:49:21, 0] client/smbmount.c:send_fs_socket(406) <br />
+  mount.smbfs: entering daemon mode for service \\SPICA\homes, pid=4332
+</tt>
+</p>
+
+<p>
+Root can unmount the smbfs with either umount or smbumount.
+</p>
+
+<h2>Thunderbird Email client
+</h2>
+
+<p>
+You can read email from the usual HPL Exchange servers using Mozilla's
+<a href="http://www.mozilla.org/support/thunderbird/faq">Thunderbird</a>
+client.
+</p>
+
+<h3>Basic Thunderbird configuration</h3> 
+
+<p>From <a href="http://kbase.hpl.hp.com/published/KB10328.htm">RIT
+KnowledgeBase:</a></p>
+
+<p>
+<tt>
+Server: cacexd01.americas.cpqcorp.net<br/>
+Server windows uses: cacexc12.americas.cpqcorp.net<br/>
+Port: 110<br/>
+Username: americas\YOURNAMEHERE<br/>
+Outgoing SMTP server: smtp-pa.hpl.hp.com<br/>
+</tt>
+</p>
+
+<p>See also <a href="http://kbase.hpl.hp.com/published/KB10718.htm">this</a>
+about Exchange setup.</p>
+
+
+<h3>Getting clickable hyperlinks working in Thunderbird messages</h3>
+
+<p>
+Set "Default browser" in gnome and KDE to firefox (or your other
+ browser) following <a
+ href="http://kb.mozillazine.org/Default_browser">advice.</a> From a
+ terminal window, use the "gnome-panel" and "kcontrol" programs to
+ make the change.
+</p>
+
+<h3>Connecting Thunderbird to the Exchange Address Book</h3>
+
+<ul>
+
+<li>Choose "File . . . New . . . LDAP Directory."</li>
+
+<li>On the "General" tab, enter the following information:
+
+<p>
+<tt>
+HP Corporate Address book:<br/>
+Hostname: ldap.hp.com<br/>
+Base DN: o=hp.com<br/>
+Port number: 636<br/>
+Bind DN: blank<br/>
+Use secure connection (SSL): check
+</tt>
+</p>
+</li>
+
+<li><p>On the Advanced tab, enter the following information:</p>
+Scope: Subtree<br/>
+Search filter: (objectclass=*)<br/>
+</li>
+</ul>
+
+<p>That's all.   Now when you type address in the "To:" field of a
+message, Thunderbird will try to autocomplete using the main HP
+directory information.   Of course you can also import your old
+bookmarks file into Thunderbird. </p>
+
+<h2>Calendars</h2>
+
+<p>
+I've been using the calendar program that comes with the Mozilla
+suite.  As a stand-alone program, it's called <a
+href="http://www.mozilla.org/projects/calendar/sunbird.html">Sunbird</a>.
+The calendaring works better when started at the same time as firefox
+via "firefox -browser -calendar" The calendar program has an
+easy-to-use GUI and will pop up a window to remind you of
+appointments.  Setting up recurring events is easy.
+</p>
+
+<p>The best feature of the Mozilla calendar is that you can import
+calendars in the standard iCal format.  I'm not sure whether that
+means that you can share calendars without Outlook users or not.  One
+cool thing you can do is create a calendar at a website like <a
+href="http://eventful.com/calendars/2089">this one.</a> My calendar is
+public; it's also possible to create a private calendar with a
+password on a website like this one.  A public calendar can be
+conveniently accessed from multiple computers.   Members of a project
+could share a calendar in the iCal format.
+</p>
+
+<h3>How to access a remote iCal calendar from Mozilla's calendar program</h3>
+
+<p>Some web calendars have an "iCal" button that you can press.  If
+you're using Firefox, a Mozilla calendar window should open with the
+correct URL already entered.  Change the name and highlight color of
+the remote calendar and you'll be all set.
+</p>
+
+<ul>
+
+<li>Open calendar and go to "Calendars" tab.
+</li>
+
+<li>Right-click on the "Calendars" window and choose "New calendar."
+</li>
+
+<li>Enter the Remote URL of the calendar you wish to import.  It may
+start with "webcal://" or may contain the string "ical" or may point
+to a file with extension ".ics".  These are all signs that the the
+remote calendar is in the correct format.
+</li>
+
+<li>
+</li>
+
+</ul>
+
+<p>Note: I recommend backing up your Mozilla calendar (as well as your
+Firefox bookmarks) frequently.   These programs are fairly stable but
+when something goes wrong you don't want your data to get trashed.
+</p>
+
+<h2>Office Suite</h2>
+
+<p>I use the <a href="http://www.openoffice.org/">OpenOffice Suite</a>
+with few problems.  OpenOffice supports Word, Excel and Powerpoint.
+I've never had trouble opening a Word or Powerpoint file, nor has a
+recipient complained about trouble with a .doc or .ppt file they've
+received from me.   Occasionally OO has trouble with especially
+complex Excel macros although most Excel files have no problems.</p>
+
+<h2>Web browser</h2>
+
+<p>I use <a
+href="http://www.mozilla.org/support/firefox/faq">Firefox</a> with few
+problems.  Everything from filling in secure web forms at <a
+href="http://athp.hp.com">@hp</a> to regular browsing works fine.
+Note that the "Automatic proxy configuration URL" is
+http://autocache.hp.com/
+</p>
+
+<h2>Printer Configuration</h2>
+
+<p>You can either use the command system-config-printer (used to be
+redhat-config-printer) or equivalently edit the file
+/etc/cups/printers.conf directly.  Or you can used <em>hplip</em>
+(recommended). (Note that you <em>don't</em> edit /etc/printcap
+directly as Unix users have done for generations.)
+</p>
+
+<h3>Using a text editor to configure printers</h3>
+
+<p>Here's my /etc/cups/printers.conf file:</p>
+
+
+<pre>
+# Printer configuration file for CUPS v1.1.22rc1 <br />
+# Written by cupsd on Mon 26 Sep 2005 05:59:41 PM PDT <br />
+<Printer chuck> <br />
+Info Created by redhat-config-printer 0.6.x <br />
+Location  <br />
+DeviceURI socket://chuck.hpl.hp.com:9100 <br />
+State Idle <br />
+Accepting Yes <br />
+JobSheets none none <br />
+QuotaPeriod 0 <br />
+PageLimit 0 <br />
+KLimit 0 <br />
+</Printer>
+<DefaultPrinter lj4k2u> <br />
+Info Created by redhat-config-printer 0.6.x <br />
+Location  <br />
+DeviceURI lpd://thecron.hpl.hp.com/lj4k2u <br />
+State Idle <br />
+Accepting Yes <br />
+JobSheets none none <br />
+QuotaPeriod 0 <br />
+PageLimit 0 <br />
+KLimit 0 <br />
+</Printer> <br />
+</pre>
+
+<p>
+The only lines that really matter here are the "DeviceURI" ones.  Note
+that "chuck" is a printer connected to a Windows machine called avocet
+while "lj4k2u" is a networked printer connected to a Unix server
+called thecron.hpl.hp.com.  It's my understanding that any printer
+that is accessible through print-pa1 on Windows should be accessible
+through thecron as well.  To get the right setting for the Windows
+printer under system-config-printer, choose "Networked JetDirect."
+system-config-printer (and hplip; see below) also allow you to pick a
+printer driver.   For the Unix printer, pick "Networked Unix (LPD)."
+</p>
+
+<p>
+Note that the system-config-printer command may not create the
+printers.conf file correctly.  Make sure that the hostnames in the
+DeviceURI lines are correct!  Make sure that the DeviceURI line for
+your default printer contains the printer name (in this example
+lj4k2u) and not "lp" instead.
+</p>
+
+<h3>GUI printer configuration with hplip</h3>
+
+<p>An easier option is to use HP's own <a
+href="http://hpinkjet.sourceforge.net/install.php">hplip</a> printer
+configuration and control package.  This program allows browser-based
+modification of the config files and also gives real-time printer
+status info.  I had a little trouble installing it but have used it
+without problems.  Once installed, the hplip package is accessible via
+http://localhost:631/printers.  Making changes to printer
+configuration will cause hplip to request the root username and
+password.  (Is this secure?)  HP's Shiyun Yie is in charge of the
+hplip package and you can communicate with him about it.
+</p>
+
+<p><em>hplip</em> allows the user to configure many other printer
+settings.    You can allow use the command-line programs
+<em>lpoptions</em> (overall settings) or <em>a2ps</em> (per-job
+settings).  Both of these programs have useful man pages.
+</p>
+
+<p>Sometimes hplip may pick stupid printer defaults.  An HP 5Si came
+up with double-sided printing disabled and paper type envelope!  By
+clicking on the "Configure printer" button in hplip, you can change
+these options.
+</p>
+
+<h2>CAD program</h2>
+
+<p>I've been using <a
+href="http://www.ribbonsoft.com/qcad.html">Qcad</a>, a 2D mechanical
+drawing package.  I have successfully sent designs in DXF format to
+the HPL Model Shop.  While Qcad has a few <a
+href="CADnotes.txt">bugs</a>, for the most part it is easy to use.
+Apparently Qcad supports a <a href="tabletinput.txt">pen-based drawing
+interface</a> although I haven't checked it out.
+</p>
+
+<h2>Using rdesktop to get a Windows desktop</h2>
+
+<p>If you must briefly connect to Windows, you can use <a
+href="http://rit.hpl.hp.com/pa/wts/wtshpux.htm">rdesktop</a>.  The
+best part of rdesktop is that you're connected to a fast Windows
+machine that you don't have to maintain!  rdesktop is helpful when
+you're first setting up your Linux system and need a fallback plan.
+The wts-pa1 terminal server doesn't allow scp file transfers, but you
+can save files on spica from wts-pa1 and then use scp to copy them
+from there.
+</p>
+
+<h2>Wireless configuration</h2>
+
+<p>I have a Compaq Evo N610c laptop with a wireless modem (the Compaq
+W200 multiport LAN) that is connected to the USB rather than PCMCIA.
+You can see what the folks who made this choice were thinking (that
+users could field-upgrade their own modem) but non-standard hardware
+goes badly with open source.
+</p>
+
+<p>Nonetheless I did get the wireless modem working using the <a
+href="http://folk.uio.no/oeysteio/orinoco-usb/">Orinoco drivers</a>
+contributed by Oystein Fischer. I built an RPM for the Orinoco driver
+for the RHEL4WS that you can <a
+href="http://web.hpl.hp.com/personal/chaiken/km_orinoco_2.6.9-11.EL-CVS20050609-11.i686.rpm">download</a>.
+Also install the <a
+href="http://sourceforge.net/projects/madwifi/">madwifi</a> drivers.
+You will need an /etc/sysconfig/network-scripts/ifcfg-eth1 file.
+<a href="http://web.hpl.hp.com/personal/chaiken/ifcfg-eth1">Here's
+one</a> that works for me.
+</p>
+
+<p>Check if the wireless modem is working by seeing if its lights is
+on and the "iwconfig" command shows wireless connections. Then follow
+<a href="http://rit.hpl.hp.com/wireless/setup/guest/linux.html">RIT's
+instructions</a> to connect to the "guest" network.  Now that you're
+outside the firewall, don't forget to open your browser preferences
+and choose "Direct connection to the internet" instead of "Automatic
+proxy configuration URL."
+</p>
+
+<h2>VPN Connection from Outside to HPL</h2>
+
+<p>Once you're wirelessly connected to the guest network, you can ssh
+to machines all over the world but can't get inside HPL's firewall.
+To get inside, follow <a
+href="http://linuxcoe.corp.hp.com/documentation/Architecture/net-access-internet-HOWTO.html">Corporate's
+instructions</a> on how to install the VPN (virtual packet network)
+software.  Craig Lamparter has an RPM for RHEL4WS that works fine.
+</p>
+
+<p>The only installation problem I had was with iptables, which is a
+firewall program that is configured by LinuxCOE.  Line 2 of the
+"prerequisites" in the instructions says to use an iptables command
+which modifies the file /etc/sysconfig/iptables.  Unfortunately the
+command doesn't seem to do the right thing.  We fixed this problem by
+starting the RedHat gui "system-config-securitylevel" and checking the
+"trusted device" box next to nlv0.  nlv0 is the Netlock VPN tunnel
+that you need to use to access the HP intranet.  Here's the command
+sequence:
+</p>
+
+<ul>
+
+<li>Install VPN client via the appropriate RPM.  "ifconfig" and
+"iwconfig" should list nlv0.
+</li>
+
+<li>Check that wireless is working and that you can connect to the
+"guest" network.
+</li>
+
+<li>Start "system-config-securitylevel" and choose nlv0 as a trusted
+device.
+</li>
+
+<li>Run "iptables -A INPUT -p udp -m udp --dport 500 -j ACCEPT;
+iptables -A INPUT -p 50 -j ACCEPT; iptables -A INPUT -p 51 -j ACCEPT"
+as instructed.
+</li>
+
+<li>Run "/sbin/service iptables save" and "/sbin/service iptables
+restart."
+</li>
+
+<li>Open <a href="http://127.0.0.1:9161.eac.cgi">Contivity VPN
+Client</a> and use your ActivCard to log in.
+</li>
+
+<li>You should be in.  Try pinging a machine inside the firewall,
+looking at nfs disks, etc.  Note that the "Automatic proxy
+configuration URL" for your browser is http://autocache.hp.com/ once
+again.
+</li>
+
+</ul>
+
+<p>The Contivity Client can disconnect without warning.  The
+information that the Contivity Client gives you in its browser window
+is pretty worthless in this regard.  To see if the VPN tunnel exists,
+type "route" and see if you have routes for nlv0.  If not, you need to
+reconnect.
+</p>
+
+<p>
+Thanks to Dave Connell for solving this
+problem for me.
+</p>
+
+
+<h2>Matlab and Femlab</h2>
+
+<p>I've run these packages without problems.
+</p>
+
+<h2>Software updates</h2>
+
+<p>Rather than use the RedHat programs up2date or yum (or the HP-UX
+program ninstall), you will <a
+href="http://kbase.hpl.hp.com/published/KB22594.htm">follow these
+instructions.</a>
+</p>
+
+<h2>CDs, DVDs and backups</h2>
+
+<p>You can use the commands mkisofs or growisofs to create automated
+backup scripts.    They are <a href="http://www.redhat.com/docs/manuals/enterprise/RHEL-4-Manual/step-guide/s1-disks-cdrw.html">well-documented.</a>
+</p>
+
+<p>To read a CD or DVD using RHEL4, type "mount /media/cdrecorder" and
+then treat /media/cdrecorder as a regular directory.  Don't forget to
+run "umount /media/cdrecorder" when you're done or otherwise you may
+not be able to shutdown or reboot the computer.
+</p>
+
+<h2>PDF and Postscript viewing</h2>
+
+<p>Consider using <a href="http://www.foolabs.com/xpdf/">xpdf</a>
+rather than Acrobat.  xpdf supports cursor-based text cut-and-paste
+from PDF files and has a useful search mode.  You configure options in
+xpdf by copying /usr/local/etc/xpdrc to $HOME/.xpdfrc and editing it.
+Which changes to make are fairly obvious.
+</p>
+
+<h3>Disclaimer</h3>
+
+<p>
+If you want reliable, well-thought advice, ask a computer scientist.
+HPL has a horde of them.
+</p>
+
+<hr />
+
+<h3>Thanks to Bailey Gee for all his patience with my endless
+questions.</h3>
+
+    <p>
+      <a href="http://validator.w3.org/check/referer"><img src=
+      "/icons1/valid-xhtml10.png" alt="Valid XHTML 1.0!" height="31"
+      width="88" /></a>.<a href=
+      "http://jigsaw.w3.org/css-validator/check/referer"><img src=
+      "/icons1/valid-css.png" alt="Valid CSS!" height="31" width=
+      "88" /></a><br />
+      <a href=
+      "mailto:alison@exerciseforthereader.org">alison@exerciseforthereader.org
+      (Alison Chaiken)</a><br />
+      <span class="footer">$Date: 2005/10/23 04:27:37 $</span> <a href=
+      "/baddream/dough/">.</a><a href=
+      "mailto:larryh@aardvark.wsrcc.com">.</a>
+    </p>
+
+<hr />
+
+</body>
+</html>

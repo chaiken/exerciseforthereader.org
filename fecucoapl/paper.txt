@@ -1,0 +1,190 @@
+Low-Field Spin-Valve Magnetoresistance in Fe-Cu-Co 
+Sandwiches
+
+A. Chaikena), P. Lubitz, J.J. Krebs, G.A. Prinz, and M.Z. Harford
+Naval Research Laboratory, Code 6345, Washington, DC 20375
+
+
+
+Fe-Cu-Co sandwiches have been grown on glass and silicon  
+substrates  using electron-beam evaporation.      Because the typical 
+coercive field of  a thin Co film  is higher than that of a typical  Fe 
+film,  the magnetization curves of these sandwiches show clearly the 
+separate, sequential reversal of the Fe and Co moments as a function 
+of applied field.   In the applied  field region where the moments of 
+the two magnetic layers are antialigned, the spin-valve 
+magnetoresistance shows a peak of  over 3% in amplitude at room 
+temperature. 
+ 
+
+PACS: 75.70.-i, 73.50.Jt, 68.55.-a
+
+
+a)NRC/NRL postdoctoral associate 
+
+
+
+	Both exchange-coupled1 and uncoupled2,3 ferromagnet-
+paramagnet-ferromagnet sandwiches and superlattices display a 
+large negative magnetoresistance (MR) when the moments of 
+adjacent ferromagnetic layers are turned from antiparallel to 
+parallel.   The isotropic positive magnetoresistance associated with 
+the antiparallel alignment has been called the spin-valve effect.3  In 
+superlattices which have an antiferromagnetic interlayer exchange, 
+the antialigned state occurs at zero applied field,1,4 and is the 
+ground state of the system.  In the uncoupled sandwiches, the 
+antialignment occurs for a finite range of applied fields,  and is 
+possible either because of an exchange bias pinning of one of the 
+ferromagnetic moments,3 or because of different coercivities in thick 
+and thin Co layers.2
+
+	Another method of obtaining different coercive fields in 
+alternate layers of  a superlattice is to make those layers of different 
+ferromagnetic metals.   Shinjo and Yamamoto have reported results 
+on Co-Cu-NiFe superlattices.5  The Fe-Cu-Co system is another good 
+choice because of the limited miscibility of the Fe and Co in Cu at low 
+fabrication temperatures, and because  the growth of these metals is 
+already well understood.6      For the present study,  polycrystalline 
+Fe, Cu, and Co layers were sequentially electron-beam evaporated 
+from elemental sources onto untreated glass or silicon (100) 
+substrates.       Layer thicknesses were monitored during deposition 
+with a quartz-crystal oscillator, and checked via x-ray fluorescence 
+measurements.   The  background pressure of the vacuum system is 
+about 10-7 torr.
+
+	Figure 1(a) shows magnetization curves for two Fe-Cu-Co 
+sandwiches grown during the same run, but deposited at different 
+substrate temperatures of 220 and 165 ˚C.    As the figure illustrates, 
+sandwiches grown at temperatures 220 ˚C and above   reproducibly 
+have square magnetization curves, indicating that the Fe and Co 
+moments are reversing together.   However, in the sandwiches 
+deposited at 165 ˚C and below, the  Co and Fe do indeed have 
+different coercivities, as demonstrated by the presence of the 
+shoulder  in the magnetization curve at H≈0.1 kOe.   For the 
+increasing field part of the loop, the shoulder corresponds to the field 
+region where the moment of the Fe film has already reversed, but 
+the moment of the Co film is just beginning to rotate.   The 
+identification of the higher coercivity part of the loop with the Co 
+film has been confirmed by a study on a series of samples with 
+different Co thicknesses.  Similar magnetization curves were reported 
+in Ref. 5 for NiFe-Cu-Co superlattices.   The  disappearance of the 
+shoulder in the magnetization curve between 165 and 220 ˚C is 
+attributed to  slight interdiffusion of  the Cu and  ferromagnetic 
+layers.    Recent Auger electron spectroscopy and  thermal energy 
+atom scattering studies of the Co/Cu system by de Miguel et al.6  
+show that diffusion of Cu into Co begins at about 177 ˚C.   No 
+significant in-plane magnetic anisotropy is observed in the 
+magnetization curves of these two samples despite the presence of 
+bias fields up to 50 Oe during deposition.
+
+	Figure 1(b) shows  magnetoresistance data for the same two 
+sandwiches at room temperature.    The magnetoresistance is here 
+defined to be the ratio of the field-induced change in resistance to 
+the zero-field resistance. The 220 ˚C sample has an MR curve that is 
+typical for thin ferromagnetic films, with a   peak of 0.5%  near the 
+coercive field of the magnetization curve.   For the 165 ˚C sandwich 
+the peaks in the magnetoresistance correspond well to the region of 
+the magnetization curve where the Fe and Co moments are  
+maximally antialigned, as expected. The magnitude of the transverse 
+MR at magnetic saturation is  3.1% for this sandwich, comparable to 
+the room-temperature MR previously found for uncoupled 
+sandwiches.2,3  The anisotropic magnetoresistance (AMR) for the 
+165 ˚C sample was measured directly at 3 kOe to be 0.41%.    The 
+spin-valve component of the  magnetoresistance is the transverse 
+MR (applied field  perpendicular to the current direction) minus half 
+the AMR.7  Therefore the  component of the  MR attributable to the 
+spin-valve effect is 2.9%.   A spin-valve  magnetoresistance  of over 
+3% at room temperature can be obtained even in simple Fe-Cu-Co 
+sandwiches by optimizing the deposition temperature  and the layer 
+thicknesses.  
+
+	Figure 2 shows  magnetoresistance data for two 
+Fe51Å/Cu55Å/Co48Å sandwiches grown simultaneously at 165 ˚C, 
+one on glass and one on Si.      The Fe films of both samples switch 
+between  0 and  about 0.05 kOe.  However,  the Co moment in the 
+sample grown on glass reverses at a significantly higher field than 
+the Co moment in the Si sample, as demonstrated by the 
+corresponding M-H loops (not shown).   This variability in the 
+behavior of the Co layer is somewhat surprising given that it is the 
+Fe layer which is deposited directly on the substrate.    The 
+deposition temperature variation in Figure 1 also principally affects 
+the behavior of the Co layer.   X-ray diffraction and cross-sectional 
+transmission electron microscopy studies are currently underway to 
+look for associated structural changes in the Co film  or the interface 
+quality.8
+
+	In order to make a comparison to the previous transport 
+studies on both coupled and uncoupled sandwiches, it interesting to 
+examine the   dependence of the spin-valve MR on individual layer 
+thickness.    Figure 3 shows the variation of the AMR and spin-valve 
+MR with Co  thickness.   The linear  thickness dependence of the AMR 
+is expected and is due  simply to the increase of the amount of 
+ferromagnetic material in the sample.     On the other hand, the non-
+monotonic form of the spin-valve magnetoresistance cannot be 
+simply explained.     The broad peak is similar to that observed by 
+Dieny et al. in their exchange-biased sandwiches.3   Further 
+investigation of this thickness dependence is underway, as is a 
+detailed study   of the variation of the spin-valve effect with Cu and 
+Fe thickness.
+
+	In conclusion, the spin-valve magnetoresistance has been 
+observed in a new  sandwich system, Fe-Cu-Co.   The large (>3%) MR 
+reproducibly achievable in polycrystalline films on silicon and glass 
+at applied fields of only 100 Oe may have technological significance.     
+The spin-valve magnetoresistance and its associated magnetization 
+curve are suppressed by interlayer interdiffusion, as indicated by a 
+growth temperature study.    The variation of the spin-valve MR 
+with Co thickness may be a clue to its fundamental origin. 
+
+	We thank D. King for the x-ray measurements.  This research 
+was supported by DARPA and ONR.	
+
+
+References
+
+1.  M.N. Baibich, J.M. Broto, A. Fert, F. Nguyen van Dau, F. Petroff, P. 
+Etienne, G. Creuzet, A. Friederich, and J. Chazelas, Phys. Rev. Lett. 61, 
+2472 (1988).
+
+2.  C. Dupas, P. Beauvillain, C. Chappert, J.P. Renard, F. Trigui, P. 
+Veillet, E. Velu, and D. Renard, J. Appl. Phys. 67, 5680 (1990).
+
+3.  B. Dieny, V.S. Speriosu, S.S.P. Parkin, B.A. Gurney, D.R. Wilhoit, and 
+D. Mauri, Phys. Rev. B43, 1297 (1991).
+
+4.  P. Grünberg, R. Schreiber, Y. Pang, U. Walz, M.B. Brodsky and H. 
+Sowers, J. Appl. Phys. 61, 3750 (1987).
+
+5. T. Shinjo and H. Yamamoto, J. Phys. Soc. Jpn. 59, 3061 (1990).
+
+6.  J.J. de Miguel, A. Cebollada, J.M. Gallego, R. Miranda, C.M. 
+Schneider, P. Schuster, and J. Kirschner, J. Magn. Magn. Mater., to be 
+published, and references therein.
+
+7.  A. Chaiken, G.A. Prinz, and J.J. Krebs,   J. Appl. Phys. 67, 4892 
+(1990).
+
+8.  J. Kim and L. Salamanca Riba, in preparation.
+
+
+Figure Captions
+
+Figure 1.  (a) Magnetization curves for two Fe-Cu-Co-Cu sandwiches 
+(see inset) grown on glass at  different deposition temperatures.    
+The shoulder in the magnetization of the 165 ˚C sample indicates the 
+region where the Fe and Co moments are  antialigned.    (b)  Room-
+temperature transverse magnetoresistance curves for the same two 
+samples.      The 220 ˚C sample with the square magnetization curve 
+has an MR trace typical for a single thin ferromagnetic film, whereas 
+the  165 ˚C sample has an increased resistance when the moments of 
+the two films are antialigned.
+
+Figure 2.  Transverse magnetoresistance for two 
+Fe51Å/Cu55Å/Co48Å sandwiches which were deposited 
+simultaneously, one on glass and one on a semi-insulating Si 
+substrate.   The growth temperature was 165 ˚C.
+
+Figure 3.   Co-thickness dependence of the anisotropic 
+magnetoresistance (AMR) and spin-valve magnetoresistance for a 
+series of Fe-Cu-Co-Cu sandwiches.   These samples were deposited on 
+glass at 165 ˚C,  and had  the structure Fe56Å/Cu50Å/Co(tCo)/Cu30Å.

@@ -1,0 +1,24 @@
+(setq omega_DI 269)
+(setq omega_DII 260)
+(setq tcII 1.9)
+
+from prop.record:
+Total DOS for C_8KHg, 0.058 states / (eV * atom),
+[Ref. 3] (corrected for lambda_{e-p})
+(setq dosII 0.058)
+
+from prop.record:
+Corrected N(E_F) if T_c = 0.73 K:
+(* 0.405 7.2274e-01)
+2.9271e-01 ;total N(E_F) in (states / eV * atom); same as in Ref. 35.
+(setq dosI 2.9271e-01)
+
+(setq V (/ -1 (* (log (/ tcII omega_DII)) dosII)))
+3.505 ; in eV
+Now calculate T_c of stage I using the same V:
+(* omega_DI (exp (/ -1 (* dosI V))))
+101.5
+Recalculate T_c of C_8KHg as a check:
+(* omega_DII (exp (/ -1 (* dosII V))))
+1.9
+

@@ -1,0 +1,23 @@
+\chapter{Computer Programs used for Structural Analysis}
+\label{structprog}
+\pagestyle{headings}
+\markright{Structural Analysis Programs}
+
+        This  appendix contains the source code  for  the programs  sf  and
+rhocalc.  sf is  a  routine which optimizes structural  parameters for $\rm
+C_4KHg$ by fitting  neutron diffraction structure factors.  sf  is based on
+Equations~\ref{stfact}  and \ref{hamilton}.  This  program should be easily
+adaptable to other structures or to x-ray diffraction data.
+
+        rhocalc   is   a Fourier-transform  program   which   converts  the
+reciprocal space  information of  the structure  factors  into a real-space
+structure.   Essentially   rhocalc  is   a   software  implementation    of
+Equation~\ref{denscalc}.  It should require only  trivial modifications for
+use with a different structure.
+
+        Both rhocalc and sf make use of some of the utility subroutines
+listed in Appendix~\ref{utility}.
+
+%sf.c stfact.c max.c sffit.c sfgrad.c residual.c changefit.c changeparams.c
+%rhocalc.c
+%Makefile

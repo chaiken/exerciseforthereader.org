@@ -1,0 +1,54 @@
+				Call for Papers
+			  Special Session at ICC 2001
+		   Signal Processing and Coding for Storage
+		      Helsinki, Finland June 11-15, 2001
+
+
+SUBMISSION DEADLINE SEPTEMBER 1, 2000
+This session will cover signal processing and coding techniques for magnetic
+and optical storage systems, including disk and tape channels. Suggested topics
+for original technical papers include:
+
+   o Channel characterization and modeling, including media noise and
+     non-linearities
+   o Detection methods, including sequence detection, partial response and
+     decision feedback
+   o Equalization and filtering, including non-linear techniques
+   o Modulation and run-length limited codes, trellis coding and equalization
+   o Error-correction codes and turbo codes applied to storage systems
+   o Read/write channel integrated circuits
+   o Signal processing for optical storage systems: holographic, near-field,
+     multi-level, phase change, MO, CD, DVD
+   o Coding bounds and channel capacity
+   o Storage density and read/write data rate: limitations and issues
+     surrounding head/media/preamplifier/channel/servo/host interface
+   o Write pre-compensation and write equalization
+   o Timing and gain recovery
+   o Signal processing for servo: spin control, actuator, demodulation, and
+     Gray code detection
+   o Cost versus performance issues surrounding design of signal processing
+     systems for storage
+   o Special issues surrounding signal processing and coding for removable
+     storage devices
+
+Prospective authors are encouraged to submit papers for this session following
+the electronic submission guidelines (see accompanying ICC 2001 Call for
+Papers). Only electronic submissions will be accepted this year. The initial
+submission deadline is September 1, 2000. In addition to the copies
+electronically submitted to the ICC 2001 TPC Chair, please e-mail one copy of
+the paper to the session organizer listed below. Please make a note in your
+e-mail and on the title page that the paper is intended for the 'Signal
+Processing and Coding for Storage' session.
+Please visit the web-site of the Signal Processing for Storage Technical
+Committee for further information on ICC 2001 and Signal Processing for Storage
+at IEEE. If you like to be informed about future events and activities in
+Signal Processing for Storage, you can become a member by filling-in the form
+at the web-site.
+
+          Gregory Silvus
+          Seagate Technology
+          2420 Trade Centre Avenue
+          Longmont, CO 80503
+          Tel: 303 684 2036
+          Fax: 303 684 1199
+          Email: Gregory_L_Silvus@seagate.com

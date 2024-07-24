@@ -1,0 +1,133 @@
+_Buying into Fair Trade_ notes
+
+P. 1: DeCarlo, Jacqueline. 2007. Fair Trade: Beginner's Guide. Oxford: Oneworld Publications.
+"The most holistic definition of fair trade is endorsed by Fairtrade Labeling Organizations International (often called Fairtrade International or FLO), the World Fair Trade Organization, the Network of World Shops, and the European Fair Trade Association, all of which are prominent fair-trade organizations:
+'Fair trade is a trading partnership, based on dialogue, transparency, and respect, that seeks greater equity in international trade. It contributes to sustainable development by offering better trading conditions to, and securing the rights of, marginalized producers and workers—especially in the South. Fair Trade Organizations (backed by consumers) are actively engaged in supporting producers, in awareness raising and in campaigning for changes in the rules and practices of international trade.'"
+
+P. 5: "These individuals all told me that meeting face-to-face with fair-trade artisans and coffee farmers had greatly altered their understanding of fair trade. Instead of reciting facts about the benefits of fair trade, most of them focused on a memorable experience meeting a fair-trade farmer or artisan. These encounters had convinced them that they had seen for themselves how their actions as shoppers can make a difference in the world."
+
+P. 6: "American consumers who identify as socially conscious think about altruism within an increasingly global economy."
+
+P. 10: "With the focus shifting to the environments that produce higher-quality coffee, consumers also began to learn more about the farmers who grew their coffee. Just as it was becoming clear that consumers were more than willing to pay a price premium for specialty coffee, a collection of mission-driven entrepreneurs began promoting their socially conscious coffees."
+
+p. 11: "Fairtrade International (FLO) is an umbrella organization that coordinates fair-trade standards across countries, helps brand fair-trade products, and attempts to protect the purity of the movement. FLO also offers other, noneconomic benefits of fair-trade certification. It promotes environmentally friendly farming techniques and gender equity. Within the coffee market, it requires farmers to be members of democratically elected cooperatives where participation is open to all, regardless of political party, ethnic heritage, gender, or religion."
+
+P. 13: "'They [Fair Trade USA] measure success by the number of producer lives that are improved even just a tiny bit, primarily monetarily. Many others in the fair trade movement value empowerment in a broader sense—not just through dollars and cents but through empowerment that looks like dignity through cooperative and union structures and living wages.'"
+
+P. 14: "Many lack trust in Fair Trade USA and fear that this powerful organization is again co-opting the meaning of fair trade. . . . Starbucks prominently displays the Fair Trade USA logo on advertisements even though less than 10 percent of its coffee is fair-trade certified."
+
+P. 16: "a whole new vocabulary for criticizing corporate actions has developed as activists claim companies are "fair-washing," "sweatwashing," or "greenwashing" these movements, levying these charges against corporations that do not appear to be following through with their sustainable claims or that are making only superficial changes to their ethical practices. . . . The ethical turn means that even mainstream consumers and mainstream corporations are starting to consider social responsibility as a criterion when they make market decisions."
+
+Repairibility of HW products.
+
+P. 18: "Ethical consumption acted as a form of "symbolic violence," a means for one group to convey to another that there is a correct way to shop."
+
+P.19: "By 2005, more than fifty-five million people had bought the [Lance] bracelets."
+
+P 20: also true of FAIB SW: "even consumers who couldn't care less about buying green are becoming attracted to the idea of saving money."
+
+Sunkist oranges' ingredients.
+
+P. 21: "A final but extremely important reason for the growth of ethical consumption stems from Americans' loss of faith in the federal government." Feeling impotent to change the world by voting, they change buying habits instead.
+
+P. 36: 'Years later, when I interviewed fair-trade consumers between 2004 and 2007, most still had a very loose understanding of what fair trade meant. They would tell me things like, "The farmers make more money." They trusted store owners like Joe, but they did not understand what the logos for Fair Trade USA or the World Fair Trade Organization (WFTO) meant (Fair Trade USA certifies *products* as fair trade, whereas WFTO certifies *organizations* as fair trade). In 2012, Fair Trade USA's latest surveys estimate that only 34 percent of Americans were familiar with the term "fair trade."'
+
+SW has consulting/contracting houses rather than growers' or artisans' cooperatives.
+
+Is Etsy "fair trade"?
+
+P. 45: "Alternative rewards are the noneconomic processes that encourage individuals to participate in collective action."
+
+P. 55: "Collins emphasizes the importance of positive "interaction rituals" that create a sense of elation, enthusiasm, and a desire to take initiative. When we experience fulfilling social interactions, the resulting emotional energy motivates us to seek out similarly rewarding interactions."
+
+P. 62: "Farmers are part of "democratically elected cooperatives" that wash, dry, sort, and ship the beans to the United States. These cooperatives reduce the number of steps in the supply chain." Supply chain for FLOSS differs from Proprietary? Are Firefox and LibreOffice supply chains more traceable? "In a neoliberal era in which, wrong or right, markets are increasingly viewed as a more effective means for promoting economic growth than state intervention, the idea that fair trading can reduce global poverty was quite attractive to this audience of socially responsible entrepreneurs."
+
+P. 68: "Fair Trade USA believes change will occur only with the support of big corporations such as Starbucks, McDonald's, and even Walmart. Organizations that buy Fair Trade USA–certified coffee in bulk receive a discount on the fair-trade certification. This infuriates small buyers who sell only 100-percent-certified coffees.)" Who should we try to change? Only way to pressure Asian OEMs is to insist on supply-chain transparency. Is that request more likely to succeed than license discussion? FSF's Respects Your Freedom is analogous but with wrong criteria.
+
+Would "ethically produced" certification help with recruitment?
+
+P. 69: "Whereas the percentage of Starbucks coffee that is fair-trade-certified may be small, the company is still the largest buyer of fair-trade beans in the United States." Establishing standards can't make choices simpler. Even the sincerely comitted can have trouble deciding what the most beneficial choice is.
+
+P. 71: "their support for fair trade was socially constructed" The FLOSS emphasis on "Community" is such a social construction.
+Muniz, Albert, Jr., and Thomas O'Guinn. 2001. "Brand Community." Journal of Consumer Research 27: 412–432. "They felt part of a *brand community* that shared their own beliefs."
+
+P. 72: "conscientious consumers confront more contradictions while shopping than do promoters."
+
+P. 73: "He who can buy bravery is brave, though a coward. As money is not exchanged for any one specific quality, for any one specific thing, or for any particular human essential power, but for the entire objective world of man and nature, from the standpoint of its possessor it therefore serves to exchange every property for every other, even contradictory, property and object: it is the fraternization of impossibilities. It makes contradictions embrace. — Karl Marx, Economic and Philosophic Manuscripts of 1844"
+
+P. 75: "Depending on the survey, between 76 and 81 percent of American shoppers say they will pay higher prices for products produced under good working conditions."
+
+P. 76: "Most consumers are more like Nathan: they like to feel good about shopping responsibly, but convenience, price, and aesthetics often compete with this goal." I simply don't know any better alternatives for most products I buy. I never buy handicrafts or coffee beans. Giving ethically produced gifts to people who want for nothing is still wasteful and empty. Most consumers won't know that better SW exists. FLOSS has never been marketed to "conscientious consumers."
+
+Tradeoffs: I would never ask where the LCA or work-logo cap was produced.
+
+P.78: "food and gifts are the two most earmarked socially responsible products." Fair-trade bike parts aren't on offer.
+
+Ethically produced SW evaluation could include Pt, Au, Ag akin to Bicycle-Friendly Cities, Businesses, etc. Levels encourage opening a channel of communication
+
+_Buying into Fair Trade_ notes
+
+P. 1: DeCarlo, Jacqueline. 2007. Fair Trade: Beginner's Guide. Oxford: Oneworld Publications.
+"The most holistic definition of fair trade is endorsed by Fairtrade Labeling Organizations International (often called Fairtrade International or FLO), the World Fair Trade Organization, the Network of World Shops, and the European Fair Trade Association, all of which are prominent fair-trade organizations:
+'Fair trade is a trading partnership, based on dialogue, transparency, and respect, that seeks greater equity in international trade. It contributes to sustainable development by offering better trading conditions to, and securing the rights of, marginalized producers and workers—especially in the South. Fair Trade Organizations (backed by consumers) are actively engaged in supporting producers, in awareness raising and in campaigning for changes in the rules and practices of international trade.'"
+
+P. 5: "These individuals all told me that meeting face-to-face with fair-trade artisans and coffee farmers had greatly altered their understanding of fair trade. Instead of reciting facts about the benefits of fair trade, most of them focused on a memorable experience meeting a fair-trade farmer or artisan. These encounters had convinced them that they had seen for themselves how their actions as shoppers can make a difference in the world."
+
+P. 6: "American consumers who identify as socially conscious think about altruism within an increasingly global economy."
+
+P. 10: "With the focus shifting to the environments that produce higher-quality coffee, consumers also began to learn more about the farmers who grew their coffee. Just as it was becoming clear that consumers were more than willing to pay a price premium for specialty coffee, a collection of mission-driven entrepreneurs began promoting their socially conscious coffees."
+
+p. 11: "Fairtrade International (FLO) is an umbrella organization that coordinates fair-trade standards across countries, helps brand fair-trade products, and attempts to protect the purity of the movement. FLO also offers other, noneconomic benefits of fair-trade certification. It promotes environmentally friendly farming techniques and gender equity. Within the coffee market, it requires farmers to be members of democratically elected cooperatives where participation is open to all, regardless of political party, ethnic heritage, gender, or religion."
+
+P. 13: "'They [Fair Trade USA] measure success by the number of producer lives that are improved even just a tiny bit, primarily monetarily. Many others in the fair trade movement value empowerment in a broader sense—not just through dollars and cents but through empowerment that looks like dignity through cooperative and union structures and living wages.'"
+
+P. 14: "Many lack trust in Fair Trade USA and fear that this powerful organization is again co-opting the meaning of fair trade. . . . Starbucks prominently displays the Fair Trade USA logo on advertisements even though less than 10 percent of its coffee is fair-trade certified."
+
+P. 16: "a whole new vocabulary for criticizing corporate actions has developed as activists claim companies are "fair-washing," "sweatwashing," or "greenwashing" these movements, levying these charges against corporations that do not appear to be following through with their sustainable claims or that are making only superficial changes to their ethical practices. . . . The ethical turn means that even mainstream consumers and mainstream corporations are starting to consider social responsibility as a criterion when they make market decisions."
+
+Repairibility of HW products.
+
+P. 18: "Ethical consumption acted as a form of "symbolic violence," a means for one group to convey to another that there is a correct way to shop."
+
+P.19: "By 2005, more than fifty-five million people had bought the [Lance] bracelets."
+
+P 20: also true of FAIB SW: "even consumers who couldn't care less about buying green are becoming attracted to the idea of saving money."
+
+Sunkist oranges' ingredients.
+
+P. 21: "A final but extremely important reason for the growth of ethical consumption stems from Americans' loss of faith in the federal government." Feeling impotent to change the world by voting, they change buying habits instead.
+
+P. 36: 'Years later, when I interviewed fair-trade consumers between 2004 and 2007, most still had a very loose understanding of what fair trade meant. They would tell me things like, "The farmers make more money." They trusted store owners like Joe, but they did not understand what the logos for Fair Trade USA or the World Fair Trade Organization (WFTO) meant (Fair Trade USA certifies *products* as fair trade, whereas WFTO certifies *organizations* as fair trade). In 2012, Fair Trade USA's latest surveys estimate that only 34 percent of Americans were familiar with the term "fair trade."'
+
+SW has consulting/contracting houses rather than growers' or artisans' cooperatives.
+
+Is Etsy "fair trade"?
+
+P. 45: "Alternative rewards are the noneconomic processes that encourage individuals to participate in collective action."
+
+P. 55: "Collins emphasizes the importance of positive "interaction rituals" that create a sense of elation, enthusiasm, and a desire to take initiative. When we experience fulfilling social interactions, the resulting emotional energy motivates us to seek out similarly rewarding interactions."
+
+P. 62: "Farmers are part of "democratically elected cooperatives" that wash, dry, sort, and ship the beans to the United States. These cooperatives reduce the number of steps in the supply chain." Supply chain for FLOSS differs from Proprietary? Are Firefox and LibreOffice supply chains more traceable? "In a neoliberal era in which, wrong or right, markets are increasingly viewed as a more effective means for promoting economic growth than state intervention, the idea that fair trading can reduce global poverty was quite attractive to this audience of socially responsible entrepreneurs."
+
+P. 68: "Fair Trade USA believes change will occur only with the support of big corporations such as Starbucks, McDonald's, and even Walmart. Organizations that buy Fair Trade USA–certified coffee in bulk receive a discount on the fair-trade certification. This infuriates small buyers who sell only 100-percent-certified coffees.)" Who should we try to change? Only way to pressure Asian OEMs is to insist on supply-chain transparency. Is that request more likely to succeed than license discussion? FSF's Respects Your Freedom is analogous but with wrong criteria.
+
+Would "ethically produced" certification help with recruitment?
+
+P. 69: "Whereas the percentage of Starbucks coffee that is fair-trade-certified may be small, the company is still the largest buyer of fair-trade beans in the United States." Establishing standards can't make choices simpler. Even the sincerely comitted can have trouble deciding what the most beneficial choice is.
+
+P. 71: "their support for fair trade was socially constructed" The FLOSS emphasis on "Community" is such a social construction.
+Muniz, Albert, Jr., and Thomas O'Guinn. 2001. "Brand Community." Journal of Consumer Research 27: 412–432. "They felt part of a *brand community* that shared their own beliefs."
+
+P. 72: "conscientious consumers confront more contradictions while shopping than do promoters."
+
+P. 73: "He who can buy bravery is brave, though a coward. As money is not exchanged for any one specific quality, for any one specific thing, or for any particular human essential power, but for the entire objective world of man and nature, from the standpoint of its possessor it therefore serves to exchange every property for every other, even contradictory, property and object: it is the fraternization of impossibilities. It makes contradictions embrace. — Karl Marx, Economic and Philosophic Manuscripts of 1844"
+
+P. 75: "Depending on the survey, between 76 and 81 percent of American shoppers say they will pay higher prices for products produced under good working conditions."
+
+P. 76: "Most consumers are more like Nathan: they like to feel good about shopping responsibly, but convenience, price, and aesthetics often compete with this goal." I simply don't know any better alternatives for most products I buy. I never buy handicrafts or coffee beans. Giving ethically produced gifts to people who want for nothing is still wasteful and empty. Most consumers won't know that better SW exists. FLOSS has never been marketed to "conscientious consumers."
+
+Tradeoffs: I would never ask where the LCA or work-logo cap was produced.
+
+P.78: "food and gifts are the two most earmarked socially responsible products." Fair-trade bike parts aren't on offer.
+
+Ethically produced SW evaluation could include Pt, Au, Ag akin to Bicycle-Friendly Cities, Businesses, etc. Levels encourage opening a channel of communications instead of excoriating institutions for not being perfect.

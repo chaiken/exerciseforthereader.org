@@ -1,0 +1,45 @@
+1. title slide
+
+2. image showing whole system, from Jim or Gary
+
+3. brief review of how DVD/CD-RW works, contrasting ARS medium
+
+4. list of requirements for ARS medium
+
+5. diode I-V with photoresponse; mention MBE growth
+
+6. discussion about how EBIC works, Gruen range
+
+7. EBIC and SEM of same area, showing no damage
+
+8. TEM real-space and diffraction of amorphous mark
+   (be sure to put their names on the slide)
+
+9. block erasure data
+
+10. EBIC and SEM images of 15 cycles
+
+11. wiggle graph
+
+12. Bao's images
+
+13. discussion about two modes of erasure
+
+14. TEM in situ recrystallization
+
+15. problems with cycling; recrystallization time; discussion of
+    Hitachi data; media noise; unresolved mysteries
+
+16. summary
+
+17. 100-cycle linescan
+
+18. XRD of 042902-2
+
+19. trailing edge dependence; scan someone's power versus pulsewidth
+    phase diagram
+
+20. False-color reflectivity and photocurrent maps
+
+21. nucleation and growth versus temperature from Hitachi paper; scan
+    their diagram

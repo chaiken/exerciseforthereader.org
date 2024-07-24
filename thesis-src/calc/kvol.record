@@ -1,0 +1,41 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;									     ;;
+;;	File:     kvol.record						     ;;
+;;	Author:   Alison Chaiken					     ;;
+;;	Created:  Mon Jan 25 10:39:46 EST 1988				     ;;
+;;	Contents: calculation of the amount of K needed to make C_{24}K      ;;
+;;									     ;;
+;;	Copyright (c) 1988 Alison Chaiken.				     ;;
+;;	All rights reserved.						     ;;
+;;									     ;;
+;;	$Log$								     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;calculation of graphite volume in mm^3
+(* 20.0 20 0.3)
+1.2000e+02 ;approximately, since graphite thickness will vary
+;calculation of graphite mass
+(* 120.0 2.25 1e-3) ;graphite density is 2.25 g/cm^3
+2.7000e-01 ;grams of graphite
+(setq mcarbon 12.011)
+1.2011e+01
+;calculation of number of graphite atoms 
+(/ 0.27 (* mproton mcarbon))
+1.3437e+22 ;number of carbon atoms in the piece of graphite
+(/ 1.3437e+22 24)
+5.5988e+20 ;desired number of K atoms
+;calculation of K mass
+(setq mK 39.083)
+3.9083e+01
+(* 5.5988e+20 mproton mK)
+3.6608e-02 ;grams of K desired
+;calculation of volume of desired K
+(/ 3.6608e-02 0.86)
+4.2567e-02 ;cm^3 of K needed
+;calculation of length of tube 5mm in diameter which is needed
+(/ (* 5 5 pi 1e-2) 4)
+1.9635e-01 ;area of K ampoule in cm^2
+(/ 4.2567e-02 1.9635e-01)
+2.1679e-01 ;cm of K tube needed
+
+;length of 5mm K ampoule needed is 2.17 mm

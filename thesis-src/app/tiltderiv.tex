@@ -1,0 +1,140 @@
+\chapter{Effect of Tilt on An\-gul\-ar De\-pen\-dence of the Crit\-ical Field}
+\label{tiltderiv}
+\pagestyle{headings}
+\markright{Effect of Tilt}
+
+        In this section, a detailed derivation of Eqn.~\ref{tilthc2} is
+presented.   In order to understand the geometry of the sample tilt, the
+reader is referred to Figure~\ref{misalign}.
+
+        The underlying assumption of  the derivation presented here is that
+the material in question has  uniaxial symmetry.   In the current  context,
+uniaxial symmetry means that the material has a plane in which $\rm H_{c2}$
+is constant.  The  angle between  the perpendicular  to this plane  and the
+magnetic field is called $\theta$.  
+
+        For graphite-based  superconductors,  the planes  of  constant $\rm
+H_{c2}$ are  those parallel to the  graphite layers, and  the perpendicular
+axis which defines the  angle $\theta$ is  called the  c-axis.   (The angle
+$\theta$ is defined in  Figure~\ref{hc2def}.)    In-plane isotropy has  not
+actually been  experimentally confirmed in  GIC superconductors  because of
+the difficulty of  preparing single-crystal samples.  However, any in-plane
+anisotropy  is expected to  be  small   because the in-plane band structure
+should be relativelty  free-electron-like.\cite{holzwarth88} In addition, the
+critical  field experiments discussed  in   this thesis were  performed  on
+HOPG-based samples.   Since  HOPG    is  composed of  randomly     oriented
+crystallites  in-plane, but  has a well-defined c-axis direction,\cite{I94}
+GIC's   prepared from  HOPG   should meet the  definition  of   a  uniaxial
+superconductor even if in-plane anisotropy is present in single crystals.
+
+        The derivation of Eqn.~\ref{tilthc2} follows  the simple derivation
+of  Eqn.~\ref{ldtheor2} that  was    published by   Morris,   Coleman,  and
+Bhandari.\cite{morris72}  Let's  first  review   their  derivation.   These
+authors started with the  idea  that  a the coherence  length of a uniaxial
+superconductor in  any  direction is equivalent to  the  length of a vector
+joining the center of a biaxial ellipsoid with its edge.  The ellipsoid has
+a circular  cross-section of radius $\rm \xi_a$,   which corresponds to the
+circular cross-section of a flux quantum formed when $\rm \vec{H} \parallel
+\hat{c}$.  The elliptical cross-section of the ellipsoid corresponds to the
+case where $\rm \vec{H}
+\perp  \hat{c}$,  where the flux  quantum  has radii $\rm  \xi_a$ and  $\rm
+\epsilon \xi_a$.  Here  $\epsilon$ is  the AGL  model anisotropy  parameter
+introduced in Ref.~\cite{morris72}.  The biaxial ellipsoid  is shown in
+Figure~\ref{fquant}a), and its two cross-sections in Figure~\ref{xsection}a).
+
+        For  any  orientation of the applied  field, one  of the  coherence
+lengths  in the plane perpendicular  to the  field will be $\rm \xi_a$, the
+in-plane coherence  length.  The other  coherence length in this plane will
+vary continuously with $\theta$ from $\rm  \xi_a$ to $\rm  \epsilon \xi_a$.
+Thus
+
+\begin{equation}
+\rm H_{c2}(\theta) =  \Phi_0/2 \pi  \xi_a  \xi(\theta)
+\label{xitheta}
+\end{equation}
+
+\noindent using   Eqn.~\ref{cohlen}.  Figure~\ref{fquant}a)   and    some     simple
+geometrical manipulations show that $\rm \xi(\theta) \, = \, \xi_a
+\sqrt{\cos^2 \theta
+\, + \, \epsilon^2 \sin^2 \theta }$.  Plugging the $\xi (\theta)$
+expression   into  Eqn.~\ref{xitheta}  above   gives
+Eqn.~\ref{ldtheor2}:
+
+\begin{equation}
+\label{ldtheor2}
+\rm H_{c2}(\theta) \; = \; \frac{H_{c2}(0^{\circ})}{\sqrt{\cos^2\theta \,
++ \, \epsilon^2 \sin^2\theta}}
+\end{equation}
+
+\noindent as expected.  This is the result obained by Morris, Coleman, and Bhandari.\cite{morris72}
+
+\begin{figure}
+\vspace{15cm}
+\caption[Coherence lengths of a uniaxial superconductor.]{Coherence lengths
+of  a  uniaxial  superconductor.    As  pointed out  by   Morris  {\em   et
+al.\/},\cite{morris72} the coherence length of a uniaxial superconductor is
+the length of a vector from the center of a biaxial ellipsoid to  its edge.
+a) The case of an aligned sample, which is described by Eqn.~\ref{ldtheor2}.
+(See Figure~\ref{misalign}a).)  The ellipsoid has two  radii of length $\rm
+\xi_a$ and one of length $\rm
+\epsilon \xi_a$.  b) The case where the sample is tilted by an angle
+$\phi$, which  is described by  Eqn.~\ref{tilthc21}.  Now  the  ellipsoid is
+triaxial, with one of  the  coherence  lengths of size $\rm \xi_a$  from a)
+being replaced by one of size $\rm \xi_a
+\sqrt{\cos^2 \phi \, + \, \epsilon^2 \sin^2 \phi}$.}
+\label{fquant}
+\end{figure}
+
+\begin{figure}
+\vspace{18cm}
+\caption[Cross-section of the flux quantum in a uniaxial
+superconductor.]{Cross-section   of   the  flux   quantum   in   a uniaxial
+superconductor.  In all cases,  the magnetic field is directed  out  of the
+paper. a) The  aligned  case.   For $\rm  \vec{H}  \parallel  \hat{c}$, the
+cross-section of  the flux quantum  along the  field direction is circular.
+b) The tilted case.  Now that  the ellipsoid that  determines $\xi(\theta)$
+is triaxial, the cross-section of the flux quantum  is non-circular for all
+field orientations.}
+\label{xsection}
+\end{figure}
+
+        Now let's turn to the case  where the sample is  tilted so that its
+c-axis is rotated by an angle $\phi$ away  from the horizontal plane, which is
+the plane in which the applied field is rotated.  From examination of
+Eqn.~\ref{ldtheor2}, it is obvious that the measured magnitude of $\rm
+H_{c2, \parallel \hat{c}}$ will be $\rm H_{c2, \parallel \hat{c}} ^{eff}
+\equiv H_{c2,\parallel \hat{c}}/ \sqrt{\cos^2 \phi \, + \, \epsilon ^2
+\sin^2 \phi}$.  Note that this gives $\rm H_{c2, \parallel \hat{c}}^{eff} =
+H_{c2,   \parallel  \hat{c}}$ when     $\phi$  =   0$^{\circ}$.   If   $\rm
+H_{c2}(\theta)$ still is given by Eqn.~\ref{xitheta}, then it  follows that
+$\xi(0^{\circ})$ = $\rm \xi_a \sqrt{\cos^2 \phi \, + \, \epsilon^2 \sin^2
+\phi}$.   
+
+        Now that $\xi(\theta)$ has been  found  for $\theta$ = 0$^{\circ}$,
+the   full form  of   the function   can  be   determined   by  noting that
+$\xi(90^{\circ})$ still is  $\rm \epsilon  \xi_a$.  The reason is  that the
+tilt of the c-axis from  the horizontal  corresponds to a rotation about an
+in-plane direction (an $\hat{a}$  direction), so the  in-plane $\rm H_{c2}$
+is not affected by   the  tilt. This statement is   no longer true  if $\rm
+H_{c2}$ is not constant in  the layer plane  (non-uniaxial superconductor),
+although  everything  said  up  to this   point holds for  that case. Using
+standard formulae for an ellipse gives for general $\theta$
+
+\[
+\rm  \xi(\theta) \, = \,  \xi_a
+\sqrt{\cos^2 \phi \, + \,   \epsilon^2 \sin^2  \phi} \:  \sqrt{\epsilon_{eff}^2 \sin^2\theta \, +  \,
+\cos^2 \theta} \;   
+\]
+
+\noindent where $\rm \epsilon_{eff}$ = $\epsilon / \sqrt{\epsilon^2 \sin^2
+\phi \, + \, \cos ^2 \phi}$.  Plugging this formula for $\xi(\theta)$ into
+Eqn.~\ref{xitheta} now gives Eqn.~\ref{tilthc21}:
+
+\begin{equation}
+\label{tilthc21}
+\rm H_{c2}^{eff}(\theta,\, \phi) \; = \; \frac{H_{c2, \parallel
+\hat{c}}/\sqrt{\cos^2\phi \: + \: \epsilon^2\sin^2\phi}}{\sqrt{\cos^2\theta
+\: + \: \epsilon^2\sin^2\theta / \sqrt{\cos^2\phi \: + \: \epsilon^2\sin^2\phi}}} 
+\end{equation}
+
+\noindent as desired.   

@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.98i for Berkeley UNIX
+The top-level auxiliary file: table.aux
+The style file: aip.bst
+Database file #1: /usr/local/bin/gic.bib
+database entry "lagues84" is a duplicate
+--warning--line 475 of file /usr/local/bin/gic.bib
+I'm overwriting a field for database entry "lagues84"
+--warning--line 476 of file /usr/local/bin/gic.bib
+I'm overwriting a field for database entry "lagues84"
+--warning--line 477 of file /usr/local/bin/gic.bib
+I'm overwriting a field for database entry "lagues84"
+--warning--line 477 of file /usr/local/bin/gic.bib
+I'm overwriting a field for database entry "lagues84"
+--warning--line 477 of file /usr/local/bin/gic.bib
+I'm overwriting a field for database entry "lagues84"
+--warning--line 478 of file /usr/local/bin/gic.bib
+database entry "lagues84" is a duplicate
+--warning--line 1511 of file /usr/local/bin/gic.bib
+I'm overwriting a field for database entry "lagues84"
+--warning--line 1513 of file /usr/local/bin/gic.bib
+I'm overwriting a field for database entry "lagues84"
+--warning--line 1514 of file /usr/local/bin/gic.bib
+I'm overwriting a field for database entry "lagues84"
+--warning--line 1514 of file /usr/local/bin/gic.bib
+I'm overwriting a field for database entry "lagues84"
+--warning--line 1514 of file /usr/local/bin/gic.bib
+I'm overwriting a field for database entry "lagues84"
+--warning--line 1515 of file /usr/local/bin/gic.bib
+Database file #2: thesisref.bib
+I was expecting a `,' or a `}'---line 18 of file thesisref.bib
+ : 
+ : author="G. Dresselhaus and A. Chaiken",
+I was expecting a `,' or a `}'---line 32 of file thesisref.bib
+ : 
+ : @inproceedings{stang88a,
+I was expecting a `,' or a `}'---line 33 of file thesisref.bib
+ : author="I. Stang and K. L\"
+ :                            uders and E. R\"ossler and V. Geiser and H.-J. G\"untherodt",
+I was expecting a `,' or a `}'---line 62 of file thesisref.bib
+ : 
+ : editor="M.S. Dresselhaus and G. Dresselhaus", pages="77",
+I was expecting a `,' or a `}'---line 67 of file thesisref.bib
+ : 
+ : editor="M.S. Dresselhaus and G. Dresselhaus", pages="83", note="Ext. Abstracts
+Database file #3: /usr/local/bin/mgm.bib
+I didn't find a database entry for \cite key "sano80"--warning
+ : Warning: the title shouldn't be empty in tanuma81
+ : Warning: the booktitle shouldn't be empty in takahashi86
+ : Warning: the year shouldn't be empty in takahashi86
+ : Warning: the booktitle shouldn't be empty in dicenzo86
+ : Warning: the year shouldn't be empty in dicenzo86

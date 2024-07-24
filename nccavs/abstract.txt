@@ -1,0 +1,52 @@
+
+Ultrahigh Density Optical Recording on Epitaxial 
+InSe/GaSe Phase-Change Media Films
+
+A. Chaiken, G.A. Gibson, K. Nauka and C.C. Yang
+Hewlett-Packard Labs, Palo Alto CA
+
+B.-S. Yeh, R. Bicknell-Tassius, J. Chen, D. D. Lindig and H. Liao
+Imaging and Printing Group, Hewlett-Packard 
+
+J. Jasinski and Z. Liliental-Weber
+Lawrence Berkeley National Lab, Berkeley CA
+
+Commercially available rewritable DVD and CD products use 
+laser diodes to mark on GeSbTe or InAgSbTe phase-change 
+media.  A higher density recording scheme using electron 
+beams to write on phase-change media has been proposed.[1] 
+At the bit density contemplated in the electron-beam 
+project, traditional polycrystalline phase-change media are 
+too inhomogeneous.   A solution is to use epitaxial films 
+with a minimum number of defects at small length scales.  
+We describe optical recording studies on MBE-grown 
+epitaxial InSe/GaSe/Si heterojunction diode films.  
+Amorphous bits as small as 100 nm in diameter have been 
+made using short laser pulses (30 ns) that are less than 
+the thermal equilibration time of the stack.   These tiny 
+optically produced bits offer a convenient surrogate for 
+the even smaller bits to be made with high-power electron-
+beam sources in the future. The amorphization has been 
+confirmed using techniques such as reflectivity, electron 
+beam-induced current (EBIC), atomic force microscopy and 
+transmission electron microscopy (TEM).
+
+Recrystallization of the amorphous regions has been 
+accomplished using lower-power millisecond laser pulses.  
+Up to 100 write-erase cycles with partial restoration of 
+reflectivity and EBIC have been achieved.  Electron 
+microscopy studies suggest that the recrystallization 
+starts at the edge of the amorphous region and propagates 
+into the center.  The ability to cycle the material has 
+been limited by damage to the surface, which due to the 
+limited electron penetration depth cannot be clad with the 
+thick dielectric protective layers used in CD-RW/DVD 
+products.  
+
+[1] "A Decade Away: Atomic Resolution Storage," Scientific 
+American,    May 2000 issue.
+
+
+
+
+

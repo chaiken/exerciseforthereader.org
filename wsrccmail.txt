@@ -1,0 +1,45 @@
+braziltrip.html:      <a href="http://www.wsrcc.com/wolfgang/">Wolfgang</a> and I
+lostcoast.html:      <a href="http://www.wsrcc.com/wolfgang/">Wolfgang</a> and I went
+camedia/copyright.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/copyright.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/glossary.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/glossary.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/help.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/help.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/index.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/index.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/toc.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/toc.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/xindex.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/xindex.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+foresight/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+icons1/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+misspeak/elevations.html:      "http://www.wsrcc.com/wolfgang/gps/">Differential
+recipes/index.html:      "http://www.wsrcc.com/wolfgang/krautpotsalad.html">official
+thesis-src/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+thesis2/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+camedia/year-1997/index.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/year-1997/index.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/year-1998/index.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/year-1998/index.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/year-1999/index.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/year-1999/index.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/year-2000/index.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/year-2000/index.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/year-2002/index.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/year-2002/index.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/year-2003/index.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/year-2003/index.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/year-2007/index.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/year-2007/index.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+camedia/year-2008/index.html:      <a href="mailto:wolfgang@charlotte.wsrcc.com">
+camedia/year-2008/index.html:      wolfgang@charlotte.wsrcc.com (Wolfgang S. Rupprecht)</a>
+thesis-src/app/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+thesis-src/calc/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+thesis-src/chap1/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+thesis-src/chap2/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+thesis-src/chap3/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+thesis-src/chap4/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+thesis-src/chap5/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+thesis-src/chap6/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com
+thesis-src/chap7/index.html:    href="mailto:wolfgang.rupprecht+web@gmail.com">wolfgang.rupprecht+web@gmail.com

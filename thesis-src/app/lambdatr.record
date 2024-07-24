@@ -1,0 +1,74 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;									     ;;
+;;	File:     lambdatr.record					     ;;
+;;	Author:   Alison Chaiken					     ;;
+;;	Created:  Tue Nov  8 09:40:13 EST 1988				     ;;
+;;	Contents: calculation of lambda_{tr} for several GIC's               ;;
+;;									     ;;
+;;	Copyright (c) 1988 Alison Chaiken.				     ;;
+;;	All rights reserved.						     ;;
+;;									     ;;
+;;	$Log$								     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+prefactor of lambda_{tr} is (/ (* 0.18 0.88 3  (squared cgs-e)) (* 4  pi cgs-hbar cgs-k))
+(setq prefactor (/ (* 0.18 0.88 3  (/ (squared cgs-e) cgs-hbar)) (* 4 pi cgs-k)))
+6.01e+22
+(* prefactor p_0)
+649.1
+(defun lambda_tr (rho_a k_f tc I_c)
+  "calculate lambda_{transport} given the in-plane resistivity in ohm-cm,
+the Fermi wavevector in inverse cm, T_c  in K, and I_c in Ang."
+  (setq rhoa (* rho_a (* (/ 1.0 9) 1e-11)))
+  (setq p_0 1.08e-19)
+  (setq ic (* I_c 1e-8))
+(/ (* prefactor rhoa k_f p_0) (* tc ic))
+)
+
+(lambda_tr 0.7143e-6 2.75e7 1.54 10.24)
+0.8984; for $\rm C_4KHg$
+(lambda_tr 0.6e-6 2.131e7 1.9 13.56)
+0.3579; for $\rm C_8KHg$
+(lambda_tr 23e-6 4.7e7 0.15 5.35)
+971.5 ;using 300 K resistivity for c8k
+a-axis resistivity at 300 K = 23 microohm-cm for C_8K [Ref. 28]
+= 10.5 microohm-cm for C_8K [Ref. 73]
+30.83; RRR for $\rm C_8KHg$
+estimate of 4 K resistivity for $\rm C_8K$:
+(/ (ave 23 10.5) 30.83)
+0.5433
+(lambda_tr 0.54e-6 4.7e7 0.15 5.35)
+22.81 ; guess for $\rm C_8K$
+(recip 1.2e7)
+8.333e-08 ;4 K resistivity of c8rb
+(lambda_tr 8.333e-8 4.7e7 0.15 5.35)
+3.52; estimate of lambda_tr in c8k
+
+(defun ksi_0 (v_F tc)
+  "BCS coherence length in Angstroms."
+  (* 1e8 (/ (* 0.18 cgs-hbar v_F) (* cgs-k tc)))
+  )
+
+(ksi_0 1.0e8 1.54)
+8889
+(* 1e8 (/ (* 0.18 p_0) (* cgs-k 1.54)))
+9143
+(ave 8889 9143)
+9016
+(ksi_0 4.7e7 0.15)
+4.289e+04 ;for $\rm C_8K$ 
+
+
+(defun ell (I_c rho_a k_F)
+  "in-plane mean-free-path in Angstroms in terms of rho_a in ohm-cm, I_c in
+angstroms, and k_F in inverse cm"
+    (setq rhoa (* rho_a (* (/ 1.0 9) 1e-11)))
+   (/ (* 4 pi cgs-hbar I_c) (* 3 cgs-e cgs-e rhoa k_F))
+   )
+
+(ell 10.24 0.7e-6 2.75e7)
+9139 ;for $\rm C_4KHg$ at 4 K
+(/ (* 0.88 8889) 9139)
+0.8559
+(ell 5.35 0.54e-6 4.7e7)
+3622 ;for $\rm C_8K$ 

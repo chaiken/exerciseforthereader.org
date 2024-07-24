@@ -1,0 +1,980 @@
+\section{Possible Interpretations of Enhanced Linearity and Positive
+Curvature in GIC's}
+\label{models}
+
+        This section is  not  intended  to   be a complete  review of  $\rm
+H_{c2}(T)$   theories.  Instead, the  following is  a  discussion  of a few
+specific models which predict  enhanced critical fields  and  the prospects
+for the application  of these models to  GIC's.  A recent complete overview  of $\rm
+H_{c2}(T)$    theories   has     been     written   by      Decroux     and
+Fischer.\cite{decroux82}
+
+        Before reviewing the  models which help  to explain  the deviations
+from the  anisotropic Ginzburg-Landau theory,  it makes sense to review the
+basic AGL model  itself.  The anisotropic  Ginzburg-Landau model,  like the
+Ginzburg-Landau theory\cite{tinkham80} from which it is descended, is based
+on  an expansion of the  free-energy difference between the superconducting
+and  normal phases into  a series of powers  of the order  parameter.   For
+superconductivity, the order parameter is variously taken as the energy gap
+(in theories based on  the Gor'kov equations\cite{gorkov59,gorkov60}),  the
+density of superfluid particles (in the spirit of  the two-fluid model), or
+the Ginzburg-Landau wave  function  $\psi$.  In the  simplest case   of the
+isotropic GL theory, the free-energy difference of the  superconducting and
+normal states is written:
+
+\begin{equation}
+\label{deltaf}
+\rm \Delta F \;  =  \; \alpha \left| \psi \right|^2 \, + \,
+\frac{1}{2m^*}\left| \left( \frac{\hbar}{i}\vec{\nabla} \: - \:
+\frac{e^*}{c}\vec{A} \right) \right|^2 \, + \, \frac{H}{8\pi}^2
+\end{equation}
+
+\noindent Here $\alpha$ is the kinetic energy of the Cooper pair, and
+$\rm \vec{A}$ is   the vector  potential.  The GL   differential  equations are
+derived  from   the free-energy  variationally.    Their solution   for the
+zero-field case shows that $\rm \mid \alpha \mid \, = \, \hbar^2 / 2m^* \xi^2$, where
+$\xi$    is   the   superconducting     coherence  length    discussed   in
+Section~\ref{critf:intro}.  Using the relation $\rm H_{c2} \, = \, \Phi_0 /
+2\pi
+\xi ^2$ and rearranging factors shows that  $\alpha$ is equal to the cyclotron 
+energy  of an electron at H  = $\rm H_{c2}$.   This equality  points to the
+connection between vortices in type II superconductors and the Landau-level
+problem which is mentioned in Tinkham's book.\cite[Section 4-8]{tinkham80}
+
+        The only elaboration  necessary  to go from  the  isotropic to  the
+anisotropic case is to let the mass $\rm m^*$ become a tensor rather than a
+scalar.\cite{tilley65,kats69}  All the  rest  of the results of the AGL
+model follow directly  from this replacement.  The spirit  of the AGL model
+is to let all the orientation dependence be lumped into the  masses, and to
+ignore  any variation  with  angle  of other  microscopic parameters  ({\em
+e.g.,\/} mean free path and phonon  dispersion).  Therefore, all anisotropy
+effects are   described  in  this    model  by one  temperature-independent
+parameter, $\epsilon$.  This parameter  was introduced by  Morris, Coleman,
+and Bhandari\cite{morris72} who defined $\epsilon \equiv \sqrt{m/M}$, where
+m is the in-plane mass  and M is the c-axis  mass.  With  the assumption of
+in-plane isotropy, further   calculation shows that  $\rm H_{c2,  \parallel
+\hat{c}}/H_{c2, \perp \hat{c}}$ = $\rm \xi_{\perp \hat{c}}/\xi_{\parallel
+\hat{c}}$.  Because $\epsilon$ is the  sum of   all the  contributions to  
+the anisotropy of  a layered  superconductor, it should not  necessarily be
+thought of as the ratio of band masses.  Similarly, the  fact that the flux
+quantum in the AGL model is ellipsoidal  does not imply  the presence of an
+ellipsoidal Fermi surface.
+
+        The simplicity of the AGL model is both its greatest virtue and its
+greatest weakness.   On  one hand, the small  number  of parameters  in the
+model  allow calculation of  quite complex quantities, such as  the angular
+dependence of the lower critical field, $\rm H_{c1}$.\cite{klemm80} No sane
+person would seriously contemplate the calculation of  $\rm H_{c1}(\theta)$
+in     the  context     of   a   first-principles   model    of anisotropic
+superconductivity,  where closed-form final  expressions are   rare.
+On the  other hand, the AGL  model is so simple   that  it is inadequate to
+describe  all the details  of superconductivity in  GIC's,  despite the fact
+that it gives a satisfactory picture of the main features.   Both the poor
+fits    to   $\rm  H_{c2}(\theta)$  (see    Section~\ref{angdata})  and the
+temperature dependence of $\epsilon$ (see Section~\ref{hvstdata}) cannot be
+explained in  the context  of  the AGL  model.  Furthermore,  the  enhanced
+linearity of $\rm H_{c2}(T)$  cannot  be explained  within the  WHH theory,
+which    reduces    to     the   AGL     model     for   $\rm    T  \approx
+T_c$.\cite{gorkov59,fetter69}   Considering   the  many aspects   of
+anisotropy in GIC's\cite{I94}, it is not surprising that the  one parameter
+$\epsilon$ is   insufficient to summarize all  their manifestations.  All in
+all,  the  anisotropic  Ginzburg-Landau   model is  successful  within  the
+confines of its applicability, and useful as far as the physical insight it
+provides, but it is not the last word on the subject by any means.
+
+        Before going into  which models  are   the most appropriate   for a
+detailed application to $\rm C_4KHg$, it is useful to quickly discuss those
+possibilities  which produce similar effects   in  the  data, but  are  not
+applicable here.  Most of these  models are  extensions  of the WHH theory,
+but one, the Klemm-Luther-Beasley  (KLB) dimensionality-crossover model, is
+based more directly on the AGL model.
+
+\subsection{Dimensional Crossover Models}
+\label{2d3d}
+
+        The direct ancestor   of the KLB  papers,  and one  of the  primary
+contributions to  the AGL  model,   is   the Josephson-coupling  theory  of
+Lawrence and Doniach\cite{lawrence71}.   Lawrence and Doniach  started with
+the idea of  a superconductor-insulator (S/I)  superlattice whose layers are
+coupled by Josephson tunnelling  of quasiparticles.  They modified  the  GL
+free-energy expression accordingly, and found  an effective mass along  the
+c-direction in terms of  the tunnelling parameters.   From this,  following
+the   work of  Kats\cite{kats69},  they  showed  that the  critical   field
+anisotropy was   equal to the square  root  of the  ratio  of the effective
+masses.
+
+        Klemm,  Luther and Beasley\cite{klemm75}  studied  the GL equations
+with Josephson-coupling further, and found that they predicted a divergence
+of $\rm H_{c2, \perp \hat{c}}(T)$ at a temperature $\rm  T^*$ given by $\rm
+\xi_{\parallel \hat{c}}(T^*)$ = s/$\sqrt{2}$.  In  this equation,  s is the
+interlayer spacing corresponding  to $\rm I_c$  in GIC's.  KLB  then did  a
+first-principles calculation of $\rm H_{c2}(\theta, T)$ and discovered that
+T$^*$  is actually  the  temperature  at which  a  dimensionality crossover
+occurs.  Dimensionality crossover in the context of layered superconductors
+means a change in character  from  bulklike behavior to film-like behavior.
+This change is  caused by  a decoupling of  the superconducting layers from
+one  another when  $\xi_{\parallel\hat{c}}$   becomes  less  than   s.  The
+symptoms  of 2D  behavior are that the  $\rm H_{c2}(\theta)$ curves are fit
+with Tinkham's formula rather than the AGL  angular dependence formula, and
+that $\rm H_{c2}(T)$ goes as $(1 \: - \: t)^{1/2}$ rather than the $(1
+\: - \: t)$ shape found near $\rm T_c$ in 3D superconductors.  This type of
+dimensionality  crossover   has  been   experimentally   observed  both  in
+TMDCIC's\cite{prober80}   and  artificially structured superlattices (which
+are   discussed   in    Chapter~\ref{othersys}).\cite{ruggiero82}  As    an
+explanation  for anomalies    in   superconducting  GIC's,   dimensionality
+crossover has a lot of appeal, since so many of the normal state properties
+of  GIC's are  quasi-two-dimensional.  For  example,  the anisotropy of the
+conductivity    in    $\rm    C_4KHg$   is   $\rm \sigma_a/\sigma_c  \approx
+300$.\cite{fischer83}
+
+\begin{figure} 
+\vspace{6.5in}
+\caption[Theoretical  demon\-stra\-tion  of
+di\-men\-sional      cross\-over            in            Josephson-coupled
+superlattices.]{Theoretical        demon\-stra\-tion  of    di\-men\-sional
+cross\-over  in  Josephson-coupled  superlattices from the   work of Klemm,
+Luther and Beasley.\cite{klemm75}.  r  is the parameter which characterizes
+the dimensionality of coupling.   $\alpha$, $\rm \tau_{SO}$, and  H$\rm _P$
+$\equiv$ 4$\rm k_B  T_c/ \pi \mu$  are  parameters which  characterize  the
+degree   of    Pauli-limiting   (Pauli-limiting      is     discussed    in
+Section~\ref{spin-orbit}).  The  inset shows a   plot of  T$^*$/$\rm   T_c$
+(where T$^*$ is the dimensionality crossover temperature) versus r.}
+\label{klbfig} 
+\end{figure}
+
+        According   to  KLB,   a layered   superconductor   will have   the
+possibility of a coupling-dimensionality change when  T$^*$ is greater than
+zero, which occurs  when  their parameter  $r$  is close  to 1.  The  exact
+condition is\\
+
+\begin{equation}
+\label{klbparam}
+\rm T^* \, > \, 0 \; when \; r \; \equiv \; \frac{16}{\pi} \left( \frac{\xi_{\parallel \hat{c}}(0)}{s}
+\right)^2  \; < \; \frac{\pi}{1.78} \; .
+\end{equation}
+
+\noindent Calculated $r$ values for a number of layered superconductors are 
+shown in Tables~\ref{tmdcklb} and  \ref{tmdcicklb}.  The r's  for  the  GIC
+superconductors are  shown in  Fig.~\ref{klbgics}.  As  can easily be seen,
+many  of the  transition  metal  dichalcogenide superconductors  and their
+intercalation compounds  are  expected to show the dimensionality crossover
+effect,  and      indeed     many  do,      as     was      discussed    in
+Section~\ref{tmdc}.\cite{coleman83,prober80} On  the other  hand, the known
+GIC superconductors are  more than an  order  of magnitude   away  from the
+critical  value of r.    The KLB paper  found  no anomalies for $r$  $\geq$
+10,\cite{klemm75} as  Fig.~\ref{klbfig}  shows.  Therefore,  dimensionality
+effects can safely be ruled out as having any impact on the critical fields
+of  the known  GIC superconductors.   This is  particularly  interesting in
+light of the fact that many GIC's have anisotropies 1/$\epsilon$ comparable
+to  those of   the  TMDCIC's.    For   example, both   $\rm   C_8KHg$   and
+TaS$_{1.6}$Se$_{0.4}$  intercalated  with   collidine have  anisotropies of
+about 30, yet  the  TMDCIC is expected to  show a dimensionality crossover,
+and $\rm C_8KHg$ is strongly three-dimensional even at 0 K.
+
+\begin{table}
+\caption[Values  of the   KLB  parameter $r$   for the GIC
+superconductors.]{Values  of the   KLB  parameter $r$   for the
+GIC superconductors.  \dag means that the value of $r$ was calculated from
+parameters in the cited references.}
+\label{klbgics}
+\begin{center}
+\begin{tabular}{|c|ccccc|}
+\hline
+& & & & & \\
+Compound & $r$ & 1/$\epsilon$ & $\xi_{\parallel \hat{c}}(0)$ & $\rm I_c$ (\AA) & Ref.\\
+& & & & & \\
+\hline
+& & & & & \\
+$\rm C_8KHg$ & 64-76& 30-31& 52 & 13.6  & \cite{koike81,tanuma81} \\
+& & & & & \\
+$\rm C_8KHg$ & 91& 25& 57 & 13.56  & \cite{pendrys83} \\
+& & & & & \\
+$\rm C_8RbHg$ & 86-176& 20-41& 58-83 & 13.56  & \cite{iye82} \\
+& & & & & \\
+$\rm C_4KTl_{1.5}$ & 514& 5 &57 & 12.1 & \cite{pendrys83,vogel81} \\
+& & & & & \\
+$\rm C_4KHg$ & 2000& 6-16& 200-300 & 10.24  & this work \\
+& & & & & \\
+$\rm C_4KHg$ & 2000-2800$^{\dagger}$& 10-11& 200-240 & 10.24  & \cite{iye83} \\
+& & & & & \\
+$\rm C_4RbHg$ & 3000-4500$^{\dagger}$& 10& 261-320 & 10.76  & \cite{iye82} \\
+& & & & & \\
+$\rm C_8K$ & 6.7e5& 4.7-6.2 & 1500-2900& 5.4  & \cite{koike81,koike80} \\
+& & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+        
+        At   this   juncture  it    is   probably   wise  to   discuss  the
+proximity-coupled           superlattice            models               of
+superconductivity\cite{biagi85,takahashi86b}, which  have some similarities
+to  the  KLB  model.  These  models    are also   capable of quantitatively
+explaining  dimensional   crossover, but  in  slightly   different systems.
+Proximity-coupled superlattices are  typically  superconductor-normal-metal
+(SN)  multilayers, while  the  Josephson-coupled superlattices described by
+the KLB theory  are typically superconductor-insulator   (S/I) multilayers.
+
+        The motivation for making this distinction was originally explained
+by     Werthamer,     and        separately       by     Saint-James    and
+deGennes.\cite{werthamer63,degennes66}  At an S/I  interface (the insulator
+may be vacuum), the pairs  are confined in the superconductor  so that they
+are almost unaffected by the presence of the boundary.  In this case  it is
+appropriate to ignore   any variation of   the  order  parameter within the
+superconducting  layers, and  to treat the interlayer  coupling  as  due to
+Josephson tunnelling.\cite{lawrence71} On  the   other  hand, at   an   S/N
+interface, the pairs  can easily diffuse into the  normal metal, where they
+will  be destroyed.\cite{degennes66} The   destruction of  pairs  at an S/N
+contact results in the suppression of the energy gap at the  interface, and
+is one  aspect  of  the  proximity  effect.   Another  aspect  is that  the
+superconductor can to some extent induce superconductivity  in a thin layer
+of  the normal  metal.\cite{cooper61}   The proximity-coupled   theories of
+Takahashi   and    Tachiki\cite{takahashi86b}   and  Biagi,    Kogan,   and
+Clem\cite{biagi85} (BKC) were developed to treat the S/N case.
+
+        In  these  models,  the  authors parameterize  the  S and  N layers
+separately, unlike the KLB theory, where the properties  of  the insulating
+layers are  ignored.\cite{klemm75} Takahashi and Tachiki\cite{takahashi86b}
+assign different densities   of    states N(0), diffusivities D,   and  BCS
+interaction  energies V to the S  and N layers.    BKC, on  the other hand,
+attribute to each  type of layer  a mean-free-path  $\ell$, superconducting
+transition  temperature      $\rm   T_c$,    and      Fermi  velocity  $\rm
+v_F$.\cite{biagi85} Because v$\rm _F$ and  $\ell$ determine D, while N(0) and
+V   determine    (with $\omega_D$)   $\rm    T_c$,  it  seems  that   these
+parameterizations are more or less equivalent.
+        
+        The   full   theories  both predict   positive  curvature   of $\rm
+H_{c2}(T)$.  Takahashi and Tachiki found signs  of a change in the coupling
+dimensionality for    $\rm  H_{c2,  \perp  \hat{c}}$(T).\cite{takahashi86b}
+Qualitatively these results  are quite similar to those  of KLB.  The exact
+criteria for dimensional crossover are  different,  though: the authors say
+that the necessary condition for decoupling of  the layers  (at T $>$ 0) is
+$\rm  s/ \xi_{\parallel \hat{c}}(0) \,    \geq$  0.4.   This condition   is
+equivalent, in terms of KLB's r-parameter, to $r$ $\leq \: 31.8$.  Thus the
+proximity-coupled  multilayers  decouple   at   longer  coherence   lengths
+($\xi_{\parallel    \hat{c}}$  = 2.5s)  than   the Josephson-coupled   ones
+($\xi_{\parallel \hat{c}}$ = 1.7s).   Nonetheless, in the proximity-coupled
+superlattice   models, no dimensionality     change   is  anticipated   for
+superconducting  GIC's, which all exceed the  limit  in $r$  by at least  a
+factor of 2.  (The possibility  of dimensionality crossover in higher-stage
+GIC's is discussed in Section~\ref{concl}.)  The source of this accelerated
+decoupling  is not   discussed  in Ref.~\cite{takahashi86b},  but  one  can
+speculate that  it  comes from  the suppression of  the gap  near   the S/N
+interface by the proximity effect.
+
+        What is  even more intriguing for  those interested in GIC's is the
+enhanced  critical  field  found for   $\rm   \vec{H}  \parallel  \hat{c}$.
+BKC\cite{biagi85}  studied  only this case, and  found that ``the proximity
+effect alone can produce the positive curvature [PC] in $\rm H_{c2}(T) \: \ldots
+\:$ [despite the fact that] no  provisions were made  for anisotropy or any
+other effects commonly thought to produce PC in $\rm  H_{c2}(T)$.''   These
+remarks are  a little bit deceptive  in that anisotropy has been implicitly
+introduced into the BKC model  through the layer thickness parameters; that
+is, thin films are known to be anisotropic,  and the individual layers have
+been chosen to be thin films.  Nonetheless, it  is impressive that positive
+curvature has been found in a superlattice formalism which is not linked to
+a dimensionality crossover.  Takahashi  and Tachiki also  found PC for $\rm
+\vec{H} \perp \hat{c}$.\cite{takahashi86b}  These findings would seem to
+have important implications for GIC's, for whom  a possible  explanation of
+PC using dimensionality crossover has already been eliminated.  
+
+        Unfortunately there   are sev\-er\-al prob\-lems  with ap\-ply\-ing
+the  prox\-im\-ity-coupled    su\-per\-lat\-tice  models to   GIC's.    One
+objection is that assigning  different mean-free-paths, diffusivities, $\rm
+T_c$'s and  BCS interaction energies to the  S and  N layers  seems   a bit
+questionable  when the  layers are only  a few atomic  layers thick.  These
+models were intended to be applied to S/N  superlattices with layers on the
+order  of   a few-hundred \AA \   thick,  where each of   the  constituents
+individually  has transport properties  which are little  modified from the
+bulk.  For layers on the order of 10 \AA \  thick, the transport properties
+are so modified from the pristine materials that use of the bulk parameters
+would  be highly erroneous.   The basic assumptions of the proximity-effect
+models are  violated in GIC's, where  the interaction between the  host and
+intercalant is  not a weak  perturbation.  Perhaps  in the  limit   of very
+high-stage superconducting   GIC's (if they  exist!)   agreement   with the
+proximity-coupled description might be found.
+
+        A second reason  for  discomfort with  the KBC   and  Takahashi and
+Tachiki models is the idea that superconducting  GIC's can be  described as
+S/N superlattices.  While Iye and Tanuma felt that superconductivity in the
+ternary GIC's was  probably  due  to superconductivity in  the  intercalant
+layers,\cite{iye82} the idea that one  component is superconducting and the
+other not appears somewhat shaky when $\rm \xi_{\parallel \hat{c}} \approx $
+20 $\rm I_c$, as in $\rm C_4KHg$.  Also, as Al-Jishi pointed out, there is
+good  reason to expect    that  the  graphitic $\pi$-bands contribute   to
+superconductivity  in GIC's,   as  otherwise  their  large critical   field
+anisotropy is difficult to explain.\cite{M143}
+
+        All these discussions are actually somewhat academic since the idea
+that GIC's are S/N superlattices turns out not to  be self-consistent.  The
+reason  is  that all  proximity-effect theories\cite{cooper61,takahashi86b}
+predict that the $\rm  T_c$'s of S/N  multilayers must always be  less than
+the bulk transition temperature of the superconducting component.  In fact,
+these models  predict that,   for small layer  thicknesses, $\rm  T_c$ must
+decline  monotonically  with increasing thickness  of the normal layer, all
+other parameters being held  equal.   The monotonic  decrease of  $\rm T_c$
+with increasing normal metal thickness is illustrated in Fig.~\ref{proxeff}
+for  Pb/Cu bilayers.\cite{werthamer63} Apparently no  studies of $\rm  T_c$
+versus normal  metal       thickness  have been    performed   in  metallic
+superlattices; the thicknesses of  both the S  and N components are usually
+varied together.  (See   Figure~\ref{assltc}.)  However, the  depression of
+$\rm T_c$ with increasing normal  metal  thickness is also  expected in the
+superlattices.   If   one  believes that  only  the  intercalant layer   is
+superconducting in GIC's,  and thinks  of the carbon  (graphene) layer as a
+normal metal, then one would expect a decreasing $\rm T_c$  with increasing
+stage.  Yet, as is well-known, $\rm T_c$ is higher in stage II than stage I
+for   both  KHg-   and  RbHg-GIC's,\cite{iye83}  in  contravention   to the
+expectation of the model.
+
+\begin{figure}
+\vspace{5in}
+\caption[$\rm T_c$ versus layer thickness  for S/N bilayers.]{$\rm T_c$ versus normal-layer thickness  for S/N bilayers.
+Figure taken from Ref.~\cite{werthamer63} Here D$\rm  _N$ and D$\rm _S$ are the
+thicknesses of the normal and  superconducting layers, and T$\rm  _{cS}$ is
+the bulk $\rm T_c$  of the superconducting component.  Approximately T/$\rm
+T_{cS}$  =  $\rm  (1  \: -   \:  t(D_N \rightarrow    \infty))(1  \:  -  \:
+\exp{-2D_N/\xi})$, where $\xi$ is the dirty-limit Pippard coherence length.}
+\label{proxeff}
+\end{figure}
+
+        The  conclusion  is that,  while the  proximity-coupled models have
+been extremely  successful   in  fitting  data on  artificially  structured
+superlattices (for example, those of  Nb/Ta\cite{broussard88}), they do not
+seem to  be well-suited  to  GIC's.  Perhaps if  high-stage superconducting
+GIC's are ever discovered, it might be worthwhile  to  take another look at
+proximity-coupling.   For  the known  GIC's, though,   it is  imperative to
+consider alternative theories.
+
+        Even though  intuition says that  the enhancement of  the  critical
+fields   in superconducting GIC's  is   linked to their  anisotropy, it  is
+important  to consider whether mechanisms not  related  to anisotropy could
+also  play   a role.   The major causes  of  critical field enhancement  in
+isotropic   superconductors are spin-orbit   scattering and strong-coupling
+behavior.
+
+\subsection{Critical Field Enhancement in Isotropic Superconductors}
+\label{spin-orbit}
+
+        One  often hears  the  statement that large  spin-orbit  scattering
+increases $\rm   H_{c2}(T)$  in a   high-field superconductor.   Since  the
+spin-orbit interaction   increases  rapidly  as  a  function of  the atomic
+number\cite{merzbacher70} Z,  and since   Hg is a   high-Z element,  it  is
+logical to ask whether spin-orbit scattering could enhance  $\rm H_{c2}$ in
+$\rm C_4KHg$.  The  answer is  no, since  it  turns out that the spin-orbit
+``enhancement'' only affects  materials whose critical  fields have already
+been depressed    by   Pauli  limiting effects.\cite{werthamer66,orlando79}
+``Pauli  limiting''  refers to the   upper   bound on $\rm  H_{c2}(T)$ from
+spin-susceptibility                   (Pauli                 paramagnetism)
+effects.\cite{clogston62,chandrasekhar62}   Superconductors  close to their
+Pauli limit have critical fields which are depressed from the Maki-deGennes
+temperature dependence.  Paramagnetic  limiting  also affects  the  angular
+dependence  of the    critical field.\cite{aoi73,decroux82}  High  rates of
+spin-orbit scattering   can   increase   the    susceptibility  of      the
+superconducting  state to that  of  the normal state,   and  thus eliminate
+Pauli-limiting effects.   Thus  spin-orbit  scattering  and  Pauli limiting
+effectively cancel one another out, and the final result of both effects is
+the     same       Maki-deGennes     curve        already   discussed    in
+Section~\ref{hvstdata}.\cite{orlando79}   Since  the two mechanisms cancel,
+and since spin-orbit scattering has no major impact for a superconductivity
+far   from the   paramagnetic limit,  spin-orbit  scattering  cannot give a
+reduced field  $\rm   h^*(0)$ $>$  0.7,  and cannot   explain  the enhanced
+linearity of $\rm H_{c2}(T)$ observed in GIC's.
+
+        While on the subject of electron spin, it is  worth mentioning that
+GIC's appear to be far from the paramagnetic limit, as would be expected
+for low-critical field materials.  The reason is that orbital
+pair-breaking effects are  strong enough in  GIC superconductors that they
+are far  from the spin-susceptibility  ceiling on $\rm H_{c2}$.   The small
+values  of the  Maki   $\alpha$  parameter\cite{maki64}   for GIC's clearly
+demonstrate the validity  of this  statement, since spin contributions  to the
+energy   of  a superconductor   become   important   when $\alpha  \geq$  1.
+WHH\cite{werthamer66} provided two ways of calculating $\alpha$:
+
+\begin{equation}
+\label{alphadef}
+\begin{array}{l}
+\rm \alpha \; = \; 3e^2\hbar \gamma \rho_n/2 m \pi^2 k_B^2 \\
+\\
+\rm \alpha \; = \; 5.2758\times10^{-5} \left. \frac{dH_{c2}}{dT}
+\right|_{T_c} \; .
+\end{array}
+\end{equation}
+
+\noindent Here $\gamma$ is the linear specific heat coefficient, and $\rho_n$
+is the  normal-state dc resistivity.  In   Eqn.~\ref{alphadef}, m is the bare
+electron mass, not the effective  mass, since it comes from  e$\hbar$/2$\rm
+\mu_B$c.\cite{decroux82} For $\rm  C_4KHg$, the best method  is to use $\rm
+\rho_a$ to calculate $\alpha$ for $\rm \vec{H} \parallel \hat{c}$, and $\rm
+\sqrt{\rho_a
+\rho_c}$ to   calculate  $\alpha$ for   $\rm \vec{H} \perp  \hat{c}$.   The
+parameters    used  were  $\rm   \rho_c$    =  0.2  milliohm-cm     at  4.2
+K,\cite{fischer83}    and    $\gamma$   =    0.95   millijoules    /   (mol
+K$^2$)\cite{alexander81}.  $\rm  \rho_a$ at 4.2 K  for $\rm  C_4KHg$ (which
+has not been reported) was estimated  by assuming a  resistivity anisotropy
+of 280,  the  same  as the measured  resistivity anisotropy at  100  K, the
+lowest   temperature    at  which    published     $\rm    \rho_a$     data
+exist.\cite{elmakrini80}  Values  of $\alpha$ obtained  from both halves of
+Eqn.~\ref{alphadef}    are      given       in      Table~\ref{alphatable},
+which  demonstrates   that $\rm C_4KHg$  is  two to  three
+orders of  magnitude  away from  Pauli-limiting regime.   With like  assumptions,
+similar calculations for other GIC's give $\alpha$'s  of the same  order of
+magnitude.  Therefore spin-orbit  scattering has no impact  on the critical
+fields of $\rm C_4KHg$.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|cccc|}
+\hline
+& & & &  \\
+$\rm T_c$  & $\rm \alpha_{\parallel \hat{c}}$ (from $\rho$) & $\rm \alpha_{\parallel \hat{c}}$ (from slope) & $\rm \alpha_{\perp \hat{c}}$ (from $\rho$)
+& $\rm \alpha_{\perp}$ (from slope) \\
+& & & &  \\
+\hline
+& & & &  \\
+0.72\cite{iye82} & 1.48$\times 10^{-3}$ & 4.24$\times 10^{-3}$  & 2.48$\times 10^{-2}$ & 4.14$\times 10^{-2}$\\
+& & & &  \\
+0.95 & 1.48$\times 10^{-3}$ & 2.32$\times 10^{-3}$  & 2.48$\times 10^{-2}$ & 1.98$\times 10^{-2}$\\
+& & & &  \\
+1.53 & 1.48$\times 10^{-3}$ & 3.78$\times 10^{-3}$  & 2.48$\times 10^{-2}$ & 2.58$\times 10^{-2}$\\
+& & & &  \\
+1.54 & 1.48$\times 10^{-3}$ & 2.78$\times 10^{-3}$ & 2.48$\times 10^{-2}$ & 2.60$\times 10^{-2}$\\
+& & & &  \\
+\hline
+\end{tabular}
+\end{center}
+\caption[Comparison for   $\rm
+C_4KHg$  of  two  different  methods for  determination of Maki's  $\alpha$
+parameter.]{Comparison for   $\rm  C_4KHg$  of   two different methods  for
+determination    of   Maki's   $\alpha$  parameter.\cite{werthamer66}   The
+orientation indicated is that of the applied magnetic field. In parentheses
+it is noted which of the two halves of Eqn.~\ref{alphadef} was used.}
+\label{alphatable}
+\end{table}
+
+        WHH  say  about Eqn.~\ref{alphadef}  that  ``It  is a  test of  the
+applicability of   our model    for  the   superconductor  that  these  two
+determinations  of $\alpha$ should agree.''\cite{werthamer66}   Considering
+the crudeness  of  the  assumptions made  in the  estimation of $\rho$, the
+agreement in  Table~\ref{alphatable}  between   the two  determinations  of
+$\alpha$   is quite   good.   This  is an   indication that   even   though
+superconductivity   in GIC's has  some  anomalous  aspects, it    still  is
+explained by the same basic electron-phonon coupling mechanism that applies
+to  isotropic  superconductors.  Therefore, in  our  search  for models  to
+explain the enhanced  critical fields of GIC's,  models  with  truly exotic
+coupling  schemes  ({\em  e.g.,\/} plasmons  and  excitons) can   safely be
+ignored.
+
+         Another factor that contributes  to  critical field enhancement in
+isotropic superconductors besides  spin-orbit scattering is strong-coupling
+effects.  ``Strong-coupling'' refers to the case of a large electron-phonon
+interaction.  The strength of electron-phonon  coupling is measured  by the
+size  of the   dimensionless   parameter  $\rm \lambda_{ep}$,    the   same
+electron-phonon parameter that appears   in  the dressed  density-of-states
+found from   specific-heat measurements.\cite{ashcroft76}  Note   that $\rm
+\lambda_{ep}$ is not  related   to the magnetic-field   penetration   depth
+$\lambda$ (see  Section~\ref{angdata} for  a  discussion of the penetration
+depth).    McMillan\cite{mcmillan68} calculated    $\rm T_c$  in  terms  of
+$\rm \lambda_{ep}$  and    $\mu ^*$,  the   Coulomb  pseudopotential  of  Morel  and
+Anderson\cite{morel62}.  He found:\\
+
+\[
+\rm T_c \; = \; \frac{\Theta_D}{1.45} \: \exp{-\left[ \frac{1.04 \left( 1
+\, + \, \lambda_{ep} \right)}{\lambda_{ep} \; - \; \mu^* \left(1 \; + \; 0.62\lambda_{ep} \right)}  \right]}
+\]
+
+\noindent where $\rm \Theta_D$ is the Debye temperature.   Using a typical
+number of  $\mu^*$ = 0.1,\cite{mcmillan68},  one can solve for
+$\lambda_{ep}$:
+
+\begin{equation}
+\label{mcmillan}
+\rm \lambda_{ep} \; = \; \frac{1.04 \; + \; 0.1 \ln{\left( \Theta_D/1.45 T_c
+\right)}}{0.938 \ln{\left( \Theta_D/1.45 T_c \right)} - 1.04}
+\end{equation}
+
+\noindent  The results of this calculation for the superconducting GIC's
+whose    Debye   temperature    has   been   measured   are  collected   in
+Table~\ref{lambdatable}.  $\lambda_{ep}$  in  GIC superconductors appears  to be
+$\approx$0.4,     about   the    same   as   in  prototypical weak-coupling
+superconductors like aluminum and zinc.\cite{mcmillan68} This is in keeping
+with one's expectations for a material with a rather low $\rm T_c$ of about
+1-2 K.
+
+\begin{table}
+\caption[Values of $\lambda_{ep}$, the electron-phonon coupling parameter, for
+GIC  superconductors.]{Values  of $\lambda_{ep}$, the  electron-phonon  coupling
+parameter, for GIC superconductors. $\rm T_c$ = 0.73 K\cite{iye82} is used
+for $\rm C_4KHg$ since no transition was observed down to 0.8 K during the
+specific-heat measurement.\cite{alexander81}  Values of $\rm \lambda_{ep}$
+for the KH-GIC's are gathered in Table~\ref{khcvtable}.}
+\label{lambdatable}
+\begin{center}
+\begin{tabular}{|c|ccc|}
+\hline
+& & & \\
+Compound & $\rm T_c$ (K) & $\rm \Theta_D$ (K) & $\lambda_{ep}$ \\
+& & & \\
+\hline
+& & & \\
+$\rm C_4KHg$ & 0.73\cite{iye82} & 269\cite{alexander81} & 0.38\cite{iye82} \\
+& & & \\
+$\rm C_8RbHg$ & 1.44\cite{alexander81} & 235\cite{alexander81} & 0.44\cite{iye82,alexander81} \\
+& & & \\
+$\rm C_8KHg$ & 1.93\cite{alexander81} & 260\cite{alexander81}, 301\cite{alexander80} & 0.46\cite{tanuma81,alexander80} \\
+& & & \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+        In  amorphous superconductors, strong-coupling  effects   can cause
+extended linearity at   low temperatures.\cite{bergmann74} However,   the
+values  of   $\lambda_{ep}$ quoted  above  eliminate    the possibility that GIC
+superconductors are subject  to  any critical field field  enhancement from
+strong-coupling effects, since   these   effects are   important  only  for
+$\lambda_{ep} \geq$ 1.  Furthermore,
+since    the strong-coupling  enhancement   is  larger   near    $\rm   T_c$  than  at  low
+t,\cite{decroux82,dalrymple83} strong-coupling effects tend  to actually {\em decrease}
+$\rm h^*(0)$, the reduced field at zero temperature.
+
+        Recently  some theories of  ultra-strong coupling superconductivity
+have been pub\-lished,  in\-spired by the  ad\-vent of high-tem\-per\-ature
+su\-per\-con\-duct\-ivity.\cite{bulaevskii87,marsiglio87} Some of these models find
+pos\-i\-tive     cur\-va\-ture  of    $\rm  H_{c2}(t)$.    Bu\-laev\-ski\u{\i}      and
+Dol\-gov\cite{bulaevskii87}      find        that       $\rm    h^*(0)$     =
+$0.45\sqrt{\lambda_{ep}}$ for $\lambda_{ep} \gg $1.  Marsiglio and Carbotte
+find   $\rm  h^*(0)$  about 1.6, but  only   when  $\rm T_c   \: \approx \:
+\Theta_D$.\cite{marsiglio87} These   models are  clearly not applicable  to
+superconductivity in known GIC's.
+
+        For  GIC's, a more relevant  consideration  than strong-coupling is
+inhomogeneity.     From     both  structural\cite{kamitakahara84,K167}  and
+superconducting\cite{Z234,delong83} studies, there is abundant  evidence for
+the coexistence of  multiple phases   in $\rm  C_4KHg$.  This  evidence  is
+discussed  in detail in Chapter~\ref{hydrog}.    As far  as  critical field
+experiments  go, this  multiphase behavior  is important  because  of   the
+possibility  that inhomogeneity is the  cause of the  enhanced linearity of
+the critical  fields of $\rm C_4KHg$.  Carter  and coauthors\cite{carter81}
+developed a model for  the case of multiphase materials  which contain both
+an  equilibrium  and   higher  free-energy phase.    The model  treats  the
+inhomogeneity by allowing  the   superconductor  to have a distribution  of
+diffusivities described by a function P(D).  Then, instead of the
+Maki-deGennes equation (Eqn.~\ref{makidegennes}) for the critical fields of
+dirty superconductors, one uses:
+
+\begin{equation}
+\label{carter}
+\rm \ln \: t \; = \; \psi\left(\frac{1}{2}\right) \; - \; \int dD \, \psi\left(
+\frac{1}{2} \; + \; \frac{D e H_{c2}}{2 \pi k_B T c}  \right) \, P(D) 
+\end{equation}
+
+\noindent where all the symbols are the same as before, and $\psi$ is the
+digamma function.  Carter  {\em et  al.\/}  found    that by widening   the
+distribution P(D) from  a $\delta$-function  (implied by the   choice of  a
+single D value)   to a broad  hump that  they could produce  both  positive
+curvature and $\rm h^*(0) \approx$ 0.85.  By skewing  the distribution P(D)
+to  low D, they  could even get  $\rm  h^*(0)$  $>$ 0.9.\cite{carter81} The
+results of their calculations are   shown in Fig.~\ref{inhomo}, where  $\rm
+h^*$ (called h in the axis label) is plotted versus  t as a function of the
+normalized diffusivity  distribution function,  Q(y).  Q(y) $\equiv$  D$\rm
+_{ave}$  P(D), where $\rm D_{ave}$ is  the mean diffusivity, and y $\equiv$
+D/$\rm D_{ave}$.
+
+\begin{figure}
+\vspace{7.5in}
+\caption[Extended critical field linearity due to  small-scale sample
+homogeneity (calculated).]{Extended critical   field   linearity  due    to
+small-scale  sample  inhomogeneity.  From  a   calculation  by Carter   and
+colleagues.\cite{carter81} The plots are  of reduced  field  versus reduced
+temperature  for   several  different  normalized diffusivity  distribution
+functions  Q(y).    Q(y)  $\equiv \rm  D_{ave}$P(D),  where   P(D)   is the
+distribution function  for   diffusivity,  $\rm D_{ave}$   is  the   average
+diffusivity, and y  $\equiv$ D/D$\rm _{ave}$.   In  the lower plot,  a P(D)
+skewed  to lower  diffusivities  produces  an even greater  critical  field
+enhancement at low temperatures.  The index n refers to the power of the
+linear factor used to skew the symmetric distribution.}
+\label{inhomo}
+\end{figure}
+
+        The  physical cause of  the inhomogeneity-related enhancement has to
+do with the  temperature  dependence   of  $\xi$, which  is the approximate
+radius of a normal  vortex in  a  superconductor.\cite{tinkham80} At $\rm T
+\approx T_c$, $\xi$ is large, so that vortices must extend over both high-D
+and low-D   regions  in the  material.  At  low t,   where $\xi$  has grown
+considerably smaller, the  material can  save some  condensation energy  by
+preferentially    packing  the vortices into  the   low-D  regions with higher
+critical fields.  As  a result, when  $\xi$(T)  becomes on the order of the
+domain size, $\rm H_{c2}$ will turn upward.\cite{carter81}
+
+         Does this   model offer an explanation   of positive curvature and
+enhanced   linearity in  the  critical   fields   of  GIC's?   Clearly  the
+inhomogeneity interpretation has some appealing  features for $\rm C_4KHg$,
+but it also has some problems.  One is that  among the GIC superconductors,
+multiphase  behavior   has been  observed  only in   $\rm C_4KHg$.   As  is
+discussed in  Chapter~\ref{hydrog},  $\rm C_4KHg$ is  remarkable  among the
+superconducting GIC's for the wide range of $\rm T_c$'s  it  exhibits (from
+0.7 to  1.6 K), and because it   undergoes  what is  apparently an ordering
+transition     under     the    influence     of     small    perturbations
+(hydrogenation\cite{Z234} and  small  hydrostatic pressure\cite{delong83}).
+These features are  not observed  for other  GIC's, which have well-defined
+transition      temperatures   and  show   no     unusual   behavior  under
+pressure.\cite{iye83,delong83} It does not seem to make  sense to attribute
+the anomalies in $\rm C_4KHg$ to a different cause than the deviations seen
+in other GIC's, especially  considering that the other  GIC's  show  larger
+anomalies (see Fig.~\ref{rbhct}).
+
+        Even if one were willing to assume separate causes for the enhanced
+critical fields  of the  various GIC's, it is not  clear that the  model of
+Carter and colleagues would be applicable.  The problem is that their model
+makes the (reasonable)  assumption   that   microscopically   inhomogeneous
+superconductors  will be   in  the dirty  limit,  where  the  Maki-deGennes
+equation is   applicable.   However,  $\rm  C_4KHg$  appears  to  be fairly
+``clean,'' at  least for in-plane transport.  The  standard way to quantify
+cleanliness in   a  superconductor  is  to calculate   the  parameter  $\rm
+\lambda_{tr}  \, \equiv$   0.882 $\xi_0 / \ell$.\cite{helfand66}  Here $\rm
+\xi_0 \equiv 0.18 \hbar v_F/ k_B T_c$  is the Pippard  coherence length, and
+$\ell$ is  the mean-free path.  For $\rm  C_4KHg$, $\xi_0$ is roughly  9000
+\AA, and $\rm
+\ell_a$, the in-plane  mean-free path, is about 9100 \AA.  (These  numbers
+were  obtained   from   Shubnikov-deHaas  data\cite{W179}   using  standard
+rigid-band analysis,  as demonstrated  in Appendix~\ref{lambda_tr}.)  Since
+$\rm   \ell_a$ $\approx$   $\xi_0$,   the    dimensionless  parameter  $\rm \lambda_{tr} \equiv$ 0.88 $\xi_0/\ell
+\approx$  0.86 for in-plane transport.   $\rm \lambda_{tr}$ $<$ 1 is
+indicative  of fairly   clean  behavior,\cite{helfand66}   so this  is   an
+indication that inhomogeneities are not likely to be the cause  of enhanced
+linearity, at least for $\rm
+\vec{H}  \parallel  \hat{c}$.    However,    this calculation   does   not  rule   out   a
+diffusivity-variation influence on $\rm  \vec{H} \perp \hat{c}$.  Transport
+is expected to be much dirtier along $\rm  \hat{c}$,  where the resistivity
+is about 300 times higher than in-plane.\cite{fischer83} $\rm
+\lambda_{tr}$ is estimated very roughly to be about 50 for c-axis transport
+by assuming a spherical band.  (No well-bounded  number  is available since
+the   Shubnikov-deHaas  data   give no information   about  the intercalant
+bands.\cite{W179}  c-axis transport   in    GIC's     is  discussed      in
+Section~\ref{csbidisc}.)
+
+        In summary, use   of   the inhomogeneity  model  for enhanced  $\rm
+H_{c2}$ can be justified for $\rm C_4KHg$  for $\rm \vec{H} \perp \hat{c}$,
+but it is hard to justify for $\rm \vec{H} \parallel \hat{c}$, or for other
+superconducting GIC's.   Therefore   the most sensible   conclusion is that,
+while the factors  discussed by Carter {\em  et al.\/} may play a  role  in
+$\rm  C_4KHg$, they  probably  do  not   have a   dominant effect  on  $\rm
+H_{c2}$(T).
+
+        Finally, to round out the discussion  of critical field enhancement
+in isotropic superconductors, mention should be made  of the anomalous $\rm
+H_{c2}(T)$ behavior found in heavy-fermion  superconductors.\cite{delong87}
+These  unusual materials  exhibit both   positive curvature and  large
+values of $\rm  h^*(0)$.  Any explanation  of  these phenomena must  remain
+tentative  since   the  basic   physics    of these compounds   is    still
+controversial,\cite{lee86}  but  recently  an  interesting   model has been
+proposed by  DeLong {\em et al.\/}\cite{delong87} The  explanation is based
+on the observation  that dH$_{c2}$/dT $\propto  \: \rho$  in the  usual WHH
+model, as shown in Eqn.~\ref{alphadef}. If  the normal-state resistance  $\rho$  is  assumed
+independent of field up to $\rm H_{c2}$, then one gets the usual WHH result
+$\rm h^*(0)   \:  \approx  0.7$.  However,   if  there   is a  very  strong
+magnetoresistance    (the   manifestation   of  a  field-dependent  pairing
+interaction), then the slope formula shows that $\rm h^*(0)$ can exceed 0.7
+by a factor of $\rm \Delta
+\rho(H_{c2}) / \rho$.\cite{delong87} Here $\Delta \rho(H_{c2}) / \rho$ is
+the magnetoresistance  at  the   field $\rm  H_{c2}$;  the    normal  state
+resistivity at  zero-field  is   extrapolated from above  $\rm T_c$.   This
+formalism  may have wide applicability   to superconductors with  large  or
+anomalous magnetoresistance; however, it appears  unlikely to help  much in
+the case  of GIC's, since the critical  fields  are  small  enough that the
+magnitude of $\rm \Delta
+\rho(H_{c2})/\rho$ is anticipated to be $\approx$ 0.  The magnetoresistance
+of the KHg-GIC's was  observed by Timp  and coworkers, who reported nothing
+extraordinary.\cite{W179}
+
+        Four    causes  of    critical  field   enhancement    in isotropic
+superconductors have been discussed: spin-orbit scattering, strong-coupling
+effects, inhomogeneities,  and magnetoresistance.    Of  these, only  the
+multiphase-superconductor model of  Carter {\em et al.\/}  is thought to be
+relevant to  GIC superconductors.  Inhomogeneity  effects could play a role
+for $\rm \vec{H} \perp \hat{c}$,  but except for $\rm C_4KHg$,  there is no
+hard evidence for multiphase behavior in other superconducting GIC's except
+for $\rm C_4KH_x$.\cite{Z260,suzuki85c}  
+
+        The extremely anisotropic  nature  of superconductivity  in   GIC's
+(1/$\epsilon$  as  high as 47\cite{iye83})  provides motivation to consider
+models   of   positive  curvature  and    enhanced  linearity which   treat
+orientation-dependent effects as central.  Some of these models are
+considered in the next section.
+
+\subsection{Multiband and Anisotropic Gap Models of Superconductivity}
+\label{multiband}
+
+        There are  two-types of models which  take anisotropy as a point of
+departure,  rather  than  treating   it as  a  small  perturbation,  as the
+pioneering  Hohenberg and Werthamer  model did.\cite{hohenberg67} One class
+consists  of models   that consider a   single non-spherical  Fermi surface
+and/or    energy     gap.     This      category    includes     work    by
+Takanaka,\cite{takanaka75} Pohl  and    Teichler,\cite{pohl76} Youngner and
+Klemm,\cite{youngner80}    Butler,\cite{butler80}     and   Prohammer   and
+Schachinger.\cite{prohammer87}  The  other   class  of theories  study  the
+implications of  two different  Fermi   surface pieces that  contribute  to
+superconductivity.  These models    have  been  developed   by  Entel   and
+Peter,\cite{entel76,entel77}          Decroux,\cite{decroux80},         and
+Al-Jishi\cite{M143}.
+
+        Theories   in  the   first class, consisting   of  the  anisotropic
+gap/Fermi surface  models,  are essentially extensions   of the  AGL  model
+discussed   previously.   That   is, these theories  contain  the essential
+physics  of  the AGL model  plus  modifications  describing what are called
+non-local  effects.    ``Non-local''   is an   adjective that     refers to
+clean-limit  phenomena outside  the the   scope of Ginzburg-Landau theories
+which  are  related  to the    finite   spatial extent   of   the    Cooper
+pair.\cite{tinkham80} That the more complex models reduce to  the AGL model
+in   the      local     limit   is   demonstrated   by      Hohenberg   and
+Werthamer.\cite{hohenberg67}  What Hohenberg and    Werthamer  did  was  to
+rewrite  the  eigenvalue   equation   for  the  energy   gap  (which is  an
+intermediate step in the  derivation of the  Helfand-Werthamer equation for
+$\rm  H_{c2}$) in terms  of an infinite sum.   The sum has terms which  are
+matrix elements of even powers  of a quantity  proportional to $\rm \vec{v}
+\cdot \vec{\Pi}$, where $\vec{v}$ is  the Fermi velocity and $\rm \vec{\Pi}
+\; \equiv \; \hbar/i \vec{\nabla} - e/c
+\vec{A}$  is  the  gauge-invariant   momentum   operator.  Because  of  the
+relationship between  the vector potential  $\rm \vec{A}$ and  the magnetic
+field,  it   turns out   that  the component  of $\rm \vec{v}$  parallel to
+$\vec{\Pi}$  is   orthogonal to  the applied  field,   in  keeping with the
+expectation from the GL  theory that transport in  a plane perpendicular to
+the applied field determines $\rm H_{c2}$.  The important  quantity in this
+formalism is
+
+\[ \rm \oint d\vec{q} \:  N(\vec{q}) \: v_{\perp \vec{H}}(\vec{q})
+\]
+
+\noindent where the integral is to be taken over the FS.   Here $\rm \vec{q}$ 
+is a point on the Fermi surface, $\rm N(\vec{q})$ is the  density of states
+at that point,  and $\rm v_{\perp  \hat{H}} (\vec{q})$  is the component of
+$\rm \vec{v_F}(\vec{q})$   perpendicular    to  $\rm \vec{H}$.  Obviously   the
+critical field anisotropy is uniquely specified  by one parameter $\epsilon$
+only if  the  FS  is   ellipsoidal.  Otherwise  knowledge  of the entire FS
+geometry is needed.  Notice that $\rm v_{\perp  \vec{H}} (\vec{q})$ depends
+not only on the magnitude of $\rm \vec{v_F}$ at the point $\rm
+\vec{q}$, but also on the angle between the angle between $\rm \vec{H}$ and
+$\rm  \vec{v_F}(\vec{q})$.  This point   is illustrated by Fig.~\ref{perpexplain}
+from Ref.~\cite{dalrymple83}.
+
+\begin{figure}
+\vspace{8in}
+%Fig. 7-4, p. 263, from Dalrymple's thesis
+\caption[Illustration of how $\rm v_{\perp  \vec{H}}  (\vec{q})$ changes as
+a     function   of  $\rm      \vec{q}$   for   an     ellispsoidal   Fermi
+surface.]{Illustration of how $\rm v_{\perp  \vec{H}} (\vec{q})$ changes as
+a function  of wavevector $\rm \vec{q}$  for an ellipsoidal Fermi surface.
+$\rm
+\vec{q}$ is the coordinate of a point on the  Fermi surface.  B is Dalrymple's
+anisotropy  parameter, which  is   equivalent  to $\epsilon$  in   the  AGL
+model.\cite{dalrymple83}}
+\label{perpexplain}
+\end{figure}
+
+        Hohenberg and Werthamer   went on to  show that  keeping  only  the
+zeroth-order term  in the infinite  sum gives  the isotropic theory,  while
+keeping terms  up  to the second  order in the  dot  product  gives the AGL
+model,          including      Eqn.~\ref{ldtheor}           for        $\rm
+H_{c2}(\theta)$.\cite{decroux82}  What   all  subsequent models of   FS/gap
+anisotropy do is to  include more terms in  the   sum over powers  of ($\rm
+\vec{v} \cdot
+\vec{\Pi}$).  Increasingly higher-order terms correspond both to higher degrees of
+non-locality,   and  because   of symmetry,  also  to  more complex  FS/gap
+geometries  ({\em i.e.,\/}  higher  angular momentum  spherical harmonics).
+Hohenberg   and  Werthamer         included     fourth-order  contributions
+perturbatively,\cite{hohenberg67} which corresponds to  the weak-anisotropy
+limit.   The weak-anisotropy limit  is probably  less appropriate for GIC's
+than for superconductors like niobium  or vanadium, which have 1/$\epsilon$
+on the  order of 2 or  3.  The Hohenberg  and Werthamer model only modifies
+$\rm H_{c2}(t)$ near  $\rm  T_c$, and cannot  produce the low-t enhancement
+observed in GIC's.
+
+        Takanaka  included  terms up to  order four  in  a non-perturbative
+manner,   but his  theory   is limited   to  t $\approx$   1 because of  an
+error.\cite{youngner80,ikebe80} Youngner and Klemm, who fit their equations
+to  NbSe$_2$ data, found a way  to  sum the  series  exactly up to infinite
+order.\cite{youngner80}   They remark   that    their  model  is  basically
+equivalent  to  that  of   Pohl   and   Teichler,    who    fit   data   on
+vanadium.\cite{pohl76} These models  are also very  similar to  the work of
+Butler,\cite{butler80} who applied    his theory  to  niobium, except  that
+Butler dropped  all  terms due   to gap anisotropy  in  his final equations
+because he thought were quite small.  Butler's equations have also been used
+by  Dalrymple  and  Prober\cite{dalrymple84}       to   fit    data      on
+Nb$_{1-x}$Ta$_x$Se$_2$.
+
+        From examination of the  $\rm h^*$ versus t curves  that  appear in
+either  Butler's    paper\cite{butler80}     or   Youngner   and    Klemm's
+paper,\cite{youngner80}  it is clear   that either   one  can produce  both
+extended  linearity  using an  ellipsoidal Fermi surface   model.   This is
+encouraging  because the  $\pi$-bands of GIC's  are  generally  believed to
+produce an ellipsoidal FS piece,\cite{I94} but it  is  not the whole story.
+A   calculation  using     Butler's  equations      taken from  Dalrymple's
+thesis\cite{dalrymple83} is shown in Fig.~\ref{butlerellipse}.  Notice that
+$\rm h^*(t)$ is enhanced only  when  Dalrymple's parameter B  (which is the
+same for an ellipsoidal Fermi surface as $\epsilon$ from the  AGL model) is
+less than one,   and that $\rm h^*(0)$  is  actually suppressed  from   the
+isotropic  value when B is greater  than one.   The   significance  of this
+conclusion is that for a simple ellipsoidal  FS,  the Butler model extended
+linearity gives only for one field orientation.\cite{dalrymple83} Therefore
+one cannot describe critical field enhancement for both  field orientations
+using a simple ellipsoidal FS.
+
+\begin{figure}
+\vspace{5in}
+%Fig. 7-2 from Dalrymple's thesis
+\caption[Enhanced linearity of $\rm h^*(t)$ calculated from Butler's
+equations  using  an  ellipsoidal FS   model.]{Enhanced  linearity of  $\rm
+h^*(t)$ calculated    from  Butler's  equations\cite{butler80}    using  an
+ellipsoidal  FS  model.  Taken   from Ref.~\cite{dalrymple83}.  Dalrymple's
+parameter B is  equivalent to 1/$\epsilon$ in the  AGL model.  The B  = 1.0
+curve is for a  spherical Fermi Surface, and  so is equivalent  to  the WHH
+theory.}
+\label{butlerellipse}
+\end{figure}
+
+        Because Dalrymple and Prober observed  enhanced critical fields for
+NbSe$_2$ for both $\rm  \vec{H}  \parallel \hat{c}$  and $\rm
+\vec{H}  \perp \hat{c}$,\cite{dalrymple84}  they tried fitting  their  data
+with  more complex   Fermi   surface  geometries.  When   they  combined an
+ellipsoid     with  a cylindrical   FS    model calculated   by Wexler  and
+Woolley\cite{wexler76}, they found excellent quantitative agreement between
+theory and  experiment  for    $\rm \vec{H} \parallel  \hat{c}$,   and good
+qualitative agreement  for $\rm  \vec{H} \perp  \hat{c}$.\cite{dalrymple83}
+These fits are shown in  Fig.~\ref{nbse2fit}.  In order to get quantitative
+agreement for $\rm \vec{H} \perp \hat{c}$, the authors had to  multiply all
+the data through by a factor of  2.1.  Dalrymple  and Prober explained that
+this factor was necessary  because  of mean-free-path anisotropy, which  is
+not taken into  account in the Butler   model.   The mean-free  path $\ell$
+comes  in  because of  the dependence of  $\rm H_{c2}$ on the diffusivity D
+$\equiv$   1/3$\rm v_F \ell$.    This type of  mean-free-path anisotropy is
+quite believable  since    much larger ratios   have often    been seen  in
+GIC's.\cite{mcrae88} Essentially Dalrymple  and Prober find that the Butler
+model describes $\rm  H_{c2,  \parallel \hat{c}}$ data without  correction.
+This agreement occurs  since in-plane transport  in  NbSe$_2$ is clean, and
+Butler's model is for clean-limit superconductors.  The  Butler model needs
+a correction to fit $\rm H_{c2, \perp
+\hat{c}}$ data because transport along $\rm \hat{c}$ is dirty.
+
+\begin{figure}
+\vspace{16cm}
+%Figs. 7-5 and 7-6 of Dalrymple's thesis
+\caption[Butler-model fit of NbSe$_2$ $\rm H_{c2}(t)$
+data.]{Butler-model\cite{butler80} fit of NbSe$_2$ $\rm H_{c2}(t)$ data.
+Figures taken from Dalrymple's thesis.\cite{dalrymple83} a) $\rm H_{c2,
+\perp}$ = $\rm H_{c2, \parallel \hat{c}}$.  An excellent fit is obtained by
+using the Wexler-Woolley Fermi Surface model\cite{wexler76} plus an additional ellipsoid.
+b) $\rm H_{c2, \parallel}$ = $\rm H_{c2, \perp \hat{c}}$. The
+Wexler-Woolley-plus-ellipsoid model produces the correct shape, but needs
+to be multiplied by an additional factor of 2.1 to account for mean-free-path
+anisotropy.}
+\label{nbse2fit}
+\end{figure}
+
+        Youngner and Klemm's model of $\rm H_{c2}(T)$ seems to be  the same
+as Butler's, but with the added feature of gap anisotropy.\cite{youngner80}
+In  this  case, $\rm \vec{v}(\vec{q}) \cdot  \vec{\Pi}$ may still depend on
+$\rm  \vec{q}$.  In addition,  though, the  states between which the matrix
+element  of $\rm \vec{v} \cdot \vec{\Pi}$  is evaluated may also themselves
+be non-spherical.  Youngner's model  produces curves quite similar to those
+of  Butler, including  extended linearity and  positive  curvature for some
+choices   of   parameters.     The  recent    theory   of    Prohammer  and
+Schachinger\cite{prohammer87} is nearly  the same as  Youngner and  Klemm's
+model, only   these  authors  consider electron-phonon  coupling anisotropy
+rather than explicit gap anisotropy.
+
+        As if these weren't already enough  models, there are also theories
+which     consider the  effect   of   multiple    bands     contributing to
+superconductivity.  The most extensive of these was developed by  Entel and
+Peter.\cite{entel76} A two-band model  fit by Entel and  Peter to  data  on
+Cs$_{0.1}$WO$_{2.9}$F$_{0.1}$,  a tungsten  fluoroxide  bronze,  is shown  in
+Fig.~\ref{entelfit}.    Decroux and   Fischer   advocate   the use  of  the
+Entel-Peter  model   for fits       to  ternary  molybdenum    chalcogenide
+data.\cite{decroux82}  The main  parameters  which   determine the critical
+field enhancement in this theory are the interband and intraband scattering
+times.   Al-Jishi\cite{M143}  has proposed a  theory quite similar to Entel
+and Peter's, but his critical field calculations are still in a preliminary
+phase.   In GIC terms, these   models  propose  that  intercalant  and
+graphitic bands   both contribute  to  superconductivity.   This   idea was
+originally suggested by Al-Jishi,\cite{M143} and  it is supported by a large
+amount of experimental evidence, as is described in Section~\ref{csbidisc}.
+
+\begin{figure}
+\vspace{5in}
+% Fig. 2 of entel77
+\caption[Two-band model fit to anomalous $\rm H_{c2}(t)$ of
+Cs$_{0.1}$WO$_{2.9}$F$_{0.1}$.]{Two-band  model  fit   to  anomalous   $\rm
+H_{c2}(t)$ of Cs$_{0.1}$WO$_{2.9}$F$_{0.1}$  from  Ref.~\cite{entel77}. The
+plot    is of  $\rm   h^*$  versus t.    The   curve labeled   (4)  is  the
+Helfand-Werthamer  isotropic theory.  The crosses,  circles and squares are
+experimental data  for three  different crystallographic  orientations (the
+orientations are not specified).   Curve (1) is the  two-band model with no
+interband-scattering,  whereas  (2)   and   (3) correspond  to   increasing
+interband-scattering.   The parameters of  these  fits  are too numerous to
+list here, but may be found in Ref.~\cite{entel77}.}
+\label{entelfit}
+\end{figure}
+
+        The profusion of models which  predict an enhanced  $\rm H_{c2}(T)$
+is quite confusing,  especially  since both the multiband  and  anisotropic
+gap/FS theories seem  to have features  which are very  sensible for GIC's.
+Prohammer and Schachinger say in  their recent paper\cite{prohammer87}  that
+the   Entel-Peter model  and the  anisotropic gap/FS   models are  actually
+equivalent, really amounting to different   parameterizations of  the  same
+phenomena.    Considering  the   similarities    of    the   curves      in
+Figs.~\ref{nbse2fit} and \ref{entelfit}, this is not too surprising.  
+
+        The question of whether these models  will explain the anomalies in
+GIC  $\rm H_{c2}(T)$  data, ranging  from  the extended linearity  of  $\rm
+C_4KHg$ to  the  positive  curvature of $\rm  C_8RbHg$, still  has not been
+directly addressed.  Clearly  all of the multiband and   anisotropic gap/FS
+theories  are capable of   producing  curves of the  right  shape, but this
+doesn't mean that they would  give good  fits to  the data using reasonable
+FS/gap parameters.  Unfortunately,  no complete  theoretical Fermi  surface
+computation  for the ternary GIC's is   available, and  there  is only
+limited   knowledge  about    the   normal-state    transport   properties.
+Holzwarth\cite{holzwarth88} has  calculated  the   band structure  of  $\rm
+C_4KHg$,  but published  only  a qualitative sketch  of the  Fermi surface.
+This sketch  is reproduced in  Fig.~\ref{holzfs}.   If Holzwarth  publishes
+quantitative information about the FS of $\rm C_4KHg$, or,  even better, FS
+information for  $\rm C_8RbHg$, then a  fit could be made  to  the critical
+field data.  Obviously this hypothetical fit would be the decisive  test of
+the applicability of these models.
+
+\begin{figure}
+\vspace{5in}
+\caption[Fermi surface com\-pu\-ted for $\rm C_4KHg$ by Holz\-warth and
+col\-leagues.]{Fermi  surface  com\-pu\-ted  for $\rm  C_4KHg$  by  Holz\-warth and
+colleagues.\cite{holzwarth88} The  basic structure of  the Fermi surface is
+similar to that of NbSe$_2$\cite{dalrymple84}  in  that both have pieces of
+nearly  cylindrical symmetry at the  corner of  a hexagonal Brillouin zone,
+and both have higher masses for transport along $\rm k_z$ than in the layer
+planes.   The  hexagonal solid line   is   the Brillouin zone;  the roughly
+triangular pieces drawn with a solid line at the  corners of the BZ are the
+graphitic $\pi$ bands.    The pieces  drawn with a  dotted line  are due  to
+mercury bands.  The small circular zone-center part is from  Hg 6$s$ holes;
+the  hexagonal  portion  is  from  Hg 6$p\pi$   electron carriers; and  the
+trigonal pieces at the zone corner are derived from H 6$p\sigma$ bands.}
+\label{holzfs}
+\end{figure}
+
+        Lamentably an attempt to invert the critical  field data to predict
+the geometry  of the Fermi  surface is not justified  by the critical field
+data  which  is available.  In principle  at  least, if $\rm H_{c2}(T)$ had
+been measured at a large number of angles $\theta$, this inversion could be
+performed.  
+
+        What conclusions can  be drawn  about  the appropriateness  of  the
+anisotropic gap/FS or multiband models for  GIC's in the  absence of a fit?
+On  the plus side, these  models contain features  compatible  with what is
+already  known about GIC's: GIC's  have highly anisotropic  Fermi surfaces;
+they are more disordered along the c-axis than in-plane; they have multiple
+bands present at the Fermi surface; and their  $\rm h^*(t)$ curves are much
+like those  of the transition metal dichalcogenides  for whom most  of  the
+models  were intended.   Therefore the  tentative  conclusion is  that  GIC
+superconductivity is  described by  one  of these  theories,   although for
+positive confirmation, fits to the data are still needed.
+
+
+
+

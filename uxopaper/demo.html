@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for NetBSD (vers 1st March 2002), see www.w3.org" />
+    <title>
+      DEMONSTRATION SYSTEM DESIGN
+    </title>
+    <meta name="description" content=
+    " DEMONSTRATION SYSTEM DESIGN" />
+    <meta name="keywords" content="uxo" />
+    <meta name="resource-type" content="document" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=utf-8" />
+    <meta name="GENERATOR" content=
+    "GnuEmacs/19.34 [en] (X11; I; NetBSD 1.2G i386) [emacs]" />
+    <link rev="made" href="mailto:alison@exerciseforthereader.org" />
+    <!--    $Id: demo.html,v 1.6 2005/10/23 04:28:12 alison Exp $  -->
+    <link rel="stylesheet" href="/alison/pt_style.css" type="text/css" />
+    <link rel="up" href="index.html" />
+    <link rel="start" href="/" />
+    <link rel="icon" href="/alison/fermi-16.png" type="image/png"/>
+    <link rel="next" href="results.html" />
+    <link rel="up" href="index.html" />
+    <link rel="previous" href="gmr.html" />
+  </head>
+  <body>
+    <br />
+     
+    <hr />
+    <a id="tex2html43" name="tex2html43" href="results.html"><img
+    width="37" height="24" align="bottom" alt="next" src=
+    "/icons1//next_motif.png" /></a> <a id="tex2html41" name=
+    "tex2html41" href="index.html"><img width="26" height="24"
+    align="bottom" alt="up" src="/icons1//up_motif.png" /></a> <a
+    id="tex2html35" name="tex2html35" href="gmr.html"><img width=
+    "63" height="24" align="bottom" alt="previous" src=
+    "/icons1//previous_motif.png" /></a> <br />
+     <strong>Next:</strong> <a id="tex2html44" name="tex2html44"
+    href="results.html">RESULTS</a> <strong>Up:</strong> <a id=
+    "tex2html42" name="tex2html42" href="index.html">Title Page</a>
+    <strong>Previous:</strong> <a id="tex2html36" name="tex2html36"
+    href="gmr.html">Physics of the GMR</a> <a id="tex2html5" name=
+    "tex2html5" href="figures.html"><strong>Figures</strong></a> <a
+    id="tex2html5" name="tex2html5" href=
+    "references.html"><strong>References</strong></a> <br />
+     
+    <hr />
+    <h1>
+      <a id="SECTION00020000000000000000" name=
+      "SECTION00020000000000000000">DEMONSTRATION SYSTEM DESIGN</a>
+    </h1>
+    <p>
+      Nonvolatile Electronics' NVS5B15 sensors were employed for
+      this project.[NVE, 1994] NVE is at present the only
+      commercial vendor of GMR sensors, although other electronics
+      companies (for example, Honeywell and Motorola) are expected
+      to offer GMR products in the next few years. GMR sensors
+      detect a single vector component of an applied field, like
+      Hall generators or pulsed inductive detectors, so three
+      orthogonal sensors banks will be necessary for full 3D
+      imaging capability. A single 2D array of sensors was selected
+      for this demonstration where alternate sensors have
+      orthogonal axes of sensitivity. The checkerboard layout of
+      the 5x5 array of sensors is illustrated in <a href=
+      "fig2.html">Figure 2</a>. In order to simplify interpretation
+      of the magnetic images at the end of the report, the outputs
+      from the sensors with vertical and horizontal axes of
+      sensitivity are displayed separately, as illustrated on the
+      right side of the drawing. The performance of the 5x5 sensor
+      array has been compared with a 3x3 array (not shown) where
+      all the elements have the same vertical axis of sensitivity.
+      The 3x3 array uses the same printed circuit board layout as
+      the 5x5 so that the effect of varying the sensor spacing by a
+      factor of two could be determined.
+    </p>
+    <p>
+      A schematic of the imaging system is shown in <a href=
+      "fig3.html">Figure 3</a>. The sensor arrays were interfaced
+      with an electronics chassis that contained a 15V and 5V power
+      supply. The outputs of the sensors were connected to a
+      National Instruments 64-channel data acquisition card which
+      was installed in a Pentium PC. National Instruments' LabView
+      software was used to acquire the images that follow. The
+      images are unprocessed beyond resizing and adjustment of the
+      grayscale for printability. Since there are only 25 sensors
+      per image, the data files are only 400 bytes (25 sensors x 16
+      bits per sensor) in size. Each image is an average of 1000
+      readouts of the full array during a 10-second period
+      (acquisition rate = 100 Hz), although there is no reason that
+      data could not be acquired much more rapidly (10-100 kHz).
+      1000 readouts of the array was decidedly overkill; images
+      were not degraded by the averaging of smaller data sets.
+    </p>
+    <p>
+      A variety of ferrous objects were imaged. These included
+      tools, bolts, nails, rebar and permanent magnets. All objects
+      were imaged in their remanent magnetic state (i.e., no
+      external applied field) except where otherwise specifically
+      noted. Before an image was acquired, the no-object output of
+      all the sensors was obtained using the PC. This background
+      signal represents a combination of offsets in the sensors,
+      the sensors' response to the earth's field (no magnetic
+      shielding was used) and their response to magnetic objects in
+      the laboratory where the data was acquired, e.g. rebar in the
+      floor. This background signal was saved to a file and then
+      subtracted from subsequent data. Objects to be imaged were
+      placed typically 1.5 cm above the sensor array on a lexan
+      stand. The falloff of the signal from the array with
+      separation was studied by stacking firebricks between the
+      array and the ferrous object. Larger objects such as rebar
+      could be detected at a meter separation (signal:background
+      ratio of 2:1) although there was no real image at that
+      separation with the 12cm-square array used for this
+      demonstration.
+    </p>
+    <p>
+      <br />
+    </p>
+    <hr />
+    <a id="tex2html43" name="tex2html43" href="results.html"><img
+    width="37" height="24" align="bottom" alt="next" src=
+    "/icons1//next_motif.png" /></a> <a id="tex2html41" name=
+    "tex2html41" href="index.html"><img width="26" height="24"
+    align="bottom" alt="up" src="/icons1//up_motif.png" /></a> <a
+    id="tex2html35" name="tex2html35" href="gmr.html"><img width=
+    "63" height="24" align="bottom" alt="previous" src=
+    "/icons1//previous_motif.png" /></a> <br />
+     <strong>Next:</strong> <a id="tex2html44" name="tex2html44"
+    href="results.html">RESULTS</a> <strong>Up:</strong> <a id=
+    "tex2html42" name="tex2html42" href="index.html">Title Page</a>
+    <strong>Previous:</strong> <a id="tex2html36" name="tex2html36"
+    href="gmr.html">Physics of the GMR</a> <a id="tex2html5" name=
+    "tex2html5" href="figures.html"><strong>Figures</strong></a> <a
+    id="tex2html5" name="tex2html5" href=
+    "references.html"><strong>References</strong></a> <br />
+     
+    <hr />
+    <address>
+      <em><a href="mailto:alison">Send email</a> for more
+      info.<br />
+       Tue May 27 16:39:19 PDT 1997</em>
+    </address>
+  </body>
+</html>
+

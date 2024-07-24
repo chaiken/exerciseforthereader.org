@@ -1,0 +1,50 @@
+###############################################################################
+##									     ##
+##	File:     fits.list						     ##
+##	Author:   Alison Chaiken					     ##
+##	Created:  Wed Sep  7 16:52:30 EDT 1988				     ##
+##	Contents: List of best fits with various theories for C_4KHg 8b      ##
+##									     ##
+##	Copyright (c) 1988 Alison Chaiken.				     ##
+##	All rights reserved.						     ##
+##									     ##
+##	$Log$								     ##
+###############################################################################
+
+For C_4KHg 8b
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  t  		plain LD		LD with H_c	TF with H_c
+-----		--------		-----------	-----------
+0.29		ldh47a9.5.out 		ldfit.37	  tinkfit.5
+
+0.57		ldfit.06		ldfit.9.medt	  tinkfit.7
+
+0.76		ldh23.1a4.5.out		ldfit.9		  tink.3
+
+		in thetatemp.tex	in hctemp.tex	in tinktemp.tex
+
+
+  t		data file		TF, no H_c
+----		---------		-----------
+0.29		lotang.8b.strip		tinkh50a9.5.out
+
+0.57		folded.8b.strip		tinkh33a7.out
+
+0.76		hitang.8b.strip		tinkh17.5a8.2.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+For C_4KHg 7a
+
+  t  		plain LD		LD with H_c	TF with H_c
+-----		--------		-----------	-----------
+0.29		ldfit.2a		ldfit.12	tink.7
+
+0.76		ldfit.13		ldfit.25	tink.4
+
+
+  t  		datafile	plain TF
+-----		--------	--------
+0.29		lotang.7a	tinkh46a10.2.out
+
+0.76		hitang.7a	tink.0
+

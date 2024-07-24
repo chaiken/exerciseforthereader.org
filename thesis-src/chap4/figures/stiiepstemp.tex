@@ -1,0 +1,38 @@
+\documentstyle[12pt]{report}
+\headheight 8pt
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{stiiepstemp}
+\beginpicture
+\setcoordinatesystem units <0.8333mm,3.2mm> 
+\setplotarea x from 0 to 120, y from 0 to 25
+\axis bottom label {$\theta$} ticks 
+ numbered from 0 to 120 by 15
+ unlabeled short quantity 25 /
+\axis left label {$\rm H_{c2}(\theta)/ H_{c2}(0^{\circ})$} ticks
+ numbered from 0 to 25 by 5
+ unlabeled quantity 11 /
+\put {$\rm H \perp \hat{c}$} at 90 2.5
+%\multiput {$\bullet$} at /users/alison/angdata/stII/iye/hitang.iye.scaled
+\multiput {$\bullet$} at "hitang.iye.scaled"
+%\multiput {$\times$} at /users/alison/angdata/stII/iye/lotang.iye.scaled
+\multiput {$\times$} at "lotang.iye.scaled"
+%\multiput {$\circ$} at /users/alison/angdata/stII/iye/hitang.fit.scaled
+\multiput {$\circ$} at "hitang.fit.scaled"
+%\multiput {$\diamond$} at /users/alison/angdata/stII/iye/lotang.fit.scaled
+\multiput {$\diamond$} at "lotang.fit.scaled"
+\endpicture
+\caption[Temperature-dependent anisotropy in $\rm
+C_8KHg$.]{Temperature-dependent anisotropy in  $\rm C_8KHg$ is demonstrated
+by a plot  of $\rm H_{c2}(\theta)/H_{c2}(0^{\circ})$  versus $\theta$, just
+as    in   Fig.~\ref{epstemp}.       All data  from       Iye   and Tanuma,
+Ref.~\cite{tanuma81} on a $\rm T_c$ = 1.94 K sample.  ($\times$), data at t
+= 0.23.  Fit, ($\circ$), with 1/$\epsilon$ = 17.6 and $\cal R$ = 6.8e-3.
+($\bullet$), data at t = 0.81.  ($\diamond$), fit with 1/$\epsilon$ = 21.6 and
+$\cal R$ = 5.3e-3.}
+\end{figure}
+\end{document}

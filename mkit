@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for file in $*
+do
+  latex2html -external_up_link "../physpapers.html" -external_up_title \
+	"A. Chaiken Papers" $file.tex
+done
+

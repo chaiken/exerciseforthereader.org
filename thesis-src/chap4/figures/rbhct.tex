@@ -1,0 +1,37 @@
+\documentstyle[12pt]{report}
+\headheight 8pt
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{rbhct}
+\beginpicture
+\setcoordinatesystem units <66.6667mm,0.02666mm>
+\setplotarea x from 0 to 1.5, y from 0 to 3000
+\axis bottom label {T (K)} ticks 
+	numbered from 0 to 1.5 by 0.5 
+        unlabeled short quantity 7 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+ numbered from 0 to 3000 by 500
+ unlabeled short quantity 13 /
+\put {$\rm H \perp \hat{c}$} at 0.25 2000
+\put {$\rm H \parallel \hat{c}$} at 0.25 250
+%\multiput {$\circ$} at /users/alison/hctdata/stII/iyec8rbhg.per
+\multiput {$\circ$} at "iyec8rbhg.per"
+%\multiput {$\bullet$} at /users/alison/hctdata/stII/iyec8rbhg.par
+\multiput {$\bullet$} at "iyec8rbhg.par"
+\multiput {.} at "ltheorc8rbhg.per"
+\multiput {.} at "ltheorc8rbhg.par"
+\endpicture
+\caption[Positive curvature of $\rm H_{c2}(T)$  in $\rm C_8RbHg$.]{Positive
+curvature of $\rm H_{c2}(T)$ in $\rm C_8RbHg$.   Data is taken from Iye and
+Tanuma,  Ref.~\cite{iye82}.  ($\circ$),     $\rm   H_{c2, \perp  \hat{c}}$.
+($\bullet$),   $\rm H_{c2, \parallel  \hat{c}}$.   Parameters for the  line
+fits: for $\rm \vec{H} \perp \hat{c}$, $\rm H_{c2}(0)$ =  3078 g, $\rm T_c$
+= 1.36 K, and $\cal R$ =  0.56; for $\rm  \vec{H}  \parallel \hat{c}$, $\rm
+H_{c2}(0)$ = 89.0 g, $\rm T_c$ = 1.37 K, and $\cal R$ = 3.02e-2.
+Zero-field $\rm T_c$ for this sample was 1.4 K.\cite{iye82}}
+\end{figure}
+\end{document}

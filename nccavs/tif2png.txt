@@ -1,0 +1,2 @@
+tifftopnm ebic.tif | pnmtopng > ebic.png
+remove pnm file

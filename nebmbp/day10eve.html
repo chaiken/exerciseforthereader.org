@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for NetBSD (vers 1st March 2002), see www.w3.org" />
+<title>Day 10 Evening</title>
+    <meta name="description" content=
+    "Alison Chaiken's home page" />
+    <meta name="keywords" content=
+    "molecular biology, hybridization, cloning, vector, PCR, DNA,
+    fingerprinting, RNA, mRNA, cDNA, primer, polymerase, E. coli,
+    operon, promoter, plasmid, gel, electrophoresis, southern blot,
+    yokazaki, Eco R1, restriction enzyme, intron, exon, siRNA, gene
+    expression, array, 5' UTR, poly-A tail, tRNA, translation, transcription" />
+    <meta name="resource-type" content="document" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=utf-8" />
+    <meta name="GENERATOR" content=
+    "GnuEmacs/19.34 [en] (X11; I; NetBSD 1.2G i386) [emacs]" />
+    <link rev="made" href=
+    "mailto:alchaiken@gmail.com" />
+    <link rel="start" href="/" />
+    <link rel="icon" href="/fermi-16.png" type=
+    "image/png" />
+    <link rel="stylesheet" href="/pt_style.css" type="text/css" />
+    <!--    $Id: index.html,v 1.25 2005/10/22 20:58:32 alison Exp $  -->
+    <link rel="up" href="../" />
+    <link rel="next" href="coolstuff.html" />
+    <link rel="up" href="/" />
+<!--    $Id: day10eve.html,v 1.2 2004/07/04 06:05:35 alison Exp $  -->
+</head>
+<body>
+<a href="index.html">Up</a>
+<a href="day10pm.html">Previous</a>
+<a href="day11am.html">Next</a>
+
+<h2><p align="center">Day 10 Evening Lecture Notes</p></h2> <h3><p
+align="center"> Steve Williams, Smith College</p></h3><h3><p
+align="center">June 15, 2004</p></h3>
+
+<p>Given 600-800 bp sequences from a single gel, how do we perform
+additional reassembly?  We need appropriate primers to generate many
+overlapping sequences.
+</p>
+
+<h3>Obtaining sequencing primers</h3>
+
+<ul>
+
+<li>Clone into vector.
+</li>
+
+<li>PCR primers
+</li>
+
+<p>Note that restriction digests cannot be reassembled because they
+have no overlaps.  This problem can be overcome by using more than one
+restriction enzyme on the original uncut DNA.  With luck, all
+junctions will be crossed by sequences in the other digest.  The
+enzymes used should have short recognition sequences so as to get many
+small fragments in the digest.  There are special kits which allow the
+production of large (up to 30 kbp) PCR products to fill in gaps in a
+sequence by making primers from segments that were already sequenced.
+</p>
+
+<li>Primer walking.
+</li>
+
+<p>Primers are only about $1/bp.  The first primer can always be made
+from the end of the vector cloning site; then make the second primer
+from the first sequence, the third primer from the second sequence,
+etc.  To overcome accuracy problems in areas with compressions, it's
+customary to sequence both strands as a check.  Most genome projects
+use 7x oversampling.  Note that the new primers determined from the
+previous sequence are the same as the sequence, not the complement.
+</p>
+
+<p>The problem with walking is that it's inherently serial and
+therefore slow.  Note that designing both forward and reverse primers
+at the same time will give about a factor of 2 speed-up.
+</p>
+
+<li>Random shearing.
+</li>
+
+<ul>
+<li>via syringe;</li>
+<li>via vortexing;</li>
+<li>via an asthma nebulizer.</li>
+</ul>
+
+<p>Randomly sheared DNA can be blunt-cloned into a vector and used
+with vector primers.  Randomly sheared DNA can be hard to reassemble
+if there are repeated sequences so that more than one solution exists.
+</p>
+
+<li>Detection subcloning.</li>
+
+<p>Use nucleases to move the vector primer site through the insert in
+steps via a kit from a company like Exo-Size.
+</p>
+
+<li>Transposon subcloning.</li>
+
+<p>Use transposases to randomly pop primers into an interesting
+sequence at different places.  Only works because there will be only
+transposition per vector.
+</p>
+
+</ul>
+
+<p>STRs are very hard to sequence as primers will find multiple
+binding sites.  Centromeres, telomeres and LINE1 all have this
+problem.  Two LINE1 repeats are typically about 90% the same.  Should
+this expensive sequencing even be performed?
+</p>
+
+<p>cDNA library sequences are often put into databases after 1 pass of
+sequencing and are often unreliable.  For new sequences GenBank will
+require sequencing of both strands.
+</p>
+
+<p>Primers shouldn't be designed to hybridize to the very end of an
+unknown sequence because the data quality there is always very poor.
+</p>
+
+<p>Most sequence nowadays are run with thermal cycling, bases
+analogues and denaturing gels, all the tricks at once.  Some companies
+now will even prepare a sequence from a colony on a gel without any
+further preparation by the researcher.  Such facilities usually ask to
+see a quantitation gel photo first.  A general rule in molecular
+biology is to perform lots of controls and checks all the time as
+doing so saves effort in the long run.
+</p>
+
+<h3>Discussion with Barton Slatko about the <a
+href="http://www.sciencemag.org/cgi/content/abstract/304/5667/66?maxtoshow=&HITS=10&hits=10&RESULTFORMAT=&author1=Venter&titleabstract=Sargasso&searchid=1088891814336_994&stored_search=&FIRSTINDEX=0&fdate=10/1/2003&tdate=7/31/2004">Sargasso
+Sea experiment</a></h3>
+
+<p>How did Venter's group obtain a species count from such a mishmash
+of DNA fragments from so many species?   By analyzing ribosomal DNA
+sequences that are highly conserved over evolution but slightly
+different from species to species.   Primer design and reassembly are
+therefore relatively straightforward for these species.    From the
+ribosomal sequences some further walking backward and forward on the
+genomes could be done, but sequencing the whole genomes of the
+organisms was not the point.
+</p>
+
+<p>Molecular biological ecosystem surveys are becoming more
+common. Some companies like Diversa specialize in looking for new
+restriction enzymes in the field.  People are trampling all over
+Yellowstone and the Antarctic looking for new extremophiles.  A
+colleague of Bart's sequenced his own septic system and found two new
+restriction enzymes.
+</p>
+
+
+<a href="index.html">Up</a>
+<a href="day10pm.html">Previous</a>
+<a href="day11am.html">Next</a>
+
+
+</body>
+</html>

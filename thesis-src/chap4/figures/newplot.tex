@@ -1,0 +1,63 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{hc2theta}
+\beginpicture
+%Figure~\ref{hc2theta}b
+\setcoordinatesystem units <0.8333mm,0.1333mm>
+\setplotarea x from 0 to 120, y from 0 to 600
+\axis bottom label {$\theta$} ticks 
+	numbered from 0 to 120 by 15
+	unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+	numbered from 0 to 600 by 100
+	unlabeled short quantity 13 /
+\put {b)} at 20 500
+\put {$\rm H \perp \hat{c}$} at 90 50
+%\multiput {$\circ$} at "/users/alison/angdata/stI/7a/tangent/lowt/lotang.7a.strip"
+\multiput {$\circ$} at "lotang.7a.strip"
+%\multiput {$\circ$} at 2.000000 60.513054 %/users/alison/angdata/C_4KHg/8b/lowt/lotang.8b.strip
+\multiput {$\bullet$} at "lotang.8b.strip"
+%\multiput {.} at 0.0 42.20 %/users/alison/angdata/C_4KHg/8b/lowt/ldfit.9
+\multiput {.} at "ldfit.9"
+%\multiput {.} at "/users/alison/angdata/stI/7a/tangent/lowt/ldfit.2"
+\multiput {.} at "ldfit.2"
+%Figure~\ref{hc2theta}a
+\setcoordinatesystem units <0.8333mm,0.1333mm> point at 0 -750
+\setplotarea x from 0 to 120, y from 0 to 600
+\axis bottom label {$\theta$} ticks 
+	numbered from 0 to 120 by 15
+	unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+	numbered from 0 to 600 by 100
+	unlabeled short quantity 13 /
+\put {a)} at 20 500
+\put {$\rm H \perp \hat{c}$} at 90 50
+%\multiput {$\circ$} at "/users/alison/angdata/stI/13c/lotang.13c.strip"
+\multiput {$\circ$} at "lotang.13c.strip"
+%\multiput {$\bullet$} at "/users/alison/angdata/stI/iye/lotang.iye.strip"
+\multiput {$\bullet$} at "lotang.iye.strip"
+%\multiput {$\circ$} at "/users/alison/angdata/stI/13c/ldh24a10.out"
+\multiput {.} at "ldh24a10.out"
+%\multiput {$\circ$} at "/users/alison/angdata/stI/iye/ldh26a11.3.out"
+\multiput {.} at "ldh26a11.3.out"
+\endpicture
+%\caption[Critical field $\rm H_{c2}$ as a function of the angle
+%$\theta$ $\rm C_4KHg$.]{Critical field $\rm H_{c2}$  as  a  function of the
+%angle $\theta$ for $\rm C_4KHg$.  Fits (dotted lines) were calculated using
+%Equation~\ref{ldtheor}.  a) Data for a $\rm C_4KHg$ with $\rm T_c$ = 0.95 K
+%($\bigcirc$) and  also for a  $\rm T_c$ =  0.73   K sample ($\bullet$) from
+%Ref.~\cite{tanuma81}. For $\rm T_c$ =  0.95  K sample, $1/\epsilon$ =  10.0
+%and $\rm H_{c2}(0^{\circ})$  = 24 g with  a residual $\cal R$  = 0.24.  For
+%data of Ref.~\cite{tanuma81}, $1/\epsilon$  = 11.3, $\rm H_{c2}(0^{\circ})$
+%= 26 g, and $\cal R$ = 0.0788.  b) Data  for two  $\rm C_4KHg$ samples with
+%$\rm  T_c  \, \approx$ 1.5 K.    $\bigcirc$,  $\rm   T_c$  =   1.53  K with
+%$1/\epsilon$ = 10.2,  $\rm H_{c2}(0^{\circ})$ = 48 g,  and $\cal R$ = 0.71;
+%$\bullet$,  $\rm    T_c$   = 1.54  K   with    $1/\epsilon$   =  14,   $\rm
+%H_{c2}(0^{\circ})$ = 50 gauss, and $\cal R$ = 2.18.}
+\end{figure}
+\end{document}

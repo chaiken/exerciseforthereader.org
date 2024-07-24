@@ -1,0 +1,52 @@
+"The Second PC Revolution: the Mobile Phone"
+Michael Rayfield
+General Manager, NVidia Mobile Business Unit
+
+http://www.ewh.ieee.org/r6/scv/ce/meetings/meeting_detials.htm
+
+The first half of the talk was a complete snore (smartphones sales are
+increasing, iPhone is a landmark product, etc.), but the second half
+was more informative.
+
+Increasingly mobile apps are media-centric.  Larger screen size has
+driven demand for more processor power in the mobile space.  Market
+leaders in the mobile processor arena like T.I. (Omap) and Qualcomm
+have focussed on the modem, as simple connectivity used to be a hard
+problem.    These vendors have not adapted their outlook or products
+to the new reality.    That's why NVidia has an opportunity to tailor
+their GPUs to mobile and capture significant market share.
+
+NVidia's new Tegra processor is an ARM11 implementation whose standby
+power is much less than 1 W.    Tegra is fully featured, including a
+Touch UI, HDMI output, USB 2.0 support, 1600x1000 display support,
+NAND and DDR interfaces, and a host of other features that you'd
+expect.    The emphasis in the product, though, has been on 
+lightning-fast, low-power codecs implemented in pipelined hardware.
+In a demo, Rayfield show a gutted netbook with a Tegra processor
+running 1080p video at 1.3 W.    Hardware transcoding is supported for
+HD as well as for audio.
+
+The Tegra will play 10 hours of 720p HD video on a standard 140 mA-hr
+battery.   When used for lower-power apps like telephony, photograph
+viewing, etc., a handset that incorporates Tegra should run for days.
+
+NVidia envisions that a diverse group of products will incorporate
+Tegra, as it will be inexpensive.  They anticipate that the full
+universe of music players, netbooks, MIDs and phones can be Tegra
+devices.   The initial bricks included in the demo are running Windows
+CE [!], but NVidia has also ported Android, etc. to the Tegra
+platform.
+
+The secret to the great power-versus-performance that Tegra has is
+memory pipelining.  Through years of experience with high-performance
+video, NVidia knows more about getting bits in and out of memory than
+anyone else.  In contrast, the Qualcomm and TI processors really
+thrash memory when performing media-related tasks.  The Intel Atom
+processor is even worse, which is why the netbooks shipping now have
+such poor battery life.  Tegra uses much less power when displaying HD
+than the Atom in most netbooks uses on stand-by.  Tegra streaming 780p
+has a 2-3x power advantage over comparable TI and Qualcomm products.
+A second reason is that optimized hardware codecs are far more
+efficient than software ones.  The power advantage persists for
+customer-generated video and audio.
+

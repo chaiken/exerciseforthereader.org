@@ -1,0 +1,9 @@
+list of things to be explained:
+DONE: sample mounting and preparation of sample for experiment 
+basic description of cryogenic system
+DONE: inductance bridge and associated electronics
+DONE: thermometry
+DONE: magnet and calibration
+obtaining the data
+extracting hc2 from the raw data
+

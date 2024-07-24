@@ -1,0 +1,31 @@
+\documentstyle[12pt]{report}
+%\includeonly{chap6/chapter6}
+%\nofiles
+%\typein{Enter \string\includeonly{...}\space to TeX only some sections.}
+\begin{document}
+%\bibliographystyle{aip}
+\bibliographystyle{plain}
+\pagenumbering{arabic}
+% \include{titlepage}
+\include{abstract}
+\include{acknowledge}
+\tableofcontents
+\listoffigures
+\listoftables
+\labelsep 5em
+\input{acro}
+\labelsep 1em
+\baselineskip 18pt
+\include{chap1/chapter1} %intro
+\include{chap2/chapter2} %anisotropic superconductivity 
+\include{chap3/chapter3} %sample prep
+\include{chap4/chapter4} %critf
+\include{chap5/chapter5} %hydrogenation
+\include{chap6/chapter6} %csbi studies
+\include{chap7/chapter7} %conclusions
+\include{app/appendix} %program listings and formula derivations
+\baselineskip 12pt
+% \bibliography{/usr/local/bin/gic,/usr/local/bin/mgm,/usr/local/bin/hitc,thesisref}
+\bibliography{thesisref,/u/local/lib/texmf/bibtex/mgmbib/gic,/u/local/lib/texmf/bibtex/mgmbib/mgm,/u/local/lib/texmf/bibtex/mgmbib/hitc}
+
+\end{document}

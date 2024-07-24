@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="GNU Emacs 23.2.1 (x86_64-redhat-linux-gnu, GTK+ Version 2.20.1) of 2010-05-13 on x86-07.phx2.fedoraproject.org"/>
+<meta name="keywords" content="linux kernel meego maemo Nokia Intel
+				firmware driver medical implant FDA
+				power cpu_idle ACPI AMD BIOS patent
+				copyright GPL"/>
+<link rel="stylesheet" href="chaiken.css" type="text/css"/>
+<title>LinuxCon Notes August 12, 2010</title>
+</head>
+<body>
+<h1>Day 2 Notes, LinuxCon 2010</h1>
+
+<h2>Wednesday August 12, 2010<br/>Boston, MA</h2>
+
+Prepared by <a href="mailto:alchaiken@gmail.com">Alison Chaiken.</a>
+offered under <a href=" http://creativecommons.org/licenses/by-sa/3.0/">cc-by-sa</a>
+
+
+
+<h3>"MeeGo: Where are We Now"</h3>
+Dawn Foster, MeeGo Community Manager<br/>
+Intel Corporation<br/>
+
+<p>
+Foster described the merger of the Maemo and Moblin projects into
+MeeGo as a logical joining of efforts with similar objectives.  Foster
+explained that MeeGo will feature netbook, handset and in-vehicle
+infotainment (IVI) "user experiences" plus others that haven't been
+considered yet.  Central to all the UE is a common core of code that
+is the heart of MeeGo.  The intention is that developers can use the
+core to create applications and then easily deploy to all the UEs.
+Porting apps from the Linux desktop is also intended to be
+straightforward since MeeGo is rather straightforward GNU/Linux,
+unlike (for example) Android.  The netbook UE is already available for
+download and the "in-vehicle infotainment" one has just been
+published.  While MeeGo can be installed on Nokia N900 handsets, the
+combination is considered rather experimental.  MeeGo-based handsets
+should be shipping by Christmas.</p>
+
+<p>Foster showed a rather impressive demo of MeeGo on a Toshiba
+Atom-powered netbook.  MeeGo is pretty and appears to be both stable
+and snappy.  The boot time of the Toshiba netbook to the MeeGo desktop
+was fairly impressive -- maybe about 10 seconds from power-on.  The
+home screen is arranged as a window with tabs representing different
+kinds of activities, and navigation is intuitive.  At one point, about
+a dozen error messages popped up about WiFi dropping.  The dropped
+network is hardly surprising in the context of a technical conference,
+but the profusion of duplicative messages was more concerning.
+MeeGo is a bit cute for hard-core Linux users but may well appeal to
+people who want to use a web browser and answer email.    It's a shame
+that MeeGo did not arrive in time to ride the wave of netbook sales
+growth that occurred a couple of years ago.   Watching Foster's
+netbook-based demo, I'm curious to see how usable the handset "user
+experience" will be.</p>
+
+<h3>"Freedom to Innovate: Can MeeGo's Openness Change the Mobile
+Industry?"</h3>
+Tom Miller, Nokia<br/>
+Dean Speed, Intel<br/>
+
+<p>Intel's AppUp store is for libraries and other middleware as well as
+full-blown applications.    OEMs can rebrand AppUp and host on Intel's
+platform if they wish.    Nokia's Ovi website is more of a traditional
+app store.</p>
+
+<p>The Qt project is now hosted on gitorious and is fully open source.  A
+port of Qt to Android is underway.</p>
+
+<p>An audience member asked about the situation with DRMed media content
+on media and Miller answered that music buyers would not be restricted
+to Nokia's music store.  Clearly the questioner was hoping to get a
+higher-level answer about the situation with proprietary codecs on
+MeeGo.</p>
+
+<p>An audience member asked if other CPU vendors and handset
+manufacturers can now ship MeeGo.   The two representatives agreed
+that there were no barriers to other vendors competing on MeeGo.   A
+follow-up question about locking of MeeGo devices was not answered,
+implying that at least some of them will in fact be locked.</p>
+
+
+<h3>"Open Development of Medical Devices"</h3>
+Karen Sandler, Software Freedom Law Center
+
+<p>The fact that the firmware of medical devices is not only secret but
+untested by the FDA is appalling.    The case of voting systems has
+illustrated how important the openness of societally critical software
+is.    FDA has no staff with expertise to evaluate firmware and has
+promulgated no standards with regard to it.   Furthermore, FDA
+jurisdiction effectively means that patients who are injured by
+defective but approved devices are severely constrained in their right
+to sue.   Before getting her own medical implant, Sandler carefully
+considered the firmware safety of the various types of devices before
+making her choice.   To get even the limited information she received,
+Sandler had to contact the manufacturers directly, and even there she
+was largely shut out.</p>
+
+
+<h3>"Saving Energy with the intel_idle cpuidle driver"</h3>
+Len Brown, Intel
+
+<p><a href="http://events.linuxfoundation.org/slides/2010/linuxcon2010_brown.pdf">Slides</a></p>
+
+<p>Brown, following Wysocki and Garrett, presented the third in a series
+of excellent talks about recent power management developments in the
+Linux kernel.  Brown's work has focussed on successive idle states of
+a laptop CPU (C states and P states) as opposed to Wysocki's
+description of mainline's approach to peripheral device power
+management and Garrett's thoughts about handset power states and the
+divergent Android approach.</p>
+
+<p>Power management is an area where Linux has recently been innovative
+and is just plain outperforming Windows.   </p>
+
+<p>C and P states are specified in the ACPI protocol, whose purpose is to
+make Linux work with Windows-intended hardware.  The names of the
+states vary a bit by architecture.  Not all states are supported on
+all architectures.  Poorly designed criteria for entering and leaving
+the states can actually waste power, as the transitions cost energy.
+Getting out of P states (where devices and buses are powered off) is
+more expensive than getting out of C states, where just the processor
+is partially or fully powered down.</p>
+
+<p>Intel's power management software never promotes the system to a
+deeper sleep than is explicitly requested, while AMD's sometimes
+does. </p>
+
+<p>When Brown's improvements to cpu_idle were first complete, the first
+Dell product to ship with the new software had a Windows-motivated
+BIOS bug which prevented the kernel from taking advantage of the new
+features.  The BIOS soon had a patch, but of course very few consumers
+update firmware.  The situation was frustrating to Brown, to say the
+least!</p>
+
+<p>Wysocki's newish PM_QOS allows dynamically loaded drivers to prevent
+sleeps.  BIOS typically forces changes in power state settings up
+transition from mains to battery power.  Using PM_QOS is more flexible
+when control of the transitions can be wrestled away from the BIOS.</p>
+
+<p>cpu_freq for dynamically changing the processor clock has a huge table
+of parameters.    By comparison, intel_idle is relatively simple.
+Users can check dmesg for an mwait statement to see if intel_idle is
+ready to run.</p>
+
+<p>Despite difficulties that lack of control over BIOS presents, coreboot
+project is not a solution, as, according to Brown, it "will never work
+with commercial machines," only with embedded systems.</p>
+
+<p>PCIe has better power-saving potential than PCI.    Apple does an
+excellent job in power-saving on laptops since they control the whole
+stack.   Fedora 13 often doesn't suspend when Brown expects it to;
+he hasn't yet discovered why.</p>
+
+<p>turbostat is a useful diagnostic tool for viewing per-core C states,
+available as part of pmtools on kernel.org.  powertop is a similar
+tool but tends to be buggier.  The goal of cpu_idle is to spend as
+much time in the higher P states (PC3 and PC6) with peripherals turned
+off as possible.</p>
+
+
+<h3>"Doing What it Takes: Current Legal Issues in Defending FOSS"</h3>
+Eben Moglen, Software Freedom Law Center
+
+<p>Moglen believes that Linux is well-established as a viable business
+and argues that it is now clear that commercial and "sharing" models
+of commerce can peacefully coexist.  He emphasized that he personally
+is for capitalism if not of it.</p>
+
+<p>The threat to Linux from copyright attacks is now largely passed.
+Unfortunately, after the Bilski decision, it's clear that software
+patents are with us indefinitely, and they continue to be a threat.</p>
+
+<h3><a href="index.html">Back to Top</a></h3>
+
+</body>
+</html>

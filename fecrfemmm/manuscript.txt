@@ -1,0 +1,225 @@
+MAGNETOTRANSPORT STUDY OF Fe-Cr-Fe SANDWICHES   
+GROWN ON ZnSe(100)
+
+A. Chaiken*, G.A. Prinz, and J.J. Krebs, 
+Code 6345
+Naval Research Laboratory, Washington, DC 20375
+
+PACS numbers: 75.70.-i, 76.50.+g, 75.60.Ej, 72.15.Gd
+
+
+ABSTRACT
+
+Magnetoresistance measurements have been performed on a set of 
+MBE-grown Fe-Cr-Fe sandwiches with different chromium 
+thicknesses,  12 ÅÅÅ < tCr  < 28 Å.  For 13 Å < tCr < 24 Å, magnetization 
+measurements show that the Fe moments are antialigned at zero 
+field.  For samples exhibiting zero-field antialignment, negative 
+magnetoresistance steps are observed at applied fields where 
+discontinuities occur in the magnetization curve.  The size of the 
+magnetoresistance steps increases with increasing antiferromagnetic 
+coupling between the Fe layers.   The  magnetoresistance  (r(H) — 
+r(0))/r(0)  is approximately proportional to cos2(Df/2), where Df ∫ 
+(f1— f2), and f1(H) and f2(H) are the angles that the individual 
+moments of the two  Fe films make with the in-plane easy <100> axis.
+
+
+*NRC-NRL postdoctoral fellow.
+ Work supported by the Office of Naval Research.
+
+
+	Fe-Cr multilayers with very thin Cr layers are unusual because 
+the moments of the Fe layers are antialigned in zero magnetic 
+field.1,2  The suppression of the antiferromagnetic alignment by an 
+applied  field results in a large negative magnetoresistance.3-5 In 
+simple sandwich structures with only two Fe layers,  both the 
+magnetization and the magnetoresistance show well-defined steps in 
+their field dependence.4,5 The large size and sharpness of the 
+magnetoresistive steps  make the Fe-Cr system a promising one for  
+applications. A recent theoretical study calculates the 
+magnetoresistance  as a function  of the electron mean-free path and 
+of  the number of  Fe repeats.6  An alternative approach is to study 
+the transport properties as a function of the Cr layer thickness since 
+the Cr thickness should strongly influence the magnetic coupling 
+between the Fe layers.  An understanding of the relationship 
+between the interlayer coupling and the magnetoresistance will be a 
+necessary element in any fundamental theory.
+
+	In order to study the  Cr-thickness dependence of the magnetic 
+and transport properties, a series of single-crystal bcc Fe-Cr-Fe 
+sandwiches was prepared using molecular beam epitaxy.   Starting 
+with a well-polished GaAs(001) substrate, a ZnSe(001) epilayer about 
+2000 Å thick was grown to achieve a flat surface.  Subsequent single 
+crystal Fe, Cr, and Fe films were grown using a substrate 
+temperature near 20o C and growth conditions similar to those of  
+Baibich et al.3  Cr thicknesses ranged from 7 to 85 Å.  Finally, a 
+polycrystalline ZnSe layer about 1000 Å thick was deposited on the 
+stack for symmetry and for protection against the atmosphere.  
+Details of the sample characterization are reported elsewhere.7   Gold 
+contacts sputtered onto the ZnSe surface show good linearity.     The  
+room-temperature resistivity of the sandwiches is typically 50 µΩ-
+cm, similar in magnitude to previously reported values.3  All 
+measurements reported here were made at room temperature with 
+an excitation current I of 20 µamp applied at 219 Hz along an in-
+plane [110] direction.
+
+	The hard-axis magnetization curve for a sandwich with 13 Å of 
+Cr and a total of 108 Å of Fe  is shown in Fig. 1.   Also shown is a 
+theoretical magnetization curve calculated by minimizing the total 
+energy  of the system as a function of the orientation of the two Fe 
+moments, M1 and M2.   The energy density expression is5
+
+ 			E = (1/2)(E1 + E2) + J cos(f1 -  f2),			(1)
+
+    where	Ei =   K1(a1i2 a2i2 + a2i2 a3i2 + a3i2 a1i2)  
+			+ Ku cos2(fi — p/4)   —  Mi°H				(2)
+
+with aji the direction cosines of Mi, K1 the usual cubic anisotropy,  Ku 
+an in-plane anisotropy which is commonly found in very thin Fe 
+films on GaAs or ZnSe, and fi(H) the azimuthal angle between Mi and 
+the easy [100] direction.    Here J is a phenomenological parameter 
+introduced to describe the antiferromagnetic coupling between the 
+two Fe films. The theoretical magnetization  curve  found from the 
+energy density expression  is in good agreement with the 
+experimental data, as Fig. 1 shows.
+
+	The transverse magnetoresistance (H ^ I) trace of the same tCr 
+= 13 Å sample  is shown in Fig. 2.   For all of the Fe-Cr-Fe samples 
+studied, the steps in the magnetoresistance data  occur at the same 
+applied field as the steps in the magnetization curve.  In order to 
+understand the dependence of the magnetoresistance on the 
+orientation of the Fe moments,  two contributions have to be 
+considered.  First, there is the intrinsic magnetoresistance of the 
+individual Fe layers, which depends on the angle q between the 
+applied field and the current direction.8 Secondly, there is an 
+additional part of the magnetoresistance which is due to the 
+suppression of the antiferromagnetic alignment.    One might  expect 
+this second contribution to the magnetoresistance to be a function of 
+the angle, Df ∫ (f1 — f2), between the moments of the two Fe films.6  
+
+	The effect of the intrinsic  anisotropy of the Fe layers on the 
+magnetoresistance can be gauged by examining Dr/r(q) at a high field 
+where the antialignment has been suppressed.  Fig. 3 shows the 
+magnetoresistance of the tCr = 13 Å sandwich as a function of the 
+angle between a 6 kOe applied field and the current direction.  The 
+data have been fit to the standard form8
+
+ 	 Dr/r (q)   = [Dr/r]long + {[Dr/r]trans — [Dr/r]long} sin2(q)     (3) 
+
+where [Dr/r]long is the  longitudinal  magnetoresistance  (H || I), and   
+[Dr/r]trans is the transverse magnetoresistance  (H ^ I).  The fit 
+results in the approximately field-independent anisotropy parameter 
+{[Dr/r]trans — [Dr/r]long} = -3.8 ¥ 10-3.  This  anisotropy  is  slightly 
+larger than that that of pure Fe,8  a finding which is in agreement 
+with previous work on Fe-Cr-Fe sandwiches.4
+
+	In order to analyze the second contribution to the 
+magnetoresistance, which is due to the suppression of the zero-field 
+antialignment, one must assume a form for the Df-dependence of 
+Dr/r.   Once a form has been selected, one can invert the Dr/r(H) data 
+to obtain an "experimental" Df(H) curve.  Fig. 4 is a plot of Df  vs. H 
+obtained from the data of Fig. 2 by assuming that the 
+magnetoresistance has  the form 
+
+	Dr/r (Df) =  [Dr/r]sat * cos2(Df/2)     				   (4)
+
+where  [Dr/r]sat  is the value of the transverse magnetoresistance at 
+magnetic saturation.   The form of Eqn. 4 is suggested by the 
+magnetization curve,  which indicates that Df is 0o at saturation and 
+near 180o at zero field.  The angular difference  Df calculated from 
+Eqs. 1 and 2 is  also shown in Fig. 4.   The generally good agreement 
+between the calculated and experimental curves in Fig. 4 indicates 
+that the magnetoresistance does in fact vary approximately as 
+cos2(Df/2).  Camley and Barnas6 previously pointed out that the 
+transmission coefficient of an electron propagating between the two 
+Fe layers will go as cos2(Df/2) when the angle between the two Fe 
+moments is Df.
+
+	Note that a completely quantitative treatment of the Fe-Cr-Fe 
+magnetoresistance will require the formulation of a unified 
+expression,   Dr/r(q, Df), which incorporates both contributions to the 
+magnetoresistance.  This analysis is in progress.  At present, the good 
+agreement between the two curves in Fig. 4 is an indication that the 
+antialignment-derived effects are dominant.
+
+	 In order to look for a relationship between the magnitude of 
+the magnetoresistance and the magnetic properties of the 
+sandwiches, the magnitude of the transverse magnetoresistance was 
+determined for 8 different antiferromagnetically coupled samples 
+with varying Cr thicknesses.   Figure 5 shows that the transverse 
+magnetoresistance magnitude increases with increasing J/Ms, a 
+correlation not predicted by earlier models of Fe-Cr 
+magnetotransport.3,6  A relationship between the magnetoresistance 
+and J/Ms is particularly interesting in light of the fact that the 
+interlayer coupling parameter J is not a monotonic function of tCr.5,7
+
+	The data of Ref. [3] show that in antiferromagnetically coupled 
+Fe-Cr superlattices, as in the Fe-Cr sandwiches, [Dr/r]sat increases 
+with increasing saturation field. The correlation of [Dr/r]sat with J/Ms 
+could therefore have been  anticipated using Eqns. 1 and 2, which 
+imply that the saturation field scales with J/Ms.5,7 Further progress 
+should be possible in understanding the  Fe-Cr system once this 
+interlayer-coupling dependence can be incorporated into a 
+microscopic model of  transport.     Such a model will have to be 
+consistent with the existing theory,6 which satisfactorily explains the 
+dependence of the magnetoresistance on  temperature and on the 
+number of Fe/Cr interfaces.
+
+REFERENCES
+
+ 1.	P. Grunberg, R. Schreiber, Y. Pang. M.B. Brodsky and H. Sowers,  
+	Phys. Rev. Lett. 57, 2442 (1986).
+
+ 2.	C. Carbone and S.F. Alvarado, Phys. Rev. B 36, 2443 (1987).
+
+ 3. 	M.N. Baibich,  J.M. Broto, A. Fert, F. Nguyen Van Dau, F. Petroff, 
+	P. Eitenne, G. Creuzet, A. Friederich, and J. Chazelas, Phys. Rev. 
+	Lett. 61, 2472 (1988).
+
+ 4. 	G. Binasch, P. Grunberg, F. Saurenbach, and W. Zinn, Phys. Rev. 
+B 	39, 4828 (1989).
+
+ 5.     J.J. Krebs, P. Lubitz, A. Chaiken, G.A. Prinz, Phys. Rev. Lett. 63,            
+	1645 (1989).
+
+ 6.	R.E. Camley and J. Barnas, Phys. Rev. Lett. 63, 664 (1989).
+
+ 7.     J.J. Krebs, P. Lubitz, A. Chaiken, G.A. Prinz,  proceedings of this 
+	conference.
+ 8. 	T.R. McGuire  and R.I. Potter, IEEE Trans. Magn. 11, 1018 
+(1975).  
+
+
+
+
+Figure Captions
+
+Figure 1:   Magnetization curve with H along a [110] direction for an 
+Fe-Cr-Fe sandwich with a 13 Å Cr layer.  The data is indicated  by 
+solid lines, while the calculated curve produced from Eqns. 1 and 2 is 
+indicated by the solid dots.   The calculation employed  the 
+parameters K1/M = 0.25 kOe, Ku/M = 0.005 kOe, and J/M = 0.125 
+kOe.5,7  The solid-headed arrows indicate the orientation of the 
+moments of the two Fe films at a given applied field.
+
+Figure 2:  Transverse magnetoresistance trace in decreasing field for 
+the same tCr = 13 Å sample as in Fig. 1.   The experimental geometry 
+is indicated in the inset.   
+
+Figure 3:  Magnetoresistance of a Fe-Cr-Fe sandwich versus the angle 
+between the applied field and the current direction.  The fit is to Eqn.  
+3.
+
+Figure 4:  Calculated and experimental angular separations of the 
+moments of the two Fe films as a function of applied field.  The 
+angles are defined pictorially in the inset.  The calculated points are 
+obtained by minimizing  the energy expressions of  Eqns. 1 and 2, all 
+parameters being held fixed.  The "experimental" Df points are 
+obtained by transforming the data of Fig. 2 according to Eqn. 4.
+
+Figure 5:    Transverse magnetoresistance magnitude at 6 kOe as a 
+function of the coupling J/M for a series of Fe-Cr-Fe sandwiches.  The 
+coupling is varied by changing the Cr thickness.   The solid line is the 
+best linear fit to the data.
+
+

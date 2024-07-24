@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="GNU Emacs 23.2.1 (x86_64-redhat-linux-gnu, GTK+ Version 2.20.1) of 2010-05-13 on x86-07.phx2.fedoraproject.org"/>
+<link rel="stylesheet" href="chaiken.css" type="text/css"/>
+<title>Summary of Work at SLAC</title>
+</head>
+<body>
+<h1 class="title">Summary of Work at SLAC</h1>
+<div class="center">
+<h3>October 29, 2010</h3>
+
+Prepared by <a href="mailto:alison@exerciseforthereader.org">Alison Chaiken</a>
+</div>
+
+<h2>NLCTA Synoptic Display</h2>
+
+<div class="center">
+<img src="ValveStatusScreenshot.jpg" alt="Static screenshot of
+ live-updating display" width="80%" /><br/>
+ <div class="caption">
+ Static screenshot of live-updating status display.
+ </div>
+</div>
+
+<p>From a bash shell on any pubnet RHEL 5 host, start the 7
+live-updating status displays by using
+~alison/public_html/start_ARD_web.bash.   The opening process takes
+about 15 seconds to make EPICS Channel Access connections.</p>
+
+<p>From the csh shell on RHEL 5, type "bash" (without quotes) to open
+a bash shell, then run the ~alison/public_html/start_ARD_web.bash
+command.</p>
+
+<p>The status screens are also accessible from the Firefox, Chrome,
+Opera or Safari browsers directly from <a
+href="http://www.slac.stanford.edu/~alison/ESB-AlarmStatus.xhtml">hyperlinks</a>.
+In order to see live updating EPICS PVs, users need the EPICS Channel
+Access Plug-in 1.2.0.  <a
+href="http://www.slac.stanford.edu/~alison/build/plugin/pluginInstructions.html">Instructions</a>
+on plug-in installation should pop-up automatically.
+</p>
+
+<p>The local SLAC expert on the CAML display of live EPICS data in
+browsers is Matt Boyes of the Controls Department.    Thanks to Matt
+for his help with the project.</p>
+
+<h2>NLCTA Transverse Feedback</h2>
+
+<div class="center">
+<img src="BPMplot.png" alt="Matlab plot of BPM data" height="400" /><br/>
+ <div class="caption">
+ Static screenshot of Matlab real-time plot of live-updating NLCTA BPM data 
+ </div>
+</div>
+
+
+<p>Documented by relatively complete and up-to-date <a
+href="NLCTAFeedbackUserGuide.pdf">user guide.</a></p>
+
+<p>Easy way to tell from the shell if Feedback SIOC is running:</p>
+
+<pre>
+[alison@ar-chaiken planning]$ grep FB ~/.bashrc
+alias testFB="EPICS_CA_SERVER_PORT=5070 EPICS_CA_ADDR_LIST='134.79.48.11 134.79.51.65' caget SIOC:ESB:FB00:TOD"
+</pre>
+
+<p>Local SLAC expert: Diane Fairley</p>
+
+<h2>LLRF for X-Band Station 3</h2>
+
+<div class="center">
+<img src="PAD031screenshot.png" alt="PAD031 edm view" height="600" /><br/>
+ <div class="caption">
+ An EDM for PAD031 that is started up with viewPAD031_bash
+ </div>
+</div>
+
+<p>The soft IOCs for the LLRF controls of X-Band Station 3 are almost
+identical to their LCLS counterparts.  The main difference is that I
+have disabled the PAC "calibrate" feature that, according to Ron Akre,
+was never supported in hardware.  The PAC sources are in the normal
+AFS tree at
+/afs/slac/g/testfac/rhel4/epics/R3.14.8.2-lcls2/iocTop/stn3Pac/stn3Pac-R1-0-0
+and the PAD sources are at
+/afs/slac/g/testfac/rhel4/epics/R3.14.8.2-lcls6/iocTop/stn3Pad/prod.
+</p>
+
+<p>Here are some commands that, from a bash shell on RHEL4 or RHEL5, will open
+a view of the PAD IOCs:
+</p>
+
+<pre>
+/afs/slac/g/testfac/rhel4/epics/R3.14.8.2-lcls6/iocTop/stn3Pad/development/stn3PadApp/srcDisplay/viewPAD031_bash
+
+/afs/slac/g/testfac/rhel4/epics/R3.14.8.2-lcls6/iocTop/stn3Pad/development/stn3PadApp/srcDisplay/viewPAD031_bash
+</pre>
+
+
+<p>Easy way to tell from the shell if PAC03, PAD031 and PAD032 are
+running:</p>
+
+<pre>
+[alison@ar-chaiken ]$ testPAC03
+EIOC:ESB:PAC03:UPTIME          31 days, 05:17:41
+[alison@ar-chaiken planning]$ grep PAC03 ~/.bashrc
+alias testPAC03="EPICS_CA_SERVER_PORT=5068 EPICS_CA_ADDR_LIST='eioc-esb-pac03' caget EIOC:ESB:PAC03:UPTIME"
+
+[alison@ar-chaiken ]$ testPAD031
+ESB:XBSTN3:K5:031_SLOWADC0     -272.955
+[alison@ar-chaiken planning]$ grep PAD031 ~/.bashrc
+alias testPAD031="EPICS_CA_SERVER_PORT=5068 EPICS_CA_ADDR_LIST='eioc-esb-pad031' caget ESB:XBSTN3:K5:031_SLOWADC0"
+
+[alison@ar-chaiken ]$ testPAD032
+ESB:XBSTN3:K5:032_SLOWADC0     -272.973
+[alison@ar-chaiken planning]$ grep PAD032 ~/.bashrc
+alias testPAD032="EPICS_CA_SERVER_PORT=5068 EPICS_CA_ADDR_LIST='eioc-esb-pad032' caget ESB:XBSTN3:K5:032_SLOWADC0"
+
+</pre>
+
+
+<p>Local SLAC expert: Kukhee Kim</p>
+
+<h3>Automated power cycler for PAC and PADs</h3>
+
+<p>The PACs and PADs are controlled by an APC Switched Rack Power
+Distribution Unit to which users interface via an IOC called NLCTAiocManager:
+
+<div class="center">
+<img src="NLCTAiocManagerScreenshot.png" alt="Switched Rack Power
+ Distribution Unit Controller IOC called NLCTAiocManager"  /><br/>
+ <div class="caption">
+ NLCTAiocManager screenshot.
+ </div>
+</div>
+
+<p>NLCTAiocManager is a basically unmodified version of LCLS'
+iocManager SIOC running on ilc-esb09.  How to invoke NLCTAiocManager:</p>
+
+<pre>
+/afs/slac/g/testfac/rhel5/epics/R3.14.11/iocTop/NLCTAiocManager/development/NLCTAiocManagerApp/srcDisplay/showACswitchStatus_bash
+</pre>
+
+<p>How to restart the NLCTAiocManager IOC on ilc-esb09  using procServ set up by Zen:</p>
+
+<pre>[alison@ilc-esb09 ~]$  EPICS_DIR=/afs/slac/g/testfac/rhel5/epics /afs/slac/g/testfac/setup/procserv/startIOC.sh sioc-esb-stn3
+</pre>
+
+<p>Easy way to check from the shell prompt if NLCTAiocManager is running:
+<pre>
+[alison@ar-chaiken ]$ testSTN3
+SIOC:ESB:STN3:TOD              10/29/2010 14:49:22
+[alison@ar-chaiken planning]$ grep STN3 ~/.bashrc
+alias testSTN3="EPICS_CA_SERVER_PORT=5068 EPICS_CA_ADDR_LIST='134.79.48.13 134.79.67.255 134.79.51.255' caget SIOC:ESB:STN3:TOD"
+</pre>
+
+<p>Local SLAC expert: Sonya Hoobler</p>
+
+<h2>FACET</h2>
+
+<h3>menable driver for Silicon Software microEnable IV framegrabber</h3>
+
+<div class="center">
+<img src="menable_objects.png" alt="menable driver methods" height="600" /><br/>
+ <div class="caption">
+ Organization of Silicon Software's menable driver
+ </div>
+</div>
+
+<p>For the rumored pco.edge camera, I have worked hard to make the
+menable driver for the <a
+href="http://www.silicon-software.com/microenable4.html">Silicon
+Software microEnable IV</a> framegrabber card work on RHEL 5.
+According to <a href="mailto:nimesh@cookecorp.com">Nimesh Juthani of
+Cooke Corporation</a>, a version of the mEIV with custom firmware will
+run the pco.edge camera.  Thus SLAC does not have the option of using
+the pco.edge with a framegrabber for which we have existing EPICS
+support.  While <a
+href="http://hades.mech.northwestern.edu/index.php/Real-Time_Linux_for_TrackCam">others
+have gotten the microEnable card working with real-time Linux</a>, the
+sticking point in our case, at least in part, is that the RHEL5 OS I
+tried to use has an older kernel (2.6.18 versus 2.6.27 in the example)
+with a slightly different API.   The Northwestern example linked above
+describes work with an older framegrabber (the microEnable III) for
+which Silicon Software made prebuilt rpm packages available.   Thus
+the NWU student did not patch and compile the driver itself, as I have
+done.   (He patched the Linux kernel itself.)
+</p>
+
+<p>At some level, the menable driver is working, as this loading of it
+into the RHEL 5 kernel shows:</p>
+
+<pre>
+[alison@ar-esa03 menable_linuxdrv_3.9.12_4.0.1]$ sudo gmake load
+make INSTALL_MOD_PATH= INSTALL_MOD_DIR=extra -C /lib/modules/2.6.18-194.17.1.el5/build M=/opt/menable_linuxdrv_3.9.12_4.0.1 modules_install
+make[1]: Entering directory `/usr/src/kernels/2.6.18-194.17.1.el5-x86_64'
+  INSTALL /opt/menable_linuxdrv_3.9.12_4.0.1/menable.ko
+  DEPMOD  2.6.18-194.17.1.el5
+make[1]: Leaving directory `/usr/src/kernels/2.6.18-194.17.1.el5-x86_64'
+su -c "modprobe menable"
+lsmod | grep menable
+menable                82200  0 
+grep menable /proc/modules
+menable 82200 0 - Live 0xffffffff8818f000 (U)
+
+tail -10 /var/log/messages
+Oct 29 16:53:13 ar-esa03 sudo:   alison : TTY=pts/2 ; PWD=/opt/menable_linuxdrv_3.9.12_4.0.1 ; USER=root ; COMMAND=/usr/bin/gmake load
+Oct 29 16:53:14 ar-esa03 kernel: PCI: Enabling device 0000:04:00.0 (0100 -> 0102)
+Oct 29 16:53:14 ar-esa03 kernel: ACPI: PCI Interrupt 0000:04:00.0[A] -> GSI 16 (level, low) -> IRQ 169
+Oct 29 16:53:14 ar-esa03 kernel: menable 0000:04:00.0: microenable IV VD4-CL card will be called menable0
+Oct 29 16:53:14 ar-esa03 kernel: runtime_base is 0x40000
+Oct 29 16:53:14 ar-esa03 kernel: In me4_query_dma, d is 0.
+Oct 29 16:53:14 ar-esa03 kernel: menable menable0: 0 DMA channels detected (lo 0 hi 0)
+Oct 29 16:53:14 ar-esa03 kernel: 2nd time in me4_query_dma, d is 0.
+Oct 29 16:53:14 ar-esa03 kernel: men->num_dma is 0
+ls -l /dev/menable*
+crw------- 1 root root 253, 0 Oct 29 16:53 /dev/menable0
+</pre>
+
+<p>The driver loads with modprobe without error and creates the
+special character file /dev/menable0 that user programs can employ to
+receive DMA buffers from the framegrabber.  The /sys files needed by
+the kernel's driver interface are also correctly created.  The
+runtime_base address is correct.  Unfortunately, the function
+me4_query_dma does not detect any DMA channels when the driver loads.
+I'm not sure what the source of the problem is, but it's likely to be
+changes either to the workqueue or IRQ handler that I made in order to
+get the driver to load under 2.6.18.
+</p>
+
+<p>Userspace programs will use ioctls to retrieve images from the
+camera.  In order to learn to use the ioctls, I started writing <a
+href="http://www.slac.stanford.edu/~alison/Summary/pokeFG3.c">programs to exercise them.</a> The menable
+sources with my test programs and results are in
+/afs/slac/g/testfac/rhel5/support/menable</p>
+
+<p><em>Recommendation:</em> the time investment to get the menable driver
+working with the as-yet-unavailable pco.edge camera cannot be
+justified without several more software support staff.    I suggest
+purchasing a GigE or Camera Link camera that is compatible with a
+framegrabber that has existing software support.   For example,
+consider using PCDS's unixCam IOC with the existing edt_unix
+framegrabber module.</p>
+
+<h2>Beckhoff programming</h2>
+
+<p>My contributions are at
+/afs/slac/g/lcls/epics/modules/Bx9000_MBT/devl-chaiken/ but since Zen
+has a better approach to control using aSyn, no one should use them in
+the future in NLCTA.
+</p>
+
+
+<h2>Miscellaneous</h2>
+
+</body>
+</html>

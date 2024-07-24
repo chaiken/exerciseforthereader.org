@@ -1,0 +1,115 @@
+_New Economy of Nature_ by Gretchen Reynolds
+
+P. 1-2: in 1993, "36 million Americans were drinking water from systems violating PA standards."
+
+P. 3: "NYC's water has never passed through a filtration plant." P. 4: "the city would spend the much smaller amountof about 1.5B to protect the upstate watershed." Observers may blame climate change for newly arisen problems that potentially arise from unrelated causes.
+
+P. 5: "ecosystems can be seen as capital assets, supplying human beings with a stream of services that sustain and enhance our lives."
+
+P.7: "we haven't even taken measure of the ecosystem capital stocks that produce these most vital of labors."
+
+P. 8: "'Stanford biologist Peter Vitousek has said, 'we're the first generation with tools to understand changes in the earth's system caused by human activity, and the last with the opportunity to influnce the course of many of the changes now rapidly underway.'"
+
+P. 9: "Nobel Laureate Kenneth Arrow . . . has for decades been disturbed by the way that economics dismisses 'externalities' . . . 'Internalization' of such externalities - enactment of a fair system of pricing and payment - is badly needed . . ."
+
+p. 10: "'We stop viewing the environment as an amenity, a luxury that the poor can't afford.'" -- Partha Dasgupta, Cambridge
+
+P. 10: "economics is more concerned with price than value"
+
+p. 11: "ecosystem services are treated as public goods, which if provided for one are provided for all, no matter who pays." -- economist Ronald Coates
+
+P. 13: "Establishing ownership of natural capital and services allows bargaining . . . 'Without prices being set, Nature becomed like an all-you can-eat buffet'" -- Richard Sandor
+
+P. 71: "It's not so much that the road to hell is paved with good intentions, but that the road to hell is paved."
+
+P. 74: Chris Meyer of NYPIRG on public hearings: "like a rolling Thansgiving dinner with relatives you only want to see once a year."
+
+P. 77: "Whereas Kennedy's view implied that property owners had an obligation to society to act as stewards of the environmental assets on their land, -- although they might be compensated for their costs -- Heelan's suggested that buying land entails the purchase of an uncontestable right to pollute." Does buying a vehicle entail an uncontestable right to pollute the air, endangervL VRUs and tip the planet into climate catastrophe?
+
+P. 139: "The formula is to show big corporations that they can gain from conservation and conservationists that they can't afford not to work with big corporations."
+
+p. 155: "[Warrowong leader John] Walmsley contends that . . . you can't save anything on which you can't put a price."
+
+p. 158: "economist Geoffrey Heal deems the main problem a 'Stalinistic' focus on prohibitions instead of incentives. . . . . landowners were essentially penalized for finding endangered species on their property. . . "
+
+p. 163: "We'll make all the compromises we need to protect the native animals."
+"You can say let's change the world, or you can that we've evolved the way wer are, and we're a lot of bastards, and let's work with that."  -- John Walmsley
+
+https://en.wikipedia.org/wiki/Mount_Rothwell_Biodiversity_Interpretation_Centre
+
+Earth Sanctuaries listed on the stock exchange in 2000, but Wamsley's dream of combining business with conservation quickly ran into financial difficulties. In 2002, Earth Sanctuaries was forced to sell seven of its properties,[3] and in 2005 the company was bought by a private Victorian conservation company, ES Link, for 14 cents a share. The north-west and south-east areas of the original Mount Rothwell holding were sold, as was the historic bluestone homestead.[5]
+
+In November 2006, Prudentia Investments bought ES Link. Prudentia said it regarded the property as an investment in nature and said it would continue to research and breed native animals and native grasslands.[5] The facility was renamed the Mount Rothwell Biodiversity Interpretation Centre.[1][6] 
+
+http://archive.ecotrust.org/publications/ns_clayoquot.html
+
+A Native-controlled business partnership between former bitter
+opponents, local commitment to economic development compatible with
+ecological and cultural integrity, brightening prospects for a
+Nuu-chah-nulth treaty with the province and nation — all point toward
+history being made on the highly contested lands and waters of
+Clayoquot Sound.
+
+https://open.library.ubc.ca/cIRcle/collections/undergraduateresearch/52966/items/1.0103520
+
+Economic comparison of FSC and SFI certified companies on Vancouver Island : Iisaak Forest Resources and TimberWest
+Creator 	Scott, Brian
+Date Issued 	2011-04-11
+
+Description
+Forest Stewardship Council (FSC) and Sustainable Forest Initiative
+(SFI) forest certifications require forest products companies to
+perform responsible and sustainable forest management practices
+throughout the world. Iisaak Forest Resources Ltd., (Iisaak) a First
+Nations led company on Vancouver Island, has struggled with FSC
+certification and profitability, and has many issues surrounding its
+practices with harvesting, riparian management, and stakeholder
+involvement. TimberWest Forest Ltd. (TimberWest) is a forest products
+company with operations on Vancouver Island and is certified under
+SFI. The company follows more conventional harvesting practices than
+Iisaak and is able to remain competitive with other large forest
+products companies in the surrounding area. Iisaak appears to have a
+poor business model with its FSC certification, while TimberWest’s
+strategies under the SFI certification seem more favorable
+economically. Currently it is more sustainable financially for forest
+products companies to practice SFI rather than FSC certification on
+Vancouver Island, since there are fewer restrictions put on forest
+management.
+
+https://www.economist.com/britain/2020/10/03/rewilding-in-the-scottish-highlands
+
+a burgeoning carbon market will make rewilding economic. “Ecosystems services” which were previously deemed worthless, such as habitat creation, “are now being given monetary values”, says Mr Drysdale, who as well as being a prospective landowner runs KF Forestry, a green consultancy. ***In future***, he believes, carbon credits produced by planting native broadleaf trees will be more profitable than commercial timber or traditional farming.
+
+>> Unstick relationships that show no sign of improving.
+
+GPL violation offsets: how?
+
+>> Analogy with Fair Trade
+
+Free software and compensation for work on free software is part of the Fair Trade movement.   Software products should be able to obtain a "Sustainably harvested" label meaning (as always) that the software creators were fairly compensated.
+
+>> Traceability of supply chain is common to Fair Trade and Free Software.
+
+>> Remind software users that SW is made by people.
+
+Label software products as "handmade."   Just as paper bags or boxes often say, "Inspected by . . .", consider showing on a download web page the name of someone who is a longtime contributor to a product.
+
+>> Why aren't Fair Trade and FLOSS discussed in the same breath?
+
+FLOSS has durable institutions like BSD, Debian and emacs, but developer and maintainer burnout shows that it is not sustainable.
+
+A Fair Trade core principle is a living wage for producers of goods.   Why should this principle not apply to software developers?
+
+Traceability and transparency of supply chain is common to all.
+
+Millenials come to dominate investing:
+https://www.economist.com/news/2020/10/20/soon-enough-wall-street-will-have-to-take-millennial-investors-seriously
+What goals will millennials pursue? Some 87% of them believe corporate success should be measured by more than financial performance, according to a survey by Deloitte, a consultancy. They also seem to act on that impulse. Morgan Stanley finds that the under-35s are twice as likely as others to sell an investment position if they consider a company’s behaviour to be environmentally or socially unsustainable.
+
+88888888888888
+
+What can FLOSS learn from the Fair Trade and Environmental Movements?
+
+Fair Trade books.  Sheer number is notable.
+https://www.goodreads.com/shelf/show/fair-trade
+

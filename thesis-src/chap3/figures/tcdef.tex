@@ -1,0 +1,26 @@
+\documentstyle[12pt]{report}
+\headheight 8pt
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{tcdef}
+\beginpicture
+\setcoordinatesystem units <5in,3.5in>
+\setplotarea x from 0 to 1, y from 0 to 1
+\axis bottom ticks withvalues $\rm T_c$ / at 0.6 / /
+\axis left label {\lines {inductive\cr voltage\cr}} /
+\put {S} at  0.1 0.1
+\put {N} [r] at 0.9 1.0
+\put {T} [t] at 0.9 -0.02
+\linethickness=1pt
+\setdashes
+\putrule from 0.6 0 to 0.6 1
+\putrule from 0.3 0.9 to 0.9 0.9
+\setsolid
+\endpicture
+\caption[]{}
+\end{figure}
+\end{document}

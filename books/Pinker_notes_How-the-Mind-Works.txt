@@ -1,0 +1,94 @@
+Pinker Notes
+"Every idea in the book may turn out to be wrong, but that would be progress, because our old ideas were too vapid to be wrong."
+
+Wheels are an example of a solution that is entirely HW-based and perfect in a limited problem domain.  Legs, by contrast, are a SW solution applicable in a broader context.
+
+"Why give a robot an order to obey orders—why aren’t the original orders enough? Why command a robot not to do harm—wouldn’t it be easier never to command it to do harm in the first place? Does the universe contain a mysterious force pulling entities toward malevolence, so that a positronic brain must be programmed to withstand it? Do intelligent beings inevitably develop an attitude problem? In this case Asimov, like generations of thinkers, like all of us, was unable to step outside his own thought processes and see them as artifacts of how our minds were put together rather than as inescapable laws of the universe."  DISAGREE! Asimov foresaw how difficult it would be to state requests that couldn't be misintepreted, or whose correct interpretation depends on knowledge the robot doesn't possess.  Asimov's Rules are functional safety postulates that serve the function of bounding actions.
+
+"These syndromes are caused by an injury, usually a stroke, to one or more of the thirty brain areas that compose the primate visual system. Some areas specialize in color and form, others in where an object is, others in what an object is, still others in how it moves." Sounds GStreamer with HW-accelerating IP cores.
+
+Neurons viewed as a transport: "When you telephone your mother in another city, the message stays the same as it goes from your lips to her ears even as it physically changes its form, from vibrating air, to electricity in a wire, to charges in silicon, to flickering light in a fiber optic cable, to electromagnetic waves, and then back again in reverse order. In a similar sense, the message stays the same when she repeats it to your father at the other end of the couch after it has changed its form inside her head into a cascade of neurons firing and chemicals diffusing across synapses. Likewise, a given program can run on computers made of vacuum tubes, electromagnetic switches, transistors, integrated circuits, or well-trained pigeons, and it accomplishes the same things for the same reasons."
+
+"The entities now commonly evoked to explain the mind—such as general intelligence, a capacity to form culture, and multipurpose learning strategies—will surely go the way of protoplasm in biology and of earth, air, fire, and water in physics." We say "general intelligence" because don't know what it is.
+
+"Since the modern mind is adapted to the Stone Age, not the computer age, there is no need to strain for adaptive explanations for everything we do."
+
+Apparently maladaptive behaviors today may simply be signs that cognitive systems are poorly prepared to handle them.  "Behavior itself did not evolve; what evolved was the mind."
+
+"Science is guaranteed to appear to eat away at the will, regardless of what it finds, because the scientific mode of explanation cannot accommodate the mysterious notion of uncaused causation that underlies the will. If scientists wanted to show that people had free will, what would they look for? Some random neural event that the rest of the brain amplifies into a signal triggering behavior? But a random event does not fit the concept of free will any more than a lawful one does, and could not serve as the long-sought locus of moral responsibility."
+
+'the “language of thought” in which knowledge is couched can leave nothing to the imagination, because it is the imagination.'
+
+"Suppose we set up separate pools of units, one for the role of actor, one for the action, one for the role of acted upon. To represent a proposition, each pool of units is filled with the pattern for the concept currently playing the role, shunted in from a separate memory store for concepts."  Grammar is constructed via templates? Subject ("actor"), verb ("action") and direct object ("acted upon") are 3 separate templates.  It's easy to see why analysis of consciousness is hard to understand in this framework: they don't compile.
+
+'Access-consciousness has four obvious features. First, we are aware, to varying degrees, of a rich field of sensation: the colors and shapes of the world in front of us, the sounds and smells we are bathed in, the pressures and aches of our skin, bone, and muscles. Second, portions of this information can fall under the spotlight of attention, get rotated into and out of short-term memory, and feed our deliberative cogitation. Third, sensations and thoughts come with an emotional flavoring: pleasant or unpleasant, interesting or repellent, exciting or soothing. Finally, an executive, the “I,” appears to make choices and pull the levers of behavior.'
+
+"Evolution is about ends, not means; becoming smart is just one option."
+
+"Neural tissue is metabolically greedy; our brains take up only two percent of our body weight but consume twenty percent of our energy and nutrients."
+
+Not real-time: "My first graduate advisor was a mathematical psychologist who wanted to model the transmission of information in the brain by measuring reaction times to loud tones. Theoretically, the neuron-to-neuron transmission times should have added up to a few milliseconds. But there were seventy-five milliseconds unaccounted for between stimulus and response."
+
+Michael French, engineering textbook: "The specification for a camel, if it were ever written down, would be a tough one in terms of range, fuel economy and adaptation to difficult terrains and extreme temperatures, and we must not be surprised that the design that meets it appears extreme."
+
+"If you can’t state the function more economically than you can describe the structure, you don’t have design."
+
+"In Hinton and Nowlan’s simulations, the networks thus evolved more and more innate connections. The connections never became completely innate, however. As more and more of the connections were fixed, the selection pressure to fix the remaining ones tapered off, because with only a few connections to learn, every organism was guaranteed to learn them quickly. Learning leads to the evolution of innateness, but not complete innateness."  Evolutionary history therefore anticipates the finding that autonomy systems which learn will out-perform those that don't.   Streets, like living spaces, are changing and variable.  Maintaining plasticity is therefore a superior approach to trying to perfect algorithms that are optimally tuned. "If the ability to learn was in place in an early ancestor of the multicellular animals, it could have guided the evolution of nervous systems toward their specialized circuits even when the circuits are so intricate that natural selection could not have found them on its own."
+
+"Whatever is special about the human mind cannot be just more, or better, or more flexible animal intelligence, because there is no such thing as generic animal intelligence."
+
+"Recall . . . that inverse optics, the deduction of an object’s shape and substance from its projection, is an 'ill-posed problem,' a problem that, as stated, has no unique solution.  . . . illusions. . . . unmask the assumptions that natural selection installed to allow us to solve unsolvable problems"
+
+"Learning is often described as indispensable shaper of amorphous brain tissue. Instead it might be an innate adaptation to the project-scheduling demands of a self-assembling animal. The genome builds as much of the animal as it can, and for the parts of the animal that cannot be specified in advance (such as the proper wiring for two eyes that are moving apart at an unpredictable rate), the genome turns on an information-gathering mechanism at the time in development at which it is most needed." Sounds like a Debian package post-install script.
+
+"The English language likes to collapse left and right: beside and next to denote side-by-side without specifying who’s on the left, but there is no word like bebove or aneath that denotes up-and-down without specifying who’s on top."
+
+"Learning involves more than recording experience; learning requires couching the records of experience so that they generalize in useful ways."
+
+"Percentages came in after the French Revolution with the rest of the metric system and were initially used for interest and tax rates."
+
+"Unfortunately, creative people are at their most creative when writing their autobiographies."
+
+"Disgust is intuitive microbiology."
+
+Sounds like truck drivers: 'Tom Wolfe . . . defined the right stuff as “the ability [of a pilot] to go up in a hurtling piece of machinery and put his hide on the line and then have the moxie, the reflexes, the experience, the coolness, to pull it back in the last yawning moment.”'
+
+"The intellect is designed to relinquish control to the passions so that they may serve as guarantors of its offers, promises, and threats against suspicions that they are lowballs, double-crosses, and bluffs. The apparent firewall between passion and reason is not an ineluctable part of the architecture of the brain; it has been programmed in deliberately, because only if the passions are in control can they be credible guarantors."
+
+"a social smile is formed with a different configuration of muscles from the genuine smile of pleasure. A social smile is executed by circuits in the cerebral cortex that are under voluntary control; a smile of pleasure is executed by circuits in the limbic system and other brain systems and is involuntary."
+
+"Natural selection does not forbid cooperation and generosity; it just makes them difficult engineering problems, like stereoscopic vision."
+
+'A call girl asks her friend why her handsome tricks have to pay for sex. “They’re not paying you for the sex,” the friend explains. “They’re paying you to go away afterwards.”'
+
+"Status is the public knowledge that you possess assets that would allow you to help others if you wished to."
+
+"religion and philosophy are in part the application of mental tools to problems they were not designed to solve."
+
+"Music appears to be a pure pleasure technology, a cocktail of recreational drugs that we ingest through the ear to stimulate a mass of pleasure circuits at once."
+
+"the world’s musical idioms conform to an abstract Universal Musical Grammar. That idea was first broached by the composer and conductor Leonard Bernstein in The Unanswered Question, a passionate attempt to apply Noam Chomsky’s ideas to music. The richest theory of universal musical grammar has been worked out by Ray Jackendoff in collaboration with the music theorist Fred Lerdahl and incorporating the ideas of many musicologists before them, most prominently Heinrich Schenker. According to the theory, music is built from an inventory of notes and a set of rules. The rules assemble notes into a sequence and organize them into three hierarchical structures, all superimposed on the same string of notes. To understand a musical piece means to assemble these mental structures as we listen to the piece."
+
+"Darwin noticed that the calls of many birds and primates are composed of discrete notes in harmonic relations. He speculated that they evolved because they were easy to reproduce time after time. (Had he lived a century later, he would have said that digital representations are more repeatable than analog ones.)"
+
+"Several psychologically oriented music theorists, including Jackendoff, Manfred Clynes, and David Epstein, believe that music recreates the motivational and emotional components of movement."
+
+"Only in fiction that is about logic and reality, such as Alice’s Adventures in Wonderland, can any strange thing happen."
+
+'The philosopher Nelson Goodman came up with an insight while examining the difference between art and other symbols. Suppose by coincidence an electrocardiogram and a Hokusai drawing of Mount Fuji both consisted of the same jagged line. Both tracings stand for something, but the only part of the electrocardiogram that matters is the position of each point that the line passes through. Its color and thickness, the size of the tracing, and the color and shading of the paper are irrelevant. If they were changed, the diagram would remain the same. But in the Hokusai drawing, none of the features may be ignored or casually altered; any might have been deliberately crafted by the artist. Goodman calls this property of art “repleteness.”'
+
+
+"When scattered titters swell into a chorus of hilarity like a nuclear chain reaction, people are acknowledging that they have all noticed the same infirmity in an exalted target. A lone insulter would have risked the reprisals of the target, but a mob of them, unambiguously in cahoots in recognizing the target’s foibles, is safe."
+
+"How does religion fit into a mind that one might have thought was designed to reject the palpably not true? The common answer—that people take comfort in the thought of a benevolent shepherd, a universal plan, or an afterlife—is unsatisfying, because it only raises the question of why a mind would evolve to find comfort in beliefs it can plainly see are false. A freezing person finds no comfort in believing he is warm; a person face-to-face with a lion is not put at ease by the conviction that it is a rabbit."
+
+"What does it mean to say that I “shouldn’t” do it? How did ought emerge from a universe of particles and planets, genes and bodies?"
+
+'The problem with the religious solution was stated by Mencken when he wrote, “Theology is the effort to explain the unknowable in terms of the not worth knowing.” For anyone with a persistent intellectual curiosity, religious explanations are not worth knowing because they pile equally baffling enigmas on top of the original ones. What gave God a mind, free will, knowledge, certainty about right and wrong?'
+
+"Maybe philosophical problems are hard not because they are divine or irreducible or meaningless or workaday science, but because the mind of Homo sapiens lacks the cognitive equipment to solve them. We are organisms, not angels, and our minds are organs, not pipelines to the truth. Our minds evolved by natural selection to solve problems that were life-and-death matters to our ancestors, not to commune with correctness or to answer any question we are capable of asking."
+
+Maybe philosophical problems are hard because they are irreducible to simpler sub-questions?  "Even when scientists grapple with seamless continua and dynamical processes, they couch their theories in words, equations, and computer simulations, combinatorial media that mesh with the workings of the mind. We are lucky that parts of the world behave as lawful interactions among simpler elements. But there is something peculiarly holistic and everywhere-at-once and nowhere-at-all and all-at-the-same-time about the problems of philosophy. Sentience is not a combination of brain events or computational states: how a red-sensitive neuron gives rise to the subjective feel of redness is not a whit less mysterious than how the whole brain gives rise to the entire stream of consciousness. The “I” is not a combination of body parts or brain states or bits of information, but a unity of selfness over time, a single locus that is nowhere in particular. Free will is not a causal chain of events and states, by definition. Although the combinatorial aspect of meaning has been worked out (how words or ideas combine into the meanings of sentences or propositions), the core of meaning— the simple act of referring to something—remains a puzzle, because it stands strangely apart from any causal connection between the thing referred to and the person referring."
+
+Why spatial metaphors ("dragging and dropping", "bring on board", "push out" a commitment, etc.) are so powerful:
+"Evolutionary change often works by copying body parts and tinkering with the copy. For example, insects' mouth parts are modified legs. A similar process may have given us our language of thought. Suppose ancestral circuits for reasoning about space and force were copied, the copy's connections to the eyes and muscles were severed, and references to the physical world were bleached out. The circuits could serve as a scaffolding whose slots are filled with symbols for more abstract concerns like states, possessions, ideas, and desires. The circuits would retain their computational abilities, continuing to reckon about entities being in one state at a time, shifting from state to state, and overcoming entities with opposite valence. When the new, abstract domain has a logical structure that mirrors objects in motion—a traffic light has one color at a time but flips between them; contested social interactions are determined by the stronger of two wills—the old circuits can do useful inferential work. They divulge their ancestry as space- and force-simulators by the metaphors they invite, a kind of vestigial cognitive organ."

@@ -1,0 +1,32 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{ninety-tangent}
+\beginpicture
+\setcoordinatesystem units <0.8333mm,0.1333mm>
+\setplotarea x from 0 to 120, y from 0 to 600
+\axis bottom label {$\theta$} ticks 
+	numbered from 0 to 120 by 15
+	unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+	numbered from 0 to 600 by 100
+	unlabeled short quantity 13 /
+\put {$\rm H \perp \hat{c}$} at 90 50
+%\multiput {$\circ$} at "/users/alison/angdata/stI/7a/tangent/lowt/lotang.7a.strip"
+\multiput {$\circ$} at "lotang.7a.strip"
+%\multiput {$\diamond$} at "/users/angdata/stI/7a/ninety/lowt/total90.7a.strip"
+\multiput {$\diamond$} at "total90.7a.strip"
+\endpicture
+%\caption[Comparison of the effect of the two definitions of $\rm H_{c2}$ on
+%$\rm H_{c2}(\theta)$.]{Comparison of the effect  of the  two definitions of
+%$\rm H_{c2}$   on $\rm H_{c2}(\theta)$.   $\circ$,  tangent  definition;
+%$\diamond$, 90\% definition.  Data are for a $\rm  T_c$  = 1.53 K sample at
+%T/T$\rm  _c$ =  0.29.  The 90\%  method tends  to  produce  slightly higher
+%numbers for the  critical fields,  but  there  is no systematic  difference
+%between the shapes of the curves for the two analysis methods.}
+\end{figure}
+\end{document}

@@ -1,0 +1,37 @@
+(setq float-ouput-format "4e")
+"4e"
+14.8 ohms for the primary coil
+(/  14.8 2)
+7.4000 ohms per wrap of primary coil
+30 mm is length of primary
+0.102 mm is diameter of 38 ga. wire
+4.0 mm is ID of coil
+number of wraps per unit length is
+2 per 0.102 mm or
+(/ 2.0 0.102)
+19.6078
+N/L = 19.6 /mm
+(* 1000 19.6)
+19600.0000 /m
+Modulation field is (4pi e-7 Henries/m)(10e-3 A) (1.96e4)
+(* pi 1.96e4 1e-3)
+61.5752
+(* 4.0e-7 61.5752 1e4)
+0.2463 gauss is the primary modulation field assuming perfect wraps
+
+(* 2.0 pi 2.0 (/ 30 0.102))
+3695.9914 ;length of wire per wrap in mm
+(/ 3695 1e3)
+3.6950 length per wrap in m
+
+2.78 ohms per meter is the resistance per unit length of 38 ga. wire
+(* 2.78 3.695 2.0)
+20.5442 = expected total resistance of the modulation coil
+14.8 ohms = actual total resistance of the modulation coil
+(* (/ 14.8 20.5) 0.2463)
+
+0.1778 gauss = best estimate of the actual modulation field at middle of coil
+0.17 gauss = best estimate of modulation field seen by samples.
+
+
+

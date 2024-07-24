@@ -1,0 +1,41 @@
+\documentstyle[12pt]{report}
+\headheight 8pt
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{hcfig}
+%H_c(T) as derived from H_{c2}(\theta) fits for C_4KHg 8b and 7a
+\beginpicture
+\setcoordinatesystem units <100mm,0.8333mm>
+\setplotarea x from 0 to 1, y from 0 to 120
+\axis bottom label {Reduced temperature} ticks 
+ numbered from 0 to 1 by 0.2
+ unlabeled short quantity 11 /
+\axis left label {\lines {$\rm H_c$\cr (gauss)\cr}} ticks
+ numbered from 0 to 120 by 20
+ unlabeled short quantity 13 /
+%\multiput {$\bigtriangleup$} at /users/alison/angdata/stI/7a/tangent/hctemp.dat
+\multiput {$\bigtriangleup$} at "hctemp.7a.scaled"
+%\multiput {$\bigcirc$} at /users/alison/angdata/stI/8b/hctemp.dat
+\multiput {$\bigcirc$} at "hctemp.8b.scaled"
+%\multiput {$\diamond$} at /users/alison/angdata/stI/8b/hctemp.lfit
+\multiput {$\diamond$} at "hctemp.lfit"
+%\multiput {$\circ$} at /users/alison/angdata/stI/8b/hctemp.qfit
+\multiput {$\circ$} at "hctemp.qfit"
+%\multiput {$\times$} at /users/alison/angdata/stI/8b/hctemp.theor
+\multiput {$\times$} at "hctemp.theor"
+\endpicture
+\caption[Thermodynamic critical fields obtained from $\rm H_{c2}(\theta)$
+fits versus temperature.]{Thermodynamic critical  fields obtained from $\rm
+H_{c2}(\theta)$ fits versus temperature.  $\bigtriangleup$, data for a $\rm
+T_c$ = 1.53  K sample; $\bigcirc$,  data for a $\rm  T_c$ = 1.54 K  sample;
+$\diamond$, a linear fit to the data with $\rm H_c(0)$  = 89.4  g and $\cal
+R$ = 1.9e-3; $\circ$, a quadratic fit to the data with $\rm  H_c(0)$ = 66.6
+g  and $\cal R$ =  1.3e-2; $\times$, $\rm  H_c(t)$  calculated   using  the
+specific heat  data of  Alexander {\em et  al.}\cite{alexander81} with $\rm
+H_{c}(0)$ = 114.6 g.}
+\end{figure}
+\end{document}

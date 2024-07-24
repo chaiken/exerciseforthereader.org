@@ -1,0 +1,34 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\beginpicture
+%6b/H 
+\setcoordinatesystem units <1.228cm,0.8cm> 
+\setplotarea x from 0 to 11.5, y from 0 to 10
+\axis bottom label {$\ell$} ticks 
+        numbered from 0 to 11 by 1
+        unlabeled short quantity 24 /
+\put {a)} at 0.5 9
+\multiput {$\circ$} at "6bhspect.scale"
+%16a neutron data 
+\setcoordinatesystem units <1.228cm,0.8cm> point at 0 13
+\setplotarea x from 0 to 11.5, y from 0 to 10
+\axis bottom label {$\ell$} ticks
+        numbered from 0 to 11 by 1
+        unlabeled short quantity 24 /
+\put {b)} at 0.5 9
+\multiput {$\circ$} at "16aspect.scale"
+\endpicture
+\caption[Neutron diffraction spectra of a gold  $\rm C_4KHg$ specimen with
+hydrogen and a pink  sample without hydrogen.]{Neutron  diffraction spectra
+of a gold $\rm C_4KHg$ specimen with hydrogen  and a pink  specimen without
+hydrogen.  Note the lack of $\beta$ phase in either sample.  a) Spectrum of
+a gold sample whose $\rm T_c$ was 0.84  K  before  hydrogenation and 1.54 K
+afterward.  b) Spectrum of a pink $\rm C_4KHg$ sample.}
+\label{14cneut}
+\end{figure}
+\end{document}

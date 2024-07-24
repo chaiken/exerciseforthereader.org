@@ -1,0 +1,34 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\beginpicture
+\setcoordinatesystem units <0.8333mm,10mm>
+\setplotarea x from 0 to 120, y from 0 to 10
+\axis bottom label {$\theta$} ticks 
+	numbered from 0 to 120 by 15
+	unlabeled short quantity 25 /
+\axis left label {$\rm H_{c2}(\theta)/H_{c2}(0^{\circ})$} ticks
+	numbered from 0 to 10 by 2
+	unlabeled short quantity 11 /
+\put {$\rm H \perp \hat{c}$} at 90 2
+%\multiput {$\circ$} at "/users/alison/angdata/scaled/lotang.8b.scaled
+\multiput {$\circ$} at "lotang.8b.scaled"
+%\multiput {$\bullet$} at /users/alison/angdata/scaled/folded.8b.scaled
+\multiput {$\bullet$} at "folded.8b.scaled"
+%\multiput {$\times$} at /users/alison/angdata/scaled/hitang.8b.scaled
+\multiput {$\times$} at "hitang.8b.scaled"
+\endpicture
+\caption[Demonstration of temperature-dependent anisotropy parameter
+$\epsilon$  in    $\rm C_4KHg$.]{Demonstration    of  temperature-dependent
+anisotropy parameter  $\epsilon$   in $\rm  C_4KHg$.  1/$\epsilon$ is  $\rm
+H_{c2}(90^{\circ})/H_{c2}(0^{\circ})$.  Data  is  for a $\rm  T_c$ = 1.54 K
+$\rm   C_4KHg$  sample.  ($\circ$),   t  = 0.29.   ($\bullet$),  t  = 0.55.
+($\times$), t = 0.76.  All $\rm  H_{c2}(0^{\circ})$ values  were determined
+from the data, not the fits, so that this plot is model-independent.}
+\label{epstemp}
+\end{figure}
+\end{document}

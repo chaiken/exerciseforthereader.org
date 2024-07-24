@@ -1,0 +1,415 @@
+<html>
+<header>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="GNU Emacs 19.34.1">
+<meta name="ProgId" content="GNU Emacs Document.   Best viewed with
+open source software.">
+<title>HPL Static Deflection System</title>
+</header>
+<body bgcolor="#ffefd5" vlink="#551a8b" alink="#ff0000" link="#0000ee" text="#000000">
+
+<!- Start of a HTML comment
+    Replace the gif file below with an photo/image of yourself
+End of a HTML comment ->
+
+<h1><p align="center">Building a Temperature-Dependent Static
+Deflection Measurement System at HPL</p></h1>
+
+
+<em>Goal:</em> Observe DNA melting and protein denaturation via
+      changes in static cantilever deflection as a function of
+      solution temperature.
+
+<h3>Why build new setup at HPL:</h3>
+
+
+<ol>
+
+<li>Reduce utilization of <a href="min_static.html">measurement system
+at UCB.</a></li>
+
+<li>Potential improvements over Berkeley system:</li>
+
+   <menu>
+   
+   <li>automated temperature scanning without need for optical
+   realignment;</li>
+
+   <li>accomodation of multiple different cantilever designs;</li>
+
+   <li>lower noise with AC modulation;</li>
+
+   <li>sealed cell to solve evaporation problem;</li>
+
+   <li>better thermal uniformity (UCB chip contacted only at
+   edges);</li>
+
+   <li>semi-permanent mounting on microscope (?);</li>
+
+   <li>possibility of optical heating of biomolecules (essentially
+   photothermal spectroscopy).</li>
+
+   </menu>
+
+</ol>
+
+<h3>Desired properties of system:</h3>
+
+<menu>
+
+   <li>low noise;</li>
+
+   <li>rapid data acquisition;</li>
+
+   <li>easy to change cantilevers;</li>
+
+   <li>easy to clean cell;</li>
+
+   <li>minimum analyte volume to reduce reagent cost;</li>
+
+   <li>uniform, well-controlled temperature;</li>
+
+   <li>able to accomodate thermal expansion of solution up to 90&#176;C;</li>
+
+   <li>multiple cantilevers/cell for redundant measurements (?);</li>
+
+   <li>differential measurement capability (?).</li>
+
+</menu>
+
+<h3>Discussion</h3>
+
+<p>
+These desired properties imply a cantilever chip mounted with a spring
+clip inside a glass well with a removable cover.  Use of a well rather
+than channels will minimize reagent use.  The well and an o-ring
+groove will be formed by etching a glass wafer.  The flat cover will
+be held down with a low-force spring clip to accomodate the thermal
+expansion of the solution.  The assembly will be mounted inside a
+copper block with an integrated temperature sensor and with a hotplate
+or Peltier heater attached.  The fact that the heater surrounds the
+glass wells will minimize convection.  Hole(s) will have to be drilled
+for optical access.  The fluid cell will sit in a recess milled in the
+copper block to facilitate alignment with the optical access hole.</p>
+
+<p>The Berkeley design has two ports per well in order to allow air to
+escape.  A cell made from two bonded wafers could have two ports for
+each well within the o-ring.  Therefore the feature of pipetting into
+one port while having the cantilever in the other could also be
+preserved.  However caution is necessary so that fluids from the two
+wells don't mix either during dispensing or heating.  This is
+especially true if the illumination comes from the filling side, as
+then the cells must be full.  The Berkeley Microfab Lab has a
+wafer-bonder for glass.  The Berkeley stockroom has 4" borosilicate
+($10) and quartz wafers ($40) in stock.
+</p>
+
+<p>
+A sturdy clip that accomodates multiple cantilever designs is
+desirable.  The clip doesn't have to make electrical contact or allow
+for actuation of the cantilever.  It must be possible to mount a
+cantilever, seal the fluidic chamber and then locate the laser beam
+onto the cantilever tip.  Reflections from the glass may complicate
+matters.  If a cantilever with a tip is used, the laser beam must be
+incident on the tipless side.  Probably attaching the cantilever to
+the lid and then the lid to the wafer with the cells is the easiest
+method.
+</p>
+
+<p>One possibility for removing the thermal-expansion-induced
+deflection of the cantilever is to put matching films on either side.
+The side to be functionalized can have a Cr/Au coating, while the
+other side can have a plain Cr coating.  Whatever the initial
+deflection (unimportant if not too large), we expect no temperature
+dependence if the thickness-TCE products of the two sides are equal.
+While this balancing will indubitably not completely eliminate any
+temperature-dependent background, it should substantially reduce it.
+Coating one side of the cantilevers at a time with an evaporator
+should not be difficult.
+</p>
+
+<h3>First pass at cell design</h3>
+
+<p align="center"><img src="cell.jpg"></p>
+
+<p>Here I've drawn the o-ring as rectangular, although clearly the
+task of finding the right size would be made easier by using a round
+o-ring.
+</p>
+
+<p>
+The spring clamp is copied from Veeco's fluid cell.  A piece of wire
+is formed into a torsion spring at its attachment point where it is
+epoxied to the glass.  The wire's other end goes through a small hole
+in the glass (sealed how?) and forms a clip that holds the chip.  The
+pressure on the chip is determined by a coil spring around the wire
+that is in compression.  Because the lid is the removable component,
+the mounting of the cantilever can be done under a convenient separate
+stereo zoom microscope.   
+</p>
+
+<p>It's not clear from this drawing how the laser beam would be
+incident on the cantilever chip.  I'm assuming that the position and
+tilt of the chip can be chosen so that the laser can be placed at a
+reasonable distance and the reflection can be collected by a detector.
+The large size of the spring clamp compared to the chip makes this
+task more difficult.  A major question is whether there's a workable
+design with one-sided optical access so that the lower side can be
+clamped on a heater.  The question comes down to: will capillary waves
+on the top surface or distortion in the cap ruin the image?  A system
+which allows two-sided access would permit using the Berkeley chips
+but would complicate the optics and thermal design.  Perhaps the
+one-sided optical access could be from the bottom.  Another point is
+that the laser should reach the cantilever by going through only
+unmachined, unetched glass surfaces, not the tilted flat that is used
+for mounting.
+</p>
+
+<h3>Choice of cantilevers:</h3>
+
+<p>The size of the paddle at the end of the cantilever is constrained
+by the requirement that the mark not walk off the end as it deflects.
+At 0.2 microns/K (Berkeley number), over 80 C, the tip deflects 16
+microns.  Assuming that thermally induced deflections are not
+cancelled by proper coating, the paddle at the end of the cantilever
+must be 50-100 microns in diameter.  The lens diameter is about 1 mm;
+lens focal length is about 5 cm.  Final beam diameter = lambda * f/D =
+33.5 microns.
+</p>
+
+<p>
+According to <a href="min_2darray.pdf">Min's paper</a> the deflection
+deltaH due to a stress sigma (in J/m<sup>2</sup> or N/m) is given by
+Stoney's Formula:</p>
+
+<p align="center">deltaH = (/ (* 3 sigma (- 1 nu) (* L L)) (* E d d))</p>
+
+<p>
+where nu is the Poisson ratio (0.3 for SiN), E is modulus
+(1.8x10<sup>11</sup> N/m<sup>2</sup> for SiN) and L and d are length
+and thickness.  The Si bulk modulus is 1.5x10<sup>11</sup>
+N/m<sup>2</sup> and that its Poisson ratio is 0.17.  Thus (/ (- 1 nu)
+E) for SiN is 3.9x10<sup>-12</sup> m<sup>2</sup>/N and for Si is
+5.5x10<sup>-12</sup> m<sup>2</sup>/N, giving bulk Si a 40% advantage
+for the same cantilever dimensions.  Si also has a higher reflectivity
+in the red although this may not matter with a thick enough
+metallization.  Sensitivity will scale with (L/d)<sup>2</sup>.  Let's
+call ((1 - nu)/E)*(L/d)<sup>2</sup> the "compliance."  Here are the 
+ <a href="cantilever_compare.el">calculations</a> for the table.
+</p>
+
+<table border="1" width="100%">
+
+    <tr> 
+    <td>Maker</td> <td>Material</td> <td>L (&#181;m)</td> <td>d
+    (&#181;m)</td> <td>compliance (&#181;m/(N/m))
+    </td> <td>Tipless?</td>
+     <td>Array?</td> <td>Width (&#181;m)</td>
+     <tr>
+
+    <tr>
+    <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td></td> <td></td>
+    </tr>
+
+    <tr><td><a href="min_2darray.pdf">Min, UCB, 2004</a></td> <td>poly
+    SiN</td> <td>200</td> <td>0.5</td> <td>0.62</td>
+    <td>Yes</td> <td>Yes</td> <td>40</td>
+    </tr>
+
+    <tr>
+    <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td></td> <td></td>
+    </tr>
+
+    <tr>
+    <td><a href="cantilever4.pdf">Wu, UCB 2001</a></td> <td>poly SiN</td>
+    <td>600</td> <td>0.65</td>
+    <td>3.3</td> <td>Yes</td> <td>Yes</td> <td>?</td>
+    </tr>
+
+    <tr>
+    <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td></td> <td></td>
+    </tr>
+
+    <tr>
+    <td><a
+    href="https://www.veecoprobes.com/product_detail.asp?NQPN=MLCT">Veeco
+    MLCT-AUHW 00-103-0925</a></td> <td>poly SiN</td>
+    <td>320</td>
+    <td>0.6</td>
+    <td>1.1</td> <td>No</td>
+    <td>No</td> <td>20</td>
+    </tr>
+
+    <tr>
+    <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td></td> <td></td>
+    </tr>
+
+    <tr>
+    <td><a
+    href="http://www.nanoworld.com/print/HN-01.html">Nanoworld</a>
+    Hybrid-nitride #2</td>
+    <td>poly SiN</td> <td>200</td> <td>0.5</td> <td>0.62</td> <td>No</td>
+    <td>2</td> <td>40</td>
+    </tr>
+
+    <tr>
+    <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td></td> <td></td>
+    </tr>
+
+    <tr>
+    <td><a
+    href="http://www.nanoworld.com/c/probes_catalog.html">Nanoworld</a>
+    Arrow TL-2 or TL-8</td>
+    <td>bulk Si</td> <td>500</td> <td>1.0</td> <td>1.4</td> <td>Yes</td>
+    <td>2 or 8</td> <td>100</td>
+    </tr>
+
+    <tr>
+    <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td></td> <td></td>
+    </tr>
+
+    <tr>
+    <td><a
+    href="http://www.rasy.com/Products/Levers/BioLever.shtml">Asylum</a>
+    Biolever</td>
+    <td>Si</td> <td>100</td> <td>0.16</td> <td>2.2</td> <td>No</td>
+    <td>2</td> <td>30</td>
+    </tr>
+
+    <tr>
+    <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td></td> <td></td>
+    </tr>
+
+    <tr>
+    <td><a
+    href="http://www.spmtips.com/csc12/tipless/cr-au">MikroMasch</a> CSC12/Tipless/Cr-Au
+   
+</td>
+    <td>Si</td> <td>350</td> <td>1</td> <td>0.68</td>
+    <td>Yes</td>
+    <td>3</td> <td>35</td>
+    </tr>
+
+    <tr>
+    <td><a href="ibmbioarray.pdf">Original IBM biosensing
+    work</a></td> <td>Si</td> <td>500</td> <td>1</td> <td>1.4</td>
+    <td>Yes</td>
+    <td>Yes</td> <td>100</td>
+    </tr>
+
+    <tr>
+    <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td></td> <td></td>
+    </tr>
+
+    </tr>
+
+</table>
+
+
+<p>
+<em>Conclusion:</em> cantilevers with similar sensitivity to the
+Berkeley ones are commercially available.  The best choice might the
+NanoWorld Arrows, which combine reasonable sensitivity with
+experimentally convenient width and are available tipless and in array
+form.  (However, the specifications of the Arrows show that the
+thickness may vary by up to a factor of 5!)  The Arrow TL-2
+cantilevers cost $18 each in lots of 50.  Alternately similar tipless
+bulk Si cantilevers could be made here at HPL -- they are much simpler
+than the heated-tip, electrically contacted Porcupine cantilevers we
+already have.
+</p>
+
+<h3>Further discussion of ? items</h3>
+
+<menu>
+
+<li>Would it be desirable to build the system around the new
+   microscope, which isn't being used?  Then fluorescence could be
+   observed while performing the deflection experiment.
+</li>
+
+<li>Would it worth the extra effort to have multiple cantilevers per
+   cell to get parallel redundant measurements?  Having multiple
+   cantilevers would give some signal averaging and reduce the chances
+   of an outlier result due to a single bad device.
+</li>
+
+<li>Will differential measurements improve sensitivity or ease
+interpretation?  Two separate wells could be located in the same glass
+block, one a test and one a control cell.  For a differential
+measurement to work well, the two wells must be at precisely the same
+temperature; the two devices must be quite similar in properties; and
+a sufficient equilibration time must be allowed after pipetting
+different solutions into the two different wells.
+</li>
+
+<li>Either multiple cantilevers per cell or a differential measurement
+might be most easily accomplished with the type of CCD setup that UCB
+has.  For two or one devices, a four-quadrant detector (as used in
+AFMs or the ARS laser writing system) should be adequate.
+</li>
+
+<li>
+The old DI AFM has a 670 nm diode laser that looks through a tilted
+dichroic mirror at the cantilever, which is tilted up at an angle.
+The reflected light goes back through the mirror (which is transparent
+to red) and is incident on the four-quadrant detector.  The video
+camera illumination is mostly reflected from the dichroic
+(interference-based) mirror.
+</li>
+
+</menu>
+
+<h3>Potential Problems</h3>
+
+<menu>
+
+<li>Leakage of fluid at elevated temperatures.  Or cracking of glass
+parts.
+</li>
+
+<li>Stress causes warping of cantilever resulting in unusable reflection.
+</li>
+
+<li>Capillary waves on the top surface of the fluid will cause noise
+in the detector if the meniscus doesn't touch the cap.
+</li>
+
+<li>Problems with non-specific binding and fouling of the cell.
+</li>
+
+<li>Great difficulty in aligning the system (that is, getting the
+laser spot onto the cantilever tip or the reflection onto the detector
+after replacing the lid).
+</li>
+
+<li>Differential measurement fails due to fabrication differences
+between cantilevers or temperature gradients.
+</li>
+
+<li>Cantilever moves around during temperature scan.
+</li>
+
+</menu>
+
+<p><hr><p>
+
+<!- the lines below show the last modified time and URL for this
+document (you
+    don't need to modify anything below here.  ->
+
+Last modified: <!--#echo var="LAST_MODIFIED" -->
+<br>
+This document is: http://<!--#echo var="SERVER_NAME" --><!--#echo var="DOCUMENT_URI" -->
+
+</body>
+</html>

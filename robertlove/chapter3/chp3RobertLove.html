@@ -1,0 +1,2043 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Linux Kernel Development, 2nd Edition - $39.99</title>
+
+
+  <script language="JavaScript" type="text/javascript">
+<!-- ;
+var newwindow = ''
+function popitup(url) {
+if (newwindow.location && !newwindow.closed) {
+newwindow.location.href = url;
+newwindow.focus(); }
+else {
+newwindow=window.open(url,'htmlname','width=404,height=316,resizable=1');}
+}
+function tidy() {
+if (newwindow.location && !newwindow.closed) {
+newwindow.close(); }
+}
+// Based on JavaScript provided by Peter Curtis at www.pcurtis.com -->
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta name="modified_dt" content="Fri, 22 Dec 2006 05:21:25 GMT" />
+
+  <meta name="Keywords" content="9780672327209 0672327201" />
+
+  <script language="JavaScript" src="/display/common/javascript/global.js" type="text/JavaScript"></script>
+  <link href="/display/InformIT/css/informit_2005-04-29.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body onunload="tidy()
+<div class=" toc="">
+
+<h1>The Linux Process Scheduler</h1>
+
+<div id="prodInfo">
+<ul>
+
+  <li>By <a href="http://www.informit.com/authors/bio.asp?a=43e55cd3-67cd-44f2-ba50-5c66cd21abb1">Robert
+Love</a>.</li>
+
+  <li>Sample Chapter is provided courtesy of <a href="http://www.samspublishing.com/">Sams</a>.</li>
+
+  <li>Date: Nov 13, 2003.</li>
+
+</ul>
+
+</div>
+
+<h3>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <img style="width: 51px; height: 66px;" alt="" src="ShowCover.asp.jpg" /><br />
+
+</h3>
+
+<h3>Contents</h3>
+
+<ol>
+
+  <li><a href="http://www.informit.com/articles/article.asp?p=101760&amp;seqNum=1">Policy</a></li>
+
+  <li><a href="http://www.informit.com/articles/article.asp?p=101760&amp;seqNum=2">The
+Scheduling Algorithm</a></li>
+
+  <li><a href="http://www.informit.com/articles/article.asp?p=101760&amp;seqNum=3">Preemption
+and Context Switching</a></li>
+
+  <li><a href="http://www.informit.com/articles/article.asp?p=101760&amp;seqNum=4">Real-Time</a></li>
+
+  <li>Scheduler-Related System Calls</li>
+
+</ol>
+
+<div nd="1" id="intro">
+<h3>Article Description</h3>
+
+Learn
+all of your favorite Linux scheduling ins and outs: policy, the
+scheduling algorithm, preemption and context switching, real-time
+scheduling, and Scheduler-Related System Calls.<br />
+
+<h2>Chapter 3: Scheduling</h2>
+
+<p>The scheduler is the component of the kernel that selects
+which process to run next. The scheduler (or process scheduler, as it
+is sometimes called) can be viewed as the code that divides the finite
+resource of processor time between the runnable processes on a system.
+The scheduler is the basis of a multitasking operating system such as
+Linux. By deciding what process can run, the scheduler is responsible
+for best utilizing the system and giving the impression that multiple
+processes are simultaneously executing.</p>
+
+<p> The idea behind the scheduler is simple. To best utilize
+processor time, assuming there are runnable processes, a process should
+always be running. If there are more processes than processors in a
+system, some processes will not always be running. These processes are
+waiting to run. Deciding what process runs next, given a set of
+runnable processes, is a fundamental decision the scheduler must make.</p>
+
+<p>Multitasking operating systems come in two flavors:
+cooperative multitasking and preemptive multitasking. Linux, like all
+Unix variants and most modern operating systems, provides preemptive
+multitasking. In preemptive multitasking, the scheduler decides when a
+process is to cease running and a new process is to resume running. The
+act of involuntarily suspending a running process is called preemption.
+The time a process runs before it is preempted is predetermined, and is
+called the timeslice of the process. The timeslice, in effect, gives
+each process a slice of the processor's time. Managing the timeslice
+enables the scheduler to make global scheduling decisions for the
+system. It also prevents any one process from monopolizing the system.
+As we will see, this timeslice is dynamically calculated in the Linux
+scheduler to provide some interesting benefits.</p>
+
+<p>Conversely, in cooperative multitasking, a process does not
+stop running until it voluntary decides to do so. The act of a process
+voluntarily suspending itself is called yielding. The shortcomings of
+this approach are numerous: The scheduler cannot make global decisions
+regarding how long processes run, processes can monopolize the
+processor for longer than the user desires, and a hung process that
+never yields can potentially bring down the entire system. Thankfully,
+most operating systems designed in the last decade have provided
+preemptive multitasking, with Mac OS 9 and earlier being the most
+notable exceptions. Of course, Unix has been preemptively multitasked
+since the beginning.</p>
+
+<p>During the 2.5 kernel series, the Linux kernel received a
+scheduler overhaul. A new scheduler, commonly called the O(1) scheduler
+because of its algorithmic behavior<sup>1</sup>, solved the
+shortcomings of the previous Linux scheduler and introduced powerful
+new features and performance characteristics. In this section, we will
+discuss the fundamentals of scheduler design and how they apply to the
+new O(1) scheduler and its goals, design, implementation, algorithms,
+and related system calls.</p>
+
+<h2>Policy</h2>
+
+<p>Policy is the behavior of the scheduler that determines what
+runs when. A
+scheduler's policy often determines the overall feel of a system and is
+responsible for optimally utilizing processor time. Therefore, it is
+very
+important.</p>
+
+<h3>I/O-Bound Versus Processor-Bound Processes</h3>
+
+<p>Processes can be classified as either I/O-bound or
+processor-bound. The
+former is characterized as a process that spends much of its time
+submitting and
+waiting on I/O requests. Consequently, such a process is often
+runnable, but
+only for short periods, because it will eventually block waiting on
+more I/O
+(this is any type of I/O, such as keyboard activity, and not just disk
+I/O).
+Conversely, processor-bound processes spend much of their time
+executing code.
+They tend to run until they are preempted because they do not block on
+I/O
+requests very often. Because they are not I/O-driven, however, system
+response
+does not dictate that the scheduler run them often. The scheduler
+policy for
+processor-bound processes, therefore, tends to run such processes less
+frequently but for longer periods. Of course, these classifications are
+not
+mutually exclusive. The scheduler policy in Unix variants tends to
+explicitly
+favor I/O-bound processes.</p>
+
+<p>The scheduling policy in a system must attempt to satisfy two
+conflicting
+goals: fast process response time (low latency) and high process
+throughput. To
+satisfy these requirements, schedulers often employ complex algorithms
+to
+determine the most worthwhile process to run, while not compromising
+fairness to
+other, lower priority, processes. Favoring I/O-bound processes provides
+improved
+process response time, because interactive processes are I/O-bound.
+Linux, to
+provide good interactive response, optimizes for process response (low
+latency),
+thus favoring I/O-bound processes over processor-bound processors. As
+you will
+see, this is done in a way that does not neglect processor-bound
+processes.</p>
+
+<h3>Process Priority</h3>
+
+<p>A common type of scheduling algorithm is priority-based
+scheduling. The idea
+is to rank processes based on their worth and need for processor time.
+Processes
+with a higher priority will run before those with a lower priority,
+while
+processes with the same priority are scheduled round-robin (one after
+the next,
+repeating). On some systems, Linux included, processes with a higher
+priority
+also receive a longer timeslice. The runnable process with timeslice
+remaining
+and the highest priority always runs. Both the user and the system may
+set a
+processes priority to influence the scheduling behavior of the system.</p>
+
+<p>Linux builds on this idea and provides dynamic priority-based
+scheduling.
+This concept begins with the initial base priority, and then enables
+the
+scheduler to increase or decrease the priority dynamically to fulfill
+scheduling
+objectives. For example, a process that is spending more time waiting
+on I/O
+than running is clearly I/O bound. Under Linux, it receives an elevated
+dynamic
+priority. As a counterexample, a process that continually uses up its
+entire
+timeslice is processor bound&mdash;it would receive a lowered
+dynamic
+priority.</p>
+
+<p>The Linux kernel implements two separate priority ranges. The
+first is the
+nice value, a number from &ndash;20 to 19 with a default of zero.
+Larger nice
+values correspond to a lower priority&mdash;you are being nice to
+the other
+processes on the system. Processes with a lower nice value (higher
+priority) run
+before processes with a higher nice value (lower priority). The nice
+value also
+helps determine how long a timeslice the process receives. A process
+with a nice
+value of &ndash;20 receives the maximum timeslice, whereas a
+process with a nice
+value of 19 receives the minimum timeslice. Nice values are the
+standard
+priority range used in all Unix systems.</p>
+
+<p>The second range is the real-time priority, which will be
+discussed later. By
+default, it ranges from zero to 99. All real-time processes are at a
+higher
+priority than normal processes. Linux implements real-time priorities
+in
+accordance with POSIX. Most modern Unix systems implement a similar
+scheme.</p>
+
+<p><sup>1</sup><tt>O(1)</tt> is an
+example of big-o notation. Basically, it
+means the scheduler can do its thing in constant time, regardless of
+the size of
+the input. A full explanation of big-o notation is in Appendix D, for
+the
+curious.</p>
+
+<h3>Timeslice</h3>
+
+<p>The timeslice<sup>2</sup> is the numeric value
+that represents how long a
+task can run until it is preempted. The scheduler policy must dictate a
+default
+timeslice, which is not simple. A timeslice that is too long will cause
+the
+system to have poor interactive performance; the system will no longer
+feel as
+if applications are being concurrently executed. A timeslice that is
+too short
+will cause significant amounts of processor time to be wasted on the
+overhead of
+switching processes, as a significant percentage of the system's time
+will
+be spent switching from one process with a short timeslice to the next.
+Furthermore, the conflicting goals of I/O-bound versus processor-bound
+processes
+again arise; I/O-bound processes do not need longer timeslices, whereas
+processor-bound processes crave long timeslices (to keep their caches
+hot, for
+example).</p>
+
+<p>With this argument, it would seem that any long timeslice
+would result in
+poor interactive performance. In many operating systems, this
+observation is
+taken to heart, and the default timeslice is rather low&mdash;for
+example, 20ms.
+Linux, however, takes advantage of the fact that the highest priority
+process
+always runs. The Linux scheduler bumps the priority of interactive
+tasks,
+enabling them to run more frequently. Consequently, the Linux scheduler
+offers a
+relatively high default timeslice (see Table 3.1). Furthermore, the
+Linux
+scheduler dynamically determines the timeslice of a process based on
+priority.
+This enables higher priority, allegedly more important, processes to
+run longer
+and more often. Implementing dynamic timeslices and priorities provides
+robust
+scheduling performance.</p>
+
+<b><a href="javascript:popitup('03fig01.jpg')"><img src="th03fig01.jpg" alt="Figure 3.1" title="Process timeslice calculation" align="left" border="0" height="49" hspace="5" vspace="5" width="100" />Figure 3.1</a> Process timeslice
+calculation.</b>
+<p></p>
+
+<p>Note that a process does not have to use all its timeslice at
+once. For
+example, a process with a 100 millisecond timeslice does not have to
+run for 100
+milliseconds in one go or risk losing the remaining timeslice. Instead,
+the
+process can run on five different reschedules for 20 milliseconds each.
+Thus, a
+large timeslice also benefits interactive tasks&mdash;while they do
+not need such
+a large timeslice all at once, it ensures they remain runnable for as
+long as
+possible.</p>
+
+<p>When a process's timeslice runs out, the process is considered
+expired.
+A process with no timeslice is not eligible to run until all other
+processes
+have exhausted their timeslice (that is, they all have zero timeslice
+remaining). At that point, the timeslices for all processes are
+recalculated.
+The Linux scheduler employs an interesting algorithm for handling
+timeslice
+exhaustion that is discussed in a later section.</p>
+
+<p><sup>2</sup> Timeslice is sometimes called quantum
+or processor slice in
+other systems. Linux calls it timeslice.</p>
+
+<h3>Process Preemption</h3>
+
+<p>As mentioned, the Linux operating system is preemptive. When a
+process enters
+the <tt>TASK_RUNNING</tt> state, the kernel checks whether
+its priority is
+higher than the priority of the currently executing process. If it is,
+the
+scheduler is invoked to pick a new process to run (presumably the
+process that
+just became runnable). Additionally, when a process's timeslice reaches
+zero, it is preempted, and the scheduler is invoked to select a new
+process.</p>
+
+<h3>The Scheduling Policy in Action</h3>
+
+<p>Consider a system with two runnable tasks: a text editor and a
+video encoder.
+The text editor is I/O-bound because it spends nearly all its time
+waiting for
+user key presses (no matter how fast the user types, it is not that
+fast).
+Despite this, when it does receive a key press, the user expects the
+editor to
+respond immediately. Conversely, the video encoder is processor-bound.
+Aside
+from reading the raw data stream from the disk and later writing the
+resulting
+video, the encoder spends all its time applying the video codec to the
+raw data.
+It does not have any strong time constraints on when it
+runs&mdash;if it started
+running now or in half a second, the user could not tell. Of course,
+the sooner
+it finishes the better.</p>
+
+<p>In this system, the scheduler gives the text editor a higher
+priority and
+larger timeslice than the video encoder, because the text editor is
+interactive.
+The text editor has plenty of timeslice available. Furthermore, because
+the text
+editor has a higher priority, it is capable of preempting the video
+encoder when
+needed. This ensure the text editor is capable of responding to user
+key presses
+immediately. This is to the detriment of the video encoder, but because
+the text
+editor runs only intermittently, the video encoder can monopolize the
+remaining
+time. This optimizes the performance of both applications.</p>
+
+<div id="text">
+<h2>The Scheduling Algorithm</h2>
+
+<p>The Linux scheduler is defined in <tt>kernel/sched.c</tt>.
+The scheduler
+algorithm and supporting code went through a large rewrite early in the
+2.5
+kernel development series. Consequently, the scheduler code is entirely
+new and
+unlike the scheduler in previous kernels. The new scheduler was
+designed to
+accomplish specific goals:</p>
+
+<ul>
+
+  <li>
+    <p>Implement fully <tt>O(1)</tt> scheduling.
+Every algorithm in the new
+scheduler completes in constant-time, regardless of the number of
+running
+processes or any other input.</p>
+
+  </li>
+
+  <li>
+    <p>Implement perfect SMP scalability. Each processor has its
+own locking and
+individual runqueue.</p>
+
+  </li>
+
+  <li>
+    <p>Implement improved SMP affinity. Naturally attempt to
+group tasks to a
+specific CPU and continue to run them there. Only migrate tasks from
+one CPU to
+another to resolve imbalances in runqueue sizes.</p>
+
+  </li>
+
+  <li>
+    <p>Provide good interactive performance. Even during
+considerable system
+load, the system should react and schedule interactive tasks
+immediately.</p>
+
+  </li>
+
+  <li>
+    <p>Provide fairness. No process should find itself starved of
+timeslice for
+any reasonable amount of time. Likewise, no process should receive an
+unfairly
+high amount of timeslice.</p>
+
+  </li>
+
+  <li>
+    <p>Optimize for the common case of only 1-2 runnable
+processes, yet scale
+well to multiple processors each with many processes.</p>
+
+  </li>
+
+</ul>
+
+<p>The new scheduler accomplished these goals.</p>
+
+<h3>Runqueues</h3>
+
+<p>The basic data structure in the scheduler is the runqueue. The
+runqueue is
+defined in <tt>kernel/sched.c</tt> as <tt>struct
+runqueue</tt>. The runqueue is
+the list of runnable processes on a given processor; there is one
+runqueue per
+processor. Each runnable process is on exactly one runqueue. The
+runqueue
+additionally contains per-processor scheduling information.
+Consequently, the
+runqueue is the primary scheduling data structure for each processor.
+Why
+<tt>kernel/sched.c</tt> and not <tt>include/linux/sched.h</tt>?
+Because it is
+desired to abstract away the scheduler code and provide only certain
+interfaces
+to the rest of the kernel.</p>
+
+<p>Let's look at the structure, with comments describing each
+field:</p>
+
+<pre>struct runqueue {<br /> spinlock_t lock; /* spin lock which protects this<br /> runqueue */<br /> unsigned long nr_running; /* number of runnable tasks */<br /> unsigned long nr_switches; /* number of contextswitches */<br /> unsigned long expired_timestamp; /* time of last array swap */<br /> unsigned long nr_uninterruptible; /* number of tasks in<br /> uinterruptible sleep */<br /> struct task_struct *curr; /* this processor's currently<br /> running task */<br /> struct task_struct *idle; /* this processor's idle task */<br /> struct mm_struct *prev_mm; /* mm_struct of last running task<br /> */<br /> struct prio_array *active; /* pointer to the active priority<br /> array */<br /> struct prio_array *expired; /* pointer to the expired<br /> priority array */<br /> struct prio_array arrays[2]; /* the actual priority arrays */<br /> int prev_cpu_load[NR_CPUS];/* load on each processor */<br /> struct task_struct *migration_thread; /* the migration thread on this<br /> processor */<br /> struct list_head migration_queue; /* the migration queue for this<br /> processor */<br /> atomic_t nr_iowait; /* number of tasks waiting on I/O<br /> */<br />}</pre>
+
+<p>Because runqueues are the core data structure in the
+scheduler, a group of
+macros is used to obtain specific runqueues. The macro
+<tt>cpu_rq(processor)</tt> returns a pointer to the
+runqueue associated with the
+given processor. Similarly, the macro <tt>this_rq()</tt>
+returns the runqueue of
+the current processor. Finally, the macro <tt>task_rq(task)</tt>
+returns a
+pointer to the runqueue on which the given task is queued.</p>
+
+<p>Before a runqueue can be manipulated, it must be locked
+(locking is discussed
+in-depth in Chapter 7, "Kernel Synchronization Introduction"). Because
+each runqueue is unique to the current processor, it is rare when a
+processor
+desires to lock a different processor's runqueue (it does happen,
+however,
+as we will see). The locking of the runqueue prohibits any changes to
+it while
+the lock-holder is reading or writing the runqueue's members. The most
+common way of locking a runqueue is when you want to lock the runqueue
+a
+specific task runs on. In that case, the <tt>task_rq_lock()</tt>
+and
+<tt>task_rq_unlock()</tt>functions are used:</p>
+
+<pre> struct runqueue *rq;<br /> unsigned long flags;<br /><br /> rq = task_rq_lock(task, &amp;flags);<br /> /* manipulate the task's runqueue */<br /> task_rq_unlock(rq, &amp;flags);</pre>
+
+<p>Alternatively, the method <tt>this_rq_lock()</tt>
+locks the current runqueue
+and <tt>rq_unlock(struct runqueue *rq)</tt> unlocks the
+given runqueue.</p>
+
+<p>To avoid deadlock, code that wants to lock multiple runqueues
+needs always to
+obtain the locks in the same order: by ascending runqueue address
+(again,
+Chapter 7 offers a full explanation). Example:</p>
+
+<pre> /* to lock ... */<br /> if (rq1 &lt; rq2) {<br /> spin_lock(&amp;rq1-&gt;lock);<br /> spin_lock(&amp;rq2-&gt;lock);<br /> } else {<br /> spin_lock(&amp;rq2-&gt;lock);<br /> spin_lock(&amp;rq1-&gt;lock);<br /> }<br /><br /> /* manipulate both runqueues ... */<br /><br /> /* to unlock ... */<br /> spin_unlock(&amp;rq1-&gt;lock);<br /> spin_unlock(&amp;rq2-&gt;lock);</pre>
+
+<p>These steps are made automatic by the <tt>double_rq_lock()</tt>
+and
+<tt>double_rq_unlock()</tt> functions. The above steps
+would then become:</p>
+
+<pre> double_rq_lock(rq1, rq2);<br /><br /> /* manipulate both runqueues ... */<br /><br /> double_rq_unlock(rq1, rq2);</pre>
+
+<p>Let's look at a quick example of why the order of obtaining
+the locks is
+important. The topic of deadlock is covered in Chapters 7 and 8, as
+this is not
+a problem unique to the runqueues; nested locks always need to be
+obtained in
+the same order. The spin locks are used to prevent multiple tasks from
+simultaneously manipulating the runqueues. They work like a key to a
+door. The
+first task to reach the door grabs the key and enters the door, locking
+the door
+behind it. If another task reaches the door and finds it locked
+(because another
+task is already inside), it must sit and wait for the first task to
+exit the
+door and return the key. This waiting is called spinning because the
+task
+actually sits in a tight loop, repeatedly checking for the return of
+the key.
+Now, consider if one task wants to lock the first runqueue and then the
+second,
+while another task wants to lock the second runqueue and then the
+first. Assume
+our first task succeeds in locking the first runqueue while
+simultaneously our
+second task succeeds in locking the second runqueue. Now, the first
+task tries
+to lock the second runqueue and the second task tries to lock the first
+runqueue. Neither task succeeds because the other task holds the lock.
+Both
+tasks wait forever for each other. Like an impasse creating a traffic
+deadlock,
+this out-of-order locking results in the tasks waiting for each other,
+forever,
+and thus, also deadlocking. If both tasks obtained the locks in the
+same order,
+this would not have happened. See Chapters 7 and 8 for the full scoop
+on
+locking.</p>
+
+<h3>The Priority Arrays</h3>
+
+<p>Each runqueue contains two priority arrays, the active and the
+expired array.
+Priority arrays are defined in <tt>kernel/sched.c</tt> as <tt>struct
+prio_array</tt>. Priority arrays are the data structure that
+provide O(1)
+scheduling. Each priority array contains one queue of runnable
+processors per
+priority level. These queues contain lists of the runnable processes at
+each
+priority level. The priority arrays also contain a priority bitmap used
+to
+efficiently discover the highest priority runnable task in the system.</p>
+
+<pre>struct prio_array {<br /> int nr_active; /* number of tasks */ <br /> unsigned long bitmap[BITMAP_SIZE]; /* priority bitmap */<br /> struct list_head queue[MAX_PRIO]; /* priority queues */<br />};</pre>
+
+<p><tt>MAX_PRIO</tt> is the number of priority levels
+on the system. By default,
+this is 140. Thus, there is one <tt>struct list_head</tt>
+for each priority.
+<tt>BITMAP_SIZE</tt> is the size that an array of <tt>unsigned
+long</tt> typed
+variables would have to be to provide one bit for each valid priority
+level.
+With 140 priorities and 32-bit words, this is five. Thus, <tt>bitmap</tt>
+is an
+array with five elements and a total of 160 bits.</p>
+
+<p>Each priority array contains a <tt>bitmap</tt>
+field that has at least one
+bit for every priority on the system. Initially, all the bits are zero.
+When a
+task of a given priority becomes runnable (that is, its state becomes
+<tt>TASK_RUNNING</tt>), the corresponding bit in the bitmap
+is set to one. For
+example, if a task with priority seven is runnable, then bit seven is
+set.
+Finding the highest priority task on the system is therefore only a
+matter of
+finding the first set bit in the bitmap. Because the number of
+priorities is
+static, the time to complete this search is constant and unaffected by
+the
+number of running processes on the system. Furthermore, each supported
+architecture in Linux implements a fast find first set algorithm to
+quickly
+search the bitmap. This method is called <tt>sched_find_first_bit()</tt>.</p>
+
+<p>Each priority array also contains an array called <tt>queue</tt>
+of
+<tt>struct list_head</tt> queues, one queue for each
+priority. Each list
+corresponds to a given priority and, in fact, contains all the runnable
+processes of that priority that are on this processor's runqueue.
+Finding
+the next task to run is as simple as selecting the next element in the
+list.
+Within a given priority, tasks are scheduled round robin.</p>
+
+<p> The priority array also contains a counter, <tt>nr_active</tt>.
+This is the
+number of runnable tasks in this priority array.</p>
+
+<h3>Recalculating Timeslices</h3>
+
+<p>Many operating systems (older versions of Linux included) have
+an explicit
+method for recalculating each task's timeslice when they have all
+reached
+zero. Typically, this is implemented as a loop over each task, such as:</p>
+
+<pre>for (each task on the system) {<br /> recalculate priority<br /> recalculate timeslice<br />}</pre>
+
+<p>The priority and other attributes of the task are used to
+determine a new
+timeslice. This approach has some problems:</p>
+
+<ul>
+
+  <li>
+    <p>It potentially can take a long time. Worse, it scales <tt>O(n)</tt>
+for n
+tasks on the system.</p>
+
+  </li>
+
+  <li>
+    <p>The recalculation must occur under some sort of lock
+protecting the task
+list and the individual process descriptors. This results in high lock
+contention.</p>
+
+  </li>
+
+  <li>
+    <p>The nondeterminism of a randomly occurring recalculation
+of the
+timeslices is a problem with deterministic real-time programs.</p>
+
+  </li>
+
+  <li>
+    <p>It is just gross (which is a quite legitimate reason for
+improving
+something in the Linux kernel).</p>
+
+  </li>
+
+</ul>
+
+<p>The new Linux scheduler alleviates the need for a recalculate
+loop. Instead,
+it maintains two priority arrays for each processor: both an active
+array and an
+expired array. The active array contains all the tasks in the
+associated
+runqueue that have timeslice left. The expired array contains all the
+tasks in
+the associated runqueue that have exhausted their timeslice. When each
+task's timeslice reaches zero, its timeslice is recalculated before it
+is
+moved to the expired array. Recalculating all the timeslices is then as
+simple
+as just switching the active and expired arrays. Because the arrays are
+accessed
+only via pointer, switching them is as fast as swapping two pointers.
+This is
+performed in <tt>schedule()</tt>:</p>
+
+<pre>struct prio_array array = rq-&gt;active;<br />if (!array-&gt;nr_active) {<br />rq-&gt;active = rq-&gt;expired;<br />rq-&gt;expired = array;<br />}</pre>
+
+<p>This swap is a key feature of the new O(1) scheduler. Instead
+of
+recalculating each process's priority and timeslice all the time, the
+O(1)
+scheduler performs a simple two-step array swap. This resolves the
+previously
+discussed problems.</p>
+
+<h3><tt>schedule()</tt></h3>
+
+<p>The act of picking the next task to run and switching to it is
+implemented
+via the <tt>schedule()</tt> function. This function is
+called explicitly by
+kernel code that wants to sleep and it is also invoked whenever a task
+is to be
+preempted.</p>
+
+<p>The <tt>schedule()</tt> function is relatively
+simple for all it must
+accomplish. The following code determines the highest priority task:</p>
+
+<pre>struct task_struct *prev, *next;<br />struct list_head *queue;<br />struct prio_array array;<br />int idx;<br /><br />prev = current;<br />array = rq-&gt;active;<br />idx = sched_find_first_bit(array-&gt;bitmap);<br />queue = array-&gt;queue + idx;<br />next = list_entry(queue-&gt;next, struct task_struct, run_list);</pre>
+
+<p>First, the active priority array is searched to find the first
+set bit. This bit corresponds to the highest priority task that is
+runnable. Next, the scheduler selects the first task in the list at
+that priority. This is the highest priority runnable task on the system
+and is the task the scheduler will run. See <a href="javascript:popUp('/content/images/chap3_0672325128/elementLinks/03fig02.jpg')">Figure
+3.2</a>.</p>
+
+<b><a href="javascript:popUp('/content/images/chap3_0672325128/elementLinks/03fig02.jpg')"><img src="http://www.informit.com/content/images/chap3_0672325128/elementLinks/th03fig02.jpg" alt="Figure 3.2" align="left" border="0" height="70" hspace="5" width="100" />Figure 3.2</a>
+The Linux O(1) scheduler algorithm.</b>
+<p></p>
+
+<p>If <tt>prev</tt> does not equal <tt>next</tt>,
+then a new task has been
+selected to run. The architecture-specific function <tt>context_switch()</tt>
+is
+called to switch from <tt>prev</tt> to <tt>next</tt>.
+We will discuss context
+switching in a subsequent section.</p>
+
+<p>Two important points should be noted from the previous code.
+First, it is
+very simple and consequently quite fast. Second, the number of
+processes on the
+system has no effect on how long this code takes to execute. There is
+no loop
+over any list to find the most suitable process. In fact, nothing
+affects how
+long the <tt>schedule()</tt> code takes to find a new
+task. It is constant in
+execution time.</p>
+
+<h3>Calculating Priority and Timeslice</h3>
+
+<p>At the beginning of this chapter, we looked at how priority
+and timeslice are
+used to influence the decisions the scheduler makes. Additionally, we
+looked at
+I/O-bound and processor-bound tasks and why it is beneficial to boost
+the
+priority of interactive tasks. Now, let's look at the actual code that
+implements this design.</p>
+
+<p>Processes have an initial priority that is called the nice
+value. This value
+ranges from &ndash;20 to 19 with a default of zero. Nineteen is the
+lowest and
+&ndash;20 is the highest priority. This value is stored in the
+<tt>static_prio</tt> member of the process's <tt>task_struct</tt>.
+The
+value is called the static priority because it does not change from
+what the
+user specifies. The scheduler, in turn, bases its decisions on the
+dynamic
+priority that is stored in <tt>prio</tt>. The dynamic
+priority is calculated as
+a function of the static priority and the task's interactivity.</p>
+
+<p>The method <tt>effective_prio()</tt> returns the
+dynamic priority of a task.
+The method begins with the task's nice value and computes a bonus or
+penalty in the range &ndash;5 to +5 based on the interactivity of
+the task. For
+example, a highly interactive task with a nice value of ten can have a
+dynamic
+priority of five. Conversely, a mild processor hog with a nice value of
+ten can
+have a dynamic priority of 12. Tasks that are only mildly interactive
+receive no
+bonus or penalty and their dynamic priority is equal to their nice
+value.</p>
+
+<p>Of course, the scheduler does not magically know whether a
+process is
+interactive. It requires some heuristic that is capable of accurately
+reflecting
+whether a task is I/O-bound or processor-bound. The most indicative
+metric is
+how long the task sleeps. If a task spends most of its time asleep it
+is
+I/O-bound. If a task spends more time runnable than sleeping, it is not
+interactive. This extends to the extreme; a task that spends nearly all
+the time
+sleeping is completely I/O-bound, whereas a task that spends nearly all
+its time
+runnable is completely processor-bound.</p>
+
+<p>To implement this heuristic, Linux keeps a running tab on how
+much time a
+process is spent sleeping versus how much time the process spends in a
+runnable
+state. This value is stored in the <tt>sleep_avg</tt>
+member of the
+<tt>task_struct</tt>. It ranges from zero to <tt>MAX_SLEEP_AVG</tt>,
+which
+defaults to 10 milliseconds. When a task becomes runnable after
+sleeping,
+<tt>sleep_avg</tt> is incremented by how long it slept,
+until the value reaches
+<tt>MAX_SLEEP_AVG</tt>. For every timer tick the task runs,
+<tt>sleep_avg</tt>
+is decremented until it reaches zero.</p>
+
+<p>This metric is surprisingly accurate. It is computed based not
+only on how
+long the task sleeps but also on how little it runs. Therefore, a task
+that
+spends a great deal of time sleeping, but also continually exhausts its
+timeslice will not be awarded a huge bonus&mdash;the metric works
+not just to
+award interactive tasks but also to punish processor-bound tasks. It is
+also not
+vulnerable to abuse. A task that receives a boosted priority and
+time-slice
+quickly loses the bonus if it turns around and hogs the processor.
+Finally, the
+metric provides quick response. A newly created interactive process
+quickly
+receives a large <tt>sleep_avg</tt>. Despite this, because
+the bonus or penalty
+is applied against the initial nice value, the user can still influence
+the
+system's scheduling decisions by changing the process's nice
+value.</p>
+
+<p>Timeslice, on the other hand, is a much simpler calculation
+because dynamic
+priority is already based on nice value and interactivity (the metrics
+the
+scheduler assumes are most important). Therefore, timeslice can simply
+be based
+on the dynamic priority. When a process is first created, the new child
+and the
+parent split the parent's remaining timeslice. This provides fairness
+and
+prevents users from forking new children to get unlimited timeslice.
+After a
+task's timeslice is exhausted, however, it is recalculated based on the
+task's dynamic priority. The function <tt>task_timeslice()</tt>
+returns a
+new timeslice for the given task. The calculation is a simple scaling
+of the
+priority into a range of timeslices. The higher a task's priority the
+more
+timeslice it receives per round of execution. The maximum timeslice,
+given to
+the highest priority tasks, is <tt>MAX_TIMESLICE</tt>,
+which by default is 200
+milliseconds. Even the lowest priority tasks receive at least the
+minimum
+timeslice, <tt>MIN_TIMESLICE</tt>, which is 10
+milliseconds. Tasks with the
+default priority (nice value of zero and no interactivity bonus or
+penalty)
+receive a timeslice of 100 milliseconds. See Table 3.1.</p>
+
+<h4>Table 3.1 Scheduler Timeslices</h4>
+
+<table border="2" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1"><b>Timeslice</b></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1"><b>Duration</b></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="108">
+      <p><font size="-1"><b>Interactivity</b></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1"><b>Nice Value</b></font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">Initial</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">half of parent's</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="108">
+      <p><font size="-1">N/A</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">parent's</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">Minimum</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">10ms</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="108">
+      <p><font size="-1">low</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">high</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">Default</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">100ms</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="108">
+      <p><font size="-1">average</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">zero</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">Maximum</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">3200ms</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="108">
+      <p><font size="-1">high</font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="107">
+      <p><font size="-1">low</font></p>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br />
+
+<p>The scheduler provides one additional aide to interactive
+tasks: If a task is sufficiently interactive, when it exhausts its
+timeslice, it
+will not be inserted into the expired array, but instead reinserted
+back into
+the active array. Recall that timeslice recalculation is provided via
+the
+switching of the active and the expired arrays. Normally, as processes
+exhaust
+their timeslice, they are moved from the active array to the expired
+array. When
+there are no more processes in the active array, the two arrays are
+switched;
+the active becomes the expired, and the expired becomes the active.
+This
+provides <tt>O(1)</tt> timeslice recalculation. It also
+provides the possibility
+that an interactive task can become runnable, but fail to run again
+until the
+array switch occurs, because the task is stuck in the expired array.
+Reinserting
+interactive tasks back into the active array alleviates this problem.
+Note that
+the task will not run immediately, but will be scheduled round robin
+with the
+other tasks at its priority. The logic to provide this feature is
+implemented in
+<tt>scheduler_tick()</tt>, which is called via the timer
+interrupt (discussed in
+Chapter 9, "Timers and Time Management"):</p>
+
+<pre>struct task_struct *task = current;<br />struct runqueue *rq = this_rq();<br /><br />if (!&mdash;task-&gt;time_slice) {<br /> if (!TASK_INTERACTIVE(task) || EXPIRED_STARVING(rq))<br /> enqueue_task(task, rq-&gt;expired);<br /> else<br /> enqueue_task(task, rq-&gt;active);<br />}</pre>
+
+<p>First, the code decrements the process's timeslice and checks
+if it is
+now zero. If it is, the task is expired and it needs to be inserted
+into an
+array, so the code first checks if the task is interactive via the
+<tt>TASK_INTERACTIVE()</tt> macro. This macro computes
+whether a task is
+"interactive enough" based on its nice value. The lower the nice value
+(the higher the priority), the less interactive a task needs to be. A
+nice 19
+task can never be interactive enough to be reinserted. Conversely, a
+nice
+&ndash;20 task would need to be a heavy processor hog not to be
+reinserted. A
+task at the default nice value, zero, needs to be relatively
+interactive to be
+reinserted, but it is not too difficult. Next, the <tt>EXPIRED_STARVING()</tt>
+macro checks whether there are processes on the expired array that are
+starving&mdash;that is, if the arrays have not been switched in a
+relatively long
+time. If they have not been switched recently, reinserting the current
+task into
+the active array will further delay the switch; additionally starving
+the tasks
+on the expired array. If this is not the case, the process can be
+inserted into
+the active array. Otherwise, it is inserted into the expired array,
+which is the
+normal practice.</p>
+
+<h3>Sleeping and Waking Up</h3>
+
+<p>Tasks that are sleeping (blocked) are in a special
+non-runnable state. This
+is important because otherwise the scheduler would select tasks that
+did not
+want to run or, worse, sleeping would have to be implemented as busy
+looping. A
+task sleeps for a number of reasons, but always by waiting for some
+event. The
+event can be a specified amount of time, more data from a file I/O, or
+another
+hardware event. A task can also involuntarily go to sleep when it tries
+to
+obtain a contended semaphore in the kernel (this is covered in Chapter
+8,
+"Kernel Synchronization Methods"). A common reason to sleep is file
+I/O&mdash;for example, the task issued a <tt>read()</tt>
+request on a file which
+needs to be read in from disk. As another example, the task could be
+waiting for
+keyboard input. Whatever the case, the kernel behavior is the same: The
+task
+marks itself as sleeping, puts itself on a wait queue, removes itself
+from the
+runqueue, and calls <tt>schedule()</tt> to select a new
+process to execute.
+Waking back up is the inverse; the task is set runnable, removed from
+the wait
+queue, and added back to the runqueue.</p>
+
+<p>As discussed in the previous chapter, two states are
+associated with
+sleeping, <tt>TASK_INTERRUPTIBLE</tt> and <tt>TASK_UNINTERRUPTIBLE</tt>.
+They
+differ only in that tasks in the <tt>TASK_UNINTERRUPTIBLE</tt>
+state ignore
+signals, whereas tasks in the <tt>TASK_INTERRUPTIBLE</tt>
+state will wake up
+prematurely and respond to a signal if one is issued. Both types of
+sleeping
+tasks sit on a wait queue, waiting for an event to occur, and are not
+runnable.</p>
+
+<p>Sleeping is handled via wait queues. A wait queue is a simple
+list of
+processes waiting for an event to occur. Wait queues are represented in
+the
+kernel by <tt>wake_queue_head_t</tt>. Wait queues are
+created statically via
+<tt>DECLARE_WAIT_QUEUE_HEAD()</tt> or dynamically via
+<tt>init_waitqueue_head()</tt>. Processes put themselves on
+a wait queue and
+mark themselves not runnable. When the event associated with the wait
+queue
+occurs, the processes on the queue are awakened. It is important to
+implement
+sleeping and waking correctly, to avoid race conditions.</p>
+
+<p>Some simple interfaces for sleeping used to be in wide use.
+These interfaces,
+however, have races; it is possible to go to sleep after the condition
+becomes
+true. In that case, the task might sleep indefinitely. Therefore, the
+recommended method for sleeping in the kernel is a bit more complicated:</p>
+
+<pre>/* 'q' is the wait queue we wish to sleep on */<br />DECLARE_WAITQUEUE(wait, current);<br /><br />add_wait_queue(q, &amp;wait);<br />set_current_state(TASK_INTERRUPTIBLE); /* or TASK_UNINTERRUPTIBLE */<br />while (!condition) /* 'condition' is the event we are waiting for */<br /> schedule();<br />set_current_state(TASK_RUNNING);<br />remove_wait_queue(q, &amp;wait);</pre>
+
+<p>The steps performed by the task to add itself to a wait queue
+are</p>
+
+<ul>
+
+  <li>
+    <p>Create a wait queue entry via <tt>DECLARE_WAITQUEUE()</tt>.</p>
+
+  </li>
+
+  <li>
+    <p>Add itself to a wait queue via <tt>add_wait_queue()</tt>.
+This wait queue
+will awaken the process when the condition it is waiting for occurs. Of
+course,
+there needs to be code elsewhere that calls <tt>wake_up()</tt>
+on the queue when
+the event actually does occur.</p>
+
+  </li>
+
+  <li>
+    <p>Change the process state to <tt>TASK_INTERRUPTIBLE</tt>
+or <tt>TASK_UNINTERRUPTIBLE</tt>.</p>
+
+  </li>
+
+  <li>
+    <p>Test if the condition is true; if it is, there is no need
+to sleep. If it
+is not true, call <tt>schedule()</tt>.</p>
+
+  </li>
+
+  <li>
+    <p>When the task awakes, it will again check if the condition
+is true. If it
+is, it will exit the loop. Otherwise, it will again call <tt>schedule()</tt>
+and
+repeat.</p>
+
+  </li>
+
+  <li>
+    <p>Now that the condition is true, the task can set itself to
+    <tt>TASK_RUNNING</tt> and remove itself from the wait
+queue via <tt>remove_wait_queue()</tt>.</p>
+
+  </li>
+
+</ul>
+
+<p>If the condition occurs before the task goes to sleep, the
+loop will
+terminate, and the task will not erroneously go to sleep. Note that
+kernel code
+often has to perform various other tasks in the body of the loop. For
+example,
+it might need to release locks before calling <tt>schedule()</tt>
+and reacquire
+them after, check if a signal was delivered and return <tt>
+-ERESTARTSYS</tt>,
+or react to other events.</p>
+
+<p>Waking is handled via <tt>wake_up()</tt>, which
+wakes up all the tasks
+waiting on the given wait queue. It calls <tt>try_to_wake_up()</tt>,
+which sets
+the task's state to <tt>TASK_RUNNING</tt>, calls <tt>activate_task()</tt>
+to add the task to a runqueue, and sets <tt>need_resched</tt>
+if the woken
+task's priority is higher than the priority of the current task. The
+code
+that causes the event to occur typically calls <tt>wake_up()</tt>
+afterward. For
+example, when data arrives from the hard disk, the VFS calls <tt>wake_up()</tt>
+on the wait queue that holds the processes waiting for the data.</p>
+
+<p>An important note about sleeping is that there are spurious
+wake ups. Just
+because a task is woken up does not mean the event it is waiting for
+has
+occurred; sleeping should always be handled in a loop that ensures the
+condition
+the task is waiting for has indeed occurred.</p>
+
+<b><a href="javascript:popUp('/content/images/chap3_0672325128/elementLinks/03fig03.jpg')"><img src="http://www.informit.com/content/images/chap3_0672325128/elementLinks/th03fig03.jpg" alt="Figure 3.3" align="left" border="0" height="61" hspace="5" width="100" />Figure 3.3</a>
+Sleeping and waking up.</b>
+<p></p>
+
+<h3>The Load Balancer</h3>
+
+<p>As discussed, the Linux scheduler implements separate
+runqueues and locking
+for each processor on a symmetrical multiprocessing system. That is,
+each
+processor maintains its own list of processes and operates the
+scheduler only on
+those tasks. The entire scheduling system is, in effect, unique to each
+processor. How, then, does the scheduler enforce any sort of global
+scheduling
+policy on multiprocessing systems? What if the runqueues become
+unbalanced, say
+with five processes on one processor's runqueue, but only one on
+another?
+The solution is the load balancer, which works to ensure that the
+runqueues are
+balanced. The load balancer compares the current processor's runqueue
+to
+the other runqueues in the system. If it finds an imbalance, it pulls
+processes
+from the busier runqueue to the current runqueue. Ideally, every
+runqueue will
+have the same number of processes. That is a lofty goal, but the load
+balancer
+comes close.</p>
+
+<p>The load balancer is implemented in <tt>kernel/sched.c</tt>
+as
+<tt>load_balance()</tt>. It has two methods of invocation.
+It is called by
+<tt>schedule()</tt> whenever the current runqueue is empty.
+It is also called
+via timer: every 1 millisecond when the system is idle and every 200
+milliseconds otherwise. On uniprocessor systems, <tt>load_balance()</tt>
+is
+never called and, in fact, is not even compiled into the kernel image
+because
+there is only a single runqueue and thus, no balancing is needed.</p>
+
+<p>The load balancer is called with the current processor's
+runqueue locked and with interrupts disabled to protect the runqueues
+from concurrent access. In the case where <tt>schedule()</tt>
+calls <tt>load_balance()</tt>, its job is pretty clear,
+because the current runqueue is empty and finding any process and
+pulling it onto this runqueue is advantageous. When the load balancer
+is called via timer, however, its job might be a less apparent; it
+needs to resolve any imbalance between the runqueues to keep them about
+even. See <a href="javascript:popUp('/content/images/chap3_0672325128/elementLinks/03fig04.jpg')">Figure
+3.4</a>.</p>
+
+<b><a href="javascript:popUp('/content/images/chap3_0672325128/elementLinks/03fig04.jpg')"><img src="http://www.informit.com/content/images/chap3_0672325128/elementLinks/th03fig04.jpg" alt="Figure 3.4" align="left" border="0" height="57" hspace="5" width="100" />Figure 3.4</a>
+The load balancer.</b>
+<p></p>
+
+<p>The <tt>load_balance()</tt> function and related
+methods are fairly large and
+complicated although the steps they perform are comprehensible:</p>
+
+<ul>
+
+  <li>
+    <p>First, <tt>load_balance()</tt> calls <tt>find_busiest_queue()</tt>
+to
+determine the busiest runqueue. In other words, this is the runqueue
+with the
+greatest number of processes in it. If there is no runqueue that has
+25% or more
+processes than the current, <tt>find_busiest_queue()</tt>
+returns <tt>NULL</tt>
+and <tt>load_balance()</tt> returns. Otherwise, the
+busiest runqueue is
+returned.</p>
+
+  </li>
+
+  <li>
+    <p>Second, <tt>load_balance()</tt> decides which
+priority array on the
+busiest runqueue it wants to pull from. The expired array is preferred
+because
+those tasks have not run in a relatively long time, thus are most
+likely not in
+the processor's cache (that is, they are not cache hot). If the expired
+priority array is empty, the active one is the only choice.</p>
+
+  </li>
+
+  <li>
+    <p>Next, <tt>load_balance()</tt> finds the
+highest priority (smallest value)
+list that has tasks, because it is more important to fairly distribute
+high
+priority tasks than lower priority ones.</p>
+
+  </li>
+
+  <li>
+    <p>Each task of the given priority is analyzed, to find a
+task that is not
+running, not prevented to migrate via processor affinity, and not cache
+hot. If
+the task meets this criteria, <tt>pull_task()</tt> is
+called to pull the task
+from the busiest runqueue to the current runqueue.</p>
+
+  </li>
+
+  <li>
+    <p>As long as the runqueues remain imbalanced, the previous
+two steps are
+repeated and more tasks are pulled from the busiest runqueue to the
+current.
+Finally, when the imbalance is resolved, the current runqueue is
+unlocked and <tt>load_balance()</tt>returns.</p>
+
+  </li>
+
+</ul>
+
+</div>
+
+<br />
+
+<div id="text">
+<h2>Preemption and Context Switching</h2>
+
+<p nd="2">Context switching, the switching from one
+runnable task to another, is
+handled by the <tt>context_switch()</tt> function defined
+in
+<tt>kernel/sched.c</tt>. It is called by <tt>schedule()</tt>
+when a new process
+has been selected to run. It does two basic jobs:</p>
+
+<ul>
+
+  <li>
+    <p nd="3">Calls <tt>switch_mm()</tt>,
+which is defined in <tt>include/asm/mmu_context.h</tt>, to
+switch the virtual memory mapping from
+the previous process's to that of the new process.</p>
+
+  </li>
+
+  <li>
+    <p nd="4">Calls <tt>switch_to()</tt>,
+defined in <tt>include/asm/system.h</tt>, to
+switch the processor state from the previous process's to the
+current's. This involves saving and restoring stack information and the
+processor registers.</p>
+
+  </li>
+
+</ul>
+
+<p nd="5">The kernel, however, must know when to call <tt>schedule()</tt>.
+If it only
+called <tt>schedule()</tt> when code explicitly did so,
+user-space programs
+could run indefinitely. Instead, the kernel provides the <tt>need_resched</tt>
+flag to signify whether a reschedule should be performed (See Table
+3.2). This
+flag is set by <tt>scheduler_tick()</tt> when a process
+runs out of timeslice
+and by <tt>try_to_wake_up()</tt> when a process that has a
+higher priority than
+the currently running process is awakened. The kernel will check the
+flag, see
+that it is set, and call <tt>schedule()</tt> to switch to
+a new process. The
+flag is a message to the kernel that the scheduler should be invoked as
+soon as
+possible because another process deserves to run. </p>
+
+<h4 nd="6">Table 3.2 Functions for Accessing and
+Manipulating <tt>need_resched</tt></h4>
+
+<table border="2" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="176">
+      <p><b><font size="-1">Function</font></b></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="98">
+      <p><b><font size="-1">Purpose</font></b></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="176">
+      <p><font size="-1"><tt>set_tsk_need_resched(task)</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="98">
+      <p><font size="-1">Set the <tt>need_resched</tt>
+flag in the given process</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="176">
+      <p><font size="-1"><tt>clear_tsk_need_resched(task)</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="98">
+      <p><font size="-1">Clear the <tt>need_resched</tt>
+flag in the given process</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="176">
+      <p><font size="-1"><tt>need_resched()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="98">
+      <p><font nd="7" size="-1">Test the
+value of the <tt>need_resched</tt> flag; return true if
+set and false otherwise</font></p>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br />
+
+<p nd="8">Upon returning to user-space or returning from
+an interrupt,
+the <tt>need_resched</tt> flag is checked. If it is set,
+the kernel invokes the
+scheduler before continuing.</p>
+
+<p nd="9">The flag is per-process, and not simply global,
+because it is faster to
+access a value in the process descriptor (because of the speed of
+<tt>current</tt> and because it might be in a cache line)
+than a global
+variable. Historically, the flag was global before the 2.2 kernel. In
+2.2 and
+2.4, the flag was an <tt>int</tt> inside the <tt>task_struct</tt>.
+In 2.6, it
+was moved into a single bit of a special flag variable inside the
+<tt>thread_info</tt> structure. As you can see, the kernel
+developers are never
+satisfied.</p>
+
+<h3>User Preemption</h3>
+
+<p nd="10">User preemption occurs when the kernel is about
+to return to user-space,
+<tt>need_resched</tt> is set, and therefore, the scheduler
+is invoked. If the
+kernel is returning to user-space, it knows it is in a safe quiescent
+state. In
+other words, if it is safe to continue executing the current task, it
+is also
+safe to pick a new task to execute. Consequently, whenever the kernel
+is
+preparing to return to user-space, either on return from an interrupt
+or after a
+system call, the value of <tt>need_resched</tt> is
+checked. If it is set, the
+scheduler is invoked to select a new (more fit) process to execute.
+Both the
+return paths for return from interrupt and return from system call are
+architecture-dependent and typically implemented in assembly in <tt>entry.S</tt>
+(which, aside from kernel entry code, also contains kernel exit code).</p>
+
+<p>In short, user preemption can occur</p>
+
+<ul>
+
+  <li>
+    <p>When returning to user-space from a system call</p>
+
+  </li>
+
+  <li>
+    <p nd="11">When returning to user-space from an
+interrupt handler</p>
+
+  </li>
+
+</ul>
+
+<h3>Kernel Preemption</h3>
+
+<p nd="12">The Linux kernel, unlike most other Unix
+variants and many other operating
+systems, is a fully preemptive kernel. In non-preemptive kernels,
+kernel code
+runs until completion. That is, the scheduler is not capable of
+rescheduling a
+task while it is in the kernel&mdash;kernel code is scheduled
+cooperatively, not
+preemptively. Kernel code runs until it finishes (returns to
+user-space) or
+explicitly blocks. In the 2.6 kernel, however, the Linux kernel became
+preemptive; it is now possible to preempt a task at any point, so long
+as the
+kernel is in a state in which it is safe to reschedule.</p>
+
+<p nd="13">So when is it safe to reschedule? The kernel is
+capable of preempting a task
+running in the kernel so long as it does not hold a lock. That is,
+locks are
+used as markers of regions of non-preemptibility. Because the kernel is
+SMP-safe, if a lock is not held, the current code is reentrant and
+capable of
+being preempted.</p>
+
+<p nd="14">The first change in supporting kernel
+preemption was the addition of a
+preemption counter, <tt>preempt_count</tt>, to each
+process's
+<tt>task_struct</tt>. This counter begins at zero and
+increments for each lock
+that is acquired and decrements for each lock that is released. When
+the counter
+is zero, the kernel is preemptible. Upon return from interrupt, if
+returning to
+kernel-space, the kernel checks the values of <tt>need_resched</tt>
+and
+<tt>preempt_count</tt>. If <tt>need_resched</tt>
+is set and
+<tt>preempt_count</tt> is zero, then a more important task
+is runnable and it
+is safe to preempt. Thus, the scheduler is invoked. If <tt>preempt_count</tt>
+is
+nonzero, a lock is held and it is unsafe to reschedule. In that case,
+the
+interrupt returns as usual to the currently executing task. When all
+the locks
+that the current task is holding are released, <tt>preempt_count</tt>
+returns to
+zero. At that time, the unlock code checks if <tt>need_resched</tt>
+is set. If
+so, the scheduler will be invoked. Enabling and disabling kernel
+preemption is
+sometimes required in kernel code and will be discussed in Chapter 8.</p>
+
+<p nd="15">Kernel preemption can also occur explicitly,
+when a task in the kernel blocks
+or explicitly calls <tt>schedule()</tt>. This form of
+kernel preemption has
+always been supported because no additional logic is required to ensure
+the
+kernel is in a state that is safe to preempt. It is assumed that the
+code that
+explicitly calls <tt>schedule()</tt> knows it is safe to
+reschedule.</p>
+
+<p>Kernel preemption can occur</p>
+
+<ul>
+
+  <li>
+    <p nd="16">When returning to kernel-space from an
+interrupt handler</p>
+
+  </li>
+
+  <li>
+    <p>When kernel code becomes preemptible again</p>
+
+  </li>
+
+  <li>
+    <p>If a task in the kernel explicitly calls <tt>schedule()</tt></p>
+
+  </li>
+
+  <li>
+    <p nd="17">If a task in the kernel blocks (which
+results in a call to <tt>schedule()</tt>)</p>
+
+  </li>
+
+</ul>
+
+</div>
+
+<br />
+
+<div id="text">
+<h2>Real-Time</h2>
+
+<p nd="2">Linux provides two real-time scheduling
+policies, <tt>SCHED_FF</tt> and
+<tt>SCHED_RR</tt>. The normal, not real-time scheduling
+policy is
+<tt>SCHED_OTHER</tt>. <tt>SCHED_FIFO</tt>
+implements a simple first-in,
+first-out scheduling algorithm without timeslices. A runnable
+<tt>SCHED_FIFO</tt> task will always be scheduled over any <tt>SCHED_OTHER</tt>
+tasks. When a <tt>SCHED_FIFO</tt> task becomes runnable,
+it will continue to run
+until it blocks or explicitly yields the processor; it has no timeslice
+and can
+run indefinitely. Two or more <tt>SCHED_FIFO</tt> tasks at
+the same priority run
+round robin. If a <tt>SCHED_FIFO</tt> task is runnable,
+all tasks at a lower
+priority cannot run until it finishes.</p>
+
+<p nd="3"><tt>SCHED_RR</tt> is identical to <tt>SCHED_FIFO</tt>
+except that each
+process can only run until it exhausts a predetermined timeslice. That
+is,
+<tt>SCHED_RR</tt> is <tt>SCHED_FIFO</tt> with
+timeslices&mdash;it is a real-time
+round-robin scheduling algorithm.</p>
+
+<p nd="4">Both real-time scheduling policies implement
+static priorities. The kernel
+does not calculate dynamic priority values for real-time tasks. This
+ensures
+that a real-time process at a given priority will always preempt a
+process at a
+lower priority.</p>
+
+<p nd="5">The real-time scheduling policies in Linux
+provide soft real-time behavior.
+Soft real-time refers to the notion that the kernel tries to schedule
+applications within timing deadlines, but the kernel does not promise
+to always
+be able to fulfill them. Conversely, hard real-time systems are
+guaranteed to
+meet any scheduling requirements within certain limits. Linux makes no
+guarantees on the ability to schedule real-time tasks. The Linux
+scheduling
+policy, however, does ensure real-time tasks are running whenever they
+are
+runnable. Despite not having a design that guarantees hard real-time
+behavior,
+the real-time scheduling performance in Linux is quite good. The 2.6
+kernel is
+capable of meeting very stringent timing requirements.</p>
+
+<p nd="6">Real-time priorities range inclusively from one
+to <tt>MAX_RT_PRIO</tt> minus
+one. By default, <tt>MAX_RT_PRIO</tt> is
+100&mdash;therefore, the default
+real-time priority range is one to 99. This priority space is shared
+with the
+nice values of <tt>SCHED_OTHER</tt> tasks; they use the
+space from
+<tt>MAX_RT_PRIO</tt> to (<tt>MAX_RT_PRIO + 40)</tt>.
+By default, this means the
+&ndash;20 to +19 nice range maps directly onto the 100 to 140
+priority range.</p>
+
+</div>
+
+<div id="text">
+<h2>Scheduler-Related System Calls</h2>
+
+<p nd="2">Linux provides a family of system calls for the
+management of scheduler
+parameters. These system calls allow manipulation of process priority,
+scheduling policy, and processor affinity, as well as provide an
+explicit
+mechanism to yield the processor to other tasks.</p>
+
+<p nd="3">Various books&mdash;and your friendly system
+man pages&mdash;provide reference
+to these system calls (which are all implemented in the C library
+without much
+wrapper&mdash;they just invoke the system call). Table 3.3 lists
+the system calls
+and provides a brief description. How system calls are implemented in
+the kernel
+is discussed in Chapter 4, "System Calls."</p>
+
+<h4>Table 3.3 Scheduler-Related System Calls</h4>
+
+<table border="2" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><b><font size="-1">System Call</font></b></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><b><font size="-1">Description</font></b></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><font size="-1"><tt>nice()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><font size="-1">Set a process's nice value</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><font size="-1"><tt>sched_setscheduler()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><font size="-1">Set a process's scheduling
+policy</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><font size="-1"><tt>sched_getscheduler()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><font size="-1">Get a process's scheduling
+policy</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><font size="-1"><tt>sched_setparam()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><font size="-1">Set a process's real-time
+priority</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><font size="-1"><tt>sched_getparam()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><font size="-1">Get a process's real-time
+priority</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><font size="-1"><tt>sched_get_priority_max()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><font size="-1">Get the maximum real-time
+priority</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><font size="-1"><tt>sched_get_priority_min()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><font size="-1">Get the minimum real-time
+priority</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><font size="-1"><tt>sched_rr_get_interval()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><font size="-1">Get a process's timeslice
+value</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><font size="-1"><tt>sched_setaffinity()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><font size="-1">Get a process's processor
+affinity</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><font size="-1"><tt>sched_getaffinity()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><font size="-1">Set a process's processor
+affinity</font></p>
+
+      </td>
+
+    </tr>
+
+    <tr valign="top">
+
+      <td colspan="1" rowspan="1" valign="top" width="153">
+      <p><font size="-1"><tt>sched_yield()</tt></font></p>
+
+      </td>
+
+      <td colspan="1" rowspan="1" valign="top" width="97">
+      <p><font size="-1">Temporarily yield the
+processor</font></p>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br />
+
+<h3 nd="4">Scheduling Policy and Priority-Related System
+Calls</h3>
+
+<p nd="5">The <tt>sched_setscheduler()</tt>
+and <tt>sched_getscheduler()</tt> system
+calls set and get a given process's scheduling policy and real-time
+priority, respectively. Their implementation, like most system calls,
+involves a
+lot of argument checking, setup, and cleanup. The important work,
+however, is
+merely to read or write the <tt>policy</tt> and <tt>rt_priority</tt>
+values in
+the process's <tt>task_struct</tt>.</p>
+
+<p nd="6">The <tt>sched_setparam()</tt> and <tt>sched_getparam()</tt>
+system calls set
+and get a rocess's real-time priority. This call merely returns
+<tt>rt_priority</tt> encoded in a special <tt>sched_param</tt>
+structure. The
+calls <tt>sched_get_priority_max()</tt> and <tt>sched_get_
+priority_min()</tt>
+return the maximum and minimum priorities, respectively, for a given
+scheduling
+policy. The maximum priority for the real-time policies is
+<tt>MAX_USER_RT_PRIO</tt> minus one; the minimum is one.</p>
+
+<p nd="7">For normal tasks, the <tt>nice()</tt>
+function increments the given
+process's static priority by the given amount. Only root can provide a
+negative value, thereby lowering the nice value and increasing the
+priority. The
+<tt>nice()</tt> function calls the kernel's <tt>set_user_nice()</tt>
+function, which sets the <tt>static_prio</tt> and <tt>prio</tt>
+values in the
+task's <tt>task_struct</tt>, as appropriate.</p>
+
+<h3>Processor Affinity System Calls</h3>
+
+<p nd="8">The Linux scheduler enforces hard processor
+affinity. That is, although it
+tries to provide soft or natural affinity by attempting to keep
+processes on the
+same processor, the scheduler also enables a user to say "this task
+must
+remain on this subset of the available processors no matter what." This
+hard affinity is stored as a bitmask in the task's <tt>task_struct</tt>
+as
+<tt>cpus_allowed</tt>. The bitmask contains one bit per
+possible processor on
+the system. By default, all bits are set and, therefore, a process is
+potentially runnable on any processor. The user, however, via
+<tt>sched_setaffinity()</tt>, can provide a different
+bitmask of any combination
+of one or more bits. Likewise, the call <tt>sched_getaffinity()</tt>
+will return
+the current <tt>cpus_allowed</tt> bitmask.</p>
+
+<p nd="9">The kernel enforces hard affinity in a very
+simple manner. First, when a
+process is first created, it inherits its parent's affinity mask.
+Because
+the parent is running on an allowed processor, the child thus runs on
+an allowed
+processor. Second, when the affinity of a processor is changed, the
+kernel uses
+the migration threads to push the task onto a legal processor. Finally,
+the load
+balancer only pulls tasks to an allowed processor. Therefore, a process
+only
+ever runs on a processor whose bit is set in the <tt>cpus_allowed</tt>
+field of
+its process descriptor.</p>
+
+<h3>Yielding Processor Time</h3>
+
+<p nd="10">Linux provides the <tt>sched_yield()</tt>
+system call as a mechanism for a
+process to explicitly yield the processor to other waiting processes.
+It works
+by removing the process from the active array (where it currently is,
+because it
+is running) and inserting it into the expired array. This has the
+effect of not
+only preempting the process and putting it at the end of its priority
+list, but
+putting it on the expired list&mdash;guaranteeing it will not run
+for a while.
+Because real-time tasks never expire, they are a special case.
+Therefore, they
+are merely moved to the end of their priority list (and not inserted
+into the
+expired array). In earlier versions of Linux, the semantics of the
+<tt>sched_yield()</tt> call were quite different; at best,
+the task was only
+moved to the end of their priority list. The yielding was often not for
+a very
+long time. Nowadays, applications and even kernel code should be
+certain they
+truly want to give up the processor before calling <tt>sched_yield()</tt>.</p>
+
+<p>Kernel code, as a convenience, can call <tt>yield()</tt>,
+which ensures the
+task's state is <tt>TASK_RUNNING</tt>, and then calls
+<tt>sched_yield()</tt>. User-space applications use the
+<tt>sched_yield()</tt>system call.</p>
+
+<p></p>
+
+<p></p>
+
+</div>
+
+</div>
+
+<script src="urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-433761-6";
+urchinTracker();
+</script>
+</body>
+</html>

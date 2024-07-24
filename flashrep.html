@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for NetBSD (vers 1st March 2002), see www.w3.org" />
+    <title>
+      Report on Flash Talk
+    </title>
+    <meta name="resource-type" content="document" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=utf-8" />
+    <meta name="GENERATOR" content=
+    "GnuEmacs/19.34 [en] (X11; I; NetBSD 1.2G i386) [emacs]" />
+    <link rev="made" href="mailto:chaiken@hpl.hp.com" />
+    <link rel="home" href=
+    "http://web.hpl.hp.com/org/research/ars_media/" />
+    <!--    $Id: flashrep.html,v 1.4 2005/12/19 01:09:58 alison Exp $     -->
+    <link rel="stylesheet" href="/pt_style.css" type="text/css" />
+    <link rel="up" href="index.html" />
+    <link rel="start" href="/" />
+    <link rel="icon" href="/fermi-16.png" type="image/png" />
+  </head>
+  <body>
+    <h1>
+      Report on flash talk by Greg Atwood of Intel
+    </h1>
+    <p>
+      <a href="mailto:chaiken@hpl.hp.com">Alison Chaiken</a>
+    </p>
+    <p>
+      [My comments in square brackets] Published abstract:
+    </p>
+    <blockquote>
+      <p>
+        TUESDAY MAY 16, 2000<br />
+        SCV Electron Devices Society<br />
+        Subject: Flash Memory Technology Evolution - The Next Ten
+        Years<br />
+        Speaker: Greg Atwood (Intel Corporation)
+      </p>
+      <p>
+        The market for flash memory has been exploding over the
+        past several years, driven by rapid growth in the cellular
+        phone market and the emergence of new digital storage
+        devices such as cameras and music players. On Tuesday, May
+        16, the Santa Clara Valley Electron Devices Society will
+        host a talk on Flash Technology by Greg Atwood of Intel
+        Corporation. His talk will address the challenges and
+        directions for Flash Memory silicon technology to serve the
+        rapid density growth and performance needs of these
+        markets. Greg Atwood is a Fellow in Intel's Technology and
+        Manufacturing group. He is responsible for the definition
+        of silicon technologies for flash, networking, and wireless
+        business. He was a member of the first Intel flash
+        development program and has been a key contributor to the
+        six generations of flash technology that Intel has put into
+        production. Greg was responsible for the first Intel
+        StrataFlash[tm], two bit per cell development program. He
+        has been at Intel for 21 years since graduating from Purdue
+        University with an MS in physics in 1979.
+      </p>
+    </blockquote>
+    <hr />
+    <h3>
+      Flash market overview
+    </h3>
+    <p>
+      There are two main markets for flash: code storage (cell
+      phones, palmtops) and data storage (mp3 players, cameras).
+      Right now cell phones dominate the flash market, but data
+      storage applications are coming on strong. The flash market
+      is growing at a 35% CAGR every year, and should reach 20 B$
+      by 2004. (Source: Semico.)
+    </p>
+    <p>
+      <strong>Cell phones</strong>
+    </p>
+    <p>
+      In 1999, cell phones accounted for 27% of the flash market,
+      with digital cameras (the application most visible to
+      consumers) accounting for only 2%. By 2004, e-books, music
+      players, set-top boxes and GPS are all expected to be major
+      consumers of flash.
+    </p>
+    <p>
+      Cell phone usage is growing at a CAGR of 30%. There will be
+      10<sup>9</sup> users by 2003. Computers and phones now fall
+      on a continuous spectrum, with hybrid devices growing in
+      importance. This convergence presents new opportunities for
+      memory. With 3rd generation cell phones, expected in a few
+      years, 2 Mb/s data rates are expected, meaning that
+      transmission of video will be possible. Obviously this has
+      data storage implications. In 2004, entry-level phones will
+      have 32 Mb of storage, but "smart" phones will have as much
+      as 0.5 Gb.
+    </p>
+    <p>
+      The US is behind in consumer adoption of cell phones, so we
+      tend to be unaware of how far this revolution has already
+      gone. Cell phones are commonly used as "electronic wallets"
+      in Finland, where sodas can commonly be purchased from
+      vending machines via cell phone using a technology jointly
+      developed by Nokia and Visa. In Japan, sending friends
+      digital still images is a common use of phones. [Visions of
+      Cooltown.] A 35 gram phone the size of two side-by-side
+      pencils is now available in Japan.
+    </p>
+    <p>
+      From the storage vendor point of view, the good news is that
+      the incorporation of flash into phones is now limited by the
+      cost of flash, not the phone manufacturer's need for memory.
+    </p>
+    <p>
+      <strong>MP3 Players</strong>
+    </p>
+    <p>
+      Music players are an example of flash usage for data storage.
+      Market analysts anticipate a 100% CAGR for music player sales
+      through 2003, reaching 8-16M units/year. In 2000, it is
+      expected that 3.7M mp3 players will be sold. These unit
+      volumes sound paltry, but "MP3 players are essentially just
+      wrappers for flash. They have a very high silicon content."
+      In 2000, players will typically have 64 MB of memory,
+      accounting for 75% of the cost. Magnetic storage is not
+      viable for MP3 players, which require rugged, low-power
+      storage.
+    </p>
+    <p>
+      <strong>Digital cameras</strong>
+    </p>
+    <p>
+      For a typical digital camera, 10% of the purchase price is in
+      flash. 8.8M units were sold in 2000. Magnetic storage is
+      poised to recapture this market, since cameras themselves are
+      neither rugged nor low-power.
+    </p>
+    <p>
+      Even though MP3 players and other data storage applications
+      of flash have small unit sales, they should represent half
+      the market by 2003.
+    </p>
+    <h3>
+      The flash industry
+    </h3>
+    <p>
+      The top 5 manufacturers of flash in 1999 (in order) were
+      Intel, AMD, Fujitsu, Sharp and Atmel. The first four of these
+      sold identical products. All 5 of these sold flash
+      specialized for code storage (common-ground NOR
+      architecture).
+    </p>
+    <p>
+      The 6th and 7th vendors of flash were Toshiba and Samsung.
+      They sell flash specialized for data storage applications,
+      and have been moving up the list. ST Microelectronics was
+      eighth.
+    </p>
+    <h3>
+      Flash Technologies
+    </h3>
+    <p>
+      For code storage applications, read speed is all-important,
+      since users will never load new code. For data storage
+      applications, write speed is all-important. These customer
+      needs determine the design of flash devices. Right now
+      "common-ground NOR" devices for code storage represent 75% of
+      total flash sales. cgNOR is optimized for write speed and can
+      be extended to a multi-level cell (MLC). The most common
+      architecture for data storage is NAND-based. NAND is denser
+      than cgNOR and faster at writing, but it is not extensible to
+      a MLC design. [I got the distinct impression that cgNOR is
+      Intel's propietary standard and that a competitor has
+      developed NAND, but I could be wrong about this.]
+    </p>
+    <p>
+      Right now cell sizes are scaling down at a CAGR of 32%/year.
+      This means a 65%/year CAGR for product total capacity. Cell
+      sizes have been halving every two years.
+    </p>
+    <p>
+      <strong>Problems with scaling ("Roadbumps")</strong>
+    </p>
+    <ul class="noindent">
+      <li>Oxide thickness scaling limit
+      </li>
+    </ul>
+    <p>
+      The gate oxide dielectrics in flash elements must be
+      susceptible to tunneling when you want to write, but must be
+      impermeable to leakage at other times. Contacts and other
+      insulating elements in flash have scaled well during the
+      15-year history of the technology, but these non-transistor
+      elements are now such a small part of the real estate that
+      the transistor itself will have to be scaled soon. Once the
+      transistor is scaled, the gate oxide thickness will have to
+      be scaled too. (This is always true of CMOS.)
+    </p>
+    <p>
+      In 1985 when flash was introduced, the gate oxide thickness
+      was 115 Å when the cell size was 1.5 µm. Now the oxide
+      thickness is 95Å at 0.18 µm.
+    </p>
+    <ul class="noindent">
+      <li>Channel hot carrier electron limit
+      </li>
+    </ul>
+    <p>
+      Channel hot carrier electrons are a second way to program
+      flash. However, the hot carrier method requires a 4-5 V power
+      supply and the tunneling method requires 15-20 V. The high
+      voltage circuitry at the edge of the die is difficult to
+      integrate with the flash cells. [? It wasn't clear why this
+      was so.]
+    </p>
+    <p>
+      In the past, flash designers have often solved problems by
+      adopting solutions that CPU designers have developed.
+      However, the two problems described above are unique to
+      flash, so the CPU developers are not going to save flash
+      designers this time.
+    </p>
+    <h3>
+      Predictions
+    </h3>
+    <ul class="noindent">
+      <li>Multi-level cells (MLC) will become prevalent.
+      </li>
+    </ul>
+    <p>
+      Within 5-6 years, 2 bits/cell (2b/c, which is already
+      available) will give way to 4 bits/cell (4b/c). Going to MLCs
+      is easier than continuing scaling.
+    </p>
+    <p>
+      In the future, some products will mix 2b/c (high-reliability)
+      with 4b/c (cheap, high-density).
+    </p>
+    <p>
+      Flash is intrinsically an analog memory scheme, since the
+      data is stored as charge on a gate. This is in contrast to
+      SRAM, where the flip-flop can really only be in one of two
+      stable states.
+    </p>
+    <p>
+      For two-bit cells, the state of the device is read out as the
+      threshold voltage [presumably the threshold for tunnel
+      current]. The threshold varies between 2.5 and 6 V for a
+      two-bit cell, with these values representing 00 and 11. 01
+      and 10 are represented by intermediate discrete threshold
+      values. Two-bit cells are only 5% larger in area than an
+      array of 1-bit cells, meaning that 2b/c gives about a
+      1-scaling-generation increase in density without cell-size
+      reduction.
+    </p>
+    <p>
+      2b/c has a 10<sup>5</sup> cycles endurance, a 6 µS write
+      time, and a 120 nS read time. These specs are almost as good
+      as typical cgNOR devices, so 2b/c comes with little
+      performance cost.
+    </p>
+    <p>
+      ST Microelectronics has announced a 4b/c demo. At this
+      density, performance is truly degraded and compromises must
+      be made. [Is there an opportunity for quantum devices here?
+      Certain solid-state systems, most obviously the quantum hall
+      effect, give well-defined, stable threshold voltages. Not
+      obvious how to make this into a memory, though!]
+    </p>
+    <p>
+      At the 4b/c level, a 1 Gb flash memory will be possible in
+      the current form factor with 0.18 µm linewidths.
+    </p>
+    <ul class="noindent">
+      <li>Flash will be increasingly integrated with logic chips,
+      especially in cell phones.
+      </li>
+    </ul>
+    <p>
+      [This argument struck me as Intel special pleading. They are
+      famous for wanting to leverage their CPU leadership into
+      domination of other IC markets, and this integration plan
+      seems to fit in with their other world-domination schemes. Of
+      course, that doesn't mean that the performance argument for
+      integration isn't compelling.]
+    </p>
+    <p>
+      A cell phone = radio + signal processing + computer + memory.
+      Which should be integrated first? Right now cell phones have
+      40 ICs, but Atwood predicts they will have 5 by 2004.
+    </p>
+    <p>
+      The best integration is flash + logic since that eliminates
+      the need for a bus. Buses waste lots of power, so their
+      elimination is desirable. This integration should be
+      accomplished by 2003.
+    </p>
+    <ul class="noindent">
+      <li>Magnetic storage continues to play a role in portables.
+      </li>
+    </ul>
+    <p>
+      The demise of magnetic storage in the handheld market has
+      been widely predicted, but Atwood expects that it will hang
+      on in products like cameras, where ruggedness and low power
+      consumption don't matter as much.
+    </p>
+    <h3>
+      Questions from the floor
+    </h3>
+    <ul class="noindent">
+      <li>Q: What is the acceptable error rate for MP3 players?
+      What error rate does 2b/c flash achieve?
+      </li>
+    </ul>
+    <p>
+      A: The great thing about MP3 is that data archivability and
+      error rate are relatively unimportant. In this application,
+      users won't use up their 10<sup>5</sup> cycles, nor do they
+      care about a few bit errors here and there. Furthermore,
+      since users will want to rewrite their storage frequently (no
+      listening to the same music over and over), years of storage
+      reliability doesn't matter. However, at 4b/c, even MP3
+      players may need error correction codes, which they don't
+      have now.
+    </p>
+    <ul class="noindent">
+      <li>Q: What accounts for the shape of the number-of-devices
+      vs. threshold voltage histogram plot?
+      </li>
+    </ul>
+    <p>
+      [In the histogram plot, the 00 and 11 peaks for a 2b/c cell
+      were very broad, showing a rather unpredicable threshold
+      voltage, while the 10 and 01 peaks were narrow.]
+    </p>
+    <p>
+      A: Right now flash products automatically do error checking
+      as part of the writing algorithm. The controller will write
+      the bits to a location, then check the threshold voltage. If
+      the voltage is not in range (that is, is not readily
+      distinguishable from a state differing by 1 bit), then the
+      controller will rewrite the bit until it is in range. The
+      controller doesn't bother to do this for the 00 and 11 (2b/c)
+      or 0000 and 1111 (4b/c) cells, since these endpoint values
+      need only be above or below certain levels, not within a
+      certain range.
+    </p>
+    <ul class="noindent">
+      <li>Q: Might novel dielectrics solve the flash transistor
+      scaling problem?
+      </li>
+    </ul>
+    <p>
+      A: Dielectrics for flash must be good both for charge storage
+      (like traditional dielectrics) and for tunneling. It's hard
+      for a new dielectric material to compete with SiO<sub>x</sub>
+      on both these accounts. There are good reasons why ­100 Å of
+      SiO<sub>x</sub> has been used for 15 years.
+    </p>
+    <h3>
+      Summary
+    </h3>
+    <ul>
+      <li>Flash was a $4B industry in 1999.
+      </li>
+      <li>The industry is mature, in that new cell designs are no
+      longer appearing.
+      </li>
+      <li>Scaling challenges are coming up soon.
+      </li>
+      <li>Multi-level cells are the best way around oxide thickness
+      problems.
+      </li>
+      <li>Flash will soon be integrated with logic.
+      </li>
+    </ul>
+    <hr />
+    <p>
+      <a href="http://validator.w3.org/check/referer"><img src=
+      "/icons1/valid-xhtml10.png" alt="Valid XHTML 1.0!" height="31"
+      width="88" /></a>.<a href=
+      "http://jigsaw.w3.org/css-validator/check/referer"><img src=
+      "/icons1/valid-css.png" alt="Valid CSS!" height="31" width=
+      "88" /></a><br />
+      <a href="/baddream/krystal/">.</a><a href=
+      "mailto:cap@aardvark.wsrcc.com">.</a>
+    </p>
+  </body>
+</html>

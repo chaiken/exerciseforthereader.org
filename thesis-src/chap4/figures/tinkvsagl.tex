@@ -1,0 +1,48 @@
+\documentstyle[12pt]{report}
+\headheight 8pt
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{TINKvsAGL}
+\beginpicture
+\setcoordinatesystem units <0.8333mm,0.2667mm> 
+\setplotarea x from 0 to 120, y from 0 to 300
+\axis bottom ticks 
+%numbered from 0 to 120 by 15
+ unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+ numbered from 0 to 300 by 50 /
+\put {a)} at 110 250
+\put {$\rm H \perp \hat{c}$} at 90 50
+%\multiput {$\bullet$} at /users/alison/angdata/C_4KHg/8b/medt/folded.8b.strip
+\multiput {$\bullet$} at "folded.8b.strip"
+%\multiput {$\circ$} at /users/alison/angdata/C_4KHg/8b/medt/ldfit.9.medt
+\multiput {$\circ$} at "ldfit.9.medt"
+%\multiput {$\diamond$} at /users/alison/angdata/C_4KHg/8b/medt/tinkfit.7
+\multiput {$\diamond$} at "tinkfit.7"
+\setcoordinatesystem units <0.8333mm,0.2667mm> point at 0 65
+\setplotarea x from 0 to 120, y from -50 to 50
+\axis bottom label {$\theta$} ticks 
+ numbered from 0 to 120 by 15
+ unlabeled short quantity 25 /
+\axis left label {\lines {Error\cr (gauss)\cr}} ticks
+ numbered from -50 to 50 by 50
+ unlabeled short quantity 5 /
+\put {b)} at 110 40
+\multiput {$\diamond$} at "tink7.diff"
+\multiput {$\circ$} at "ldfit9.diff"
+\endpicture
+\caption[Comparison of Tinkham's formula and AGL theory fits to $\rm
+H_{c2}(\theta)$ data on a $\rm  T_c$ = 1.5  K $\rm C_4KHg$-GIC.]{Comparison
+of Tinkham's formula and AGL theory fits to $\rm  H_{c2}(\theta)$ data on a
+$\rm T_c$ = 1.5 K $\rm C_4KHg$-GIC.  a) $\bullet$, data at t = 0.55.  $\circ$,
+AGL fit with $\rm H_{c2}(0^{\circ})$ = 19 g, 1/$\epsilon$ = 15.5, $\rm H_c$
+= 43 g,  and a residual $\cal  R$ = 0.84.  $\diamond$,  TF  fit  with  $\rm
+H_{c2}(0^{\circ})$ = 23 g, 1/$\epsilon$ = 13, $\rm  H_c$ = 41  g, and $\cal
+R$ = 0.47.   b) Difference between the data and the fits  versus angle.
+$\circ$, for AGL fit; $\diamond$ for TF fit.}
+\end{figure}
+\end{document}

@@ -1,0 +1,66 @@
+_Ludicrous_ by Edward Niedermeyer
+
+'my original vision for this book solidified: It would unmask the "real Tesla," showing the cynicism and dysfunction that lay beneath the company's calculated facade of high-tech enviro-altruism.'
+
+How Tesla is most similar to Apple: "The sources I spoke to would tell me eye-opening stories about the company's ugly culture and profound dysfunction but then wax eloquent about how working there had been the most inspiring and motivating experience of their careers." Tesla is as like Apple in its ugliness as in its engineering chops and its charm.
+
+Tesla transformed the public's view of car model releases as an incremental: "At a time when cars seemed to be slouching toward technological maturity and commodification, Musk had positioned his electric automaker as the vanguard of an automotive revolution and reignited the long-dormant public passion for cars."
+
+'the shortcomings of the startup-style culture that makes Tesla's vehicles and brand so appealing also highlight the importance of the "boring" traditional auto industry cultural values that have been refined by decades of competition.'
+
+"Musk's desire for recognition as the visionary genius behind the most influential automaker of the twenty-first century became the company's defining characteristic." The book falls into the self-same trap, in that it is fascinated with Musk and fails to mention (for example) the electric skateboard.
+
+"The Elise's wheelbase would have to be stretched several inches to accommodate the massive battery and cooling system, meaning Tesla would have to license the Elise's aluminum chassis and then reengineer it." Electric skateboard weight distribution in itself totally changes vehicle dynamics and made redesign inevitable.
+
+No CFO: amazing. "Tesla now had more than one hundred employees, making it larger than any startup Eberhard had managed. He was trying to implement an enterprise software system to track the rapidly inflating costs, but the company's complexity and lack of coordination—not to mention its lack of a CFO—was making the task incredibly difficult"
+
+"Tesla's high-speed agility and constant cash raising helped their popular image more than it hurt." Only agility was in ever more unbelievable public promises. "Once caught in the startup trap, Tesla's incentives shifted away from lean execution and toward generating the kind of hype and anticipation that would keep fresh investment flowing."
+
+"In software, design is everything;" NO! Without good tools, processes and relentless testing, a great design turns into crap. Software production, too is serious engineering. Niedermeyer does not understand this.
+
+Just plain false for embedded products that roun on flaky HW (all of them). 'Once you've sold enough copies to pay back the "fixed cost" of designing and developing a software product, each additional copy has very little incremental "variable cost" and thus enjoys incredibly high profit margins.' Ignores security and other ongoing support costs. Similarly naive: "the building blocks of software are abstractions—ones and zeroes that exist in computer memory—every part of a car is made in the imperfection of the real world." Software is also files in many versions that must be written on an imperfect set of storage devices, not to mention crypto keys and credentials that must be managed. Localization and map updates are two notable PITA. Fantasy continues: "unlike software, which can be patched at any time . . ."
+
+Very true: "Every defect is a symptom of a flaw in the production system, and thus the solution must be a systemic one. Quality isn't a question of continuously improving your ability to fix individual defects, but rather steadily drumming the causes of defects out of the production system over time."
+
+Lucid founder? 'Eberhard had assigned his old friend and board member Bernard Tse to establish a new division for this business called "Tesla Energy Group."'
+
+Wasn't it Lehman Brothers' failure that trigger the Financial Crisis? '"Yeah, sure, Jim . . . we're not Bear Stearns," he joked to another CNBC interviewer, invoking the investment bank whose failure had triggered the recent financial crisis.'
+
+"Half a century later, the business had all but completely lost touch with its ability to inspire enthusiasm for the future. The flamboyance and optimism of the post-WWII auto industry had been crushed" Certainly autonomy technology brought big OEM's hype screaming back.
+
+Hardly limited to Musk in SV: '"there's this general sense that if you believe you're changing the world, you can lie to investors," he argued.'
+
+An unwarranted criticism given greater efficiency of powerplants than ICE, although electric-grid transmission and charging losses must still be taken into account: 'driving one doesn't actually cut down your carbon footprint—because an electric car has a figurative "long tailpipe" that shifts the source of emissions from the vehicle itself to the power plant.'
+
+"A Supercharger station with ten stalls, each providing an average of ten 50 kWh charges per day, would require solar arrays capable of generating 5 mWh per day." He means 5 MW-hr.
+
+"Having been fascinated by battery swap since covering the abortive swap company Project Better Place," He means A Better Place.
+
+"Tesla's ability to game CARB's rules underpinned its only two profitable quarters, both of which were instrumental in boosting its stock price." Still true?
+
+Summary of company's business methods: "Whether these promises are noble aspirations or cynical lies almost doesn't matter at this point."
+
+"Though testing has shown that Autosteer performs better than competitive lane-keep assist systems, the key to Autopilot's success was not an overwhelming technological advantage but Tesla's risk tolerance." Or perhaps deliberate disregard for a wide variety of risks as a fundamental corporate philosophy.
+
+Presumably the reference is to Mobileye: "As Tesla's own supplier of Autopilot-enabling hardware and others pointed out, Tesla's decision to rush Autopilot to market, push the technology to the limit, and overhype its capabilities was what put lives—and the future of autonomous-drive technology itself—at risk."
+
+"Not a single crash has been reported in a vehicle with Super Cruise activated." Exactly how many Super Cruise-equipped vehicles were sold?
+
+The electric skateboard long predates Tesla and was the idea of Chris Borroni-Bird. 'The screen behind him showed Tesla's flat battery "skateboard" chassis.'
+'The screen behind him showed Tesla's flat battery "skateboard" chassis.'
+
+Safety statement would be nice: "Tesla's stated mission is profoundly motivating for many of its employees, and its work culture is correspondingly intense, but "accelerating the transition to sustainable transport" only explains the company's ends, not its means—the why but not the how."
+
+If the comment is indicative of their level of SW testing, I'm appalled: 'Musk liked to cast this "iterative engineering" approach as a software-derived innovation that made better cars, but these constant changes also had a little-understood and less-positive impact on auto safety regulation.' Niedermeyer doesn't understand functional safety and vehicles: "Tesla's problems on safety come down to some of the unique attributes that it brings from the software world into the highly regulated, life-and-death world of automobiles."
+
+A real insight: 'precariousness, along with Tesla's world-saving mission, is part of what feeds an "ends-justify-the-means" culture inside the company.' Tesla fans appear to agree.
+
+'Tesla claimed that it could run its self-driving software in "shadow mode" on these cars, recording when and how the system would have acted, theoretically giving it millions of miles of real-world data with which to train and validate the algorithms used to perceive road conditions and plan its path through them.' While the data is sure to be valuable, the idea that is comparable to automation testing is . . . ludicrous!
+
+Another real insight: "When Tesla started, the big idea was simply to switch from gas to electric drivetrains. Yet within a decade of its founding, the rise of smartphone-based ride-hailing and autonomous-drive technology were opening up entirely new and more fundamentally disruptive possibilities. Tesla tried to co-opt these ideas to maintain the impression that it was a leader of this broader movement, but because it was already stuck in the traditional automaker business, its applications were little more than tacked-on compromises."
+
+"Part of the appeal of Tesla's brand is that it is both a familiar concept, a sexy boutique automaker, and a pioneer of an exciting new movement, the high-tech assault on mobility."
+
+"GM's innovation of connected vehicle telematics (OnStar) and Ford's early voice-control infotainment (SYNC) lead have failed to translate into durable competitive advantages." SYNC, prrerovided by MSFT, was a competitive disadvantage. Also, BMW iDrive beat SYNC to market.
+
+"Tesla's mission is to engineer electric vehicles that are rooted in the traditional car values of private ownership, long-range capability, power, and status. The vision behind Tesla was to replace a monoculture of privately owned, gas-powered cars with a monoculture of privately owned, electric-powered vehicles. Instead, history seems to have a very different vision of progress."

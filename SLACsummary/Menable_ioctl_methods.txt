@@ -1,0 +1,565 @@
+Documentation/pci.txt:
+pci_get_drvdata()		Return private driver data pointer for a pci_dev
+
+static void __devexit menable_pci_remove(struct pci_dev *pdev)
+	struct siso_menable *men = pci_get_drvdata(pdev);
+
+
+In dmesg output after driver load:
+
+ACPI: PCI Interrupt 0000:04:00.0[A] -> GSI 16 (level, low) -> IRQ 169
+menable 0000:04:00.0: microenable IV VD4-CL card will be called menable0
+PCI: Setting latency timer of device 0000:04:00.0 to 64
+menable menable0: 0 DMA channels detected (lo 0 hi 0)
+
+menable_pci_probe:
+	dev_info(&men->pdev->dev, "%s card will be called %s\n",men_boards[board], dev_name(&men->dev));
+
+me4_query_dma:
+	dev_info(&men->dev, "%i DMA channels detected (lo %i hi %i)\n",
+
+Major data structures:
+
+
+struct menable_dmabuf {
+	struct men_dma_chain *dmat;	/* dma descriptor list of buffer */
+	dma_addr_t dma;			/* dma address of dmat */
+	struct scatterlist *sg;		/* sg-list of DMA buffer */
+	int nents;			/* number of used entries in dmasg */
+	int rents;			/* number of real entries in dmasg */
+	struct list_head node;		/* entry in dmaheads *_list */
+	unsigned int listname;		/* which list are we currently in? */
+	uint64_t dma_length;		/* length of valid data */
+	uint64_t buf_length;		/* length of buffer */
+	uint32_t dma_tag;		/* last tag sent by DMA channel */
+	long index;			/* index in DMA channels bufs[] */
+	struct timespec timestamp;	/* time when "grabbed" irq was handled */
+};
+
+struct men_dma_chain {
+	union {
+		struct me4_sgl *pcie;
+		struct plx_chain *plx;
+	};
+	struct men_dma_chain *next;
+};
+
+Each dmabuf is on a list:
+
+menable.h listnames
+#define FREE_LIST 0       available buffers
+#define GRABBED_LIST 1    filled buffers
+#define HOT_LIST 2        buffers "in hardware"
+#define NO_LIST 3
+
+Note ints giving lengths of these lists PER CHANNEL in dmachan:
+
+
+struct menable_dmachan {
+	struct device dev;
+	struct siso_menable *parent;
+	unsigned int number;		/* number of DMA channel on device */
+	spinlock_t chanlock;		/* lock to protect administrative changes */
+	struct menable_dmahead *active;	/* active dma_head */
+/******************** BIT FIELDS ****************/
+	unsigned int mode:6;		/* streaming or controlled */
+	unsigned int direction:2;	/* PCI_DMA_{TO,FROM]DEVICE */
+	unsigned int running:2;		/* 0: stopped, 1: active, 2: finished, 3: in shutdown */
+	unsigned int ackbit:5;		/* bit in irqack */
+	unsigned int enablebit:5;	/* bit in irqenable */
+/************************************/
+	void __iomem *iobase;		/* base address for register space */
+	void __iomem *irqack;		/* IRQ ACK register */
+	void __iomem *irqenable;	/* IRQ enable register */
+
+	rwlock_t listlock;		/* lock to protect list changes */
+	uint64_t imgcnt;		/* absolute image number of this DMA */
+	uint64_t goodcnt;		/* number of transfers to real buffers */
+	unsigned int free;		/* entries in free_list */
+	unsigned int grabbed;		/* entries in grabbed_list */
+	unsigned int hot;		/* count of hot_list */
+	unsigned int lost;		/* lost pictures */
+	unsigned int locked;		/* locked pictures */
+	struct list_head free_list;	/* list of free buffers */
+	struct list_head grabbed_list;	/* list of filled buffers */
+	struct list_head hot_list;	/* entries currently "in hardware" */
+	struct completion *cpl;	/* used to wait for specific imgcnt */
+	uint64_t cplimg;			/* image number to wait for, 0 if none */
+	long long transfer_todo;	/* number of image still to transfer */
+
+	spinlock_t timerlock;		/* lock to protect timer */
+	struct timer_list timer;	/* DMA timeouts */
+	unsigned long timeout;		/* delay for timer restarts (in jiffies) */
+
+	struct device_attribute imgattr;/* attribute to export image number */
+	struct device_attribute lattr;	/* attribute to export lost pictures */
+
+	struct work_struct dwork;	/* called when all pictures grabbed */
+};
+
+struct siso_menable {
+	/* kernel stuff */
+	struct device dev;
+	struct module *owner;
+	struct pci_dev *pdev;
+	spinlock_t boardlock;
+	void __iomem *runtime_base;
+	struct pci_pool *pool;
+	struct cdev cdev;
+
+	int board;			/* type of board: 0: ? 1: meIII 2: me4 */
+	int idx;			/* driver-internal number of board */
+	unsigned char num_dma;		/* number of active DMA channels */
+	unsigned char num_uiq;		/* number of UIQs */
+	struct menable_uiq **uiqs;	/* UIQ control structs */
+	struct menable_dmachan **dmas;	/* array of DMA channels */
+	int use;			/* number of open fds on this board */
+	spinlock_t designlock;
+	char *desname;			/* design name */
+	size_t deslen;			/* length of desname buffer */
+	uint32_t desval;		/* design clock on meIII, design CRC on meIV */
+	union {
+		struct me3_data *d3;
+		struct me4_data *d4;
+	};
+	rwlock_t headlock;
+	unsigned int headcnt;
+	struct list_head heads;		/* all buffer heads */
+	int (*open)(struct siso_menable *, struct file *);
+	int (*release)(struct siso_menable *, struct file *);
+	int (*create_buf)(struct siso_menable *, struct menable_dmabuf *);
+	void (*free_buf)(struct siso_menable *, struct menable_dmabuf *);
+	int (*startdma)(struct menable_dmachan *);
+	void (*abortdma)(struct siso_menable *, struct menable_dmachan *);
+	void (*stopdma)(struct siso_menable *, struct menable_dmachan *);
+	int (*ioctl)(struct siso_menable *, const unsigned int, const unsigned int, unsigned long);
+	void (*exit)(struct siso_menable *);
+	int (*query_dma)(struct siso_menable *);
+	void (*dmabase)(struct siso_menable *, struct menable_dmachan *);
+	void (*stopirq)(struct siso_menable *);
+	void (*startirq)(struct siso_menable *);
+	void (*queue_sb)(struct menable_dmachan *, struct menable_dmabuf *);
+	struct menable_dmabuf *(*dummybuf)(struct menable_dmachan *);
+	int (*dummyscale)(struct menable_dmachan *, const size_t);
+};
+
+
+struct fg_ctrl_s {
+	unsigned int cmd;
+
+	union {
+		struct fg_start_s {
+			int start_param;
+			int param;
+			unsigned int timeout;
+			unsigned int chan;
+			unsigned int act_size;
+			int mode;
+			unsigned int head;
+			unsigned int start_buf;
+			int dma_mode;
+			int transfer_todo;
+			unsigned int dma_dir;
+		} fg_start;
+	} u;
+};
+
+struct fg_ctrl {
+	int mode;
+	int timeout;
+	long transfer_todo;
+	unsigned int chan;
+	unsigned int head;
+	long start_buf;
+	int dma_dir;
+};
+
+struct handshake_frame {
+	union {
+		struct {
+			unsigned int head;
+			unsigned int mode;
+		};
+		long long frame;
+	};
+};
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+DMA BUFFERS
+
+Two kinds of DMA buffers: dummy buffers in kernel memory which are
+coherently/consistently allocated and contain DMA descriptors.
+
+Scatter-gather buffers in user memory which are allocated using a
+streaming method and which contain the frame data.
+
+Consistent DMA for one dummybuf per siso_menable card.  Dummybuf
+contains DMA descriptors.
+
+"The card expects the device driver to supply it with an array of two
+receive DMA descriptors and an array of two transmit DMA descriptors.
+Each DMA descriptor contains the address of an assocaited data buffer,
+its length, and a control word.  You can use the control word to tell
+the device whether the descriptor contains valid data.  For a transmit
+descriptor, you may also program it to request an interrupt after data
+transmission.  The card looks for a valid descriptor and DMAs data
+to/from the associated data buffer."  -- Venkateswaran, p. 301
+
+"DMA descriptors are good candidates for coherent mapping.  DMA
+descriptors contain metadata about DMA buffers such as their address
+and length and are frequently accessed by both the CPU and the
+device." -- Venkateswaran, p. 292
+
+menable4.c:     
+men4_create_dummybuf(struct siso_menable *men)
+
+Kernel memory allocation for DMA descriptor list 
+	struct men_dma_chain *dmat;	/* dma descriptor list of buffer */
+	db->dmat = kzalloc(sizeof(*db->dmat), GFP_KERNEL);
+
+User memory allocation for scatter-gather list dmat->pcie:
+     db->dmat->pcie = pci_pool_alloc(men->pool, GFP_USER, &db->dma);
+     men->d4->dummypage = pci_alloc_consistent(men->pdev, 4096, &pagedma);
+
+(Venkateswaran, p. 291)
+Generates pagedma *bus* address and returns men->d4->dummypage, a kernel
+virtual address.
+
+menable_design.c appears to provide the get/set methods for
+descriptors (and manipulate sysfs)
+
+
+Streaming DMA too:
+
+"pci_map_sg maps, unmaps and synchronizes a scatter-gather list of DMA
+buffers.      When a streamed buffer has been mapped for device access, the driver has to explicitly unmap it before the CPU can reliably operate on it." Venkateswaran p. 291 
+
+menable_mem.c: 
+men_create_userbuf
+dmab->nents = pci_map_sg(men->pdev, dmab->sg, dmab->rents,
+"The function returns the number of mapped entries:
+for (i=0; i< num_mapped; i++){
+    sg_dma_address(&dmab->sg[i]) returns the *bus* address of entry
+    sg_dma_len(&dmag->sg[i]) returns the length of this region
+}   
+
+"
+
+menable_mem.c:  pci_unmap_sg(men->pdev, dmab->sg, dmab->rents, PCI_DMA_BIDIRECTIONAL);
+menable_mem.c:  pci_unmap_sg(men->pdev, sb->sg, sb->rents, PCI_DMA_BIDIRECTIONAL);
+
+
+
+struct menable_dmachan *db = men->dmas[dma];
+struct menable_dmabuf *sb = men_move_hot(db);
+
+Interrupt handler queues DMA:
+me_queue_dma(db, sbcnt) called by me4irq, the interrupt handler.
+		 ic = r32(dmabase + ME4_DMACOUNT);
+		 delta = ic - db->imgcnt;
+		 if ((dc->mode == DMA_HANDSHAKEMODE) && (dc->free == 0)) {
+		/* if there are still buffers in queue simply do nothing */
+          	} else {
+		sb = list_first_entry(&dc->free_list,struct menable_dmabuf, node);
+		pci_dma_sync_sg_for_device(dc->parent->pdev, sb->sg,sb->nents, dc->direction);
+		dc->parent->queue_sb(dc, sb);
+		list_move_tail(&sb->node, &dc->hot_list);
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+IOCTL METHODS
+
+
+Virtual buffers:
+
+  Work on buffer heads
+  --------------------
+
+	IOCTL_ALLOCATE_VIRT_BUFFER
+		struct mm_create_s32 mm_cmd;
+		return men_create_buf_head(men, mm_cmd.maxsize, mm_cmd.subbufs);
+	IOCTL_FREE_VIRT_BUFFER
+		ret = men_free_buf_head(men, bh);
+
+  Work on user buffers
+  --------------------
+
+	IOCTL_ADD_VIRT_USER_BUFFER
+		copy_from_user(&range, (void __user *) arg, sizeof(range))
+		return men_create_userbuf(men, &range);
+		/**
+		* men_create_userbuf - do generic initialisation of user buffer
+		* @men: device to use this buffer
+		* @range: user address range
+		*
+		* Context: User context
+		*
+		* returns: 0 on success, negative error code otherwise
+		*/
+		ret = men->create_buf(men, dmab);
+		dmab->listname = FREE_LIST;
+		INIT_LIST_HEAD(&dmab->node);
+		bh = me_get_bh(men, range->headnr, 0);
+		bh->bufs[range->subnr] = dmab;
+	/* now everything is fine. Go and add this buffer to the free list */
+		dc = bh->chan;
+
+	IOCTL_DEL_VIRT_USER_BUFFER
+		copy_from_user(&num, (void __user *) arg, sizeof(num));
+		r = men_free_userbuf(men, dh, num.index);
+		/**
+		* men_free_userbuf - delete a single DMA buffer
+		* @men: board buffer belongs to
+		* @db: DMA head buffer belongs to
+		* @index: buffer index
+		* returns: 0 on success, error code otherwise
+		*
+		* The caller must get and release &men->headlock if neccessary.
+		*/
+		men_destroy_sb(men, sb);
+DMA interface:
+	IOCTL_DMA_LENGTH
+		struct menable_dmabuf *sb;
+		sb = me_get_sb(men, binfo.headnr, binfo.index, 0);
+		ret = sb->dma_length;
+	IOCTL_DMA_TAG  (deprecated for me4?)
+		sb = me_get_sb(men, binfo.headnr, binfo.index, 0);
+		return ret & 0x7ffffff;
+		ret = sb->dma_tag;
+	IOCTL_DMA_TIME_STAMP
+		struct menable_dmabuf *sb;
+		copy_from_user(&ts, (void __user *) arg, sizeof(ts))
+		sb = me_get_sb(men, ts.head, ts.buf, 0);
+		copy_to_user(((void __user *) arg) + offsetof(typeof(ts), stamp), &tmp, sizeof(tmp))
+
+Data transfer interface
+	IOCTL_FG_WAIT_FOR_SUBBUF
+		struct men_io_bufwait ctrl;
+		db = men->dmas[ctrl.dmachan];
+		timeout.tv_sec = ctrl.timeout;
+		ret = men_wait_dmaimg(db, ctrl.index, &timeout, &foundframe);
+	IOCTL_FG_STOP_CMD
+		struct menable_dmachan *dc;
+		dc = men->dmas[arg];
+		men_stop_dma(dc);
+	IOCTL_FG_START_TRANSFER
+	Not a direct ioctl; separate function.
+	    men_ioctl_fgstart(struct siso_menable *men, unsigned int cmd, unsigned long arg)
+	    struct fg_ctrl fg;
+	    struct fg_ctrl_s fgr;
+	    copy_from_user(&fgr, (void __user *)arg, sizeof(fgr))
+	    fg.mode = fgr.u.fg_start.mode;
+	    fg.timeout = fgr.u.fg_start.timeout;
+	    fg.transfer_todo = fgr.u.fg_start.transfer_todo;
+	    fg.chan = fgr.u.fg_start.chan;
+	    fg.head = fgr.u.fg_start.head;
+	    fg.start_buf = fgr.u.fg_start.start_buf;
+	    fg.dma_dir = fgr.u.fg_start.dma_dir;
+	    return fg_start_transfer(men, &fg, fgr.u.fg_start.act_size);
+	IOCTL_GET_HANDSHAKE_DMA_BUFFER
+		SEL_ACT_IMAGE
+		SEL_NEXT_IMAGE
+
+		struct handshake_frame data;
+		struct menable_dmahead *dh;
+		struct menable_dmabuf *sb;
+		struct menable_dmachan *dc;
+		copy_from_user(&data, (void __user *)arg, sizeof(data))
+		dh = me_get_bh(men, data.head, 0);
+		dc = dh->chan;
+		switch (data.mode) {
+		case SEL_ACT_IMAGE:
+			sb = men_last_blocked(men, dc);
+			break;
+		case SEL_NEXT_IMAGE:
+			sb = men_next_blocked(men, dc);
+			break;
+		}
+		data.frame = sb->index;
+		if (sb->index >= INT_MAX)
+			return INT_MAX;
+		else
+			return sb->index;
+	IOCTL_UNLOCK_BUFFER_NR
+		return men_ioctl_unlock_buffer(men, data.headnr, data.index);
+	IOCTL_GET_BUFFER_STATUS
+		struct menable_dmahead *dh;
+		struct menable_dmachan *dc;
+		copy_from_user(&data, (void __user *) arg, sizeof(data))
+		dh = me_get_bh(men, data.idx.head, 0);
+		dc = dh->chan;
+		data.status.free = dc->free;
+		data.status.grabbed = dc->grabbed;
+		data.status.locked = dc->locked;
+		data.status.lost = dc->lost;
+		data.status.is_locked = (sb->listname != FREE_LIST);
+		copy_to_user((void __user *) arg, &data, sizeof(data))
+	IOCTL_FG_CTRL_CMD 
+	IOCTL_FG_PULSE_NEXT_BUFFER
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Interrupt handling
+
+/**
+ * men_uiq_init - create a UIQ object for the given queue
+ * @chan UIQ channel number
+ * @addr address of the queue I/O register
+ * @parent grabber this UIQ belongs to
+ * @mode if queue is a read or write queue
+ * @burst FIFO depth for write queues
+ *
+ * This will allocate the memory for the UIQ object and return
+ * the allocated pointer or an ERR_PTR() value on failure.
+ */
+struct menable_uiq *
+men_uiq_init(int chan, void __iomem *addr, struct siso_menable *parent,
+		int mode, unsigned char burst)
+
+struct menable_uiq {
+	struct device dev;
+	struct siso_menable *parent;
+        struct bin_attribute dattr;	 /* data */
+	/* simple ringbuffer. Memory is allocated on demand */
+	void __iomem *reg;	/* address of hardware register */
+	void __iomem *irqack;	/* address of IRQ ACK register */
+	uint32_t *data;		/* data buffer */
+	unsigned int rindex;	/* read index */
+	unsigned int fill;	/* number of entries occupied starting at rindex */
+	unsigned int length;	/* index wraparound (sort of ARRAY_SIZE(data)) */
+	unsigned int lost;	/* number of entries lost by overflow */
+	unsigned int irqcnt;	/* number of interrupts */
+	unsigned int cpltodo;	/* number of entries cpl still waits for */
+	unsigned char chan;	/* own channel number */
+	unsigned char burst;	/* max number of entries to write on burst */
+	unsigned char ackbit;	/* bit in irqack */
+	unsigned int running:1;	/* still waiting for ACK */
+	unsigned int mode:1;	/* 0: read, 1: write */
+	unsigned long cpltimeout;	/* timeout for read */
+	struct completion cpl;		/* wait for timeout */
+	spinlock_t lock;
+
+	int (*feed)(struct menable_uiq *);	/* put new data into hardware */
+};
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+INITIALIZATION/PROBE
+
+Global variables:
+
+DEVICE_ATTR(dma_channels, 0664, men_get_dmas, men_set_dmas);
+
+
+menable4.c:
+
+men4_ioctl is NOT a user method: called only by me4_probe at device initialization
+
+static int men4_ioctl IOCTL_PP_CONTROL which calls men_alloc_dma which calls
+men_create_dmachan
+
+IOCTL_PP_CONTROL with arg 0 allocate DMA.   With arg 1, resets vlink
+between FPGAs.
+
+/**
+ * men4_reset_vlink - reset link between bridge FPGA and upper FPGA
+ * @men: board to reset
+ * @upper: reset upper FPGA part or not
+ * returns: 0 on success, error code else
+ */
+static int men4_reset_vlink(struct siso_menable *men, const int upper)
+
+/**
+ * men4_reset_core - reset state machines near the PCIe core
+ * @men: board to reset
+ *
+ * This will reset the state machines and logic directly connected to the
+ * PCIe core.
+ */
+static void men4_reset_core(struct siso_menable *men)
+
+
+
+menable_dma.c:
+
+/**
+ * get_page_addresses - get addresses of user pages
+ * @addr: start address
+ * @end: end address
+ * @pg: list of pages will be allocated here
+ * @len: number of pages in list
+ *
+ * This is more or less a copy of mm/memory.c::make_pages_present
+ */
+int get_page_addresses(unsigned long addr, const size_t length, struct page ***pg)
+PUBLIC
+
+
+/**
+ * men_get_dmaimg - print current picture number to sysfs
+ * @dev: device to query
+ * @attr: device attribute of the channel file
+ * @buf: buffer to print information to
+ *
+ * The result will be printed in decimal form into the buffer.
+ */
+static ssize_t men_get_dmaimg(struct device *dev, struct device_attribute *attr, char *buf)
+
+/**
+ * men_get_dmalost - print current number of lost pictures to sysfs
+ * @dev: device to query
+ * @attr: device attribute of the channel file
+ * @buf: buffer to print information to
+ *
+ * The result will be printed in decimal form into the buffer.
+ */
+static ssize_t
+men_get_dmalost(struct device *dev, struct device_attribute *attr,
+char *buf)
+
+/**
+ * men_wait_dmaimg - wait until the given image is grabbed
+ * @d: the DMA channel to watch
+ * @img: the image number to wait for
+ * @timeout: wait limit
+ *
+ * This function blocks until the current image number is at least the one
+ * requested in @buf.
+ *
+ * Returns: current picture number on success, error code on failure
+ */
+int men_wait_dmaimg(struct menable_dmachan *d, const uint64_t img, const struct timespec *timeout, uint64_t *foundframe)
+PUBLIC
+
+/**
+ * dma_clean_sync - put DMA channel in stopped state
+ * @db: channel to work
+ *
+ * This resets everything in the DMA channel to stopped state, e.g. clearing
+ * association of a memory buffer.
+ *
+ * context: IRQ (headlock and chanlock must be locked and released from caller)
+ *          the channel must be in "stop pending" state (running == 3)
+ */
+void dma_clean_sync(struct menable_dmachan *db)
+PUBLIC
+
+/**
+ * men_alloc_dma - change number of DMA channels of this board
+ * @men: board
+ * @num: new number of channels
+ */
+int men_alloc_dma(struct siso_menable *men, int num)
+PUBLIC
+
+
+/**
+ * men_scale_dma - scan device for number of DMA channels and scale array
+ * @men: board to scan
+ *
+ * Context: User context (ioctl)
+ */
+int men_scale_dma(struct siso_menable *men)
+PUBLIC

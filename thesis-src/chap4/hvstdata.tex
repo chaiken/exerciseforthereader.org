@@ -1,0 +1,518 @@
+\section{Experimental Results: Temperature Dependence of the Upper Critical Field}
+\label{hvstdata}
+
+%        The angular dependence of the upper critical field $\rm  H_{c2}$ at
+%constant  temperature was  the   topic of  the previous   section.  In this
+%section the focus is   the  conjugate  experiment, namely the   temperature
+%dependence  of the critical field  at a fixed  angle.  
+
+         Many of the experimental factors relevant  to the angular behavior
+of the critical  field   will  also complicate the temperature  dependence.
+Among  these are sample misalignment,  mosaic  spread,   and critical field
+definition.   In addition   there are the    considerations of  temperature
+measurement, stability, and equilibration. (See Section~\ref{electronics}.)
+Nonetheless, the $\rm H_{c2}(T)$ results are a bit easier to interpret than
+the $\rm H_{c2}(\theta)$ ones, if  only because the  functional form of the
+data is  simpler.  The  approximately linear behavior   of the  temperature
+dependence curves is  illustrated in  Figure~\ref{hc2temp},  which shows $\rm
+H_{c2}(T)$ curves for four  different $\rm C_4KHg $  GIC's.  These data are
+from  the  same samples whose  $\rm  H_{c2}(\theta)$   curves are shown  in
+Figure~\ref{hc2theta}.
+
+\begin{figure}
+\vspace{15cm}
+\caption[Critical field $\rm H_{c2}$ as a function of reduced temperature
+for $\rm  C_4KHg$.]{Critical field $\rm  H_{c2}$  as a function  of reduced
+temperature for $\rm C_4KHg$.  Dotted curves are least-squares line fits to
+the data.   Fit parameters  are given in Table~\ref{linearparams}.  a) Data
+for a $\rm C_4KHg$ with $\rm T_c$  = 0.95 K:  ($\circ$), $\rm \vec{H} \perp
+\hat{c}$.   ($\bullet$), $\rm  \vec{H} \parallel  \hat{c}$
+Data   for  a $\rm   T_c$   =  0.73   K   sample from Ref.~\cite{tanuma81}:
+($\diamond$),  $\rm  \vec{H}   \perp \hat{c}$.   ($\times$),   $\rm \vec{H}
+\parallel \hat{c}$.  b) Data for two $\rm C_4KHg$-GIC's with $\rm  T_c \,
+\approx$ 1.5 K.  $\rm T_c$  =  1.53 K sample:  ($\circ$), $\rm \vec{H}
+\perp \hat{c}$.  ($\bullet$), $\rm \vec{H} \parallel \hat{c}$. $\rm T_c$ = 1.54
+K sample: $\diamond$, $\rm \vec{H} \perp \hat{c}$.   $\times$, $\rm \vec{H}
+\parallel \hat{c}$.}
+\label{hc2temp}
+\end{figure}
+
+
+        The fits in Figure~\ref{hc2temp} are all to the simple linear form\\
+
+\begin{equation}
+\label{eqn:linear}
+\rm H_{c2}(t) \; = \; H_{c2}(0) \: (1 \, - \, t)
+\end{equation}
+
+\noindent where     t   is      the   reduced    temperature,   T/$\rm    T_c$.   The
+least-squares-determined values of $\rm H_{c2}(0)$  and $\rm T_c$ for these
+curves are given in Table~\ref{linearparams}.  The quality-of-fit parameter
+$\cal R$ is calculated as in Eqn.~\ref{residef}, only here the error at the
+$i$th point  $\sigma_i$ is  taken to be the same  as the experimental field
+value, that is:\\
+
+\[ \rm \sigma_i \; = \; H_{c2,i}^{exp} \; .
+\]
+
+\noindent  Of course the errors should really be smaller in magnitude than the 
+data, but their  fractional size is thought to  be  roughly independent  of
+temperature, the independent variable.  Letting the estimated error  be the
+same  as the  data  is a   convenient  way of  implementing  this  standard
+assumption,   which is called  statistical weighting.\cite{bevington69} The
+field error bars shown on the plot are twice  the mean error per data point
+in total length, where the mean error $\sigma$ is given by\\
+
+\[ \sigma^2 \; = \; \sum_i \rm (H_i^{exp} \, - \, H_i^{theor})^2 / \nu
+\]
+
+\noindent where $\nu$ is the number of degrees of freedom.  This is a
+standard way of defining error bars\cite{pugh66} which includes the effects
+only of random errors, not systematic ones. The temperature  error bars are
+based on an uncertainty of 40 mK at the low end, and 10 mK at the high end,
+for reasons discussed in Section~\ref{electronics}.
+
+\begin{table}
+\caption[Parameters obtained from least-squares fits of a line to $\rm
+C_4KHg $ $\rm H_{c2}(T)$ data.]{Parameters obtained from least-squares fits
+of   Eqn.~\ref{eqn:linear}  to  $\rm  C_4KHg  $ $\rm  H_{c2}(T)$ data.  The
+individual specimens  are labeled by the  value of  $\rm T_c$ obtained from
+the zero-field  sweeps.  The other parameters,  including the ``fit''  $\rm
+T_c$, are obtained from the least-squares linear fits to the critical field
+data  that are  shown in Figure~\ref{hc2temp}.   The residual  $\cal  R$ is
+calculated using Eqn.~\ref{residef}. NR denotes that the parameter was not
+reported in the cited reference.}
+\label{linearparams}
+\begin{center}
+\begin{tabular}{|c|ccccc|}
+\hline
+Exp. $\rm T_c$ (K) & $\perp$ or $\parallel$ & $\rm H_{c2}(0)$ (g) & Fit $\rm T_c$ (K) & $\rm \left| dH_{c2}/dT \right|$ (g/K) & {\cal R} $\times$ 100\\
+\hline
+& & & & & \\
+0.72\cite{iye82} & $\perp$ & 715 & NR & 993 &  NR \\
+                 & $\parallel$ & 62.4 & NR & 86.7 & NR\\
+& & & & & \\
+0.73\cite{iye82} & $\perp$ & 570 & 0.73 & 786 & 4.4 \\
+                 & $\parallel$ & 58.5 & 0.73& 80.3 & 0.01 \\
+& & & & & \\
+0.86\cite{iye82} & $\perp$ & 654 & NR & 760.5 & NR \\
+                 & $\parallel$ & 49.2 & NR & 57.2 & NR \\
+& & & & & \\
+0.95            & $\perp$ & 407 & 1.09 & 374 & 0.79 \\
+                 & $\parallel$ & 45.9 & 1.04 & 44.0 & 0.13 \\
+& & & & & \\
+1.53 &           $\perp$   & 749 & 1.53 & 488 & 7.88 \\
+                & $\parallel$ & 89.7 & 1.65 & 54.4 & 0.63 \\
+& & & & & \\
+1.54 &           $\perp$   & 748 & 1.52 & 493 & 0.69 \\
+                 & $\parallel$ & 85.8 & 1.62 & 53.0 & 0.16 \\
+& & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+        In  general,  the    data  in Figure~\ref{hc2temp}  are  quite well
+described by Eqn.~\ref{eqn:linear}.    Ginzburg-Landau  models  predict   a
+linear temperature-dependence of $\rm H_{c2}$ in  their region of validity,
+so   this  result   is   not   surprising,   especially    since  Iye   and
+Tanuma\cite{iye82} found  linear  temperature  dependence   for their  $\rm
+C_4KHg$ samples.  One feature  of Table~\ref{linearparams} that merits some
+discussion is that the $\rm T_c$ determined from the best  linear fit is as
+much as 10\%  higher than that  determined from the zero-field  temperature
+sweeps.  This disparity between the  different ways of measuring  $\rm T_c$
+is a fairly   common occurrence  in  superconductivity  which is  generally
+caused by curvature of the  $\rm  H_{c2}(T)$  data in the  region near $\rm
+T_c$.\cite{orlando79}   \ Hohenberg   and Werthamer\cite{hohenberg67} found
+that Fermi-surface anisotropy can cause positive  curvature of the critical
+field near $\rm T_c$,  but here  negative curvature is  needed in order  to
+explain the high extrapolated values of $\rm T_c$.
+
+        For  the higher-$\rm  T_c$ specimens, the  $\rm T_c$  numbers found
+from the $\rm \vec{H} \parallel \hat{c}$ fits  are  higher than those found
+from the $\rm  \vec{H} \perp  \hat{c}$ fits.   Because of the discussion of
+type I superconductivity  in the Section~\ref{typeI},  one  might wonder if
+the $\rm  H_{c2, \parallel \hat{c}}(T)$ data  in these samples are actually
+quadratic,   since a quadratic temperature   dependence   is  expected   for
+measurements of the thermodynamic  critical   field.   A moment's   thought
+indicates that  a  linear fit to a quadratic   function will have  a higher
+intercept on the x-axis than a quadratic fit will.  (Se Figure~\ref{hparvst}.)  Therefore, if  the data
+are truly quadratic, it is easy to see why a linear fit will give  a falsely
+high $\rm T_c$.  The temperature dependence  data for the $\rm T_c \approx$
+1.5 K  GIC's for  $\rm \vec{H} \parallel\hat{c}$  are  shown on an expanded
+scale in Figure~\ref{hparvst}, along with the best quadratic and linear fits.
+This   plot is  quite   similar to    Figure~\ref{hcfig}, where the  presumed
+thermodynamic  critical  field  values  were   obtained  from fits  to $\rm
+H_{c2}(\theta)$.  Here  the data  were  obtained  directly,  using
+field sweeps at constant $\theta$ as a function of temperature.
+
+\begin{figure}
+\vspace{7.5in}
+\caption[Critical fields with $\rm \vec{H} \parallel \hat{c}$ for  $\rm T_c
+\approx 1.5$ K $\rm C_4KHg$ samples.]{Critical fields with $\rm \vec{H}
+\parallel \hat{c}$ for $\rm T_c
+\approx 1.5$ K $\rm C_4KHg$ samples.  $\Uparrow$ marks the value of $\rm T_c$
+found using a zero-field temperature sweep.  a) ($\bullet$),  data for a $\rm
+T_c$  = 1.53 K  sample; ($\diamond$),   a linear  fit to the  data  with $\rm
+H_{c2}(0)$ = 89.7 Oe, $\rm T_c$ = 1.65 K and $\cal  R$ = 6.25e-3; (.), a
+quadratic fit to the data with $\rm H_{c2}(0)$ = 64.0 Oe, $\rm T_c$ = 1.55 K
+and $\cal R$ = 1.2e-2.  b) ($\bullet$), data for a $\rm T_c$ = 1.54 K sample;
+($\diamond$), a linear fit to the data  with  $\rm  H_{c2}(0)$ = 85.8 Oe, $\rm
+T_c$ = 1.62 K and $\cal R$ = 1.62e-3; (.), a quadratic  fit to the data
+with $\rm H_{c2}(0)$ = 62.8 Oe, $\rm T_c$ = 1.51 K and $\cal R$ = 4.7e-2.}
+\label{hparvst}
+\end{figure}
+
+        Figure~\ref{hparvst}  shows that using  a quadratic function to fit
+the $\rm \vec{H} \parallel \hat{c}$ data does improve the agreement between
+the   fit  $\rm  T_c$  and    that  obtained  from   a  zero-field   sweep.
+Unfortunately, the quadratic function does not describe the data as well as
+a  linear  function: for one sample the  residual for the quadratic  fit is
+twice that of the linear fit, and for the other it  is three  times that of
+the  linear fit.   Consultation of  standard tables\cite{bevington69} shows
+that the  difference between these fits has   only about an even  chance  of
+being  significant (for  about 15 data  points).   Therefore  the only safe
+statement is that the question of type I superconductivity  in $\rm C_4KHg$
+is still unresolved, since the fits to $\rm H_{c2, \parallel  \hat{c}}$ are
+inconclusive.  As was mentioned in relation  to Figure~\ref{hcfig}, in $\rm
+C_8K$ both  $\rm  H_c(T)$ and  $\rm H_{c2,\perp \hat{c}}(T)$  show positive
+curvature,\cite{koike80} so perhaps in $\rm  C_4KHg$  it is not implausible
+for both critical fields to show a linear temperature dependence.
+
+         Some  lower-$\rm T_c$ samples,   such as the $\rm T_c$   = 0.95  K
+specimen whose data  is shown in  Figure~\ref{hc2temp} (and others whose data
+are not displayed) showed $\rm T_c$'s which were higher  than the zero-field
+values  for both  field  orientations.     This  fact  suggests  that  some
+experimental error is causing the discrepancies.  Because the  $\rm \vec{H}
+\parallel   \hat{c}$   measurements  were  usually taken    going   down in
+temperature,  and those for $\rm \vec{H}  \perp \hat{c}$   were generally taken
+going up in temperature  (see Section~\ref{procedure}), it appears unlikely
+that systematic temperature measurement problems are responsible.   At this
+time the high values of $\rm  T_c$ obtained  from the $\rm H_{c2, \parallel
+\hat{c}}$ fits  remain unexplained, but it is felt that some type of
+measurement problem is the most likely cause.
+
+        Another unexpected feature of  the  data for both  orientations  is
+that  the linearity of $\rm H_{c2}(t)$   persists to unusually  low reduced
+temperatures.   For  typical type II superconductors, Eqn.~\ref{eqn:linear}
+holds only  for about 0.6 $<$ t  $<$  1.0, below   which  a saturation  in $\rm
+H_{c2}(t)$ becomes noticeable.  This saturation is described quantitatively
+by    the widely accepted   theory  of   Werthamer,  Helfand, and Hohenberg
+(WHH)\cite{werthamer66} which   has been successful   in describing  a wide
+variety of superconducting materials\cite{orlando79,fetter69}.  Anisotropic
+materials which are described by the AGL model for their angular dependence
+are expected to have a temperature dependence at constant angle describable
+by the WHH theory.  The basic  equation of this  theory is one developed by
+Maki and deGennes\cite{saintjames69,helfand66}:
+
+\begin{equation}
+\rm \ln \: t \; = \; \psi\left(\frac{1}{2}\right) \; - \; \psi\left(
+\frac{1}{2} \; + \; \frac{D e H_{c2}}{2 \pi k_B T_c}  \right)
+\label{makidegennes}
+\end{equation}
+
+\noindent where t is the reduced temperature, D is the diffusivity, and 
+the digamma function $\rm \psi(x)$ is related to the gamma function by:
+
+\[ \rm \psi (x) \; \equiv \; \frac{d}{dx} \ln \Gamma(x) \; .
+\]
+
+This equation is strictly applicable only to dirty superconductors or clean
+superconductors near $\rm T_c$, but the  theory has  been extended to lower
+temperatures       for       clean  superconductors       by    Helfand and
+Werthamer\cite{helfand66}.    The
+contribution of WHH\cite{werthamer66} was  to further extend  the theory to
+incorporate effects due  to  Pauli  paramagnetism and spin-orbit  coupling.
+The meaning and possible importance  of  these embellishments is  discussed
+below in Section~\ref{spin-orbit}.  Simple two-parameter ($\rm T_c$, $\rm
+\left.  dH_{c2}/dT \right|_{T_c}$) WHH  fits to  the $\rm C_4KHg$  data are
+shown in  Figure~\ref{whhfit}, where they are compared  to the  best linear
+fits, the same linear fits shown in Figure~\ref{hc2temp}.
+        
+\begin{figure}
+\vspace{16cm}
+\caption[Comparison of WHH and linear fits to $\rm H_{c2}(T)$ data taken on a $
+\rm T_c$ = 1.54 K sample.]{Comparison of WHH and linear fits to $\rm H_{c2}(T)$
+data taken  on a $\rm T_c$  = 1.54 K sample.  a) ($\bullet$), data for $\rm
+\vec{H} \perp \hat{c}$.  (.), linear fit with $\rm H_{c2}(0)$ = 748 Oe, $\rm
+T_c$  =  1.52 K,  and $\cal R$   = 6.9e-3.  ($\circ$),   WHH fit  with $\rm
+H_{c2}(0)$ =  518 Oe,  $\rm T_c$  = 1.53 K,  and  $\cal R$ =  1.6e-2. b)
+($\bullet$), data with $\rm  \vec{H}  \parallel \hat{c}$.  (.),  linear fit
+with  $\rm H_{c2}(0)$  = 85.8 Oe,  $\rm  T_c$ = 1.62  K, and  $\cal R$ =
+1.6e-3.  ($\circ$), WHH fit with $\rm H_{c2}(0)$ = 59.76 Oe, $\rm T_c$ =
+1.63 K, and $\cal R$ = 1.2e-2.}
+\label{whhfit}
+\end{figure}
+
+        As    might  be    expected,  the   Maki-deGennes   equation  gives
+approximately linear behavior near $\rm T_c$.  Therefore the linear and WHH
+fits  are  in   good  agreement   just below  $\rm   T_c$.    However,  the
+low-temperature extension\cite{helfand66}   of the Maki-deGennes  formalism
+produces the result
+
+\[ \rm H_{c2}(0) \: \approx \: 0.7 \left.  \frac{dH_{c2}}{dT} \right|_{T_c}  T_c
+\; .
+\]
+
+\noindent This formula is the quantitative expression of the saturation shown  in the
+WHH curves of Figure~\ref{whhfit}, saturation which the data  does not appear
+to exhibit.  The better agreement of the  linear fits than the WHH  fits is
+confirmed by the residual  indices,  which are  significantly lower for the
+linear fits.  
+
+        A  more  impressive    demonstration of   linearity  is  shown   in
+Figure~\ref{sumtemp}, which  gathers together the  data of 5 samples for both
+orientations.  Here   the data are plotted  in  dimensionless units on both
+axes; the reduced field $\rm h^*$ is defined by
+
+\[ \rm h^* \; = \;  H_{c2}/ \left( \left. \frac{dH_{c2}}{dT}\right|_{T_c} T_c \right)
+\]
+
+\noindent  For these 143 data points, the residual index for the linear fit
+is 3/4 that  of the WHH fit, indicative  of about a  90 \% probability that
+the line describes the data better.  Figure~\ref{sumtemp} also shows that at
+the   lowest reduced temperature  the  data   have already reached $\rm h^*
+\approx$ 0.7, the zero-temperature value of  $\rm h^*$ calculated using the
+Helfand-Werthamer\cite{helfand66}  formalism.  Therefore, while it would be
+gratifying to measure $\rm H_{c2}(t)$ to lower reduced temperatures and see
+even larger deviations from the WHH theory, the available data (down to t =
+0.3) demonstrate convincingly that the observed deviations are real.
+
+\begin{figure}
+\vspace{5.5in}
+\caption[Summary of $\rm H_{c2}$ data, both $\perp$ and $\parallel$ to
+the c-axis.]{Summary of all $\rm H_{c2}$ data, both $\perp$ and $\parallel$
+to the  c-axis.   The dimensionless quantities  plotted   are reduced field
+($\rm h^*$) versus  reduced temperature  (t). ($\bullet$), 143  data points
+taken on  5 different GIC's.   ($\circ$),  best 2-parameter WHH  fit to the
+data with $\cal R$ = 1.7e-2.   (.), best linear fit  to the data with $\cal
+R$ = 1.3e-2.  Both fits have $\rm \frac{dh^*}{dt}$ = -1 at t = 1.}
+\label{sumtemp}
+\end{figure}
+
+        The conclusions  drawn  here are  perfectly consistent  with  those
+stated by Iye and  Tanuma in their papers on  $\rm C_4KHg$.\cite{iye82} The
+reason is  that their data extended  over a  smaller temperature range than
+the MIT data.  At  the lowest  reduced temperature for which they  reported
+measurements on $\rm C_4KHg$, t = 0.55, linear character is consistent with
+both  the WHH and linear  fits, as   Figure~\ref{sumtemp} shows.  Therefore
+extended linearity  was unobservable  in  Iye and  Tanuma's samples  in the
+temperature interval in  which they performed measurements.  It  should  be
+noted, though, that unusual $\rm H_{c2}(T)$  behavior may  not occur in the
+lower-$\rm T_c$ samples.  Considering that the $\rm H_{c2}(\theta)$ for the
+lower-$\rm T_c$ GIC's were well-described by the simple AGL model, it seems
+reasonable that the lower-$\rm T_c$ $\rm H_{c2}(T)$ curves may agree well
+with the Maki-deGennes equation.
+
+        Examination of  Equation~\ref{makidegennes} shows  that  there is a
+lot more information that can be extracted  from the $\rm  H_{c2}(T)$ data.
+To   begin   with,  the      value   of   $\epsilon$,       the  anisotropy
+parameter,\cite{morris72} can be calculated as
+
+\[ \rm 1 / \epsilon \; = \; \left[ dH_{c2, \parallel \hat{c}}/dT \right] /
+\left[ dH_{c2, \perp \hat{c}}/dT  \right]
+\] 
+
+\noindent and compared   with the   $\epsilon$ obtained   from    fits   to the  $\rm
+H_{c2}(\theta)$     data.     The   resultant  numbers   are  displayed  in
+Table~\ref{epstab}.
+
+\begin{table}
+\caption[Comparison of the anisotropy parameter $\epsilon$ as obtained from
+$\rm  H_{c2}(T)$   and  $\rm   H_{c2}(\theta)$  fits.]{Comparison    of the
+anisotropy parameter  $\epsilon$ as  obtained from $\rm H_{c2}(T)$ and $\rm
+H_{c2}(\theta)$ fits.  The $\rm H_{c2}(T)$ $\epsilon$ numbers were obtained
+from the ratio  of  the    slopes.  The $\rm H_{c2}(\theta)$ numbers   were
+obtained   from  fits  using  Eqns.~\ref{ldtheor}  (AGL) and  \ref{tinkham}
+(Tinkham's  formula), with   type  I  superconductivity allowed  for  small
+$\theta$.  In each case, the TF fits had lower  residuals than the AGL fits
+(see Table~\ref{residsum}).   NA indicates that a TF  fit was   not
+performed on this data;  NR denotes 
+ information that was not reported in the cited reference.}
+\label{epstab}
+\begin{center}
+\begin{tabular}{|l|ccc|}
+\hline
+$\rm T_c$ & 1/$\epsilon$ from $\rm H_{c2}(T)$ & 1/$\epsilon$, AGL $\rm
+H_{c2}(\theta)$ & 1/$\epsilon$, TF $\rm H_{c2}(\theta)$  \\
+\hline
+& & & \\
+0.72\cite{iye82} & NR & 11.5 at t=0.55 & NR \\
+& & & \\
+0.73\cite{iye82} & 9.7 & 11.3 at t=0.55 & NA \\
+& & & \\
+0.86\cite{iye82} & NR & 10.4 at t=0.47 & NR \\
+& & & \\
+0.95 & 8.9 & 10.0 at t=0.46 & NA \\
+& & & \\
+1.53 & 8.4 & 13.5 at t=0.29 & 14.8 at t=0.29 \\
+& & 10.0 at t=0.76 & 7.7 at t= 0.76 \\
+& & & \\
+1.54 & 8.7 & 14.0 at t=0.29 & 16.0 at t=0.29\\
+& & 15.5 at t=0.55  & 13.0 at t=0.55\\
+& & 12.5 at t=0.76 & 12.0 at t=0.76\\
+& & & \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+        As  the table  shows,    agreement  between the   two   methods  of
+determining $\epsilon$ is rather poor.  While $\epsilon$ as determined from
+$\rm   H_{c2}(T)$  is consistently   about  9, that  determined   from $\rm
+H_{c2}(\theta)$  ranges  from  8  to 16.    The   reason that the   angular
+dependence's  $\epsilon$'s    are   higher   is  that   in   fitting   $\rm
+H_{c2}(\theta)$ it has   been assumed  that  the number  measured  for $\rm
+H_{c2}(0^{\circ})$ is actually $\rm H_c$,  and  that the real value of $\rm
+H_{c2}(0^{\circ})$ is much lower.  As discussed in Section~\ref{typeI}, the
+$\rm H_{c2}(\theta)$ data   cannot  be fit    without  making  use of  this
+assumption.   In addition, the presence  of   type   I superconductivity is
+supported by   the   $\rm  C_v$  measurements    done  by    Alexander
+{\em et al.}\cite{alexander81}
+
+        It  is  tempting to   conclude  that  the   values   for $\epsilon$
+determined  from the angular dependence  are unreliable because of problems
+with the fits.  The matter is not that simple though, since the variability
+of $\epsilon$ can be demonstrated in a model-independent way using the $\rm
+H_{c2}(\theta)$ data, without benefit of fits.  One way of doing this is to
+plot $\rm H_{c2}(\theta)/H_{c2}(0^{\circ})$  versus $\theta$.  This scaling
+forces the curves through the common point (0$^{\circ}$, 1), with the value
+at  the peak being 1/$\epsilon$ at   the temperature  of measurement.    If
+$\epsilon$ is  in fact constant with respect  to temperature, then the $\rm
+H_{c2}(\theta)/H_{c2}(0^{\circ})$ versus $\theta$ curves should all overlay
+one another except for random errors.
+
+\begin{figure}
+\vspace{5in}
+\caption[Demonstration of temperature-dependent anisotropy parameter
+$\epsilon$ in $\rm C_4KHg$.]{Demonstration of the temperature dependence of
+the anisotropy parameter $\epsilon$ in $\rm  C_4KHg$, where 1/$\epsilon \rm
+\equiv H_{c2}(90^{\circ})/H_{c2}(0^{\circ})$.   Data are for  a $\rm T_c$ =
+1.54 K $\rm C_4KHg$ sample.  ($\circ$),  t = 0.29.   ($\bullet$), t = 0.55.
+($\times$), t = 0.76.   All $\rm H_{c2}(0^{\circ})$ values were  determined
+from the data, not the fits, so that this plot is model-independent.  Fits
+to this data are shown in Figure~\ref{hctemp}.}
+\label{epstemp}
+\end{figure}
+
+        That this is  not the case  is demonstrated  in Figure~\ref{epstemp}.
+The t = 0.55 and t = 0.76 curves appear  to overlay for the most  part, but
+the t =  0.29  curve clearly rises  above   the  other two  at   the  peak.
+Figure~\ref{epstemp}  therefore  suggests  that  the variation in  $\epsilon$
+between t = 0.29 and t = 0.55  is real, but that  any variation between t =
+0.55 and t = 0.76 is at best  small.  From Table~\ref{epstab},  one can see
+that the   magnitudes  of $\epsilon$  from   the best fits  (to  Tinkham's
+formula)   support   this  conclusion,   although    the  verdict  of   the
+higher-residual AGL fits is less clear.
+
+        A  temperature-dependent $\epsilon$ implies a temperature-dependent
+slope in at least one of the high-symmetry directions.  To be more precise,
+an increase in the anisotropy at low reduced temperatures requires either a
+downward deviation from linearity in $\rm H_{c2, \parallel \hat{c}}$  or an
+upward deviation from linearity  in $\rm  H_{c2, \perp \hat{c}}$.  While it
+is  certainly true that  neither  of these trends   is obvious in  the $\rm
+H_{c2}(T)$ data, it also turns out that neither of these is ruled out.  The
+reason is that  if the idea of type  I superconductivity in $\rm C_4KHg$ is
+taken  seriously, then the  data  plotted in  Figure~\ref{hc2temp}b) are $\rm
+H_c$  rather than  $\rm  H_{c2}$,  and   so make  no   statement  about any
+hypothetical  curvature    of $\rm H_{c2,    \parallel   \hat{c}}(T)$.  Any
+positive curvature of $\rm  H_{c2,  \perp  \hat{c}}$ would  be
+lost in the noise of the data at low reduced temperatures, so that any kink
+of the size predicted by the $\rm H_{c2}(\theta)$ would be unobservable.
+
+        So what  are the best numbers  for  $\rm  \epsilon(T)$ from the sum
+total of these  data  sets?  One  important   point to notice  is that  the
+magnitude of the   anisotropy derived from the  linear  fits to  the   $\rm
+H_{c2}(T)$ curves represents a sort of thermal average.  Thus  $\epsilon$ =
+9 is probably  the mean value  over the range 0.3 $<$  t $<$   0.95.    The
+evidence from  the angular dependence, which  measures the anisotropy  at a
+specific  t, indicates  that the true $\epsilon$  is  higher at low reduced
+temperatures and lower at  higher  reduced  temperatures.  Because the $\rm
+H_{c2}(\theta)$ data is  much  less affected by  experimental  errors,  the
+magnitudes of $\epsilon$ determined from the $\rm  H_{c2}(\theta)$ fits are
+thought to be more reliable.
+
+        Temperature-dependent   anisotropy has  been   observed  before  in
+graphite intercalation compounds, specifically in  $\rm C_8KHg$ by  Iye and
+Tanuma.  The increase in anisotropy from 17.6  at t = 0.81  to  21.6 at t =
+0.23 is illustrated in Figure~\ref{stiiepstemp}.  The variation of $\epsilon$
+shown there  is similar to  what is reported here  for $\rm C_4KHg$.   $\rm
+C_8KHg$  is   the   only GIC  for  which    Iye and   Tanuma   showed  $\rm
+H_{c2}(\theta)$ curves at more than one temperature.   This is unfortunate,
+since it would be  interesting to  know whether a  variable $\epsilon$ is a
+general property of GIC superconductors.
+
+\begin{figure}
+\vspace{5in}
+\caption[Temperature-dependent anisotropy in $\rm
+C_8KHg$.]{Temperature-dependent anisotropy in $\rm  C_8KHg$ is demonstrated
+by a  plot of $\rm  H_{c2}(\theta)/H_{c2}(0^{\circ})$ versus $\theta$, just
+as     in  Figure~\ref{epstemp}.    All  data    from   Iye  and    Tanuma,
+Ref.~\cite{tanuma81} on a $\rm T_c$ = 1.94 K sample.  ($\times$), data at t
+= 0.23.  Fit, ($\diamond$), with 1/$\epsilon$ = 17.6 and $\cal R$ = 6.8e-3.
+($\bullet$), data at t = 0.81.  ($\circ$), fit with 1/$\epsilon$ = 21.6 and
+$\cal R$ = 5.3e-3.}
+\label{stiiepstemp}
+\end{figure}
+
+\begin{figure}
+\vspace{5.5in}
+\caption[Positive curvature of $\rm H_{c2}(T)$  in $\rm C_8RbHg$.]{Positive
+curvature of $\rm H_{c2}(T)$ in $\rm C_8RbHg$.  Data are taken  from Iye and
+Tanuma,    Ref.~\cite{iye82}.  ($\circ$),  $\rm  H_{c2,  \perp   \hat{c}}$.
+($\bullet$),   $\rm H_{c2,  \parallel   \hat{c}}$.  Parameters for the line
+fits: for $\rm \vec{H} \perp \hat{c}$, $\rm H_{c2}(0)$ =  3078 Oe, $\rm T_c$
+= 1.36 K, and $\cal  R$ = 0.56;  for $\rm \vec{H} \parallel \hat{c}$,  $\rm
+H_{c2}(0)$ = 89.0  Oe,  $\rm  T_c$  = 1.37 K,    and $\cal R$    =  3.02e-2.
+Zero-field $\rm T_c$ for this sample was 1.4 K.\cite{iye82}}
+\label{rbhct}
+\end{figure}
+
+        There  is     some  justification   for      speculating   that   a
+temperature-dependent anisotropy  is    a common  property   of the  class.
+According to  data shown  in Ref.~\cite{iye82},  all of the superconducting
+GIC's (with the possible exception of $\rm C_4KHg$) show positive curvature
+of their   upper critical     fields with  respect   to temperature  (d$\rm
+H_{c2}^2$/dT$^2$ $>$  0).  The  largest  curvature seems  to occur  in $\rm
+C_8RbHg$, as the data in Figure~\ref{rbhct} show.  Positive  curvature does
+not guarantee a variable $\epsilon$, of  course, but the chances of exactly
+the same curvature in  both critical  fields seems small.   In terms of the
+theories described in  Section~\ref{models}, identical curvature in both of
+the orientations would be a  coincidence  rather than a natural consequence
+of the models (although identical curvature for both orientations  has been
+reported for at   least one compound,  Fe$_{0.05}$TaS$_2$\cite{coleman83}).
+These models are discussed in more detail in the section that follows.
+
+        In the section that  follows,  reference will frequently be made to
+theories  which predict positive   curvature  of   $\rm H_{c2}(T)$.   These
+references should not be understood  as suggestions that positive curvature
+is observed in  $\rm C_4KHg$, but  rather as expressions  of the philosophy
+that whatever phenomena  are  the cause  of  the positive curvature in $\rm
+C_8RbHg$ are most likely also to cause the extended  linearity seen in $\rm
+C_4KHg$.  Theories which  can produce upward-curving critical field  curves
+should easily be able to  produce straight ones through  adjustment of
+parameters.  In these models,  after all, a straight  $\rm H_{c2}(T)$ means
+merely  the  compensation  of the  forces  which  drive upward and downward
+curvature.
+
+        Before moving on  to the   interpretation of  these results,  let's
+pause to summarize.  In $\rm C_4KHg$, the critical field both perpendicular
+and parallel  to the graphite  c-axis shows enhanced linearity with respect
+to the usual theory  for type II  superconductors.  The data   parallel  to
+$\hat{c}$  are  only   marginally  consistent with   the quadratic behavior
+expected for the  thermodynamic critical field  of type I  superconductors.
+However, $\rm H_c(T)$ in $\rm C_8K$ is not well-fit by a quadratic, either.
+Clem has shown   that superconducting  energy gap  anisotropy  can cause  a
+slight deviation   from   the    BCS    temperature  dependence     of $\rm
+H_{c}$.\cite{clem66} However, the deviation expected in Clem's theory is so
+small that his  model  should not  be  considered  a  serious candidate  to
+explain the deviations seen in GIC's.   The introduction of the possibility
+of type I  superconductivity was suggested  by  the specific heat  data  of
+Alexander {\em et   al.\/},  and   also by  the  poor quality  of the  $\rm
+H_{c2}(\theta)$   fits  without it.   The  $\rm  H_{c2}(\theta)$  fits also
+suggest that  the anisotropy parameter $\epsilon$ is temperature-dependent.
+Both the temperature dependence of $\epsilon$ and the enhanced linearity of
+$\rm  H_{c2}(T)$    are inexplicable      within  the simple    anisotropic
+Ginzburg-Landau   theory,\cite{tilley65,lawrence71}  although basically the
+data are well-described by this  model.  The AGL and other,  more detailed,
+models are discussed at length in the next section.

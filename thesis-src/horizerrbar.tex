@@ -1,0 +1,25 @@
+\newdimen\xposition
+\newdimen\yposition
+\newdimen\dxposition
+\newdimen\crossbarlength
+\def\putxerrorbar at #1 #2 with fuzz #3 {%
+\xposition=\Xdistance{#1}
+\yposition=\Ydistance{#2}
+\dxposition=\Xdistance{#3}
+\setdimensionmode
+%\put {.} at {\xposition} {\yposition} %
+%horizontal line
+\dimen0 = \xposition 
+  \advance \dimen0 by -\dxposition 
+\dimen2 = \xposition 
+  \advance \dimen2 by \dxposition 
+\putrule from {\dimen0} {\yposition} to {\dimen2} {\yposition}
+%endcaps
+\dimen4 = \yposition
+  \advance \dimen4 by -.5\crossbarlength
+\dimen6 = \yposition
+  \advance \dimen6 by .5\crossbarlength
+\putrule from {\dimen0} {\dimen4} to {\dimen0} {\dimen6}
+\putrule from {\dimen2} {\dimen4} to {\dimen2} {\dimen6}
+\setcoordinatemode}
+

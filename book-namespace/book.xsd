@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+   1.  Create an xml document for a Book List with following elements and attributes
+
+Book (Photo, BookName, Author, Subject)
+
+Photo should have an attribute called "ID"
+
+-->
+
+
+<xs:schema targetNamespace="http://www.exerciseforthereader.org/book-namespace"
+	   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	   xmlns:xp="http://www.exerciseforthereader.org"
+	   elementFormDefault="qualified"
+>
+<xs:import namespace="http://www.exerciseforthereader.org" schemaLocation="photo.xsd"/>
+
+
+<xs:element name="Book">
+      <xs:complexType mixed="true">
+	<xs:sequence>
+	  <xs:element ref="xp:Photo" /> 
+	  <xs:element name="BookName" type="xs:string"/>
+	  <xs:element name="Author" type="xs:string"/>
+	    <xs:element name="Subject">
+	      <xs:simpleType>
+	    	<xs:restriction base="xs:string">
+    		  <xs:enumeration value="non_fiction"/>
+		  <xs:enumeration value="fiction"/>
+		  <xs:enumeration value="poetry"/>
+		  <xs:enumeration value="reference"/>
+		  <xs:enumeration value="other"/>
+		</xs:restriction>
+    	      </xs:simpleType>
+	    </xs:element>
+	  </xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+</xs:schema>
+
+
+
+

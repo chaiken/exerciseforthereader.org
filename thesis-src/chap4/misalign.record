@@ -1,0 +1,25 @@
+2.000000 60.513054 %~/angdata/stI/lowt/lotang.8b.strip
+0.0 42.01 %~/angdata/stI/8b/lowt/ldfit.9
+(/ 60.5 42.0)
+1.44
+anisotropy = 15
+
+(defun theta (anis ratio)
+  "Calculates the number of degrees from 0 for the LD formula.  Anis is Hc2perp/Hc2par.  Ratio is Hc2(theta)/Hc2(0). "
+  (setq epssq (recip (squared anis)))
+  (radians-to-degrees (asin (sqrt (/ (- (squared (recip ratio)) 1.0) (- epssq 1.0)))))
+  )
+
+
+(theta 15.0 1.44)
+46.15
+(theta 20 1.44)
+46.09
+
+3.5 57.2 %lotang.7a
+0.0 37.70 %~/angdata/stI/7a/tangent/lowt/ldanis13.out
+anisotropy = 13
+(/ 57.2 37.7)
+1.517
+(theta 13 1.517)
+48.96

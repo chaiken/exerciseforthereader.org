@@ -1,0 +1,64 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;									     ;;
+;;	File:     rparam.record						     ;;
+;;	Author:   Alison Chaiken					     ;;
+;;	Created:  Wed Oct  5 15:06:06 EDT 1988				     ;;
+;;	Contents: calculation of KLB r-parameter.  Data collected in         ;;
+;;                klbtable.tex.                                              ;;
+;;									     ;;
+;;	Copyright (c) 1988 Alison Chaiken.				     ;;
+;;	All rights reserved.						     ;;
+;;									     ;;
+;;	$Log$								     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(defun xi-perp (eps hc2)
+  (* 1e8 (/ (sqrt (/ phys-fquant (* 2.0 pi hc2))) eps))
+  )
+
+(xi-perp 10 80)
+202.9; for c4khg
+
+(defun r (s xi)
+  (* (/ 16 pi) (squared (/ xi s)))
+)
+
+(r 10.24 202)
+1982; c4khg
+
+;for SrMoS_2
+(xi-perp 4 4.6e4) 
+21.16
+(r 18.6 21.2)
+6.616
+
+;for CaMoS_2
+(xi-perp 5 2.1e4)
+25.05
+(r 18.64 25.05)
+9.198
+
+;for NaMoS_2
+(xi-perp 6.7 5e4)
+12.12
+(r 15.0 12.12)
+3.325
+
+;for CsMoS_2
+(xi-perp 6.1 22e4)
+6.344
+(r  19.606 6.344)
+0.5332
+
+;for C_4RbHg
+(r 10.76 320)
+4504
+(r 10.76 261)
+2997
+
+;for C_8RbHg
+(r 14.11 83)
+176.2
+(r 14.11 58)
+86.05

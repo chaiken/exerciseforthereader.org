@@ -1,0 +1,217 @@
+To: nano@iop.org
+Subject: Our decision on your article from Nanotechnology -
+    NANO/199667/PAP/131315
+In-Reply-To: <OF97F3E347.888F88AE-ON8025703B.00594981@iop.org>
+References: <OF97F3E347.888F88AE-ON8025703B.00594981@iop.org>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+FCC: ~/RMAIL-CC
+Organization: HP Labs, Palo Alto, CA
+---put your message below, chaiken---
+
+Ref: NANO/199667/PAP/131315
+
+TITLE:    Electron-beam detection of bits reversibly recorded on epitaxial
+InSe/GaSe/Si phase-change diodes
+AUTHORS:  Dr A Chaiken  et al
+
+Dear Editor:
+
+Appended are our detailed responses to the two referees, whom we thank
+for a careful reading of our manuscript and the discovery of several
+errors and omissions.  As you will see, we have made several changes
+to the manuscript as suggested by their comments.  I have uploaded a
+new LaTeX version of the manuscript to the IOP website.
+
+Yours sincerely
+
+Alison Chaiken
+
+---
+Alison Chaiken                          HP Labs
+(650) 236-2231                          (650) 852-8579 fax
+chaiken@hpl.hp.com                      http://www.wsrcc.com/alison/
+
+First referee
+-------------
+
+Changes made:
+
+1. "Please use ns instead of nS."
+
+Response: Done (and for micros and ms as well).
+
+2. "There is an older publication by A. Partovi et al. in Applied
+Physics Letters describing an efficient near-field light source that
+could be referenced in the introduction."
+
+Response: We thank the referee for reminding us of the existence of
+this paper and have added a mention of it to the first paragraph and
+conclusions.
+
+
+Response to other referee comments:
+
+1. "are there any data on the volume change between the amorphous and
+crystalline state?"
+
+Response: As far as we know there are no such data on InSe.  The
+dimensional change of InSe may be anisotropic due to its layered
+structure, as pointed out in the text.
+
+2.  "what is the change of band gap upon the transition ?  * where is
+this change coming from?"
+
+Response: We have no proof that the band gap is changing between the
+crystalline and amorphous states although such a change would not be
+surprising.  Amorphous indium selenide is unusual in being n-type
+unlike all other amorphous chalcogenides and is quite a poorly
+understood material.  Figuring out the contrast mechanism will require
+considerable experimental and theoretical effort.
+
+3.  Is anything known on the local order in the amorphous state ? 
+
+The amorphous state of melt-quenched material is difficult to study
+because of its small volume.  The as-deposited amorphous state is
+discussed in one of our previous papers (J. Appl. Phys. 94, 2390
+(2003)).
+
+
+
+Second referee
+--------------
+
+Changes made:
+
+1. "In particular, in results a separate paragraph to be called
+“EBIC gain reading” should be introduced" "gain
+values for the original crystalline layer, the amorphous bits and the
+erased layers using the two erasing methods are presented in a
+comparative way."
+
+"These gain changes should be compared with those of fig.5 for erasing
+by furnace annealing, where gain changes from 60 to 40 are
+observed. No explanation is given for these drastic differences
+between the two erasing methods both in absolute and relative values
+of the gain."
+
+Response: the referee is correct in pointing out that the discussion
+of gain in various samples in the manuscript is incomplete and
+confusing.  The apparent discrepancies stem from the fact that films
+with different semiconductor and cap layer thicknesses were used in
+different experiments.  The thickness of the various layers was listed
+in the figure captions of the original submission but only a very
+perceptive reader would have understood the connection to gain.
+Rather than create a new subsection, we've added a new paragraph to
+the end of the section 4.1 that discusses this question.  We thank the
+referee for pointing out this omission.
+
+2. "In par. 4.1 the expression “ the actual EBIC gain in
+the background..” is misleading; it should be written: in
+the “crystalline layer...”
+
+Response: done.
+
+3. "In the present paragraph 3.1 the first part does not belong to
+results: its corresponds to introduction or discussion); the second
+part should be in this paragraph, to be renamed: ‘Electronic
+properties of the epitaxial diodes.”"
+
+Response: We thank the referee for this helpful suggestion which we
+agree will make the organization of the paper more logical.  We have
+shortened the material and moved part of it to the last paragraph of
+the introductory section and part to the last paragraph of section
+4.2.  Paragraph 3.1 has been renamed as suggested.
+
+4. "It is recommended to change the title of the paper to: "Electron
+beam detection of bits recorded by material phase changes in epitaxial
+InSe/GaSe/Si diodes.”"
+
+Response: Done except that we have retained the word "reversibly,"
+which highlights the primary distinction between our work and
+ultrahigh density phase-change recording studies that have been
+published previously.
+
+5. "The legend to fig.6, 3rd line: Should read, 1.8 mW, 1 us
+(microseconds, and not 1ms (without E) crystallization pulses (E), as
+written in the text.  In 5.Conclusions is mentioned that "the fastest
+observed complete erasure time for the amorphous bits is 100 us
+(microseconds)...".  However in ref.12 , a paper of the same authors,
+in fig.2, similar to fig.5 of this paper, is written in the legend
+1.8mW, 1ms recrystallizing pulse."
+
+Response: The correct recrystallization time for the data of Fig. 6 is
+1 ms.  We thank the referee for pointing out the typo in the paragraph
+beginning "Contrast retention."  The fastest complete erasure time is
+in fact 100 microseconds as demonstrated in Fig. 9.   The apparent
+discrepancy with Ref. 12 has been alleviated.
+
+6. The last sentence: “In particular the photocurrent contains a
+significant contribution from collection in the Si substrate while the
+EBIC data do not” is wrong, as the authors themselves have expressed
+in several places of the paper."
+
+Response: It's certainly true that at the beginning of Section 3.3 we
+say, "The EBIC gain is not zero at the amorphous bits because a 2 keV
+beam generates a SIGNIFICANT number of electron-hole pairs in the Si
+directly below them."  The offending sentence cited by the referee has
+been modified to "In particular the photocurrent contains a larger
+contribution from collection in the Si substrate than the EBIC data
+do."  The modified version expresses the intended point of comparison
+between the two techniques without further implications.
+
+
+
+Response to other referee comments:
+
+1. "the 1.0 and 15.0 rows are nearly invisible and are presumed to be
+recrystallized, i.e. the authors do not know what they are measuring."
+
+Response: We do know that the laser marks are amorphous as Figure 3
+demonstrates.  Electron-backscatter diffraction images which are
+discussed near the end of Section 3.2 corroborate amorphization of
+marks made on other films.  The idea that erased marks are
+recrystallized seems like the simplest explanation of the data.  While
+many effects besides amorphization-recrystallization might allow
+cycling between two electronically distinct states, it's hard to
+believe that any phenomenon except recrystallization would cause the
+erased marks to reproducibly match the unmodified film in EBIC gain
+over several cycles.  Figure 10 supports the idea that high-quality
+crystalline material can regrow, at least under some circumstances.
+
+2. "The statement in the abstract that EBIC gain values up to 80 have
+been obtained is misleading, because for the present application as
+memory, the difference in gain from , both in the crystalline and
+amorphous states is of relevance. (Furthermore the values of the gain
+for the InSe layer alone should be taken into account)."
+
+Response: The statement in the abstract that "Current gains up to 80
+at 2 keV electron beam energy have been demonstrated" describes an
+experimental datum rather than an authorial interpretation.  The
+referee's argument that the value for InSe alone should be quoted is
+hard to understand given that the quantity measured is the collected
+current from a reverse-biased pn junction.  We agree that the contrast
+is more important for a recording application than the magnitude of
+the gain itself but assuredly the gain itself is of interest to
+readers.  The original investigations of InSe/GaSe diodes by the
+Valencia group were for a photovoltaic application where gain is more
+relevant than contrast.
+
+3. "the relative contribution of the InSe layer is calculated by
+Monte-Carlo simulations (see Napchan E 1992 Microscopy Analysis
+(November) 9 ;"
+
+"Furthermore the primary electron beam penetrates the substrate which
+thus contributes to the EBIC signal. This important contribution has
+not been evaluated."
+
+Response: We are aware of the utility of Monte Carlo calculations and
+have had an active collaboration with an expert, Prof. Reynaud Gauvin
+of McGill University.  Unfortunately the lack of knowledge about the
+material parameters prevented a meaningful quantitative comparison
+between these calculations and our data.  Monte Carlo calculations
+prove to be quite complicated in the case of a multilayered film.
+Furthermore the collection efficiency as a function of generation
+depth is unknown in this little-studied semiconductor system.  The
+analysis that the referee suggests is highly desirable but would
+require information that simply is not available right now.
+

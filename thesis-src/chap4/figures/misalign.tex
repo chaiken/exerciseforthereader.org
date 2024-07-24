@@ -1,0 +1,48 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\begin{document}
+\begin{figure}
+\label{misalign}
+\beginpicture
+\setcoordinatesystem units <1cm,1cm>
+\setplotarea x from 0 to 10, y from 0 to 10
+\putrectangle corners at 0 2 and 1 6
+\put {\lines {$\rm \hat{a^{\prime}}$ and $\hat{z}$\cr $\uparrow$\cr}} [b] at 0.5 6
+\put {$\rm \longrightarrow \; \; (\vec{H} \cdot \hat{c})\hat{c}$ and $\rm \hat{c}$} [l] at 1 4
+\put {\lines {$\rm \hat{a}$\cr $\bigodot$\cr}} at 0.5 4
+\put{a) \hspace{4cm} \underline{Aligned Sample}} [l] at -2 8
+\put {\lines [l] {$\rm \vec{H} \; = \; H\hat{x}$\cr\\
+$\rm \hat{c} \; = \; \cos\theta\,\hat{x} \: + \: \sin\theta\,\hat{y}$\cr\\
+$\rm \hat{a} \; = \; \sin\theta\,\hat{x} \: - \: \cos\theta\,\hat{y}$\cr\\
+$\rm \hat{a^{\prime}} \; = \; \hat{z}$\cr}} [lt] at 6 6
+
+\setcoordinatesystem units <1cm,1cm> point at 0 10
+\setplotarea x from 0 to 10, y from 0 to 10
+\multiput {.} at 0 2  *84 0.03333 0.03333  *21 -0.03333 0.03333 *84 -0.03333 -0.03333 *21 0.03333 -0.03333 /
+\put {\lines {$\rm \; \; \; \; \; \;\hat{a^{\prime}}$\cr $\nearrow$\cr}} [lb] at 2.475 5.181
+\put {\stack {$\rm \hat{z}$,$\uparrow$}} at 1.06 6.1
+\put {\lines {$\searrow$\cr $\rm \; \; \; \; \; \; \hat{c}$}} [lt] at 1.25 3.414
+\put {$\rm \longrightarrow (\vec{H} \cdot \hat{c})\hat{c} \: + \: (\vec{H} \cdot \hat{a^{\prime}})\hat{a^{\prime}}$} [l] at 1.414 3.5
+\put {\lines {$\rm \hat{a}$\cr $\bigodot$\cr}} at -0.707 4.5
+\circulararc 18 degrees from 2.7 5.3 center at 1.06 3.768
+\circulararc -18 degrees from 1.2 6.0 center at 1.06 3.768
+\put {$\phi$} at 2 5.8
+\put {b) \hspace{4cm} \underline{Misaligned sample}} [l] at -2 8
+\put {\lines [l] {$\rm \vec{H} \; = \; H\hat{x}$\cr\\
+$\rm \hat{c} \; = \; \cos\theta\cos\phi\,\hat{x} \: + \: \sin\theta\cos\phi\,\hat{y}\, + \, \sin\phi\,\hat{z}$\cr\\
+$\rm \hat{a} \; = \; \sin\theta\,\hat{x} \: - \: \cos\theta\,\hat{y}$\cr\\
+$\rm \hat{a^{\prime}} \cdot \hat{z} \; = \; \cos\phi$\cr}} [lt] at 6 6
+
+\endpicture
+%\caption[Effect of sample tilt on the measured critical fields.]{How a
+%tilted sample  effects  the measured critical field.  a)  The aligned case.
+%Rotations of the sample around the vertical $\rm \hat{z}$ allow $\theta$ to
+%be   varied  all  the  way  from   $\rm   \vec{H}\parallel\hat{c}$  to $\rm \vec{H}\perp\hat{c}$ (= $\rm \vec{H}\parallel \hat{a}$).  b) The misaligned case.  $\rm  H_{c2,\perp\hat{c}}$ can
+%still be measured   correctly, but instead  of  the true   value  of   $\rm H_{c2\parallel\hat{c}}$       one      will        get                 $\rm
+%H_{c2,\parallel\hat{c}}/\sqrt{\cos^2(\phi) \, + \, \epsilon^2\sin^2(\phi)}$.}
+\end{figure}
+
+\end{document}
+

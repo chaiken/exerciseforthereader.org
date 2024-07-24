@@ -1,0 +1,14 @@
+#!/bin/sh
+
+#	echo "frm19980315_124311.html"
+
+find . -name '*.html' -print \
+	| xargs perl -wpi~ -e '
+s/src="fadepicpic/src="fadepic/;
+s/^<li>ID: .*//;
+s/^<li>Serial#: .*//;
+'
+
+#
+# end
+#

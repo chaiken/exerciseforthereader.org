@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="GNU Emacs 23.2.1 (x86_64-redhat-linux-gnu, GTK+ Version 2.20.1) of 2010-05-13 on x86-07.phx2.fedoraproject.org"/>
+<link rel="stylesheet" href="chaiken.css" type="text/css"/>
+<title>Immersive Reading</title>
+</head>
+<body>
+<h1>Making Reading More Immersive</h1>
+
+<p>Prepared by <a href="mailto:alchaiken@gmail.com">Alison Chaiken</a>
+and offered under <a href="
+http://creativecommons.org/licenses/by-sa/3.0/">cc-by-sa</a><img class="right" src="88x31.png" alt="Creative Commons logo" />
+</p>
+
+<ul>
+<li><a href="#motivation">Motivation</a></li>
+<li><a href="#inspiration">Inspiration: Audio Files for Language Study</a></li>
+<li><a href="#orca">Why Not Orca?</a></li>
+<li><a href="#alternative">An Alternative Approach Based on totem, pdftotext and text2wave</a></li>
+<li><a href="#installation">Installation of sayPDF totem-based solution</a></li>
+<li><a href="#running">Running sayPDF totem-based solution</a></li>
+<li><a href="#notes">Notes</a></li>
+<li><a href="#wishlist">Features to be Added</a></li>
+<li><a href="#speak">An Alternative Approach from Kyle Rankin</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#disclaimer">Disclaimer</a></li>                         
+</ul>
+
+<h3><a name="motivation">Motivation</a></h3>
+
+<p>If you're like me, you read a lot of documentation and other
+  detailed technical material.   Sometimes the documentation is poorly
+  written or confusing and I have trouble concentrating.   The hardest
+  material to concentrate on is patent applications.    I can barely
+  bring myself to read more than a half page of claims at a time even
+  when I have a deadline.
+</p>
+
+<p>As a side note, I've been thinking a lot about assistive
+  technologies due to my professional work on <a href="http://meego.com/devices/in-vehicle">"in-vehicle
+  infotainment"</a> systems for drivers.    A moment's consideration
+  shows that a driver is essentially a blind computer user, so a lot
+  of assistive technologies may be adaptable for in-car use.
+</p>
+
+<h3><a name="inspiration">Inspiration: Audio Files for Language Study</a></h3>
+
+<p>
+<a href="http://www.yle.fi/opinportti/supisuomea/"><img src="title.jpg"
+							alt="Supisuomea
+							     logo" /></a>
+</p>
+
+<p>Recently I've been studying Finnish at night with the assistance of
+  audio and video files whose intention is to improve pronunciation.
+  The videos did not include written text to compare with the audio,
+  and I found them hard to understand and useless.   The
+  audio files featured native speakers reading sentences that
+  corresponded to print in a textbook.    Reading the book while
+  listening to the audio and repeating after the speakers not only
+  improved my pronunciation, it also immensely helped my retention of
+  vocabulary.   I could remember words that I'd heard on the recording
+  much better than those I had not.
+</p>
+
+<p>It occurred to me that listening to audio derived from
+  documentation while reading the documentation might help me focus
+  and retain material better and lately I've been trying it out.
+  Somehow the brain hack of listening to a stream that I must 
+  intentionally  pause immensely reduces my tendency for distraction.
+  Put on headphones, open your PDF file, crank up the volume and give
+  it a try!
+</p>
+
+<h3><a name="orca">Why Not Orca?</a></h3>
+
+<p><img src="orca2-sm.jpg" alt="Orca logo" /></p>
+
+<p>Gnome comes with the <a href="http://live.gnome.org/Orca">Orca</a>
+  assistive technology package that will read just about any window
+  out loud.  Orca does work with PDFs, but really poorly in my
+  experience.  For every slide, the audio includes the metadata, and I
+  had to keep moving the mouse around to get the page content to play.
+  There may well be a way to configure Orca to speak PDFs better, but
+  I haven't found one.
+  Please <a href="mailto:alchaiken@gmail.com">email me</a> if you
+  know.</p>
+
+<h3><a name="alternative">An Alternative Approach Based on totem, pdftotext and text2wave</a></h3>
+
+<p><img src="9x_125x125_3_0.gif" alt="SCALE 9x logo" /></p>
+
+<p>Inspired by
+  a <a href="https://www.socallinuxexpo.org/scale9x/presentations/multimedia-command-line">talk
+  at SCALE 9x by Dallas Legan</a> and by a subsequent conversation
+  with <a href="http://prgmr.com/xen/">my buddy Sarah Newman</a>, I've
+  hacked up a solution that works for me.  The basic idea is to use
+  the very basic <a href="http://projects.gnome.org/totem/">totem
+  media player</a> that comes with Gnome to play the audio stream so
+  that it can be backed up and scrolled ahead.  As far as I can make
+  out, orca doesn't allow this kind of fine-grained control.
+</p>
+<p>The gist of the implementation is to pipe output from pdftotext to
+  text2wave to totem.   While the gstreamer player gst-launch that underlies
+  totem will play from stdin, I've had trouble getting totem to do so
+  reproducibly.   For shorter PDF files, totem streams from stdin, but
+  for longer files it complains that it can't determine the type.  
+</p>
+<p>Works:</p>
+<pre>
+cat /tmp/dbus.wav | gst-launch-0.10 playbin uri=fd://0
+</pre>
+<p>Not so much:</p>
+<pre>
+[alison@bonnet UPnP]$ cat /tmp/dbus.wav | totem file://fd://0
+** Message: Error: Could not open resource for reading.
+gstgiosrc.c(324): gst_gio_src_get_stream (): /GstPlayBin2:play/GstURIDecodeBin:uridecodebin0/GstGioSrc:source:
+Could not open location file://fd://0 for reading: Operation not supported
+[alison@bonnet UPnP]$ cat /tmp/dbus.wav | totem uri:fd://0
+** Message: Error: No URI handler implemented for "uri".
+[alison@bonnet UPnP]$ cat /tmp/dbus.wav | totem uri=fd://0
+gstfilesrc.c(1034): gst_file_src_start (): /GstPlayBin2:play/GstURIDecodeBin:uridecodebin0/GstFileSrc:source:
+No such file "/home/alison/UPnP/uri=fd:/0"
+</pre>
+
+
+<h3><a name="installation">Installation of sayPDF totem-based solution</a></h3>
+
+<ol>
+<li><a href="sayPDF.tar.bz2">Get the files.</a></li>
+<li>tar xjf sayPDF.tar.bz2</li>
+<li>If you have already installed festival and its voices, you're all
+  set.  Otherwise on Fedora 14 or similar, try
+  "./CommandLineAudioInstallFedora" to get the required packages.
+  Note that Fedora by default installs the voices in the wrong directory.</li>
+<li>Move the festivalrc file to .festivalrc in your home directory.
+  You can change the playback speed or try different voices by editing
+  ~/.festivalrc.</li>
+<li>If you like, move the bash and perl executables to a bin directory
+  on your $PATH.</li>
+</ol>
+
+<h3><a name="running">Running sayPDF totem-based solution</a></h3>
+<p>Play file dbus.pdf from pages 2 through 5 using totem:</p>
+<pre>sayPDF_totem -f 2 -l 5 -i /tmp/dbus.pdf 
+</pre>
+<p>Play the same file using gstreamer directly:</p>
+<pre>sayPDF_gst-launch -f 2 -l 5 -i /tmp/dbus.pdf 
+</pre>
+
+<h3><a name="notes">Miscellaneous Notes</a></h3>
+<ul>
+
+<li>espeak, a component of <a
+href="http://live.gnome.org/Orca/SpeechDispatcher">speech-dispatcher</a>,
+offers the ability to change the reading speed at invocation-time in a
+script, but its voices are inferior to festival. espeak has superior
+support for foreign languages and a cool phoneme-output mode, but is
+not particularly easy to use or stable.</li>
+
+<li>Consider setting an audio play-pause keyboard shortcut so that you
+don't have to change back and forth to a totem window from your PDF
+reader if you want to linger over a particular page.  In Gnome 2.x, go
+to System . . . Preferences . . . Keyboard Shortcuts and set "Play (or
+play/pause)" to a convenient binding.  I chose WindowsKey-space.</li>
+
+</ul>
+
+<h3><a name="wishlist">Features to be Added</a></h3>
+<ul>
+<li>Changing speed of audio on the fly (Gnome already offers many
+  methods of changing volume)</li>
+<li>Changing voices on a per-document basis</li>
+</ul>
+
+
+<h3><a name="speak">An Alternative Approach from Kyle Rankin</a></h3>
+
+<p><img src="cat.gif" alt="Cover of Kyle Rankin's book" /></p>
+
+<p>The ever-inspiring <a href="http://www.greenfly.org/">Kyle
+    Rankin</a> offers an alternative approach in his
+    book <a href="http://oreilly.com/catalog/9780596100766/">Linux
+    Multimedia Hacks</a>.   Kyle generously allowed me to include his
+    perl script speak.pl in the tarball above.   For reasons I don't
+    understand, on my Fedora system I must invoke it as "perl
+    speak.pl &lt;filename&gt;" rather than having an executable called
+    "speak" that I invoke as "speak &lt;filename&gt;."  Kyle's solution only
+    works with text files, which is displays as it speaks them.   His
+    script also adds end-of-sentence and end-of-paragraph pauses
+    better than default festival.
+</p>
+
+<h3><a name="resources">Resources</a></h3>
+
+<ul>
+<li>Major sources for the
+  implementation: <a href="http://www.lafn.org/~aw585/multimedia.outline.txt">Dallas
+  Legan's encyclopedic notes</a>
+  and <a href="http://info.solomonson.com/content/linux-text-speech">Randy
+  Solomonson's helpful blog.</a></li>
+<li><a href="http://gstreamer-devel.966125.n4.nabble.com/how-to-play-mpegts-using-dev-stdin-td968554.html">Gstreamer
+    playing from stdin</a></li>
+<li><a href="http://ltsb.sourceforge.net/">Another useful aggregation
+  of assistive technology info</a>,
+  suggested by <a href="http://nielsmayer.com">Niels Mayer</a>.</li>
+<li>I've had several useful discussions on the general topic of
+  assistive technologies
+  with <a href="http://frostbitesystems.com/index.php?main_page=index&amp;cPath=3">Jonathan
+  Nadeau</a> and <a href="http://www.ihd.umkc.edu/user_storage/File/hunley.jpg">Spencer Hunley</a>.</li>
+</ul>
+
+<h3><a name="disclaimer">Disclaimer</a></h3>
+<p>Why would you take the advice of some random person you don't know?</p>
+
+<p>
+      <a href="http://validator.w3.org/check/referer"><img class="left"
+      src="/icons1/valid-xhtml10.png" alt="Valid XHTML 1.0!"
+      height="31" width="88" /></a>
+
+      <a href=
+      "http://jigsaw.w3.org/css-validator/check/referer"><img class="right"
+      src="/icons1/valid-css.png" alt="Valid CSS!" height="31" width=
+      "88" /></a>
+
+      <a href="mailto:alchaiken@gmail.com">alchaiken@gmail.com (Alison
+      Chaiken)</a>
+</p>
+
+</body>
+</html>

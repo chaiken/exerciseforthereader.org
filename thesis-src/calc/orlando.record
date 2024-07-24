@@ -1,0 +1,411 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;									     ;;
+;;	File:     orlando.record					     ;;
+;;	Author:   Alison Chaiken					     ;;
+;;	Created:  Wed Aug 10 08:46:19 EDT 1988				     ;;
+;;	Contents: Calculations based on  the equations  in T.P.		     ;;
+;;	Orlando,  E.J.  McNiff, S.  Foner,  and M.R.   Beasley,		     ;;
+;;	Phys.  Rev.  B19,  4545  (1979), using parameters  from		     ;;
+;;	prop.record.							     ;;
+;;									     ;;
+;;	Copyright (c) 1988 Alison Chaiken.				     ;;
+;;	All rights reserved.						     ;;
+;;									     ;;
+;;	$Log$								     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+For C_4KHg:
+Parameters which were measured on T_c = 1.5 K samples:
+SdH frequency, which gives k_F, v_F and n_pi
+Parameters which were measured on T_c = 0.7 K samples:
+gamma, which gives N(0); a-axis resistivity
+Parameters which were measured on T_c = ?? K samples:
+c-axis resistivity
+
+First, calculate for pi electrons the quantity S/S_F that is needed for many of
+the formulae:
+S/S_F is area of the FS compared to the area of a spherical FS which has the
+same electron density.
+S = (* 4.0 pi (squared k_F))  where k_F is calculated from nu_max,
+the SdH frequency
+S_F = (* 4.0 pi (expt (* 3.0 (squared pi) n) (/ 2.0 3.0)))
+where n is calculated using an ellipsoidal model
+For C_4KHg,
+(setq k_F 2.75e+07) in cm^-1
+(setq n_pi 3.15e21) in cm^-3
+S = (* 4.0 pi (squared k_F))
+9.503e+15 cm^-2 ;but we have to multiply this value by 2 for two whole
+cylinders per BZ
+(setq S (* 2.0 9.503e+15))
+S_F = (* 4.0 pi (expt (* 3.0 (squared pi) n_pi) (/ 2.0 3.0)))
+2.584e+16 cm^-2
+(setq ratio (* 2.0 (/ 9.503e+15 2.584e+16)))
+0.7355 ;S/S_F for C_4KHg
+
+Also calculate commonly used parameter combination
+(* (expt n_pi (/ 2.0 3.0)) ratio)
+1.581e+14
+(setq n_scaled 1.581e+14) for C_4KHg 
+
+For C_8KHg,
+(setq k_FII 2.131e+07)
+(setq n_II 1.421e+21)
+S = (* 4.0 pi (squared k_FII))
+5.707e+15 cm^-2
+(setq S (* 2 5.707e+15))
+S_F = (* 4.0 pi (expt (* 3.0 (squared pi) n_II) (/ 2.0 3.0)))
+1.52e+16
+(setq n_scII (* (expt n_II (/ 2.0 3.0)) (/ S 1.52e+16)))
+9.491e+13 ;n_scaled for C_8KHg 
+
+1. Average Fermi velocity, v_ave for C_4KHg: 
+(setq gamma 881.89)
+<v_F> = (* 5.77e-5 (expt n_pi (/ 2.0 3.0)) ratio (recip gamma))
+For C_4KHg, (* 5.77e-5 n_scaled (recip gamma))
+1.034e+07 ;cm/s
+(setq v_ave 1.034e+07)
+
+1. Average Fermi velocity, v_ave for C_8KHg:
+gammaII = 269.1 ;gamma in erg/(cm^3 * K^2) for C_8KHg
+(* 5.77e-5 n_scII (recip gammaII))
+2.035e+07 ;cm/s 
+
+2. Electronic mean free path, l_tr for C_4KHg:
+l_tr = (/ 1.27e4 (* rho_a n_scaled))
+0.7143 ;rho_a(4.2 K) in microohm-cm for C_4KHg; actually an estimate
+(/ 1.27e4 (* 0.7e-6 n_scaled))
+1.1476e-04 ;in cm at 4.2 K
+(setq l_tr 1.1476e-04)
+(* 1.1476e-04 1e8)
+1.1476e+04 = l_a in Angstroms at 4.2 K for C_4KHg 
+from prop.record: 5018 ;l_a in Angstroms at 4.2 K for C_4KHg 
+
+2. Electronic mean free path, l_tr for C_8KHg:
+(/ 1.27e4 (* 0.7e-6 n_scII))
+1.9115e-04 ;in cm at 4.2 K
+(setq l_tr 1.9115e-04)
+(* 1.9115e-04 1e8)
+1.9115e+04 = l_a in Angstroms at 4.2 K for C_4KHg 
+7709 ;l_a in Angstroms at 4.2 K for C_8KHg (from prop.record)
+
+3. Density of states of one spin direction
+(setq gamma 881.89) (for C_4KHg)
+(/ gamma (/ (* 2.0 (squared (* cgs-k pi))) 3.0))
+7.031e+33 states/(cm^3 * erg * spin)
+N(0) = (* 7.97e30 gamma)
+7.029e+33 in states/(cm^3 * erg * spin)
+(* 1e7 (* 7.029e+33 phys-e))
+1.126e+22 in states/(cm^3 * eV * spin)
+From prop.record:
+2.2640e+22 ;in 1/(eV * cm^3), Total DOS for C_4KHg for both spins
+
+gamma = 0.23 millijoules/(mol * K^2) for C_8KHg [Ref. 3]
+Convert to erg/(cm^3 * K^2):
+(/ (* 0.23e-3 1e7) (mvII 1.0))
+269.1 ;gamma in erg/(cm^3 * K^2) for C_8KHg
+(setq gamma 269.1)
+269.1
+(/ gamma (/ (* 2.0 (squared (* cgs-k pi))) 3.0))
+2.146e+33 ; N(0) in states/(cm^3 * erg * spin)
+(* 1e7 (* 2.146e+33 phys-e))
+3.438e+21 ;states/(eV * cm^3 * spin)
+4.0868e+21 ;in 1/(eV * cm^3), Total DOS for C_8KHg from prop.record
+It seems that this should be 6.976e21 because the gamma above gives the correct
+thermodynamic critical field: 
+(sqrt (* 2.0 pi gamma (* 1.9 1.9)))
+78.13 ;78 gauss is the number given in prop.record
+
+4. BCS coherence length for C_4KHg:
+ksi_0 = (/ (* phys-hbar v_ave) (* (squared pi) phys-k T_c Euler-num))
+(/ (* cgs-hbar v_ave) (* (squared pi) cgs-k 1.5 1.781))
+2.982e-06 ;ksi_0 in cm
+(setq ksi_0 2.982e-06)
+(* 2.982e-06 1e8)
+298.2 ;ksi_0 in Angstroms for pi electrons
+From prop.record, 2.71e+03 ;ksi_0 in-plane in Angstroms 
+using ksi_0 = (/ (* ksi(t) (sqrt (- 1.0 t))) 0.74) and data from
+~/hctdata/C_4KHg/7a/redtshiftsumpar.7a
+
+Suppose we use v_F instead of v_ave:
+ksi_0 = (/ (* phys-hbar v_F) (* (squared pi) phys-k T_c Euler-num))
+(setq v_F 1.02e+08) for C_4KHg  in cm/s for pi electrons
+(/ (* phys-hbar v_F) (* (squared pi) phys-k 1.5 1.781))
+2.942e-05
+(* 2.942e-05 1e8)
+2942 ;ksi_0 in Angstroms using v_F
+From prop.record, 2.71e+03 ;ksi_0 in-plane in Angstroms 
+using ksi_0 = (/ (* ksi(t) (sqrt (- 1.0 t))) 0.74) and data from
+~/hctdata/C_4KHg/7a/redtshiftsumpar.7a
+
+What about BCS coherence length for c-axis transport?
+Estimate for spherical (K) band that v_F = (sqrt (/ (* 2.0  1.5 1.602e-12) phys-melectron))
+7.263e+07 ;estimated v_F for c-axis transport in cm/s
+(setq v_F,s 7.263e+07)
+(* 1e8 (/ (* 0.18 cgs-hbar v_F,s) (* cgs-k 1.5)))
+6628 ;ksi_0 for c-axis transport in Ang.
+(setq ksi_0,c 6628)
+
+4. BCS coherence length for C_8KHg:
+For C_8KHg: ksi_0 = (/ (* phys-hbar v_FII) (* (squared pi) phys-k 1.9 1.781))
+1.798e-05 cm
+(* 1.798e-05 1e8)
+1798 ;ksi_0 in Angstroms using v_F for C_8KHg 
+
+5. London penetration depth, lambda_L(0) for C_4KHg:
+lambda_L(0) = (/ (* 1.33e8 (sqrt gamma)) n_scaled)
+2.498e-05 cm
+(* 2.498e-05 1e8)
+2498 ;penetration depth along c for in-plane transport in Angstroms 
+529 Angstroms ;London penetration depth in Angstroms from prop.record
+(setq lambda_L 2498e-8)
+
+5. London penetration depth, lambda_L(0) for C_8KHg:
+For C_8KHg: (setq n_scII (* (expt n_II (/ 2.0 3.0)) (/ S 1.52e+16)))
+9.491e+13
+269.1 ;gamma in erg/(cm^3 * K^2) for C_8KHg
+(setq gammaII 269.1)
+lambda_L(0) = (/ (* 1.33e8 (sqrt gammaII)) n_scII)
+2.299e-05 ;in cm
+(* 1e8 2.299e-05)
+2299 ; penetration depth along c for C_8KHg in Angstroms
+689.8 ;in Angstroms for C_8KHg (from prop.record)
+
+6b). lambda_tr, the parameter which determines dirtiness (lambda_tr >> 1) or
+cleanness (lambda_tr << 1)
+(/ (* 0.882 ksi_0) l_tr)
+0.09821 ;in-plane transport is in the clean limit!
+(/ (* 0.882 ksi_0,c) 35)
+167 ;c-axis transport is in the dirty limit; real lambda_tr is probably lower
+;by about a factor of 3  because mean-free-path anisotropy is probably
+;(resistivity anistropy)/(mass anisotropy) = 0.311 rsistivity anisotropy
+real lambda_tr is then about (* 0.311 167)
+51.94
+
+6b). lambda_tr, the parameter which determines dirtiness (lambda_tr >> 1) or
+cleanness (lambda_tr << 1) for C_8KHg:
+(setq l_tr 1.9115e-04)
+1798 ;ksi_0 in Angstroms using v_F for C_8KHg 
+(/ (* 0.882 1798e-8) l_tr)
+0.08296 ;so in-plane transport of C_8KHg is in the clean limit
+
+7b). Clean-limit in-plane Ginzburg-Landau coherence length:
+(setq T_c 1.5)
+ksi = (/ (* 5.87e-17 n_scaled) (* gamma T_c))
+7.016e-06 ;cm
+(* 7.016e-06 1e8)
+701.6 ;in-plane Ginzburg-Landau coherence length at T=0
+at 0.44 K: (/ 701.6 (sqrt (- 1.0 0.337)))
+861.7 ;in-plane Ginzburg-Landau coherence length at T=0 (CALCULATED)
+from ~/hctdata/C_4KHg/7a/redtshiftsumpar.7a:
+0.337349	54.400002  ;(t, $\rm H_{c2}(t)$) pair
+(sqrt (/ phys-fquant (* 2.0 pi 54.4)))
+2.461e-05 ;in cm
+(* 2.461e-05 1e8)
+2461 ;in Angstroms (MEASURED)
+
+Alternative definition given here:
+(/ (* 0.739 ksi_0) (sqrt (- 1.0 t))) where t=T/T_c
+(/ 0.44 1.53)
+0.2876 ; = t
+(/ (* 0.739 ksi_0) (sqrt (- 1.0 0.2876)))
+2.611e-06
+(* 2.611e-06 1e8)
+261.1 ;in Angstroms  ;ksi par. c at 0.44 K in 7a, calculated
+2460 ; ksi_{in-plane} in Angstroms [for H par. c] from redtshiftsumpar.7a
+
+7b). Clean-limit in-plane Ginzburg-Landau coherence length:
+(setq T_c 1.9)
+ksi = (/ (* 5.87e-17 n_scII) (* gammaII T_c))
+1.09e-05 ;in cm
+(* 1.09e-05 1e8)
+1090 ;in-plane coherence length in Angstroms for C_8KHg
+Measured values are typically about 1700-2000 Angstroms 
+
+7c). Dirty-limit perp-c Ginzburg-Landau coherence length:
+ksi_c = (/ 8.57e-7 (sqrt (* gamma rho T_c (- 1.0 t))))
+0.287582	525.500000; from ~/hctdata/C_4KHg/7a/redtshiftusmper.7a
+rho_c (4.2 K) = 0.2 milliohm-cm [Ref. 1] for C_4KHg from prop.record
+(/ 8.57e-7 (sqrt (* gamma 2e-4 T_c (- 1.0 0.287582))))
+1.974e-06 ;in cm
+(* 1.974e-06 1e8)
+197.4 ;ksi par. c for C_4KHg 7a at 0.4 K, (CALCULATED)
+(/ 2461 (/ 525.5 54.4))
+254.8 ; (MEASURED)
+
+8b).  Clean-limit Ginzburg-Landau penetration depth for C_4KHg:
+lambda = (/ (* 9.37e7 (sqrt gamma)) (* n_scaled (sqrt (- 1.0 t))))
+Here, let t=0.
+(/ (* 9.37e7 (sqrt gamma)) n_scaled)
+1.76e-05 ;in cm
+(* 1.76e-05 1e8)
+1760 ;in-plane Ginzburg-Landau penetration depth at 0 K
+values for T_c = 1.5 K samples: 1084 and 1065 Angstroms
+(from ../chap4/expsum.txt)
+
+8b).  Clean-limit Ginzburg-Landau penetration depth for C_8KHg:
+(/ (* 9.37e7 (sqrt gammaII)) n_scII)
+1.619e-05 ;in cm for in-plane
+(* 1.619e-05 1e8)
+1619 ;in-plane Ginzburg-Landau penetration depth at 0 K
+
+8c). Dirty-limit Ginzburg-Landau penetration depth:
+lambda = (* 6.42e-3 (sqrt (/ rho (* T_c (- 1.0 t)))))
+Consider t=0. rho_c (4.2 K) = 0.2 milliohm-cm [Ref. 1] for C_4KHg 
+(* 6.42e-3 (sqrt (/ 2e-4 T_c)))
+7.413e-05 ;in cm
+(* 7.413e-05 1e8)
+7413 ;penetration depth for field applied in-plane at 0 K
+Experimental numbers for sample 8b = 9283 Angstroms and for 7a = 9144 Angs.
+
+9b).  In-plane clean-limit Ginzburg-Landau kappa for C_4KHg:
+kappa = (/ (* 1.6e24 T_c (expt gamma 1.5)) (squared n_scaled))
+(/ (* 1.6e24 T_c (expt gamma 1.5)) (squared n_scaled))
+2.515
+
+Alternate definition for C_4KHg:
+(/ (* 0.957 lambda_L) ksi_0)
+8.017
+
+9b).  In-plane clean-limit Ginzburg-Landau kappa for C_8KHg:
+(/ (* 1.6e24 T_c (expt gammaII 1.5)) (squared n_scII))
+1.49
+Kappa par. c (T_c) = 0.82 in C_8KHg [Ref. 33] (from prop.record)
+
+9c). C-axis dirty-limit Ginzburg-Landau kappa
+kappa = (* 7.49e3 rho (sqrt gamma))
+(* 7.49e3 (sqrt gamma) 2e-4)
+44.49
+Experimental values: 4.7 for both samples 7a and 8b
+
+10. Thermodynamic critical field for C_4KHg:
+H_c = (* 4.23 (sqrt gamma) T_c (- 1.0 t))
+Consider t = 0.
+(* 4.23 (sqrt gamma) T_c)
+188.4 gauss
+111.7 g;thermodynamic critical field in gauss at 0 K for C_4KHg assuming
+T_c = 1.5 K ; from prop.record
+
+10. Thermodynamic critical field for C_8KHg:
+H_c = (* 4.23 (sqrt gammaII) T_c)
+131.8 gauss for C_8KHg
+Previous value = 78 g (from prop.record)
+
+12b). Clean-limit slope of H_{c2, par c} for C_4KHg:
+slope = 
+(* 9.55e24 (squared (* (recip n_scaled) gamma)) T_c)
+445.7 ;in gauss/K (CALCULATED)
+EXP.  slope parallel to the graphite c-axis = 58.1 g/K (expsum.txt)
+
+12b). Clean-limit slope of H_{c2, par c} for C_8KHg:
+slope = 
+(* 9.55e24 (squared (* (recip n_scII) gammaII)) T_c)
+145.9 ;in gauss/K
+Now compare to experiment.  H_{c2, par. c} approx. (/ phys-fquant (* 2.0 pi (squared (* 1900 1e-8))))
+91.26 ;H_{c2, par. c}(0)
+(/ 91.26 1.9)
+48.03 ;experimental approximate slope in gauss/K
+
+12c). Dirty-limit slope of H_{c2, perp. c} for C_4KHg:
+slope = (* 4.48e4 gamma rho)
+(sqrt (* 2e-4 6e-6))
+3.464e-05
+(* 4.48e4 gamma 3.464e-5)
+1369 ;gauss/K
+EXP. slope perp. to the graphite c-axis = 489.5 g/K (expsum.txt)
+
+13. Lower critical field H_{c1} for C_4KHg:
+H_{c1} = (/ (* H_c (ln kappa)) (* (sqrt 2.0) kappa))
+
+Par. c for C_4KHg:
+Get experimental kappas from expsum.txt:
+For 7a, kappaa = 0.56; for 8b, = 0.54
+(setq kappa 0.55)
+(setq h_therm 111.66)
+(/ (* h_therm (log kappa)) (* (sqrt 2.0) kappa))
+-85.82 ;Hmm.  This formula obviously fails for small kappa (see Tinkham, p.156)
+
+Perp. c for C_4KHg:
+For H perp. c, for 7a and 8b kappa=4.7
+(setq kappa 4.7)
+(/ (* h_therm (log kappa)) (* (sqrt 2.0) kappa))
+26 gauss is H_{c1} perp. c at 0 K for C_4KHg.
+
+13. Lower critical field H_{c1} for C_4KHg:
+H_{c1} = (/ (* H_c (ln kappa)) (* (sqrt 2.0) kappa))
+Kappa perp. c (T_c) = (20 plus or minus 2) in C_8KHg [Ref. 33]
+Kappa par. c (T_c) = (0.82 plus or minus 0.08) in C_8KHg [Ref. 33]
+(setq h_thermII 78.0)
+
+Par. c for C_8KHg:
+(setq kappa 0.82)
+(/ (* h_thermII (log kappa)) (* (sqrt 2.0) kappa))
+-13.35
+
+Perp. c for C_8KHg:
+(setq kappa 20.0)
+(/ (* h_thermII (log kappa)) (* (sqrt 2.0) kappa))
+8.261 ;H_{c1, perp c} for C_8KHg in gauss
+
+Since  we have  used  a gamma  measurement  from (presumably)  T_c = 0.7  K
+samples to calculate  parameters for T_c =  1.5   K samples  and found poor
+agreement, let's try to  use  slope to estimate  the "correct"  number  for
+gamma of the T_c = 1.5 K samples.  If both slopes yield the same gamma, the
+new number stands a good chance of being correct.
+
+From OMFB 10b)., in clean limit, slope =
+(/ (* 9.55e24 (squared gamma) T_c) n_scaled)
+Thus, gamma = (sqrt (/ (* slope (squared n_scaled)) (* 9.55e4 T_c)))
+(sqrt (/ (* 58.1 (squared n_scaled)) (* 9.55e24 T_c)))
+318.4 ;gamma for T_c = 1.5 K phase in erg/(cm^3 * K^2)
+Now get new value of N(0):
+N(0) = (* 2.0(* 1e7 phys-e (* 7.97e30 318.4)))
+8.132e+21 ;states/(eV * cm^3) 
+N(0) from old gamma: 2.3e22
+N(0) for C_8KHg: 4.1e21
+New H_c(0) = (sqrt (* 2.0 pi 318.4 (squared 1.53)))
+68.43 g
+H_c(0.44 K) = (* 68.43 (- 1.0 (squared (/ 0.44 1.53))))
+62.77
+H_c(0.88 K) = (* 68.43 (- 1.0 (squared (/ 0.88 1.53))))
+45.79
+H_c(1.2 K) = (* 68.43 (- 1.0 (squared (/ 1.2 1.53))))
+26.34
+
+From OMFB 10c)., in dirty limit, slope =
+(* 4.48e4 gamma rho)
+Thus gamma = (/ slope (* 4.48e4 rho))
+Use rho_c(4.2K ) = 2e-4 ohm-cm
+use slope = 489.5 g/K
+(/ 489.5 (* 4.48e4 2e-4))
+54.6 ;gamma in erg/(cm^3  * K^2)
+Obviously this is not consistent with the other value of gamma.
+Try using rho = (sqrt rho_a rho_c) for rho when H is in-plane
+(sqrt (* 2e-4 7e-7))
+1.1832e-05
+(/ 489.5 (* 4.48e4 1.2e-5))
+910.5 ;gamma in erg/(cm^3 * K^2)
+This approach doesn't seem to work!
+
+Use same procedure to calculate gamma for Iye's sample 3:
+(/ 58.8 0.73)
+80.55 ;slope in g/K for Iye's sample 3
+(setq n_scaled 1.581e+14) for C_4KHg 
+gamma = (sqrt (/ (* slope (squared n_scaled)) (* 9.55e4 T_c))) (see orlando.record
+(sqrt (/ (* 80.55 (squared n_scaled)) (* 9.55e24 0.73)))
+537.4 ;gamma for T_c =0.73 K C_4KHg
+Then H_c(0) = (sqrt (* 2.0 pi  537.4 (squared 0.73)))
+42.42 g
+Get H_c(0.4 K):
+(* 42.42 (- 1.0 (squared (/ 0.4 0.73))))
+29.68 g
+This implies type I behavior only for theta < 20 degrees, as opposed to 40
+degrees for previous gamma value.
+Now get new value of N(0):
+N(0) = (* 1e7 phys-e (* 7.97e30 537.4))
+6.862e+21 ;states/(eV * cm^3)
+
+
+# Local Variables:
+# auto-fill-hook:nil
+# abbrev-mode:t
+# End:

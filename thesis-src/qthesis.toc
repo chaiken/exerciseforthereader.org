@@ -1,0 +1,61 @@
+\contentsline {chapter}{\numberline {1}Introduction}{16}
+\contentsline {chapter}{\numberline {2}Anisotropic Superconductivity: A Brief Survey}{22}
+\contentsline {section}{\numberline {2.1}Introduction}{22}
+\contentsline {section}{\numberline {2.2}Upper Critical Field Studies of Transition Metal Dichalcogenides and Their Intercalation Compounds}{25}
+\contentsline {section}{\numberline {2.3}Upper Critical Field Studies of Artificially Structured Superlattices}{32}
+\contentsline {section}{\numberline {2.4}Upper Critical Field Studies of High Temperature Superconductors}{43}
+\contentsline {section}{\numberline {2.5}Discussion and Conclusions}{48}
+\contentsline {chapter}{\numberline {3}Sample Preparation and Characterization}{50}
+\contentsline {section}{\numberline {3.1}Introduction}{50}
+\contentsline {section}{\numberline {3.2}Preparation of KHg- and CsBi-GIC's}{52}
+\contentsline {section}{\numberline {3.3}Normal-State Char\discretionary {-}{}{}ac\discretionary {-}{}{}ter\discretionary {-}{}{}iza\discretionary {-}{}{}tion of KHg- and CsBi-GIC's}{64}
+\contentsline {subsection}{\numberline {3.3.1}Characterization with $(00\ell )$ X-Rays}{64}
+\contentsline {subsection}{\numberline {3.3.2}Raman Characterization of $\prm C_4KHg$}{70}
+\contentsline {subsection}{\numberline {3.3.3}Neutron Diffraction Studies of $\prm C_4KHg$}{74}
+\contentsline {subsection}{\numberline {3.3.4}Chemical Analysis of KHg- and CsBi-GIC's}{87}
+\contentsline {subsection}{\numberline {3.3.5}Zero-Field $\prm T_c$ Measurements in $\prm C_4KHg$}{92}
+\contentsline {section}{\numberline {3.4}Discussion and Conclusions}{97}
+\contentsline {chapter}{\numberline {4}Upper Critical Field Measure\discretionary {-}{}{}ments on Stage I KHg--GIC's}{100}
+\contentsline {section}{\numberline {4.1}Introduction}{100}
+\contentsline {section}{\numberline {4.2}Experimental Methods: $\prm H_{c2}$ Data}{103}
+\contentsline {subsection}{\numberline {4.2.1}Mounting the GIC's for Critical Field Measurements}{104}
+\contentsline {subsection}{\numberline {4.2.2}Data Acquisition System}{107}
+\contentsline {subsection}{\numberline {4.2.3}Procedure for Obtaining Data and Data Analysis}{115}
+\contentsline {section}{\numberline {4.3}Experimental Re\discretionary {-}{}{}sults: An\discretionary {-}{}{}gu\discretionary {-}{}{}lar De\discretionary {-}{}{}pen\discretionary {-}{}{}dence of the Upp\discretionary {-}{}{}er Critical Field}{122}
+\contentsline {subsection}{\numberline {4.3.1}Extrinsic Influences on $\prm H_{c2}(\theta )$ in Anisotropic Superconductors}{125}
+\contentsline {subsection}{\numberline {4.3.2}Type I Superconductivity in $\prm C_4KHg$}{132}
+\contentsline {subsection}{\numberline {4.3.3}Type II/1 Superconductivity and $\prm C_4KHg $}{148}
+\contentsline {subsection}{\numberline {4.3.4}Tinkham's Formula Fits to $\prm H_{c2}(\theta )$ in $\prm C_4KHg $}{149}
+\contentsline {subsection}{\numberline {4.3.5}Microscopic Models of Su\discretionary {-}{}{}per\discretionary {-}{}{}con\discretionary {-}{}{}duct\discretionary {-}{}{}ivity and $\prm H_{c2}(\theta )$ in $\prm C_4KHg$}{155}
+\contentsline {section}{\numberline {4.4}Experimental Results: Temperature Dependence of the Upper Critical Field}{157}
+\contentsline {section}{\numberline {4.5}Possible Interpretations of Enhanced Linearity and Positive Curvature in GIC's}{174}
+\contentsline {subsection}{\numberline {4.5.1}Dimensional Crossover Models}{177}
+\contentsline {subsection}{\numberline {4.5.2}Critical Field Enhancement in Isotropic Superconductors}{184}
+\contentsline {subsection}{\numberline {4.5.3}Multiband and Anisotropic Gap Models of Superconductivity}{194}
+\contentsline {section}{\numberline {4.6}Discussion and Conclusions}{204}
+\contentsline {chapter}{\numberline {5}Hydrogenation Experiments on KHg-GIC's}{212}
+\contentsline {section}{\numberline {5.1}Introduction}{212}
+\contentsline {section}{\numberline {5.2}Hydrogenation and Superconductivity in Other Systems}{214}
+\contentsline {subsection}{\numberline {5.2.1}Hydrogenation of the Elemental Superconductors}{214}
+\contentsline {subsection}{\numberline {5.2.2}Superconductivity in the Po\discretionary {-}{}{}tas\discretionary {-}{}{}sium-Hy\discretionary {-}{}{}dro\discretionary {-}{}{}gen GIC's}{216}
+\contentsline {subsection}{\numberline {5.2.3}Hydrogenation of the Transition Metal Dichalcogenide Superconductors}{221}
+\contentsline {section}{\numberline {5.3}Experimental Meth\discretionary {-}{}{}ods: Hy\discretionary {-}{}{}dro\discretionary {-}{}{}gen\discretionary {-}{}{}ation Ex\discretionary {-}{}{}per\discretionary {-}{}{}i\discretionary {-}{}{}ments}{228}
+\contentsline {section}{\numberline {5.4}Effect of Hydrogenation on Superconductivity in the KHg-GIC's}{230}
+\contentsline {section}{\numberline {5.5}Possible Explanations for the Hydrogen-induced $\prm T_c$ Enhancement}{235}
+\contentsline {section}{\numberline {5.6}Conclusions}{243}
+\contentsline {chapter}{\numberline {6}Experiments on CsBi-GIC's}{247}
+\contentsline {section}{\numberline {6.1}Introduction}{247}
+\contentsline {section}{\numberline {6.2}The Quest for Superconductivity in CsBi-GIC's}{248}
+\contentsline {subsection}{\numberline {6.2.1}Experimental Method}{248}
+\contentsline {subsection}{\numberline {6.2.2}Results}{250}
+\contentsline {section}{\numberline {6.3}Mag\discretionary {-}{}{}ne\discretionary {-}{}{}to\discretionary {-}{}{}trans\discretionary {-}{}{}port Mea\discretionary {-}{}{}sure\discretionary {-}{}{}ments on CsBi-GIC's}{256}
+\contentsline {subsection}{\numberline {6.3.1}Magnetoresistance Measurements: Experimental Considerations}{257}
+\contentsline {subsection}{\numberline {6.3.2}Results}{258}
+\contentsline {section}{\numberline {6.4}Discussion}{265}
+\contentsline {chapter}{\numberline {7}Conclusions and Prospects}{269}
+\contentsline {section}{\numberline {7.1}Summary of New Results}{269}
+\contentsline {section}{\numberline {7.2}Conclusions}{272}
+\contentsline {section}{\numberline {7.3}Suggestions for Future Research}{274}
+\contentsline {chapter}{\numberline {A}Estimation of the Hydrogen Debye-Waller Factor}{278}
+\contentsline {chapter}{\numberline {B}Effect of Tilt on An\discretionary {-}{}{}gul\discretionary {-}{}{}ar De\discretionary {-}{}{}pen\discretionary {-}{}{}dence of the Crit\discretionary {-}{}{}ical Field}{280}
+\contentsline {chapter}{\numberline {C}Est\discretionary {-}{}{}imation of the Di\discretionary {-}{}{}men\discretionary {-}{}{}sion\discretionary {-}{}{}less Pa\discretionary {-}{}{}ram\discretionary {-}{}{}eter $\prm \lambda _{tr}$}{285}

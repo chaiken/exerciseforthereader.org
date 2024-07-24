@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# No need to keep very old moved file forever.  The search engines
+# will have the new pages within a few weeks. -wsr
+
+files=$(grep -l 'The html page you are looking for has moved.' *.html)
+
+ls -lag $files
+
+/bin/rm $files
+cvs delete $files
+cvs commit -m 'old "moved" files deleted' $files
+
+# 
+# end
+#

@@ -1,0 +1,65 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;									     ;;
+;;	File:     tmdc.record						     ;;
+;;	Author:   Alison Chaiken					     ;;
+;;	Created:  Thu Oct 27 14:31:52 EDT 1988				     ;;
+;;	Contents: calculation of dimensionality crossover parameters for     ;;
+;;                TMDCIC's.                                                  ;;
+;;									     ;;
+;;	Copyright (c) 1988 Alison Chaiken.				     ;;
+;;	All rights reserved.						     ;;
+;;									     ;;
+;;	$Log$								     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun xipar (hpar hperp)
+  "calculate the coherence length par. c-axis at 0 K given H_{c2},parc and
+   H_{c2,perp.c at 0 K in gauss"
+  (* 1e8 (sqrt (/ (* phys-fquant hpar) (* 2.0 pi (squared hperp)))))
+)
+
+(defun rparam (xiparc I_c)
+  "KLB r-parameter"
+  (* (/ 4 pi) (squared (/ (* 2.0 xiparc) I_c)))
+  )
+
+(defun T* (tc xiparc I_c)
+  "dimensionality crossover temperature"
+  (* tc (- 1.0 (* 2.0 (squared (/ xiparc I_c)))))
+)
+
+
+;first check that calculations are working for C_4KHg
+(xipar 70 800)
+189.8
+(rparam 200.0 10.24)
+1943
+
+;for Cs_{0.3}MoS_2
+(xipar 3.3e4 22.0e4)
+14.99
+(rparam 15.0 19.6)
+2.983
+3D at 0 K
+
+;for NaMoS_2
+(xipar 7.6e3 5.0e4)
+31.65
+(rparam 31.65 15.0)
+22.67
+
+;for SrMoS_2
+(xipar 1.36e4 4.6e4)
+46.02
+(rparam 46.02 18.6)
+31.18
+
+;for CaMoS_2
+(xipar 6.5e3 2.1e4)
+69.68
+(rparam 69.68 18.6)
+71.48
+
+;for $_2$/ethylenediamine\cite{coleman83}
+(rparam 21.0 9.53)
+24.73

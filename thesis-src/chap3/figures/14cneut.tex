@@ -1,0 +1,33 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\beginpicture
+%14c x-rays
+\setcoordinatesystem units <0.4497cm,0.8cm>
+\setplotarea x from 2 to 32, y from 0 to 10
+\axis bottom label {2$\theta$} ticks 
+	numbered from 2 to 32 by 6
+	unlabeled short quantity 31 /
+\put {a)} at 3.365 9
+%14c neutron data 
+\setcoordinatesystem units <1.228cm,0.8cm> point at 0 13
+\setplotarea x from 0 to 11.5, y from 0 to 10
+\axis bottom label {$\ell$} ticks
+        numbered from 0 to 11 by 1
+        unlabeled short quantity 24 /
+\put {b)} at 0.5 9
+\multiput {$\circ$} at "14cspect.scale"
+\endpicture
+\caption[X-ray and neutron diffraction spectra of a gold $\rm C_4KHg$
+specimen.]{X-ray and neutron diffraction $(00\ell)$ spectra of  a gold $\rm
+C_4KHg$ specimen. a)  Only the $\rm  I_c$  = 10.24  \AA\ $\alpha$  phase is
+visible using x-rays. b) With  neutrons, both  the  $\rm  I_c$ = 10.24 \AA\
+$\alpha$ phase and the $\rm I_c$ = 10.83 \AA\ $\beta$ phase show peaks.
+The $\beta$-phase peaks are marked with $\downarrow$.}
+\label{14cneut}
+\end{figure}
+\end{document}

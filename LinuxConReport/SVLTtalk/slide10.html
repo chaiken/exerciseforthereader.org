@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script src="navigate.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="GNU Emacs 23.2.1 (x86_64-redhat-linux-gnu, GTK+ Version 2.20.1) of 2010-05-13 on x86-07.phx2.fedoraproject.org"/>
+
+<link rel="stylesheet" href="slides.css" type="text/css"/>
+
+<title>LinuxCon Highlights, August 2010</title>
+
+</head>
+<body onkeydown="keyAlert(event);" onclick="whichButton(event);">
+
+    <h1 class="title">Granularity in Android Power Management</h1>
+
+<h3>
+<div class="center"><a href="http://developer.android.com/reference/android/os/PowerManager.html">source</a></div>
+
+<table border="2" width="85%" frame="hsides"
+    rules="rows">
+     <thead>
+     <tr><th>Flag Value</th> 
+     <th>CPU</th> <th>Screen</th> <th>Keyboard</th></tr>
+
+     </thead>
+
+     <tbody>
+     <tr><th><code><a href="/reference/android/os/PowerManager.html#PARTIAL_WAKE_LOCK">PARTIAL_WAKE_LOCK</a></code></th>
+         <td>On*</td> <td>Off</td> <td>Off</td> 
+     </tr>
+     
+     <tr><th><code><a href="/reference/android/os/PowerManager.html#SCREEN_DIM_WAKE_LOCK">SCREEN_DIM_WAKE_LOCK</a></code></th>
+
+         <td>On</td> <td>Dim</td> <td>Off</td> 
+     </tr>
+
+     <tr><th><code><a href="/reference/android/os/PowerManager.html#SCREEN_BRIGHT_WAKE_LOCK">SCREEN_BRIGHT_WAKE_LOCK</a></code></th>
+         <td>On</td> <td>Bright</td> <td>Off</td> 
+     </tr>
+
+     
+     <tr><th><code><a href="/reference/android/os/PowerManager.html#FULL_WAKE_LOCK">FULL_WAKE_LOCK</a></code></th>
+         <td>On</td> <td>Bright</td> <td>Bright</td> 
+     </tr>
+     </tbody>
+ </table>
+</h3>
+
+</body>
+
+</html>

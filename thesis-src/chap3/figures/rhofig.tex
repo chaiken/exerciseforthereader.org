@@ -1,0 +1,48 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\beginpicture
+%density of 14c and 16a
+\setcoordinatesystem units <1.172cm,8cm> 
+\setplotarea x from 0 to 10.24, y from 0.2 to 1
+\axis bottom label {Z (\AA)} ticks 
+        numbered from 0.0 to 10.24 by 5.12
+        unlabeled short quantity 5 /
+\put {a)} at 1 0.9
+\put {{\large C}} at 0 1.1
+\put {{\large C}} at 10.24 1.1
+\put {{\large K}} at 2.8 0.4
+\put {{\large K}} at 7.44 0.4
+\put {{\large Hg}} at 5.12 0.6
+\multiput {$\circ$} at "ext14c.dens"
+\multiput {$\ast$} at "ext16a.dens"
+%density of 16a and yang
+\setcoordinatesystem units <1.172cm,8cm> point at 0 1.2
+\setplotarea x from 0 to 10.24, y from 0.2 to 1
+\axis bottom label {Z (\AA)} ticks 
+        numbered from 0.0 to 10.24 by 5.12
+        unlabeled short quantity 5 /
+\put {b)} at 1 0.9
+\put {{\large C}} at 0 1.1
+\put {{\large C}} at 10.24 1.1
+\put {{\large K}} at 2.8 0.4
+\put {{\large K}} at 7.44 0.4
+\put {{\large Hg}} at 5.12 0.6
+\multiput {$\ast$} at "ext16a.dens"
+\multiput {$\circ$} at "extyang.dens"
+\endpicture
+\caption[Real-space structure of  $\rm C_4KHg$ along the
+c-axis.]{Real-space   structure    of  $\rm C_4KHg$ along    the  c-axis as
+calculated from  the Fourier transform of the  extended neutron diffraction
+data.  a) Plot of nuclear  scattering  intensity  versus distance along the
+graphite c-axis for a pink sample (.)  and  a gold sample  ($\circ$).  b) A
+similar plot comparing the structure of the pink sample  (.) to a structure
+($\circ$)    calculated from fit   parameters   reported by   Yang  {\em et
+al.\/}.\cite{yang84}}
+\label{rhofig}
+\end{figure}
+\end{document}

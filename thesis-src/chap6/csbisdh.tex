@@ -1,0 +1,261 @@
+\section{Mag\-ne\-to\-trans\-port Mea\-sure\-ments on CsBi-GIC's}
+\label{csbisdh}
+
+	The original idea in undertaking the study of the CsBi-GIC's was to
+perform  a detailed  examination of   their  superconductivity.  Since,  as
+described in the previous section, no superconductivity  could be found, it
+was decided to pursue experiments on the normal state which  would  help to
+explain the lack of a  transition.  One place  to look for  clues about the
+lack of  superconductivity is the  materials' Fermi surface (FS), since only the
+electrons  with energies near  $\rm E_F$ participate  in superconductivity.
+Shubnikov-de Haas  (SdH)  measurements have in  the   past   been useful in
+measuring    the     Fermi     surface    properties    of     metals    in
+general\cite{ashcroft76} and GIC's  in particular.\cite{M98,Z260}  The  SdH
+measurements   performed    here     at    MIT   are      complementary  to
+optical,\cite{yang88} magnetic resonance,\cite{stang88a} and zero-field
+transport\cite{mareche86} performed elsewhere.
+
+\subsection{Magnetoresistance Measurements: Experimental Considerations}
+\label{sdh:exp}
+
+	For  the SdH experiments,   the   samples were mounted  as  for the
+resistivity   measurements   described   in  section~\ref{csbitc}.  The  dc
+transverse magnetoresistance was measured in fields  up to 23 tesla  and at
+temperatures from 4.2 to 1.2 K using currents from 0.1 to 10 mA.  A typical
+1.2 K  data   set for  a   stage  1  $\alpha$-phase CsBi-GIC is   shown  in
+Figure~\ref{mr}.  The  resistance of the GIC approximately  doubled  at 23 T
+from its zero-field  value.  The approximately quadratic, downward-curving,
+behavior at low field is characteristic of saturation  due to closed orbits
+in the planes perpendicular to the magnetic field.\cite{Z260}  
+
+	This  non-oscillatory portion of  the data  was  fit and subtracted
+off.  The data were Fourier transformed using a program  written by Dr.  M.
+Shayegan.  This algorithm uses a Hamming window  to eliminate  aliasing due
+to the truncation of  the  field  sweeps at  23  T.  Experience  with  this
+program showed that nonetheless  peaks in Fourier intensity at  frequencies
+less than about 30 T were very susceptible to the details of the background
+fit.  For  this  reason, it is  thought  that  the  lowest-frequency  peaks
+observed in the Fourier transforms  of  Ref.~\cite{Z260}  (labeled $\alpha$
+there)   are probably  spurious ones,  due  to  suboptimal background fits.
+Removal  of these $\alpha$  frequencies   from Table II in Ref.~\cite{Z260}
+improves  the  agreement between the Dresselhaus-Leung  model\cite{F60} and
+the data.   A similar comment  could  be made   with respect to Table I  in
+Ref.~\cite{W179}.    Fortunately,   the  quantitative    data   analysis in
+Ref.~\cite{Z260,W179}  relies on the   highest  SdH  frequency and not  the
+lowest ones, and so is unaffected by the  spurious low frequencies.  In the
+analysis reported  here, the background  was  carefully fit  and subtracted
+before the data was fed to the Fourier transform program.
+
+\begin{figure}
+\center
+\vskip 9.cm 
+\caption[Magnetoresistance of a stage 1 $\alpha$-phase CsBi-GIC, $\rm
+C_4CsBi_{0.6}$]{The  transverse magnetoresistance of  a $\rm C_4CsBi_{0.6}$
+(stage 1, $\alpha$-phase) sample  at 1.2 K with  a current  of  1 mA.   The
+current is applied in the graphite planes; the magnetic field is  along the
+graphite c-axis.}
+\label{mr}
+\end{figure}
+
+\subsection{Results}
+\label{sdh:results}
+	
+	Similar	Shubnikov-de   Haas  oscillations  were  seen  in  all pure
+$\alpha$-phase samples studied.   Only very weak  oscillations were seen in
+mixed-phase $\alpha + \beta$  samples, probably  due to  a smaller value of
+$(\omega_c \tau)$ caused  by in-plane  disorder.  A representative  Fourier
+transform   calculated  from the   $\alpha$-phase   SdH  data  is  shown in
+Figure~\ref{sdh:calc}a).  This  scan shows   the frequency which   was seen
+consistently, at $(1120 \pm 110)$ T.
+
+	In order to verify the  authenticity of the highest  frequency, the
+one used  in the subsequent data  analysis,  various small portions of  the
+data  were   Fourier  transformed   separately, to see   if the  1120 T
+requency was an artifact of the analysis.  However, it  was found that this
+frequency appeared strongly no matter what field range of data was used for
+the Fourier transform.  In addition, in order to  get some  intuition as to
+what the 1120  T frequency should  look like  experimentally,  a calculated
+version of  the trace was compared  to the  data using  the fit parameters.
+The calculation  used  the accepted    form of the temperature  and   field
+dependence of the amplitude of SdH oscillations:\cite{Z260}\\
+
+\begin{equation}
+\label{amplit}
+\rm A(T, H) \; = \; T \, \exp \frac{- 2 \pi^2 k_B (T \, + \, T_D)}{\hbar \omega_c}
+\end{equation}
+
+\noindent where A is the amplitude of the oscillations,  $\rm T_D$ is the
+Dingle temperature, and $\rm \omega_c$ is  the cyclotron frequency, through
+which  A is   dependent  on the  magnetic  field.    The Dingle temperature
+characterizes the degree of disorder in a solid through:\cite{Z260}\\
+
+\begin{displaymath}
+\rm T_D \; = \; \frac{\hbar}{\pi k_B \tau_{col}}
+\end{displaymath}
+
+\noindent where $\rm \tau_{col}$ is the transport collision time.  An
+unusually large value of the Dingle temperature of about 5 K had to be used
+to produce the  calculated  trace shown in   Figure~\ref{sdh:calc}b).   The
+collision time in the $\rm C_4CsBi_{0.6}$ samples is probably short  due to
+the scattering   from  the  metal   inclusions  discussed    previously  in
+Section~\ref{csbitc}.  Confidence   in the  validity   of  the  frequencies
+obtained  from the Fourier transforms  is  increased  because  of the  good
+qualitative agreement between the  calculated curve and  the data shown  in
+Figure~\ref{sdh:calc}b).
+
+\begin{figure}
+\center
+\vskip 9.cm 
+\caption[Fourier transform of SdH data; simulated SdH trace]{a) Fourier transform of the data in Figure~\ref{mr}.  Most
+reproducible  frequency is $(1120  \pm 110)$ T,  although other frequencies
+sometimes occur.  b)  Comparison of the  data  from Figure~\ref{mr}  with a
+simulated trace   calculated  using  Equation~\ref{amplit}   and parameters
+obtained from the Fourier transform of the  data.   The calculated curve is
+offset from the data for clarity.}
+\label{sdh:calc}
+\end{figure}
+
+	Once the maximum  SdH frequency of  1120 T has been determined, one
+can use  the dilute-limit  model as a  first approach to understanding  the
+data.  This model assumes  that the primary  effect of intercalation is  to
+increase the size of the graphitic $\pi$-derived ellipsoids at the  K point
+of the Brillouin zone, leaving the shape of the ellipsoids unmodified.  The
+validity of this assumption for  stage I  GIC's could be criticized because
+of  the high  intercalant   densities  involved.  However,  the   excellent
+agreement obtained by Timp {\em  et al.}\cite{W179} with  other more direct
+measurements  of   Fermi   energies  and    charge transfers  gives    some
+justification  for  the  model's  use.   [These   values  are  collected in
+Table~\ref{electronicparams} below.]
+
+	Proceeding then cautiously in  the spirit of  the Dresselhaus-Leung
+(DL) model\cite{F60}, one can  relate  the compounds'  Fermi energy  to its
+maximal FS cross-section,  $\rm {\cal A}_{max}^e$, and   thus to
+the largest observed SdH frequency, $\rm \nu_{max}$.   The expressions that
+describe this relationship, derived by DL, are:\\
+
+\begin{equation}
+\label{sdh:E_F}
+\rm {\cal A}_{max}^e \; = \; \frac{4 \pi}{3a_0^2 \gamma_0^2 (1 \, + \, 2\gamma_4/\gamma_0)^2}(E_3 \, - \, E_F)(E_2 \, - \, E_F)\\
+= \frac{2\pi {\mit e}\nu_{max}}{\hbar {\mit c}}
+\end{equation}
+
+\noindent Here the E's are parameters of the DL model, the $\gamma$'s are
+graphite band parameters,  and $\rm a_0$  is  the graphite in-plane lattice
+constant.  Equation~\ref{sdh:E_F}  can  be used  to  solve for   $\rm E_F$,
+giving  a value  of 0.93  eV.   This value seems low  for a  stage  1 donor
+compound, as Table~\ref{electronicparams} shows.   Yet, within the accuracy
+of   the  approximations made in  the   use  of Equation~\ref{sdh:E_F}, the
+agreement  of  this value with the 1.3  eV obtained by  Yang and colleagues
+from reflectivity  measurements\cite{yang88} is  acceptable.   The 1.3   eV
+number   is  itself  based  on  the  ``mirror bands''  approximation, whose
+quantitative correctness for donor compounds is not well-established.
+
+	With knowledge  of  the  in-plane  structure,  one  can   also $\rm
+C_4CsBi_{0.6}$ also  estimate the  charge transfer  per   carbon atom, $\rm
+f_C$.  $\rm  f_C$  is approximately equal  to the  number of electrons  per
+carbon atom in a GIC since the carrier density  in pristine graphite  is so
+low.\cite{I94} The number of electrons per carbon  atom is the ratio of the
+number of electrons  per unit cell to  the number of  carbon atoms per unit
+cell.  The number of electrons per unit cell is the ratio  of the FS volume
+to the Brillouin zone (BZ) volume:\\
+
+e$^-$ / C-atom = (e$^-$ /unit cell) / (C-atoms / unit cell)\\
+
+\noindent The volume of a piece of $\pi$-electron FS can be estimated in the
+ spirit of the DL model as the size of a cylinder with a
+circular cross-section of area $\rm  {\cal A}_{max}^e$ and height $\rm 2\pi
+/ I_c$:\\
+
+\[ \rm V_{cyl} \; = \; \frac{2 \pi}{I_c} {\cal A}_{max}^e
+\]
+
+\noindent  The total volume of the FS is then the number  of cylinders per
+BZ  (six) times the  volume per cylinder.  Note  that the number  of carbon
+atoms  per unit cell and the  volume  of   the  BZ  depend  on the in-plane
+structure of  the  intercalant.  At  the   time that Ref.~\cite{E291}   was
+published, the authors did not know of any work  on the in-plane structural
+work on   the  CsBi-GIC's, and   so calculated $\rm    f_C$ using  the $\rm
+(2X2)R0^{\circ}$, since this structure is common  in donor GIC's.\cite{I94}
+A new number for $\rm f_C$ has been calculated now that a specific in-plane
+structure has been observed in these materials.
+
+	Bendriss-Rerhrhaye in her  thesis  proposes  a  $\rm  (3\surd13   X
+8)R(15^{\circ},0^{\circ})$   rhombic       unit     cell     for       $\rm
+C_4CsBi_{0.6}$.\cite{bendriss86}  This   proposed   structure  is shown  in
+Figure~\ref{csbistruct}.   The  BZ  associated  with such a unit  cell will
+obviously be  much smaller  than the graphitic  one, but this  is partially
+compensated for by the large number of carbon atoms (192) in the unit cell.
+Using  the 1120 T  SdH frequency  to calculate ${\cal  A}_{max}^e$ gives an
+$\rm  f_C$   of -0.026 electrons per  carbon   atom.  This value  is  about
+two-thirds of that obtained from  reflectivity measurements by Yang {\em et
+al.}\cite{yang88},   just as the $\rm    E_F$ obtained from   SdH is  about
+two-thirds of  that  from reflectivity.  [See Table~\ref{electronicparams}]
+The $\rm f_C$ number of Yang and colleagues is obtained directly from their
+Fermi     energy     using   the   Blinowski-Rigaux    (BR)   tight-binding
+model.\cite{blinowski80} Therefore it is dependent on both the mirror-bands
+approximation (used to get $\rm E_F$) and the assumptions of  the BR model,
+which, like the DL model, uses graphitic  parameters  to describe the $\pi$
+bands of the   intercalation compound.    Taking  all  approximations  into
+account, the $\rm E_F$ and $\rm f_C$  numbers of  the two references should
+be about equally reliable.  The lower value  of the Fermi energy calculated
+from the SdH data could be due to a high-frequency oscillation that was not
+observed.  A high-frequency oscillation appears to  have been missed in the
+compound $\rm  C_4KH_x$.\cite{doll87} A frequency  of about 1700 T would be
+needed for perfect agreement of the CsBi SdH data with the data of Yang.
+
+\begin{figure}
+\center
+\vskip 9.cm 
+\caption[Proposed structure of $\rm C_4CsBi_{0.6}$]{$\rm  (3\surd13 X 8)R(15^{\circ},0^{\circ})$ in-plane unit cell
+proposed for $\rm C_4CsBi_{0.6}$ by A. Bendriss-Rerhrhaye.\cite{bendriss86}.}
+\label{csbistruct}
+\end{figure}
+
+\begin{table}
+\caption[Electronic parameters of the superconducting GIC's.]{Electronic 
+parameters for selected superconducting GIC's.  The stage and phase of each
+compound are listed in parentheses.
+  The
+compounds are listed in order of increasing superconducting transition
+temperature. $\omega_p$ is the unscreened plasma frequency.}
+\label{electronicparams}
+\begin{center}
+\begin{tabular}{|lc|cccc|}
+\hline
+Compound & $\rm T_c$ (K) & $\rm E_F (eV)$ &  $\omega_p$ (eV) & $\rm f_C$ \\
+\hline
+$\rm C_8Cs$ (1) & $<$0.06\cite{tanuma81} & 1.9\cite{lagues84}&-& -0.05\cite{takahashi86,dicenzo86}\\
+$\rm C_{24}Cs$ (2) & $\approx$0 &-&-& -0.040\cite{fretigny85}\\
+$\rm C_{24}K$ (2) & $<$0.011\cite{koike80} & 1.42\cite{doll87} & 4.2\cite{doll87} & -0.042\cite{doll87,I63,preil84}\\
+& &-& 0.85\cite{preil84,preil83} &-& \\
+$\rm C_4KH_{0.8}$  (1) & $<$0.070$^{\ast}$\cite{suzuki85b} &
+$\approx$1.58$^{\ast}$\cite{doll87} & 3.31$^{\ast}$\cite{doll87} & $\approx$-0.052$^{\ast}$\cite{doll87}\\
+&-& 0.89$^{\ast}$\cite{O353} & - & -0.02$^{\ast}$\cite{Z260}\\
+$\rm C_8KH_{2/3}$ (2) & $<$0.052$^{\ddag}$\cite{sano80} & - & -  \\
+$\rm C_8KH_{0.8}$ (2) & - & 1.13$^{\ast}$\cite{doll87} & 3.26$^{\ast}$\cite{doll87} & -0.026$^{\ddag}$\cite{doll87} \\
+&-& 1.15$^{\ast}$\cite{Z260} &-& -0.033$^{\ast}$\cite{Z260}\\
+$\rm C_4CsBi_{0.6}$ (1$\alpha$) & $<$0.050\cite{stang88} & 1.3\cite{yang88} & 2.6\cite{yang88} & -0.04\cite{yang88}\\
+& $<$0.5\cite{E291} & 0.93\cite{E291} &-& -0.027$^*$\\
+$\rm C_4CsBi_{1.0}$ (1$\beta$) & $<$0.4\cite{E291} & 0.95\cite{yang88} & 2.5\cite{yang88} & -0.02\cite{yang88}\\
+$\rm C_8K$ (1) & 0.15\cite{kaneiwa82} & 1.6\cite{doll87} & 4.5\cite{doll87} & -0.075\cite{tanuma78}\\
+&-& 1.4\cite{tanuma78} & 4.65\cite{fischer85} & -0.125\cite{preil84}\\
+$\rm C_8KH_{0.05}$ (1) & 0.19$^{\dagger\ddag}$\cite{enoki85} & - & - & -\\
+$\rm C_8KH_{0.19}$ (1+2) & 0.22$^{\S\ddag}$\cite{kaneiwa82} & - & - & -\\
+$\rm C_8KH_{0.8}$ (2) & 0.31$^{\ast}$\cite{suzuki85b} & - & - & -\\
+$\rm C_4KHg$ (1) & 1.5\cite{W179} & 1.53\cite{W179} &  & -0.063\cite{W179}\\
+& 0.73\cite{tanuma81} & 1.6\cite{yang88} & 5.1\cite{yang88} & -0.06\cite{yang88}\\
+&-& 1.47\cite{preil84} & 5.0\cite{fischer85} & -0.073\cite{conard81}\\
+$\rm C_8KHg$ (2) & 1.9\cite{pendrys81} & 1.2 & 4.7\cite{yang88} & -0.03\cite{yang88} \\
+&-& 1.0\cite{W179}  &  & -0.049\cite{W179} \\
+&-& 0.87\cite{preil84} &-& -0.0417\cite{preil84}\\
+\hline
+\end{tabular}
+\end{center}
+$^{\dagger}$Calculated through interpolation in Ref.~\cite{enoki85}.\\
+$^{\S}$Superconductivity is attributed only to the stage 1  phase $\rm
+C_8KH_{0.1}$ in Ref.~\cite{enoki85}.\\
+$^{\ast}$Made from KH powder.\\
+$^{\ddag}$Chemisorbed from $\rm C_8K$ starting material.\\
+$^*$Calculated here from data in Ref.~\cite{E291}.
+\end{table}
+

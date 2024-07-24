@@ -1,0 +1,142 @@
+/* Common to all pages */
+body {
+	margin: 0;
+	padding: 0.5em;
+	font: 11pt Verdana, Arial, Helvetica, sans-serif;
+}
+td {
+	font: 11pt Verdana, Arial, Helvetica, sans-serif;
+	vertical-align: top;
+}
+h1 {
+	font-size: 18pt;
+	background: #e8f0ff;
+}
+h2 {
+	font-size: 16pt;
+	color: blue;
+}
+h3 {
+	font-size: 14pt;
+	color: black;
+}
+
+a:link, a:visited  {
+	color: #003399;
+	text-decoration: none;
+}
+a:hover   {
+    color:#CC0000;
+	text-decoration:underline
+}
+ul, li {
+	margin-left: 1em;
+	padding-left: 0.3em;
+}
+ul.plain li {
+/*	list-style-type: none; */
+	margin-bottom: .3em;
+}
+ul li {
+	margin-bottom: .3em;
+} 
+
+ol li {
+	margin-bottom: .3em;
+}
+form {margin: 5pt ;}
+
+iframe {margin-bottom: 10pt;}
+input {
+	background: #efefef;
+	font: 10pt Verdana, Arial, Helvetica, sans-serif;
+}
+img {vertical-align: middle;}
+select {
+	background: #fff;
+	font-size: 10pt;
+}
+
+.small {font-size: 10pt;}
+
+
+/* header and footer elements */
+#header {
+	position: relative; 
+	height: auto; 
+	clear: both;
+}
+#logo {
+	float: left;
+	position: relative;
+	top: 0;
+	left: 0;
+	background: #00309C url(../images/logo_bg.jpg) no-repeat;
+	width: 530pt;
+	min-width: 530pt;
+	height: 72pt;
+	min-height: 72pt;
+	color: #ffffff;
+}
+#footer {
+	position: relative;
+	text-align: center;
+	clear: both;
+	background: #efefef;
+	padding: .2em;
+	width: auto;
+	vertical-align: middle;
+	font-size: 10pt;
+}
+#hrow1 {
+	background: #efefef;
+	position: relative;
+	margin: 0;
+	clear: both;
+	width: auto;
+	top: 0;
+	left: 0;
+	height: 67pt;
+	padding: 2pt;
+}
+#hrow2 {
+	background: #003399; 
+	width: auto;
+	position: relative;
+	top: 0;
+	left: 0;
+	clear: both;
+	margin: 0;
+	height: 72pt;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+#footer ul, #subscriber_nav ul {
+	margin: 0;
+	padding: 0;
+}
+#footer li, #subscriber_nav li {
+	display: inline;
+	padding: 5pt;
+	vertical-align: middle;
+}
+
+#ptimg {
+	float: left; 
+	text-align: center; 
+	margin: 10pt; 
+	padding-top: 5pt; 
+	width: 100pt; 
+	clear: left;
+}
+
+
+#searchfrm {
+	float: right;
+	width: auto;
+	position: absolute;
+	right: 20pt;
+	vertical-align: middle;
+	z-index: 100;
+	margin-top: 20pt;
+}

@@ -1,0 +1,132 @@
+###############################################################################
+##									     ##
+##	File:     tcs.txt						     ##
+##	Author:   Alison Chaiken					     ##
+##	Created:  Sat May 28 18:25:24 EDT 1988				     ##
+##	Contents: T_c's for the various ternary GIC's.  References in        ##
+##                ~/thesis/calc/ref.txt.                                     ##
+##									     ##
+##	Copyright (c) 1988 Alison Chaiken.				     ##
+##	All rights reserved.						     ##
+##									     ##
+##	$Log: tcs.txt,v $
+##	Revision 1.1  1997/12/14 09:10:04  wolfgang
+##	initial commit
+##									     ##
+###############################################################################
+
+Compound		T_c (K)			Ref.
+--------		--------		----
+C_4KHg			<1.5 			34
+C_4KHg			<0.8			3
+C_4KHg			0.72			30
+C_4KHg			0.73			30
+C_4KHg			0.86			30
+C_8KHg			1.70			34
+C_8KHg			1.82			37
+C_8KHg			1.84			37
+C_8KHg			1.90			34
+C_8KHg			1.90			36
+C_8KHg			1.90			33
+C_8KHg			1.90			30
+C_8KHg			1.93			3
+C_8KHg			1.94			30
+C_{12}KHg 		<1.85			44
+
+C_4KTl_{1.5}		2.56			37
+C_4KTl_{1.5}		2.7			36,50
+C_8KTl_{1.5}		2.45			44,50
+C_8KTl_{1.5}		1.3			36
+
+C_4RbHg			0.99			30
+C_8RbHg			1.40			37
+C_8RbHg			1.40			30
+C_8RbHg			1.40			30
+C_8RbHg			1.44			34
+C_8RbHg			1.44			36
+C_8RbHg			1.44			33
+C_8RbHg			1.44			3
+
+#Quaternary compounds
+C_4KTl_{1.35}Hg_{0.15}  2.55			44
+C_8KHg_{0.9}Pb_{0.1}    1.73			44
+
+#Binary alkali metal superconductors
+C_8K [?]	     0.39-0.55			31
+C_8K			<0.30			92
+C_8K [HOPG]	0.128-0.198 (ave. = 0.147)      26
+C_8K [HOPG]		0.139			25
+C_8K	[HOPG]		0.150			14
+C_{8.07}K [powder]	0.080			26
+C_{8.1}K [HOPG] 	0.153			29
+C_{8.6}K [Grafoil]	0.125			15
+C_{8.6}K [Grafoil]	0.126			16
+C_{8.8}K [Grafoil]	0.125			15
+C_{8.8}K [Grafoil]	0.125			27
+C_{9.1}K [HOPG]		0.162			15
+C_{9.4}K [Grafoil]	0.125			15
+C_{10}K [Grafoil]	0.108			16
+C_{16.7}K [HOPG]	<0.060			15
+C_{24}K [?]		<0.011			24
+C_{24}K [HOPG?]		<0.07K up to 10 kbar	
+C_4K [under pressure]   about 2.5 		79
+C_6K [under pressure]   1.44-1.56		78
+C_8K [21 kbar]		1.5			78
+C_8K [13 kbar]		1.5			78
+
+C_8Rb	[?]	     0.023-0.150		31
+C_8Rb	[HOPG]		0.026			21
+C_8Rb	[?]		<0.090			cited in 21,35
+C_8Rb	[?]		<1.3K up to 22 kbar	
+
+C_8Cs   [?]	     0.03-0.135			31
+C_8Cs	[HOPG]		<0.060			30,35
+
+C_8K_{0.62}Cs_{0.38}	<0.060			29
+C_{8.8}K_{0.64}Cs_{0.36} 0.088			29
+C_8K_{0.91}Cs_{0.09}	 0.108			29
+
+#Hydrogenated superconducting graphite intercalation compounds 
+C_4KH_x			<0.070			13   [HOPG;KH powder;St.I]
+C_8KH_x			0.31 		13   [HOPG;KH powder;St.II+C_{24}K]
+C_8KH_{0.05} 		0.19 (EXPECTED, not seen) 17   [Grafoil;chem.;St.I]
+C_8KH_{0.19}		0.22		14   [HOPG;chem.;St.II+C_8K+C_{24}K]
+C_8KH_{2/3}		<0.052			16   [Grafoil;chem.;St.II]
+
+#T_c's of MBi-GIC's
+C_4CsBi_{0.5}		4.05			84
+C_4CsBi_{0.5}		<0.5			86
+C_4CsBi_{0.5}		<0.05			90
+C_4CsBi_{1.0}		2.3			84
+C_8CsBi_{1.0} 		2.7			84
+C_8CsBi_{1.0} 		3.45			91
+C_8RbBi_{0.5} 		1.25-1.5		84
+
+#T_c's of Hydrogenated C_8CsBi_{1.0} (Beta) Samples
+Before			3.20			91 [p. 178]
+After			3.12			91 [p. 178]
+Before			2.32			91 [p. 178]
+After			2.32			91 [p. 178]
+Before			2.62			91 [p. 178]
+After			2.55			91 [p. 178]
+
+#T_c's of intercalants and related materials
+Hg			4.15			38
+KHg_8			3.42			38
+KHg_4			3.27			38
+KHg_3			3.18			38
+KHg_2			1.20			38
+KHg			0.94			30
+KHg			<1.14			38
+RbHg			1.17			30
+K			<0.080			38
+Rb			<0.011			38
+Cs			<0.011			38
+Tl			2.38			38
+KTl_{1.5}		2.5 (probably Tl!)	44
+KTl_{1.5}		2.4-2.6 (probably Tl!)	50
+KTl_{1.5}		<0.40			37
+KBi			3.6			91 [p. 177]
+KBi_2			3.58			84
+RbBi_2			4.25			84
+CsBi_2			4.75			84

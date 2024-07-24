@@ -1,0 +1,23 @@
+\chapter[Computer Programs used to Fit $\rm H_{c2}(\theta)$ Data]{Computer Programs used to Fit Angular Dependence of the Critical
+Field Data}
+\label{angprog}
+\pagestyle{headings}
+\markright{$\rm H_{c2}(\theta)$ Programs}
+
+        This appendix contains the  source  code for the programs typeI and
+newtink.  typeI performs a least-squares fit  of Eqn.~\ref{ldtheor} to $\rm
+H_{c2}(\theta)$ data.  The program also allows for  the possibility of type
+I behavior (as suggested in Equation~\ref{typeItheta}),  sample tilt (as in
+Equation~\ref{tilthc2}), or mosaic spread (as in Equation~\ref{mostheta}).
+The derivation of Equation~\ref{tilthc2} is given in Appendix~\ref{tiltderiv}.
+
+        newtink  is     similar    to typeI,   only   it     is  based   on
+Equation~\ref{tinkham} rather  than Equation~\ref{ldtheor}.  newtink allows
+for mosaic spread and type I superconductivity, but not for sample tilt.
+
+        Both typeI and newtink make use of some of the utility subroutines
+listed in Appendix~\ref{utility}.
+
+%typeI.c min.c fpeerr.c doublemod.c moshc2.c
+%newtink.c  min.c fpeerr.c doublemod.c moshc2.c
+%Makefile

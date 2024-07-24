@@ -1,0 +1,175 @@
+NOTE: This program, its sources, and those in the directory libutil
+are given anyway WITHOUT ANY WARRANTY, intended or implied.  Use at
+your own risk.  It's not our fault if your data is bad!
+
+unpack the sources using 
+
+	gtar -xvzf hc2.tar.gz
+
+or try
+
+	gunzip hc2.tar.gz
+	gtar -xvf hc2.tar
+
+/******************************************************************************
+*									      *
+*	File:     hc2.c							      *
+*	Author:   Alison Chaiken					      *
+*	Created:  Wed Apr 15 13:15:44 EST 1987				      *
+*	Contents: This program is the  root of a routine which calculates     *
+*	and  plots the critical  field versus temperature curve		      *
+*	given   the various  input  parameters  required.   The		      *
+*	following is a list of the variables used:			      *
+*									      *
+*	     Input Parameters to the Program: 				      *
+*                  							      *
+*	Parameters with physical significance:				      *
+*									      *
+*	First, pairb: The number signifying which pairbreaker		      *
+*	is to be used.							      *
+*									      *
+*		Which   pairbreaker  you  use   depends on  the		      *
+*	geometry  of your  sample  and  its orientation to  the		      *
+*	field.								      *
+*									      *
+*	(1)	Bulk   sample   or  a   thin   film    oriented		      *
+*	perpendicular to the field.					      *
+*									      *
+*	(2)       Thin film oriented parallel to the field.		      *
+*									      *
+*	(3)	Surface sheath (Hc3)					      *
+*									      *
+*									      *
+*	0)  slope	dHc2/dT evaluated  at  Tc in  gauss/K.		      *
+*	(internally converted to Gauss/K) Not used if pairb = 2.              *
+*									      *
+*	1) bfulde	Spin-orbit scattering parameter used by		      *
+*	Fulde.  b-Fulde =  lambda_{spin-orbit} / 1.122919 where		      *
+*	1.122919 = 2 / exp (Euler's constant = 0.5772157).		      *
+*									      *
+*	2) renorm	Renormalization factor for Pauli field.		      *
+*									      *
+*	3) cfulde	Fulde's C parameter. Used instead of slope for        *
+*                       pairb = 2.
+*									      *
+*	4)  pp0		Additional pairbreaker  constant  with		      *
+*	field.								      *
+*									      *
+*	5)  pp1		Additional pairbreaker proportionality		      *
+*	constant linear with field.					      *
+*									      *
+*	6) tc		Critical  temperature   in  zero  field		      *
+*	(Kelvin).							      *
+*									      *
+*	7) thick        Thickness of the thin film.  Used only for pairb      *
+*                       = 2.                                                  *
+*	Variables internal  to the program:                       	      *
+*									      *
+*	1) npts		number of points in the curve			      *
+*									      *
+*	2) t		reduced temperature = temp(K) / tc		      *
+*									      *
+*	3)    h		reduced  field  =    Field(Gauss)  /		      *
+*	[(slope)*(tc)]							      *
+*									      *
+*       4) p[]: Vector into which the 8 parameters are initially read.        *
+*                                                                             *
+*       5) hcalc: value of hc2 calculated with original parameters input      *
+*                 to the program                                              *
+*       6) chisqr: the reduced  chi-squared, which is                         *
+*                  (chi-squared) / (number of points). Return by hcfit.       *
+*                                                                             *
+*       7) fit[]: array in which the values of hc2 which minimize chi-squared *
+*                 are stored.                                                 *
+*                                                                             *
+*	Note: Some of the following  are  essentially the same as those       *
+*	listed above.  Eric has converted to  these because the		      *
+*	actual equations which  are used to calculate Hc2  come		      *
+*	form Orlando's  thesis,  which  was written  when   the		      *
+*	following parameters were most common.				      *
+*									      *
+*	8) slambda	lambda_{spin-orbit}				      *
+*	9) hp	Pauli field * T_c * 0.9795        			      *
+*	10) alpha                                                             *
+*                                                                             *
+*	Subroutines called by this program:				      *
+*                                                                             *
+*       1) hcfunc.c, which does the actual calculation of hc2                 *
+*                                                                             *
+*       2) max.c(), which returns absolute value of argument                  *
+*                                                                             *
+*       3) hcfit.c, which does gradient least-squares fit, and is only called *
+*          if -f <flag> is present at runtime on the command line.            *
+*                                                                             *
+*       4) fatal and whiteline, error-handling routines                       *
+*                                                                             *
+*	C-implementation  by   A.  Chaiken.   Based  on  a		      *
+*	Fortran IV routine  written by J.E. Tkaczyk  and J.A.X.		      *
+*	Alexander   of  the Francis    Bitter  National  Magnet		      *
+*	Laboratory between 1983 and 1986.  				      *
+*                                                                             *
+*	Please acknowledge J.E. Tkaczyk and J.A.X. Alexander as		      *
+*	the source of  this  software.  Also, any requests  you		      *
+*	receive for a copy of  this program  should be directed		      *
+*	to  the address  below.  We wish   to keep track of the		      *
+*	distribution in case any errors or potentially valuable		      *
+*	changes are  brought to our attention.  Suggestions and		      *
+*	comments are welcome.						      *
+*									      *
+*	John Eric Tkaczyk                                                     *
+*	GE Corp R&D                                                           *
+*	PO Box 8                                                              *
+*	Bldg K1-1C37                                                          *
+*	Schenectady NY, 12301                                                 *
+*                                                                             *
+*	Copyright (c) 1987 Alison Chaiken.            			      *
+*	All rights reserved.						      *
+*									      *
+*                                                                             *
+******************************************************************************/
+
+The compiled program is mostly self-documenting.  The runtime format is 
+
+hc2: format is `hc2 -p parametersfile -i datafile [-f] [-o logfile] [-e]`
+
+where parametersfile contains two columns, on each line a parameter
+value and a flag telling whether the parameter is fixed or free.  The
+order of the parameters is
+
+pairbreaker 1, 2, or 3
+mode -1, 0, 1
+dHc2/dT in gauss/K<tab>flag
+bfulde<tab>flag
+renorm<tab>flag
+cfulde<tab>flag
+pp0<tab>flag
+pp1<tab>flag
+Tc<tab>flag
+film thickness<tab>flag
+
+The datafile should contain data in the format
+
+temperature<tab>hc2
+
+The -f flag specifies whether the data is to be fit or a straight
+calculation is to be done.  The logfile collects helpful diagnostics.
+If the -e flag is set, hc2 values are calculated throughout the entire
+temperature range, not just at temperatures where data was taken.  The
+-e option is usually used after parameters have been optimized using
+the -f option.
+
+The fit uses a gradient-least-squares search over chi-squared space.
+Both the gradient-least-squares algorithm and the chi-squared
+algorithm come from Bevington's book.  The fit works poorly if
+reasonable guesses (say within 10% of true) value are not input for
+starting parameters.   Here's how the mode parameter affects the
+definition of chi-squared:
+
+	mode: determines method of weighting least-squares fit:
+
+		+1 (instrumental weight) = 1/ sigmay(i)  sigmay(i)        
+		 0 (no weighting) = 1		      
+		-1 (statistical weighting) = 1/ y(i)  
+
+
+Good luck.

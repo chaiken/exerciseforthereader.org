@@ -1,0 +1,289 @@
+http://www.fedoraforum.org/forum/archive/index.php/t-64964.html
+See "Jeff Sadowski"
+
+History:
+I used Fedora's default installer to put F13 on a clean disk after a
+drive failure.  No worries, as I had just checked my backups!
+The default installer created a logical volume group using LVM2 with
+each of my partitions as an LV within it.  Well, whatever.
+
+I spent a few days configuring the system and decided to fetch the
+backup.  I ended up messing up /etc/fstab.  No worries still: I've
+been there before!  You just boot from the rescue DVD and move the old
+/etc/fstab back into place.
+
+Booting from the rescue DVD said there were no hard drives: eeesh,
+this is truly bad.  Turns out that whatever filesystem utility F13
+rescue CD runs by default does not know about LVM2.  You have to start
+lvm from the rescue shell, run a bunch of commands like "vgchange" and
+*then* mount the LVG.  I can't believe it.  Don't ask how many hours
+it took me to figure this out.  And I still can't read my backup disk.
+Thanks for feeling sorry for me.
+
+Problem: booting F13 from rescue disk didn't work because the
+mounter/scanner on the rescue disk doesn't understand the LVM2 that
+anaconda uses to create logical volume groups.  So I had to use LVM
+(not dmsetup!)  to reconfigure the LVG and LVs so that the mounter
+would recognize them.
+
+What to do:
+
+1. Get into the rescue bash shell.   Typing
+
+mount -t ext4 /dev/sda2 /mnt/sysimage 
+
+does not work because /dev/sda2 is not an ext4 filesystem, it's an LV!
+
+2. ls /dev
+The disk and its partitions (dev/sda, etc.) should appear.
+lvmdiskscan knows about the LVG but can't seem to use it.   The LVG
+does *not* appear in /dev/mapper.
+
+3. Then
+
+modprobe dm-mod
+
+lvm   [get into LVM; vgchange and vgmknodes not know to bash!]
+vgchange -ay 
+vgmknodes
+
+4. lvdisplay and vgdisplay now know about the partitions on /dev/sda.
+
+5. Now
+
+mount /dev/mapper/ls_root /mnt/sysimage 
+
+mounts the root filesystem!    Whatever problem caused unbootability
+can now be fixed in the old-fashioned way.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Tomales:
+alison@tomales ;-) df
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/vg_tomales-lv_root
+                       98G   14G   83G  14% /
+tmpfs                 2.0G  732K  2.0G   1% /dev/shm
+/dev/sda3             485M   63M  397M  14% /boot
+/dev/mapper/vg_tomales-lv_home
+                      301G   28G  259G  10% /home
+/dev/sdc1             7.6G   18M  7.5G   1% /media/00CC-1182
+alison@tomales ;-) mount
+/dev/mapper/vg_tomales-lv_root on / type ext4 (rw)
+proc on /proc type proc (rw)
+sysfs on /sys type sysfs (rw)
+devpts on /dev/pts type devpts (rw,gid=5,mode=620)
+tmpfs on /dev/shm type tmpfs (rw)
+/dev/sda3 on /boot type ext4 (rw)
+/dev/mapper/vg_tomales-lv_home on /home type ext4 (rw)
+none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
+gvfs-fuse-daemon on /home/alison/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev,user=alison)
+/dev/sdc1 on /media/00CC-1182 type vfat (rw,nosuid,nodev,uhelper=udisks,uid=500,gid=500,shortname=mixed,dmask=0077,utf8=1,flush)
+alison@tomales ;-) sudo lvmdiskscan
+[sudo] password for alison: 
+  /dev/ram0  [      16.00 MiB] 
+  /dev/root  [      98.81 GiB] 
+  /dev/ram1  [      16.00 MiB] 
+  /dev/sda1  [      41.99 GiB] 
+  /dev/dm-1  [       5.88 GiB] 
+  /dev/ram2  [      16.00 MiB] 
+  /dev/sda2  [      13.09 GiB] 
+  /dev/dm-2  [     305.47 GiB] 
+  /dev/ram3  [      16.00 MiB] 
+  /dev/sda3  [     500.00 MiB] 
+  /dev/ram4  [      16.00 MiB] 
+  /dev/ram5  [      16.00 MiB] 
+  /dev/sda5  [     410.19 GiB] LVM physical volume
+  /dev/ram6  [      16.00 MiB] 
+  /dev/ram7  [      16.00 MiB] 
+  /dev/ram8  [      16.00 MiB] 
+  /dev/ram9  [      16.00 MiB] 
+  /dev/ram10 [      16.00 MiB] 
+  /dev/ram11 [      16.00 MiB] 
+  /dev/ram12 [      16.00 MiB] 
+  /dev/ram13 [      16.00 MiB] 
+  /dev/ram14 [      16.00 MiB] 
+  /dev/ram15 [      16.00 MiB] 
+  /dev/sdc1  [       7.53 GiB] 
+  1 disk
+  22 partitions
+  0 LVM physical volume whole disks
+  1 LVM physical volume
+alison@tomales ;-) sudo fdisk -l
+
+Disk /dev/sda: 500.1 GB, 500107862016 bytes
+255 heads, 63 sectors/track, 60801 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0xa287a9ef
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1               1        5482    44032000    7  HPFS/NTFS
+/dev/sda2           59093       60801    13726720    7  HPFS/NTFS
+/dev/sda3   *        5482        5546      512000   83  Linux
+/dev/sda4            5546       59093   430111744    5  Extended
+/dev/sda5            5546       59093   430110720   8e  Linux LVM
+
+Partition table entries are not in disk order
+
+Disk /dev/dm-0: 106.1 GB, 106099113984 bytes
+255 heads, 63 sectors/track, 12899 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+Disk /dev/dm-0 doesn't contain a valid partition table
+
+Disk /dev/dm-1: 6308 MB, 6308233216 bytes
+255 heads, 63 sectors/track, 766 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+Disk /dev/dm-1 doesn't contain a valid partition table
+
+Disk /dev/dm-2: 328.0 GB, 327994572800 bytes
+255 heads, 63 sectors/track, 39876 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+Disk /dev/dm-2 doesn't contain a valid partition table
+
+Disk /dev/sdc: 8086 MB, 8086618112 bytes
+255 heads, 63 sectors/track, 983 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x04dd5721
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdc1   *           1         984     7897056+   b  W95 FAT32
+Partition 1 has different physical/logical endings:
+     phys=(982, 254, 63) logical=(983, 36, 13)
+alison@tomales ;-) 
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+bonnet:
+
+[alison@bonnet ~]$ df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/mapper/vg_bonnet-lv_root
+                     100791728   5541284  94226820   6% /
+tmpfs                  3839496       412   3839084   1% /dev/shm
+/dev/sda1               495844     46777    423467  10% /boot
+/dev/mapper/vg_bonnet-lv_home
+                     1264705152    982712 1199479140   1% /home
+/dev/mapper/vg_bonnet-lv_snapshot
+                      16126920    171056  15136664   2% /snapshot
+/dev/sdb1              7881644     17816   7863828   1% /media/00CC-1182
+[alison@bonnet ~]$ mount
+/dev/mapper/vg_bonnet-lv_root on / type ext4 (rw)
+proc on /proc type proc (rw)
+sysfs on /sys type sysfs (rw)
+devpts on /dev/pts type devpts (rw,gid=5,mode=620)
+tmpfs on /dev/shm type tmpfs (rw,rootcontext="system_u:object_r:tmpfs_t:s0")
+/dev/sda1 on /boot type ext4 (rw)
+/dev/mapper/vg_bonnet-lv_home on /home type ext4 (rw)
+/dev/mapper/vg_bonnet-lv_snapshot on /snapshot type ext4 (rw)
+none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
+gvfs-fuse-daemon on /home/alison/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev,user=alison)
+/dev/sdb1 on /media/00CC-1182 type vfat (rw,nosuid,nodev,uhelper=udisks,uid=500,gid=500,shortname=mixed,dmask=0077,utf8=1,flush)
+[alison@bonnet ~]$ sudo lvmdiskscan
+  /dev/ram0  [      16.00 MiB] 
+  /dev/root  [      97.66 GiB] 
+  /dev/ram1  [      16.00 MiB] 
+  /dev/sda1  [     500.00 MiB] 
+  /dev/dm-1  [       9.31 GiB] 
+  /dev/ram2  [      16.00 MiB] 
+  /dev/sda2  [       1.32 TiB] LVM physical volume
+  /dev/dm-2  [       1.20 TiB] 
+  /dev/ram3  [      16.00 MiB] 
+  /dev/sda3  [      48.83 GiB] 
+  /dev/dm-3  [      15.62 GiB] 
+  /dev/ram4  [      16.00 MiB] 
+  /dev/ram5  [      16.00 MiB] 
+  /dev/ram6  [      16.00 MiB] 
+  /dev/ram7  [      16.00 MiB] 
+  /dev/ram8  [      16.00 MiB] 
+  /dev/ram9  [      16.00 MiB] 
+  /dev/ram10 [      16.00 MiB] 
+  /dev/ram11 [      16.00 MiB] 
+  /dev/ram12 [      16.00 MiB] 
+  /dev/ram13 [      16.00 MiB] 
+  /dev/ram14 [      16.00 MiB] 
+  /dev/ram15 [      16.00 MiB] 
+  /dev/sdb1  [       7.53 GiB] 
+  1 disk
+  22 partitions
+  0 LVM physical volume whole disks
+  1 LVM physical volume
+[alison@bonnet ~]$ sudo fdisk -l
+
+Disk /dev/sda: 1500.3 GB, 1500301910016 bytes
+255 heads, 63 sectors/track, 182401 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0xa8a8a8a8
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *           1          64      512000   83  Linux
+Partition 1 does not end on cylinder boundary.
+/dev/sda2              64      176028  1413426176   8e  Linux LVM
+/dev/sda3          133675      140049    51198745+  a5  FreeBSD
+Partition 3 does not end on cylinder boundary.
+
+Disk /dev/dm-0: 104.9 GB, 104857600000 bytes
+255 heads, 63 sectors/track, 12748 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+Disk /dev/dm-0 doesn't contain a valid partition table
+
+Disk /dev/dm-1: 9999 MB, 9999220736 bytes
+255 heads, 63 sectors/track, 1215 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+Disk /dev/dm-1 doesn't contain a valid partition table
+
+Disk /dev/dm-2: 1315.7 GB, 1315702833152 bytes
+255 heads, 63 sectors/track, 159958 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+Disk /dev/dm-2 doesn't contain a valid partition table
+
+Disk /dev/dm-3: 16.8 GB, 16777216000 bytes
+255 heads, 63 sectors/track, 2039 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+Disk /dev/dm-3 doesn't contain a valid partition table
+
+Disk /dev/sdb: 8086 MB, 8086618112 bytes
+255 heads, 63 sectors/track, 983 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x04dd5721
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1   *           1         984     7897056+   b  W95 FAT32
+Partition 1 has different physical/logical endings:
+     phys=(982, 254, 63) logical=(983, 36, 13)
+[alison@bonnet ~]$ 

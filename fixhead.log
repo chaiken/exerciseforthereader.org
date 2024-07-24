@@ -1,0 +1,2714 @@
+./925/09250231/index.html: updated
+./925/092502319/darin19.html: no changes
+./925/092502319/index.html: updated
+./925/09250235/index.html: updated
+./925/index.html: no changes
+./MRSreport.html: adding 'up' -> 'index.html'
+./MRSreport.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./MRSreport.html: updated
+./ani/figures.html: never saw the href string!
+
+./ani/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/figures.html: adding 'up' -> 'index.html'
+./ani/figures.html: adding 'start' -> '/'
+./ani/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/figures.html: adding 'next' -> 'node12.html'
+./ani/figures.html: adding 'up' -> 'index.html'
+./ani/figures.html: adding 'previous' -> 'node10.html'
+./ani/figures.html: updated
+./ani/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/index.html: adding 'up' -> '../'
+./ani/index.html: adding 'start' -> '/'
+./ani/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/index.html: adding 'next' -> 'node1.html'
+./ani/index.html: adding 'up' -> '../index.html'
+./ani/index.html: updated
+./ani/node1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node1.html: adding 'up' -> 'index.html'
+./ani/node1.html: adding 'start' -> '/'
+./ani/node1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node1.html: adding 'next' -> 'node2.html'
+./ani/node1.html: adding 'up' -> 'index.html'
+./ani/node1.html: adding 'previous' -> 'index.html'
+./ani/node1.html: updated
+./ani/node10.html: never saw the href string!
+
+./ani/node10.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node10.html: adding 'up' -> 'index.html'
+./ani/node10.html: adding 'start' -> '/'
+./ani/node10.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node10.html: adding 'next' -> 'node11.html'
+./ani/node10.html: adding 'up' -> 'index.html'
+./ani/node10.html: adding 'previous' -> 'node9.html'
+./ani/node10.html: updated
+./ani/node11.html: never saw the href string!
+
+./ani/node11.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node11.html: adding 'up' -> 'index.html'
+./ani/node11.html: adding 'start' -> '/'
+./ani/node11.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node11.html: adding 'next' -> 'node12.html'
+./ani/node11.html: adding 'up' -> 'index.html'
+./ani/node11.html: adding 'previous' -> 'node10.html'
+./ani/node11.html: updated
+./ani/node12.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node12.html: adding 'up' -> 'index.html'
+./ani/node12.html: adding 'start' -> '/'
+./ani/node12.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node12.html: adding 'up' -> 'index.html'
+./ani/node12.html: adding 'previous' -> 'node11.html'
+./ani/node12.html: updated
+./ani/node2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node2.html: adding 'up' -> 'index.html'
+./ani/node2.html: adding 'start' -> '/'
+./ani/node2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node2.html: adding 'next' -> 'node3.html'
+./ani/node2.html: adding 'up' -> 'index.html'
+./ani/node2.html: adding 'previous' -> 'node1.html'
+./ani/node2.html: updated
+./ani/node3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node3.html: adding 'up' -> 'index.html'
+./ani/node3.html: adding 'start' -> '/'
+./ani/node3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node3.html: adding 'next' -> 'node4.html'
+./ani/node3.html: adding 'up' -> 'index.html'
+./ani/node3.html: adding 'previous' -> 'node2.html'
+./ani/node3.html: updated
+./ani/node4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node4.html: adding 'up' -> 'index.html'
+./ani/node4.html: adding 'start' -> '/'
+./ani/node4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node4.html: adding 'next' -> 'node5.html'
+./ani/node4.html: adding 'up' -> 'index.html'
+./ani/node4.html: adding 'previous' -> 'node3.html'
+./ani/node4.html: updated
+./ani/node5.html: never saw the href string!
+
+./ani/node5.html: never saw the href string!
+
+./ani/node5.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node5.html: adding 'up' -> 'index.html'
+./ani/node5.html: adding 'start' -> '/'
+./ani/node5.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node5.html: adding 'next' -> 'node6.html'
+./ani/node5.html: adding 'up' -> 'index.html'
+./ani/node5.html: adding 'previous' -> 'node4.html'
+./ani/node5.html: updated
+./ani/node6.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node6.html: adding 'up' -> 'index.html'
+./ani/node6.html: adding 'start' -> '/'
+./ani/node6.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node6.html: adding 'next' -> 'node7.html'
+./ani/node6.html: adding 'up' -> 'index.html'
+./ani/node6.html: adding 'previous' -> 'node5.html'
+./ani/node6.html: updated
+./ani/node7.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node7.html: adding 'up' -> 'index.html'
+./ani/node7.html: adding 'start' -> '/'
+./ani/node7.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node7.html: adding 'next' -> 'node8.html'
+./ani/node7.html: adding 'up' -> 'index.html'
+./ani/node7.html: adding 'previous' -> 'node6.html'
+./ani/node7.html: updated
+./ani/node8.html: never saw the href string!
+
+./ani/node8.html: never saw the href string!
+
+./ani/node8.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node8.html: adding 'up' -> 'index.html'
+./ani/node8.html: adding 'start' -> '/'
+./ani/node8.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node8.html: adding 'next' -> 'node9.html'
+./ani/node8.html: adding 'up' -> 'index.html'
+./ani/node8.html: adding 'previous' -> 'node7.html'
+./ani/node8.html: updated
+./ani/node9.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./ani/node9.html: adding 'up' -> 'index.html'
+./ani/node9.html: adding 'start' -> '/'
+./ani/node9.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./ani/node9.html: adding 'next' -> 'node10.html'
+./ani/node9.html: adding 'up' -> 'index.html'
+./ani/node9.html: adding 'previous' -> 'node8.html'
+./ani/node9.html: updated
+./babyback.html: adding 'up' -> 'index.html'
+./babyback.html: adding 'start' -> '/'
+./babyback.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./babyback.html: updated
+./barbiefab.html: no changes
+./bigcs.html: adding 'up' -> 'index.html'
+./bigcs.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bigcs.html: adding 'up' -> '/alison/'
+./bigcs.html: adding 'previous' -> 'magrec.html'
+./bigcs.html: updated
+./bn.html: adding 'up' -> 'index.html'
+./bn.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bn.html: adding 'next' -> 'supercon.html'
+./bn.html: adding 'up' -> '/alison/'
+./bn.html: updated
+./bnapl/discuss.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnapl/discuss.html: adding 'up' -> 'index.html'
+./bnapl/discuss.html: adding 'start' -> '/'
+./bnapl/discuss.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnapl/discuss.html: adding 'next' -> 'references.html'
+./bnapl/discuss.html: adding 'up' -> 'index.html'
+./bnapl/discuss.html: adding 'previous' -> 'exper.html'
+./bnapl/discuss.html: updated
+./bnapl/exper.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnapl/exper.html: adding 'up' -> 'index.html'
+./bnapl/exper.html: adding 'start' -> '/'
+./bnapl/exper.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnapl/exper.html: adding 'next' -> 'results.html'
+./bnapl/exper.html: adding 'up' -> 'index.html'
+./bnapl/exper.html: adding 'previous' -> 'intro.html'
+./bnapl/exper.html: updated
+./bnapl/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnapl/fig1.html: adding 'up' -> 'index.html'
+./bnapl/fig1.html: adding 'start' -> '/'
+./bnapl/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnapl/fig1.html: updated
+./bnapl/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnapl/fig2.html: adding 'up' -> 'index.html'
+./bnapl/fig2.html: adding 'start' -> '/'
+./bnapl/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnapl/fig2.html: updated
+./bnapl/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnapl/fig3.html: adding 'up' -> 'index.html'
+./bnapl/fig3.html: adding 'start' -> '/'
+./bnapl/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnapl/fig3.html: updated
+./bnapl/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnapl/figures.html: adding 'up' -> 'index.html'
+./bnapl/figures.html: adding 'start' -> '/'
+./bnapl/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnapl/figures.html: adding 'up' -> 'index.html'
+./bnapl/figures.html: adding 'previous' -> 'references.html'
+./bnapl/figures.html: updated
+./bnapl/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnapl/index.html: adding 'up' -> '../'
+./bnapl/index.html: adding 'start' -> '/'
+./bnapl/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnapl/index.html: adding 'next' -> 'intro.html'
+./bnapl/index.html: adding 'up' -> '../physpapers.html'
+./bnapl/index.html: updated
+./bnapl/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnapl/intro.html: adding 'up' -> 'index.html'
+./bnapl/intro.html: adding 'start' -> '/'
+./bnapl/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnapl/intro.html: adding 'next' -> 'exper.html'
+./bnapl/intro.html: adding 'up' -> 'index.html'
+./bnapl/intro.html: adding 'previous' -> 'index.html'
+./bnapl/intro.html: updated
+./bnapl/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnapl/references.html: adding 'up' -> 'index.html'
+./bnapl/references.html: adding 'start' -> '/'
+./bnapl/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnapl/references.html: adding 'next' -> 'figures.html'
+./bnapl/references.html: adding 'up' -> 'index.html'
+./bnapl/references.html: adding 'previous' -> 'discuss.html'
+./bnapl/references.html: updated
+./bnapl/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnapl/results.html: adding 'up' -> 'index.html'
+./bnapl/results.html: adding 'start' -> '/'
+./bnapl/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnapl/results.html: adding 'next' -> 'discuss.html'
+./bnapl/results.html: adding 'up' -> 'index.html'
+./bnapl/results.html: adding 'previous' -> 'exper.html'
+./bnapl/results.html: updated
+./bnjvst/conclude.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnjvst/conclude.html: adding 'up' -> 'index.html'
+./bnjvst/conclude.html: adding 'start' -> '/'
+./bnjvst/conclude.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnjvst/conclude.html: adding 'next' -> 'references.html'
+./bnjvst/conclude.html: adding 'up' -> 'index.html'
+./bnjvst/conclude.html: adding 'previous' -> 'results.html'
+./bnjvst/conclude.html: updated
+./bnjvst/exper.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnjvst/exper.html: adding 'up' -> 'index.html'
+./bnjvst/exper.html: adding 'start' -> '/'
+./bnjvst/exper.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnjvst/exper.html: adding 'next' -> 'results.html'
+./bnjvst/exper.html: adding 'up' -> 'index.html'
+./bnjvst/exper.html: adding 'previous' -> 'intro.html'
+./bnjvst/exper.html: updated
+./bnjvst/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnjvst/figures.html: adding 'up' -> 'index.html'
+./bnjvst/figures.html: adding 'start' -> '/'
+./bnjvst/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnjvst/figures.html: updated
+./bnjvst/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnjvst/index.html: adding 'up' -> '../'
+./bnjvst/index.html: adding 'start' -> '/'
+./bnjvst/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnjvst/index.html: adding 'next' -> 'intro.html'
+./bnjvst/index.html: adding 'up' -> '../physpapers.html'
+./bnjvst/index.html: updated
+./bnjvst/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnjvst/intro.html: adding 'up' -> 'index.html'
+./bnjvst/intro.html: adding 'start' -> '/'
+./bnjvst/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnjvst/intro.html: adding 'next' -> 'exper.html'
+./bnjvst/intro.html: adding 'up' -> '../physpapers.html'
+./bnjvst/intro.html: adding 'previous' -> 'index.html'
+./bnjvst/intro.html: updated
+./bnjvst/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnjvst/references.html: adding 'up' -> 'index.html'
+./bnjvst/references.html: adding 'start' -> '/'
+./bnjvst/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnjvst/references.html: adding 'up' -> 'index.html'
+./bnjvst/references.html: adding 'previous' -> 'conclude.html'
+./bnjvst/references.html: updated
+./bnjvst/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnjvst/results.html: adding 'up' -> 'index.html'
+./bnjvst/results.html: adding 'start' -> '/'
+./bnjvst/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnjvst/results.html: adding 'next' -> 'conclude.html'
+./bnjvst/results.html: adding 'up' -> '../physpapers.html'
+./bnjvst/results.html: adding 'previous' -> 'exper.html'
+./bnjvst/results.html: updated
+./bnmrs/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/fig1.html: adding 'up' -> 'index.html'
+./bnmrs/fig1.html: adding 'start' -> '/'
+./bnmrs/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/fig1.html: updated
+./bnmrs/fig1a.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/fig1a.html: adding 'up' -> 'index.html'
+./bnmrs/fig1a.html: adding 'start' -> '/'
+./bnmrs/fig1a.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/fig1a.html: updated
+./bnmrs/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/fig2.html: adding 'up' -> 'index.html'
+./bnmrs/fig2.html: adding 'start' -> '/'
+./bnmrs/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/fig2.html: updated
+./bnmrs/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/figures.html: adding 'up' -> 'index.html'
+./bnmrs/figures.html: adding 'start' -> '/'
+./bnmrs/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/figures.html: adding 'up' -> 'index.html'
+./bnmrs/figures.html: adding 'previous' -> 'references.html'
+./bnmrs/figures.html: updated
+./bnmrs/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/index.html: adding 'up' -> '../'
+./bnmrs/index.html: adding 'start' -> '/'
+./bnmrs/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/index.html: adding 'next' -> 'node2.html'
+./bnmrs/index.html: adding 'up' -> '../physpapers.html'
+./bnmrs/index.html: updated
+./bnmrs/node1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/node1.html: adding 'up' -> 'index.html'
+./bnmrs/node1.html: adding 'start' -> '/'
+./bnmrs/node1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/node1.html: adding 'next' -> 'node2.html'
+./bnmrs/node1.html: adding 'up' -> '../physpapers.html'
+./bnmrs/node1.html: updated
+./bnmrs/node2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/node2.html: adding 'up' -> 'index.html'
+./bnmrs/node2.html: adding 'start' -> '/'
+./bnmrs/node2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/node2.html: adding 'next' -> 'node3.html'
+./bnmrs/node2.html: adding 'up' -> '../physpapers.html'
+./bnmrs/node2.html: adding 'previous' -> 'index.html'
+./bnmrs/node2.html: updated
+./bnmrs/node3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/node3.html: adding 'up' -> 'index.html'
+./bnmrs/node3.html: adding 'start' -> '/'
+./bnmrs/node3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/node3.html: adding 'next' -> 'node4.html'
+./bnmrs/node3.html: adding 'up' -> 'index.html'
+./bnmrs/node3.html: adding 'previous' -> 'node2.html'
+./bnmrs/node3.html: updated
+./bnmrs/node4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/node4.html: adding 'up' -> 'index.html'
+./bnmrs/node4.html: adding 'start' -> '/'
+./bnmrs/node4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/node4.html: adding 'next' -> 'node5.html'
+./bnmrs/node4.html: adding 'up' -> 'index.html'
+./bnmrs/node4.html: adding 'previous' -> 'node3.html'
+./bnmrs/node4.html: updated
+./bnmrs/node5.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/node5.html: adding 'up' -> 'index.html'
+./bnmrs/node5.html: adding 'start' -> '/'
+./bnmrs/node5.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/node5.html: adding 'next' -> 'node6.html'
+./bnmrs/node5.html: adding 'up' -> 'index.html'
+./bnmrs/node5.html: adding 'previous' -> 'node4.html'
+./bnmrs/node5.html: updated
+./bnmrs/node6.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/node6.html: adding 'up' -> 'index.html'
+./bnmrs/node6.html: adding 'start' -> '/'
+./bnmrs/node6.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/node6.html: adding 'next' -> 'references.html'
+./bnmrs/node6.html: adding 'up' -> 'index.html'
+./bnmrs/node6.html: adding 'previous' -> 'node5.html'
+./bnmrs/node6.html: updated
+./bnmrs/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/references.html: adding 'up' -> 'index.html'
+./bnmrs/references.html: adding 'start' -> '/'
+./bnmrs/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/references.html: adding 'up' -> 'index.html'
+./bnmrs/references.html: adding 'previous' -> 'node6.html'
+./bnmrs/references.html: updated
+./bnmrs/table.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bnmrs/table.html: adding 'up' -> 'index.html'
+./bnmrs/table.html: adding 'start' -> '/'
+./bnmrs/table.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bnmrs/table.html: updated
+./books/fict.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./books/fict.html: adding 'up' -> 'index.html'
+./books/fict.html: adding 'start' -> '/'
+./books/fict.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./books/fict.html: adding 'next' -> 'vietnam.html'
+./books/fict.html: adding 'up' -> '../coolstuff.html'
+./books/fict.html: adding 'previous' -> 'vietnam.html'
+./books/fict.html: updated
+./books/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./books/index.html: adding 'up' -> '../'
+./books/index.html: adding 'start' -> '/'
+./books/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./books/index.html: adding 'next' -> 'fict.html'
+./books/index.html: adding 'up' -> '../coolstuff.html'
+./books/index.html: updated
+./books/nonfict.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./books/nonfict.html: adding 'up' -> 'index.html'
+./books/nonfict.html: adding 'start' -> '/'
+./books/nonfict.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./books/nonfict.html: adding 'next' -> 'vietnam.html'
+./books/nonfict.html: adding 'up' -> '../coolstuff.html'
+./books/nonfict.html: adding 'previous' -> '../lostcoast.html'
+./books/nonfict.html: updated
+./books/notrecomm.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./books/notrecomm.html: adding 'up' -> 'index.html'
+./books/notrecomm.html: adding 'start' -> '/'
+./books/notrecomm.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./books/notrecomm.html: adding 'next' -> '../pineapple.html'
+./books/notrecomm.html: adding 'up' -> '../coolstuff.html'
+./books/notrecomm.html: adding 'previous' -> 'recommended.html'
+./books/notrecomm.html: updated
+./books/recommended.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./books/recommended.html: adding 'up' -> 'index.html'
+./books/recommended.html: adding 'start' -> '/'
+./books/recommended.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./books/recommended.html: adding 'next' -> 'notrecomm.html'
+./books/recommended.html: adding 'up' -> '../coolstuff.html'
+./books/recommended.html: adding 'previous' -> 'recommended.html'
+./books/recommended.html: updated
+./books/vietnam.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./books/vietnam.html: adding 'up' -> 'index.html'
+./books/vietnam.html: adding 'start' -> '/'
+./books/vietnam.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./books/vietnam.html: adding 'next' -> 'fict.html'
+./books/vietnam.html: adding 'up' -> '../coolstuff.html'
+./books/vietnam.html: adding 'previous' -> 'nonfict.html'
+./books/vietnam.html: updated
+./brazil.html: adding 'up' -> 'index.html'
+./brazil.html: adding 'start' -> '/'
+./brazil.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./brazil.html: updated
+./brazilbib.html: adding 'up' -> 'index.html'
+./brazilbib.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./brazilbib.html: updated
+./braziltrip.html: adding 'up' -> 'index.html'
+./braziltrip.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./braziltrip.html: adding 'next' -> 'books/fict.html'
+./braziltrip.html: adding 'up' -> 'coolstuff.html'
+./braziltrip.html: updated
+./bscco/2278.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bscco/2278.html: adding 'up' -> 'index.html'
+./bscco/2278.html: adding 'start' -> '/'
+./bscco/2278.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bscco/2278.html: adding 'next' -> 'defects.html'
+./bscco/2278.html: adding 'up' -> 'results.html'
+./bscco/2278.html: adding 'previous' -> 'superlat.html'
+./bscco/2278.html: updated
+./bscco/conclude.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bscco/conclude.html: adding 'up' -> 'index.html'
+./bscco/conclude.html: adding 'start' -> '/'
+./bscco/conclude.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bscco/conclude.html: adding 'next' -> 'references.html'
+./bscco/conclude.html: adding 'up' -> 'index.html'
+./bscco/conclude.html: adding 'previous' -> 'defects.html'
+./bscco/conclude.html: updated
+./bscco/defects.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bscco/defects.html: adding 'up' -> 'index.html'
+./bscco/defects.html: adding 'start' -> '/'
+./bscco/defects.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bscco/defects.html: adding 'next' -> 'conclude.html'
+./bscco/defects.html: adding 'up' -> 'results.html'
+./bscco/defects.html: adding 'previous' -> '2278.html'
+./bscco/defects.html: updated
+./bscco/exper.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bscco/exper.html: adding 'up' -> 'index.html'
+./bscco/exper.html: adding 'start' -> '/'
+./bscco/exper.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bscco/exper.html: adding 'next' -> 'results.html'
+./bscco/exper.html: adding 'up' -> 'index.html'
+./bscco/exper.html: adding 'previous' -> 'intro.html'
+./bscco/exper.html: updated
+./bscco/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bscco/figures.html: adding 'up' -> 'index.html'
+./bscco/figures.html: adding 'start' -> '/'
+./bscco/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bscco/figures.html: adding 'up' -> 'index.html'
+./bscco/figures.html: adding 'previous' -> 'references.html'
+./bscco/figures.html: updated
+./bscco/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bscco/index.html: adding 'up' -> '../'
+./bscco/index.html: adding 'start' -> '/'
+./bscco/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bscco/index.html: adding 'next' -> 'intro.html'
+./bscco/index.html: adding 'up' -> '../physpapers.html'
+./bscco/index.html: updated
+./bscco/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bscco/intro.html: adding 'up' -> 'index.html'
+./bscco/intro.html: adding 'start' -> '/'
+./bscco/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bscco/intro.html: adding 'next' -> 'exper.html'
+./bscco/intro.html: adding 'up' -> 'index.html'
+./bscco/intro.html: adding 'previous' -> 'index.html'
+./bscco/intro.html: updated
+./bscco/overgrowth.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bscco/overgrowth.html: adding 'up' -> 'index.html'
+./bscco/overgrowth.html: adding 'start' -> '/'
+./bscco/overgrowth.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bscco/overgrowth.html: adding 'next' -> 'superlat.html'
+./bscco/overgrowth.html: adding 'up' -> 'results.html'
+./bscco/overgrowth.html: adding 'previous' -> 'results.html'
+./bscco/overgrowth.html: updated
+./bscco/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bscco/references.html: adding 'up' -> 'index.html'
+./bscco/references.html: adding 'start' -> '/'
+./bscco/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bscco/references.html: adding 'next' -> 'figures.html'
+./bscco/references.html: adding 'up' -> 'index.html'
+./bscco/references.html: adding 'previous' -> 'conclude.html'
+./bscco/references.html: updated
+./bscco/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bscco/results.html: adding 'up' -> 'index.html'
+./bscco/results.html: adding 'start' -> '/'
+./bscco/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bscco/results.html: adding 'next' -> 'overgrowth.html'
+./bscco/results.html: adding 'up' -> 'index.html'
+./bscco/results.html: adding 'previous' -> 'exper.html'
+./bscco/results.html: updated
+./bscco/superlat.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./bscco/superlat.html: adding 'up' -> 'index.html'
+./bscco/superlat.html: adding 'start' -> '/'
+./bscco/superlat.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./bscco/superlat.html: adding 'next' -> '2278.html'
+./bscco/superlat.html: adding 'up' -> 'results.html'
+./bscco/superlat.html: adding 'previous' -> 'overgrowth.html'
+./bscco/superlat.html: updated
+./camedia/index.html: no changes
+./camedia/roll-19980322/frm19980322_121312.html: no changes
+./camedia/roll-19980322/frm19980322_121328.html: no changes
+./camedia/roll-19980322/frm19980322_121351.html: no changes
+./camedia/roll-19980322/frm19980322_121440.html: no changes
+./camedia/roll-19980322/frm19980322_121509.html: no changes
+./camedia/roll-19980322/frm19980322_121640.html: no changes
+./camedia/roll-19980322/frm19980322_121722.html: no changes
+./camedia/roll-19980322/frm19980322_121751.html: no changes
+./camedia/roll-19980322/frm19980322_121937.html: no changes
+./camedia/roll-19980322/frm19980322_122005.html: no changes
+./camedia/roll-19980322/frm19980322_122201.html: no changes
+./camedia/roll-19980322/frm19980322_122303.html: no changes
+./camedia/roll-19980322/frm19980322_122431.html: no changes
+./camedia/roll-19980322/frm19980322_122550.html: no changes
+./camedia/roll-19980322/frm19980322_122813.html: no changes
+./camedia/roll-19980322/frm19980322_122837.html: no changes
+./camedia/roll-19980322/frm19980322_122857.html: no changes
+./camedia/roll-19980322/frm19980322_122937.html: no changes
+./camedia/roll-19980322/frm19980322_123029.html: no changes
+./camedia/roll-19980322/frm19980322_123047.html: no changes
+./camedia/roll-19980322/frm19980322_123122.html: no changes
+./camedia/roll-19980322/frm19980322_123212.html: no changes
+./camedia/roll-19980322/index.html: no changes
+./camedia/roll-19981219/frm19981219_154706.html: no changes
+./camedia/roll-19981219/frm19981219_154721.html: no changes
+./camedia/roll-19981219/frm19981219_154738.html: no changes
+./camedia/roll-19981219/frm19981219_154756.html: no changes
+./camedia/roll-19981219/frm19981219_154807.html: no changes
+./camedia/roll-19981219/frm19981219_155055.html: no changes
+./camedia/roll-19981219/index.html: no changes
+./camedia/roll-19991218/frm19991218_153911.html: no changes
+./camedia/roll-19991218/frm19991218_153933.html: no changes
+./camedia/roll-19991218/index.html: no changes
+./camedia/thindex.html: no changes
+./cheesecake.html: adding 'up' -> 'index.html'
+./cheesecake.html: adding 'start' -> '/'
+./cheesecake.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./cheesecake.html: updated
+./coding.html: updated
+./coolstuff.html: adding 'up' -> 'index.html'
+./coolstuff.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./coolstuff.html: adding 'up' -> '/alison/'
+./coolstuff.html: adding 'previous' -> 'magrec.html'
+./coolstuff.html: updated
+./corned.html: adding 'up' -> 'index.html'
+./corned.html: adding 'start' -> '/'
+./corned.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./corned.html: updated
+./eats.html: adding 'up' -> 'index.html'
+./eats.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./eats.html: adding 'next' -> 'lostcoast.html'
+./eats.html: adding 'up' -> 'coolstuff.html'
+./eats.html: updated
+./faq.html: adding 'up' -> 'index.html'
+./faq.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./faq.html: adding 'next' -> 'coolstuff.html'
+./faq.html: adding 'up' -> '/alison/'
+./faq.html: adding 'previous' -> 'magrec.html'
+./faq.html: updated
+./fat/epidemic.html: updated
+./fat/fats_oils_and_other_lipids.html: no changes
+./fat/fattyacidstudy.html: updated
+./fat/foodpyramid.html: no changes
+./fat/foodpyramid2.html: no changes
+./fat/foodpyramid3.html: no changes
+./fat/foodpyramid4.html: no changes
+./fat/foodpyramid5.html: no changes
+./fat/foodpyramid6.html: no changes
+./fat/index.html: no changes
+./fat/lowfatmyth.html: updated
+./fat/newdiet.html: no changes
+./fat/satfat.html: updated
+./fat/stearic.html: updated
+./fat/transfats.html: no changes
+./fat/transfatty.html: updated
+./fat/usdahelp.html: no changes
+./fecrfemmm/discuss.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecrfemmm/discuss.html: adding 'up' -> 'index.html'
+./fecrfemmm/discuss.html: adding 'start' -> '/'
+./fecrfemmm/discuss.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecrfemmm/discuss.html: adding 'next' -> 'references.html'
+./fecrfemmm/discuss.html: adding 'up' -> 'index.html'
+./fecrfemmm/discuss.html: adding 'previous' -> 'results.html'
+./fecrfemmm/discuss.html: updated
+./fecrfemmm/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecrfemmm/fig1.html: adding 'up' -> 'index.html'
+./fecrfemmm/fig1.html: adding 'start' -> '/'
+./fecrfemmm/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecrfemmm/fig1.html: updated
+./fecrfemmm/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecrfemmm/fig2.html: adding 'up' -> 'index.html'
+./fecrfemmm/fig2.html: adding 'start' -> '/'
+./fecrfemmm/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecrfemmm/fig2.html: updated
+./fecrfemmm/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecrfemmm/fig3.html: adding 'up' -> 'index.html'
+./fecrfemmm/fig3.html: adding 'start' -> '/'
+./fecrfemmm/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecrfemmm/fig3.html: updated
+./fecrfemmm/fig4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecrfemmm/fig4.html: adding 'up' -> 'index.html'
+./fecrfemmm/fig4.html: adding 'start' -> '/'
+./fecrfemmm/fig4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecrfemmm/fig4.html: updated
+./fecrfemmm/fig5.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecrfemmm/fig5.html: adding 'up' -> 'index.html'
+./fecrfemmm/fig5.html: adding 'start' -> '/'
+./fecrfemmm/fig5.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecrfemmm/fig5.html: updated
+./fecrfemmm/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecrfemmm/figures.html: adding 'up' -> 'index.html'
+./fecrfemmm/figures.html: adding 'start' -> '/'
+./fecrfemmm/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecrfemmm/figures.html: adding 'up' -> 'index.html'
+./fecrfemmm/figures.html: adding 'previous' -> 'references.html'
+./fecrfemmm/figures.html: updated
+./fecrfemmm/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecrfemmm/index.html: adding 'up' -> '../'
+./fecrfemmm/index.html: adding 'start' -> '/'
+./fecrfemmm/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecrfemmm/index.html: adding 'next' -> 'intro.html'
+./fecrfemmm/index.html: adding 'up' -> '../physpapers.html'
+./fecrfemmm/index.html: updated
+./fecrfemmm/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecrfemmm/intro.html: adding 'up' -> 'index.html'
+./fecrfemmm/intro.html: adding 'start' -> '/'
+./fecrfemmm/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecrfemmm/intro.html: adding 'next' -> 'results.html'
+./fecrfemmm/intro.html: adding 'up' -> '../physpapers.html'
+./fecrfemmm/intro.html: adding 'previous' -> 'index.html'
+./fecrfemmm/intro.html: updated
+./fecrfemmm/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecrfemmm/references.html: adding 'up' -> 'index.html'
+./fecrfemmm/references.html: adding 'start' -> '/'
+./fecrfemmm/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecrfemmm/references.html: adding 'next' -> 'figures.html'
+./fecrfemmm/references.html: adding 'up' -> 'index.html'
+./fecrfemmm/references.html: adding 'previous' -> 'discuss.html'
+./fecrfemmm/references.html: updated
+./fecrfemmm/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecrfemmm/results.html: adding 'up' -> 'index.html'
+./fecrfemmm/results.html: adding 'start' -> '/'
+./fecrfemmm/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecrfemmm/results.html: adding 'next' -> 'discuss.html'
+./fecrfemmm/results.html: adding 'up' -> '../physpapers.html'
+./fecrfemmm/results.html: adding 'previous' -> 'intro.html'
+./fecrfemmm/results.html: updated
+./fecucoapl/discuss.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucoapl/discuss.html: adding 'up' -> 'index.html'
+./fecucoapl/discuss.html: adding 'start' -> '/'
+./fecucoapl/discuss.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucoapl/discuss.html: adding 'next' -> 'references.html'
+./fecucoapl/discuss.html: adding 'up' -> 'index.html'
+./fecucoapl/discuss.html: adding 'previous' -> 'results.html'
+./fecucoapl/discuss.html: updated
+./fecucoapl/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucoapl/fig1.html: adding 'up' -> 'index.html'
+./fecucoapl/fig1.html: adding 'start' -> '/'
+./fecucoapl/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucoapl/fig1.html: updated
+./fecucoapl/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucoapl/fig2.html: adding 'up' -> 'index.html'
+./fecucoapl/fig2.html: adding 'start' -> '/'
+./fecucoapl/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucoapl/fig2.html: updated
+./fecucoapl/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucoapl/fig3.html: adding 'up' -> 'index.html'
+./fecucoapl/fig3.html: adding 'start' -> '/'
+./fecucoapl/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucoapl/fig3.html: updated
+./fecucoapl/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucoapl/figures.html: adding 'up' -> 'index.html'
+./fecucoapl/figures.html: adding 'start' -> '/'
+./fecucoapl/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucoapl/figures.html: adding 'up' -> 'index.html'
+./fecucoapl/figures.html: adding 'previous' -> 'references.html'
+./fecucoapl/figures.html: updated
+./fecucoapl/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucoapl/index.html: adding 'up' -> '../'
+./fecucoapl/index.html: adding 'start' -> '/'
+./fecucoapl/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucoapl/index.html: adding 'next' -> 'intro.html'
+./fecucoapl/index.html: adding 'up' -> '../physpapers.html'
+./fecucoapl/index.html: updated
+./fecucoapl/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucoapl/intro.html: adding 'up' -> 'index.html'
+./fecucoapl/intro.html: adding 'start' -> '/'
+./fecucoapl/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucoapl/intro.html: adding 'next' -> 'results.html'
+./fecucoapl/intro.html: adding 'up' -> '../physpapers.html'
+./fecucoapl/intro.html: adding 'previous' -> 'index.html'
+./fecucoapl/intro.html: updated
+./fecucoapl/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucoapl/references.html: adding 'up' -> 'index.html'
+./fecucoapl/references.html: adding 'start' -> '/'
+./fecucoapl/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucoapl/references.html: adding 'next' -> 'figures.html'
+./fecucoapl/references.html: adding 'up' -> 'index.html'
+./fecucoapl/references.html: adding 'previous' -> 'discuss.html'
+./fecucoapl/references.html: updated
+./fecucoapl/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucoapl/results.html: adding 'up' -> 'index.html'
+./fecucoapl/results.html: adding 'start' -> '/'
+./fecucoapl/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucoapl/results.html: adding 'next' -> 'discuss.html'
+./fecucoapl/results.html: adding 'up' -> '../physpapers.html'
+./fecucoapl/results.html: adding 'previous' -> 'intro.html'
+./fecucoapl/results.html: updated
+./fecucommm/discuss.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucommm/discuss.html: adding 'up' -> 'index.html'
+./fecucommm/discuss.html: adding 'start' -> '/'
+./fecucommm/discuss.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucommm/discuss.html: adding 'next' -> 'references.html'
+./fecucommm/discuss.html: adding 'up' -> 'index.html'
+./fecucommm/discuss.html: adding 'previous' -> 'results.html'
+./fecucommm/discuss.html: updated
+./fecucommm/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucommm/fig1.html: adding 'up' -> 'index.html'
+./fecucommm/fig1.html: adding 'start' -> '/'
+./fecucommm/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucommm/fig1.html: updated
+./fecucommm/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucommm/fig2.html: adding 'up' -> 'index.html'
+./fecucommm/fig2.html: adding 'start' -> '/'
+./fecucommm/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucommm/fig2.html: updated
+./fecucommm/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucommm/fig3.html: adding 'up' -> 'index.html'
+./fecucommm/fig3.html: adding 'start' -> '/'
+./fecucommm/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucommm/fig3.html: updated
+./fecucommm/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucommm/figures.html: adding 'up' -> 'index.html'
+./fecucommm/figures.html: adding 'start' -> '/'
+./fecucommm/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucommm/figures.html: adding 'up' -> 'index.html'
+./fecucommm/figures.html: adding 'previous' -> 'references.html'
+./fecucommm/figures.html: updated
+./fecucommm/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucommm/index.html: adding 'up' -> '../'
+./fecucommm/index.html: adding 'start' -> '/'
+./fecucommm/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucommm/index.html: adding 'next' -> 'intro.html'
+./fecucommm/index.html: adding 'up' -> '../physpapers.html'
+./fecucommm/index.html: updated
+./fecucommm/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucommm/intro.html: adding 'up' -> 'index.html'
+./fecucommm/intro.html: adding 'start' -> '/'
+./fecucommm/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucommm/intro.html: adding 'next' -> 'results.html'
+./fecucommm/intro.html: adding 'up' -> '../physpapers.html'
+./fecucommm/intro.html: adding 'previous' -> 'index.html'
+./fecucommm/intro.html: updated
+./fecucommm/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucommm/references.html: adding 'up' -> 'index.html'
+./fecucommm/references.html: adding 'start' -> '/'
+./fecucommm/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucommm/references.html: adding 'next' -> 'figures.html'
+./fecucommm/references.html: adding 'up' -> 'index.html'
+./fecucommm/references.html: adding 'previous' -> 'discuss.html'
+./fecucommm/references.html: updated
+./fecucommm/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fecucommm/results.html: adding 'up' -> 'index.html'
+./fecucommm/results.html: adding 'start' -> '/'
+./fecucommm/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fecucommm/results.html: adding 'next' -> 'discuss.html'
+./fecucommm/results.html: adding 'up' -> '../physpapers.html'
+./fecucommm/results.html: adding 'previous' -> 'intro.html'
+./fecucommm/results.html: updated
+./fesiMMM/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/fig1.html: adding 'up' -> 'index.html'
+./fesiMMM/fig1.html: adding 'start' -> '/'
+./fesiMMM/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/fig1.html: updated
+./fesiMMM/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/fig2.html: adding 'up' -> 'index.html'
+./fesiMMM/fig2.html: adding 'start' -> '/'
+./fesiMMM/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/fig2.html: updated
+./fesiMMM/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/fig3.html: adding 'up' -> 'index.html'
+./fesiMMM/fig3.html: adding 'start' -> '/'
+./fesiMMM/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/fig3.html: updated
+./fesiMMM/fig3a.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/fig3a.html: adding 'up' -> 'index.html'
+./fesiMMM/fig3a.html: adding 'start' -> '/'
+./fesiMMM/fig3a.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/fig3a.html: updated
+./fesiMMM/fig3b.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/fig3b.html: adding 'up' -> 'index.html'
+./fesiMMM/fig3b.html: adding 'start' -> '/'
+./fesiMMM/fig3b.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/fig3b.html: updated
+./fesiMMM/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/figures.html: adding 'up' -> 'index.html'
+./fesiMMM/figures.html: adding 'start' -> '/'
+./fesiMMM/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/figures.html: adding 'up' -> 'index.html'
+./fesiMMM/figures.html: adding 'previous' -> 'references.html'
+./fesiMMM/figures.html: updated
+./fesiMMM/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/index.html: adding 'up' -> '../'
+./fesiMMM/index.html: adding 'start' -> '/'
+./fesiMMM/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/index.html: adding 'next' -> 'node1.html'
+./fesiMMM/index.html: adding 'up' -> '../physpapers.html'
+./fesiMMM/index.html: updated
+./fesiMMM/node1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/node1.html: adding 'up' -> 'index.html'
+./fesiMMM/node1.html: adding 'start' -> '/'
+./fesiMMM/node1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/node1.html: adding 'next' -> 'node2.html'
+./fesiMMM/node1.html: adding 'up' -> 'index.html'
+./fesiMMM/node1.html: adding 'previous' -> 'index.html'
+./fesiMMM/node1.html: updated
+./fesiMMM/node2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/node2.html: adding 'up' -> 'index.html'
+./fesiMMM/node2.html: adding 'start' -> '/'
+./fesiMMM/node2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/node2.html: adding 'next' -> 'node3.html'
+./fesiMMM/node2.html: adding 'up' -> 'index.html'
+./fesiMMM/node2.html: adding 'previous' -> 'node1.html'
+./fesiMMM/node2.html: updated
+./fesiMMM/node3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/node3.html: adding 'up' -> 'index.html'
+./fesiMMM/node3.html: adding 'start' -> '/'
+./fesiMMM/node3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/node3.html: adding 'next' -> 'node4.html'
+./fesiMMM/node3.html: adding 'up' -> 'index.html'
+./fesiMMM/node3.html: adding 'previous' -> 'node2.html'
+./fesiMMM/node3.html: updated
+./fesiMMM/node4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/node4.html: adding 'up' -> 'index.html'
+./fesiMMM/node4.html: adding 'start' -> '/'
+./fesiMMM/node4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/node4.html: adding 'next' -> 'references.html'
+./fesiMMM/node4.html: adding 'up' -> 'index.html'
+./fesiMMM/node4.html: adding 'previous' -> 'node3.html'
+./fesiMMM/node4.html: updated
+./fesiMMM/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiMMM/references.html: adding 'up' -> 'index.html'
+./fesiMMM/references.html: adding 'start' -> '/'
+./fesiMMM/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiMMM/references.html: adding 'next' -> 'figures.html'
+./fesiMMM/references.html: adding 'up' -> 'index.html'
+./fesiMMM/references.html: adding 'previous' -> 'node4.html'
+./fesiMMM/references.html: updated
+./fesiprb/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig1.html: adding 'up' -> 'index.html'
+./fesiprb/fig1.html: adding 'start' -> '/'
+./fesiprb/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig1.html: updated
+./fesiprb/fig10.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig10.html: adding 'up' -> 'index.html'
+./fesiprb/fig10.html: adding 'start' -> '/'
+./fesiprb/fig10.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig10.html: updated
+./fesiprb/fig11.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig11.html: adding 'up' -> 'index.html'
+./fesiprb/fig11.html: adding 'start' -> '/'
+./fesiprb/fig11.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig11.html: updated
+./fesiprb/fig12.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig12.html: adding 'up' -> 'index.html'
+./fesiprb/fig12.html: adding 'start' -> '/'
+./fesiprb/fig12.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig12.html: updated
+./fesiprb/fig13a.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig13a.html: adding 'up' -> 'index.html'
+./fesiprb/fig13a.html: adding 'start' -> '/'
+./fesiprb/fig13a.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig13a.html: updated
+./fesiprb/fig13b.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig13b.html: adding 'up' -> 'index.html'
+./fesiprb/fig13b.html: adding 'start' -> '/'
+./fesiprb/fig13b.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig13b.html: updated
+./fesiprb/fig13c.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig13c.html: adding 'up' -> 'index.html'
+./fesiprb/fig13c.html: adding 'start' -> '/'
+./fesiprb/fig13c.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig13c.html: updated
+./fesiprb/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig2.html: adding 'up' -> 'index.html'
+./fesiprb/fig2.html: adding 'start' -> '/'
+./fesiprb/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig2.html: updated
+./fesiprb/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig3.html: adding 'up' -> 'index.html'
+./fesiprb/fig3.html: adding 'start' -> '/'
+./fesiprb/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig3.html: updated
+./fesiprb/fig4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig4.html: adding 'up' -> 'index.html'
+./fesiprb/fig4.html: adding 'start' -> '/'
+./fesiprb/fig4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig4.html: updated
+./fesiprb/fig5.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig5.html: adding 'up' -> 'index.html'
+./fesiprb/fig5.html: adding 'start' -> '/'
+./fesiprb/fig5.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig5.html: updated
+./fesiprb/fig9.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/fig9.html: adding 'up' -> 'index.html'
+./fesiprb/fig9.html: adding 'start' -> '/'
+./fesiprb/fig9.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/fig9.html: updated
+./fesiprb/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/figures.html: adding 'up' -> 'index.html'
+./fesiprb/figures.html: adding 'start' -> '/'
+./fesiprb/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/figures.html: adding 'up' -> 'node9.html'
+./fesiprb/figures.html: adding 'previous' -> 'node9.html'
+./fesiprb/figures.html: updated
+./fesiprb/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/index.html: adding 'up' -> '../'
+./fesiprb/index.html: adding 'start' -> '/'
+./fesiprb/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/index.html: adding 'next' -> 'node1.html'
+./fesiprb/index.html: adding 'up' -> '../physpapers.html'
+./fesiprb/index.html: updated
+./fesiprb/node1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/node1.html: adding 'up' -> 'index.html'
+./fesiprb/node1.html: adding 'start' -> '/'
+./fesiprb/node1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/node1.html: adding 'next' -> 'node2.html'
+./fesiprb/node1.html: adding 'up' -> 'index.html'
+./fesiprb/node1.html: adding 'previous' -> 'index.html'
+./fesiprb/node1.html: updated
+./fesiprb/node2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/node2.html: adding 'up' -> 'index.html'
+./fesiprb/node2.html: adding 'start' -> '/'
+./fesiprb/node2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/node2.html: adding 'next' -> 'node3.html'
+./fesiprb/node2.html: adding 'up' -> 'index.html'
+./fesiprb/node2.html: adding 'previous' -> 'node1.html'
+./fesiprb/node2.html: updated
+./fesiprb/node3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/node3.html: adding 'up' -> 'index.html'
+./fesiprb/node3.html: adding 'start' -> '/'
+./fesiprb/node3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/node3.html: adding 'next' -> 'node4.html'
+./fesiprb/node3.html: adding 'up' -> 'index.html'
+./fesiprb/node3.html: adding 'previous' -> 'node2.html'
+./fesiprb/node3.html: updated
+./fesiprb/node4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/node4.html: adding 'up' -> 'index.html'
+./fesiprb/node4.html: adding 'start' -> '/'
+./fesiprb/node4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/node4.html: adding 'next' -> 'node5.html'
+./fesiprb/node4.html: adding 'up' -> 'node3.html'
+./fesiprb/node4.html: adding 'previous' -> 'node3.html'
+./fesiprb/node4.html: updated
+./fesiprb/node5.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/node5.html: adding 'up' -> 'index.html'
+./fesiprb/node5.html: adding 'start' -> '/'
+./fesiprb/node5.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/node5.html: adding 'next' -> 'node6.html'
+./fesiprb/node5.html: adding 'up' -> 'node3.html'
+./fesiprb/node5.html: adding 'previous' -> 'node4.html'
+./fesiprb/node5.html: updated
+./fesiprb/node6.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/node6.html: adding 'up' -> 'index.html'
+./fesiprb/node6.html: adding 'start' -> '/'
+./fesiprb/node6.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/node6.html: adding 'next' -> 'node7.html'
+./fesiprb/node6.html: adding 'up' -> 'node3.html'
+./fesiprb/node6.html: adding 'previous' -> 'node5.html'
+./fesiprb/node6.html: updated
+./fesiprb/node7.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/node7.html: adding 'up' -> 'index.html'
+./fesiprb/node7.html: adding 'start' -> '/'
+./fesiprb/node7.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/node7.html: adding 'next' -> 'node8.html'
+./fesiprb/node7.html: adding 'up' -> 'node3.html'
+./fesiprb/node7.html: adding 'previous' -> 'node6.html'
+./fesiprb/node7.html: updated
+./fesiprb/node8.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/node8.html: adding 'up' -> 'index.html'
+./fesiprb/node8.html: adding 'start' -> '/'
+./fesiprb/node8.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/node8.html: adding 'next' -> 'node9.html'
+./fesiprb/node8.html: adding 'up' -> 'index.html'
+./fesiprb/node8.html: adding 'previous' -> 'node7.html'
+./fesiprb/node8.html: updated
+./fesiprb/node9.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/node9.html: adding 'up' -> 'index.html'
+./fesiprb/node9.html: adding 'start' -> '/'
+./fesiprb/node9.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/node9.html: adding 'next' -> 'references.html'
+./fesiprb/node9.html: adding 'up' -> 'index.html'
+./fesiprb/node9.html: adding 'previous' -> 'node8.html'
+./fesiprb/node9.html: updated
+./fesiprb/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesiprb/references.html: adding 'up' -> 'index.html'
+./fesiprb/references.html: adding 'start' -> '/'
+./fesiprb/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesiprb/references.html: adding 'next' -> 'figures.html'
+./fesiprb/references.html: adding 'up' -> 'index.html'
+./fesiprb/references.html: adding 'previous' -> 'node9.html'
+./fesiprb/references.html: updated
+./fesixrf/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesixrf/fig1.html: adding 'up' -> 'index.html'
+./fesixrf/fig1.html: adding 'start' -> '/'
+./fesixrf/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesixrf/fig1.html: updated
+./fesixrf/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesixrf/fig2.html: adding 'up' -> 'index.html'
+./fesixrf/fig2.html: adding 'start' -> '/'
+./fesixrf/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesixrf/fig2.html: updated
+./fesixrf/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesixrf/fig3.html: adding 'up' -> 'index.html'
+./fesixrf/fig3.html: adding 'start' -> '/'
+./fesixrf/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesixrf/fig3.html: updated
+./fesixrf/fig4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesixrf/fig4.html: adding 'up' -> 'index.html'
+./fesixrf/fig4.html: adding 'start' -> '/'
+./fesixrf/fig4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesixrf/fig4.html: updated
+./fesixrf/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesixrf/figures.html: adding 'up' -> 'index.html'
+./fesixrf/figures.html: adding 'start' -> '/'
+./fesixrf/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesixrf/figures.html: adding 'up' -> 'node3.html'
+./fesixrf/figures.html: adding 'previous' -> 'references.html'
+./fesixrf/figures.html: updated
+./fesixrf/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesixrf/index.html: adding 'up' -> '../'
+./fesixrf/index.html: adding 'start' -> '/'
+./fesixrf/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesixrf/index.html: adding 'next' -> 'node1.html'
+./fesixrf/index.html: adding 'up' -> '/alison/xrayabs.html'
+./fesixrf/index.html: updated
+./fesixrf/node1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesixrf/node1.html: adding 'up' -> 'index.html'
+./fesixrf/node1.html: adding 'start' -> '/'
+./fesixrf/node1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesixrf/node1.html: adding 'next' -> 'node2.html'
+./fesixrf/node1.html: adding 'up' -> 'index.html'
+./fesixrf/node1.html: adding 'previous' -> 'index.html'
+./fesixrf/node1.html: updated
+./fesixrf/node2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesixrf/node2.html: adding 'up' -> 'index.html'
+./fesixrf/node2.html: adding 'start' -> '/'
+./fesixrf/node2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesixrf/node2.html: adding 'next' -> 'node3.html'
+./fesixrf/node2.html: adding 'up' -> 'index.html'
+./fesixrf/node2.html: adding 'previous' -> 'node1.html'
+./fesixrf/node2.html: updated
+./fesixrf/node3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesixrf/node3.html: adding 'up' -> 'index.html'
+./fesixrf/node3.html: adding 'start' -> '/'
+./fesixrf/node3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesixrf/node3.html: adding 'next' -> 'references.html'
+./fesixrf/node3.html: adding 'up' -> 'index.html'
+./fesixrf/node3.html: adding 'previous' -> 'node2.html'
+./fesixrf/node3.html: updated
+./fesixrf/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./fesixrf/references.html: adding 'up' -> 'index.html'
+./fesixrf/references.html: adding 'start' -> '/'
+./fesixrf/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fesixrf/references.html: adding 'next' -> 'figures.html'
+./fesixrf/references.html: adding 'up' -> 'index.html'
+./fesixrf/references.html: adding 'previous' -> 'node3.html'
+./fesixrf/references.html: updated
+./fict.html: adding 'up' -> 'index.html'
+./fict.html: adding 'start' -> '/'
+./fict.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./fict.html: updated
+./flashrep.html: no changes
+./foo/_vti_cnf/index.html: updated
+./foo/old/925mo2/comparepw.html: updated
+./foo/old/925mo2/index.html: updated
+./foo/old/hall.html: no changes
+./foo/old/index.html: no changes
+./foo/old/singlex_xrd/_vti_cnf/index.html: updated
+./foo/old/singlex_xrd/index.html: no changes
+./foo/old/talk/10.html: no changes
+./foo/old/talk/11.html: no changes
+./foo/old/talk/11b.html: no changes
+./foo/old/talk/12.html: no changes
+./foo/old/talk/13.html: no changes
+./foo/old/talk/14.html: no changes
+./foo/old/talk/15.html: no changes
+./foo/old/talk/16.html: no changes
+./foo/old/talk/17.html: no changes
+./foo/old/talk/2.html: no changes
+./foo/old/talk/3.html: no changes
+./foo/old/talk/4.html: no changes
+./foo/old/talk/4b.html: no changes
+./foo/old/talk/5.html: no changes
+./foo/old/talk/6.html: no changes
+./foo/old/talk/7.html: no changes
+./foo/old/talk/8.html: no changes
+./foo/old/talk/9.html: no changes
+./foo/old/talk/icons.html: updated
+./foo/old/talk/index.html: no changes
+./foo/old/talk/oobleck.html: no changes
+./foo/old/talk/overview.html: no changes
+./foo/old/talk/template.html: no changes
+./foo/old/xrd.html: no changes
+./foresight/10.html: updated
+./foresight/100cycle.html: updated
+./foresight/11.html: updated
+./foresight/12.html: updated
+./foresight/13.html: updated
+./foresight/14.html: updated
+./foresight/15.html: updated
+./foresight/16.html: updated
+./foresight/2.html: updated
+./foresight/3.html: updated
+./foresight/4.html: updated
+./foresight/5.html: updated
+./foresight/6.html: updated
+./foresight/7.html: updated
+./foresight/8.html: updated
+./foresight/9.html: updated
+./foresight/index.html: no changes
+./foresight/old7.html: updated
+./foresight/overview.html: updated
+./foresight/template.html: updated
+./foresight/title.html: updated
+./gyros.html: adding 'up' -> 'index.html'
+./gyros.html: adding 'start' -> '/'
+./gyros.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./gyros.html: updated
+./imagemap/1.html: no changes
+./imagemap/2.html: no changes
+./imagemap/3.html: no changes
+./imagemap/4.html: no changes
+./imagemap/5.html: no changes
+./imagemap/6.html: no changes
+./imagemap/7.html: no changes
+./imagemap/8.html: no changes
+./imagemap/9.html: no changes
+./imagemap/case.html: no changes
+./imagemap/disk.html: no changes
+./imagemap/head.html: no changes
+./imagemap/hub.html: no changes
+./imagemap/imagemaps.html: updated
+./imagemap/index.html: no changes
+./imagemap/mod_imap.html: no changes
+./imagemap/slider.html: no changes
+./imagemap/test.html: no changes
+./index.html: adding 'up' -> '../'
+./index.html: adding 'next' -> 'coolstuff.html'
+./index.html: adding 'up' -> '/'
+./index.html: updated
+./indie.html: adding 'up' -> 'index.html'
+./indie.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./indie.html: adding 'up' -> '/alison/'
+./indie.html: adding 'previous' -> 'magrec.html'
+./indie.html: updated
+./inner.html: adding 'up' -> 'index.html'
+./inner.html: adding 'start' -> '/'
+./inner.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./inner.html: updated
+./insel.html: adding 'up' -> 'index.html'
+./insel.html: adding 'next' -> 'magnetism.html'
+./insel.html: adding 'up' -> '/alison/'
+./insel.html: updated
+./intercalate.html: adding 'up' -> 'index.html'
+./intercalate.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./intercalate.html: adding 'next' -> 'faq.html'
+./intercalate.html: adding 'up' -> '/alison/'
+./intercalate.html: updated
+./intermagnio/discuss.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./intermagnio/discuss.html: adding 'up' -> 'index.html'
+./intermagnio/discuss.html: adding 'start' -> '/'
+./intermagnio/discuss.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./intermagnio/discuss.html: adding 'next' -> 'references.html'
+./intermagnio/discuss.html: adding 'up' -> 'index.html'
+./intermagnio/discuss.html: adding 'previous' -> 'index.html'
+./intermagnio/discuss.html: updated
+./intermagnio/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./intermagnio/fig1.html: adding 'up' -> 'index.html'
+./intermagnio/fig1.html: adding 'start' -> '/'
+./intermagnio/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./intermagnio/fig1.html: updated
+./intermagnio/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./intermagnio/fig2.html: adding 'up' -> 'index.html'
+./intermagnio/fig2.html: adding 'start' -> '/'
+./intermagnio/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./intermagnio/fig2.html: updated
+./intermagnio/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./intermagnio/fig3.html: adding 'up' -> 'index.html'
+./intermagnio/fig3.html: adding 'start' -> '/'
+./intermagnio/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./intermagnio/fig3.html: updated
+./intermagnio/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./intermagnio/figures.html: adding 'up' -> 'index.html'
+./intermagnio/figures.html: adding 'start' -> '/'
+./intermagnio/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./intermagnio/figures.html: adding 'up' -> 'index.html'
+./intermagnio/figures.html: adding 'previous' -> 'references.html'
+./intermagnio/figures.html: updated
+./intermagnio/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./intermagnio/index.html: adding 'up' -> '../'
+./intermagnio/index.html: adding 'start' -> '/'
+./intermagnio/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./intermagnio/index.html: adding 'next' -> 'intro.html'
+./intermagnio/index.html: adding 'up' -> '../magnetism.html'
+./intermagnio/index.html: updated
+./intermagnio/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./intermagnio/intro.html: adding 'up' -> 'index.html'
+./intermagnio/intro.html: adding 'start' -> '/'
+./intermagnio/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./intermagnio/intro.html: adding 'next' -> 'results.html'
+./intermagnio/intro.html: adding 'up' -> 'index.html'
+./intermagnio/intro.html: adding 'previous' -> 'index.html'
+./intermagnio/intro.html: updated
+./intermagnio/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./intermagnio/references.html: adding 'up' -> 'index.html'
+./intermagnio/references.html: adding 'start' -> '/'
+./intermagnio/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./intermagnio/references.html: adding 'next' -> 'figures.html'
+./intermagnio/references.html: adding 'up' -> 'index.html'
+./intermagnio/references.html: adding 'previous' -> 'discuss.html'
+./intermagnio/references.html: updated
+./intermagnio/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./intermagnio/results.html: adding 'up' -> 'index.html'
+./intermagnio/results.html: adding 'start' -> '/'
+./intermagnio/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./intermagnio/results.html: adding 'next' -> 'discuss.html'
+./intermagnio/results.html: adding 'up' -> 'index.html'
+./intermagnio/results.html: adding 'previous' -> 'index.html'
+./intermagnio/results.html: updated
+./jmmm/conclude.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/conclude.html: adding 'up' -> 'index.html'
+./jmmm/conclude.html: adding 'start' -> '/'
+./jmmm/conclude.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/conclude.html: adding 'next' -> 'references.html'
+./jmmm/conclude.html: adding 'up' -> 'index.html'
+./jmmm/conclude.html: adding 'previous' -> 'discuss.html'
+./jmmm/conclude.html: updated
+./jmmm/discuss.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/discuss.html: adding 'up' -> 'index.html'
+./jmmm/discuss.html: adding 'start' -> '/'
+./jmmm/discuss.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/discuss.html: adding 'next' -> 'conclude.html'
+./jmmm/discuss.html: adding 'up' -> 'index.html'
+./jmmm/discuss.html: adding 'previous' -> 'exper.html'
+./jmmm/discuss.html: updated
+./jmmm/exper.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/exper.html: adding 'up' -> 'index.html'
+./jmmm/exper.html: adding 'start' -> '/'
+./jmmm/exper.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/exper.html: adding 'next' -> 'results.html'
+./jmmm/exper.html: adding 'up' -> '../physpapers.html'
+./jmmm/exper.html: adding 'previous' -> 'intro.html'
+./jmmm/exper.html: updated
+./jmmm/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/fig2.html: adding 'up' -> 'index.html'
+./jmmm/fig2.html: adding 'start' -> '/'
+./jmmm/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/fig2.html: updated
+./jmmm/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/fig3.html: adding 'up' -> 'index.html'
+./jmmm/fig3.html: adding 'start' -> '/'
+./jmmm/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/fig3.html: updated
+./jmmm/fig4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/fig4.html: adding 'up' -> 'index.html'
+./jmmm/fig4.html: adding 'start' -> '/'
+./jmmm/fig4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/fig4.html: updated
+./jmmm/fig5.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/fig5.html: adding 'up' -> 'index.html'
+./jmmm/fig5.html: adding 'start' -> '/'
+./jmmm/fig5.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/fig5.html: updated
+./jmmm/fig6.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/fig6.html: adding 'up' -> 'index.html'
+./jmmm/fig6.html: adding 'start' -> '/'
+./jmmm/fig6.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/fig6.html: updated
+./jmmm/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/figures.html: adding 'up' -> 'index.html'
+./jmmm/figures.html: adding 'start' -> '/'
+./jmmm/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/figures.html: adding 'up' -> 'index.html'
+./jmmm/figures.html: adding 'previous' -> 'references.html'
+./jmmm/figures.html: updated
+./jmmm/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/index.html: adding 'up' -> '../'
+./jmmm/index.html: adding 'start' -> '/'
+./jmmm/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/index.html: adding 'next' -> 'intro.html'
+./jmmm/index.html: adding 'up' -> '../physpapers.html'
+./jmmm/index.html: updated
+./jmmm/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/intro.html: adding 'up' -> 'index.html'
+./jmmm/intro.html: adding 'start' -> '/'
+./jmmm/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/intro.html: adding 'next' -> 'exper.html'
+./jmmm/intro.html: adding 'up' -> '../physpapers.html'
+./jmmm/intro.html: adding 'previous' -> 'index.html'
+./jmmm/intro.html: updated
+./jmmm/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/references.html: adding 'up' -> 'index.html'
+./jmmm/references.html: adding 'start' -> '/'
+./jmmm/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/references.html: adding 'next' -> 'figures.html'
+./jmmm/references.html: adding 'up' -> 'index.html'
+./jmmm/references.html: adding 'previous' -> 'conclude.html'
+./jmmm/references.html: updated
+./jmmm/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/results.html: adding 'up' -> 'index.html'
+./jmmm/results.html: adding 'start' -> '/'
+./jmmm/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/results.html: adding 'next' -> 'discuss.html'
+./jmmm/results.html: adding 'up' -> '../physpapers.html'
+./jmmm/results.html: adding 'previous' -> 'exper.html'
+./jmmm/results.html: updated
+./jmmm/table1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/table1.html: adding 'up' -> 'index.html'
+./jmmm/table1.html: adding 'start' -> '/'
+./jmmm/table1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/table1.html: updated
+./jmmm/table2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./jmmm/table2.html: adding 'up' -> 'index.html'
+./jmmm/table2.html: adding 'start' -> '/'
+./jmmm/table2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./jmmm/table2.html: updated
+./kale.html: adding 'up' -> 'index.html'
+./kale.html: adding 'start' -> '/'
+./kale.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./kale.html: updated
+./lambspinach.html: adding 'up' -> 'index.html'
+./lambspinach.html: adding 'start' -> '/'
+./lambspinach.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./lambspinach.html: updated
+./lostcoast.html: adding 'up' -> 'index.html'
+./lostcoast.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./lostcoast.html: adding 'next' -> 'books/fict.html'
+./lostcoast.html: adding 'up' -> 'coolstuff.html'
+./lostcoast.html: adding 'previous' -> 'eats.html'
+./lostcoast.html: updated
+./magnetism.html: adding 'up' -> 'index.html'
+./magnetism.html: adding 'next' -> 'xrayabs.html'
+./magnetism.html: adding 'up' -> '/alison/'
+./magnetism.html: updated
+./magrec.html: adding 'up' -> 'index.html'
+./magrec.html: adding 'start' -> '/'
+./magrec.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./magrec.html: updated
+./misspeak/birds.html: no changes
+./misspeak/egbertmp.html: no changes
+./misspeak/elevations.html: no changes
+./misspeak/flowers/frm19980315_115419.html: no changes
+./misspeak/flowers/frm19980315_115440.html: no changes
+./misspeak/flowers/frm19980315_115921.html: no changes
+./misspeak/flowers/frm19980315_120300.html: no changes
+./misspeak/flowers/frm19980315_120324.html: no changes
+./misspeak/flowers/frm19980315_120348.html: no changes
+./misspeak/flowers/frm19980315_120406.html: no changes
+./misspeak/flowers/frm19980315_124311.html: no changes
+./misspeak/flowers/frm19980315_125108.html: no changes
+./misspeak/flowers/frm19980315_125209.html: no changes
+./misspeak/flowers/frm19980315_125723.html: no changes
+./misspeak/flowers/frm19980315_131705.html: no changes
+./misspeak/flowers/frm19980315_133507.html: no changes
+./misspeak/flowers/frm19980315_133548.html: no changes
+./misspeak/flowers/frm19980315_135946.html: no changes
+./misspeak/flowers/frm19980315_140020.html: no changes
+./misspeak/flowers/frm19980315_140233.html: no changes
+./misspeak/flowers/frm19980315_140331.html: no changes
+./misspeak/flowers/frm19980315_153846.html: no changes
+./misspeak/flowers/frm19980517_135854.html: no changes
+./misspeak/flowers/frm19980517_140313.html: no changes
+./misspeak/flowers/frm19980517_141710.html: no changes
+./misspeak/flowers/frm19980517_144021.html: no changes
+./misspeak/flowers/frm19980517_153408.html: no changes
+./misspeak/flowers/frm19980517_153425.html: no changes
+./misspeak/flowers/frm19980517_153448.html: no changes
+./misspeak/flowers/index.html: no changes
+./misspeak/fossils/frm19971221_144735.html: no changes
+./misspeak/fossils/frm19971221_144759.html: no changes
+./misspeak/fossils/frm19971221_144821.html: no changes
+./misspeak/fossils/index.html: no changes
+./misspeak/history/cohen.html: no changes
+./misspeak/history/goats.html: no changes
+./misspeak/history/hidden.html: no changes
+./misspeak/history/index.html: no changes
+./misspeak/history/mcclure.html: never saw the href string!
+
+./misspeak/history/mcclure.html: never saw the href string!
+
+./misspeak/history/mcclure.html: no changes
+./misspeak/index.html: no changes
+./misspeak/levin/index.html: no changes
+./misspeak/levin/pics/1.html: no changes
+./misspeak/levin/pics/10.html: no changes
+./misspeak/levin/pics/11.html: no changes
+./misspeak/levin/pics/12.html: no changes
+./misspeak/levin/pics/2.html: no changes
+./misspeak/levin/pics/3.html: no changes
+./misspeak/levin/pics/4.html: no changes
+./misspeak/levin/pics/5.html: no changes
+./misspeak/levin/pics/6.html: no changes
+./misspeak/levin/pics/7.html: no changes
+./misspeak/levin/pics/8.html: no changes
+./misspeak/levin/pics/9.html: no changes
+./misspeak/levin/pics/index.html: never saw the href string!
+
+./misspeak/levin/pics/index.html: no changes
+./misspeak/map.html: no changes
+./misspeak/ohlone/index.html: no changes
+./misspeak/ohlone/pics/1.html: no changes
+./misspeak/ohlone/pics/10.html: no changes
+./misspeak/ohlone/pics/11.html: no changes
+./misspeak/ohlone/pics/12.html: no changes
+./misspeak/ohlone/pics/13.html: no changes
+./misspeak/ohlone/pics/2.html: no changes
+./misspeak/ohlone/pics/3.html: no changes
+./misspeak/ohlone/pics/4.html: no changes
+./misspeak/ohlone/pics/5.html: no changes
+./misspeak/ohlone/pics/6.html: no changes
+./misspeak/ohlone/pics/7.html: no changes
+./misspeak/ohlone/pics/8.html: no changes
+./misspeak/ohlone/pics/9.html: no changes
+./misspeak/ohlone/pics/index.html: never saw the href string!
+
+./misspeak/ohlone/pics/index.html: never saw the href string!
+
+./misspeak/ohlone/pics/index.html: adding 'next' -> '/alison/misspeak/ohlone/pics/1.html'
+./misspeak/ohlone/pics/index.html: updated
+./misspeak/ohlone.html: no changes
+./misspeak/snow/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./misspeak/snow/index.html: adding 'up' -> '../'
+./misspeak/snow/index.html: adding 'start' -> '/'
+./misspeak/snow/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./misspeak/snow/index.html: adding 'up' -> '/alison/misspeak/'
+./misspeak/snow/index.html: updated
+./misspeak/stanave/index.html: no changes
+./misspeak/stanave/pics/1.html: no changes
+./misspeak/stanave/pics/10.html: no changes
+./misspeak/stanave/pics/2.html: no changes
+./misspeak/stanave/pics/3.html: no changes
+./misspeak/stanave/pics/4.html: no changes
+./misspeak/stanave/pics/5.html: no changes
+./misspeak/stanave/pics/6.html: no changes
+./misspeak/stanave/pics/7.html: no changes
+./misspeak/stanave/pics/8.html: no changes
+./misspeak/stanave/pics/9.html: no changes
+./misspeak/stanave/pics/index.html: never saw the href string!
+
+./misspeak/stanave/pics/index.html: never saw the href string!
+
+./misspeak/stanave/pics/index.html: adding 'next' -> '/alison/misspeak/stanave/pics/1.html'
+./misspeak/stanave/pics/index.html: updated
+./misspeak/stanford.html: no changes
+./misspeak/sunol/index.html: no changes
+./misspeak/sunol/pics/1.html: no changes
+./misspeak/sunol/pics/10.html: no changes
+./misspeak/sunol/pics/11.html: no changes
+./misspeak/sunol/pics/2.html: no changes
+./misspeak/sunol/pics/3.html: no changes
+./misspeak/sunol/pics/4.html: no changes
+./misspeak/sunol/pics/5.html: no changes
+./misspeak/sunol/pics/6.html: no changes
+./misspeak/sunol/pics/7.html: no changes
+./misspeak/sunol/pics/8.html: no changes
+./misspeak/sunol/pics/9.html: no changes
+./misspeak/sunol/pics/index.html: never saw the href string!
+
+./misspeak/sunol/pics/index.html: no changes
+./misspeak/sunol.html: no changes
+./mrtempdep/discuss.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./mrtempdep/discuss.html: adding 'up' -> 'index.html'
+./mrtempdep/discuss.html: adding 'start' -> '/'
+./mrtempdep/discuss.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./mrtempdep/discuss.html: adding 'next' -> 'references.html'
+./mrtempdep/discuss.html: adding 'up' -> 'index.html'
+./mrtempdep/discuss.html: adding 'previous' -> 'results.html'
+./mrtempdep/discuss.html: updated
+./mrtempdep/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./mrtempdep/fig1.html: adding 'up' -> 'index.html'
+./mrtempdep/fig1.html: adding 'start' -> '/'
+./mrtempdep/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./mrtempdep/fig1.html: updated
+./mrtempdep/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./mrtempdep/fig2.html: adding 'up' -> 'index.html'
+./mrtempdep/fig2.html: adding 'start' -> '/'
+./mrtempdep/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./mrtempdep/fig2.html: updated
+./mrtempdep/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./mrtempdep/fig3.html: adding 'up' -> 'index.html'
+./mrtempdep/fig3.html: adding 'start' -> '/'
+./mrtempdep/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./mrtempdep/fig3.html: updated
+./mrtempdep/fig4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./mrtempdep/fig4.html: adding 'up' -> 'index.html'
+./mrtempdep/fig4.html: adding 'start' -> '/'
+./mrtempdep/fig4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./mrtempdep/fig4.html: updated
+./mrtempdep/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./mrtempdep/figures.html: adding 'up' -> 'index.html'
+./mrtempdep/figures.html: adding 'start' -> '/'
+./mrtempdep/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./mrtempdep/figures.html: adding 'up' -> 'index.html'
+./mrtempdep/figures.html: adding 'previous' -> 'references.html'
+./mrtempdep/figures.html: updated
+./mrtempdep/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./mrtempdep/index.html: adding 'up' -> '../'
+./mrtempdep/index.html: adding 'start' -> '/'
+./mrtempdep/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./mrtempdep/index.html: adding 'next' -> 'intro.html'
+./mrtempdep/index.html: adding 'up' -> '../physpapers.html'
+./mrtempdep/index.html: updated
+./mrtempdep/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./mrtempdep/intro.html: adding 'up' -> 'index.html'
+./mrtempdep/intro.html: adding 'start' -> '/'
+./mrtempdep/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./mrtempdep/intro.html: adding 'next' -> 'results.html'
+./mrtempdep/intro.html: adding 'up' -> '../physpapers.html'
+./mrtempdep/intro.html: adding 'previous' -> 'index.html'
+./mrtempdep/intro.html: updated
+./mrtempdep/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./mrtempdep/references.html: adding 'up' -> 'index.html'
+./mrtempdep/references.html: adding 'start' -> '/'
+./mrtempdep/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./mrtempdep/references.html: adding 'next' -> 'figures.html'
+./mrtempdep/references.html: adding 'up' -> 'index.html'
+./mrtempdep/references.html: adding 'previous' -> 'discuss.html'
+./mrtempdep/references.html: updated
+./mrtempdep/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./mrtempdep/results.html: adding 'up' -> 'index.html'
+./mrtempdep/results.html: adding 'start' -> '/'
+./mrtempdep/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./mrtempdep/results.html: adding 'next' -> 'discuss.html'
+./mrtempdep/results.html: adding 'up' -> '../physpapers.html'
+./mrtempdep/results.html: adding 'previous' -> 'intro.html'
+./mrtempdep/results.html: updated
+./mrtempdep/table1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./mrtempdep/table1.html: adding 'up' -> 'index.html'
+./mrtempdep/table1.html: adding 'start' -> '/'
+./mrtempdep/table1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./mrtempdep/table1.html: updated
+./nccavs/10.html: updated
+./nccavs/100cycle.html: updated
+./nccavs/11.html: updated
+./nccavs/12.html: updated
+./nccavs/13.html: updated
+./nccavs/14.html: updated
+./nccavs/15.html: updated
+./nccavs/16.html: updated
+./nccavs/2.html: updated
+./nccavs/3.html: updated
+./nccavs/4.html: updated
+./nccavs/5.html: updated
+./nccavs/6.html: updated
+./nccavs/7.html: updated
+./nccavs/8.html: updated
+./nccavs/9.html: updated
+./nccavs/cryststruct.html: updated
+./nccavs/growthmode.html: updated
+./nccavs/old7.html: updated
+./nccavs/overview.html: updated
+./nccavs/pulseeffect.html: updated
+./nccavs/pulsetrain.html: updated
+./nccavs/template.html: updated
+./nccavs/title.html: updated
+./nccavs/xrd.html: updated
+./newaddr.html: adding 'up' -> 'index.html'
+./newaddr.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newaddr.html: updated
+./newnio/analysis.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/analysis.html: adding 'up' -> 'index.html'
+./newnio/analysis.html: adding 'start' -> '/'
+./newnio/analysis.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/analysis.html: adding 'next' -> '/alison/newnio/discuss.html'
+./newnio/analysis.html: adding 'up' -> 'index.html'
+./newnio/analysis.html: adding 'previous' -> '/alison/newnio/results.html'
+./newnio/analysis.html: updated
+./newnio/conclude.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/conclude.html: adding 'up' -> 'index.html'
+./newnio/conclude.html: adding 'start' -> '/'
+./newnio/conclude.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/conclude.html: adding 'next' -> '/alison/newnio/references.html'
+./newnio/conclude.html: adding 'up' -> 'index.html'
+./newnio/conclude.html: adding 'previous' -> '/alison/newnio/discuss.html'
+./newnio/conclude.html: updated
+./newnio/discuss.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/discuss.html: adding 'up' -> 'index.html'
+./newnio/discuss.html: adding 'start' -> '/'
+./newnio/discuss.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/discuss.html: adding 'next' -> '/alison/newnio/conclude.html'
+./newnio/discuss.html: adding 'up' -> 'index.html'
+./newnio/discuss.html: adding 'previous' -> '/alison/newnio/analysis.html'
+./newnio/discuss.html: updated
+./newnio/exper.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/exper.html: adding 'up' -> 'index.html'
+./newnio/exper.html: adding 'start' -> '/'
+./newnio/exper.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/exper.html: adding 'next' -> '/alison/newnio/results.html'
+./newnio/exper.html: adding 'up' -> 'index.html'
+./newnio/exper.html: adding 'previous' -> '/alison/newnio/intro.html'
+./newnio/exper.html: updated
+./newnio/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/fig1.html: adding 'up' -> 'index.html'
+./newnio/fig1.html: adding 'start' -> '/'
+./newnio/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/fig1.html: updated
+./newnio/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/fig2.html: adding 'up' -> 'index.html'
+./newnio/fig2.html: adding 'start' -> '/'
+./newnio/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/fig2.html: updated
+./newnio/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/fig3.html: adding 'up' -> 'index.html'
+./newnio/fig3.html: adding 'start' -> '/'
+./newnio/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/fig3.html: updated
+./newnio/fig4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/fig4.html: adding 'up' -> 'index.html'
+./newnio/fig4.html: adding 'start' -> '/'
+./newnio/fig4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/fig4.html: updated
+./newnio/fig5.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/fig5.html: adding 'up' -> 'index.html'
+./newnio/fig5.html: adding 'start' -> '/'
+./newnio/fig5.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/fig5.html: updated
+./newnio/fig6.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/fig6.html: adding 'up' -> 'index.html'
+./newnio/fig6.html: adding 'start' -> '/'
+./newnio/fig6.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/fig6.html: updated
+./newnio/fig7.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/fig7.html: adding 'up' -> 'index.html'
+./newnio/fig7.html: adding 'start' -> '/'
+./newnio/fig7.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/fig7.html: updated
+./newnio/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/figures.html: adding 'up' -> 'index.html'
+./newnio/figures.html: adding 'start' -> '/'
+./newnio/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/figures.html: adding 'up' -> 'index.html'
+./newnio/figures.html: adding 'previous' -> '/alison/newnio/references.html'
+./newnio/figures.html: updated
+./newnio/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/index.html: adding 'up' -> '../'
+./newnio/index.html: adding 'start' -> '/'
+./newnio/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/index.html: adding 'up' -> '/alison/magnetism.html'
+./newnio/index.html: updated
+./newnio/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/intro.html: adding 'up' -> 'index.html'
+./newnio/intro.html: adding 'start' -> '/'
+./newnio/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/intro.html: adding 'next' -> '/alison/newnio/exper.html'
+./newnio/intro.html: adding 'up' -> 'index.html'
+./newnio/intro.html: adding 'previous' -> 'index.html'
+./newnio/intro.html: updated
+./newnio/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/references.html: adding 'up' -> 'index.html'
+./newnio/references.html: adding 'start' -> '/'
+./newnio/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/references.html: adding 'next' -> '/alison/newnio/figures.html'
+./newnio/references.html: adding 'up' -> 'index.html'
+./newnio/references.html: adding 'previous' -> '/alison/newnio/conclude.html'
+./newnio/references.html: updated
+./newnio/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./newnio/results.html: adding 'up' -> 'index.html'
+./newnio/results.html: adding 'start' -> '/'
+./newnio/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./newnio/results.html: adding 'next' -> '/alison/newnio/analysis.html'
+./newnio/results.html: adding 'up' -> 'index.html'
+./newnio/results.html: adding 'previous' -> '/alison/newnio/exper.html'
+./newnio/results.html: updated
+./niojoint/discuss.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niojoint/discuss.html: adding 'up' -> 'index.html'
+./niojoint/discuss.html: adding 'start' -> '/'
+./niojoint/discuss.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niojoint/discuss.html: adding 'next' -> 'references.html'
+./niojoint/discuss.html: adding 'up' -> 'index.html'
+./niojoint/discuss.html: adding 'previous' -> 'results.html'
+./niojoint/discuss.html: updated
+./niojoint/exper.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niojoint/exper.html: adding 'up' -> 'index.html'
+./niojoint/exper.html: adding 'start' -> '/'
+./niojoint/exper.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niojoint/exper.html: adding 'next' -> 'results.html'
+./niojoint/exper.html: adding 'up' -> 'index.html'
+./niojoint/exper.html: adding 'previous' -> 'intro.html'
+./niojoint/exper.html: updated
+./niojoint/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niojoint/fig1.html: adding 'up' -> 'index.html'
+./niojoint/fig1.html: adding 'start' -> '/'
+./niojoint/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niojoint/fig1.html: updated
+./niojoint/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niojoint/fig2.html: adding 'up' -> 'index.html'
+./niojoint/fig2.html: adding 'start' -> '/'
+./niojoint/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niojoint/fig2.html: updated
+./niojoint/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niojoint/fig3.html: adding 'up' -> 'index.html'
+./niojoint/fig3.html: adding 'start' -> '/'
+./niojoint/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niojoint/fig3.html: updated
+./niojoint/fig4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niojoint/fig4.html: adding 'up' -> 'index.html'
+./niojoint/fig4.html: adding 'start' -> '/'
+./niojoint/fig4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niojoint/fig4.html: updated
+./niojoint/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niojoint/figures.html: adding 'up' -> 'index.html'
+./niojoint/figures.html: adding 'start' -> '/'
+./niojoint/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niojoint/figures.html: adding 'up' -> 'index.html'
+./niojoint/figures.html: adding 'previous' -> 'references.html'
+./niojoint/figures.html: updated
+./niojoint/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niojoint/index.html: adding 'up' -> '../'
+./niojoint/index.html: adding 'start' -> '/'
+./niojoint/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niojoint/index.html: adding 'next' -> 'intro.html'
+./niojoint/index.html: adding 'up' -> '../magnetism.html'
+./niojoint/index.html: updated
+./niojoint/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niojoint/intro.html: adding 'up' -> 'index.html'
+./niojoint/intro.html: adding 'start' -> '/'
+./niojoint/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niojoint/intro.html: adding 'next' -> 'exper.html'
+./niojoint/intro.html: adding 'up' -> 'index.html'
+./niojoint/intro.html: adding 'previous' -> 'index.html'
+./niojoint/intro.html: updated
+./niojoint/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niojoint/references.html: adding 'up' -> 'index.html'
+./niojoint/references.html: adding 'start' -> '/'
+./niojoint/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niojoint/references.html: adding 'next' -> 'figures.html'
+./niojoint/references.html: adding 'up' -> 'index.html'
+./niojoint/references.html: adding 'previous' -> 'discuss.html'
+./niojoint/references.html: updated
+./niojoint/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niojoint/results.html: adding 'up' -> 'index.html'
+./niojoint/results.html: adding 'start' -> '/'
+./niojoint/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niojoint/results.html: adding 'next' -> 'discuss.html'
+./niojoint/results.html: adding 'up' -> 'index.html'
+./niojoint/results.html: adding 'previous' -> 'exper.html'
+./niojoint/results.html: updated
+./niomrs/conclude.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/conclude.html: adding 'up' -> 'index.html'
+./niomrs/conclude.html: adding 'start' -> '/'
+./niomrs/conclude.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/conclude.html: adding 'next' -> 'references.html'
+./niomrs/conclude.html: adding 'up' -> 'index.html'
+./niomrs/conclude.html: adding 'previous' -> 'results.html'
+./niomrs/conclude.html: updated
+./niomrs/exper.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/exper.html: adding 'up' -> 'index.html'
+./niomrs/exper.html: adding 'start' -> '/'
+./niomrs/exper.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/exper.html: adding 'next' -> 'results.html'
+./niomrs/exper.html: adding 'up' -> 'index.html'
+./niomrs/exper.html: adding 'previous' -> 'intro.html'
+./niomrs/exper.html: updated
+./niomrs/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/fig1.html: adding 'up' -> 'index.html'
+./niomrs/fig1.html: adding 'start' -> '/'
+./niomrs/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/fig1.html: updated
+./niomrs/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/fig2.html: adding 'up' -> 'index.html'
+./niomrs/fig2.html: adding 'start' -> '/'
+./niomrs/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/fig2.html: updated
+./niomrs/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/fig3.html: adding 'up' -> 'index.html'
+./niomrs/fig3.html: adding 'start' -> '/'
+./niomrs/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/fig3.html: updated
+./niomrs/fig4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/fig4.html: adding 'up' -> 'index.html'
+./niomrs/fig4.html: adding 'start' -> '/'
+./niomrs/fig4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/fig4.html: updated
+./niomrs/fig5.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/fig5.html: adding 'up' -> 'index.html'
+./niomrs/fig5.html: adding 'start' -> '/'
+./niomrs/fig5.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/fig5.html: updated
+./niomrs/fig6.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/fig6.html: adding 'up' -> 'index.html'
+./niomrs/fig6.html: adding 'start' -> '/'
+./niomrs/fig6.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/fig6.html: updated
+./niomrs/fig7.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/fig7.html: adding 'up' -> 'index.html'
+./niomrs/fig7.html: adding 'start' -> '/'
+./niomrs/fig7.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/fig7.html: updated
+./niomrs/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/figures.html: adding 'up' -> 'index.html'
+./niomrs/figures.html: adding 'start' -> '/'
+./niomrs/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/figures.html: adding 'up' -> 'index.html'
+./niomrs/figures.html: adding 'previous' -> 'references.html'
+./niomrs/figures.html: updated
+./niomrs/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/index.html: adding 'up' -> '../'
+./niomrs/index.html: adding 'start' -> '/'
+./niomrs/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/index.html: adding 'up' -> '/alison/magnetism.html'
+./niomrs/index.html: updated
+./niomrs/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/intro.html: adding 'up' -> 'index.html'
+./niomrs/intro.html: adding 'start' -> '/'
+./niomrs/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/intro.html: adding 'next' -> 'results.html'
+./niomrs/intro.html: adding 'up' -> 'index.html'
+./niomrs/intro.html: adding 'previous' -> 'index.html'
+./niomrs/intro.html: updated
+./niomrs/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/references.html: adding 'up' -> 'index.html'
+./niomrs/references.html: adding 'start' -> '/'
+./niomrs/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/references.html: adding 'next' -> 'figures.html'
+./niomrs/references.html: adding 'up' -> 'index.html'
+./niomrs/references.html: adding 'previous' -> 'results.html'
+./niomrs/references.html: updated
+./niomrs/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niomrs/results.html: adding 'up' -> 'index.html'
+./niomrs/results.html: adding 'start' -> '/'
+./niomrs/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niomrs/results.html: adding 'next' -> 'conclude.html'
+./niomrs/results.html: adding 'up' -> 'index.html'
+./niomrs/results.html: adding 'previous' -> 'index.html'
+./niomrs/results.html: updated
+./niorapid/conclude.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niorapid/conclude.html: adding 'up' -> 'index.html'
+./niorapid/conclude.html: adding 'start' -> '/'
+./niorapid/conclude.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niorapid/conclude.html: adding 'next' -> 'references.html'
+./niorapid/conclude.html: adding 'up' -> 'index.html'
+./niorapid/conclude.html: adding 'previous' -> 'discuss.html'
+./niorapid/conclude.html: updated
+./niorapid/discuss.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niorapid/discuss.html: adding 'up' -> 'index.html'
+./niorapid/discuss.html: adding 'start' -> '/'
+./niorapid/discuss.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niorapid/discuss.html: adding 'next' -> 'conclude.html'
+./niorapid/discuss.html: adding 'up' -> 'index.html'
+./niorapid/discuss.html: adding 'previous' -> 'results.html'
+./niorapid/discuss.html: updated
+./niorapid/exper.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niorapid/exper.html: adding 'up' -> 'index.html'
+./niorapid/exper.html: adding 'start' -> '/'
+./niorapid/exper.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niorapid/exper.html: adding 'next' -> 'results.html'
+./niorapid/exper.html: adding 'up' -> 'index.html'
+./niorapid/exper.html: adding 'previous' -> 'intro.html'
+./niorapid/exper.html: updated
+./niorapid/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niorapid/fig1.html: adding 'up' -> 'index.html'
+./niorapid/fig1.html: adding 'start' -> '/'
+./niorapid/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niorapid/fig1.html: updated
+./niorapid/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" /><!--    $Id -->
+
+./niorapid/fig2.html: adding 'up' -> 'index.html'
+./niorapid/fig2.html: adding 'start' -> '/'
+./niorapid/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niorapid/fig2.html: updated
+./niorapid/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niorapid/fig3.html: adding 'up' -> 'index.html'
+./niorapid/fig3.html: adding 'start' -> '/'
+./niorapid/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niorapid/fig3.html: updated
+./niorapid/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niorapid/figures.html: adding 'up' -> 'index.html'
+./niorapid/figures.html: adding 'start' -> '/'
+./niorapid/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niorapid/figures.html: adding 'up' -> 'index.html'
+./niorapid/figures.html: adding 'previous' -> 'references.html'
+./niorapid/figures.html: updated
+./niorapid/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niorapid/index.html: adding 'up' -> '../'
+./niorapid/index.html: adding 'start' -> '/'
+./niorapid/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niorapid/index.html: adding 'up' -> '/alison/magnetism.html'
+./niorapid/index.html: updated
+./niorapid/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niorapid/intro.html: adding 'up' -> 'index.html'
+./niorapid/intro.html: adding 'start' -> '/'
+./niorapid/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niorapid/intro.html: adding 'next' -> 'exper.html'
+./niorapid/intro.html: adding 'up' -> 'index.html'
+./niorapid/intro.html: adding 'previous' -> 'index.html'
+./niorapid/intro.html: updated
+./niorapid/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niorapid/references.html: adding 'up' -> 'index.html'
+./niorapid/references.html: adding 'start' -> '/'
+./niorapid/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niorapid/references.html: adding 'next' -> 'figures.html'
+./niorapid/references.html: adding 'up' -> 'index.html'
+./niorapid/references.html: adding 'previous' -> 'discuss.html'
+./niorapid/references.html: updated
+./niorapid/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./niorapid/results.html: adding 'up' -> 'index.html'
+./niorapid/results.html: adding 'start' -> '/'
+./niorapid/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./niorapid/results.html: adding 'next' -> 'discuss.html'
+./niorapid/results.html: adding 'up' -> 'index.html'
+./niorapid/results.html: adding 'previous' -> 'exper.html'
+./niorapid/results.html: updated
+./nonfict.html: adding 'up' -> 'index.html'
+./nonfict.html: adding 'start' -> '/'
+./nonfict.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./nonfict.html: updated
+./notrecomm.html: adding 'up' -> 'index.html'
+./notrecomm.html: adding 'start' -> '/'
+./notrecomm.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./notrecomm.html: updated
+./physpapers.html: adding 'up' -> 'index.html'
+./physpapers.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./physpapers.html: adding 'next' -> 'faq.html'
+./physpapers.html: adding 'up' -> '/alison/'
+./physpapers.html: updated
+./pineapple.html: adding 'up' -> 'index.html'
+./pineapple.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./pineapple.html: adding 'next' -> 'recipes/'
+./pineapple.html: adding 'up' -> 'coolstuff.html'
+./pineapple.html: adding 'previous' -> 'books/notrecomm.html'
+./pineapple.html: updated
+./potsal.html: adding 'up' -> 'index.html'
+./potsal.html: adding 'start' -> '/'
+./potsal.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./potsal.html: updated
+./puerco.html: adding 'up' -> 'index.html'
+./puerco.html: adding 'start' -> '/'
+./puerco.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./puerco.html: updated
+./pursuit.html: adding 'up' -> 'index.html'
+./pursuit.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./pursuit.html: adding 'next' -> 'zen.html'
+./pursuit.html: adding 'up' -> 'coolstuff.html'
+./pursuit.html: adding 'previous' -> 'recipes/'
+./pursuit.html: updated
+./rapid/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./rapid/index.html: adding 'up' -> '../'
+./rapid/index.html: adding 'start' -> '/'
+./rapid/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./rapid/index.html: adding 'next' -> 'node1.html'
+./rapid/index.html: adding 'up' -> '/alison/physpapers.html'
+./rapid/index.html: updated
+./rapid/node1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./rapid/node1.html: adding 'up' -> 'index.html'
+./rapid/node1.html: adding 'start' -> '/'
+./rapid/node1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./rapid/node1.html: adding 'next' -> 'node2.html'
+./rapid/node1.html: adding 'up' -> 'index.html'
+./rapid/node1.html: adding 'previous' -> 'index.html'
+./rapid/node1.html: updated
+./rapid/node2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./rapid/node2.html: adding 'up' -> 'index.html'
+./rapid/node2.html: adding 'start' -> '/'
+./rapid/node2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./rapid/node2.html: adding 'next' -> 'node3.html'
+./rapid/node2.html: adding 'up' -> 'index.html'
+./rapid/node2.html: adding 'previous' -> 'node1.html'
+./rapid/node2.html: updated
+./rapid/node3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./rapid/node3.html: adding 'up' -> 'index.html'
+./rapid/node3.html: adding 'start' -> '/'
+./rapid/node3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./rapid/node3.html: adding 'next' -> 'node4.html'
+./rapid/node3.html: adding 'up' -> 'index.html'
+./rapid/node3.html: adding 'previous' -> 'node2.html'
+./rapid/node3.html: updated
+./rapid/node4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./rapid/node4.html: adding 'up' -> 'index.html'
+./rapid/node4.html: adding 'start' -> '/'
+./rapid/node4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./rapid/node4.html: adding 'next' -> 'node5.html'
+./rapid/node4.html: adding 'up' -> 'index.html'
+./rapid/node4.html: adding 'previous' -> 'node3.html'
+./rapid/node4.html: updated
+./rapid/node5.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./rapid/node5.html: adding 'up' -> 'index.html'
+./rapid/node5.html: adding 'start' -> '/'
+./rapid/node5.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./rapid/node5.html: adding 'next' -> 'node6.html'
+./rapid/node5.html: adding 'up' -> 'index.html'
+./rapid/node5.html: adding 'previous' -> 'node4.html'
+./rapid/node5.html: updated
+./rapid/node6.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./rapid/node6.html: adding 'up' -> 'index.html'
+./rapid/node6.html: adding 'start' -> '/'
+./rapid/node6.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./rapid/node6.html: adding 'next' -> 'node7.html'
+./rapid/node6.html: adding 'up' -> 'index.html'
+./rapid/node6.html: adding 'previous' -> 'node5.html'
+./rapid/node6.html: updated
+./rapid/node7.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./rapid/node7.html: adding 'up' -> 'index.html'
+./rapid/node7.html: adding 'start' -> '/'
+./rapid/node7.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./rapid/node7.html: adding 'next' -> 'node8.html'
+./rapid/node7.html: adding 'up' -> 'index.html'
+./rapid/node7.html: adding 'previous' -> 'node6.html'
+./rapid/node7.html: updated
+./rapid/node8.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./rapid/node8.html: adding 'up' -> 'index.html'
+./rapid/node8.html: adding 'start' -> '/'
+./rapid/node8.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./rapid/node8.html: adding 'up' -> 'index.html'
+./rapid/node8.html: adding 'previous' -> 'node7.html'
+./rapid/node8.html: updated
+./recipes/babyback.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/babyback.html: adding 'up' -> 'index.html'
+./recipes/babyback.html: adding 'start' -> '/'
+./recipes/babyback.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/babyback.html: adding 'next' -> 'lambspinach.html'
+./recipes/babyback.html: adding 'up' -> 'index.html'
+./recipes/babyback.html: updated
+./recipes/brazil.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/brazil.html: adding 'up' -> 'index.html'
+./recipes/brazil.html: adding 'start' -> '/'
+./recipes/brazil.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/brazil.html: adding 'next' -> 'cheesecake.html'
+./recipes/brazil.html: adding 'up' -> 'index.html'
+./recipes/brazil.html: updated
+./recipes/brusselsprouts.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/brusselsprouts.html: adding 'up' -> 'index.html'
+./recipes/brusselsprouts.html: adding 'start' -> '/'
+./recipes/brusselsprouts.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/brusselsprouts.html: adding 'up' -> 'index.html'
+./recipes/brusselsprouts.html: adding 'previous' -> '/alison/recipes/olives.html'
+./recipes/brusselsprouts.html: updated
+./recipes/cheesecake.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/cheesecake.html: adding 'up' -> 'index.html'
+./recipes/cheesecake.html: adding 'start' -> '/'
+./recipes/cheesecake.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/cheesecake.html: adding 'next' -> 'kale.html'
+./recipes/cheesecake.html: adding 'up' -> 'index.html'
+./recipes/cheesecake.html: updated
+./recipes/chilepork.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/chilepork.html: adding 'up' -> 'index.html'
+./recipes/chilepork.html: adding 'start' -> '/'
+./recipes/chilepork.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/chilepork.html: adding 'next' -> '/alison/recipes/cowcaviar.html'
+./recipes/chilepork.html: adding 'up' -> 'index.html'
+./recipes/chilepork.html: updated
+./recipes/corned.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/corned.html: adding 'up' -> 'index.html'
+./recipes/corned.html: adding 'start' -> '/'
+./recipes/corned.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/corned.html: adding 'next' -> 'gyros.html'
+./recipes/corned.html: adding 'up' -> 'index.html'
+./recipes/corned.html: updated
+./recipes/cowcaviar.html: never saw the href string!
+
+./recipes/cowcaviar.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/cowcaviar.html: adding 'up' -> 'index.html'
+./recipes/cowcaviar.html: adding 'start' -> '/'
+./recipes/cowcaviar.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/cowcaviar.html: adding 'next' -> '/alison/recipes/tabbouleh.html'
+./recipes/cowcaviar.html: adding 'up' -> 'index.html'
+./recipes/cowcaviar.html: adding 'previous' -> '/alison/recipes/chilepork.html'
+./recipes/cowcaviar.html: updated
+./recipes/gyros.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/gyros.html: adding 'up' -> 'index.html'
+./recipes/gyros.html: adding 'start' -> '/'
+./recipes/gyros.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/gyros.html: adding 'next' -> 'potsal.html'
+./recipes/gyros.html: adding 'up' -> 'index.html'
+./recipes/gyros.html: updated
+./recipes/homewine.html: no changes
+./recipes/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/index.html: adding 'up' -> '../'
+./recipes/index.html: adding 'start' -> '/'
+./recipes/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/index.html: adding 'next' -> 'brazil.html'
+./recipes/index.html: adding 'up' -> '/alison/coolstuff.html'
+./recipes/index.html: adding 'previous' -> '/alison/pineapple.html'
+./recipes/index.html: updated
+./recipes/inner.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/inner.html: adding 'up' -> 'index.html'
+./recipes/inner.html: adding 'start' -> '/'
+./recipes/inner.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/inner.html: adding 'next' -> '/alison/recipes/rosemarychick.html'
+./recipes/inner.html: adding 'up' -> 'index.html'
+./recipes/inner.html: updated
+./recipes/kale.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/kale.html: adding 'up' -> 'index.html'
+./recipes/kale.html: adding 'start' -> '/'
+./recipes/kale.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/kale.html: adding 'next' -> 'puerco.html'
+./recipes/kale.html: adding 'up' -> 'index.html'
+./recipes/kale.html: updated
+./recipes/lambspinach.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/lambspinach.html: adding 'up' -> 'index.html'
+./recipes/lambspinach.html: adding 'start' -> '/'
+./recipes/lambspinach.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/lambspinach.html: adding 'next' -> 'inner.html'
+./recipes/lambspinach.html: adding 'up' -> 'index.html'
+./recipes/lambspinach.html: updated
+./recipes/olives.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/olives.html: adding 'up' -> 'index.html'
+./recipes/olives.html: adding 'start' -> '/'
+./recipes/olives.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/olives.html: adding 'next' -> '/alison/recipes/brusselsprouts.html'
+./recipes/olives.html: adding 'up' -> 'index.html'
+./recipes/olives.html: adding 'previous' -> '/alison/recipes/tabbouleh.html'
+./recipes/olives.html: updated
+./recipes/potsal.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/potsal.html: adding 'up' -> 'index.html'
+./recipes/potsal.html: adding 'start' -> '/'
+./recipes/potsal.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/potsal.html: adding 'next' -> 'babyback.html'
+./recipes/potsal.html: adding 'up' -> 'index.html'
+./recipes/potsal.html: updated
+./recipes/puerco.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/puerco.html: adding 'up' -> 'index.html'
+./recipes/puerco.html: adding 'start' -> '/'
+./recipes/puerco.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/puerco.html: adding 'next' -> 'slaw.html'
+./recipes/puerco.html: adding 'up' -> 'index.html'
+./recipes/puerco.html: updated
+./recipes/rosemarychick.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/rosemarychick.html: adding 'up' -> 'index.html'
+./recipes/rosemarychick.html: adding 'start' -> '/'
+./recipes/rosemarychick.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/rosemarychick.html: adding 'next' -> '/alison/recipes/chilepork.html'
+./recipes/rosemarychick.html: adding 'up' -> 'index.html'
+./recipes/rosemarychick.html: updated
+./recipes/slaw.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/slaw.html: adding 'up' -> 'index.html'
+./recipes/slaw.html: adding 'start' -> '/'
+./recipes/slaw.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/slaw.html: adding 'next' -> 'corned.html'
+./recipes/slaw.html: adding 'up' -> 'index.html'
+./recipes/slaw.html: updated
+./recipes/tabbouleh.html: never saw the href string!
+
+./recipes/tabbouleh.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./recipes/tabbouleh.html: adding 'up' -> 'index.html'
+./recipes/tabbouleh.html: adding 'start' -> '/'
+./recipes/tabbouleh.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes/tabbouleh.html: adding 'next' -> '/alison/recipes/olives.html'
+./recipes/tabbouleh.html: adding 'up' -> 'index.html'
+./recipes/tabbouleh.html: adding 'previous' -> '/alison/recipes/cowcaviar.html'
+./recipes/tabbouleh.html: updated
+./recipes.html: adding 'up' -> 'index.html'
+./recipes.html: adding 'start' -> '/'
+./recipes.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recipes.html: updated
+./recommended.html: adding 'up' -> 'index.html'
+./recommended.html: adding 'start' -> '/'
+./recommended.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./recommended.html: updated
+./rsi/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./rsi/index.html: adding 'up' -> '../'
+./rsi/index.html: adding 'start' -> '/'
+./rsi/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./rsi/index.html: updated
+./rsi/rsipaper.html: no changes
+./slaw.html: adding 'up' -> 'index.html'
+./slaw.html: adding 'start' -> '/'
+./slaw.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./slaw.html: updated
+./supercon.html: adding 'up' -> 'index.html'
+./supercon.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./supercon.html: adding 'next' -> 'intercalate.html'
+./supercon.html: adding 'up' -> '/alison/'
+./supercon.html: updated
+./tarantula.html: no changes
+./thesis-src/app/index.html: no changes
+./thesis-src/calc/index.html: no changes
+./thesis-src/chap1/index.html: no changes
+./thesis-src/chap2/index.html: no changes
+./thesis-src/chap3/figures/index.html: adding 'up' -> '../'
+./thesis-src/chap3/figures/index.html: updated
+./thesis-src/chap3/index.html: no changes
+./thesis-src/chap4/figures/index.html: adding 'up' -> '../'
+./thesis-src/chap4/figures/index.html: updated
+./thesis-src/chap4/index.html: no changes
+./thesis-src/chap5/index.html: no changes
+./thesis-src/chap6/index.html: no changes
+./thesis-src/chap7/index.html: no changes
+./thesis-src/index.html: no changes
+./thesis-src/qthesis/node1.html: updated
+./thesis-src/qthesis/node10.html: updated
+./thesis-src/qthesis/node11.html: updated
+./thesis-src/qthesis/node12.html: updated
+./thesis-src/qthesis/node13.html: updated
+./thesis-src/qthesis/node14.html: updated
+./thesis-src/qthesis/node15.html: updated
+./thesis-src/qthesis/node16.html: updated
+./thesis-src/qthesis/node17.html: updated
+./thesis-src/qthesis/node18.html: updated
+./thesis-src/qthesis/node19.html: updated
+./thesis-src/qthesis/node2.html: updated
+./thesis-src/qthesis/node20.html: updated
+./thesis-src/qthesis/node21.html: updated
+./thesis-src/qthesis/node22.html: updated
+./thesis-src/qthesis/node23.html: updated
+./thesis-src/qthesis/node24.html: updated
+./thesis-src/qthesis/node25.html: updated
+./thesis-src/qthesis/node26.html: updated
+./thesis-src/qthesis/node27.html: updated
+./thesis-src/qthesis/node28.html: updated
+./thesis-src/qthesis/node29.html: updated
+./thesis-src/qthesis/node3.html: updated
+./thesis-src/qthesis/node30.html: updated
+./thesis-src/qthesis/node31.html: updated
+./thesis-src/qthesis/node32.html: updated
+./thesis-src/qthesis/node33.html: updated
+./thesis-src/qthesis/node34.html: updated
+./thesis-src/qthesis/node35.html: updated
+./thesis-src/qthesis/node36.html: updated
+./thesis-src/qthesis/node37.html: updated
+./thesis-src/qthesis/node38.html: updated
+./thesis-src/qthesis/node39.html: updated
+./thesis-src/qthesis/node4.html: updated
+./thesis-src/qthesis/node40.html: updated
+./thesis-src/qthesis/node41.html: updated
+./thesis-src/qthesis/node42.html: updated
+./thesis-src/qthesis/node43.html: updated
+./thesis-src/qthesis/node44.html: updated
+./thesis-src/qthesis/node45.html: updated
+./thesis-src/qthesis/node46.html: updated
+./thesis-src/qthesis/node47.html: updated
+./thesis-src/qthesis/node48.html: updated
+./thesis-src/qthesis/node49.html: updated
+./thesis-src/qthesis/node5.html: updated
+./thesis-src/qthesis/node50.html: updated
+./thesis-src/qthesis/node51.html: updated
+./thesis-src/qthesis/node52.html: updated
+./thesis-src/qthesis/node53.html: updated
+./thesis-src/qthesis/node54.html: updated
+./thesis-src/qthesis/node55.html: updated
+./thesis-src/qthesis/node56.html: updated
+./thesis-src/qthesis/node57.html: updated
+./thesis-src/qthesis/node58.html: updated
+./thesis-src/qthesis/node59.html: updated
+./thesis-src/qthesis/node6.html: updated
+./thesis-src/qthesis/node60.html: updated
+./thesis-src/qthesis/node61.html: updated
+./thesis-src/qthesis/node62.html: updated
+./thesis-src/qthesis/node63.html: updated
+./thesis-src/qthesis/node64.html: updated
+./thesis-src/qthesis/node65.html: updated
+./thesis-src/qthesis/node66.html: updated
+./thesis-src/qthesis/node7.html: updated
+./thesis-src/qthesis/node8.html: updated
+./thesis-src/qthesis/node9.html: updated
+./thesis-src/qthesis/oops.html: updated
+./thesis-src/qthesis/qthesis.html: updated
+./thesis2/index.html: no changes
+./thesis2/qthesis/index.html: no changes
+./thesis2/qthesis/node1.html: no changes
+./thesis2/qthesis/node10.html: no changes
+./thesis2/qthesis/node11.html: no changes
+./thesis2/qthesis/node12.html: no changes
+./thesis2/qthesis/node13.html: no changes
+./thesis2/qthesis/node14.html: no changes
+./thesis2/qthesis/node15.html: no changes
+./thesis2/qthesis/node16.html: no changes
+./thesis2/qthesis/node17.html: no changes
+./thesis2/qthesis/node18.html: no changes
+./thesis2/qthesis/node19.html: no changes
+./thesis2/qthesis/node2.html: no changes
+./thesis2/qthesis/node20.html: no changes
+./thesis2/qthesis/node21.html: no changes
+./thesis2/qthesis/node22.html: no changes
+./thesis2/qthesis/node23.html: no changes
+./thesis2/qthesis/node24.html: no changes
+./thesis2/qthesis/node25.html: no changes
+./thesis2/qthesis/node26.html: no changes
+./thesis2/qthesis/node27.html: no changes
+./thesis2/qthesis/node28.html: no changes
+./thesis2/qthesis/node29.html: no changes
+./thesis2/qthesis/node3.html: no changes
+./thesis2/qthesis/node30.html: no changes
+./thesis2/qthesis/node31.html: no changes
+./thesis2/qthesis/node32.html: no changes
+./thesis2/qthesis/node33.html: no changes
+./thesis2/qthesis/node34.html: no changes
+./thesis2/qthesis/node35.html: no changes
+./thesis2/qthesis/node36.html: no changes
+./thesis2/qthesis/node37.html: no changes
+./thesis2/qthesis/node38.html: no changes
+./thesis2/qthesis/node39.html: no changes
+./thesis2/qthesis/node4.html: no changes
+./thesis2/qthesis/node40.html: no changes
+./thesis2/qthesis/node41.html: no changes
+./thesis2/qthesis/node42.html: no changes
+./thesis2/qthesis/node43.html: no changes
+./thesis2/qthesis/node44.html: no changes
+./thesis2/qthesis/node45.html: no changes
+./thesis2/qthesis/node46.html: no changes
+./thesis2/qthesis/node47.html: no changes
+./thesis2/qthesis/node48.html: no changes
+./thesis2/qthesis/node49.html: no changes
+./thesis2/qthesis/node5.html: no changes
+./thesis2/qthesis/node50.html: no changes
+./thesis2/qthesis/node51.html: no changes
+./thesis2/qthesis/node52.html: no changes
+./thesis2/qthesis/node53.html: no changes
+./thesis2/qthesis/node54.html: no changes
+./thesis2/qthesis/node55.html: no changes
+./thesis2/qthesis/node56.html: no changes
+./thesis2/qthesis/node57.html: no changes
+./thesis2/qthesis/node58.html: no changes
+./thesis2/qthesis/node59.html: no changes
+./thesis2/qthesis/node6.html: no changes
+./thesis2/qthesis/node60.html: no changes
+./thesis2/qthesis/node61.html: no changes
+./thesis2/qthesis/node62.html: no changes
+./thesis2/qthesis/node63.html: no changes
+./thesis2/qthesis/node64.html: no changes
+./thesis2/qthesis/node65.html: no changes
+./thesis2/qthesis/node66.html: no changes
+./thesis2/qthesis/node7.html: no changes
+./thesis2/qthesis/node8.html: no changes
+./thesis2/qthesis/node9.html: no changes
+./thesis2/qthesis/oops.html: no changes
+./thesis2/qthesis/qthesis.html: no changes
+./uxopaper/apparatus.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/apparatus.html: adding 'up' -> 'index.html'
+./uxopaper/apparatus.html: adding 'start' -> '/'
+./uxopaper/apparatus.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/apparatus.html: updated
+./uxopaper/demo.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/demo.html: adding 'up' -> 'index.html'
+./uxopaper/demo.html: adding 'start' -> '/'
+./uxopaper/demo.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/demo.html: adding 'next' -> 'results.html'
+./uxopaper/demo.html: adding 'up' -> 'index.html'
+./uxopaper/demo.html: adding 'previous' -> 'gmr.html'
+./uxopaper/demo.html: updated
+./uxopaper/field.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/field.html: adding 'up' -> 'index.html'
+./uxopaper/field.html: adding 'start' -> '/'
+./uxopaper/field.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/field.html: adding 'next' -> 'references.html'
+./uxopaper/field.html: adding 'up' -> 'index.html'
+./uxopaper/field.html: adding 'previous' -> 'results.html'
+./uxopaper/field.html: updated
+./uxopaper/fig1.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/fig1.html: adding 'up' -> 'index.html'
+./uxopaper/fig1.html: adding 'start' -> '/'
+./uxopaper/fig1.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/fig1.html: updated
+./uxopaper/fig2.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/fig2.html: adding 'up' -> 'index.html'
+./uxopaper/fig2.html: adding 'start' -> '/'
+./uxopaper/fig2.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/fig2.html: updated
+./uxopaper/fig3.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/fig3.html: adding 'up' -> 'index.html'
+./uxopaper/fig3.html: adding 'start' -> '/'
+./uxopaper/fig3.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/fig3.html: updated
+./uxopaper/fig4.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/fig4.html: adding 'up' -> 'index.html'
+./uxopaper/fig4.html: adding 'start' -> '/'
+./uxopaper/fig4.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/fig4.html: updated
+./uxopaper/fig5.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/fig5.html: adding 'up' -> 'index.html'
+./uxopaper/fig5.html: adding 'start' -> '/'
+./uxopaper/fig5.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/fig5.html: updated
+./uxopaper/fig6.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/fig6.html: adding 'up' -> 'index.html'
+./uxopaper/fig6.html: adding 'start' -> '/'
+./uxopaper/fig6.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/fig6.html: updated
+./uxopaper/fig7.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/fig7.html: adding 'up' -> 'index.html'
+./uxopaper/fig7.html: adding 'start' -> '/'
+./uxopaper/fig7.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/fig7.html: updated
+./uxopaper/figures.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/figures.html: adding 'up' -> 'index.html'
+./uxopaper/figures.html: adding 'start' -> '/'
+./uxopaper/figures.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/figures.html: adding 'up' -> 'index.html'
+./uxopaper/figures.html: adding 'previous' -> 'references.html'
+./uxopaper/figures.html: updated
+./uxopaper/gmr.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/gmr.html: adding 'up' -> 'index.html'
+./uxopaper/gmr.html: adding 'start' -> '/'
+./uxopaper/gmr.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/gmr.html: adding 'next' -> 'demo.html'
+./uxopaper/gmr.html: adding 'up' -> 'intro.html'
+./uxopaper/gmr.html: adding 'previous' -> 'intro.html'
+./uxopaper/gmr.html: updated
+./uxopaper/index.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/index.html: adding 'up' -> '../'
+./uxopaper/index.html: adding 'start' -> '/'
+./uxopaper/index.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/index.html: adding 'next' -> 'intro.html'
+./uxopaper/index.html: adding 'up' -> '/alison/magnetism.html'
+./uxopaper/index.html: updated
+./uxopaper/intro.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/intro.html: adding 'up' -> 'index.html'
+./uxopaper/intro.html: adding 'start' -> '/'
+./uxopaper/intro.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/intro.html: adding 'next' -> 'gmr.html'
+./uxopaper/intro.html: adding 'up' -> 'index.html'
+./uxopaper/intro.html: adding 'previous' -> 'index.html'
+./uxopaper/intro.html: updated
+./uxopaper/references.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/references.html: adding 'up' -> 'index.html'
+./uxopaper/references.html: adding 'start' -> '/'
+./uxopaper/references.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/references.html: adding 'next' -> 'figures.html'
+./uxopaper/references.html: adding 'up' -> 'index.html'
+./uxopaper/references.html: adding 'previous' -> 'field.html'
+./uxopaper/references.html: updated
+./uxopaper/results.html: bad rev link:     <link rev="home" href="http://www.wsrcc.com/" />
+
+./uxopaper/results.html: adding 'up' -> 'index.html'
+./uxopaper/results.html: adding 'start' -> '/'
+./uxopaper/results.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./uxopaper/results.html: adding 'next' -> 'field.html'
+./uxopaper/results.html: adding 'up' -> 'index.html'
+./uxopaper/results.html: adding 'previous' -> 'demo.html'
+./uxopaper/results.html: updated
+./vietnam.html: adding 'up' -> 'index.html'
+./vietnam.html: adding 'start' -> '/'
+./vietnam.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./vietnam.html: updated
+./vsm.html: adding 'up' -> 'index.html'
+./vsm.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./vsm.html: updated
+./xrayabs.html: adding 'up' -> 'index.html'
+./xrayabs.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./xrayabs.html: adding 'next' -> 'bn.html'
+./xrayabs.html: adding 'up' -> '/alison/'
+./xrayabs.html: updated
+./zen.html: adding 'up' -> 'index.html'
+./zen.html: adding 'icon' -> '/wsrcc-logo-16.png'
+./zen.html: adding 'up' -> 'coolstuff.html'
+./zen.html: adding 'previous' -> 'pursuit.html'
+./zen.html: updated

@@ -1,0 +1,22 @@
+\chapter[Computer Programs used to Fit $\rm H_{c2}(T)$ Data]{Computer Programs used to Fit Temperature Dependence of the Critical
+Field Data}
+\label{temprog}
+\pagestyle{headings}
+\markright{$\rm H_{c2}(T)$ Programs}
+
+        This  appendix contains the  source  code for the   program hc2 and
+hczero.  hc2  is a routine  which  fits the WHHM  theory to $\rm H_{c2}(T)$
+data.  This    code is based  on Equation~\ref{makidegennes}   with various
+embellishments to  incorporate effects related  to Pauli paramagnetism  and
+spin-orbit  coupling.   The  physics content  of   hc2 comes  from  FORTRAN
+routines written by  Eric Tkaczyk and  J.A.X. Alexander, but the algorithms
+are  improved,  and the  code has  been   rewritten in  the   C programming
+language.
+
+        hczero finds parameters which give a  least-squares linear fit of a
+line or quadratic to  $\rm H_{c2}(T)$ data.  Both hc2  and hczero make use
+of some of the utility subroutines listed in Appendix~\ref{utility}.
+
+%hc2.c hcfunc.c max.c hcfit.c hcgrad.c hchisq.c
+%hczero.c 
+%Makefile

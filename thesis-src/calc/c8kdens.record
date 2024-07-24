@@ -1,0 +1,73 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;									     ;;
+;;	File:     c8kdens.record					     ;;
+;;	Author:   Alison Chaiken					     ;;
+;;	Created:  Tue Jul 26 14:40:23 EDT 1988				     ;;
+;;	Contents: calculation of various parameters concerning density,      ;;
+;;                stoichiometry, and structure of C_8K.                      ;;
+;;									     ;;
+;;	Copyright (c) 1988 Alison Chaiken.				     ;;
+;;	All rights reserved.						     ;;
+;;									     ;;
+;;	$Log$								     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;volume per unit cell of C_8K
+;V = 2 * (sqrt3) * squared(a) * I_c
+(setq float-output-format "4e")
+"4e"
+(setq a-zero 2.46)
+2.46
+(* 2 (sqrt 3.0))
+3.464
+(* 3.464 (squared 2.46))
+2.0963e+01 ;area of (2X2) unit cell in Ang. squared
+(* 2.0963e+01 5.35)
+112.2 ;volume of (2X2) unit cell in Ang. cubed
+(* 112.2 1e-24)
+1.122e-22
+(setq v 1.122e-22)
+1.122e-22 ;volume of (2X2) unit cell in cm^3
+
+;mass per unit cell of C_8K
+;in one unit cell there is ONE formula unit [unlike C_4KHg, where there are 2]
+;M = m_{proton} * [(16 * m_C) + (2 * m_K)]
+(setq mcarbon 12.011)
+1.2011e+01
+(setq mK 39.083)
+3.9083e+01
+(* phys-mproton (+ (* 8 mcarbon) mK))
+2.261e-22 ; mass of C_8K per unit cell
+
+(/ 2.261e-22 v)
+2.015 ;density of graphite is 2.25 grams per cm^3
+C_8K is about as dense as graphite
+
+;number density of atoms in C_8K
+(/ 9.0 v)
+8.021e+22
+(setq c8knd 8.021e22)
+8.021e+22 atoms per cm^3
+(* c8knd (/ 8.0 9.0))
+7.13e+22 carbon atoms per cm^3
+(setq Cnd 7.13e+22)
+7.13e+22
+
+In C_8Rb, I_c = 5.65 Ang.
+Thus v_{RB} = (* (/ 5.65 5.35) v)
+1.185e-22
+(/ 9.0 1.185e-22)
+7.595e+22
+(* 7.595e+22 (/ 8.0 9.0))
+6.751e+22 carbon atoms per cm^3 in C_8Rb
+(setq CRbnd 6.751e+22)
+6.751e+22
+
+In C_8Cs,
+(* CRbnd (/ 5.94 5.65))
+7.098e+22
+(setq CCsnd 7.098e+22)
+7.098e+22
+
+
+

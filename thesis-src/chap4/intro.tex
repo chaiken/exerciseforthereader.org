@@ -1,0 +1,133 @@
+% -*- mode: latex -*-
+\section{Introduction}
+\label{critf:intro}
+	Ever since   Meissner    and  Ochsenfeld  discovered the    perfect
+diamagnetism of superconductors in 1933,\cite{meissner33}  the study of the
+behavior of  superconductors   in  an applied magnetic   field has   been a
+principal  activity  of superconductivity experimentalists.   One reason is
+that perfect diamagnetism is a phenomenon  peculiar to superconductors, and
+thus is often used as a diagnostic for the occurrence of superconductivity,
+as indeed was done in the experiments described  in this thesis.  A second
+reason    is that critical   field  measurements   provide a great  deal of
+information about  the material being  studied,  as  is  illustrated by the
+idealized results shown in Figure~\ref{fig:meiss}.
+
+%Figure 1a is Figure 5-2 of Tinkham; and Figure 1b is sketched in the margin next
+%to Figure 5-2 of Tinkham. (p. 157)
+
+	Figure~\ref{fig:meiss}a  illustrates the  difference between type I
+and type II superconductors.  The  group of type I superconductors  is made
+up of almost all the elemental superconductors.   These materials exhibit a
+first-order  transition  in  an applied   magnetic    field.   Due to   the
+supercooling effects associated  with a first-order transition, experiments
+on  type I  superconductors are often   complicated by hysteresis.  Type II
+superconductors,  on the other  hand,  show a second-order,  non-hysteretic
+transition in a magnetic field.  Type I superconductivity can be identified
+experimentally  by  noting the presence  or absence of  hysteresis and  the
+differential  paramagnetic  effect (DPE) in the  field  sweeps.  The DPE is
+characterized by  the occurrence of a ``bump''   in the susceptibility just
+above $\rm H_{c2}$ which is a property of the  intermediate state of type I
+superconductors.\cite{hein61}  Available evidence suggests  that   most GIC
+superconductors are of  the type  II  variety, although  some GIC's do have
+type I transitions for a range of applied-field orientations.
+
+\begin{figure}
+\vspace{14cm}
+%\beginpicture
+%\setcoordinatesystem units <115mm,26.0mm>
+%\setplotarea x from 0 to 1, y from -1 to 1
+%\axis bottom shiftedto y=0 
+%ticks withvalues $\rm H_{c1}$ $\rm H_{c2}$ /  at 0.1 0.344 / /
+%\axis left ticks
+%length <0pt> withvalues 0 $\chi$ / at 0 0.9 / /
+%\put {H} [t] at 0.8 -0.05
+%\endpicture
+\caption[Comparison of type I and type II superconductors.]{a) dc magnetization
+versus field for ideal type I and type II superconductors.  $\rm H_{c1}$ is
+the lower critical field, $\rm  H_c$ is the  thermodynamic critical  field,
+and $\rm H_{c2}$  is the upper  critical field.  $\kappa$  $<$ 1/$\sqrt{2}$
+indicates type I  superconductivity; $\kappa \, \approx \,  0.8$  indicates
+weak type II behavior; $\kappa \, \approx \, 2$  indicates strongly type II
+behavior.   b)   ac   susceptibility   versus  field  for   ideal  type  II
+superconductor with $\kappa \,
+\approx \, 0.8$.    Adapted  from
+Ref.~\cite{tinkham80}.}
+\label{fig:meiss}
+\end{figure}
+
+
+	As    Figure~\ref{fig:meiss}a  shows, there  are two characteristic
+fields of importance for a type  II superconductor.  These are respectively
+termed   the lower critical  field,  $\rm   H_{c1}$, and the upper critical
+field,  $\rm H_{c2}$.  $\rm  H_{c1}$ is  the field    at  which flux  first
+penetrates a long, thin cylindrical  sample, the only  shape of sample  for
+which ``demagnetization''  effects  are  not important.  Unfortunately  the
+sensitive dependence of $\rm  H_{c1}$ on sample  shape makes its extraction
+from actual experimental data difficult.  The same comments apply to trying
+to extract $\rm H_c$, the thermodynamic critical  field, from magnetization
+curves  of type I superconductors.   Sample shape does not impact  upon the
+measurement of  the upper critical field,  $\rm  H_{c2}$,  making it a much
+more  accessible quantity  experimentally.   Most  of the  rest    of  this
+discussion  concerns   the    upper  critical    field,  which is   defined
+theoretically as that highest  applied field at which superconductivity can
+nucleate in a bulk superconductor.
+
+	The history of   upper critical field  experiments   is a long  and
+fruitful one, dating  back to the recognition  of the existence  of the two
+types     of    superconductivity     by   Abrikosov    in     the     late
+Fifties\cite{abrikosov57}.  $\rm     H_{c2}$ measurements  give      direct
+information about the Ginzburg-Landau coherence length $\xi$,  a parameter
+defined for isotropic bulk superconductors by the equation:
+
+\begin{equation}
+\rm H_{c2}\; = \; \frac{\Phi_0}{2\pi \xi^2} \; ,
+\label{cohlen}
+\end{equation}
+
+\noindent where  $\Phi_0$   is   the  superconducting    flux   
+quantum.\cite{tinkham80} The coherence length  is one of  several important
+length scales  in a superconductor.  For example,  there  is also the field
+penetration  depth, $\lambda$,  whose  size  relative to  $\xi$  determines
+whether  the    superconductivity   is   of type  I     or  type  II   (see
+Section~\ref{typeI}):
+
+\[ \begin{array}{ll}
+\lambda \, < \, \xi, & \rm type \;  I \\
+\lambda \, > \, \xi, & \rm type \; II
+   \end{array} \; .
+\]
+
+\noindent In addition,  there is the  transport mean free  path
+$\ell$,  whose    size   relative   to    $\xi$   determines  whether   the
+superconductivity  is   in    the   clean  or   dirty  limit:
+
+\[ \begin{array}{ll}
+\ell \, \gg \, \xi, & \rm clean \; limit \\
+\ell \, \ll \, \xi, & \rm dirty \; limit 
+   \end{array} \; .
+\]
+
+\noindent In  layered superconductors,   such   as  the  superconducting   
+graphite intercalation compounds, another natural  length scale to consider
+is the lattice constant perpendicular to the  carbon (graphene) planes.  In
+the  GIC's, this lattice  constant is  termed $\rm I_c$.   The most studied
+phenomena in the field of layered superconductors are due to the dependence
+of $\xi$ on temperature and crystallographic direction.  The consequence of
+this variability  is  that in  layered  systems  there  is  an  additional,
+experimentally controllable, distinction between 3D-coupled  and 2D-coupled
+superconductors:
+
+\[ \begin{array}{ll}
+\xi \; > \; s, & \rm 3D \; coupling\\
+\xi \; < \; s, & \rm 2D \; coupling
+   \end{array}
+\]
+
+\noindent where s is the layer spacing. The consequences of   the interplay of  the  various
+length  scales    for other layered   superconductors  are   discussed   in
+Chapter~\ref{othersys}.  Before turning to  the  results of critical  field
+measurements  on   $\rm  C_4KHg$, it is  appropriate  to  review  how the
+measurements were made.
+
+
+

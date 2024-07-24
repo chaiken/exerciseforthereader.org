@@ -1,0 +1,48 @@
+From prop.record:
+Debye temperature: 269 K [Ref. 3] for C_4KHg 
+                   260 K [Ref. 3] for C_8KHg 
+                   301 K [Ref. 43] for C_8KHg
+
+(setq stItD 269.0)
+269
+(setq stIItD 301.0)
+301
+(setq TcI 0.73) ;probable Tc of sample on which stItD was measured
+0.73
+(setq TcII 1.9)
+1.9
+From prop.record:
+Total DOS for C_8KHg, 0.058 states / (eV * atom),
+[Ref. 3] (corrected for lambda_{e-p})
+(setq stIIdos 0.058)
+0.058
+
+(setq V (/ -1.0 (* stIIdos (log (/ TcII (* 1.13 stIItD))))))
+3.324 eV
+
+Assume that V is the same for stI, and use this to calculate N(0) for stI.
+(setq stIdos (/ -1.0 (* V (log (/ TcI (* 1.13 stIItD))))))
+0.04897 /(eV * atom);DOS of stage I, assuming coupling as stII.
+
+Holzwarth's calculation: 0.23 /(ev * atom)
+
+Let's calculate the value of Hc(0) predicted by 0.29 / (ev * atom), the DOS
+calculated by Iye, using their value of lambda_{e-p}.
+2.9271e-01 ;total N(E_F) in (states / eV * atom); same as in Ref. 35.
+(* 0.293 (nd 1.0))
+1.6379e+22 ;total N(E_F) in (states / eV * cm^3) assuming x=1
+(setq stIdos (/ 1.6379e+22 (* 1e7 phys-e)))
+1.022e+34 ; in states /(erg * cm^3)
+
+(setq gamma (/ (* (squared (* cgs-k pi)) (* (+ 1.0 0.38) stIdos)) 3.0))  ;from Ref.45, p.47
+884.7 ;gamma given the corrected DOS
+(setq h_therm (sqrt (* 2.0 pi gamma (* TcI TcI))))
+54.43 ;for Tc = 0.73 
+(setq h_therm (sqrt (* 2.0 pi gamma (* 1.53 1.53))))
+114.1
+
+
+
+
+
+

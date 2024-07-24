@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script src="navigate.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="GNU Emacs 23.2.1 (x86_64-redhat-linux-gnu, GTK+ Version 2.20.1) of 2010-05-13 on x86-07.phx2.fedoraproject.org"/>
+
+<link rel="stylesheet" href="slides.css" type="text/css"/>
+
+<title>LinuxCon Highlights, August 2010</title>
+
+</head>
+<body onkeydown="keyAlert(event);" onclick="whichButton(event);">
+
+    <h1 class="title">Invocation of
+    kvm for PCBSD</h1>
+
+<pre>
+alison@tomales ;-) sudo /bin/rm /tmp/pcbsd.img; qemu-img create \ 
+    -f qcow2 /tmp/pcbsd.img 10G
+Formatting '/tmp/pcbsd.img', fmt=qcow2 size=10737418240 \ 
+     encryption=off cluster_size=0 
+
+alison@tomales ;-) sudo qemu-kvm -cdrom /opt/PCBSD8.1-x64-DVD.iso -m \
+2048 -vga std -hda /tmp/pcbsd.img -writeconfig pcbsd.config
+
+alison@tomales ;-) cat pcbsd.config
+# qemu config file
+[drive]
+  index = "2"
+  media = "cdrom"
+  file = "/opt/PCBSD8.1-x64-DVD.iso"
+[drive]
+  index = "0"
+  media = "disk"
+  file = "/tmp/pcbsd.img"
+</pre>
+
+</body>
+
+</html>

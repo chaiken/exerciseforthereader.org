@@ -1,0 +1,69 @@
+_The Glass Cage_ by Nicholas Carr
+
+Why read this book now: "We should be careful about what we make." "The belief in technology as a benevolent, self-healing, autonomous force is seductive. It allows us to feel optimistic about the future while relieving us of responsibility for that future."
+
+0. Explicit vs tacit knowledge maps directly onto traditional imperative prgramming vs. neural nets? Older "expert systems" rely on imperative programming based on rules. It is the ineffability of tacit knowledge that makes rule-writing so difficult.
+
+Why I bicycle:
+"When it comes to assessing the value of labor and leisure, the mind's eye can't see straight." People choose driving over micromobility due to "miswanting." A lot of personal choices for convenient and "frictionless" experiences are so.
+
+"automation frees us from that which makes us feel free." "How do you measure the expense of an erosion of effort and engagement, or a waning of agency and autonomy, or a subtle deterioration of skill?" "The choices we make, or fail to make, about which tasks we hand off to computers and which we keep for ourselves are not just practical or economic choices. They're ethical choices."
+
+'It seemed inevitable, he wrote, that the new generation of autopilots would "dispose of the necessity for carrying navigators, radio operators, and flight engineers" on planes.'
+
+"The A320's fly-by-wire system severed the tactile link between pilot and plane. It inserted a digital computer between human command and machine response." Can we in general improve the comprehensibilty and usability of control systems with physical feedback, even if it's simulated? "On a typical passenger flight these days, the pilot holds the controls for a grand total of three minutes"
+
+'he put the problem in stark terms: "We're forgetting how to fly."'30
+
+Should we blank the screen of the rear truck when the front truck slams brakes?
+
+Similar to Fridman/MIT discussion: "Experiments show that when a system produces errors fairly frequently, we stay on high alert. We maintain awareness of our surroundings and carefully monitor information from a variety of sources. But when a system is more reliable, breaking down or making mistakes only occasionally, we get lazy." AKA "learned carelessness".
+
+Writing is better than reading for learning: "The generation effect requires precisely the kind of struggle that automation seeks to alleviate."
+
+"We all know about the ill effects of information overload. It turns out that information underload can be equally debilitating."
+
+'"Paying attention to the computer and to the patient requires multitasking," observes Lown, and multitasking "is the opposite of mindful presence."'
+
+"the progressive effect of automation is first to relieve the operator of manual effort and then to relieve him of the need to apply continuous mental effort." -- James Bright
+
+Explicit versus tacit knowledge again: 'Turing was curious to figure out "how far it is possible to eliminate intuition, and leave only ingenuity."'
+
+"never confront the possibility of getting lost is to live in a state of perpetual dislocation. If you never have to worry about not knowing where you are, then you never have to know where you are."
+
+'Apple acquired WiFiSlam, an indoor mapping company that had invented a way to use ambient WiFi and Bluetooth signals, rather than GPS transmissions, to pinpoint a person's location to within a few inches. Apple quickly incorporated the technology into the iBeacon feature now built into its iPhones and iPads. Scattered around stores and other spaces, iBeacon transmitters act as artificial place cells, activating whenever a person comes within range. They herald the onset of what Wired magazine calls "microlocation" tracking.'
+
+'We'd receive, as Google's Michael Jones puts it, "a continuous stream of guidance," directing us everywhere we want to go.27'
+
+This is the problem that test-driven development aims to address: "Sketching enables exploration of the problem space and the solution space to proceed together." -- Nigel Cross "architecture is about thinking. It's about slowness in some way. You need time. The bad thing about computers is that they make everything run very fast."-- Renzo Piano
+"the fierce productivity of the computer carries a price—more time at the keyboard, less time thinking." -- Witold Rybczynski
+
+git is a weapon in the battle on the side of design, in that it encourages experimentation by making throwing out bad ideas painless.
+
+"Embodied cognition."
+
+'the pilots of fly-by-wire planes "run into new, nasty surprises that none of the engineers had predicted."'
+
+"The assumption that the human being will be the weakest link in the system becomes self-fulfilling."
+
+"Many of the problems that bedevil automated systems stem from "the failure to design human-machine interaction to exhibit the basic competencies of human-human interaction." -- Sarter et al.
+
+"With each upgrade in an application's data-crunching speed and predictive acumen, the programmer shifts more decision-making responsibility from the professional to the software." True even of desktop and mobile applications: there are ever fewer settings and less opportunity for user control.
+
+Toyota's Guardian is an "adaptive automation" system? "One of the most intriguing applications of the human-centered approach is adaptive automation. In adaptive systems, the computer is programmed to pay close attention to the person operating it. The division of labor between the software and the human operator is adjusted continually, depending on what's happening at any given moment."
+
+"Research has found that tactile, or haptic, feedback is significantly more effective than visual cues alone in alerting pilots to important changes in a plane's orientation and operation,"
+
+In Boeing aircraft, "the two yokes operate as a single unit. If one pilot pulls back on his yoke, the other pilot's goes back too." What lesson for PP?
+
+"At Google and all these places," says Google executive Alan Eagle, explaining the guiding philosophy of many software and internet businesses, "we make technology as brain-dead easy to use as possible." Nice!
+
+Wait until "I feel lucky" comes to vehicle automation: '"I envision some years from now that the majority of search queries will be answered without you actually asking," says Ray Kurzweil, the inventor and futurist who in 2012 was appointed Google's director of engineering. The company will "just know this is something that you're going to want to see."'
+
+"Removing the friction from social attachments doesn't strengthen them; it weakens them." Not paying attention at all during drives could, over time, reduce peoples' attachment to places, just as walking and cycling strengthen it.
+
+"A rush to embrace autonomous cars might do more than curtail personal freedom and responsibility; it might preclude us from exploring alternative ways to reduce the probability of traffic accidents, such as strengthening driver education or promoting mass transit." Alex Roy with Human Driving Association has a point. Where is advocacy for greater safety right now?
+
+"The ocean extends an invitation to the swimmer that it withholds from the person who has never learned to swim."
+
+"The more automated everything gets, the easier it becomes to see technology as a kind of implacable, alien force that lies beyond our control and influence. Attempting to alter the path of its development seems futile. Why open source is better!

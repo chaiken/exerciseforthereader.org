@@ -1,0 +1,602 @@
+
+Composition Dependence of Giant Magnetoresistance 
+in Fe/Ag/CoxFe1-x Sandwiches
+
+A. Chaiken†*, C.J. Gutierrez†§, J.J. Krebs, and G.A. Prinz,
+Code 6345, Naval Research Laboratory, Washington, DC 20375
+
+†NRC/NRL postdoctoral associate
+
+*Now at Condensed Matter and Analytical Sciences Division, Lawrence 
+Livermore National Laboratory, Livermore, CA 94551
+
+§Now at Department of Physics, Southwest Texas State University, San Marcos, 
+TX 78666
+
+The magnitude of the giant or spin-valve magnetoresistance in 
+ferromagnet/paramagnet/ferromagnet sandwiches depends on the choice of 
+ferromagnet.    In this study, the dependence of the giant magnetoresistance on 
+the composition of the alloy layer in a series of  Fe/Ag/CoxFe1-x sandwiches has 
+been varied in order to get some insight into the fundamental origin of the effect.    
+The CoxFe1-x alloy layers can be grown in the bcc phase throughout the range 0 ≤ 
+x ≤ 1 using molecular beam epitaxy.      The anisotropic magnetoresistance of 
+these sandwiches shows a simple linear  dependence on x, the Co fraction, but 
+the giant magnetoresistance has a non-monotonic composition dependence.
+
+
+
+1. Introduction
+
+Since  the  giant magnetoresistance  (GMR) of  Fe/Cr multilayers was discovered 
+by Baibich et al. in 1989, 1    scientists around the world have made great strides 
+towards understanding the fundamental physics of this phenomenon.     There 
+have been dozens of experimental studies.     Theorists have studied the  
+magnitude of the magnetoresistance as a function of  layer thickness, 2, 3, 4  
+interface morphology, 2  temperature, 5, 6  configuration of the magnetic moments 
+in the layers, 7  and impurity scattering, 8   all with some  degree of success.      In 
+these models, the microscopic  parameters  which describe the detailed electronic 
+potential of the metallic layers  and their interfaces have often been lumped into 
+phenomenological spin-dependent  mean-free paths or  transmission coefficients.    
+This approach has been successful in describing the  layer-thickness dependence 
+and temperature dependence of the magnetoresistance, but it  does not explain 
+why some ferromagnet/paramagnet multilayers intrinsically have larger 
+magnetoresistance than others.     
+
+Recently  a pair of  theoretical attempts have been made  to relate the size of the 
+magnetoresistance to band-structure parameters. 4, 9    These efforts took very 
+different approaches, one emphasing the density of states in the ferromagnetic 
+layers, 4  and another emphasizing band offsets at the ferromagnet/paramagnet 
+interface. 9      The question of which microscopic properties of the ferromagnet 
+and paramagnet  affect the size of the GMR in a given multilayer system remains 
+an open one although it is of great importance both for fundamental reasons and 
+for applications.      The intellectual problem can be succintly put forth by noting 
+that the magnetoresistance is large in the Fe/Cr 1  and Co/Cu 10  systems, but 
+small in the Co/Cr 11  and Fe/Cu 12  systems.      Another suggestive series of 
+experiments has been performed by B. Dieny et al.  on  NiFe/Cu/ferromagnet 
+sandwiches 13, 14  where the type of ferromagnet in the second magnetic layer 
+was varied.    In these studies,  a sandwich with a second NiFe layer  has a 
+smaller GMR than one with a Co layer, while the GMR of a  sandwich  with a Ni 
+layer  is smaller  yet.    Most recently, Saito and coworkers have found that the 
+GMR is larger in Co9Fe/Cu multilayers than in Co/Cu multilayers or Co3Fe /Cu 
+multilayers. 15 
+
+Practical issues related to crystal structure  and growth morphology tend to 
+complicate the interpretation of the multilayer and sandwich data.      After all, 
+Cu and Co are typically fcc in the sputtered superlattice structures, whereas Fe 
+and Cr are typically bcc.      Therefore one might suppose that the GMR is larger 
+in the all-bcc and all-fcc superlattices,  and smaller in those with mixed crystal 
+structures.     However, this hypothesis does nothing to explain the extensive 
+data of Dieny and coworkers 13, 14  since their Cu, NiFe, Co and Ni are all 
+presumably fcc.      In the CoxFe1-x/Cu multilayer work of Saito et al., 15  both fcc 
+and hcp Co were observed in all  3 types of samples.
+
+The question of  the maximum size of the magnetoresistance in a given 
+ferromagnet/paramagnet system deserves more attention from both theorists 
+and experimentalists.      ("Maximum size" here means the room temperature 
+magnitude of the magnetoresistance at the paramagnet and ferromagnet 
+thicknesses which give the largest effect.)   Ideally one would like to eliminate 
+any issues about crystal structure and growth morphology in order to define 
+clearly the relationship between band-structure effects and  the GMR.      One 
+way of minimizing such concerns is to study the CoxFe1-x alloy system, which 
+can be  grown  epitaxially in the  bcc crystal structure throughout the range of 
+composition. 16      In order to explore a possible link between electronic structure 
+and GMR,  a series of Fe/Ag/CoxFe1-x/Ag sandwiches have been grown with 
+different CoxFe1-x stoichiometries, and their transport properties have been 
+studied.
+
+
+2. Sandwich Growth and Experimental Details
+
+The sandwiches used in this study were grown by molecular beam epitaxy using  
+elemental sources.    First, a ZnSe buffer layer a few thousand angstroms thick 
+was deposited on a semi-insulating (100) GaAs substrate.    Then the  sandwich 
+layers of Fe, Ag,  and CoFe alloy were sequentially deposited on the ZnSe layer, 
+in each case maintaining good epitaxial registry with the substrate.   Finally  a 
+thin Ag or Al cap layer was deposited on each  sample to prevent oxidation.      
+The first Fe layer was always grown with a slightly elevated substrate 
+temperature of 175 °C in order to optimize crystalline perfection, 17  but 
+subsequent layers were  grown with the substrate cooled to -10 to -20 °C to 
+minimize interdiffusion.      Auger electron spectroscopy at each stage of growth 
+showed that C and O contamination was less than 1%.
+
+Reflection high-energy electron diffraction (RHEED) camera photographs of the 
+surface at various stages of the growth are shown in Fig. 1.       The photographs 
+show that the first Fe layer goes down in the (001) orientation, as has been 
+demonstrated previously. 17      The Ag and CoxFe1-x layers also go down in the  
+(001) orientation, with the alloy layer in the bcc phase for all compositions 
+despite the fact that at room temperature bulk CoxFe1-x is mixed-phase for Co 
+fractions greater than x = 0.75. 18       The RHEED pattern for the pure Co film   
+suggest that the surface  is rough, and that there are crystalline defects.    
+However, the  symmetry of this film is  clearly cubic, as demonstrated both by 
+the RHEED pattern and by angle-dependent ferromagnetic resonance 
+measurements  which are described further below.  A total of five 
+Fe/Ag/CoxFe1-x sandwiches were grown with alloy compositions ranging from 
+pure Fe (x = 0) to pure Co (x = 1).
+
+Flux rates during growth were monitored using a calibrated UTI 100C 
+quadropole mass analyzer.   The total thickness of the deposited metal was 
+measured by x-ray fluorescence  (XRF) spectroscopy.      The nominal thicknesses 
+of the corresponding layers were kept constant from sample to sample at (Fe 
+80Å/Ag 60Å/CoxFe1-x 80Å/Ag 20Å).    Actual layer thicknesses and alloy 
+compositions were calculated by combining  XRF and integrated Auger 
+intensities measurements.
+
+Using well-established analysis methods, 19  the angular dependence of the 35 
+GHz ferromagnetic resonance field was used to determine the 
+magnetocrystalline anisotropy of each magnetic layer in each sample.    
+Measured layer thicknesses and anisotropies  are given in Table I.    Results for 
+the plain Fe films were similar to those previously observed for Fe on  ZnSe. 19    
+Magnetic hysteresis loops were taken using a vibrating-sample magnetometer 
+(VSM).   Magnetoresistance measurements were made using Ag paint or pressed 
+In contacts placed at the two ends of  2mm  by 1cm  strips cleaved off  the 
+original 1 cm  by 1 cm wafer.     Several samples were measured with both types 
+of contacts, and no difference was observed.   The measurement current  was 
+always along the GaAs [110] direction and the applied field always in-plane.        
+All measurements were performed at room temperature.     The sandwiches  had 
+resistivities in the range 15 ± 5 mW-cm with no systematic trend versus alloy 
+composition.
+
+3. Results
+
+ At the chosen Ag spacer thickness of about 60Å, ferromagnetic resonance shows 
+no measurable antiferromagnetic interlayer coupling  between the Fe layer and 
+the alloy layer, consistent with previous results on Ag-spacer systems. 20, 21       
+The qualitative features of the magnetization curves are expected to evolve in a 
+complex way as a function of  composition since the four-fold magnetocrystalline 
+anisotropy  (K1) of  bulk CoxFe1-x alloys changes from positive at x = 0 (pure Fe) 
+to zero near x = 0.4 to negative near the bulk limit of the bcc phase at x = 0.7. 22       
+The values of K1 for the Fe/Ag/CoxFe1-x  sandwiches are gathered in Table I.      
+They are in generally good agreement with bulk values.    The anisotropy of 
+CoxFe-1-x films as a function of  composition is discussed in more detail in Ref. 16.
+
+ A VSM loop of the sample with a pure Co layer is shown in Fig. 2a).     Previous 
+experience with films of bcc Co   has  shown 23  it to have a large negative four-
+fold anisotropy K1 =  -6.6x105 erg/cm3, so one anticipates that a Co film will 
+have a <110> easy axis in the (001) plane.     In fact, the Co film in the Fe/Ag/Co 
+sandwich has a <100> easy axis and a large positive K1.     The reason for this 
+discrepancy is not clear.     The Co film does have a bigger coercivity than the Fe, 
+as would be expected given its much larger anisotropy. 22 
+
+Due to the difference in their coercivities, the moments of the Fe and Co layers 
+are antiparallel for the field range  (Hc,Fe = 0.015 kOe ) < |H| < (Hc,Co = 0.470 
+kOe).     As has been shown previously, 13, 24, 25  the antiparallel orientation of the 
+magnetic moments in different layers is sufficient to cause the  occurrence of the 
+giant or spin-valve magnetoresistance.      Figure 2b) shows the 
+magnetoresistance data for the same Fe/Ag/Co sandwich whose magnetization 
+curve is shown  in Fig 2a).      As expected, the resistance is maximum in the 
+applied field region where |H| is less than the Co coercive field but greater than 
+the Fe coercive field.     The origin of the small shoulders in the MR near H ≈ 
+±0.38 kOe is harder to explain.    These features may indicate that the Co film is 
+reversing in two sequential 90˚ steps since the shoulders are near the halfway 
+point.   However, the easy-axis magnetization reversal of a thin film with cubic 
+anisotropy usually occurs by the motion of 180° walls, not 90° domain walls. 22      
+
+The Fe/Ag/Co71Fe29 sandwich whose magnetization data is displayed in Figure 
+3a) is quite different.   Since the Co-rich alloy layer has a negative K1, its easy 
+direction in the (001) plane is a <110> axis.     Therefore the <100> magnetization 
+curve in Fig. 3a) is an easy loop for the Fe film, but a hard loop for the alloy film.    
+Knowing this we can easily see that the low-field square reversal with Hc ≈ 0.04 
+kOe is attributable to Fe, while the higher-field linear magnetization 
+characteristic corresponds to the CoxFe1-x layer.   Because there is no significant 
+interlayer magnetic coupling, the moments in each of the layers should each lie 
+along their own easy axes at zero applied field, meaning that at H=0 there is a 45° 
+angle between the Fe and CoxFe1-x moments.    
+
+The low-field magnetization behavior  of the same sample is shown in more 
+detail in Fig. 3b).       As was mentioned previously, easy axis magnetization 
+reversal in cubic-anisotropy materials generally proceeds by the motion of 180° 
+domain walls. 22   The Fe magnetization curve therefore has a feature only at Hc, 
+the coercive field.   Hard axis reversal, on the other hand, should have the 
+following steps as the applied field is decreased from a high value: first, 
+reversible domain rotation of 45° from the hard axis to the easy axis; next, after 
+the applied field reverses, motion of 90° domain walls or irreversible 90° rotation; 
+lastly, reversible rotation  45° from the reversed easy axis to the hard direction 
+along the applied field.    All these features are observed in the hard-axis reversal 
+of the alloy film in Fig. 3b).     The moment of the alloy film jumps 90° from one 
+(110) axis to the other at a larger absolute field value than that at which the Fe 
+film's moment reverses  by 180° from one (100) direction to the other.    Since the 
+magnetometer measures only the component of the moment along the applied 
+field, the 90° jump is positively identifiable as the smaller of the two low-field 
+discontinuities of the moment in Fig. 3b).    Fig. 3c) shows that, as expected, there 
+is a magnetization peak in the field region where  there is a maximum angle of 
+135° between the alloy-film moment and the Fe film moment.    
+
+As Figure 4 shows,  data for the Fe/Ag/Fe sandwich (x = 0) is  surprising.      
+There is only one ferromagnetic resonance line  for this sandwich, in contrast to 
+the two resonances observed when x≠ 0, so  that the magnetocrystalline 
+anisotropies of the two films appear to be identical.     Previous work has shown 
+that K1 in Fe films on ZnSe and Ag is not very sensitive to disorder, but that the 
+coercive field Hc may be  affected. 19   Broader RHEED streaks from the top Fe  
+film  indicate it has more defects than  the lower Fe film, so  a different coercivity 
+for this film seems reasonable.    From the general considerations described 
+above, one can then attribute the lower-field peak in the magnetoresistance in 
+Fig. 4b) to the film's moment irreversibly rotating 90° before the other film's.        
+We therefore expect the angular separation of the Fe moments at the MR peak to 
+be 90°.
+
+Clearly the higher-field magnetoresistance "2nd peak" in Fig. 4b) cannot be so 
+easily explained.        In order to understand the origin of the second peak, which 
+does not correspond to any discernible feature in Fig. 4a), it is necessary to recall 
+that the vibrating sample magnetometer only measures the component of the 
+magnetization along the applied field.    Thus the reversal of a component of the 
+magnetization which is orthogonal to the applied field will not show up in a 
+VSM loop.     Florczak and Dahlberg have suggested that in  thin (001) Fe films a 
+small misalignment of the applied field from the hard <110> axis causes the 
+magnetization reversal  to occur as two 90° irreversible rotations. 26    The reason 
+is that the moment then has two hard-axis energy barriers to surmount in order 
+to complete a reversal.   The second of the two  transitions is unobservable in a 
+VSM experiment because the  component of magnetization perpendicular to the 
+applied field reverses. 26        In keeping with this hypothesis, the higher-field 
+magnetoresistance peak of Fig. 4b) may well  coincide with a second 90° 
+irreversible rotation by one of the Fe moments.    The field at which the second 
+MR jump occurs is in good agreement with the field at which Florczak and 
+Dahlberg observed the reversal of the perpendicular component of the Fe 
+magnetization using the Kerr effect. 26        In this picture, the higher-field MR 
+peak is smaller than the lower-field peak because both moments have already 
+rotated further toward the hard axis at the field where the second jump occurs.   
+This leads to an angular separation of the moments less than 90° at the second 
+peak, and thus a smaller resistance change.
+
+
+4. Discussion
+	The field dependence of the magnetoresistance has been obtained from the 
+raw  data using the definition
+
+                    . 	(1)
+
+As has been detailed before, 13, 25  the angular dependence of the giant 
+magnetoresistance is described by
+
+                    	(2)
+
+where  (q1 - q2) is the relative orientation of the moments of the two magnetic 
+films and  G   is the coefficient of giant magnetoresistance.    The term that 
+describes the angular dependence of the anisotropic magnetoresistance (AMR) 
+has been omitted from equation (2).     The AMR is the magnetoresistance that is 
+characteristic of the individual films. 27         The magnitude of the AMR can be 
+separately determined at high field where the GMR term doesn't contribute 
+because (q1 - q2)   = 0. 25      The maximum MR for each sample minus the AMR 
+contribution is listed in Table II as   MRpeak.     The AMR is also listed in Table II 
+for each sandwich.
+
+ 	Since the moments of the two magnetic films are aligned at the magnetic 
+saturation field Hs,  MR(H=Hs) = MR(q1 = q2) = 0, and equations (1) and (2) are 
+consistent.    If the films  had  antiferromagnetic interlayer coupling, then the 
+moments would be antiparallel at H=0, and MR(H=0) = MR(180°) = G.        
+Because these Fe/Ag/CoxFe1-x sandwiches display no antiferromagnetic 
+interlayer coupling,  (q1 - q2) at H=0 is determined by magnetocrystalline 
+anisotropy, as described above, and is typically  0° or 45°.     The peak in the 
+magnetoresistance as a function of field therefore occurs at some H where the 
+angular separation of the moments reaches a maximum, here called (q1 - q2)peak.    
+As equation (2) shows, the magnetoresistance at the peak is 
+
+			MRpeak =                .   (3)
+
+Equation (3) implies that in order to obtain the coefficient of giant 
+magnetoresistance G, we must divide the experimentally obtained MRpeak 
+through by              .   As was discussed above, for four of the five 
+samples  the value of (q1 - q2)peak can be directly deduced from the 
+magnetization curve.   In this case,  the intrinsic, magnetic-configuration-
+independent GMR coefficient  G  can be obtained directly from  Eqn. 3.    The  
+deduced  magnitudes of G  and (q1 - q2)peak  are collected in Table II.   The G  
+coefficient for the x = 0.3 sample is not listed because  (q1 - q2)peak  could not be 
+independently determined from its magnetization curve.
+
+	Because the hysteresis loops  of these sandwiches are dominated by 
+magnetocrystalline anisotropy,  the details of the magnetization reversal process 
+change as one changes the applied field orientation.      Consequently the MR 
+loops and  (q1 - q2)peak also vary as the applied field direction is changed.      A 
+different value of MRpeak is therefore obtained for each new applied field 
+orientation.        Table II contains the MRpeak and (q1 - q2)peak values which 
+correspond to the  hysteresis loops of Figs. 2 through 4.    The G  coefficient 
+should be independent of the applied field orientation if the analysis based on 
+Eqn. 1 is consistent.   In fact, for each of the 4 samples whose G is given in Table 
+1, the magnitude of the G  determined from analysis of both the hard and easy 
+axis loops is the same to within about 10%. 28   The agreement of these G  values 
+can be slightly  improved by taking into account the effect of a  small unixial 
+anisotropy which is often observed in samples grown on GaAs or ZnSe. 19       The 
+uniaxial anisotropy causes (q1 - q2)peak to be different in loops taken along 
+orthogonal <110> directions. 28     This extra analysis adds great complexity 
+without changing the essential conclusions, so it is omitted here.
+
+	Because the GMR depends on the relative orientation of the magnetic 
+moments, it  is intrinsically a multilayer property.    In contrast, the well-known 
+AMR is dependent on the absolute orientation of each film's moment with 
+respect to the measurement current direction, and is therefore intrinsically a 
+single-film property. 27            Since the different AMR contributions of the Fe and 
+alloy layers cannot be  separated experimentally,  the values collected in Table II 
+represent an average over   both layers.    MRpeak and the averaged AMR are 
+displayed versus Co fraction in Fig. 5.    Like G  , the AMR can also be 
+determined several different ways, which should of course all produce the same 
+number.      Values of the AMR determined from the high-field measurements 
+and from the  orientation dependence of the low-field hysteresis loops are 
+consistent to within a few percent. 28 
+
+	Freitas, Berger, and Silvain have previously measured the composition 
+dependence of the AMR in both bulk and thin-film CoFe alloys. 29   In 920 Å films 
+at room temperature, they  found a gradual increase in the AMR from about 0.5% 
+for Fe to about 1.5% for Co.      In Fig. 5 the AMR is larger for the Fe-rich 
+sandwiches than the Co-rich sandwiches, contrary to the previous findings.         
+The small absolute size of the AMR for these sandwiches is attributable to both  
+surface scattering and shunting by the Ag layers.    Of course, neither surface 
+scattering nor shunting can explain why the slope of the AMR vs. Co 
+concentration has a sign opposite to that found previously.        To explain this 
+result,  one may have to consider the effects of composition-dependent epitaxial 
+strain or changes in local atomic order,  both of which  could potentially have a 
+large effect on the AMR. 27   More detailed studies of the magnetization and 
+structure of the CoFe alloy system may clarify these issues. 16 
+
+	The MRpeak vs. composition data in Fig. 5 are not very meaningful 
+because  the sinusoidal factor                from Eqn. 3  has not been 
+divided out, and the values of (q1 - q2)peak are different for each sample and each 
+field orientation.       Clearly the composition dependence of the angle-
+independent giant magnetoresistance coefficient G  is of greater interest.       G  is 
+perhaps best understood as the GMR  that each sample would have  at the peak of 
+its hysteresis curve if  the magnetic moments of its ferromagnetic layers became 
+exactly antiparallel  ((q1 - q2)peak = 180°).     Only the Co/Ag/Fe sandwich truly 
+had antiparallel moments at its MR peak.        Thus the giant magnetoresistance 
+coefficient G. is the intrinsic composition-dependent property which should be 
+amenable to theoretical calculation.     G   and Dr are plotted versus alloy 
+composition in Figure 6a).     Unfortunately since (q1 - q2)peak  could not be 
+determined for the x=0.3 sample, data for this sandwich are not plotted.     Note 
+that in uncoupled magnetic multilayers, the problems with unknown angular 
+orientation of the moments in the individual layers are  greatly compounded, 
+and only the uncorrected values MRpeak can be quoted with confidence.    Even 
+though the GMR of trilayer samples is small in size, trilayers offer the advantage 
+that the values of (q1 - q2)peak  can usually be reliably determined from 
+magnetization curves.
+
+	The magnetic moment data in Fig. 6b) comes from the work of Bardos. 30     
+A correlation between the composition dependence of the magnetic moment and 
+that of the GMR would be an  indication that the degree of   conduction electron 
+spin polarization was an important factor in determining the size of the GMR in a 
+given ferromagnet.       A correlation of this type is expected in most simple 
+theories of the GMR because the inequality of up- and down-spin resistivities is 
+believed to be essential to the phenomenon. 1, 31     Clearly the spin-averaged 
+resistivity and spin-flip scattering lengths  of both the ferromagnetic and 
+paramagnetic layers will also play a role in determining the size of the GMR.  A 
+comparison of Figs. 6a) and 6b) shows  similar trends in the GMR and magnetic 
+moment data, but more experiments are needed before the issue can be settled 
+definitively.     The resolution of this question remains an important objective in 
+understanding the origin of the GMR.
+
+	The field-induced change in resistivity, Dr, which is the numerator of 
+equation (1), itself contains all the information about the origin of the GMR, since 
+the denominator is just the zero-field resistivity.    Therefore the dependence of 
+Dr on alloy composition may be more directly comparable to fundamental 
+theories than the GMR itself.      The values of the field-induced change in 
+resistivity in Table I were obtained by multiplying the experimental zero-field 
+resistivities by G.       Examination of Table I shows that the variation of the 
+relative size of Dr with composition is similar to that of the magnetoresistance 
+itself.        Extensive  studies of Dr as a function of temperature and alloy-layer 
+thickness could provide the information necessary to develop a quantitative 
+theory of the magnitude of the GMR for different ferromagnet/paramagnet 
+systems.
+
+
+5. Conclusions
+	
+	Body-centered-cubic CoxFe1-x alloy films have now been grown 
+throughout the range 0 ≤ x ≤ 1  on Ag films.    This achievement has made 
+possible the growth of five Fe/Ag/CoxFe1-x sandwiches which are similar except 
+for the Co content of the alloy layer.     The anisotropic magnetoresistance of 
+these samples varies linearly with Co fraction, but the giant magnetoresistance 
+shows a non-monotonic behavior.    The M-H loops of these samples must be 
+understood in detail in order to intercompare the giant magnetoresistance data 
+because of the need to correct for different magnetic configurations at the MR 
+peak in different samples.      Simple sandwich structures are well-suited to  
+fundamental study of GMR in systems without interlayer coupling because  the 
+determination of the magnetic configuration of a uncoupled multilayer at the MR 
+peak  may be quite difficult.   In further studies with variable alloy composition, 
+it would be desirable to use magneto-optic characterization to clarify the 
+magnetization curves of samples with complex behavior. 26     A magneto-optic 
+study of the samples discussed here is already underway.
+
+	Why the giant magnetoresistance is larger for some 
+ferromagnet/paramagnet combinations than others remains is as yet an 
+unanswered question.     As theorists begin to study this issue using band 
+structure diagrams and density-of-states curves,  detailed information on the 
+magnetoresistance of multilayers with alloy magnetic layers will become 
+increasingly useful.
+
+Acknowledgements
+The authors would like to thank P. Lubitz for helpful discussions and D. King for 
+technical assistance.  At NRL  this work was supported by DARPA and ONR.    
+Part of this work was performed under the  auspices of the U.S. Department of 
+Energy by the Lawrence Livermore National Laboratory under contract No. W-
+7405-ENG-48.
+
+
+
+References
+
+ 1. M. N. Baibich, J. M. Broto, A. Fert, F. Nguyen Van Dau, F. Petroff, P. Etienne, 
+G. Creuzet, A. Friederich, and J. Chazelas, Phys. Rev. Lett. 61, (1988) 2472.
+
+2. P. M. Levy, S. Zhang, and A. Fert, Phys. Rev. Lett. 65, (1990) 1643.
+
+3. R. E. Camley and J. Barnas, Phys. Rev. Lett. 63, (1989) 664.
+
+4. D. M. Edwards, J. Mathon, and R. B. Muniz, IEEE Trans. Magn. 27, (1991) 3548.
+
+5. S. Zhang and P. M. Levy, Phys. Rev. B43, (1991) 11048.
+
+6. F. Petroff, A. Barthélémy, A. Hamzic, A. Fert, P. Etienne, S. Lequien, and G. 
+Crezuet, J. Magn. Magn. Mat. 93, (1991) 95.
+
+7. S. Zhang and P. M. Levy, Mat. Res. Soc. Symp. Proc., Spring 1991. 
+
+8. B. L. Johnson and R. E. Camley, Phys. Rev. B44, (1991) 9997.
+
+9. J. Inoue, A. Oguri, and S. Maekawa, J. Phys. Soc. Jpn. 60, (1991) 259.
+
+10. D. Mosca, F. Petroff, A. Fert, P. A. Schroeder, W. P. Pratt Jr., and R. Laloee, J. 
+Magn. Magn. Mat. 94, (1991) L1.
+
+11. M. B. Stearns, Y. Cheng, and C. H. Lee, J. Appl. Phys. 67, (1990) 5925.
+
+12. F. Petroff, A. Barthélémy, D. H. Mosca, D. K. Lottis, A. Fert, P. A. Schoeder, 
+W. P. P. Jr., R. Loloee, and S. Lequien, Phys. Rev. B44, (1991) 5355.
+
+13. B. Dieny, V. S. Speriosu, S. S. P. Parkin, B. A. Gurney, D. R. Wilhoit, and D. 
+Mauri, Phys. Rev. B43, (1991) 1297.
+
+14. B. Dieny, P. Humbert, V. S. Speriosu, S. Metin, B. A. Gurney, P. Baumgart, 
+and H. Lefakis, Phys. Rev. B45, (1992) 806.
+
+15. Y. Saito, S. Hashimoto, and K. Inomata, Appl. Phys. Lett. 60, (1992) 2436.
+
+16. C. J. Gutierrez, J. J. Krebs, and G. A. Prinz, Appl. Phys. Lett. , (1992) 16 Nov. 
+issue.
+
+17. G. A. Prinz, B. T. Jonker, J. J. Krebs, J. M. Ferrari, and F. Kovanic, Appl. Phys. 
+Lett. 48, (1986) 1756.
+
+18. T. Nishizawa and K. Ishida, Bulletin of Alloy Phase Diagrams 5, (1984) 250.
+
+19. J. J. Krebs, B. T. Jonker, and G. A. Prinz, J. Appl. Phys. 61, (1987) 3744.
+
+20. W. P. Pratt Jr., S.-F. Lee, J. M. Slaughter, R. Loloee, P. A. Schroeder, and J. 
+Bass, Phys. Rev. Lett. 66, (1991) 3060.
+
+21. Z. Celinski and B. Heinrich, J. Magn. Magn. Mat. 99, (1991) L25.
+
+22. S. Chikazumi and S. Charap, Physics of Magnetism   (Krieger Publishing, 
+Melbourne, FL, 1978).
+
+23. G. A. Prinz, C. Vittoria, J. J. Krebs, and K. B. Hathaway, J. Appl. Phys.  57, 
+(1985) 3672.
+
+24. C. Dupas, J. P. Renard, J. Seiden, E. Vélu, and D. Renard, J. Appl. Phys. 63, 
+(1988) 4300.
+
+25. A. Chaiken, G. A. Prinz, and J. J. Krebs, J. Appl. Phys. 67, (1990) 4892.
+
+26. J. M. Florczak and E. D. Dahlberg, Phys. Rev. B44, (1991) 9338.
+
+27. T. R. McGuire and R. I. Potter, IEEE Trans. Magn. 11, (1975) 1018.
+
+28. A. Chaiken and J. J. Krebs, unpublished.
+
+29. P. P. Freitas, L. Berger, and J. F. Silvain, J. Appl. Phys. 61, (1987) 4385.
+
+30. D. I. Bardos, J. Appl. Phys. 40, (1969) 1371.
+
+31. J. M. Daughton, P. A. Bade, M. L. Jenson, and M. M. M. Rahmati, IEEE Trans. 
+Magn. 28, (1992) 2488.
+ 
+
+
+Table I.  Basic  properties of  the Fe/Ag/CoxFe1-x alloy sandwiches.     The layer 
+thicknesses were determined using x-ray fluorescence and Auger intensity 
+measurements.      The values of  K1, the four-fold magnetocrystalline anisotropy 
+for the alloy layer, were determined using  ferromagnetic resonance 
+measurements.   For bulk Fe, the value of K1 is 4.2 x 105 erg/cm3.   Similar values 
+are seen in Fe thin films.  For the Fe/Ag/Fe film, the quoted Fe layer thickness is 
+half the total measured Fe thickness.
+
+
+Alloy
+composition
+(% Co)	Fe layer
+thickness
+(Å)	Total Ag
+thickness 
+(Å)	CoxFe1-x layer
+thickness
+(Å)	CoxFe1-x K1 
+(105 erg/cm3)
+0	127	83	0	3.8
+30	81	58	84	1.4
+47	88	60	80	-4.2
+71	76	98	84	-4.1
+100	81	84	111	14.4
+
+
+
+
+Table II.  Transport properties of Fe/Ag/CoxFe1-x  alloy sandwiches.       Double 
+entries are measurements on two different pieces of the same sandwich.    The 
+differences between these nominally identical sets of numbers therefore give an 
+idea of the reproducibility of the magnetoresistance measurements and the 
+homogeneity of the samples.    r is the zero-field room-temperature resistivity.  
+The MRpeak and (q1 - q2)peak  are data taken for the orientations shown in  
+Figures 2-4 and discussed in the text.       The giant magnetoresistance coefficient 
+G   is nominally orientation-independent.        The Dr numbers are obtained by 
+multiplying the resistivity by G.     A ? means that the value could not be 
+determined.
+
+Alloy
+layer
+(% Co)	AMR 
+(%)	MRpeak
+(%)	(q1 - q2)peak	G
+(%)	Resistivity
+(mW-cm)	Dr
+(mW-cm)
+0	0.200	0.391	90°	0.782	14.6	0.11
+0	0.194	0.382	90°	0.764	13.5	0.11
+30	0.158	0.726	?	?	15.0	?
+47	0.114	0.913	135°	1.291	17.5	0.23
+47	0.111	0.809	135°	1.144	17.5	0.20
+71	0.107	0.561	135°	0.793	12.5	0.10
+71	0.102	0.623	135°	0.881	12.3	0.11
+100	0.071	0.609	180°	0.609	11.2	0.068
+
+
+Figure Captions
+
+Figure 1.	RHEED pictures of Fe/Ag/CoxFe1-x/Ag sandwiches at  various 
+stages of growth.   a)  <110>  and <100> azimuthal RHEED views of bcc Fe(001) 
+grown on ZnSe.  b) <100> and <110> azimuthal RHEED views of a 
+representative fcc Ag(001) spacer layer grown on bcc Fe(001).  c) <110> and 
+<100> azimuthal RHEED views of  the bcc Co47Fe53(001) grown on Ag (001).   
+RHEED patterns from  x = 0.71  and x = 0.30  CoxFe1-x alloy films grown on 
+Ag(001)  are similar.        d) <110> and <100> azimuthal RHEED view of pure Co 
+grown on Ag(001).  While the complicated RHEED pattern does not exactly 
+correspond to  that of bcc Fe, the principal diffraction features are coincident.    
+Ferromagnetic resonance  and magnetization measurements on the Co film show 
+that it has a cubic anisotropy.
+
+Figure 2.   a) H||(100) magnetization curve for a Fe81Å/Ag84Å/Co111Å 
+sandwich.     The low-field reversal is due to the Fe film, and the high-field 
+reversal is due to Co.  Ferromagnetic resonance shows no interlayer coupling.  
+b) Magnetoresistance loop for the same sample in the same orientation.    The 
+resistance is enhanced in the field region  Hc, Fe < |H| < Hc, Co where the 
+moments of the two ferromagnetic layers are antiparallel.   The solid line 
+indicates the sweep from positive to negative fields, whereas the dashed line 
+indicates the sweep from negative to positive fields.
+
+Figure 3.   a) H||(100) magnetization curve for a 
+Fe76Å/Ag65Å/(Fe29Co71)84Å/Ag33Å sandwich.    This orientation is the easy 
+axis for the Fe film, which reverses in  the square portion of the loop, but is the 
+hard axis for the alloy film, which contributes the linear magnetization tail at 
+higher fields.  b) Detail  showing low-field behavior.      Circles indicate  the field 
+region where the moments are 135° apart, as sketched in the diagrams.    The 
+nearly horizontal parts of the loop correspond to the two moments being 
+oriented 45° apart for both directions of sweep (marked as in Fig. 2b).)   c) 
+H||(100) magnetoresistance curve for the same sandwich.   The resistance is 
+maximum in the field range where the angle between the Fe and alloy moments 
+is 135° (as illustrated in Fig. 3b).     Dashed and solid lines are as in part b).
+
+Figure 4.   a) H||(110) (hard axis) loop for a Fe131Å/Ag55Å/Fe124Å/Ag28Å 
+sandwich.     Both Fe films have a (100) easy axis.  b) H^I||(110) 
+magnetoresistance of the same sandwich.      Note the second peak in the 
+magnetoresistance, which does not correlate with any discontinuity in the 
+magnetization curve.   This second peak is believed to correspond to the reversal 
+of a component of the magnetization which is orthogonal to the applied field, 
+and thus not directly observable by the magnetometer.   Dashed and solid lines 
+are as in Fig. 2.
+
+Figure 5.    MRpeak and anisotropic magnetoresistance (AMR) vs. alloy 
+composition.   The   AMR is approximately linear with alloy composition.    The 
+dashed curve through the MR data is a guide to the eye only.
+
+Figure 6.    a) Giant magnetoresistance coefficientG   and field-induced change in 
+resistance Dr and b) magnetic moment data vs.  alloy composition.   The 
+magnetic moment data is from Ref. 30.    G  is the angle-independent, intrinsic 
+measure of magnetoresistance magnitude in a 
+ferromagnet/paramagnet/ferromagnet sandwich.      The dashed lines in both 
+these plots are guides to the eye, not fits.
+
+

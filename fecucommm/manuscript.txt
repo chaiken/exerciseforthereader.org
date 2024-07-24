@@ -1,0 +1,283 @@
+
+Spin-valve Magnetoresistance of Uncoupled Fe-Cu-Co 
+Sandwiches
+
+A. Chaiken*, P. Lubitz, J.J. Krebs, G.A. Prinz,  and M.Z. Harford, 
+Naval Research Laboratory, Washington, DC 20375
+
+
+The coercive field of thin Co   films is strongly dependent on 
+substrate temperature and film thickness, but the magnetic 
+properties of  Fe films are only weakly affected by growth 
+conditions.  Fe-Cu-Co sandwiches deposited on glass and silicon 
+substrates via electron-beam evaporation exhibit plateaus in 
+their magnetization curves when the coercive field of the Co is 
+made larger than that of the Fe.      These plateaus correspond 
+to an applied field region in which the Co and Fe moments are 
+antialigned and the resistance is enhanced.   The isotropic  or 
+spin-valve part of the magnetoresistance is as large as 3.3% in 
+some sandwiches.     The spin-valve magnetoresistance has a 
+broad peak  centered at a ferromagnetic layer thickness of 60 
+Å.
+
+*NRC-NRL postdoctoral associate
+
+PACS: 75.70.-i, 73.50.Jt, 68.55.-a
+
+
+
+
+	Two types of magnetic multilayer structures with large 
+magnetoresistance (MR) have been found.   In the first type, 
+such as Fe-Cr superlattices,1,2 antiferromagnetic interlayer 
+coupling forces the moments of the ferromagnetic layers to be 
+antiparallel in zero applied field.     The zero-moment 
+configuration is thus  the ground state  for the coupled 
+multilayers.
+
+	In the second type of ferromagnet-paramagnet-
+ferromagnet system which have large magnetoresistance, there 
+is no significant interlayer coupling.    The zero-field moment is 
+therefore nearly equal to the saturated value.  However, the 
+moments of the ferromagnetic films may be rotated into 
+antialignment by a finite applied field if the films   have 
+different coercivities.    Different coercivities have been 
+obtained in the Co-Au-Co system by growing the two Co films 
+of a sandwich in a different fashion3 or with different 
+thicknesses,4  and by exchange-biasing one of the 
+ferromagnetic layers  in the  NiFe-noble metal-transition metal 
+system.5   In these uncoupled sandwiches, the role of the 
+paramagnetic interlayer is basically that of a weak link, whose 
+presence allows the moments of the two ferromagnetic layers 
+to be decoupled, and thus separately manipulated.    The 
+paramagnetic layer in the uncoupled sandwiches is therefore 
+analogous to the tunnel barrier in a Josephson junction, which 
+permits the phase of the superconducting order parameter to 
+be different on the two sides of the junction.     The analogy 
+breaks down in detail because in the Josephson effect the 
+junction conductance is modulated by the cosine of the phase 
+difference between the two superconductors, while in the spin-
+valve effect it is the resistance of the sandwich which has a 
+cosine dependence on the relative orientation of the  moments 
+of the two ferromagnetic layers.5,6
+
+	Another way of obtaining unequal coercivities in  two  
+layers of a sandwich is simply to make them out of different 
+ferromagnets.      Previous workers employed this strategy 
+with  NiFe-Cu-Co sandwiches.7   In the present case,  Fe-Cu-Co 
+structures have been grown on glass or Si substrates using 
+electron-beam evaporation.   Each sandwich was capped with a 
+Cu protection layer about 30Å thick.  The specifics of the 
+deposition and basic characterization have been discussed 
+previously.8   Under appropriate growth conditions, as detailed 
+below, the Co films have a coercive field of about 200 Oe, while 
+the Fe films have a weakly growth-dependent coercive field of 
+about 30 Oe.  The B-H loop of a properly prepared Fe-Cu-Co 
+sandwich is shown as the tFe=40Å curve in Figure 1a).  The 
+identification of the higher coercivity part of the B-H loop with 
+the Co film is supported by a Co-layer-thickness study, which 
+showed that the moment associated with the higher-coercivity 
+part of the loop increases linearly with Co thickness.8
+
+	  As a result of the sequential switching of the two 
+ferromagnetic layers, the magnetization curves of these 
+structures display a plateau of nearly constant moment about 
+150 Oe wide.     In this plateau region, the moments of the Fe 
+and Co films are macroscopically antialigned.   The resistance of 
+the structure is  enhanced in the plateau region, as 
+demonstrated by the tFe=40Å curve in Figure 1b).    The 
+enhanced resistance associated with the antialignment of the 
+moments has been called the spin-valve effect.5
+
+	The solid curves in Figures 1a) and 1b) show the 
+corresponding data for a sample with a thinner Fe layer, 16 Å 
+thick.     Figure 1a) shows that reducing the thickness of the Fe 
+layer has little effect on the magnetic properties of the Fe, but 
+has the unexpected consequence of greatly reducing the 
+coercivity of the Co layer.   Previous studies of the  effect of 
+varying the Co layer thickness and   growth temperature have 
+shown that the coercivity of the Co layer is very sensitive to 
+both parameters.3,4,8   Nonetheless, it is surprising that the Fe 
+layer thickness should impact the Co coercivity.     Since one 
+expects that the length scale of the grains in a polycrystalline 
+film should be approximately the same as the layer thickness, 
+this result may be an indication that the coercivity of the Co 
+film may be strongly dependent on the grain size.   Another 
+possibility is that the Co growth may variously be fcc or hcp 
+depending on the deposition conditions.   X-ray diffraction and 
+electron microscopy studies are underway to investigate these  
+hypotheses.
+
+	Previous groups of investigators have observed 
+antiferromagnetic interlayer coupling in  Co-Cu and Fe-Cu 
+superlattices.9   The coupling in these superlattices has the 
+form of an exponentially decaying sinusoid versus Cu 
+thickness.  Ferromagnetic resonance (FMR) measurements of 
+the Fe-Cu-Co sandwiches have been performed to look for signs 
+of a similar interlayer coupling.   No antiferromagnetic coupling 
+is seen over a wide range of Cu thicknesses, although the  
+possibility of ferromagnetic interlayer coupling cannot be ruled 
+out.     The lack of antiferromagnetic coupling in these samples 
+is not understood, since some of the Cu layers fall in the 
+thickness range where it has been found earlier.9     For low Cu 
+thicknesses only one resonance  is observed, rather than the 
+two distinct resonances that would be expected for completely 
+decoupled Fe and Cu films.    Even  samples with plateaus in 
+their magnetization curves sometimes have only a single  FMR 
+line.   The observation of only one peak is suggestive of a small 
+degree of coupling between the Fe and Co.       Ferromagnetic 
+interlayer coupling may be responsible for the square shape of 
+the  magnetic hysteresis loops observed for sandwiches with 
+thick Fe and Co layers, but with tCu < 30Å.   On the other hand,  
+since  the Co coercivity is obviously very sensitive to the 
+growth mode, interlayer coupling cannot be definitely 
+identified as the cause.
+
+	The magnetoresistance in the Fe-Cu-Co sandwiches has 
+two components, the spin-valve part, which is unique to 
+multilayers, and the anisotropic magnetoresistance (AMR), 
+which is observed in both multilayers and single ferromagnetic 
+films.  The AMR is entirely responsible for the 
+magnetoresistance of the tFe = 16Å sample since, as Figure 1a) 
+shows, there is no applied field region where the Fe and Co 
+moments are antialigned, and thus no spin-valve effect.    
+Because the AMR is typically about a tenth the size of the spin-
+valve MR in these samples, the magnetoresistance of the 
+tFe=16Å sandwich is much smaller than that of the tFe=40Å 
+sandwich.  By measuring the angular dependence of the 
+resistance at a large constant applied field, the two components 
+of the MR can be separated  out even for samples where both 
+contribute.5,6   The spin-valve MR and AMR thus obtained are  
+shown in Figure 2 for a series of Fe-Cu-Co sandwiches with 
+varying Fe thickness.     The AMR increases linearly with 
+increasing Fe thickness, which is the straightforward 
+consequence of the increasing fraction of ferromagnetic 
+material in the sample.    
+
+	The broad peak in the spin-valve MR versus Fe thickness 
+has more physical content.   According to a semiclassical model 
+of spin-dependent transport in these systems by Barnas et al.,3 
+a maximum in the spin-valve magnetoresistance versus 
+ferromagnetic layer thickness is indicative of a "bulk" origin for 
+the spin-dependent scattering.    In this context, "bulk" means 
+that the microscopic scattering events which give rise to the 
+spin-valve effect occur primarily within the ferromagnetic 
+layers, not at the ferromagnet-paramagnet interface.      The 
+Fe-Cu-Co samples  have a maximum near 60Å in the spin-
+valve MR versus Co thickness as well as versus Fe thickness.8   
+In addition, Dieny et al. have observed similar peaks in the 
+value of the spin-valve MR versus ferromagnetic layer 
+thickness   in NiFe-noble metal-transition metal sandwiches.5   
+The occurrence of a peak in the spin-valve MR versus 
+ferromagnetic layer thickness  thus appears to be a general 
+result in uncoupled sandwiches, consistent with the model of 
+Barnas et al. 
+
+	Figure 3 is a more informative way of presenting the 
+data of Figure 2.   Here both the spin-valve Dr, the numerator 
+of the spin-valve MR, and r(H=0),  its denominator, are 
+displayed separately.     The resistivity is higher for the lowest 
+Fe film thickness (tFe = 16Å), but is essentially constant for 
+thicker Fe films within the precision of the resistivity 
+measurement and the reproducibility of the total Cu thickness 
+(97 ± 8 Å).    The numerator, Dr,  clearly is responsible for 
+most of the variation of the MR with Fe thickness.       Separate 
+comparisons of the thickness dependence of Dr and  r with the 
+semiclassical theory3    should prove more helpful than fits to 
+the ratio Dr/r in quantitatively understanding  the origin of the 
+spin-valve effect.	
+
+	In all the existing theories  of the spin–valve effect, the 
+magnitude of the magnetoresistance   is determined by the 
+relative carrier lifetimes for   spin-dependent and spin-
+independent scattering processes.   For example, it has been 
+proposed that the origin of the spin-dependent scattering is 
+interfacial roughness,2  but clearly  interfacial disorder will 
+also contribute to spin-independent scattering.  One might 
+therefore expect that both Dr and r will increase with 
+increasing interfacial disorder, and there are  x-ray diffraction 
+results that support this conjecture.10        As a preliminary 
+result,  the data of Figure 3 (and a similar plot for samples with 
+different Co thicknesses8)  do not show a correlation between 
+Dr and r for the Fe-Cu-Co sandwiches.  This lack of correlation 
+may be due to the dominance of bulk scattering over 
+interfacial scattering, as suggested by the peak in the MR 
+versus Fe thickness, or it may have a deeper origin.   A 
+detailed structural study of the Fe-Cu-Co sandwiches should 
+help determine whether  the  important scattering events are 
+due to  interdiffusion and roughness at the interfaces, or are 
+influenced more by finite grain size and impurities within the 
+ferromagnetic layers. 
+
+	We thank D. King for the layer thickness determinations.  
+This research was supported by DARPA and ONR.	
+
+
+REFERENCES
+
+1.  P. Grünberg, R. Schreiber, Y. Pang, U. Walz, M.B. Brodsky and H. 
+Sowers, J. Appl. Phys. 61, 3750 (1987).
+
+2.  M.N. Baibich, J.M. Broto, A. Fert, F. Nguyen van Dau, F. Petroff, P. 
+Etienne, G. Creuzet, A. Friederich, and J. Chazelas, Phys. Rev. Lett. 61, 
+2472 (1988).
+
+3. J. Barnas, A. Fuss, R.E. Camley, P. Grunberg, and W. Zinn, Phys. Rev. 
+B42, 8110 (1990).
+
+4.  C. Dupas, P. Beauvillain, C. Chappert, J.P. Renard, F. Trigui, P. 
+Veillet, E. Velu, and D. Renard, J. Appl. Phys. 67, 5680 (1990).
+
+5.  B. Dieny, V.S. Speriosu, S.S.P. Parkin, B.A. Gurney, D.R. Wilhoit, and 
+D. Mauri, Phys. Rev. B43, 1297 (1991); and B. Dieny, V.S. Speriosu, S. 
+Metin, S.S.P. Parkin, B.A. Gurney, P. Baumgart, and D.R. Wilhoit, J. 
+Appl. Phys., to be published (1991).
+
+6.  A. Chaiken, G.A. Prinz, and J.J. Krebs,   J. Appl. Phys. 67, 4892 
+(1990).
+
+7. T. Shinjo and H. Yamamoto, J. Phys. Soc. Jpn. 59, 3061 (1990).
+
+8. A. Chaiken, P. Lubitz, J.J. Krebs, G.A. Prinz, and M.Z. Harford, to be 
+published.
+
+9. A. Cebollada, J.L. Martinez, J.M. Gallego, J.J. de Miguel, R. Miranda, 
+S. Ferrer, F. Batallan, G. Fillion, and J.P. Rebouillat, Phys. Rev. B39, 
+9726 (1989); B. Heinrich, Z. Celinski, J.F. Cochran, W.B. Muir, J. Rudd, 
+Q.M. Zhong, A.S. Arrott, K. Myrtle, and J. Kirschner, Phys. Rev. Lett. 
+64, 673 (1990); W.R. Bennett, W. Schwarzacher, and W.F. Egelhoff, Jr., 
+Phys. Rev. Lett. 65, 3169 (1990).
+
+10. E.E. Fullerton, I.K. Schuller, F.T. Parker, M. Grimsditch, C.H. Sowers, 
+W. Robertson, S. Kumar, Ph. Belien, and Y. Bruynseraede, J. Appl. 
+Phys., to be published (1991).
+
+
+
+FIGURE CAPTIONS
+
+Figure 1.  a) Magnetization curves for two Fe(tFe)-Cu(61Å)-Co(55Å)-
+Cu(36Å) sandwiches grown at  160 ˚C.  The  curve indicated by  
+squares is for a tFe = 40Å sandwich grown on silicon, and the solid 
+line is for a tFe = 16Å sandwich on glass.   The plateau region in the 
+tFe=40Å curve corresponds to the region where the Fe and Co 
+moments are antialigned.  b) Transverse (applied field perpendicular 
+to current) MR traces for two Fe(tFe)-Cu(61Å)-Co(55Å)-Cu(36Å) 
+sandwiches both grown on  semi-insulating silicon.  The  tFe=40Å  
+sample is the  one whose magnetization curve is shown in a).    The 
+tFe=16Å sample  was deposited  at the same time as the tFe=16Å 
+sample on glass  whose data are shown in a).    The MR data for the  
+tFe=16Å sample are multiplied by a factor of 10 for clarity.    The  
+MR is defined by Dr/r = [rmax - r(H=Hs)]/r(H=0).  
+
+Figure 2.   Spin-valve MR and anisotropic MR (AMR) versus Fe 
+thickness for a series of 5 Fe(tFe)-Cu(61Å)-Co(55Å)-Cu(36Å) 
+sandwiches grown on silicon substrates at 160 ˚C.    The spin-valve 
+MR is the isotropic component of the total MR.   The dashed line is a 
+fit to the AMR data with form AMR = 0.097% + (0.002%/Å)xtFe.
+
+Figure 3.    Spin-valve Dr and r  values versus Fe thickness for the 
+samples whose Dr/r is shown in Figure 2.     The thickness variation 
+of the MR is clearly dominated by the change in Dr, the numerator of 
+the expression, although the increase in r for low Fe (or Co) 
+thicknesses also plays a role.

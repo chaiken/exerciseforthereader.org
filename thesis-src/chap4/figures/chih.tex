@@ -1,0 +1,19 @@
+\documentstyle[12pt]{report}
+\headheight 8pt
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\beginpicture
+\setcoordinatesystem units <115mm,26.0mm>
+\setplotarea x from 0 to 1, y from -1 to 1
+\axis bottom shiftedto y=0 
+ticks withvalues $\rm H_{c1}$ $\rm H_{c2}$ /  at 0.1 0.344 / /
+\axis left ticks
+length <0pt> withvalues 0 $\chi$ / at 0 0.9 / /
+\put {H} [t] at 0.8 -0.1
+\endpicture
+\end{figure}
+\end{document}

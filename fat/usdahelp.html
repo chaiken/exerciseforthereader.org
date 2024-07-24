@@ -1,0 +1,3902 @@
+<html>
+
+<head>
+
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>SR13 Documentation</title>
+    <link rel="stylesheet" href="/alison/pt_style.css" type="text/css" />
+    <link rev="made" href="mailto:alchaiken@gmail.com" />
+    <link rel="up" href="index.html" />
+    <link rel="start" href="/" />
+    <link rel="icon" href="/alison/fermi-16.png" type="image/png"/>
+</head>
+
+<body bgcolor="#FFFFFF" style="font-family: Arial, Times New Roman">
+<b>
+<p ALIGN="CENTER"><font SIZE="6" face="Arial"><a name="top">C</a>omposition of Foods<br>
+Raw, Processed, Prepared</font></p>
+</b>
+<p ALIGN="CENTER"><font size="5" face="Arial">USDA Nutrient Database for
+Standard Reference, Release 13</font></p>
+<font FACE="Times New Roman">
+<p ALIGN="CENTER"><img border="0" src="../../images/redbar.png" width="800" height="16"></p>
+</font><b>
+<p ALIGN="LEFT"><font face="Arial">Table of Contents</font></p>
+</b>
+<p ALIGN="LEFT"><font face="Arial"><a href="#Introduction">Introduction</a><a href="#Specific"><br>
+Specific Changes<br>
+</a><a href="#DataFiles">Data Files<br>
+</a><a href="#Reports">Reports</a><a href="#Content"><br>
+File Content</a><a href="#Refuse"><br>
+</a></font>&nbsp;&nbsp; <font face="Arial"><a href="#Refuse">Food Description
+File</a><br>
+&nbsp;&nbsp; <a href="#Refuse">Refuse</a><br>
+&nbsp;&nbsp; <a href="#Nutrients">Nutrients</a><br>
+&nbsp;&nbsp;
+<a href="#Weights">Weights and Measures</a><br>
+&nbsp;&nbsp;
+<a href="#Footnotes">Footnotes</a><br>
+<a href="#File Formats">Explanation of File Format</a><br>
+</font>&nbsp;&nbsp; <font face="Arial"><a href="#ASCII">ASCII and DBF<br>
+</a></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Arial"><a href="#Food Description File">Food Description File</a><br>
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#FGfile"> <font face="Arial">Food Group Description File</font></a> <font face="Arial"><br>
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#nutfile"> <font face="Arial">Nutrient Data File</font></a> <font face="Arial"><br>
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Arial"><a href="#nutrdef">Nutrient Definition File</a><br>
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Arial"><a href="#Source">Source Code File</a><br>
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Arial"><a href="#GramWt">Gram weight file</a><br>
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Arial"><a href="#msredesc">Measure Description File</a><br>
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Arial"><a href="#Ftntfile">Footnote file</a><br>
+&nbsp;&nbsp; <a href="#Abbreviated">Abbreviated</a><br>
+&nbsp;&nbsp; <a href="#Update">Update Files</a><br>
+<a href="#ref">
+References&nbsp;</a><br>
+<a href="#app-a">
+Appendix A. Abbreviations Used in Short
+Descriptions</a><br>
+<a href="#app-b">
+Appendix B. Other Abbreviations</a></font></p>
+<font FACE="Times New Roman">
+<p ALIGN="LEFT"><img border="0" src="../../images/redbar.png" width="800" height="16"></font></p>
+<p ALIGN="LEFT"><b><font face="Arial"><a name="Introduction">Introduction</a></font></b></p>
+<p ALIGN="LEFT"><font face="Arial">The USDA Nutrient Database for Standard
+Reference (SR) is the major source of food composition data in the United
+States. It provides the foundation for most food composition databases in the
+public and private sectors. As information is updated, new versions of the
+database are released. This version, Release 13 (SR13), contains data on 6,210
+food items and up to 82 food components. It replaces SR12, issued in March 1998
+and adds food composition data for a couple hundred new items.</font></p>
+<p ALIGN="LEFT"><font face="Arial">SR13 includes all the food composition data
+published in the 21 volumes of Agriculture Handbook No. 8 (U.S. Department of
+Agriculture 1976B88), and its four supplements (U.S. Department of Agriculture
+1990B93), which superseded the 1963 edition (Watt and Merrill 1963). Since 1992,
+updated data have been published electronically on the web. The electronic
+release supersedes the printed version in the event of any differences.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Data were compiled from published and
+unpublished sources. Published sources include the scientific and technical
+literature. Unpublished data are from the food industry, other government
+agencies, and research conducted under contracts initiated by the Agricultural
+Research Service (ARS). Values in the database may be based on the results of
+laboratory analyses or calculated by the use of appropriate factors or recipes,
+which is indicated by the source code in the Nutrient Data File. Every food item
+may not contain a complete nutrient profile.</font></p>
+<b>
+<p ALIGN="LEFT"><font face="Arial"><a name="Specific">Specific</a> Changes</font></p>
+<p ALIGN="LEFT"></b><font face="Arial">Several changes were made to the database
+since the last release.</font></p>
+<blockquote>
+  <ul>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">New and revised data for brand name
+      products in dairy products, salad dressings, baked products, sweets, and
+      mixed dishes.</font></li>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">Supplementary data on Australian Lamb,
+      previously released as a separate table have been incorporated into SR13</font></li>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">New and expanded data for nuts,
+      mushrooms, bison and mustard.</font></li>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">Values for Vitamin D in selected foods
+      have been added to the Database. Data are primarily on selected dairy
+      foods, breakfast cereals, meats, and seafood. These values include data
+      from the &quot;Provisional Table on the Vitamin D Content of Foods&quot; (Weihrauch
+      and Tamaki, 1991)</font></li>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">Expanded selenium values for beef,
+      lamb, veal and game</font></li>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">The snack items in food group 19,
+      Snacks and Sweets, have been moved to food group 25, Snacks.&nbsp; Food group 19
+      has been renamed Sweets.</font></li>
+  </ul>
+  <font FACE="Times New Roman">
+  </blockquote>
+</font><b>
+<p ALIGN="LEFT"><font face="Arial"><a name="DataFiles">Data</a> Files</font></p>
+<p ALIGN="LEFT"></b><font face="Arial">The CD contains the data files for SR13,
+which are presented in two file formats: ASCII, and DBF. An abbreviated file,
+with fewer nutrients is also provided in these two file formats. A description
+of each field in these files and the relationships between each is provided <a href="#File Formats">
+below</a>.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial"><a name="Reports">Reports</a></font></b></p>
+<p ALIGN="LEFT"><font face="Arial">Reports, as page images, of all items in
+SR13, separated according to food groups, are also available. The page reports
+are in the directory:</font></p>
+<p ALIGN="LEFT"><font face="Arial">[CD-ROM drive]:\SR13DATA\SR13PAGE</font></p>
+<p ALIGN="LEFT"><font face="Arial">The Adobe Acrobat viewer is needed to see
+these files.</font></p>
+<b>
+<p ALIGN="LEFT"><font face="Arial">File <a name="Content">Content</a></font></p>
+</b>
+<p ALIGN="LEFT"><font face="Arial">As mentioned, the database consists of
+several separate data files. Details about the information in each is provided
+in the sections below. More extensive details on many specific foods are
+available in the printed Agriculture Handbook No. 8 sections (U.S. Department of
+Agriculture 1976-88).</font></p>
+<p ALIGN="LEFT"><font face="Arial">The four principal files are the Food
+Description File, Nutrient Data File, Gram Weight File, and Footnote File. The
+four support files are the Nutrient Definition File, Measure Description File,
+Food Group Description File, and Source Code File.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial"><a name="fooddesc">Food</a> Description
+File</font></p>
+</b>
+<p ALIGN="LEFT"><font face="Arial">This file includes descriptive information
+about the food items. Descriptions are based on those published in Agriculture
+Handbook No. 8, although they may not match exactly. Food descriptions for brand
+name items are in upper case. A full description and a short description
+(containing abbreviations) are provided. Abbreviations used in creating short
+descriptions are given in appendix A. In creating the short description, the
+first word in the long description was not abbreviated. Also, if the long
+description was 25 characters or less, the short description contains no
+abbreviations. Abbreviations used elsewhere in the tables are given in appendix
+B. Scientific names, amounts of refuse, and refuse description are provided
+where appropriate. The factors used to calculate protein from nitrogen are
+included, as well as those used to calculate calories.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial"><a name="Refuse">Refuse</a></font></p>
+</b>
+<p ALIGN="LEFT"><font face="Arial">The refuse and refuse description<b> </b>fields
+contain amounts and descriptions of inedible material (for example, seeds, bone,
+skin) for applicable foods. These amounts are expressed as a percentage of the
+total weight of the item as purchased, and they were used to compute the weight
+of the edible portion. Refuse data were obtained from Agriculture Handbook Nos.
+102 and 456 (Adams 1975, Matthews and Garrison 1975) and unpublished sources. To
+calculate &quot;Amount in edible portion of 1 pound as purchased&quot; use the
+following formula:</font></p>
+<p ALIGN="LEFT"><font face="Arial">Y = V*(4.536*[(100BR)/100)]</font></p>
+<blockquote>
+  <p ALIGN="LEFT"><font face="Arial">where:</font></p>
+  <blockquote>
+    <p ALIGN="LEFT"><font face="Arial">Y = nutrient value per 1 pound as
+    purchased<br>
+    V = nutrient value per 100 g (Nutr_Val in the Nutrient Data File), and<br>
+    R = percent refuse (Refuse in the Food Description File).</font></p>
+  </blockquote>
+</blockquote>
+<p ALIGN="LEFT"><font face="Arial">For meat cuts containing bone, any connective
+tissue present is included in the value given for bone. Separable fat is not
+shown as refuse if the meat is described as separable lean and fat. Separable
+fat generally refers to seam fat and intramuscular fat. Separable lean refers to
+muscle tissue that can be readily separated from the intact cut; it includes any
+fat striations within the muscle. For boneless cuts, the refuse values apply to
+connective tissue or connective tissue plus separable fat. The percentage yield
+of cooked, edible meat from 1 pound of raw meat with refuse can be determined
+from the following formula:</font></p>
+<p ALIGN="LEFT"><font face="Arial">Y = (W<sub>c</sub> / 453.6)*100</font></p>
+<blockquote>
+  <p ALIGN="LEFT"><font face="Arial">where</font></p>
+  <blockquote>
+    <p ALIGN="LEFT"><font face="Arial">W<sub>c</sub> = weight of cooked, edible
+    meat.</font></p>
+  </blockquote>
+</blockquote>
+<p ALIGN="LEFT"><b><font face="Arial"><a name="Nutrients">Nutrients</a></font></p>
+</b>
+<p ALIGN="LEFT"><font face="Arial">Nutrient values per 100 g are contained in
+the Nutrient File, along with the mean, number of samples, standard error, and
+source code. The source code field indicates how the data value was determined
+(for example, analytical, calculated, assumed zero). For more details on this
+file, see the discussion under <a href="#File Formats"> Explanation of File Formats</a>.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Table 1 gives an idea of the
+comprehensiveness of the database by listing for each nutrient the number of
+items that contain data. Analytical values represent the total amount of the
+nutrient present in the edible portion of the food, including any nutrients
+added in processing. The values do not necessarily represent the nutrient
+amounts available to the body.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial">Table 1. Number of foods in database (<i>n</i>=6,210)
+containing selected nutrients</font></p>
+</b><font FACE="Times New Roman"></font>
+<table BORDER="2" CELLSPACING="0" BORDERCOLOR="#000000" CELLPADDING="2" WIDTH="720">
+  <tr>
+    <td WIDTH="276" VALIGN="top" align="left" bordercolor="#000000">
+      <p ALIGN="CENTER"><font face="Arial">Nutrient</font></td>
+    <td WIDTH="57" VALIGN="top" align="left" bordercolor="#000000">
+      <p ALIGN="CENTER"><font face="Arial">Number of Foods</font></td>
+    <td WIDTH="246" VALIGN="top" align="left" bordercolor="#000000"><font FACE="Times New Roman"></font>
+      <p ALIGN="CENTER"><font face="Arial">Nutrient</font></td>
+    <td WIDTH="57" VALIGN="top" align="left" bordercolor="#000000">
+      <p ALIGN="CENTER"><font face="Arial">Number of Foods</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Protein</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">6210</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Vitamin A (IU)</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">6040</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Total lipid (fat)</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">6210</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Vitamin A (RE)</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5417</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Carbohydrate, by difference</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">6210</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Vitamin D</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">303</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Water</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">6209</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Vitamin E</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">3461</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Total dietary fiber</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5531</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Ascorbic acid</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5978</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Ash</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">6186</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Thiamin</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5825</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Calcium</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">6094</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Riboflavin</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5834</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Iron</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">6110</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Niacin</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5828</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Magnesium</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5795</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Pantothenic acid</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5459</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Phosphorus</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5846</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Vitamin B<sub>6</sub></font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5680</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Potassium</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5935</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Folate</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5645</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Sodium</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">6205</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Vitamin B<sub>12</sub></font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5710</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Zinc</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5775</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Cholesterol</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">6104</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Copper</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5706</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Total saturated fatty acids</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">6018</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Manganese</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5071</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Total monounsaturated fatty acids</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5796</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="276">
+      <p ALIGN="LEFT"><font face="Arial">Selenium</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">4997</font></td>
+    <td WIDTH="246">
+      <p ALIGN="LEFT"><font face="Arial">Total polyunsaturated fatty acids</font></td>
+    <td WIDTH="57" VALIGN="TOP">
+      <p ALIGN="RIGHT"><font face="Arial">5803</font></td>
+  </tr>
+</table>
+<font FACE="Times New Roman"></font>
+<p ALIGN="LEFT"><font face="Arial">When nutrient data for prepared or cooked
+products were unavailable or incomplete, nutrient values were calculated from
+comparable raw items. Values for such nutrients are computed for cooked items by
+applying nutrient retention and yield factors (U.S. Department of Agriculture
+1994). To obtain the content of nutrient per 100 g cooked foods, the nutrient
+content per 100 g of raw food is multiplied by the percentage retained after
+cooking, and this product is divided by the percentage yield of cooked food.</font></p>
+<p ALIGN="LEFT"><font face="Arial">V<sub>c</sub> = (V<sub>r</sub>*RF)/Y</font><sub><font face="Arial">c</font></sub></p>
+<blockquote>
+  <p ALIGN="LEFT"><font face="Arial">where</font></p>
+  <blockquote>
+    <p ALIGN="LEFT"><font face="Arial">V<sub>c</sub> = nutrient content of
+    cooked food,<br>
+    V<sub>r</sub> = nutrient content of raw food,<br>
+    RF = retention factor, and<br>
+    Y<sub>c</sub> = yield of cooked food.</font></p>
+  </blockquote>
+</blockquote>
+<p ALIGN="LEFT"><font face="Arial">Retention factors are based on data from USDA
+research contracts, recent research reported in the literature, and USDA
+publications. Retention factors were calculated by the True Retention Method (%TR)
+(Murphy et al. 1975). This method, as shown below, accounts for the loss of
+solids from foods that occurs during preparation and cooking.</font></p>
+<p ALIGN="LEFT"><font face="Arial">%TR = (N<sub>c</sub> H G<sub>c</sub>) / (N<sub>r</sub>
+H G<sub>r</sub>) H 100</font></p>
+<blockquote>
+  <p ALIGN="LEFT"><font face="Arial">where</font></p>
+  <blockquote>
+    <p ALIGN="LEFT"><font face="Arial">N<sub>c</sub> = nutrient content per g of
+    cooked food,<br>
+    G<sub>c </sub>= g of cooked food,<br>
+    N<sub>r</sub> = nutrient content per g of raw food, and<br>
+    G<sub>r</sub> = g of food before cooking.</font></p>
+  </blockquote>
+</blockquote>
+<p ALIGN="LEFT"><font face="Arial">In general, levels of fortified nutrients are
+the values calculated by the manufacturer or Nutrient Data Laboratory food
+specialists, based on the Nutrition Labeling and Education Act label declaration
+of %Daily Value (DV) (Office of the Federal Register, 1998). Such values
+represent the minimum nutrient level one can expect in the product. If
+analytical values were available to estimate levels of added nutrients, there
+would be a number in the sample count field for these nutrients.</font></p>
+<font FACE="Times New Roman"></font><b>
+<p ALIGN="LEFT"><font face="Arial">Proximates. </font></b><font face="Arial">Proximate
+components include moisture (water), protein, total lipid (fat), total
+carbohydrate, and ash. The values for protein were calculated from the level of
+total nitrogen (N) in the food, using the conversion factors recommended by
+Jones (1941). The specific factor applied to each food item is provided in the
+N_Factor field in the Food Description File. The general factor of 6.25 is used
+to calculate protein in items that do not have a specific factor. There is no
+factor for items prepared using the recipe program of the Nutrient Data Bank
+System or for items where protein is calculated by the manufacturer.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Protein values for chocolate, cocoa products,
+coffee, mushrooms, and yeast were adjusted for nonprotein nitrogenous material.
+The adjusted protein conversion factors used to calculate protein for these
+items are as follows:</font></p>
+<font FACE="Times New Roman">
+<div align="left">
+  <table border="0" cellpadding="4" cellspacing="0" width="320">
+    <tr>
+      <td width="84"></td>
+      <td width="274"><font face="Arial">chocolate and cocoa</font></td>
+      <td width="101">4.74</td>
+    </tr>
+    <tr>
+      <td width="84"></td>
+      <td width="274"><font face="Arial">coffee </font></td>
+      <td width="101">5.3</td>
+    </tr>
+    <tr>
+      <td width="84"></td>
+      <td width="274"><font face="Arial">mushrooms </font></td>
+      <td width="101">4.38</td>
+    </tr>
+    <tr>
+      <td width="84"></td>
+      <td width="274"><font face="Arial">yeast </font></td>
+      <td width="101">5.7</td>
+    </tr>
+  </table>
+</div>
+</font>
+<p ALIGN="LEFT"><font face="Arial">When these items were ingredients in foods,
+only their protein nitrogen content was used to determine their contribution to
+the protein and amino acid content of the food. Protein calculated from total
+nitrogen, which may contain nonprotein nitrogen, was used in determining
+carbohydrate by difference. This unadjusted protein value is not given in the
+Nutrient Data File for SR13 rather, it is given as a footnote in printed
+sections of Agriculture Handbook No. 8.</font>&nbsp; <font face="Arial">For
+soybeans, a factor of 5.71 (Jones 1941) was used for calculating protein. The
+soybean industry, however, uses 6.25 to calculate protein. The protein content
+of soy flours, soy meals, soy protein concentrates, and soy protein isolates is
+expressed both ways. The item calculated using the 6.25 factor is identified as
+&quot;crude protein basis.&quot;</font></p>
+<p ALIGN="LEFT"><font face="Arial">Total lipid content of most foods was
+determined by gravimetric methods, including extraction methods such as those
+that employ ether or a mixed solvent system consisting of chloroform and
+methanol, or acid hydrolysis.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Carbohydrate, when present, was determined as
+the difference between 100 and the sum of the percentages of water, protein,
+total lipid (fat), ash, and, when present, alcohol. Total carbohydrate values
+include total dietary fiber. Total dietary fiber content was determined by the
+following enzymatic-gravimetric methods: 985.29 and 991.43 of the Association of
+Official Analytical Chemists (1995). Total sugars were determined using AOAC
+methods (1995), either--HPLC or GLCC--and are the sum of individual
+monosaccharides (galactose, glucose, and fructose) and disaccharides (sucrose,
+lactose, and maltose). Data for total sugars are available primarily for
+formulated foods, but we anticipate that values for other foods will likely be
+added in future releases.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Food energy is expressed in kilocalories
+(kcal) and kilojoules (kJ). One kcal equals 4.184 kJ. The data are for
+physiological energy, which is the energy value remaining after losses from
+digestion and metabolism are deducted from gross energy. Calorie values, with
+the exception of formulated foods are based on the Atwater system for
+determining energy values. Derivation of the Atwater calorie factors is outlined
+in Agriculture Handbook No. 74 (Merrill and Watt 1973). For formulated foods,
+calorie values (source codes 8 or 9; for more information on source codes, see
+page 19) generally reflect industry practices (as permitted by the Nutrition
+Labeling and Education Act) of calculating calories from 4-4-9 kcal/g for
+protein, carbohydrate, and fat, respectively or from 4-4-9 kcal/g for protein,
+carbohydrate minus insoluble fiber, and fat. The latter method is frequently
+used for high-fiber foods.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Calorie factors for protein, fat, and
+carbohydrates are included in the Food Description File. For foods containing
+alcohol, a factor of 6.93 was used to calculate calories from alcohol. No
+calorie factors are presented for items prepared using the recipe program of the
+Nutrient Data Bank System. Instead, total calories for these items equal the
+sums of the calories contributed by each ingredient after adjustment for changes
+in yield, as appropriate. For formulated foods, if the calories calculated by
+the manufacturer are reported, no calorie factors are presented.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Calorie factors for fructose and sorbitol,
+not available in the Atwater system, were derived from the work of Livesay and
+Marinos (1988). Calorie factors for coffee and tea were estimated from seeds and
+vegetables, respectively.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial">Minerals.</font></b><font face="Arial">
+Levels of minerals for most foods were determined by methods of the Association
+of Official Analytical Chemists (1995). Phosphorus was determined
+colorimetrically. Sodium and potassium were usually determined by flame
+photometry. Calcium, iron, magnesium, zinc, copper, and manganese were
+determined by atomic absorption and plasma emission spectrophotometry.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Data on selenium were added for a large
+number of foods. Much of the analytical data on selenium were published earlier
+(USDA 1992) and were determined by the modified selenium hydride and
+fluorometric methods. The newly added values were calculated from these
+previously published values. Procedures for imputing values used by the Nutrient
+Data Lab were described by Schakel et al. (1997).</font><font face="Times New Roman">
+</font><font face="Arial">The selenium content of plants, in particular cereal
+grains, is strongly influenced by the quantity of biologically available
+selenium in the soil in which they grow, that is, by their geographical origin
+(Kubota and Allaway 1972). The selenium content of fruits and vegetables is
+normally very low. While the soil affects the selenium content of fruits and
+vegetables, it does not significantly increase the amount of selenium in them.
+The values given are national averages and should be used with caution when
+considering levels of selenium in locally grown foods.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial">Vitamins. </font></b><font face="Arial">In
+the current database system, all data for ascorbic acid are listed under
+nutrient number 401 (total ascorbic acid), although reduced ascorbic acid
+content is reported for many food groups, especially those which are major
+nutritional contributors of ascorbic acid such as fruits and vegetables. Total
+ascorbic acid was reported for food groups 1 (Dairy and Eggs), 2 (Spices and
+Herbs), 4 ( Fats and Oils), 12 (Nut and Seeds), and 17 (Lamb, Veal, and Game).
+Food group 10 (Pork and Pork Products) contains a mixture of total and reduced
+forms, which are reported under nutrient number 401. Reduced ascorbic acid was
+determined by the dichloroindophenol method, and total ascorbic acid by the
+fluorometric method.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Thiamin was determined chemically by the
+thiochrome procedure or by microbiological methods. Fluorometric or
+microbiological methods were used to measure riboflavin. The values for niacin
+are for preformed niacin only and do not include the niacin contributed by
+tryptophan, a niacin precursor. The term Aniacin equivalent@ applies to the
+potential niacin value, that is, to the sum of the preformed niacin and the
+amount that could be derived from tryptophan. In estimating the amounts of
+niacin available from foods, the mean value of 60 mg tryptophan is considered
+equivalent to 1 mg niacin (National Academy of Sciences 1989).</font></p>
+<font FACE="Times New Roman"></font>
+<p ALIGN="LEFT"><font face="Arial">Pantothenic acid was determined
+microbiologically. Vitamins B<sub>6</sub> and B<sub>12</sub> were determined by
+microbiological or chromatographic methods. Vitamin B<sub>12</sub> is found in
+foods of animal origin or those containing some ingredient of animal origin; for
+example, cake that contains eggs or milk. For foods that contain only plant
+products, the value for vitamin B<sub>12</sub> is assumed to be 0. Some reports
+contain values for Vitamin B<sub>12</sub> in certain fermented foods (beer, soy
+sauce, and miso). It is believed that this B<sub>12</sub> is synthesized not by
+the microorganisms responsible for the fermentation of the food but, rather, by
+other contaminating microorganisms. Therefore, one should not consider these
+foods to be a consistent source of vitamin B<sub>12</sub> (Liem et al. 1977).</font></p>
+<p ALIGN="LEFT"><font face="Arial">Folate values represent total folate content
+including folic acid added during fortification as well as bound folate which
+occurs naturally in food. Most analytical values shown for folate were
+determined by the use of conjugase and<i> Lactobacillus casei</i>. Beecher and
+Matthews (1990) reported that the methodology used in determining folate values
+needed improvement particularly in the areas of extraction procedures, and
+applications to specific foods. Research on determining the folate content of
+high-protein and high-carbohydrate foods indicates that additional improvements
+in methodology are needed (Martin et al. 1990). Limited amounts of data
+generated by USDA were obtained by a modified method using additional enzymes to
+release bound forms.</font></p>
+<p ALIGN="LEFT"><font face="Arial">As mentioned, the folate values in the
+database were updated to reflect regulations requiring the addition of folic
+acid to enriched cereal grain products subject to standards of identity (CFR,
+Title 21, Pts. 136, 137)(Office of the Federal Register 1998). These products
+include flour, cornmeal and grits, farina, rice, macaroni, noodles, bread,
+rolls, and buns. Folic acid may continue to be added (with some restrictions on
+amounts) to breakfast cereals, infant formulas, medical foods, food for special
+dietary use, and meal replacement products. For the most part, values for this
+database were calculated based on enrichment levels specified in the
+regulations, since analytical values were not yet available. For those foods
+where the enrichment level is given as a range, the midpoint was used to set the
+value. Food items containing any of these enriched products as ingredients, such
+as baked products made with enriched flour, were also updated.</font></p>
+<p ALIGN="LEFT"><font face="Arial">The data for vitamin A include chemically
+determined preformed vitamin A and provitamin-A carotenoids as determined by
+methods of the Association of Official Analytical Chemists. Total vitamin A
+activity is expressed in international units (IUs) and retinol equivalents (REs).
+One IU is equivalent to 0.3 mcg retinol, 0.6 mcg beta carotene, or 1.2 mcg other
+provitamin A carotenoids. One RE is equivalent to 1 mcg retinol, 6 mcg beta
+carotene, or 12 mcg other provitamin A carotenoids. One RE is equal to 3.33 IU
+retinol or 10 IU beta carotene (National Academy of Sciences 1989).</font></p>
+<p ALIGN="LEFT"><font face="Arial">Vitamin E was determined by gas-liquid
+chromatography. Total vitamin E activity is reported as mg alpha-tocopherol
+equivalents and was calculated from the amounts and relative activities of the
+various tocopherols and tocotrienols.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial">Lipid Components. </font></b><font face="Arial">Most
+fatty acid data were obtained as the percentage of fatty acid methyl esters and
+were primarily determined by gas-liquid chromatographic analyses. The values
+shown are for the actual quantity (mg/100 g) of each fatty acid and do not
+represent fatty acid triglycerides. These data were converted to g fatty acid
+per 100 g total lipid (fat) using lipid conversion factors and then to g fatty
+acid per 100 g edible portion of food using the total lipid content. Details of
+the derivation of lipid conversion factors were published in Weihrauch et al.
+1977. The first number in the nutrient description of individual fatty acids is
+the number of carbon atoms and the second is the number of double bonds in the
+chain. Common and systematic names for the fatty acids are given in the table 2.
+For unsaturated fatty acids, the common name is that of the most common isomer,
+although the value covers all isomers, including <i>cis</i> and <i>trans</i>.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Values for total saturated, monounsaturated,
+and polyunsaturated fatty acids may include individual fatty acids not reported
+in SR; therefore, the sum of their values may exceed</font> <font face="Arial">the
+sum of the individual fatty acids listed. In rare cases, the sum of the
+individual fatty acids may exceed the sum of the values given for the total
+saturated fatty acids (SFA), monounsaturated fatty acids (MUFA), and
+polyunsaturated fatty acids (PUFA). These differences are generally caused by
+rounding and may be relatively small.</font></p>
+<p ALIGN="LEFT"><font face="Arial">For formulated brand name foods, industry
+data were often available for fatty acid classes (SFA, MUFA, and PUFA) but were
+lacking for individual fatty acids. In these cases, individual fatty acids were
+calculated from the fatty acids of the individual listed ingredients and
+normalized to the total fat level. A best-fit approximation was made to fatty
+acid classes but, unavoidably, calculated sums of individual fatty acid totals
+did not always match industry data for fatty acid classes. Zero values for
+individual fatty acids should be understood to mean that trace amounts may be
+present. When g fatty acids per 100 g total lipid were converted to g fatty
+acids per 100 g food, values of less than 0.0005 were rounded to 0.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial">Table 2. Systematic and common names for
+fatty acids</font></b></p>
+<font FACE="Times New Roman"></font><font FACE="Times New Roman"></font>
+<table border="1" cellpadding="4" cellspacing="0" bordercolor="#000000" width="489">
+  <tr>
+    <td width="111"><font face="Arial">Fatty acid</font></td>
+    <td width="198"><font face="Arial">Systematic name</font></td>
+    <td width="148"><font face="Arial">Common name of<br>
+      most typical isomer</font></td>
+  </tr>
+  <tr>
+    <td colspan="3" width="424"><font face="Arial">Saturated fatty acids</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">4:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">butanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">butyric</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">6:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">hexanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">caproic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">8:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">octanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">caprylic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">10:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">decanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">capric</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">12:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">dodecanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">lauric</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">14:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">tetradecanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">myristic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">15:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">pentadecanoic&nbsp;&nbsp; </font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">16:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">hexadecanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">palmitic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">17:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">heptadecanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">margaric</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">18:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">octadecanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">stearic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">20:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">eicosanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">arachidic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">22:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">docosanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">behenic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">24:0&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">tetracosanoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">lignoceric</font></td>
+  </tr>
+  <tr>
+    <td colspan="3" width="424"><font face="Arial">Monounsaturated fatty acids</font></td>
+  </tr>
+  <tr>
+    <td width="111"><font face="Arial">14:1</font></td>
+    <td width="198"><font face="Arial">tetradecenoic</font></td>
+    <td width="148"><font face="Arial">myristoleic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">16:1&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">hexadecenoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">palmitoleic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">18:1&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">octadecenoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">oleic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">20:1&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">eicosenoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">gadoleic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">22:1&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">docosenoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">erucic</font></td>
+  </tr>
+  <tr>
+    <td colspan="3" width="424"><font face="Arial">Polyunsaturated fatty acids</font></td>
+  </tr>
+  <tr>
+    <td width="111"><font face="Arial">18:2</font></td>
+    <td width="198"><font face="Arial">octadecadienoic&nbsp;&nbsp; </font></td>
+    <td width="148"><font face="Arial">linoleic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">18:3&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">octadecatrienoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">linolenic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">18:4&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">octadecatetraenoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">parinaric</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">20:4&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">eicosatetraenoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">arachidonic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">20:5&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">eicosapentaenoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">timnodonic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">22:5&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">docosapentaenoic&nbsp;&nbsp; </font></td>
+    <td width="148">
+      <p ALIGN="LEFT"><font face="Arial">clupanodonic</font></td>
+  </tr>
+  <tr>
+    <td width="111">
+      <p ALIGN="LEFT"><font face="Arial">22:6&nbsp;&nbsp; </font></td>
+    <td width="198">
+      <p ALIGN="LEFT"><font face="Arial">docosahexaenoic&nbsp;&nbsp; </font></td>
+  </tr>
+</table>
+<font FACE="Times New Roman"></font>
+<p ALIGN="LEFT"><font face="Arial">Cholesterol values were generated primarily
+by gas-liquid chromatographic procedures. It is assumed that cholesterol is
+present only in foods of animal origin and foods containing at least one
+ingredient of animal origin (for example, cake that contains eggs). For mixtures
+containing ingredients derived from animal products, the cholesterol value may
+have been calculated from the value for those ingredients. For foods that
+contain only plant products, the value for cholesterol is assumed to be&nbsp;0.</font><font face="Times New Roman">&nbsp;
+</font><font face="Arial">Data on plant sterols (campesterol, stigmasterol,
+&#946;-sitosterol) were obtained by colorimetric or gas-chromatographic
+procedures and summed to calculate total phytosterols.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial">Amino Acids.</font></b><font face="Arial">
+Data to develop amino acids patterns for simple foods were obtained primarily by
+ion-exchange chromatography. The amino acid patterns and the total nitrogen
+content were used to calculated the levels of individual amino acids per 100 g
+of food, using the following formula:</font></p>
+<p ALIGN="LEFT"><font face="Arial">AA<sub>f</sub> = (AA<sub>n</sub>*V<sub>p</sub>
+) / N</font><sub><font face="Arial">f</font></sub></p>
+<blockquote>
+  <p ALIGN="LEFT"><font face="Arial">where:</font></p>
+  <blockquote>
+    <p ALIGN="LEFT"><font face="Arial">AA<sub>f</sub> = amino acid content per
+    100 g food,<br>
+    AA<sub>n</sub> = amino acid content per g nitrogen,<br>
+    V<sub>p</sub> = protein content of food, and<br>
+    N<sub>f</sub> = nitrogen factor.</font></p>
+  </blockquote>
+</blockquote>
+<p ALIGN="LEFT"><font face="Arial">Number of samples appears only on the food
+item for which the amino acid pattern was developed, not other foods that use
+the same pattern. It refers to the number of observations used in developing the
+amino acid pattern for the food.</font>&nbsp; I<font face="Arial">f amino acid
+values are presented for an item with more than one protein-containing
+ingredient, the values may have been calculated on a per-gram-of-nitrogen basis
+from the amino acid patterns of the various protein-containing ingredients. Then
+the amino acid contents for an item on the 100-g basis were calculated as the
+sum of the amino acids in each protein-containing ingredient multiplied by total
+nitrogen in the item.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial"><a name="Weights">Weights</a> and Measures</font></p>
+</b>
+<p ALIGN="LEFT"><font face="Arial">Information is provided on household measures
+for food items (for example, 1 cup, 1 tablespoon, 1 fruit, 1 leg). Weights are
+given for edible material without refuse. The Weight File contains the gram
+weights for each food item. The description of each measure is provided in the
+Measure Description File. The Weight File can be used to calculate nutrient
+values for food portions from the values provided per 100 g food (columns E and
+F in Agriculture Handbook 8). The formula used to calculate the nutrient content
+per household measure is</font><font face="Times New Roman">:</font></p>
+<p ALIGN="LEFT"><font face="Arial">N = (V*W)/100</font></p>
+<blockquote>
+  <p ALIGN="LEFT"><font face="Arial">where</font></p>
+  <blockquote>
+    <p ALIGN="LEFT"><font face="Arial">N = nutrient value per household measure,<br>
+    V = nutrient value per 100 g (Nutr_Val in the Nutrient Data File), and<br>
+    W = g weight of portion (Gm_wt in Weight File).</font></p>
+  </blockquote>
+</blockquote>
+<p ALIGN="LEFT"><font face="Arial">Together these files can be used to produce
+reports showing the household measure and nutrient values calculated for that
+portion. The weights were derived from published sources, industry files,
+studies conducted by USDA (Adams 1975, Fulton et al. 1977), and the weights and
+measures used in USDA=s Continuing Survey of Food Intakes by Individuals (USDA
+1995). Although special efforts were made to provide representative values,
+weights and measures obtained from different sources vary considerably for some
+foods.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial"><a name="Footnotes">Footnotes</a></font></p>
+</b>
+<p ALIGN="LEFT"><font face="Arial">Footnotes are provided for a few items where
+information about food description, weights and measures, or nutrient values
+could not be accommodated in existing fields. Many of the footnotes published in
+Agriculture Handbook 8 are no longer needed because the information was moved to
+other fields and tables. For example, details about the measure description,
+once contained in footnotes, are now part of the description. Values for
+additional nutrients once included in footnotes were given nutrient numbers,
+when appropriate, and included in the Nutrient Data File. The database also
+incorporates data that cover enrichment or fortification or cases where nutrient
+content is affected by plant part or color (yellow and white corn, for example).</font></p>
+<p ALIGN="LEFT"><b><font face="Arial">Explanation of <a name="File Formats">File
+Formats</a></font></b></p>
+<p ALIGN="LEFT"><font face="Arial">The data are presented in two different
+organizational formats. One is a relational format (Figure 1) of four principal
+and four support files comprising the database. The relational format is
+complete and contains all food, nutrient and related data. The other is a flat
+file, which is an abbreviated file, with fewer nutrients and related
+information. Both of these organizational formats are provided in two different
+data formats--ASCII and DBF.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial">Relational Files</font></p>
+</b>
+<p ALIGN="LEFT"><font face="Arial">The four principal and four support files of
+the relational database can be linked together in a variety of combinations to
+produce queries and generate reports. The formats of these files are identified
+in tables 3-16. Information on the various relationships which can be made
+between these files are also given. Fields that always contain data and fields
+that can be left blank or null are identified in the &quot;blank&quot; column (see tables
+3-16). An asterisk (*) indicates that the field is indexed. Although the ASCII
+and DBF files are not indexed, the file descriptions show where indices were
+used to sort and manage records within the Nutrient Data Bank System. When
+importing these files into a database management systems, if files are to be
+indexed, it is important to use the indices listed here, particularly with the
+Nutrient Data File, which uses two.</font></p>
+<font FACE="Times New Roman"></font>
+<p ALIGN="LEFT"><font face="Arial">Figure 1 - Relationship between files in the
+USDA Nutrient Database for Standard Reference.</font></p>
+<font FACE="Times New Roman">
+<p ALIGN="LEFT"><img border="0" src="../../images/sr12schm.png" width="688" height="526"></p>
+</font><b>
+<p ALIGN="LEFT"><font face="Arial"><a name="ASCII">ASCII</a>. </font></b><font face="Arial">ASCII
+files are delimited. All fields are separated by carets (^) and text fields are
+surrounded by tildes (~). A double caret (^^) appears when a field is null or
+blank. Format descriptions include the name of each field, its type [N=numeric
+with width and number of decimals (w.d) and A=alphanumeric], and its length.&nbsp;</font></p>
+<p ALIGN="LEFT"><b><font face="Arial">DBF. </font></b><font face="Arial">Files
+in DBF format can be read by most database management systems. If necessary,
+refer to the appropriate program manuals or on-line help to find out how to
+import the files. The files and fields are identical to those in ASCII.&nbsp;</font></p>
+<p ALIGN="LEFT"><b><font face="Arial"><a name="Food Description File">Food
+Description File</a> </font></b><font face="Arial">(file name = FOOD_DES).<b> </b>The
+Food Description File (table 3) contains a long and a short description for
+6,210 food items, along with the scientific name of the food group, percentage
+of refuse, and factors used for calculating protein and calories, if applicable.</font><font FACE="Times New Roman">&nbsp;</p>
+</font>
+<ul>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to the Food Group Description File
+  by the FdGp_Cd field.</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to the Nutrient Data File by the
+  NDB_No field.</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to the Gram Weight File by the
+  NDB_No field.</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to the Footnote File by the NDB_No
+  field.</font></li>
+</ul>
+  <font FACE="Times New Roman">
+  <p ALIGN="LEFT">&nbsp;</font><font face="Arial">Table 3. Food Description File Format</font>
+<font FACE="Times New Roman">
+  </p>
+</font>
+<table border="1" cellpadding="4" cellspacing="0" bordercolor="#000000" width="721">
+  <tr>
+    <td width="99" valign="top" align="left">
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+<p ALIGN="LEFT"><font face="Arial">Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+<p ALIGN="LEFT"><font face="Arial">Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+<p ALIGN="LEFT"><font face="Arial">Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99" valign="top" align="left">
+<p ALIGN="LEFT"><font face="Arial">NDB_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+<p ALIGN="LEFT"><font face="Arial">A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+<p ALIGN="LEFT"><font face="Arial">N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+<p ALIGN="LEFT"><font face="Arial">5-digit Nutrient Data Bank number which
+uniquely identifies a food item</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99" valign="top" align="left">
+                      <p ALIGN="LEFT"><font face="Arial">FdGp_Cd&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+                      <p ALIGN="LEFT"><font face="Arial">A 4&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+                      <p ALIGN="LEFT"><font face="Arial">N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+                      <p ALIGN="LEFT"><font face="Arial">4-digit code indicating
+                      food group to which a food item belongs.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99" valign="top" align="left">
+<p ALIGN="LEFT"><font face="Arial">Desc&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+<p ALIGN="LEFT"><font face="Arial">A 200&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+<p ALIGN="LEFT"><font face="Arial">N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+<p ALIGN="LEFT"><font face="Arial">200 character description of food item</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99" valign="top" align="left">
+                      <p ALIGN="LEFT"><font face="Arial">Shrt_Desc&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+                      <p ALIGN="LEFT"><font face="Arial">A 60&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+                      <p ALIGN="LEFT"><font face="Arial">N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+                      <p ALIGN="LEFT"><font face="Arial">60 character
+                      abbreviated description of food item. Generated from the
+                      200 character description using abbreviations in Appendix
+                      A. If short description was longer than 60 characters,
+                      additional abbreviations were made.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99" valign="top" align="left">
+                      <p ALIGN="LEFT"><font face="Arial">Ref_desc&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+                      <p ALIGN="LEFT"><font face="Arial">A 45&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+                      <p ALIGN="LEFT"><font face="Arial">Y&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+                      <p ALIGN="LEFT"><font face="Arial">Description of inedible
+                      parts of a food item, such as, seeds or bone.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99" valign="top" align="left">
+<p ALIGN="LEFT"><font face="Arial">Refuse&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+<p ALIGN="LEFT"><font face="Arial">N 2.0&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+<p ALIGN="LEFT"><font face="Arial">Y&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+<p ALIGN="LEFT"><font face="Arial">The percent refuse</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99" valign="top" align="left">
+                      <p ALIGN="LEFT"><font face="Arial">SciName&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+                      <p ALIGN="LEFT"><font face="Arial">A 60&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+                      <p ALIGN="LEFT"><font face="Arial">Y&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+                      <p ALIGN="LEFT"><font face="Arial">The scientific name of
+                      the food item. Given for the least processed form of the
+                      food (usually raw), if applicable.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99" valign="top" align="left">
+<p ALIGN="LEFT"><font face="Arial">N_Factor&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+<p ALIGN="LEFT"><font face="Arial">N 4.2&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+<p ALIGN="LEFT"><font face="Arial">Y&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+<p ALIGN="LEFT"><font face="Arial">Factor for converting nitrogen to protein</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99" valign="top" align="left">
+<p ALIGN="LEFT"><font face="Arial">Pro_Factor&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+<p ALIGN="LEFT"><font face="Arial">N 4.2&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+<p ALIGN="LEFT"><font face="Arial">Y&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+<p ALIGN="LEFT"><font face="Arial">Factor for calculating calories from protein.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99" valign="top" align="left">
+<p ALIGN="LEFT"><font face="Arial">Fat_Factor&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+<p ALIGN="LEFT"><font face="Arial">N 4.2&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+<p ALIGN="LEFT"><font face="Arial">Y&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+<p ALIGN="LEFT"><font face="Arial">Factor for calculating calories from fat.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99" valign="top" align="left">
+<p ALIGN="LEFT"><font face="Arial">CHO_Factor&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="55">
+<p ALIGN="LEFT"><font face="Arial">N 4.2&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+<p ALIGN="LEFT"><font face="Arial">Y&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="478">
+<p ALIGN="LEFT"><font face="Arial">Factor for calculating calories from
+carbohydrate.</font></p>
+    </td>
+  </tr>
+</table>
+<font FACE="Times New Roman">
+<p ALIGN="LEFT">&nbsp;</font><b><font face="Arial"><a name="FGfile">Food Group</a> Description File</font></b><font face="Arial">
+(file name = FD_GROUP) (table 4)</font><font FACE="Times New Roman">&nbsp;</p>
+</font>
+<ul>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to the Food Description File by
+  FdGp_Cd.</font></li>
+</ul>
+<p ALIGN="LEFT"><font face="Arial">Table 4. Food Group Description File Format</font></p>
+<font FACE="Times New Roman">
+</font>
+<table border="1" cellpadding="4" cellspacing="0" bordercolor="#000000">
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">FdGp_Cd&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 4*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Four
+                      digit code identifying a food group. Currently only the
+                      first 2 digits are assigned. In the future the last 2
+                      digits may be utilized.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">FdGp_Desc&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 60&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> The name of the food group</font></p>
+    </td>
+  </tr>
+</table>
+<font FACE="Times New Roman">
+<p ALIGN="LEFT">&nbsp;</font><b><font face="Arial"><a name="nutfile">Nutrient Data File</a></font></b><font face="Arial">&nbsp;
+(file name = NUT_DATA).<b> </b>The Nutrient Data File (table 5) contains the
+nutrient values and information about the values, including sample count,
+standard error for analytical values, and a source code indicating the type of
+data.</font><font FACE="Times New Roman">&nbsp;</p>
+</font>
+  <ul>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">Links to the Food Description File</font></li>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">Links to the Gram Weight File by NDB_No.</font></li>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">Links to the Footnote File by NDB No.</font></li>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">Links to the Nutrient Definition File and
+  Footnote File by Nutr_No.</font></li>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">Links to the Source Codes File by
+      Src_Cd.</font></li>
+  </ul>
+<p ALIGN="LEFT"><font face="Arial">Table 5. Nutrient Data File Format</font></p>
+<table border="1" cellpadding="4" cellspacing="0" width="731" bordercolor="#000000">
+  <tr>
+    <td width="90">
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="59">
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="56">
+<p ALIGN="LEFT"><font face="Arial"> Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="518">
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="90">
+<p ALIGN="LEFT"><font face="Arial">NDB_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="59">
+<p ALIGN="LEFT"><font face="Arial"> A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="56">
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="518">
+<p ALIGN="LEFT"><font face="Arial"> 5-digit
+                    Nutrient Data Bank number.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="90">
+                    <p ALIGN="LEFT"><font face="Arial">Nutr_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="59">
+                    <p ALIGN="LEFT"><font face="Arial"> A 3*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="56">
+                    <p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="518">
+                    <p ALIGN="LEFT"><font face="Arial"> 3-digit
+                    unique identifier code for a nutrient</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="90">
+                    <p ALIGN="LEFT"><font face="Arial">Nutr_Val&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="59">
+                    <p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="56">
+                    <p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="518">
+                    <p ALIGN="LEFT"><font face="Arial"> Amount
+                    in 100 grams, edible portion. (Due to limitations of the
+                    file formats all nutrient values are displayed to three
+                    decimal places; this does not necessarily reflect the
+                    accuracy of the data).</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="90">
+                    <p ALIGN="LEFT"><font face="Arial">Sample_Ct&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="59">
+                    <p ALIGN="LEFT"><font face="Arial"> N 5.0&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="56">
+                    <p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="518">
+                    <p ALIGN="LEFT"><font face="Arial"> Number
+                    of samples</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="90">
+                    <p ALIGN="LEFT"><font face="Arial">Std_Error&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="59">
+                    <p ALIGN="LEFT"><font face="Arial"> N 8.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="56">
+                    <p ALIGN="LEFT"><font face="Arial"> Y&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="518">
+                    <p ALIGN="LEFT"><font face="Arial">
+                    Standard error of the mean. Null if could not be calculated</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="90">
+                    <p ALIGN="LEFT"><font face="Arial">Src_Cd&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="59">
+                    <p ALIGN="LEFT"><font face="Arial"> A 2&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="56">
+                    <p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="518">
+                    <p ALIGN="LEFT"><font face="Arial"> Code
+                    indicating type of data</font></p>
+    </td>
+  </tr>
+</table>
+<b>
+<p ALIGN="LEFT"><font face="Arial"><a name="nutrdef">Nutrient</a> Definition File</font></b><font face="Arial">
+(file name = NUTR_DEF). The Nutrient Definition File (table 6) is the support
+file to the Nutrient Data File. It provides the three-digit nutrient code, unit
+of measure, INFOODS tagname, and description.</font></p>
+<ul>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to the Nutrient Data File by
+  Nutr_No.</font></li>
+</ul>
+<p ALIGN="LEFT"><font face="Arial">Table 6. Nutrient Definition File Format</font></p>
+<table border="1" cellpadding="4" cellspacing="0" bordercolor="#000000" width="721">
+  <tr>
+    <td width="93">
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="42">
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="48">
+<p ALIGN="LEFT"><font face="Arial"> Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="496">
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="93">
+<p ALIGN="LEFT"><font face="Arial">Nutr_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="42">
+<p ALIGN="LEFT"><font face="Arial"> A 3*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="48">
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="496">
+<p ALIGN="LEFT"><font face="Arial"> 3-digit unique identifier code
+for a nutrient</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="93">
+<p ALIGN="LEFT"><font face="Arial">Units&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="42">
+<p ALIGN="LEFT"><font face="Arial"> A 6&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="48">
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="496">
+<p ALIGN="LEFT"><font face="Arial"> Units of measure - mg, g, mcg,
+etc.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="93">
+                    <p ALIGN="LEFT"><font face="Arial">Tagname&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="42">
+                    <p ALIGN="LEFT"><font face="Arial"> A 20&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="48">
+                    <p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="496">
+                    <p ALIGN="LEFT"><font face="Arial">
+                    International Network of Food Data Systems (INFOODS)
+                    Tagnames *. A unique abbreviation for a food component
+                    developed by INFOODS to aid in the interchange of data.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="93">
+                    <p ALIGN="LEFT"><font face="Arial">NutrDesc&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="42">
+                    <p ALIGN="LEFT"><font face="Arial"> A 60&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="48">
+                    <p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="496">
+                    <p ALIGN="LEFT"><font face="Arial"> The name
+                    of the food component</font></p>
+    </td>
+  </tr>
+</table>
+<p ALIGN="LEFT"><font face="Arial">* Klensin et al, 1989</font></p>
+<p ALIGN="LEFT"><b><font face="Arial"><a name="Source">Source</a> Code File</font></b><font face="Arial">
+(file name = SOURCE)(Table 7)</font></p>
+<font FACE="Times New Roman">
+</font>
+<ul>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to the Nutrient Data File by Src_Cd.</font></li>
+</ul>
+<p ALIGN="LEFT"><font face="Arial">Table 7. Source Code File Format</font></p>
+<table border="1" cellpadding="4" cellspacing bordercolor="#000000">
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Src_Cd&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 2*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> 2 digit code</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+                      <p ALIGN="LEFT"><font face="Arial">SrcCd_Desc&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+                      <p ALIGN="LEFT"><font face="Arial">A 60&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+                      <p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+                      <p ALIGN="LEFT"><font face="Arial">
+                      Description of source code that identifies the type of
+                      nutrient data.</font></p>
+    </td>
+  </tr>
+</table>
+<p ALIGN="LEFT"><font face="Arial">The Source Code File contains codes
+indicating the type of data (analytical, calculated, assumed zero, and so on) in
+the Nutrient Data File. To improve the usability of the database, Nutrient Data
+Lab staff imputed nutrient values for many proximate components, total dietary
+fiber, and vitamin and mineral values.</font></p>
+<p ALIGN="LEFT"><font face="Arial">A description of each source code follows:</font></p>
+<font FACE="Times New Roman">
+</font>
+<table border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td valign="top" align="center">
+<p ALIGN="LEFT"><font face="Arial">Source code&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" align="center">
+<p ALIGN="LEFT"><font face="Arial">1&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Value is analytical or derived from the
+analytical</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" align="center">
+<p ALIGN="LEFT"><font face="Arial">4&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Value is imputed</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" align="center">
+<p ALIGN="LEFT"><font face="Arial">5&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Value upon which a manufacturer based their
+label claim for added nutrients (used primarily for Breakfast Cereals and Infant
+Formulas)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" align="center">
+          <p ALIGN="LEFT"><font face="Arial">7&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+          <p ALIGN="LEFT"><font face="Arial"> Value is an assumed zero, because
+          biologically, the nutrient could not be present (such as dietary fiber
+          in animal products), or the nutrient is expected to be present in
+          insignificant amounts (such as vitamin C in meat products).</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" align="center">
+<p ALIGN="LEFT"><font face="Arial">8&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Value is calculated from the nutrient label
+by Nutrient Data Lab</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" align="center">
+<p ALIGN="LEFT"><font face="Arial">9&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Value is calculated by the manufacturer,
+not adjusted or rounded for compliance to the Nutrition Labeling and Education
+Act</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" align="center">
+          <p ALIGN="LEFT"><font face="Arial">12&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+          <p ALIGN="LEFT"><font face="Arial"> Value is analytical, supplied by
+          the manufacturer with partial documentation.</font></p>
+    </td>
+  </tr>
+</table>
+<b>
+<p ALIGN="LEFT"><font face="Arial"><a name="GramWt">Gram</a> weight file</font></b><font face="Arial">
+(file name = WEIGHT). The Gram Weight File (table 8) contains the gram weights
+for household measures of a food item, as well as the measure number, which
+links to the description of the measure.</font></p>
+<ul>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">
+Links to Food Description File by NDB_No.</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to Nutrient Data File by NDB No.</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to Measure Description File by
+  Msre_No.</font></li>
+</ul>
+<p ALIGN="LEFT"><font face="Arial">Table 8. Gram Weight File Format</font></p>
+<table border="1" cellpadding="4" cellspacing="0" bordercolor="#000000">
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">NDB_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> 5-digit Nutrient Data Bank
+number</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+                    <p ALIGN="LEFT"><font face="Arial">Msre_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+                    <p ALIGN="LEFT"><font face="Arial"> A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+                    <p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+                    <p ALIGN="LEFT"><font face="Arial"> A unique
+                    code in the Measure Description File referencing the
+                    description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Gm_wt&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 9.2&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> The weight of the food item</font></p>
+    </td>
+  </tr>
+</table>
+<font FACE="Times New Roman">
+</font><b>
+<p ALIGN="LEFT"><font face="Arial"><a name="msredesc">Measure</a> Description File</font></b><font face="Arial">
+(file name = MEASURE).<b> </b>The Measure Description File (table 9) is the
+support file for the Gram Weight File. It contains the five-digit measure number
+and measure description.</font></p>
+<ul>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to the Gram Weight File by Msre_No
+  .</font></li>
+</ul>
+<blockquote>
+  <font FACE="Times New Roman">
+  </blockquote>
+</font>
+<p ALIGN="LEFT"><font face="Arial">Table 9. Measure Description File Format</font></p>
+<table border="1" cellpadding="4" cellspacing="0" bordercolor="#000000">
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Msre_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> 5 digit code denoting the
+measure</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Msre_Desc&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 120&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> The
+                        description of the measure, i.e. &quot;cup&quot;,
+                        &quot;cup, chopped&quot;, &quot;tomato&quot;,
+                        &quot;tbsp&quot;, etc.</font></p>
+    </td>
+  </tr>
+</table>
+<b>
+<p ALIGN="LEFT"><font face="Arial"><a name="Ftntfile">Footnote</a> file</font></b><font face="Arial">
+(file name = FOOTNOTE).<b> </b>This file (table 10) contains additional
+information about the food item, household weight, and nutrient value.</font></p>
+<font FACE="Times New Roman">
+</font>
+<ul>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to the Food Description File by
+    NDB_No.</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to the Nutrient Data File by NDB
+  No.</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">Links to the Nutrient Data File by
+    Nutr_No.</font></li>
+</ul>
+<p ALIGN="LEFT"><font face="Arial">Table 10. Footnote File Format</font></p>
+<table border="1" cellpadding="4" cellspacing="0" bordercolor="#000000" width="732">
+  <tr>
+    <td width="99">
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="53">
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+<p ALIGN="LEFT"><font face="Arial"> Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="491">
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99">
+                      <p ALIGN="LEFT"><font face="Arial">NDB_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="53">
+                      <p ALIGN="LEFT"><font face="Arial"> A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+                      <p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="491">
+                      <p ALIGN="LEFT"><font face="Arial"> 5-digit
+                      Nutrient Data Bank number</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99">
+<p ALIGN="LEFT"><font face="Arial">Footnt_no&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="53">
+<p ALIGN="LEFT"><font face="Arial"> A 4*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="491">
+<p ALIGN="LEFT"><font face="Arial"> A sequence number</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99">
+                      <p ALIGN="LEFT"><font face="Arial">Footnt_typ&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="53">
+                      <p ALIGN="LEFT"><font face="Arial"> A 1&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+                      <p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="491">
+                      <p ALIGN="LEFT"><font face="Arial"> The
+                      type of footnote: D=Indicates a footnote adding
+                      information to the description; and N=Indicates a footnote
+                      providing additional information on a nutrient value. If
+                      the Footnt_typ = N, the Nutr_No will also be filled in.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99">
+                      <p ALIGN="LEFT"><font face="Arial">Nutr_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="53">
+                      <p ALIGN="LEFT"><font face="Arial"> A 3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+                      <p ALIGN="LEFT"><font face="Arial"> Y&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="491">
+                      <p ALIGN="LEFT"><font face="Arial"> 3-digit
+                      unique identifier code for a nutrient to which the
+                      information in the footnote applies.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="99">
+<p ALIGN="LEFT"><font face="Arial">Footnt_txt&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="53">
+<p ALIGN="LEFT"><font face="Arial"> A 200&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="47">
+<p ALIGN="LEFT"><font face="Arial"> N&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td width="491">
+<p ALIGN="LEFT"><font face="Arial"> The text of the footnote</font></p>
+    </td>
+  </tr>
+</table>
+<font FACE="Times New Roman">
+</font><b>
+<p ALIGN="LEFT"><font face="Arial">Flat Files</font></p>
+<p ALIGN="LEFT"><font face="Arial"><a name="Abbreviated">Abbreviated</a> (file name = ABBREV).
+</font></b><font face="Arial">The
+abbreviated file is available in ASCII and DBF formats. The ASCII file (table
+11) is in free format. Fields are separated by a caret (^). Text fields are
+surrounded by a tilde (~). Data refer to 100 g of the edible portion of the food
+item. Decimal points are included in the fields. Missing values are denoted by
+the null value of two consecutive carets (^^). The file is sorted in ascending
+order by the food item number. The DBF file has the same fields.&nbsp;</font></p>
+<p ALIGN="LEFT"><font face="Arial">This file is an adaptation of the Abbreviated
+File included with releases prior to SR11 and is provided as a convenience.
+Because of file restructuring with the release of SR11, some changes were made
+to this file as well:</font></p>
+<blockquote>
+  <ol>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">A 60-character short description
+  replaces the 20-character name;</font></li>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">The nutrients magnesium, zinc, copper,
+  manganese, selenium, vitamin B<sub>6</sub>, pantothenic acid, folate, vitamin
+  B<sub>12</sub>, and vitamin E were added; and</font></li>
+    <li>
+      <p ALIGN="LEFT"><font face="Arial">In the Gram Weight File, only the first
+  two weights and their description for each NDB No. are included, which may not
+  be the same two weights published in previous releases.</font></li>
+  </ol>
+  <font FACE="Times New Roman">
+  </blockquote>
+</font>
+<p ALIGN="LEFT"><font face="Arial">Table 11. Abbreviated File Format</font></p>
+<table border="1" cellpadding="3" cellspacing="0" bordercolor="#000000">
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">NDB No.&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> 5-digit Nutrient Data Bank
+number</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+                  <p ALIGN="LEFT"><font face="Arial">Shrt_Desc&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+                  <p ALIGN="LEFT"><font face="Arial"> A 60&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td><p ALIGN="LEFT"><font face="Arial"> 60-character
+                  abbreviated description of food item *</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Water&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Water (g/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Energ_Kcal&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Food energy (kcal/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Protein&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Protein (g/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Tot_Lipid&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Total lipid (fat; g/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Carbohydrt&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Carbohydrate, by difference
+(g/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Fiber_TD&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Total dietary fiber (g/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Ash&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Ash (g/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Calcium&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Calcium (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Phosphorus&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Phosphorus (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Iron&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Iron (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Sodium&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Sodium (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Potassium&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Potassium (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Magnesium&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Magnesium (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Zinc&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Zinc (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Copper&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Copper (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Manganese&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Manganese (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Selenium&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Selenium (mcg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Vit_A&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Vitamin A (IU/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Vit_E&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Vitamin E (mg alpha-tocopherol
+equivalents)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Thiamin&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Thiamin (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Riboflavin&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Riboflavin (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Niacin&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Niacin (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Panto_acid&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Pantothenic acid (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Vit_B6&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Vitamin B<sub>6</sub> (mg/100
+g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Folate&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Folate (mcg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Vit_B12&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Vitamin B<sub>12</sub> (mcg
+per 100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Vit_C&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Vitamin C (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">FA_Sat&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Saturated fatty acid (g/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">FA_Mono&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Monounsaturated fatty acids
+(g/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">FA_Poly&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Polyunsaturated fatty acids
+(g/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Cholestrl&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> N 10.3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Cholesterol (mg/100 g)</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+                  <p ALIGN="LEFT"><font face="Arial">GmWt_1&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+                  <p ALIGN="LEFT"><font face="Arial"> N 9.2&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td><p ALIGN="LEFT"><font face="Arial"> First
+                  household weight for this item from the Gram Weight File **</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">GmWt_Desc1&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 120&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Description of household
+weight number 1</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+                  <p ALIGN="LEFT"><font face="Arial">GmWt_2&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+                  <p ALIGN="LEFT"><font face="Arial"> N 9.2&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td><p ALIGN="LEFT"><font face="Arial"> Second
+                  household weight for this item from the Gram Weight File**</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">GmWt_Desc2&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 120&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Description of household
+weight number 2</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td><p ALIGN="LEFT"><font face="Arial">Refuse_Pct&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td><p ALIGN="LEFT"><font face="Arial"> N 2.0&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td><p ALIGN="LEFT"><font face="Arial"> Percent refuse ***</font></p>
+    </td>
+  </tr>
+</table>
+<p ALIGN="LEFT"><font face="Arial">* 200-character description and other
+descriptive information can be obtained by linking to the Food Description File.</font></p>
+  <p ALIGN="LEFT"><font face="Arial">** For the complete list and description of
+  the measure, link to the Gram Weight and Measure Description files.</font></p>
+<p ALIGN="LEFT"><font face="Arial">*** For a description of refuse, link to the
+Food Description File.</font></p>
+<p ALIGN="LEFT"><b><font face="Arial"><a name="Update">Update</a> Files</font></b><font face="Arial"><i>.
+</i>These update files provide changes made between Release 12 and Release 13.
+If you are using an earlier release, you will need to first obtain those files,
+which are available on NDL's Home Page (http://www.nal.usda.gov/fnic/foodcomp),
+and update your database to Release 12, before using the change files here.
+Update files in ASCII and DBF are provided for those users who reformatted
+previous releases for their systems and wish to do their own updates. Items
+added to this release do not have corresponding pages in Agriculture Handbook 8.
+</font>
+<font FACE="Times New Roman">
+&nbsp;</font><font face="Arial">Added items are given in seven files:</font></p>
+<ul>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">ADD_FOOD for descriptions of the new items,</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">ADD_NUTR for the nutrient data,</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">ADD_WGT for the gram weight data,</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">ADD_FTNT for the footnotes,</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">ADD_FDGP for the Food Group File,</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">ADD_MSRE for the Measure Description File,
+and</font></li>
+  <li>
+    <p ALIGN="LEFT"><font face="Arial">ADD_NDEF for the Nutrient Definition File.</font></li>
+</ul>
+<p ALIGN="LEFT"><font face="Arial">These files are in the same formats as the
+Food Description File, the Nutrient Data File, the Gram Weight File, the Measure
+Description File, the Footnote File, and the Nutrient Definition File.</font></p>
+<font FACE="Times New Roman">
+</font>
+<p ALIGN="LEFT"><font face="Arial">Three files contain changes made since SR 12.
+CHG_FOOD contains records having changes in the descriptive information for a
+food item. CHG_NUTR contains changes to nutrient values, standard errors, or
+counts. If the nutrient value, number of samples, or standard error changed, the
+entire record is included. CHG_FDGP contains changes in the Food Group File.
+CHG_MSRE contains changes in the Measure Description File. These files are in
+the same format as the Food Description, Nutrient Data, Gram Weight, Food Group
+Definition, and Nutrient Definition files. The 11 update files are provided in
+ASCII and DBF formats.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Food items that were deleted from the
+database are given in the file DEL_FOOD (table 12). In some cases, nutrient
+values were removed. These records are in the file DEL_NUTR (table 13) The file
+DEL_WGT (table 14) contains deleted household weights. The file DEL_MSRE (table
+15) contains household measures removed from the database because either the
+corresponding household weight or food item was also removed.</font></p>
+<p ALIGN="LEFT"><font face="Arial">Update files in ASCII and DBF are also
+provided for the Abbreviated File. The file CHG_ABBR contains records for food
+items where a food description, household weight, refuse value, or nutrient
+value was added, changed, or deleted since SR12. This file is in the same format
+as the Abbreviated file. DEL_ABBR contains food items that were removed from the
+database; it is in the same format as DEL_FOOD. ADD_ABBR contains food items
+added since SR12; it is also in the same format as the Abbreviated File.</font></p>
+<font FACE="Times New Roman">
+</font><b>
+<p ALIGN="LEFT"><font face="Arial">Table 12. Foods Deleted Format</font></b><font FACE="Times New Roman">&nbsp;</p>
+</font>
+<table border="1" cellpadding="4" cellspacing="0" bordercolor="#000000">
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">NDB_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> 5-digit unique number
+identifying deleted item</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Shrt_Desc&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 60&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> 60-character abbreviated
+description of food item</font></p>
+    </td>
+  </tr>
+</table>
+<font FACE="Times New Roman">
+<p ALIGN="LEFT">&nbsp;</font><b><font face="Arial">Table 13. Nutrients Deleted Format</font></p>
+</b>
+<table border="01" cellpadding="4" cellspacing="0" bordercolor="#000000">
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+<p ALIGN="LEFT"><font face="Arial">NDB_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> 5-digit
+                      unique number identifying the item that contains the
+                      deleted nutrient record</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+<p ALIGN="LEFT"><font face="Arial">Nutr_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 3&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Nutrient number of deleted
+record</font></p>
+    </td>
+  </tr>
+</table>
+<font FACE="Times New Roman">
+</font><b>
+<p ALIGN="LEFT"><font face="Arial">Table 14. Weights Deleted Format</font></p>
+</b>
+<table border="1" cellpadding="04" cellspacing="0" bordercolor="#000000" height="120">
+  <tr>
+    <td height="18">
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td height="18">
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td height="18">
+<p ALIGN="LEFT"><font face="Arial"> Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td height="18">
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" height="36">
+<p ALIGN="LEFT"><font face="Arial">NDB_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td height="36">
+<p ALIGN="LEFT"><font face="Arial"> A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td height="36">
+<p ALIGN="LEFT"><font face="Arial"> No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td height="36">
+<p ALIGN="LEFT"><font face="Arial"> 5-digit
+                      unique number identifying the item that contains the
+                      deleted nutrient record</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" height="36">
+<p ALIGN="LEFT"><font face="Arial">Msre_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td height="36">
+<p ALIGN="LEFT"><font face="Arial"> A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td height="36">
+<p ALIGN="LEFT"><font face="Arial"> No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td height="36">
+<p ALIGN="LEFT"><font face="Arial"> Unique
+                      code in the Measure Description File referencing the
+description</font></p>
+    </td>
+  </tr>
+</table>
+<b>
+<p ALIGN="LEFT"><font face="Arial">Table 15. Measures Deleted Format</font></p>
+</b>
+<table border="1" cellpadding="04" cellspacing="0" bordercolor="#000000">
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">Field Name&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Type&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Blank&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+<p ALIGN="LEFT"><font face="Arial">Msre_No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 5*&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Unique
+                      code in the Measure Description File referencing the
+                      description</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+<p ALIGN="LEFT"><font face="Arial">Msre_Desc&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> A 120&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> No&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">
+                      Description of the deleted measure.</font></p>
+    </td>
+  </tr>
+</table>
+<p ALIGN="LEFT"><b><font face="Arial"><a name="ref">REFERENCES</a></font></b><font FACE="Times New Roman">&nbsp;</p>
+</font>
+<blockquote>
+  <p ALIGN="LEFT"><font face="Arial">Adams, C.F. 1975. Nutritive value of
+  American foods in common units. U.S. Department of Agriculture, Agricultural
+  Handbook No. 456.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Association of Official Analytical
+  Chemists. 1995. Official methods of analysis, 16th ed. AOAC, Arlington, VA.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Beecher, G.R., and R.H. Matthews. 1990.
+  Nutrient composition of foods. <i>In</i> M.L. Brown, ed., Present Knowledge in
+  Nutrition, pp. 430-439. International Life Sciences Institute, Washington, DC.</font></p>
+  <p ALIGN="LEFT"><font face="Arial">Fulton, L., E. Matthews, and C. Davis.
+  1977. Average weight of a measured cup of various foods. U.S. Department of
+  Agriculture, Home Economics Research Report 41.</font></p>
+  <p ALIGN="LEFT"><font face="Arial">Jones, D.B. 1941. Factors for converting
+  percentages of nitrogen in foods and feeds into percentages of protein. U.S.
+  Department of Agriculture, Circular No. 83, slight revision.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Klensin, J.C., D. Feskanich, V. Lin, A.S.
+  Truswell, and D.A.T. Southgate. 1989. Identification of food components for
+  INFOODS data interchange. United Nations University, Tokyo.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Kubota, J. and Allaway, W.H. 1972.
+  Geographic Distribution of Trace Element Problems. <u>In</u> Micronutrients in
+  Agriculture: Proceedings of Symposium held at Muscle Shoals, Alabama. Editor:
+  J.J. Mortvedt. Soil Science Society of America. Madison, Wisconsin. p525-554.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Liem, I.I.H., K.H. Steinkraus, and J.C.
+  Cronk. 1977. Production of vitamin B<sub>12</sub> in tempeh; a fermented
+  soybean food. Applied Environmental Microbiology. 34:773-776.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Livesay, G. and E. Marinos. 1988,
+  Estimation of Energy Expenditure, Net Carbohydrate Utilization, and Net Fat
+  Oxidation and Synthesis by Indirect Calorimetry: Evaluation of Errors with
+  Special Reference to the Detailed Composition of Fuels. American Journal of
+  Clinical Nutrition. 47:608-628.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Martin, J.I., W.O. Landed, A.M. Soliman,
+  and R.R. Eitenmiller. 1990. Application of a tri-enzyme extraction for total
+  folate determination in foods. Journal of the Association of Analytical
+  Chemistry 73:805-808.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Matthews, R.H., and Y.J. Garrison. 1975.
+  Food yields summarized by different stages of preparation. U.S. Department of
+  Agriculture, Agriculture Handbook No. 102.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Merrill, A.L., and B.K. Watt. 1973. Energy
+  value of foods: basis and derivation, revised. U.S. Department of Agriculture,
+  Agriculture Handbook No. 74.</font></p>
+</blockquote>
+<font FACE="Times New Roman">
+</font>
+<blockquote>
+  <p ALIGN="LEFT"><font face="Arial">Murphy, E.W., P.E. Criner, and B.C. Gray.
+  1975. Comparison of methods for determining retentions of nutrients in cooked
+  foods. Journal of Agriculture and Food Chemistry. 23:1153.</font></p>
+  <p ALIGN="LEFT"><font face="Arial">National Academy of Sciences, National
+  Research Council. 1989. Recommended dietary allowances, 10th ed. National
+  Academy Press, Washington, DC.</font></p>
+  <p ALIGN="LEFT"><font face="Arial">Office of the Federal Register, National
+  Archives and Records Administration. 1998. Code of Federal Regulations. Title
+  21, Parts 100 to 169. Washington, DC.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Schakel, S.F., Buzzard, I.M., and Gebhardt,
+  S.E. 1997. Procedures for estimating nutrient values in food composition
+  databases. Journal of Food Composition Analysis 10:102-114</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1976. Composition of foods: dairy and egg
+  products; raw, processed, prepared. Agriculture Handbook No. 8-1.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1977. Composition of foods: spices and herbs;
+  raw, processed, prepared. Agriculture Handbook No. 8-2.</font></p>
+  <font FACE="Times New Roman">
+  <p ALIGN="LEFT">&nbsp;</font><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1978. Composition of food: baby foods; raw,
+  processed, prepared. Agriculture Handbook No. 8-3.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1979. Composition of foods: fats and oils; raw,
+  processed, prepared. Agriculture Handbbook No. 8-4.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1979. Composition of foods: poultry products;
+  raw, processed, prepared. Agriculture Handbook No. 8-5.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1980. Composition of foods: soups, sauces, and
+  gravies; raw, processed, prepared. Agriculture Handbook No. 8-6.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1980. Composition of foods: sausages and
+  luncheon meats; raw, processed, prepared. Agriculture Handbook No. 8-7.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1982. Composition of foods: breakfast cereals;
+  raw, processed, prepared. Agriculture Handbook No. 8-8.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1982. Composition of foods: fruits and fruit
+  juices; raw, processed, prepared. Agriculture Handbook No. 8-9.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1992. Composition of foods: pork products; raw,
+  processed, prepared. Agriculture Handbook No. 8-10.</font></p>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1984. Composition of foods: vegetables and
+  vegetable products; raw, processed, prepared. Agriculture Handbook No. 8-11.</font></p>
+</blockquote>
+<font FACE="Times New Roman">
+</font>
+<blockquote>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1984. Composition of foods: nut and seed
+  products; raw, processed, prepared. Agriculture Handbook No. 8-12.</font></p>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service, 1990. Composition of foods: beef products; raw,
+  processed, prepared. Agriculture Handbook No. 8-13.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service, 1986. Composition of foods: beverages; raw,
+  processed, prepared. Agriculture Handbook No. 8-14.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service, 1987. Composition of foods: finfish and
+  shellfish products; raw, processed, prepared. Agriculture Handbook
+  No.&nbsp;8-15.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service, 1986. Composition of foods: legumes and legume
+  products; raw, processed, prepared. Agriculture Handbook No. 8-16.</font></p>
+  <font FACE="Times New Roman">
+  <p ALIGN="LEFT">&nbsp;</font><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service, 1989. Composition of foods: lamb, veal, and
+  game products; raw, processed, prepared. Agriculture Handbook No. 8-17.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service, 1992. Composition of foods: baked products;
+  raw, processed, prepared. Agriculture Handbook No. 8-18.</font></p>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service, 1991. Composition of foods: snacks and sweets;
+  raw, processed, prepared. Agriculture Handbook No. 8-19.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service, 1989. Composition of foods: cereal grains and
+  pasta; raw, processed, prepared. Agriculture Handbook No. 8-20.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service, 1988. Composition of foods: fast foods; raw,
+  processed, prepared. Agriculture Handbook No. 8-21.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1990. Composition of foods: raw, processed,
+  prepared. Agriculture Handbook No. 8, 1989 Supplement.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1991. Composition of foods: raw, processed,
+  prepared. Agriculture Handbook No. 8, 1990 Supplement.</font></p>
+  <font FACE="Times New Roman">
+  </blockquote>
+</font>
+<blockquote>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1992. Composition of foods: raw, processed,
+  prepared. Agriculture Handbook No. 8, 1991 Supplement.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1993. Composition of foods: raw, processed,
+  prepared. Agriculture Handbook No. 8, 1992 Supplement.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture,
+  Agricultural Research Service. 1992. Provisional table on the selenium content
+  of foods. USDA, HNIS, PT-109.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture. 1998. USDA
+  table of nutrient retention factors, release&nbsp;4. Nutrient Data Laboratory
+  Home Page http://www.nal.usda.gov/fnic/foodcomp</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">U.S. Department of Agriculture. 1998. CSFII/DHKS
+  data set, documentation and technical support files: the 1994-96 Continuing
+  Survey of Food Intakes by Individuals and the 1994-96 Diet Health and
+  Knowledge Survey. National Technical Information Service, Springfield, VA. CD-ROM. PB98-500457</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Watt, Bernice K., and Annabel L. Merrill.
+  1963. Composition of foods: raw, processed, prepared. U.S. Department of
+  Agriculture, Agriculture Handbook No. 8.</font></p>
+  <p ALIGN="LEFT"><font face="Arial">Weihrauch, J.L., L.P. Posati, B.A.
+  Anderson, and J. Exler. 1977. Lipid conversion factors for calculating fatty
+  acid content of foods. Jorunal of the American Oil Chemists Society. 54:36B40.</font></p>
+  <font FACE="Times New Roman">
+  </font>
+  <p ALIGN="LEFT"><font face="Arial">Weihrauch, J.L and Tamaki, J. 1991.
+  Provisional Table on the Vitamin D Content of Foods. USDA, HNIS, PT-108</font></p>
+</blockquote>
+<p ALIGN="LEFT"><img border="0" src="../../images/redbar.png" width="800" height="16"></p>
+
+<p ALIGN="LEFT"><b><font face="Arial"><a name="app-a">Appendix</a>
+A. Abbreviations Used in Short Descriptions</font></b>&nbsp;</p>
+
+<table border="0" width="305" cellspacing="0">
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">All Purpose&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">ALLPURP</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Aluminum&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">AL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">And&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">&amp;</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Apple&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">APPL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Apples&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">APPLS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Applesauce&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">APPLSAUC</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Approximate&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">APPROX</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Approximately&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">APPROX</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Arm and Blade&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">ARM&amp;BLD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Artificial&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">ART</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Ascorbic Acid&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">VIT C</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Aspartame&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">ASPRT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Aspartame-sweetened&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">ASPRT-SWTND</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Babyfood&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BABYFD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Baked&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BKD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Barbequed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BBQ</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Based&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BSD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Beans&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BNS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Beef&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BF</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Beverage&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BEV</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Boiled&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BLD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Boneless&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BNLESS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Bottled&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BTLD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Bottom&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BTTM</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Braised&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BRSD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Breakfast&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BRKFST</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Broiled&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BRLD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Buttermilk&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">BTTRMLK</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Calcium&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CA</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Calorie, calories&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CAL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Canned&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CND</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Carbonated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CARB</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Center&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CNTR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Cereal&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CRL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Cheese&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CHS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Chicken&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CHICK</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Chocolate&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CHOC</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Choice&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CHOIC</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Cholesterol&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CHOL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Cholesterol-free&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CHOL-FREE</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Chopped&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CHOPD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Cinnamon&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CINN</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Coated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">COATD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Coconut&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">COCNT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Commercial&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">COMM</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Commercially&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">COMMLY</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Commodity&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CMDTY</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Composite&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">COMP</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Concentrate&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CONC</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Concentrated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CONCD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Condensed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">COND</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Condiment, condiments&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CONDMNT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Cooked&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CKD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Cottonseed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CTTNSD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Cream&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CRM</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Creamed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">CRMD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Dark&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">DK</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Decorticated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">DECORT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Dehydrated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">DEHYD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Dessert, desserts&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">DSSRT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Diluted&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">DIL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Domestic&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">DOM</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Drained&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">DRND</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Dressing&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">DRSNG</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Drink&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">DRK</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Drumstick&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">DRUMSTK</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">English&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">ENG</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Enriched&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">ENR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Equal&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">EQ</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Evaporated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">EVAP</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Except&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">XCPT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Extra&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">EX</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Flank steak&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">FLANKSTK</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Flavored&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">FLAV</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Flour&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">FLR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Food&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">FD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Fortified&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">FORT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">French fried&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">FRENCH FR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">French fries&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">FRENCH FR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Fresh&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">FRSH</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Frosted&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">FRSTD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Frosting&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">FRSTNG</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Frozen&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">FRZ</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Grades&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">GRDS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Gram&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">GM</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Green&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">GRN</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Greens&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">GRNS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Heated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">HTD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Heavy&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">HVY</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Hi-meat&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">HI-MT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">High&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">HI</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Hour&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">HR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Hydrogenated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">HYDR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Imitation&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">IMITN</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Immature&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">IMMAT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Imported&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">IMP</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Include, includes&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">INCL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Including&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">INCL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Infant formula&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">INF FORMULA</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Ingredient&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">ING</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Instant&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">INST</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Juice&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">JUC</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Junior&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">JR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Kernels&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">KRNLS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Large&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">LRG</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Lean&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">LN</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Lean only&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">LN</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Leavened&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">LVND</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Light&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">LT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Liquid&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">LIQ</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Low&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">LO</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Low Fat&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">LOFAT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Marshmallow&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">MARSHMLLW</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Mashed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">MSHD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Mayonnaise&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">MAYO</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Medium&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">MED</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Mesquite&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">MESQ</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Minutes&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">MIN</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Mixed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">MXD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Moisture&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">MOIST</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Natural&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">NAT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">New Zealand&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">NZ</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Nonfat Dry Milk&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">NFDM</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Nonfat Dry Milk Solids&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">NFDMS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Nonfat Milk Solids&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">NFMS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Noncarbonated</font></td>
+    <td width="94"><font face="Arial">NONCARB</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Not Further Specified</font></td>
+    <td width="94"><font face="Arial">NFS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Nutrients&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">NUTR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Nutrition&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">NUTR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Ounce&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">OZ</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Pack&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PK</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Par fried&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PAR FR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Parboiled&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PARBLD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Partial&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PART</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Partially&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PART</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Partially fried&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PAR FR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Pasteurized&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PAST</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Peanut&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PNUT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Peanuts&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PNUTS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Phosphate&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PO4</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Phosphorus&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">P</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Pineapple&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PNAPPL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Plain&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PLN</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Porterhouse&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PRTRHS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Potassium&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">K</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Powder&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PDR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Powdered&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PDR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Precooked&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PRECKD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Preheated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PREHTD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Prepared&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PREP</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Processed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PROC</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Product code&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PROD CD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Propionate&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PROP</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Protein&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PROT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Pudding, puddings&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">PUDD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Ready-to-bake&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RTB</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Ready-to-cook&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RTC</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Ready-to-drink&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RTD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Ready-to-eat&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RTE</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Ready-to-feed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RTF</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Ready-to-heat&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RTH</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Ready-to-serve&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RTS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Ready-to-use&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RTU</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Reconstituted&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RECON</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Reduced&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RED</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Reduced-calorie&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RED-CAL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Refrigerated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">REFR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Regular&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">REG</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Reheated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">REHTD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Replacement&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">REPLCMNT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Restaurant-prepared&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">REST-PREP</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Retail&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RTL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Roast&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RST</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Roasted&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RSTD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Round&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">RND</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Sandwich&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SNDWCH</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Sauce&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SAU</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Scalloped&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SCALLPD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Scrambled&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SCRMBLD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Seed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Select&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SEL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Separable<sup>1</sup></font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Shank and sirloin&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SHK&amp;SIRL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Short&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SHRT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Shoulder&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SHLDR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Simmered&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SIMMRD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Skin&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SKN</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Small&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SML</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Sodium&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">NA</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Solids&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SOL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Solution&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SOLN</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Soybean&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SOYBN</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Special&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SPL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Species&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SP</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Spread&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SPRD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Standard&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">STD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Steamed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">STMD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Stewed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">STWD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Stick&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">STK</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Sticks&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">STKS</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Strained&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">STR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Substitute&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SUB</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Summer&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SMMR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Supplement&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SUPP</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Sweet&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SWT</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Sweetened&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SWTND</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Sweetener&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">SWTNR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Teaspoon&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">TSP</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Thousand&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">1000</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Toasted&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">TSTD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Toddler&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">TODD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Trimmed<sup>1</sup></font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Trimmed to<sup>1</sup></font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Uncooked&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">UNCKD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Uncreamed&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">UNCRMD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Undiluted&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">UNDIL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Unenriched&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">UNENR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Unheated&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">UNHTD</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Unprepared&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">UNPREP</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Unspecified&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">UNSPEC</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Unsweetened&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">UNSWTND</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Variety, varieties&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">VAR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Vegetable, vegetables&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">VEG</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Vitamin A&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">VIT A</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Vitamin C&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">VIT C</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Water&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">H20</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Whitener&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">WHTNR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Whole&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">WHL</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Winter&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">WNTR</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">With&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">W/</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Without&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">WO/</font></td>
+  </tr>
+  <tr>
+    <td width="188"><p ALIGN="LEFT"><font face="Arial">Yellow&nbsp;&nbsp; </font></td>
+    <td width="118"><p ALIGN="LEFT"><font face="Arial">YEL</font></td>
+  </tr>
+</table>
+
+<p><sup>1</sup> Removed in short description<b></p>
+
+<p><a href="#top">Top</a></p>
+
+<p ALIGN="LEFT"><img border="0" src="../../images/redbar.png" width="800" height="16"></p>
+
+<p ALIGN="LEFT"><font face="Arial"><a name="app-b">Appendix</a> B. Other Abbreviations</font></b><font FACE="Times New Roman">&nbsp;</p>
+</font>
+<table border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">ap&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> as purchased</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">approx&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> approximately</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">ARS&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Agricultural Research Service</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">ate&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">alpha-tocopherol equivalent</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">dia&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> diameter</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">fl oz&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> fluid ounce</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">g&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> gram</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">IU&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> international unit</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">kcal&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> kilocalorie</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">kJ&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> kilojoule</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">lb&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> pound</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">mcg&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> microgram</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">mg&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> milligram</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">ml&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> milliliter</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">NDB&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Nutrient Data Bank</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">NDL&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> Nutrient Data Laboratory</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">NFS&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> not further specified</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">NS&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> not specified</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">oz&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> ounce</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p ALIGN="LEFT"><font face="Arial">RE&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+    <td>
+<p ALIGN="LEFT"><font face="Arial"> retinol equivalent</font></p>
+    </td>
+  </tr>
+</table><a href="/baddream/rickr/">.</a><a
+href="mailto:marina@aardvark.wsrcc.com">.</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+cd /usr/local/etc/httpd/icons 
+files="`ls *.gif`"
+
+echo "files: $files"
+
+cd /usr/pkg/www/icons
+for file in $files
+do
+    if [ ! -f $file ]
+    then
+	echo cp /usr/local/etc/httpd/icons/$file $file 
+    fi
+done
+
+

@@ -1,0 +1,13 @@
+;calculation of lambda for C_8KH_{0.19}
+(setq tc 0.22)
+(setq theta_D 403)
+(log (/ theta_D (* 1.45 tc)))
+7.142
+lambda_{e-p} = (/ (+ 1.04 (* 0.1 7.142)) (- (* (- 1.0 0.062) 7.142) 1.04))
+0.31 ;same as for C_8KH_{0.05}
+Suppose (setq theta_D 390)
+(log (/ theta_D (* 1.45 tc)))
+7.109
+lambda_{e-p} = (/ (+ 1.04 (* 0.1 7.109)) (- (* (- 1.0 0.062) 7.109) 1.04))
+0.3111
+

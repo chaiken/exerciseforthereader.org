@@ -1,0 +1,136 @@
+/* GRM's slide stylesheet */
+/* http://shallowsky.com/blog/tech/web/html-slide-scaling.html
+If you get stuck on an 800x600 projector, use these:
+  zoom: 78.125%;
+  position: absolute; left: 0px; top: 0px;
+  -moz-transform: scale(.78125, .78125);
+   */
+
+
+body {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+img.logo {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+p, img {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    padding-top: 0ex; 
+    padding-bottom: 0ex; 
+}
+
+h1.title {
+  text-align: center;
+  font-size: 36px;
+  padding-top: 1ex; 
+  background: #e8f0ff;
+
+}
+
+h1.logo {
+  text-align: center;
+  font-size: 36px;
+  padding-top: 1ex; 
+
+  /* Stop us hitting the logo */
+  padding-left: 230px;
+  padding-right: 230px;
+
+}
+
+h2 {
+  text-align: center;
+  font-size: 26px;
+  padding-top: 1ex; 
+  color: blue;
+
+}
+
+p.spaced {
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+
+div, li, p, h1, td {
+  font-family: "Helvetica", "Helv", sans-serif;
+}
+
+div, li, p, td, pre {
+  font-size: 22px;
+}
+
+.note {
+  font-size: 20px;
+}
+
+li {
+  list-style-type: square;
+  padding-top: 0.4ex;
+  padding-bottom: 0.4ex;
+}
+
+ul {
+  padding-top: 0.5ex;
+}
+
+/* List class for using a smaller font */
+ul.smaller {
+  padding-top: 2ex;
+  padding-bottom: 0ex;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+ul.smaller li {
+  font-size: 16px;
+}
+
+/* List class with more space between list items */
+ul.spaced li {
+  margin-bottom: 20px;
+}
+
+/* Non-structural table - horizontal lines between rows */
+table.tabular thead tr td {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+}
+
+table.tabular tbody tr td {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px black solid;
+}
+
+ ul.spaced {
+  margin-top: 3em;
+} 
+
+ ul.center {
+  margin-top: 3em;
+} 
+
+ div.center {
+  margin-top: 2em;
+} 
+
+.center {
+  text-align: center;
+}
+
+#navigation {
+  display: none;
+}
+
+em {
+    color: blue;
+    font-style: italic;
+}

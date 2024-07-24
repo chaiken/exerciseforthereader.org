@@ -1,0 +1,113 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;									     ;;
+;;	File:     hydprop.record					     ;;
+;;	Author:   Alison Chaiken					     ;;
+;;	Created:  Thu Jun  2 15:54:24 EDT 1988				     ;;
+;;	Contents: properties of the hydrogenated alkali--metal GIC's.        ;;
+;;                References are in ~/thesis/calc/ref.txt.                   ;;
+;;									     ;;
+;;	Copyright (c) 1988 Alison Chaiken.				     ;;
+;;	All rights reserved.						     ;;
+;;									     ;;
+;;	$Log$								     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+a-axis resistivity:
+Compound               Temp.               Resistivity               Ref.
+--------               -----               -----------               ----
+C_4KH_x                300 K               47.6 microohm-cm           98
+C_4KH_x                300 K               40 microohm-cm             13
+C_4KH_x                77 K                14 microohm-cm             13
+C_4KH_x                4.2 K               8.3 microohm-cm            13
+C_4KH_x                4.2 K               1.45 microohm-cm           98
+C_8KH_{2/3}            300 K               40 microohm-cm             28
+C_8KH_x                300 K               17 microohm-cm             13
+C_8KH_x                77  K               5.5 microohm-cm            13
+C_8KH_x                4.2 K               1.4 microohm-cm            13
+C_{12}KH_x             300 K               11 microohm-cm             13
+C_{12}KH_x             77  K               2.6 microohm-cm            13
+
+c-axis resistivity: 170 milliohm-cm at 300 K in C_4KH_x [Ref. 94]
+
+resistivity anisotropy:
+In C_4KH_{0.8} at 300 K = 1400 [Ref. 39]
+In C_4KH_{0.8} at 300 K = 3560 [Ref. 98]
+
+gamma = linear specific heat coefficient:
+C_8KH_{0.05} (0.89 p/m 0.01) mJ/(K^2 * mol)  [Grafoil;chem.;St.I] [Ref. 17]
+C_8KH_{0.65} (0.46 p/m 0.01) mJ/(K^2 * mol)  [Grafoil;chem.;St.II] [Ref. 17]
+C_8RbH_{0.05} (0.78 p/m 0.01) mJ/(K^2 * mol) [Grafoil;chem.;St.I] [Ref. 17]
+
+Density of states at E_F:
+The following values of DOS are per C atom and are uncorrected for
+non-zero electron-phonon coupling:
+C_8KH_{0.05}          0.38 states/(eV * C-atom)  [Grafoil;chem;St.I] [Ref. 17]
+C_8KH_{0.65}          0.20 states/(eV * C-atom)  [Grafoil;chem;St.II] [Ref. 17]
+C_8RbH_{0.05}         0.33 states/(eV * C-atom)  [Grafoil;chem;St.I] [Ref. 17]
+Ref. 55 gives DOS as 0.34 of C_8K DOS, so using (* 0.34 0.4) = 0.136:
+C_8KH_{0.66}          0.14 states/(eV * C-atom) [Grafoil;chem;St.II] [Ref. 55]
+C_4KH_{0.8}           0.24 states/(eV * C-atom) [HOPG;KHpowder;stI] [Ref. 80]
+C_8KH_{0.8}           0.06 states/(eV * C-atom) [HOPG;KHpowder;stII] [Ref. 80]
+Now correct for non-zero electron-phonon coupling:
+C_8KH_{0.05}          0.29 states/(eV * C-atom)  [Ref. 17]
+C_8KH_{0.65}          0.10 states/(eV * C-atom)  [Ref. 17]
+[Not given for Rb compound]
+Now change to "per atom" rather than "per C-atom":
+(* 0.29 (/ 8.0 9.05))
+0.2564 ;for C_8KH_{0.05}
+(* 0.10 (/ 8 9.65))
+0.0829 ;for C_8KH_{0.65}
+(* 0.33 (/ 8.0 9.05))
+2.9171e-01 ;for C_8RbH_{0.05}
+
+Hydrogen DOS(E_F):
+C_8KH_{0.55}   N_H(E_F) = 0.014 states/(eV * spin * H-atom) [Ref. 22]
+C_8KH_{0.58}   N_H(E_F) = 6e-3 states/(eV * spin * H-atom) [Ref. 52][HOPG;chem]
+C_4KH_{0.8}    N_H(E_F)/N_{Total}(E_F) = 2e-2 [Ref. 39]
+C_8KH_x        N_H(E_F) = 0 [Ref. 53]  [Grafoil; chem.]
+
+Debye Temperature:
+C_8KH_{0.05}     403 K     [Ref. 17]  [Grafoil;chem.;St.I]
+C_8KH_{0.65}     350.3 K   [Ref. 17]  [Grafoil;chem.;St.II]
+C_8RbH_{0.05}    319.1 K   [Ref. 17]  [Grafoil;chem.;St.I]
+
+E_{2g2} Raman frequency:
+For C_4KH_{0.8}, (st. I, HOPG), 1596 cm^-1 [Ref. 83]
+For C_4KH_x (st. I, fiber), 1596 cm^-1 [Ref. 81]
+For C_8KH_x (st. II, fiber), 1598 cm^-1 [Ref. 81]
+For C_8KH_{0.8} (st. II, HOPG), 1598 cm^-1 [Ref. 83]
+
+Lambda, the electron-phonon coupling parameter:
+C_8KH_{0.05}     lambda = 0.31 [Ref. 17]
+C_8KH_{0.65}     lambda = 0.87 [Ref. 17]
+
+Carbon-Carbon bond length:
+In C_4KH_{0.8}, a = a_0 + (0.87 p/m 0.10)e-2 Angstroms [Ref. 40]
+
+Fermi wave vector:
+In C_4KH_{0.8}, for electrons, k_F = 3.8e7 /cm [Ref. 39]
+In C_8KH_{0.8}, for electrons, k_F = 2.2e7 /cm [Ref. 39]
+In both compounds, for holes, k_F = 5.3e5 /cm [Ref. 39]
+
+Charge transfer per C-atom:
+In  C_4KH_{0.8}, f_C = 0.08 [Ref. 40] (I cannot find this number here! origin not known)
+                     = 0.02 [Ref. 80]
+                     = 0.052 [Ref. 83]
+
+In C_8KH_{0.8}, f_C = 0.033 [Ref. 80]
+                    = 0.025 [Ref. 82]
+                    = 0.026 [Ref. 83] 
+
+Fermi energy:
+C_4KH_{0.8}     0.65 eV [Ref. 80]
+C_4KH_{0.8}     0.89 eV [Ref. 82]
+C_4KH_{0.8}     1.62-1.53  eV [Ref. 83]
+C_8KH_{0.8}     1.15 eV [Ref. 80]
+C_8KH_{0.8}     1.13 eV [Ref. 83]
+
+Plasma frequency:
+For C_4KH_{0.8}, 3.31 eV [Ref. 83]
+For C_8KH_{0.8}, 3.26 eV [Ref. 83]
+
+Carrier density:
+For C_4KH_{0.8}, n = 2.24e21/cm^3 [Ref. 97]

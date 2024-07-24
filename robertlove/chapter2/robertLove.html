@@ -1,0 +1,1161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>robertLove</title>
+</head>
+<body>
+<h1>Linux Kernel Process Management</h1>
+<div id="prodInfo">
+<ul>
+  <li>By <a href="http://www.informit.com/authors/bio.asp?a=43e55cd3-67cd-44f2-ba50-5c66cd21abb1">Robert Love</a>.</li>
+  <li>Sample Chapter is provided courtesy of <a href="http://www.samspublishing.com/">Sams</a>.</li>
+  <li>Date: Apr 15, 2005.</li>
+</ul>
+</div>
+<h3></h3>
+<h3>Contents</h3>
+<ol>
+  <li>Process Descriptor and the Task Structure</li>
+  <li><a href="http://www.informit.com/articles/article.asp?p=370047&amp;seqNum=2">Process Creation</a></li>
+  <li><a href="http://www.informit.com/articles/article.asp?p=370047&amp;seqNum=3">The Linux Implementation of Threads</a></li>
+  <li><a href="http://www.informit.com/articles/article.asp?p=370047&amp;seqNum=4">Process Termination</a></li>
+  <li><a href="http://www.informit.com/articles/article.asp?p=370047&amp;seqNum=5">Process Wrap Up</a></li>
+</ol>
+<div nd="1" id="intro">
+<h3>Article Description</h3>
+This
+chapter looks at the famed operating system abstraction of the process.
+Topics covered include the generalities of the process, why it is
+important, and the relationship between processes and threads.
+Specifically, this chapter covers how Linux stores and represents
+processes. </div>
+<div class="fromBook">
+<p nd="2">The <em>process</em> is one of the fundamental abstractions in Unix operating
+  systems<sup><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/fn1.html')">1</a></sup>. A process is a program (object code
+  stored on some media) in execution. Processes are, however, more than just
+  the executing program code (often called the <em>text section</em> in Unix).
+  They also include a set of resources such as open files and pending signals,
+  internal kernel data, processor state, an address space, one or more <em>threads
+  of execution, </em>and<em> </em>a <em>data section</em> containing global variables.
+  Processes, in effect, are the living result of running program code.</p>
+
+<p nd="3">Threads of execution, often shortened to <em>threads</em>, are the objects of
+  activity within the process. Each thread includes a unique program counter,
+  process stack, and set of processor registers. The kernel schedules individual
+  threads, not processes. In traditional Unix systems, each process consists
+  of one thread. In modern systems, however, multithreaded programs&mdash;those
+  that consist of more than one thread&mdash;are common. As you will see later,
+  Linux has a unique implementation of threads: It does not differentiate between
+  threads and processes. To Linux, a thread is just a special kind of process.</p>
+
+<p nd="4">On modern operating systems, processes provide two virtualizations: a virtualized
+  processor and virtual memory. The virtual processor gives the process the illusion
+  that it alone monopolizes the system, despite possibly sharing the processor
+  among dozens of other processes. Chapter 4, "Process Scheduling," discusses
+  this virtualization. Virtual memory lets the process allocate and manage memory
+  as if it alone owned all the memory in the system. Virtual memory is covered
+  in Chapter 11, "Memory Management." Interestingly, note that threads <em>share</em> the
+  virtual memory abstraction while each receives its own virtualized processor.</p>
+
+<p nd="5">A program itself is not a process; a process is an <em>active</em> program and
+  related resources. Indeed, two or more processes can exist that are executing
+  the <em>same</em> program. In fact, two or more processes can exist that share
+  various resources, such as open files or an address space.</p>
+
+<p nd="6">A process begins its life when, not surprisingly, it is created. In Linux,
+  this occurs by means of the <tt>fork()</tt> system call, which creates a new
+  process by duplicating an existing one. The process that calls <tt>fork()</tt> is
+  the <em>parent,</em> whereas the new process is the <em>child</em>. The parent
+  resumes execution and the child starts execution at the same place, where the
+  call returns. The <tt>fork()</tt> system call returns from the kernel twice:
+  once in the parent process and again in the newborn child.</p>
+
+<p nd="7">Often, immediately after a fork it is desirable to execute a new, different,
+  program. The <tt>exec</tt>*<tt>()</tt> family of function calls is used to
+  create a new address space and load a new program into it. In modern
+  Linux kernels, <tt>fork()</tt> is actually implemented via the <tt>clone()</tt> system
+  call, which is discussed in a following section.</p>
+
+<p nd="8">Finally, a program exits via the <tt>exit()</tt> system call. This function
+  terminates the process and frees all its resources. A parent process can inquire
+  about the status of a terminated child via the <tt>wait4()</tt><sup><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/fn2.html')">2</a></sup> system
+  call, which enables a process to wait for the termination of a specific process.
+  When a process exits, it is placed into a special zombie state that is used
+  to represent terminated processes until the parent calls <tt>wait()</tt> or <tt>waitpid()</tt>.</p>
+
+<p nd="9">Another name for a process is a <em>task</em>. The Linux kernel internally refers
+  to processes as tasks. In this book, I will use the terms interchangeably,
+  although when I say <em>task</em> I am generally referring to a process from
+  the kernel's point of view.</p>
+
+<h2>Process Descriptor and the Task Structure</h2>
+
+<p nd="10">The kernel stores the list of processes in a circular doubly linked list
+called the <em>task list<sup><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/fn3.html')">3</a></sup></em>. Each element in the task list is a
+<em>process descriptor </em>of the type <tt>struct task_struct</tt>, which is
+defined in <tt>&lt;linux/sched.h&gt;</tt>. The process descriptor contains all
+the information about a specific process.</p>
+
+<p nd="11">The <tt>task_struct</tt> is a relatively large data structure, at around 1.7
+kilobytes on a 32-bit machine. This size, however, is quite small considering
+that the structure contains all the information that the kernel has and needs
+about a process. The process descriptor contains the data that describes the
+executing program&mdash;open files, the process's address space, pending
+signals, the process's state, and much more (see <a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/03fig01.jpg')">Figure
+3.1</a>).</p>
+
+<div class="figure">
+<a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/03fig01.jpg')">
+<img src="http://www.informit.com/content/images/chap3_0672327201/elementLinks/th03fig01.jpg" alt="Figure 3.1"></a>
+<p><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/03fig01.jpg')">Figure
+3.1</a> The process descriptor and task list.</p>
+
+</div>
+
+<h3>Allocating the Process Descriptor</h3>
+<p nd="12">The <tt>task_struct</tt> structure is allocated via the <em>slab allocator
+</em>to provide object reuse and cache coloring (see Chapter 11, "Memory
+Management"). Prior to the 2.6 kernel series, <tt>struct task_struct</tt>
+was stored at the end of the kernel stack of each process. This allowed
+architectures with few registers, such as x86, to calculate the location of the
+process descriptor via the <em>stack pointer</em> without using an extra register
+to store the location. With the process descriptor now dynamically created via
+the slab allocator, a new structure, <tt>struct thread_info</tt>, was created
+that again lives at the bottom of the stack (for stacks that grow down) and at
+the top of the stack (for stacks that grow up)<sup><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/fn4.html')">4</a></sup>. See <a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/03fig02.jpg')">Figure
+3.2</a>.</p>
+
+<p nd="13">The new structure also makes it rather easy to calculate offsets of its
+values for use in assembly code.</p>
+
+<p>The <tt>thread_info</tt> structure is defined on x86 in
+<tt>&lt;asm/thread_info.h&gt;</tt> as</p>
+
+<pre nd="14">struct thread_info {<br>    struct task_struct  *task;<br>    struct exec_domain  *exec_domain;<br>    unsigned long     flags;<br>    unsigned long     status;<br>    __u32         cpu;<br>    __s32         preempt_count;<br>    mm_segment_t     addr_limit;<br>    struct restart_block restart_block;<br>    unsigned long     previous_esp;<br>    __u8         supervisor_stack[0];<br>};</pre>
+
+<p nd="15">Each task's <tt>thread_info</tt> structure is allocated at the end of
+its stack. The <tt>task</tt> element of the structure is a pointer to the
+task's actual <tt>task_struct</tt>.</p>
+
+<div class="figure">
+<a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/03fig02.jpg')">
+<img src="http://www.informit.com/content/images/chap3_0672327201/elementLinks/th03fig02.jpg" alt="Figure 3.2"></a>
+<p><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/03fig02.jpg')">Figure
+3.2</a> The process descriptor and kernel stack.</p>
+
+</div>
+
+<h3>Storing the Process Descriptor</h3>
+
+<p nd="16">The system identifies processes by a unique <em>process identification</em>
+value or <em>PID</em>. The PID is a numerical value that is represented by the
+opaque type<sup><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/fn5.html')">5</a></sup> <tt>pid_t</tt>, which is typically an <tt>int</tt>.
+Because of backward compatibility with earlier Unix and Linux versions, however,
+the default maximum value is only 32,768 (that of a <tt>short int</tt>),
+although the value can optionally be increased to the full range afforded the
+type. The kernel stores this value as <tt>pid</tt> inside each process
+descriptor.</p>
+
+<p nd="17">This maximum value is important because it is essentially the maximum number
+of processes that may exist concurrently on the system. Although 32,768 might be
+sufficient for a desktop system, large servers may require many more processes.
+The lower the value, the sooner the values will wrap around, destroying the
+useful notion that higher values indicate later run processes than lower values.
+If the system is willing to break compatibility with old applications, the
+administrator may increase the maximum value via
+<tt>/proc/sys/kernel/pid_max</tt>.</p>
+
+<p nd="18">Inside the kernel, tasks are typically referenced directly by a pointer to
+their <tt>task_struct</tt> structure. In fact, most kernel code that deals with
+processes works directly with <tt>struct task_struct</tt>. Consequently, it is
+very useful to be able to quickly look up the process descriptor of the
+currently executing task, which is done via the <tt>current</tt> macro. This
+macro must be separately implemented by each architecture. Some architectures
+save a pointer to the <tt>task_struct</tt> structure of the currently running
+process in a register, allowing for efficient access. Other architectures, such
+as x86 (which has few registers to waste), make use of the fact that <tt>struct
+thread_info</tt> is stored on the kernel stack to calculate the location of
+<tt>thread_info</tt> and subsequently the <tt>task_struct</tt>.</p>
+
+<p nd="19">On x86, <tt>current</tt> is calculated by masking out the 13 least
+significant bits of the stack pointer to obtain the <tt>thread_info</tt>
+structure. This is done by the <tt>current_thread_info()</tt> function. The
+assembly is shown here:</p>
+
+<pre>movl $-8192, %eax<br>andl %esp, %eax</pre>
+
+<p nd="20">This assumes that the stack size is 8KB. When 4KB stacks are enabled, 4096 is
+used in lieu of 8192.</p>
+
+<p>Finally, <tt>current</tt> dereferences the <tt>task</tt> member of
+<tt>thread_info</tt> to return the <tt>task_struct</tt>:</p>
+
+<pre>current_thread_info()-&gt;task;</pre>
+
+<p nd="21">Contrast this approach with that taken by PowerPC (IBM's modern
+RISC-based microprocessor), which stores the current <tt>task_struct</tt> in a
+register. Thus, <tt>current</tt> on PPC merely returns the value stored in the
+register <tt>r2</tt>. PPC can take this approach because, unlike x86, it has
+plenty of registers. Because accessing the process descriptor is a common and
+important job, the PPC kernel developers deem using a register worthy for the
+task. </p>
+
+<h3>Process State</h3>
+
+<p nd="22">The <tt>state</tt> field of the process descriptor describes the current
+condition of the process (see <a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/03fig03.jpg')">Figure 3.3</a>). Each process on the system is in
+exactly one of five different states. This value is represented by one of five
+flags:</p>
+
+<ul>
+  <li>
+    <p nd="23"><strong>TASK_RUNNING</strong>&mdash;The process is runnable; it is either currently
+running or on a runqueue waiting to run (runqueues are discussed in Chapter 4,
+"Scheduling"). This is the only possible state for a process executing
+in user-space; it can also apply to a process in kernel-space that is actively
+running.</p>
+  </li>
+  <li>
+    <p nd="24"><strong>TASK_INTERRUPTIBLE&mdash;</strong>The process is sleeping (that is, it is
+blocked), waiting for some condition to exist. When this condition exists, the
+kernel sets the process's state to <tt>TASK_RUNNING</tt>. The process also
+awakes prematurely and becomes runnable if it receives a signal.</p>
+  </li>
+  <li>
+    <p nd="25"><strong>TASK_UNINTERRUPTIBLE&mdash;</strong>This<strong> </strong>state is identical to
+    <tt>TASK_INTERRUPTIBLE</tt> except that it does <em>not</em> wake up and become
+runnable if it receives a signal. This is used in situations where the process
+must wait without interruption or when the event is expected to occur quite
+quickly. Because the task does not respond to signals in this state,
+    <tt>TASK_UNINTERRUPTIBLE</tt> is less often used than
+    <tt>TASK_INTERRUPTIBLE</tt><sup><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/fn6.html')">6</a></sup>.</p>
+
+  </li>
+  <li>
+    <p nd="26"><strong>TASK_ZOMBIE</strong>&mdash;The task has terminated, but its parent has not
+yet issued a <tt>wait4()</tt> system call. The task's process descriptor
+must remain in case the parent wants to access it. If the parent calls
+    <tt>wait4()</tt>, the process descriptor is deallocated.</p>
+  </li>
+  <li>
+    <p nd="27"><strong>TASK_STOPPED</strong>&mdash;Process execution has stopped; the task is not
+running nor is it eligible to run. This occurs if the task receives the
+    <tt>SIGSTOP</tt>, <tt>SIGTSTP</tt>, <tt>SIGTTIN</tt>, or <tt>SIGTTOU</tt> signal
+or if it receives <em>any</em> signal while it is being debugged.</p>
+  </li>
+</ul>
+
+<div class="figure">
+<a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/03fig03.jpg')">
+<img src="http://www.informit.com/content/images/chap3_0672327201/elementLinks/th03fig03.jpg" alt="Figure 3.3"></a>
+<p><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/03fig03.jpg')">Figure
+3.3</a> Flow chart of process states.</p>
+
+</div>
+
+<h3>Manipulating the Current Process State</h3>
+
+<p nd="28">Kernel code often needs to change a process's state. The preferred
+mechanism is using </p>
+
+<pre nd="29">set_task_state(task, state);    /* set task 'task' to state 'state' */</pre>
+
+<p nd="30">This function sets the given task to the given state. If applicable, it also
+provides a memory barrier to force ordering on other processors (this is only
+needed on SMP systems). Otherwise, it is equivalent to</p>
+
+<pre>task-&gt;state = state;</pre>
+
+<p>The method <tt>set_current_state(state)</tt> is synonymous to
+<tt>set_task_state(current, state)</tt>.</p>
+<h3>Process Context</h3>
+
+<p nd="31">One of the most important parts of a process is the executing program code.
+This code is read in from an <em>executable file</em> and executed within the
+program's address space. Normal program execution occurs in
+<em>user-space</em>. When a program executes a system call (see Chapter 5,
+"System Calls") or triggers an exception, it enters
+<em>kernel-space</em>. At this point, the kernel is said to be "executing on
+behalf of the process" and is in <em>process context</em>. When in process
+context, the <tt>current</tt> macro is valid<sup><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/fn7.html')">7</a></sup>. Upon exiting the
+kernel, the process resumes execution in user-space, unless a higher-priority
+process has become runnable in the interim, in which case the scheduler is
+invoked to select the higher priority process.</p>
+
+<p nd="32">System calls and exception handlers are well-defined interfaces into the
+kernel. A process can begin executing in kernel-space only through one of these
+interfaces&mdash;<em>all</em> access to the kernel is through these interfaces.</p>
+
+<h3>The Process Family Tree</h3>
+
+<p nd="33">A distinct hierarchy exists between processes in Unix systems, and Linux is
+no exception. All processes are descendents of the <tt>init</tt> process, whose
+PID is one. The kernel starts <tt>init</tt> in the last step of the boot
+process. The <tt>init</tt> process, in turn, reads the system <em>initscripts</em>
+and executes more programs, eventually completing the boot process.</p>
+
+<p nd="34">Every process on the system has exactly one parent. Likewise, every process
+has zero or more children. Processes that are all direct children of the same
+parent are called <em>siblings</em>. The relationship between processes is stored
+in the process descriptor. Each <tt>task_struct</tt> has a pointer to the
+parent's <tt>task_struct</tt>, named <tt>parent</tt>, and a list of
+children, named <tt>children</tt>. Consequently, given the current process, it
+is possible to obtain the process descriptor of its parent with the following
+code:</p>
+
+<pre>struct task_struct *my_parent = current-&gt;parent;</pre>
+
+<p nd="35">Similarly, it is possible to iterate over a process's children with</p>
+
+<pre nd="36">struct task_struct *task;<br>struct list_head *list;<br><br>list_for_each(list, &amp;current-&gt;children) {<br>    task = list_entry(list, struct task_struct, sibling);<br>    /* task now points to one of current's children */<br>}</pre>
+
+<p nd="37">The <tt>init</tt> task's process descriptor is statically allocated as
+<tt>init_task</tt>. A good example of the relationship between all processes is
+the fact that this code will always succeed:</p>
+
+<pre nd="38">struct task_struct *task;<br><br>for (task = current; task != &amp;init_task; task = task-&gt;parent)<br>    ;<br>/* task now points to init */</pre>
+
+<p nd="39">In fact, you can follow the process hierarchy from any one process in the
+system to <em>any</em> other. Oftentimes, however, it is desirable simply to
+iterate over <em>all</em> processes in the system. This is easy because the task
+list is a circular doubly linked list. To obtain the next task in the list,
+given any valid task, use:</p>
+
+<pre nd="40">list_entry(task-&gt;tasks.next, struct task_struct, tasks)</pre>
+
+<p>Obtaining the previous works the same way:</p>
+
+<pre nd="41">list_entry(task-&gt;tasks.prev, struct task_struct, tasks)</pre>
+
+<p nd="42">These two routines are provided by the macros <tt>next_task(task)</tt> and
+<tt>prev_task(task)</tt>, respectively. Finally, the macro
+<tt>for_each_process(task)</tt> is provided, which iterates over the entire task
+list. On each iteration, <tt>task</tt> points to the next task in the list:</p>
+
+<pre nd="43">struct task_struct *task;<br><br>for_each_process(task) {<br>    /* this pointlessly prints the name and PID of each task */<br>    printk("%s[%d]\n", task-&gt;comm, task-&gt;pid);<br>}</pre>
+
+<p nd="44">Note: It can be expensive to iterate over every task in a system with many
+processes; code should have good reason (and no alternative) before doing
+so.</p>
+<p></p>
+<div id="text">
+<h2>Process Creation</h2>
+
+<p nd="2">Process creation in Unix is unique. Most operating systems implement a
+<em>spawn</em> mechanism to create a new process in a new address space, read in
+an executable, and begin executing it. Unix takes the unusual approach of
+separating these steps into two distinct functions: <tt>fork()</tt> and
+<tt>exec()</tt><sup><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/fn8.html')">8</a></sup>. The first, <tt>fork()</tt>, creates a child process
+that is a copy of the current task. It differs from the parent only in its PID
+(which is unique), its PPID (parent's PID, which is set to the original
+process), and certain resources and statistics, such as pending signals, which
+are not inherited. The second function, <tt>exec()</tt>, loads a new executable
+into the address space and begins executing it. The combination of
+<tt>fork()</tt> followed by <tt>exec()</tt> is similar to the single function
+most operating systems provide.</p>
+
+<h3>Copy-on-Write</h3>
+
+<p nd="3">Traditionally, upon <tt>fork()</tt> all resources owned by the parent are
+duplicated and the copy is given to the child. This approach is significantly
+na&iuml;ve and inefficient in that it copies much data that might otherwise be
+shared. Worse still, if the new process were to immediately execute a new image,
+all that copying would go to waste. In Linux, <tt>fork()</tt> is implemented
+through the use of <em>copy-on-write</em> pages. Copy-on-write (or <em>COW</em>) is
+a technique to delay or altogether prevent copying of the data. Rather than
+duplicate the process address space, the parent and the child can share a single
+copy. The data, however, is marked in such a way that if it is written to, a
+duplicate is made and each process receives a unique copy. Consequently, the
+duplication of resources occurs only when they are written; until then, they are
+shared read-only. This technique delays the copying of each page in the address
+space until it is actually written to. In the case that the pages are never
+written&mdash;for example, if <tt>exec()</tt> is called immediately after
+<tt>fork()</tt>&mdash;they never need to be copied. The only overhead incurred by
+<tt>fork()</tt> is the duplication of the parent's page tables and the
+creation of a unique process descriptor for the child. In the common case that a
+process executes a new executable image immediately after forking, this
+optimization prevents the wasted copying of large amounts of data (with the
+address space, easily tens of megabytes). This is an important optimization
+because the Unix philosophy encourages quick process execution.</p>
+
+<h3><tt>fork()</tt></h3>
+
+<p nd="4">Linux implements <tt>fork()</tt> via the <tt>clone()</tt> system call. This
+call takes a series of flags that specify which resources, if any, the parent
+and child process should share (see the section on "The Linux
+Implementation of Threads" later in this chapter for more about the flags).
+The <tt>fork()</tt>, <tt>vfork()</tt>, and __<tt>clone()</tt> library calls all
+invoke the <tt>clone()</tt> system call with the requisite flags. The
+<tt>clone()</tt> system call, in turn, calls <tt>do_fork()</tt>.</p>
+
+<p nd="5">The bulk of the work in forking is handled by <tt>do_fork()</tt>, which is
+defined in <tt>kernel/fork.c</tt>. This function calls <tt>copy_process()</tt>,
+and then starts the process running. The interesting work is done by
+<tt>copy_process()</tt>:</p>
+
+<ul>
+  <li>
+    <p nd="6">It calls <tt>dup_task_struct()</tt>, which creates a new kernel stack,
+    <tt>thread_info</tt> structure, and <tt>task_struct</tt> for the new process.
+The new values are identical to those of the current task. At this point, the
+child and parent process descriptors are identical.</p>
+  </li>
+  <li>
+    <p nd="7">It then checks that the new child will not exceed the resource limits on
+the number of processes for the current user.</p>
+  </li>
+  <li>
+    <p nd="8">Now the child needs to differentiate itself from its parent. Various
+members of the process descriptor are cleared or set to initial values. Members
+of the process descriptor that are not inherited are primarily statistically
+information. The bulk of the data in the process descriptor is shared.</p>
+  </li>
+  <li>
+    <p>Next, the child's state is set to <tt>TASK_UNINTERRUPTIBLE</tt>, to
+ensure that it does not yet run.</p>
+  </li>
+  <li>
+    <p nd="9">Now, <tt>copy_process()</tt> calls <tt>copy_flags()</tt> to update the
+    <tt>flags</tt> member of the <tt>task_struct</tt>. The <tt>PF_SUPERPRIV</tt>
+flag, which denotes whether a task used super-user privileges, is cleared. The
+    <tt>PF_FORKNOEXEC</tt> flag, which denotes a process that has not called
+    <tt>exec()</tt>, is set.</p>
+  </li>
+  <li>
+    <p>Next, it calls <tt>get_pid()</tt> to assign an available PID to the new
+task.</p>
+  </li>
+  <li>
+    <p nd="10">Depending on the flags passed to <tt>clone()</tt>,
+    <tt>copy_process()</tt> then either duplicates or shares open files, filesystem
+information, signal handlers, process address space, and namespace. These
+resources are typically shared between threads in a given process; otherwise
+they are unique and thus copied here.</p>
+  </li>
+  <li>
+    <p nd="11">Next, the remaining timeslice between the parent and its child is split
+between the two (this is discussed in Chapter 4).</p>
+  </li>
+  <li>
+    <p nd="12">Finally, <tt>copy_process()</tt> cleans up and returns to the caller a
+pointer to the new child.</p>
+  </li>
+</ul>
+
+<p nd="13">Back in <tt>do_fork()</tt>, if <tt>copy_process()</tt> returns successfully,
+the new child is woken up and run. Deliberately, the kernel runs the child
+process first<sup><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/fn9.html')">9</a></sup>. In the common case of the child simply calling
+<tt>exec()</tt> immediately, this eliminates any copy-on-write overhead that
+would occur if the parent ran first and began writing to the address space.</p>
+
+<h3><tt>vfork()</tt></h3>
+
+<p nd="14">The <tt>vfork()</tt> system call has the same effect as <tt>fork()</tt>,
+except that the page table entries of the parent process are not copied.
+Instead, the child executes as the sole thread in the parent's address
+space, and the parent is blocked until the child either calls <tt>exec()</tt> or
+exits. The child is <em>not</em> allowed to write to the address space. This was a
+welcome optimization in the old days of 3BSD when the call was introduced
+because at the time copy-on-write pages were not used to implement
+<tt>fork()</tt>. Today, with copy-on-write and child-runs-first semantics, the
+only benefit to <tt>vfork()</tt> is not copying the parent page tables entries.
+If Linux one day gains copy-on-write page table entries there will no longer be
+any benefit<sup><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/fn10.html')">10</a></sup>. Because the semantics of <tt>vfork()</tt> are tricky
+(what, for example, happens if the <tt>exec()</tt> fails?) it would be nice if
+<tt>vfork()</tt> died a slow painful death. It is entirely possible to implement
+<tt>vfork()</tt> as a normal <tt>fork()</tt>&mdash;in fact, this is what Linux
+did until 2.2.</p>
+
+<p nd="15">The <tt>vfork()</tt> system call is implemented via a special flag to the
+<tt>clone()</tt> system call:</p>
+
+<ul>
+  <li>
+    <p>In <tt>copy_process()</tt>, the <tt>task_struct</tt> member
+    <tt>vfork_done</tt> is set to <tt>NULL</tt>.</p>
+  </li>
+  <li>
+    <p>In <tt>do_fork()</tt>, if the special flag was given, <tt>vfork_done</tt>
+is pointed at a specific address.</p>
+  </li>
+  <li>
+    <p nd="16">After the child is first run, the parent&mdash;instead of
+returning&mdash;waits for the child to signal it through the <tt>vfork_done</tt>
+pointer.</p>
+  </li>
+  <li>
+    <p nd="17">In the <tt>mm_release()</tt> function, which is used when a task exits a
+memory address space, <tt>vfork_done</tt> is checked to see whether it is
+    <tt>NULL</tt>. If it is not, the parent is signaled.</p>
+  </li>
+  <li>
+    <p>Back in <tt>do_fork()</tt>, the parent wakes up and returns.</p>
+  </li>
+</ul>
+
+<p nd="18">If this all goes as planned, the child is now executing in a new address
+space and the parent is again executing in its original address space. The
+overhead is lower, but the design is not pretty.</p>
+
+</div>
+<h3><br>
+</h3>
+<div id="text">
+<h2>The Linux Implementation of Threads</h2>
+
+<p>Threads are a popular modern programming abstraction. They provide multiple
+threads of execution within the same program in a shared memory address space.
+They can also share open files and other resources. Threads allow for
+<em>concurrent programming</em> and, on multiple processor systems, true
+<em>parallelism.</em></p>
+
+<p>Linux has a unique implementation of threads. To the Linux kernel, there is
+<em>no</em> concept<em> </em>of a thread<em>.</em> Linux implements all threads as
+standard processes. The Linux kernel does not provide any special scheduling
+semantics or data structures to represent threads. Instead, a thread is merely a
+process that shares certain resources with other processes. Each thread has a
+unique <tt>task_struct</tt> and appears to the kernel as a normal process (which
+just happens to share resources, such as an address space, with other
+processes).</p>
+
+<p>This approach to threads contrasts greatly with operating systems such as
+Microsoft Windows or Sun Solaris, which have <em>explicit</em> kernel support for
+threads (and sometimes call threads <em>lightweight processes</em>). The name
+"lightweight process" sums up the difference in philosophies between
+Linux and other systems. To these other operating systems, threads are an
+abstraction to provide a lighter, quicker execution unit than the heavy process.
+To Linux, threads are simply a manner of sharing resources between processes
+(which are already quite lightweight)<sup><a href="javascript:popUp('/content/images/chap3_0672327201/elementLinks/fn11.html')">11</a></sup>. For example, assume you have
+a process that consists of four threads. On systems with explicit thread
+support, there might exist one process descriptor that in turn points to the
+four different threads. The process descriptor describes the shared resources,
+such as an address space or open files. The threads then describe the resources
+they alone possess. Conversely, in Linux, there are simply four processes and
+thus four normal <tt>task_struct</tt> structures. The four processes are set up
+to share certain resources.</p>
+
+<p>Threads are created like normal tasks, with the exception that the
+<tt>clone()</tt> system call is passed flags corresponding to specific resources
+to be shared:</p>
+
+<pre>clone(CLONE_VM | CLONE_FS | CLONE_FILES | CLONE_SIGHAND, 0);</pre>
+
+<p>The previous code results in behavior identical to a normal <tt>fork()</tt>,
+except that the address space, filesystem resources, file descriptors, and
+signal handlers are shared. In other words, the new task and its parent are what
+are popularly called <em>threads</em>.</p>
+
+<p>In contrast, a normal <tt>fork()</tt> can be implemented as</p>
+
+<pre>clone(SIGCHLD, 0);</pre>
+
+<p>And <tt>vfork()</tt> is implemented as</p>
+
+<pre>clone(CLONE_VFORK | CLONE_VM | SIGCHLD, 0);</pre>
+
+<p>The flags provided to <tt>clone()</tt> help specify the behavior of the new
+process and detail what resources the parent and child will share. Table 3.1
+lists the clone flags, which are defined in <tt>&lt;linux/sched.h&gt;</tt>, and
+their effect.</p>
+
+<h4>Table 3.1 clone() Flags</h4>
+
+<table>
+
+  <thead>
+  <tr>
+
+    <td>
+    <p><strong>Flag</strong></p>
+    </td>
+
+    <td>
+    <p><strong>Meaning</strong></p>
+    </td>
+
+  </tr>
+
+  </thead>
+  <tbody>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_FILES</tt></p>
+
+      </td>
+
+      <td>
+      <p>Parent and child share open files.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_FS</tt></p>
+
+      </td>
+
+      <td>
+      <p>Parent and child share filesystem information.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_IDLETASK</tt></p>
+
+      </td>
+
+      <td>
+      <p>Set PID to zero (used only by the idle tasks).</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_NEWNS</tt></p>
+
+      </td>
+
+      <td>
+      <p>Create a new namespace for the child.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_PARENT</tt></p>
+
+      </td>
+
+      <td>
+      <p>Child is to have same parent as its parent.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_PTRACE</tt></p>
+
+      </td>
+
+      <td>
+      <p>Continue tracing child.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_SETTID</tt></p>
+
+      </td>
+
+      <td>
+      <p>Write the TID back to user-space.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_SETTLS</tt></p>
+
+      </td>
+
+      <td>
+      <p>Create a new TLS for the child.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_SIGHAND</tt></p>
+
+      </td>
+
+      <td>
+      <p>Parent and child share signal handlers and blocked
+signals.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_SYSVSEM</tt></p>
+
+      </td>
+
+      <td>
+      <p>Parent and child share System V <tt>SEM_UNDO</tt>
+semantics.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_THREAD</tt></p>
+
+      </td>
+
+      <td>
+      <p>Parent and child are in the same thread group.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_VFORK</tt></p>
+
+      </td>
+
+      <td>
+      <p><tt>vfork()</tt> was used and the parent will sleep until
+the child wakes it.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_UNTRACED</tt></p>
+
+      </td>
+
+      <td>
+      <p>Do not let the tracing process force <tt>CLONE_PTRACE</tt>
+on the child.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_STOP</tt></p>
+
+      </td>
+
+      <td>
+      <p>Start process in the <tt>TASK_STOPPED</tt> state.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_SETTLS</tt></p>
+
+      </td>
+
+      <td>
+      <p>Create a new TLS (thread-local storage) for the
+child.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_CHILD_CLEARTID</tt></p>
+
+      </td>
+
+      <td>
+      <p>Clear the TID in the child.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_CHILD_SETTID</tt></p>
+
+      </td>
+
+      <td>
+      <p>Set the TID in the child.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_PARENT_SETTID</tt></p>
+
+      </td>
+
+      <td>
+      <p>Set the TID in the parent.</p>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <p><tt>CLONE_VM</tt></p>
+
+      </td>
+
+      <td>
+      <p>Parent and child share address space.</p>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+<h3>Kernel Threads</h3>
+
+<p>It is often useful for the kernel to perform some operations in the
+background. The kernel accomplishes this via <em>kernel threads</em>&mdash;standard
+processes that exist solely in kernel-space. The significant difference between
+kernel threads and normal processes is that kernel threads do not have an
+address space (in fact, their <tt>mm</tt> pointer is <tt>NULL</tt>). They
+operate only in kernel-space and do not context switch into user-space. Kernel
+threads are, however, schedulable and preemptable as normal processes.</p>
+
+<p>Linux delegates several tasks to kernel threads, most notably the
+<em>pdflush</em> task and the <em>ksoftirqd</em> task. These threads are created on
+system boot by other kernel threads. Indeed, a kernel thread can be created only
+by another kernel thread. The interface for spawning a new kernel thread from an
+existing one is</p>
+
+<pre>int kernel_thread(int (*fn)(void *), void * arg, unsigned long flags)</pre>
+
+<p>The new task is created via the usual <tt>clone()</tt> system call with the
+specified <tt>flags</tt> argument. On return, the parent kernel thread exits
+with a pointer to the child's <tt>task_struct</tt>. The child executes the
+function specified by <tt>fn</tt> with the given argument <tt>arg</tt>. A
+special clone flag, <tt>CLONE_KERNEL</tt>, specifies the usual flags for kernel
+threads: <tt>CLONE_FS</tt>, <tt>CLONE_FILES</tt>, and <tt>CLONE_SIGHAND</tt>.
+Most kernel threads pass this for their <tt>flags</tt> parameter.</p>
+
+<p>Typically, a kernel thread continues executing its initial function forever
+(or at least until the system reboots, but with Linux you never know). The
+initial function usually implements a loop in which the kernel thread wakes up
+as needed, performs its duties, and then returns to sleep.</p>
+
+<p>We will discuss specific kernel threads in more detail in later chapters.</p>
+
+</div>
+<br>
+<div id="text">
+<h2>Process Termination</h2>
+
+<p nd="2">It is sad, but eventually processes must die. When a process terminates, the
+kernel releases the resources owned by the process and notifies the child's
+parent of its unfortunate demise.</p>
+
+<p nd="3">Typically, process destruction occurs when the process calls the
+<tt>exit()</tt> system call, either explicitly when it is ready to terminate or
+implicitly on return from the main subroutine of any program (that is, the C
+compiler places a call to <tt>exit()</tt> after <tt>main()</tt> returns). A
+process can also terminate involuntarily. This occurs when the process receives
+a signal or exception it cannot handle or ignore. Regardless of how a process
+terminates, the bulk of the work is handled by <tt>do_exit()</tt>, which
+completes a number of chores:</p>
+
+<ul>
+  <li>
+    <p>First, it set the <tt>PF_EXITING</tt> flag in the flags member of the
+    <tt>task_struct</tt>.</p>
+  </li>
+  <li>
+    <p nd="4">Second, it calls <tt>del_timer_sync()</tt> to remove any kernel timers.
+Upon return, it is guaranteed that no timer is queued and that no timer handler
+is running.</p>
+  </li>
+  <li>
+    <p>Next, if BSD process accounting is enabled, <tt>do_exit()</tt> calls
+    <tt>acct_process()</tt> to write out accounting information.</p>
+  </li>
+  <li>
+    <p nd="5">Now it calls <tt>__exit_mm()</tt> to release the <tt>mm_struct</tt> held
+by this process. If no other process is using this address space (in other
+words, if it is not shared), then deallocate it.</p>
+  </li>
+  <li>
+    <p nd="6">Next, it calls <tt>exit_sem()</tt>. If the process is queued waiting for
+an IPC semaphore, it is dequeued here.</p>
+  </li>
+  <li>
+    <p nd="7">It then calls <tt>__exit_files()</tt>, __<tt>exit_fs()</tt>,
+    <tt>exit_namespace()</tt>, and <tt>exit_sighand()</tt> to decrement the usage
+count of objects related to file descriptors, filesystem data, the process
+namespace, and signal handlers, respectively. If any usage counts reach zero,
+the object is no longer in use by any process and it is removed.</p>
+  </li>
+  <li>
+    <p nd="8">Subsequently, it sets the task's exit code, stored in the
+    <tt>exit_code</tt> member of the <tt>task_struct</tt>, to the code provided by
+    <tt>exit()</tt> or whatever kernel mechanism forced the termination. The exit
+code is stored here for optional retrieval by the parent.</p>
+  </li>
+  <li>
+    <p nd="9">It then calls <tt>exit_notify()</tt> to send signals to the task's
+parent, reparents any of the task's children to another thread in their
+thread group or the init process, and sets the task's state to
+    <tt>TASK_ZOMBIE</tt>.</p>
+  </li>
+  <li>
+    <p nd="10">Finally, <tt>do_exit()</tt> calls <tt>schedule()</tt> to switch to a new
+process (see Chapter 4). Because <tt>TASK_ZOMBIE</tt> tasks are never scheduled,
+this is the last code the task will ever execute.</p>
+  </li>
+</ul>
+
+<p>The code for <tt>do_exit()</tt> is defined in <tt>kernel/exit.c</tt>.</p>
+
+<p nd="11">At this point, all objects associated with the task (assuming the task was
+the sole user) are freed. The task is not runnable (and in fact no longer has an
+address space in which to run) and is in the <tt>TASK_ZOMBIE</tt> state. The
+only memory it occupies is its kernel stack, the <tt>thread_info</tt> structure,
+and the <tt>task_struct</tt> structure. The task exists solely to provide
+information to its parent. After the parent retrieves the information, or
+notifies the kernel that it is uninterested, the remaining memory held by the
+process is freed and returned to the system for use.</p>
+
+<h3>Removal of the Process Descriptor</h3>
+
+<p nd="12">After <tt>do_exit()</tt> completes, the process descriptor for the terminated
+process still exists but the process is a zombie and is unable to run. As
+discussed, this allows the system to obtain information about a child process
+after it has terminated. Consequently, the acts of cleaning up after a process
+and removing its process descriptor are separate. After the parent has obtained
+information on its terminated child, or signified to the kernel that it does not
+care, the child's <tt>task_struct</tt> is deallocated.</p>
+
+<p nd="13">The <tt>wait()</tt> family of functions are implemented via a single (and
+complicated) system call, <tt>wait4()</tt>. The standard behavior is to suspend
+execution of the calling task until one of its children exits, at which time the
+function returns with the PID of the exited child. Additionally, a pointer is
+provided to the function that on return holds the exit code of the terminated
+child.</p>
+
+<p nd="14">When it is time to finally deallocate the process descriptor,
+<tt>release_task()</tt> is invoked. It does the following:</p>
+
+<ul>
+  <li>
+    <p nd="15">First, it calls <tt>free_uid()</tt> to decrement the usage count of the
+process's user. Linux keeps a per-user cache of information related to how
+many processes and files a user has opened. If the usage count reaches zero, the
+user has no more open processes or files and the cache is destroyed.</p>
+  </li>
+  <li>
+    <p nd="16">Second, <tt>release_task()</tt> calls <tt>unhash_process()</tt> to remove
+the process from the pidhash and remove the process from the task list.</p>
+  </li>
+  <li>
+    <p nd="17">Next, if the task was ptraced, <tt>release_task()</tt> reparents the task
+to its original parent and removes it from the ptrace list.</p>
+  </li>
+  <li>
+    <p nd="18">Ultimately, <tt>release_task()</tt>, calls <tt>put_task_struct()</tt> to
+free the pages containing the process's kernel stack and
+    <tt>thread_info</tt> structure and deallocate the slab cache containing the
+    <tt>task_struct</tt>.</p>
+  </li>
+</ul>
+
+<p nd="19">At this point, the process descriptor and all resources belonging solely to
+the process have been freed.</p>
+
+<h3>The Dilemma of the Parentless Task</h3>
+
+<p nd="20">If a parent exits before its children, some mechanism must exist to
+<em>reparent</em> the child tasks to a new process, or else parentless terminated
+processes would forever remain zombies, wasting system memory. The solution,
+hinted upon previously, is to reparent a task's children on exit to either
+another process in the current thread group or, if that fails, the <tt>init</tt>
+process. In <tt>do_exit()</tt>, <tt>notify_parent()</tt> is invoked, which calls
+<tt>forget_original_parent()</tt> to perform the reparenting:</p>
+
+<pre nd="21">struct task_struct *p, *reaper = father;<br>struct list_head *list;<br><br>if (father-&gt;exit_signal != -1)<br>    reaper = prev_thread(reaper);<br>else<br>    reaper = child_reaper;<br><br>if (reaper == father)<br>    reaper = child_reaper;</pre>
+
+<p nd="22">This code sets <tt>reaper</tt> to another task in the process's thread
+group. If there is not another task in the thread group, it sets <tt>reaper</tt>
+to <tt>child_reaper</tt>, which is the <tt>init</tt> process. Now that a
+suitable new parent for the children is found, each child needs to be located
+and reparented to <tt>reaper</tt>:</p>
+
+<pre nd="23">list_for_each(list, &amp;father-&gt;children) {<br>    p = list_entry(list, struct task_struct, sibling);<br>    reparent_thread(p, reaper, child_reaper);<br>}<br><br>list_for_each(list, &amp;father-&gt;ptrace_children) {<br>    p = list_entry(list, struct task_struct, ptrace_list);<br>    reparent_thread(p, reaper, child_reaper);<br>}</pre>
+
+<p nd="24">This code iterates over two lists: the <em>child list</em> and the <em>ptraced
+child list</em>, reparenting each child. The rationale behind having both lists
+is interesting; it is a new feature in the 2.6 kernel. When a task is
+<em>ptraced,</em> it is temporarily reparented to the debugging process. When the
+task's parent exits, however, it must be reparented along with its other
+siblings. In previous kernels, this resulted in a loop over <em>every process in
+the system</em> looking for children. The solution, as noted previously, is
+simply to keep a separate list of a process's children that are being
+ptraced&mdash;reducing the search for one's children from every process to
+just two relatively small lists.</p>
+
+<p nd="25">With the process successfully reparented, there is no risk of stray zombie
+processes. The <tt>init</tt> process routinely calls <tt>wait()</tt> on its
+children, cleaning up any zombies assigned to it.</p>
+
+</div>
+<br>
+<h2>Process Wrap Up</h2>
+
+<p nd="2">In this chapter, we looked at the famed operating system abstraction of the
+<em>process</em>. We discussed the generalities of the process, why it is
+important, and the relationship between processes and threads. We then discussed
+how Linux stores and represents processes (with <tt>task_struct</tt> and
+<tt>thread_info</tt>), how processes are created (via <tt>clone()</tt> and
+<tt>fork()</tt>), how new executable images are loaded into address spaces (via
+the <tt>exec()</tt> family of system calls), the hierarchy of processes, how
+parents glean information about their deceased children (via the <tt>wait()</tt>
+family of system calls), and how processes ultimately die (forcefully or
+intentionally via <tt>exit()</tt>).</p>
+
+<p nd="3">The process is a fundamental and crucial abstraction, at the heart of every
+modern operating system, and ultimately the reason we have operating systems
+altogether (to run programs).</p>
+
+<p nd="4">The next chapter discusses process scheduling, which is the delicate and
+interesting manner in which the kernel decides which processes to run, at what
+time, and in what order.</p>
+
+
+  
+<hr>
+  
+<p><strong>Footnotes</strong></p>
+
+  
+<ol>
+  <li>
+      
+    <p><a name="fn1" id="fn1"></a>The other fundamental abstraction is files.</p>
+
+    </li>
+  <li>
+      
+    <p nd="5"><a name="fn2" id="fn2"></a>The kernel implements the wait4() system
+        call. Linux systems, via the C library, typically provide the wait(),
+        waitpid(), wait3(), and wait4() functions. All these functions return
+        status about a terminated process, albeit with slightly different semantics.</p>
+
+    </li>
+  <li>
+      
+    <p nd="6"><a name="fn3" id="fn3"></a>Some texts on operating system design call
+        this list the <em>task array</em>. Because the Linux implementation is
+        a linked list and not a static array, it is called the<em> task list</em>.</p>
+
+    </li>
+  <li>
+      
+    <p nd="7"><a name="fn4" id="fn4"></a>Register-impaired architectures were not
+        the only reason for creating struct thread_info.</p>
+
+    </li>
+  <li>
+      
+    <p nd="8"><a name="fn5" id="fn5"></a>An opaque type is a data type whose physical
+        representation is unknown or irrelevant.</p>
+
+    </li>
+  <li>
+      
+    <p nd="9"><a name="fn6" id="fn6"></a>This is why you have those dreaded unkillable
+        processes with state D in ps(1). Because the task will not respond to
+        signals, you cannot send it a SIGKILL signal. Further, even if you could
+        terminate the task, it would not be wise as the task is supposedly in
+        the middle of an important operation and may hold a semaphore.</p>
+
+    </li>
+  <li>
+      
+    <p nd="10"><a name="fn7" id="fn7"></a>Other than process context there is <em>interrupt
+          context</em>, which we discuss in Chapter 6, "Interrupts and Interrupt
+          Handlers." In interrupt context, the system is not running on
+          behalf of a process, but is executing an interrupt handler. There is
+          no process tied to interrupt handlers and consequently no process context.</p>
+
+    </li>
+  <li>
+      
+    <p nd="11"><a name="fn8" id="fn8"></a>By exec() I mean any member of the exec()
+        family of functions. The kernel implements the execve() system call on
+        top of which execlp(), execle(), execv(), and execvp() are implemented.</p>
+
+    </li>
+  <li>
+      
+    <p nd="12"><a name="fn9" id="fn9"></a>Amusingly, this does not currently function
+        correctly, although the goal is for the child to run first.</p>
+
+    </li>
+  <li>
+      
+    <p nd="13"> <a name="fn10" id="fn10"></a>In fact, there are currently patches to
+        add this functionality to Linux. In time, this feature will most likely
+        find its way into the mainline Linux kernel.</p>
+
+    </li>
+  <li>
+      
+    <p nd="14"> <a name="fn11" id="fn11"></a>As an example, benchmark process creation
+        time in Linux versus process (or even thread!) creation time in these
+        other operating systems. The results are quite nice.
+    
+  </p>
+  </li>
+</ol>
+</div>
+</body>
+</html>

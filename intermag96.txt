@@ -1,0 +1,69 @@
+Session FB was held on Thursday afternoon and had as its topic
+magnetoresistance measurements on multilayer films.  The session began
+with an invited talk by Eric Fullerton of Argonne National Laboratory,
+who reported on studies of Fe/Cr multilayers as a function of Cr
+thickness.  The work of the ANL group has established that the
+spin-density wave present in bulk Cr is indeed present in Fe/Cr
+multilayers and that the effects of the SDW can be observed in both
+temperature-dependent resistance and neutron diffraction studies.  Due
+to roughness at the Fe/Cr interfaces, the SDW may be frustrated, and
+novel domains structures may form in the Cr layer.
+
+The next several talks concerned transport behavior in Co/Cu
+multilayers.  Yiming Huai, now at Read-Rite Corporation, described
+experiments at Lawrence Livermore National Laboratory where Co/Cu
+multilayers were grown on various different types of buffer layers.
+While GMR behavior of a multilayer grown on a Cu buffer layer was
+rather poor, the properties were greatly enhanced by the presence of a
+Co seed layer.  M.J. Hall of Cambridge University discussed possible
+sources of irreproducibility in the GMR of Co/Cu films.  He described
+the results of annealing studies which show that the GMR depends only
+on the remanence of the multilayers, demonstrating that it is the
+fraction of the film which is antialigned at low field that determines
+the size of the effect.  Daniel Jardine, also of Cambridge, discussed
+what types of magnetic defects may be present in Co/Cu films with good
+structural perfection.  Magnetic defects were studied by considering
+the difference between the virgin MR curve of a newly grown film and
+the smaller MR of a film that has been field-cycled.  Hideyuki Kikuchi
+of Stanford University performed high-temperature anneals on Co/Cu
+films and observed the effect on the MR.  He found that
+irreversibility in the magnetic properties sets in above about 150 C,
+with the high-field resistivity changing more than the low-field
+resistivity as the annealing temperature increased.
+
+The next two talks presented results on ion-beam sputtered (IBS)
+multilayers.  Yasuyoshi Miyamoto of the Tokyo Institute of Technology
+described the effect of bombardment of the growing film by an
+ion-assist gun.  He and his collaborators found that the best MR was
+obtained in permalloy/Cu multilayers with a 500V ion assist energy.
+Alex Hubert of Erlangen University desribed the results of an
+Erlangen/Siemens collaboration on IBS-sputtered Co/Cu and
+permalloy/Co/Cu multilayers.  The researchers found the best MR
+occurred in films grown with xenon sputtering gas and at the maximum
+possible deposition rates.
+
+Yong-Jin Song of Seoul National University described magnetoresistance
+measurements on permalloy/Cu multilayers with a layer of Ni inserted
+in the middle of the permalloy.  He described fabrication of the
+multilayer into a VCR head and reported that the performance of the
+device was well-described by an analytical model.  Dexin Wang of
+Nonvolatile Electronics reported on an attempt to increase the
+magnetoresistance of a spin valve up to the level of that of a
+many-repeat multilayer.  The idea is that a few-bilayer multilayer
+will have the same MR as an infinitely thick film if the boundaries
+are perfectly reflecting.  An attempt was made to increase the
+specular reflectance of the spin-valve boundaries by using a Au cap
+and underlayer.  Encouraging, although not definitive, results were
+reported.
+
+The final two talks of the session reported on attempts to model
+magnetoresistance in multilayers.  E. Tsymbal of Oxford University
+reported on calculations of the magnetoresistance as a function of the
+energy of conduction electrons.  The calculation was intended to
+describe hot electron effects in the magnetic metal-base transistors
+fabricated by the University of Twente, but may also describe
+voltage-biasing effects in AlOx-barrier tunnel junctions.  Finally,
+O. Andrieu of Grenoble reported on simulations of magnetic behavior in
+discontinuous NiFe/Ag multilayers before and after annealing.  The MR
+of these multilayers was anisotropic due to the sputtering geometry
+used during deposition.

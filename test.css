@@ -1,0 +1,29 @@
+/* $Id: default.css,v 1.10 2004/11/02 00:32:47 wolfgang Exp $ */
+
+body		{ background-color: #ffefd5; color: black; }
+em 		{ font-weight: bold; }
+a		{ white-space: nowrap; }
+a:link		{ color: blue; }
+a:visited	{ color: purple; }
+a:active	{ color: yellow; }
+a:hover		{ color: red; }
+.footnote      	{ font-size: 80% }
+.footer		{ font-size: 64% }
+.note		{ font-size: 64% }
+.center		{ text-align: center }
+.typeout     	{ background: white;
+		  color: black;
+		  padding: 0.5em;
+		  border: none;
+		  font-weight: bold;
+		}
+.rfc		{ font-weight: bold; }
+
+/* for alison's mission pk. photo-series */
+/* .navbar	        { image-align: bottom; } */
+/* nav-button embedeed  in text */
+/* .embnavbutton   { image-align: center; } */
+.header	        { text-align: center; }
+
+
+/* end */

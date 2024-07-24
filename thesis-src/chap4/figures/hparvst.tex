@@ -1,0 +1,67 @@
+\documentstyle[12pt]{report}
+\headheight 8pt
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\input{/users/alison/thesis/horizerrbar.tex}
+\input{/users/alison/thesis/verterrbar.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{hparvst}
+%H_c(T) as derived from H_{c2}(\theta) fits for C_4KHg 8b and 7a
+\beginpicture
+\crossbarlength=5pt
+\setcoordinatesystem units <56.25mm,0.8mm>
+\setplotarea x from 0 to 1.6, y from 0 to 100
+\axis bottom label {T (K)} ticks 
+ numbered from 0 to 1.6 by 0.4
+ unlabeled short quantity 9 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+ numbered from 0 to 100 by 20
+ unlabeled short quantity 11 /
+\put {a)} at 1.2 80
+\put {$\Uparrow$} [t] at 1.53 0
+\putxerrorbar at 0.56 54.40 with fuzz 0.06 %40 mK error for 1.54 K Tc
+\putyerrorbar at 0.56 54.40 with fuzz 5.26 %7a par. c
+%\multiput {$\bullet$} at /users/alison/hctdata/stI/7a/shiftsumpar.7a
+\multiput {$\bullet$} at "partang.7a"
+%\multiput {$\circ$} at /users/alison/hctdata/stI/shifttheor.par.7a
+\multiput {$\circ$} at "shifttheor.par.7a"
+%\multiput {$\circ$} at /users/alison/hctdata/stI/quadtheor_par.7a
+\multiput {.} at "quadtheor_par.7a"
+%\multiput {$\times$} at "hctemp.theor.scaled"
+\setcoordinatesystem units <56.25mm,0.8mm> point at 0 120
+\setplotarea x from 0 to 1.6, y from 0 to 100
+\axis bottom label {T (K)} ticks 
+ numbered from 0 to 1.6 by 0.4
+ unlabeled short quantity 9 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+ numbered from 0 to 100 by 20
+ unlabeled short quantity 11 /
+\put {b)} at 1.2 80
+\put {$\Uparrow$} [t] at 1.54 0
+\putyerrorbar at 0.473 60.50 with fuzz 2.80 %8b par. c
+\putxerrorbar at 0.473 60.50 with fuzz 0.06 %40 mK error for 1.54 K Tc
+%\multiput {$\bullet$} at /users/alison/hctdata/stI/8b/tangent/partang.8b
+\multiput {$\bullet$} at "partang.8b"
+%\multiput {$\circ$} at /users/alison/hctdata/stI/8b/tangent/lpartangtheor.8b
+\multiput {$\circ$} at "lpartangtheor.8b"
+%\multiput {.} at /users/alison/hctdata/stI/8b/tangent/quadtheor_par.8b
+\multiput {.} at "quadtheor_par.8b"
+%\multiput {$\times$} at "hctemp.theor.scaled"
+\endpicture
+\caption[Critical fields with $\rm \vec{H} \parallel \hat{c}$ for  $\rm T_c
+\approx 1.5$ K $\rm C_4KHg$ samples.]{Critical fields with $\rm \vec{H}
+\parallel \hat{c}$ for $\rm T_c
+\approx 1.5$ K $\rm C_4KHg$ samples.  $\Uparrow$ marks the value of $\rm T_c$
+found using a zero-field temperature sweep.  a) ($\bullet$),  data for a $\rm
+T_c$  = 1.53 K  sample; ($\circ$),   a linear  fit to the  data  with $\rm
+H_{c2}(0)$ = 89.7 g, $\rm T_c$ = 1.65 K and $\cal  R$ = 6.25e-3; (.), a
+quadratic fit to the data with $\rm H_{c2}(0)$ = 64.0 g, $\rm T_c$ = 1.55 K
+and $\cal R$ = 1.2e-2.  b) ($\bullet$), data for a $\rm T_c$ = 1.54 K sample;
+($\circ$), a linear fit to the data  with  $\rm  H_{c2}(0)$ = 85.8 g, $\rm
+T_c$ = 1.62 K and $\cal R$ = 1.62e-3; (.), a quadratic  fit to the data
+with $\rm H_{c2}(0)$ = 62.8 g, $\rm T_c$ = 1.51 K and $\cal R$ = 4.7e-2.}
+\end{figure}
+\end{document}

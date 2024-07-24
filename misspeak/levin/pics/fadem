@@ -1,0 +1,4 @@
+for FILE in pic19980613_113710.jpg pic19980613_113730.jpg pic19980613_114126.jpg pic19980613_132927.jpg pic19980613_140251.jpg pic19980613_155403.jpg pic19980613_165156.jpg 
+do
+	jpegtran -progressive -outfile ~/www/misspeak/flowers/fade$FILE $FILE
+done

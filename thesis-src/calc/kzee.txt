@@ -1,0 +1,51 @@
+###############################################################################
+##									     ##
+##	File:     kzee.txt						     ##
+##	Author:   Alison Chaiken					     ##
+##	Created:  Sun May 29 19:48:38 EDT 1988				     ##
+##	Contents: Superconducting coherence lengths for the various ternary  ##
+##                GIC's.  References are in ~/thesis/calc/ref.txt.  All      ##
+##                values quoted are zero-temperature extrapolations.         ##
+##									     ##
+##	Copyright (c) 1988 Alison Chaiken.				     ##
+##	All rights reserved.						     ##
+##									     ##
+##	$Log: kzee.txt,v $
+##	Revision 1.1  1997/12/14 09:10:04  wolfgang
+##	initial commit
+##									     ##
+###############################################################################
+
+Compound	kzee_a(0)	kzee_c(0)	Ref.
+--------	--------	---------	----
+Sample 8b	1960		225		
+Sample 7a	2140		203		
+Sample 13c      2679            302
+C_4KHg		2300		200		30
+C_4KHg		2400		240		30
+C_4KHg		2600		200		30
+
+C_8KHg		1450		57		44
+C_8KHg		1600		52		34
+C_8KHg		1750		70		37
+C_8KHg		1810		1117		37
+C_8KHg		1900		280		33
+C_8KHg		1900		85		30
+C_8KHg		2000		140		30
+C_8KHg		2000		80		36
+
+C_4RbHg		2900		320		30
+C_8RbHg		1500		83		30
+C_8RbHg		1900		58		30
+C_8RbHg		2300		49		37
+
+C_4KTl_{1.5}	276		27.8		37
+C_4KTl_{1.5}	290		57		36
+C_4KTl_{1.5}	460		330		44
+
+C_8K		7800		2000		24
+C_8K		9400		1500		24
+C_8K		1e4		2900		24	
+C_6K [high press.] 1020		510		78
+C_8K [21 kbar]	1350		280		78
+C_8K [13 kbar]	1125		205		78

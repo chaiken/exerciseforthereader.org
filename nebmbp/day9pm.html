@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for NetBSD (vers 1st March 2002), see www.w3.org" />
+<title>Day 9 Afternoon</title>
+    <meta name="description" content=
+    "Alison Chaiken's home page" />
+    <meta name="keywords" content=
+    "molecular biology, hybridization, cloning, vector, PCR, DNA,
+    fingerprinting, RNA, mRNA, cDNA, primer, polymerase, E. coli,
+    operon, promoter, plasmid, gel, electrophoresis, southern blot,
+    yokazaki, Eco R1, restriction enzyme, intron, exon, siRNA, gene
+    expression, array, 5' UTR, poly-A tail, tRNA, translation, transcription" />
+    <meta name="resource-type" content="document" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=utf-8" />
+    <meta name="GENERATOR" content=
+    "GnuEmacs/19.34 [en] (X11; I; NetBSD 1.2G i386) [emacs]" />
+    <link rev="made" href=
+    "mailto:alchaiken@gmail.com" />
+    <link rel="start" href="/" />
+    <link rel="icon" href="/fermi-16.png" type=
+    "image/png" />
+    <link rel="stylesheet" href="/pt_style.css" type="text/css" />
+    <!--    $Id: index.html,v 1.25 2005/10/22 20:58:32 alison Exp $  -->
+    <link rel="up" href="../" />
+    <link rel="next" href="coolstuff.html" />
+    <link rel="up" href="/" />
+<!--    $Id: day9pm.html,v 1.2 2004/07/04 06:05:35 alison Exp $  -->
+</head>
+<body>
+<a href="index.html">Up</a>
+<a href="day9am.html">Previous</a>
+<a href="day9eve.html">Next</a>
+
+<h2><p align="center">Day 9 Afternoon Lecture Notes</p></h2> <h3><p
+align="center"> Steve Williams, Smith College</p></h3><h3><p
+align="center">June 14, 2004</p></h3>
+
+<h3>Making a Complete Genomic Library</h3>
+
+<p>At the beginning of experiment 1, we cleaved mouse DNA with EcoR1
+and cloned the fragments into Lambda Zap Express.  The gel showed that
+some fragments were > 12 kbp in length.  12 kbp is the largest segment
+that can be cloned into Lambda Zap Express.  The longest fragments in
+the EcoR1 digest will therefore not be included in the Lambda Zap
+Express library.
+</p>
+
+<p>If it's desirable for the entire genome to be reproduced in a
+library, it needs to be cut completely and randomly into small
+segments.  We would like the average fragment size to be about 9 kbp.
+Shearing through a syringe tip would cut randomly but give pieces that
+are too small.  With random shearing there will still be large
+fragments but large enough coverage guarantees that any given gene
+should be represented.  Some parts of the genome have no restriction
+sites so even cutting with multiple enzymes wouldn't guarantee a
+complete library.
+</p>
+
+<p>A randomly cut library has overlapping fragments that allow
+reassembly.  Restriction digests don't allow reassembly because they
+have no overlaps.  "Tiling" of the sequence refers to having enough
+overlaps to span the whole genome.  Often 7x or 8x tiling is
+performed.
+</p>
+
+<h3>How to create the complete library</h3>
+
+<ol>
+
+<li>Isolate high-MW genomic DNA.   </li>
+
+<li>Shear genomic DNA to an average size of 9 kbp using a nebulizer or
+a syringe.  Check the centroid of the length distribution using a gel.
+The lane with the sheared DNA can be scanned and the resulting curve
+can be analyzed using an NCBI program that will extract the average
+fragment size taking into account the inefficient binding of ethidium
+to small fragments.
+</li>
+
+<li>Shearing produces ragged ends.  Use the blunt cutter pfu
+polymerase to remove them.</li>
+
+<li>Ligate on adaptors like EcoR1-Xho or similar.
+</li>
+
+<li>Insert into lambda vector.</li>
+
+</ol>
+
+<p>Many good papers on the topic of preparing a genomic library are
+available from TIGR, Stanford Human Genome Center and Wash. U. in
+St. Louis.
+</p>
+
+<b><p align="center">Suitability of Various Lambda Phage Vectors for
+Cloning a Complete Genomic Library</p></b>
+
+<div align="center"> <center>
+<table border="1" width="100%">
+
+<tr> <td>Method</td> <td>Ave. Size (kbp)</td> <td># diff. frag.</td> <td>#
+frag. for 7x coverage</td> <td>How many plates</td> <td>Max insert
+size (kbp)</td></tr>
+
+<tr> <td>Lambda Zap Express/EcoR1</td> <td>3</td> <td>10<sup>6</sup></td> <td>7x10<sup>6</sup></td> <td>140</td> <td>12</td></tr>
+
+<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td></tr>
+
+<tr> <td>Lambda Zap Express/random</td> <td>9</td> <td>?</td> <td>2.3x10<sup>6</sup></td> <td>47</td> <td>12</td></tr>
+
+<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td></tr>
+
+<tr> <td>Lambda Fix II/random</td> <td>18</td> <td>?</td> <td>1.7x10<sup>6</sup></td> <td>23-24</td> <td>22</td></tr>
+
+<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td></tr>
+
+<tr> <td>Cosmid</td> <td>36</td> <td>?</td> <td>8x10<sup>5</sup></td> <td>12</td> <td>44</td></tr>
+
+<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td></tr>
+
+<tr> <td>Bacterial artificial chromosome (BAC)</td> <td>108</td> <td>?</td> <td>2.5x10<sup>5</sup></td> <td>4</td> <td>120?</td></tr>
+
+<tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td></tr>
+
+</table>
+</center>
+</div>
+
+<p>The numbers in the table assume that the genome in question is
+mouse with 3x10<sup>9</sup> bp.  The number of plates assumes
+5x10<sup>4</sup> plaques/plate.  Note that Lambda Zap Express is an
+"insertion vector" and is a Stratagene product.  Lambda Fix II is a
+"replacement vector" where a helper phage displaces some lambda DNA
+and replaces it with the insert.
+</p>
+
+<p>Clearly the longer the insert can be, the more manageable the plate
+screening will be.  For BACs, the largest possible insert size isn't
+well-defined.  Four plates would mean two hybridization bags with two
+filters each in them.
+</p>
+
+<p>Soon complete genomic libraries of the most studied organisms will
+be available commercially.  In the future clones of individual genes
+of the common organisms will be listed in catalogs.
+</p>
+
+<h3>All about Lambda Phage</h3>
+
+<p>The wild-type lambda genome has regions for head and tail proteins,
+immunity, DNA synthesis and lysis of the host.  In the center of the
+chromosome is the "b2 region" that contains genes of unknown function
+and the integration/recombination genes, all of which can be removed.
+Integration/recombination means that lambda DNA is put into E. coli
+chromosome and is only reproduced during replication.  Instead we want
+lambda to circularize its DNA and immediately begin its own
+reproduction.  Integrated lambda is dormant.  In molecular biology
+wild-type lambda is used only for making markers.
+</p>
+
+<p>"Replacement vectors" have a "stuffer fragment" in the center that
+is discarded after digestion.  Without the stuffer, left and right
+arms ligated together are too small to package into lambda, whose
+genome must be >= 38 kbp.  For successful Lambda Fix II replication,
+any insert must satisfy 10 kbp <= length <= 22 kbp.  Once the stuffer
+is removed, all replicating phage are recombinants, so blue-clear
+selection isn't needed.  Inserts <= 10 kbp won't even replicate.
+</p>
+
+<p>A "partial fill-in" method can be used to prevent rehybridization
+of the stuffer with the two arms.    For Lambda Fix II, cutting with
+Xho1 leaves TCGAG overhangs.    Adding dTTP and dCTP with DNA
+polymerase results in TC overhangs.   As a result the arms and the
+stuffer cannot rehybridize.
+</p>
+
+<p align=center>
+<img src="partialfillin.png">
+</p>
+
+<p>In order to complete the ligation, put AG overhangs on the insert.
+AG overhangs are made by BAMH1, Mbo1 etc.  Alternatively, do random
+shearing of the insert DNA, blunt the ends and add adaptors as in
+experiment 4.
+</p>
+
+
+<a href="index.html">Up</a>
+<a href="day9am.html">Previous</a>
+<a href="day9eve.html">Next</a>
+
+</body>
+</html>

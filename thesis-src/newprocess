@@ -1,0 +1,7 @@
+#!/bin/sh
+nice -20 qblatex part2
+mv part2.log part2.log~
+mv part2.blg part2.blg~
+nice -20 qblatex part2
+/bin/rm part2.log~ part2.blg~
+

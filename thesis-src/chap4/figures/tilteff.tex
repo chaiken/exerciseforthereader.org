@@ -1,0 +1,36 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{tilteffect}
+\beginpicture
+\setcoordinatesystem units <0.8333mm,0.1143mm>
+\setplotarea x from 0 to 120, y from 0 to 700
+\axis bottom label {$\theta$} ticks 
+	numbered from 0 to 120 by 15
+	unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+	numbered from 0 to 700 by 100
+	unlabeled short quantity 15 /
+\put {$\rm H \perp \hat{c}$} at 90 50
+%\multiput {$\circ$} at "/users/alison/angdata/stI/8b/lowt/tilt/zerotilt.fit"
+\multiput {$\circ$} at "zerotilt.fit"
+%\multiput {$\bullet$} at "/users/alison/angdata/stI/8b/lowt/tilt/tentilt.fit"
+\multiput {$\bullet$} at "tentilt.fit"
+%\multiput {$\diamond$} at "/users/alison/angdata/stI/8b/lowt/tilt/fortytilt.fit"
+\multiput {$\diamond$} at "fortytilt.fit"
+\endpicture
+%\caption[Effect of sample tilt on $\rm H_{c2}(\theta)$.]{The effect of
+%sample tilt on $\rm H_{c2}(\theta)$.  The three curves in this picture were
+%calculated using the parameters  $\rm H_{c2,\parallel \hat{c}}$ = 42 gauss,
+%anisotropy $\equiv 1/\epsilon$ = 15 and the following  numbers for the tilt
+%angle:  $\circ$ $\phi$   =  0$^{\circ}$;  $\bullet$   $\phi$    =
+%10$^{\circ}$; $\diamond$ $\phi$  = 40$^{\circ}$.  The $\phi$  = 0$^{\circ}$
+%curve  corresponds  to one  of  the  fits shown in Figure~\ref{hc2theta}b).
+%Note that the curves for $\phi$ = 10$^{\circ}$ and for $\phi$ = 0$^{\circ}$
+%are almost indistinguishable.}
+\end{figure}
+\end{document}

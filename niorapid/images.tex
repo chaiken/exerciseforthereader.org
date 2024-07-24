@@ -1,0 +1,234 @@
+\batchmode
+\documentstyle[preprint,aps,prb]{revtex}
+\makeatletter
+\hyphenation{mag-net-iz-a-tion}
+
+\makeatother
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newenvironment{tex2html_wrap}{}{}
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\topskip=0pt
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize\parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}\normalsize}
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup}%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup%
+ \let\ifinner=\iffalse }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\def\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA[1]{\lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetmath{\hbox{\vrule width.5pt\vtop{\vbox{%
+  \kern.5pt\kern0.8 pt\hbox{\hglue.5pt\copy\sizebox\hglue0.8 pt}\kern.5pt%
+  \ifdim\dp\sizebox>0pt\kern0.8 pt\fi}%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{\dimen1=\ht\sizebox
+  \ifdim\dimen1<\dp\sizebox \ht\sizebox=\dp\sizebox
+  \else \dp\sizebox=\ht\sizebox \fi}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize\expandafter\vfill
+  \else\expandafter\vss\fi}%
+\makeatletter
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\makeatother
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline152}%
+$H_C ^F = 2K\rm _F/M_S$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline172}%
+$\approx$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline174}%
+$\mu$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline186}%
+$\Delta_A = \sqrt{A_A/K_A}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline192}%
+$H_x^m(x) =
+-2M_S d \cos \phi(0)/x$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline194}%
+$\phi$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline196}%
+$\psi$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline200}%
+$J/2\sqrt{A_A K_A} \gg 1$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath38}%
+\begin{displaymath}H_C^F \, = \, \frac{2K_F}{M_S} \; - \; \frac{M_S^3 d^2}{8 A_F}
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath60}%
+\begin{displaymath}H_C^+ \, = \, \frac{2K_F}{M_S} \; - \; \frac{M^3_S d^3}{8(A_Fd \: + \:
+A_A \Delta_A)}
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline210}%
+$\sigma_A = 4
+\sqrt{A_A K_A}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath67}%
+\begin{displaymath}H_E \, = \, \frac{H_C^+ \: + \: H_C^-}{2} \; = \; - \frac{2K_A}{M_S}
+\frac{\Delta_A}{d} \; = \; - \frac{\Delta_A}{2M_S d}
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath77}%
+\begin{displaymath}H_C \, = \, \frac{H_C^+ \: - \: H_C^-}{2} \; = \; \frac{2K_F}{M_S} \;
++ \; \frac{2K_A}{M_S}\frac{\Delta_A}{d} \; - \; \frac{M_S^3
+d^3}{8(A_Fd \: + A_A \Delta_A)} .
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline216}%
+$\sigma_A$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline220}%
+$\sqrt{A_A K_A}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{references94}%
+\begin{references}\bibitem[*]{Aemail} alison@charlotte.dontspam.wsrcc.com
+
+\bibitem[
+\dag 
+]{Remail}  Richard\_P\_Michel@notes.seagate.com
+
+\bibitem{meiklejohn} W.H. Meiklejohn and C.P. Bean, Phys. Rev. {\bf 102},
+1413 (1956); Phys. Rev.  {\bf 105}, 904 (1957). 
+\bibitem{takahashi} M. Takahashi, A. Yanai, S. Taguchi, T. Suzuki,
+Jpn. J. Appl. Phys. 19, 1093 (1980). 
+\bibitem{massenet} O. Massenet, R. Montmory, and L.Neel, IEEE
+Trans. Magn. {\bf MAG-1}, 63 (1965). 
+\bibitem{carey} M.J. Carey, A.E. Berkowitz, Appl. Phys. Lett. {\bf
+60}, 3060 (1992). 
+\bibitem{nogues} J. Nogues, D. Lederman, T. J. Moran, I.K. Schuller,
+Phys. Rev. Lett.  {\bf 76}, 4624 (1996). 
+\bibitem{grunberg} P. Gr\"unberg, R.Schreiber, Y. Pang, M.B. Brodsky,
+ and H. Sowers, Phys.  Rev. Lett. {\bf 57}, 2442 (1986). 
+\bibitem{parkin} S.S.P. Parkin, N. More, and K.P. Roche,
+Phys. Rev. Lett. {\bf 64}, 2304 (1990). 
+\bibitem{unguris} J. Unguris, R.J. Celota, and D.T. Pierce,
+Phys. Rev. Lett. {\bf 67}, 140 (1991). 
+\bibitem{baibich} M.N. Baibich, J.M. Broto, A. Fert, F. Nguyen Van
+Dau, and F. Petroff, Phys. Rev. Lett. {\bf 61}, 2472 (1988). 
+\bibitem{dieny} B. Dieny, V.S. Speriosu, S.S.P. Parkin, B.A. Gurney,
+ R.D. Wilhoit, and D. Mauri, Phys.  Rev. B {\bf 43}, 1297 (1991). 
+\bibitem{mauri} D. Mauri, H.C. Siegmann, P.S. Bagus, and E. Kay,
+J. Appl. Phys. {\bf 62}, 3047 (1987). 
+\bibitem{malozemoff} A.P. Malozemoff, Phys. Rev. B {\bf 35}, 3679
+(1987); J. Appl. Phys. 63, 3874 (1988). 
+\bibitem{berger} A. Berger and H. Hopster, Phys. Rev. Lett. {\bf 73},
+193 (1994). 
+\bibitem{moran} T.J. Moran, J.M. Gallego, I.K. Schuller,
+J. Appl. Phys. {\bf 78}, 1887 (1995). 
+\bibitem{koon} N.C. Koon, Phys. Rev. Lett. {\bf 78}, 4865 (1997). 
+\bibitem{gornakov} V.S. Gornakov, V.I. Nikitenko, L.H. Bennett,
+H.J. Brown, M.J. Donahue, W.F. Egelhoff, R.D. McMichael, and
+A.J. Shapiro, J. Appl. Phys. {\bf 81}, 5215 (1997). 
+\bibitem{nikitenko} V.I. Nikitenko and L.M. Dedukh, Phys. Status Solidi A {\bf
+3}, 383 (1970). 
+\bibitem{michel} R.P Michel, A. Chaiken, C.T. Wang, and L.E. Johnson,
+IEEE Trans. Magn.  {\bf 32}, 4651 (1996). 
+\bibitem{khapikov} A. Khapikov, Phys. Rev. Lett. {\bf 80}, 2209
+(1998).
+
+\end{references}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure136}%
+\begin{figure}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

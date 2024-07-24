@@ -1,0 +1,65 @@
+\documentstyle[12pt]{report}
+\headheight 8pt
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{thetatemp}
+%C_4KHg 8b data and Lawrence-Doniach fits with H_c = 0 at t = 0.3, 0.6, 0.8
+\beginpicture
+\setcoordinatesystem units <0.8333mm,0.07287mm>
+\setplotarea x from 0 to 120, y from 0 to 700
+\axis bottom label {$\theta$} ticks 
+ numbered from 0 to 120 by 15
+ unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+ numbered from 0 to 700 by 100
+ unlabeled short quantity 15 /
+\put {\lines [l] {a)\cr t = 0.29\cr}} at 20 500
+\put {$\rm H \perp \hat{c}$} at 90 50
+%\multiput {$\circ$} at /users/alison/angdata/C_4KHg/8b/lowt/lotang.8b.strip
+\multiput {$\circ$} at "lotang.8b.strip"
+%\multiput {.} at /users/alison/angdata/C_4KHg/8b/lowt/ldh47a9.5.out
+\multiput {.} at "ldh47a9.5.out"
+\setcoordinatesystem units <0.8333mm,0.1729mm> point at 0 400
+\setplotarea x from 0 to 120, y from 0 to 300
+\axis bottom label {$\theta$} ticks 
+ numbered from 0 to 120 by 15
+ unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+ numbered from 0 to 300 by 50 /
+\put {\lines [l] {b)\cr t = 0.57\cr}} at 20 250
+\put {$\rm H \perp \hat{c}$} at 90 50
+%\multiput {$\circ$} at /users/alison/angdata/C_4KHg/8b/medt/folded.8b.strip
+\multiput {$\circ$} at "folded.8b.strip"
+%\multiput {.} at /users/alison/angdata/C_4KHg/8b/medt/ldfit.06
+\multiput {.} at "ldfit.06"
+\setcoordinatesystem units <0.8333mm,0.2572mm> point at 0 532
+\setplotarea x from 0 to 120, y from 0 to 200
+\axis bottom label {$\theta$} ticks 
+ numbered from 0 to 120 by 15
+ unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+ numbered from 0 to 200 by 50
+ unlabeled short quantity 9 /
+\put {\lines [l] {c)\cr t = 0.78\cr}} at 20 167
+\put {$\rm H \perp \hat{c}$} at 90 30
+%\multiput {$\circ$} at /users/alison/angdata/C_4KHg/8b/hight/hitang.8b.strip
+\multiput {$\circ$} at "hitang.8b.strip"
+%\multiput {.} at /users/alison/angdata/C_4KHg/8b/hight/ldh23.1a4.5.out
+\multiput {.} at "ldh23.1a4.5.out"
+\endpicture
+\caption[Quality of fits to the anisotropic Ginzburg-Landau theory $\rm
+H_{c2}(\theta)$ formula as a  function of  temperature.]{Quality of fits to
+the anisotropic  Ginzburg-Landau   $\rm H_{c2}(\theta)$  as a  function  of
+temperature for a $\rm T_c$ = 1.54 K  $\rm C_4KHg$  GIC.  All fits produced
+with the parameters tilt = 0$^{\circ}$ and mosaic spread = 0$^{\circ}$.  a)
+t = 0.29.  $\rm H_{c2,\parallel\hat{c}}$ = 47 g and anisotropy  =  9.5.  The
+residual  parameter  $\cal  R$   = 1.18.    b)    t = 0.57.   $\rm   H_{c2,
+\parallel\hat{c}}$ = 33 gauss and anisotropy = 5.5.  $\cal R$ = 1.25.  c) t
+=  0.78.  $\rm  H_{c2,\parallel\hat{c}}$ =  23.1 gauss  and anisotropy = 4.5.
+$\cal R$ = 1.43.}
+\end{figure}
+\end{document}

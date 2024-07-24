@@ -1,0 +1,785 @@
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Contra Costa Times | 09/06/2002 | New dietary guidelines urge more exercise</title>
+<link rel='stylesheet' type='text/css' href='/css/palette/blue_complement/en/global.css'/><script type="text/javascript" language="javascript" src="/js/global.js"></script>
+<script type="text/javascript" language="javascript">
+var navReady = false;
+var toolsReady = false;
+
+
+
+
+
+
+
+
+
+main_nav_news_on = new Image();
+main_nav_news_off = new Image();
+main_nav_business_on = new Image();
+main_nav_business_off = new Image();
+main_nav_sports_on = new Image();
+main_nav_sports_off = new Image();
+main_nav_entertainment_on = new Image();
+main_nav_entertainment_off = new Image();
+main_nav_living_on = new Image();
+main_nav_living_off = new Image();
+main_nav_classifieds_on = new Image();
+main_nav_classifieds_off = new Image();
+if (document.images) {
+var main_nav_path = "/images/palette/blue_complement/navigation/en/";
+main_nav_news_on.src = main_nav_path + "main_nav_news_on.gif";
+main_nav_news_off.src = main_nav_path + "main_nav_news.gif";
+main_nav_business_on.src = main_nav_path + "main_nav_business_on.gif";
+main_nav_business_off.src = main_nav_path + "main_nav_business.gif";
+main_nav_sports_on.src = main_nav_path + "main_nav_sports_on.gif";
+main_nav_sports_off.src = main_nav_path + "main_nav_sports.gif";
+main_nav_entertainment_on.src = main_nav_path + "main_nav_entertainment_on.gif";
+main_nav_entertainment_off.src = main_nav_path + "main_nav_entertainment.gif";
+main_nav_living_on.src = main_nav_path + "main_nav_living_on.gif";
+main_nav_living_off.src = main_nav_path + "main_nav_living.gif";
+main_nav_classifieds_on.src = main_nav_path + "main_nav_classifieds_on.gif";
+main_nav_classifieds_off.src = main_nav_path + "main_nav_classifieds.gif";
+
+}
+
+
+var over = -1;
+var overTrigger = -1;var mNames = null;
+var menus = null;
+var menuTriggers = null;
+var numberOfMenus = 0;function mouseMoveHandler(e){
+if (navReady) {
+var scrollOffsetX = (is.ie)?(document.body.scrollLeft):0;
+var scrollOffsetY = (is.ie)?(document.body.scrollTop):0;
+var mouseX = (is.ns)?e.pageX:event.x + scrollOffsetX;
+var mouseY = (is.ns)?e.pageY:event.y + scrollOffsetY;
+if ((over !=-1 )&& ( overTrigger == -1) ) {
+var overAnyMenu = false;
+if ( (mouseX<menus[over].x) || (mouseX>menus[over].x + menus[over].width) || (mouseY<menus[over].y) || (mouseY>menus[over].y + menus[over].height)) {
+menus[over].hide();
+navRoll(mNames[over],"off");
+}
+else overAnyMenu = true;
+if (!overAnyMenu) over=-1;
+}
+}
+}
+
+function menuOver(which) {
+if (navReady) {
+overTrigger = which;
+over = which;
+for (i=0;i<numberOfMenus;i++) {
+if (i!=which) menus[i].hide();
+else menus[i].show();
+}
+navRoll(mNames[which],"on");
+}
+}
+
+function menuOut() {
+if (navReady) {
+navRoll(mNames[overTrigger],"off");
+overTrigger = -1;
+}
+}
+
+function navRoll(name, suffix) {
+if (is.ns4) {
+var imgObject = eval("document." + name + "trigger.document.images['main_nav_"+name +"']");
+imgObject.src = eval("main_nav_" + name + "_" + suffix + ".src");
+}
+else document.images["main_nav_"+name].src = eval("main_nav_" + name + "_" + suffix + ".src");
+}
+
+function mn_initPositions() {
+for (i=0; i<numberOfMenus; i++) {
+menuTriggers[i].x = menuTriggers[i].getInlineLeft();
+menuTriggers[i].y = menuTriggers[i].getInlineTop();
+menuTriggers[i].width = menuTriggers[i].getWidth();
+menuTriggers[i].height = menuTriggers[i].getHeight();
+menus[i].x = menuTriggers[i].x;
+menus[i].y = menuTriggers[i].y + menuTriggers[i].getHeight();
+menus[i].width = menus[i].getWidth();
+menus[i].height= menus[i].getHeight();
+menus[i].updateLayer();
+}
+}
+
+function initMenus()
+{
+if (is.ns4) document.captureEvents(Event.MOUSEMOVE)
+document.onmousemove= mouseMoveHandler;
+mNames = new Array();
+menus = new Array();
+menuTriggers = new Array();mNames[0] = "news";
+mNames[1] = "business";
+mNames[2] = "sports";
+mNames[3] = "entertainment";
+mNames[4] = "living";
+mNames[5] = "classifieds";
+numberOfMenus = mNames.length;
+for (i=0; i<numberOfMenus; i++ )
+{
+menuTriggers[i] = new LayerObject(mNames[i] + "trigger");
+menus[i] = new LayerObject(mNames[i]);
+}
+
+mn_initPositions();
+navReady = true;
+}
+
+
+onLoadScript+=";navReady=false;initMenus();";
+function showResults(siteSurveyKey) {
+var url="/mld/templates/contentModules/poll-results-popup.jsp"+ "?siteSurveyKey=" + siteSurveyKey;
+window.open(url, 'Title');
+}
+
+function openWin(URL) {
+aWindow = window.open(URL,
+'thewindow','width=500,height=400,resizable=yes,scrollbars=yes');
+}
+
+
+
+
+
+function init() {
+initMenus();
+}
+</script>
+    <link rel="stylesheet" href="/alison/pt_style.css" type="text/css" />
+    <link rev="made" href="mailto:alchaiken@gmail.com" />
+    <link rel="up" href="index.html" />
+    <link rel="start" href="/" />
+    <link rel="icon" href="/alison/fermi-16.png" type="image/png"/>
+</head>
+<body bgcolor="#000000" onload="init();" topmargin="2" leftmargin="2" marginwidth="2" marginheight="2">
+
+
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#666666" width="100%">
+<tr><td width="28"><a href="http://www.realcities.com" target="_blank"><img src="/images/common/realcities_logo.png" width="28" height="29" alt="RealCities" border="0"/></a></td><td class="greytext"><nobr><strong><a href="http://www.realcities.com" target="_blank">Click here to visit other RealCities sites</a></strong></nobr></td><td align="right">
+<IFRAME WIDTH=425 HEIGHT=25 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="000000" SRC=http://krd.realcities.com/html.ng/site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=ribbon&pos=h1&c1=living&c2=health&c3=none>
+<SCRIPT LANGUAGE="JavaScript1.1" SRC=http://krd.realcities.com/js.ng/Params.richmedia=yes&site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=ribbon&pos=h1&c1=living&c2=health&c3=none>
+</SCRIPT>
+</IFRAME>
+
+</td></tr></table>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" width="100%">
+<tr><td bgcolor="#000000" colspan="2"><img src="/images/common/spacer.png" width="1" height="3" /></td></tr><tr><td background="/images/common/bg_dashed_dark_grey.png"><a href="http://www.bayarea.com"><img src="/images/logos/site/bayarea/bayarea/site_logo.png" width="239" height="61" alt="bayarea.com - The bayarea home page" border="0"/></a></td><td background="/images/common/bg_dashed_dark_grey.png" align="left">
+<IFRAME WIDTH=468 HEIGHT=60 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="000000" SRC=http://krd.realcities.com/html.ng/site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=banner&pos=top&c1=living&c2=health&c3=none>
+<SCRIPT LANGUAGE="JavaScript1.1" SRC=http://krd.realcities.com/js.ng/Params.richmedia=yes&site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=banner&pos=top&c1=living&c2=health&c3=none>
+</SCRIPT>
+</IFRAME>
+</td></tr><tr><td bgcolor="#000000" colspan="2"><img src="/images/common/spacer.png" width="1" height="3" /></td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" width="100%">
+<tr><td align="left" bgcolor="#000000" background="/images/common/bg_dashed_grey.png"><img src="/images/palette/blue_complement/navigation/en/mediabar_nav_label.png" width="156" height="35" border="0" alt="Go to your local news source"/><a href="/mld/mercurynews/"><img src="/images/logos/site/bayarea/bayarea/mediapartners/media_partner_home_1.png" border="0" alt="San Jose Mercury News"/></a><a href="/mld/cctimes/"><img src="/images/logos/site/bayarea/bayarea/mediapartners/media_partner_home_2.png" border="0" alt="Contra Costa Times"/></a><a href="/mld/mcherald/"><img src="/images/logos/site/bayarea/bayarea/mediapartners/media_partner_home_3.png" border="0" alt="Monterey County The Herald"/></a><a href="/mld/vietmerc"><img src="/images/logos/site/bayarea/bayarea/mediapartners//media_partner_home_4.png" border="0" alt="Viet Mercury"/></a><a href="/mld/nuevomundo"><img src="/images/logos/site/bayarea/bayarea/mediapartners//media_partner_home_5.png" border="0" alt="Nuevo Mundo"/></a></td></tr></table>
+<table cellspacing="0" cellpadding="0" width="100%" bgcolor="#2b4e9d" background="/images/palette/blue_complement/main_nav_bg.png" border=0>
+<tbody><tr><td><img height="23" src="/images/palette/blue_complement/navigation/en/main_nav_our_local_channels.png" width="155" border="0"/></td><td><div class="menutrigger" id="newstrigger"><a onmouseover="menuOver(0)" onmouseout="menuOut();" name="3110" href="/mld/bayarea/news/"><img alt="news" src="/images/palette/blue_complement/navigation/en/main_nav_news.png" border="0" name="main_nav_news"  /></a></div></td><td><div class="menutrigger" id="businesstrigger"><a onmouseover="menuOver(1)" onmouseout="menuOut();" name="10" href="/mld/bayarea/business/"><img alt="business" src="/images/palette/blue_complement/navigation/en/main_nav_business.png" border="0" name="main_nav_business"  /></a></div></td><td><div class="menutrigger" id="sportstrigger"><a onmouseover="menuOver(2)" onmouseout="menuOut();" name="4270" href="/mld/bayarea/sports/"><img alt="sports" src="/images/palette/blue_complement/navigation/en/main_nav_sports.png" border="0" name="main_nav_sports"  /></a></div></td><td><div class="menutrigger" id="entertainmenttrigger"><a onmouseover="menuOver(3)" onmouseout="menuOut();" name="655" href="/mld/bayarea/entertainment/"><img alt="entertainment" src="/images/palette/blue_complement/navigation/en/main_nav_entertainment.png" border="0" name="main_nav_entertainment"  /></a></div></td><td><div class="menutrigger" id="livingtrigger"><a onmouseover="menuOver(4)" onmouseout="menuOut();" name="1025" href="/mld/bayarea/living/"><img alt="living" src="/images/palette/blue_complement/navigation/en/main_nav_living.png" border="0" name="main_nav_living"  /></a></div></td><td><div class="menutrigger" id="classifiedstrigger"><a onmouseover="menuOver(5)" onmouseout="menuOut();" name="640" href="/mld/bayarea/classifieds/"><img alt="classifieds" src="/images/palette/blue_complement/navigation/en/main_nav_classifieds.png" border="0" name="main_nav_classifieds"  /></a></div></td><td width="100%">&nbsp;</td></tr></tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" width="100%" background="/images/common/bg_dashed_grey.png">
+<tr><td bgcolor="#000000"><img src="/images/common/spacer.png" width="762" height="1"/></td></tr><tr><td valign="middle" align="right" class="greytext"><img src="/images/component/vertical_divider_grey.png" width="20" border="0" height="14"/><a href="/mld/bayarea/contact_us/help "> Help</a><img src="/images/component/vertical_divider_grey.png" width="20" border="0" height="14"/><a href="/mld/bayarea/contact_us "> Contact Us</a><img src="/images/component/vertical_divider_grey.png" width="20" border="0" height="14"/><a href="/mld/bayarea/contact_us/site_index "> Site Index</a><img src="/images/component/vertical_divider_grey.png" width="20" border="0" height="14"/><a href="/mld/bayarea/archives "> Archives</a><img src="/images/component/vertical_divider_grey.png" width="20" border="0" height="14"/><a href="/mld/bayarea/contact_us/advertise/ "> Place an Ad</a><img src="/images/component/vertical_divider_grey.png" width="20" border="0" height="14"/><a href="/mld/bayarea/contact_us/subscriptions_np1 "> Newspaper Subscriptions</a><img src="/images/component/vertical_divider_grey.png" width="20" border="0" height="14"/><a href="/edc/servlet/edcSubscriber?action=Q_REDIRECT&NEXT=EDIT_DISPATCH "> Email Dispatches</a>
+&nbsp;&nbsp;</td></tr></table>
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td bgcolor="#000000" width="155"><img src="/images/common/spacer.png" width="155" height="1"></td>
+<td bgcolor="#000000" width="1"><img src="/images/common/spacer.png" width="1" height="1"></td>
+<td bgcolor="#000000" width="100%"><img src="/images/common/spacer.png" width="450" height="1"></td>
+<td bgcolor="#000000" width="1"><img src="/images/common/spacer.png" width="1" height="1"></td>
+<td bgcolor="#000000" width="155"><img src="/images/common/spacer.png" width="155" height="1"></td>
+</tr>
+<tr>
+
+<td valign="top" bgcolor="#E9E9E9">
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<form name="searchform" action="/mld/bayarea/search_results.htm" method="post">
+<INPUT TYPE="hidden" NAME="site" VALUE="bayarea">
+<INPUT TYPE="hidden" NAME="num_results" VALUE="20">
+<INPUT TYPE="hidden" NAME="start" VALUE="0">
+<tr><td bgcolor="#fef7d7" colspan="3">
+<img src="/images/component/divider_rail_top.png" width="155" height="1" /></td></tr><tr><td bgcolor="#fef7d7" width="1">
+<img src="/images/common/spacer.png" width="1" height="1" /></td><td bgcolor="#d4cdaf">
+<table border="0" cellpadding="1" cellspacing="0" width="153">
+<tr><td colspan="2">
+<img src="/images/common/spacer.png" width="150" height="2" /><br>
+&nbsp;<b>Search</b>
+<img src="/images/palette/blue_complement/hr_2px_medium.png" width="150" height="2" border="0"  vspace="2"/><br></td></tr><tr><td><input type="text" name="q" size="10" class="fullrailformelement"/></td><td><input type="image" src="/images/palette/blue_complement/navigation/en/button_go.png" border="0"/></td></tr><tr><td colspan="2" class="mediumarea">
+<b><img src="/images/palette/blue_complement/panel_arrow_0.png" width="12" height="9" border="0"  vspace="2" align="left"/><a href="/mld/bayarea/archives.htm">Search the Archives</a></b><br><img src="/images/common/spacer.png" width="150" height="5" /><br></td></tr></table>
+</td><td bgcolor="#aba695" width="1">
+<img src="/images/common/spacer.png" width="1" height="1" /></td></tr><tr><td bgcolor="#aba695" colspan="3">
+<img src="/images/component/divider_rail_bottom.png" width="155" height="2" /></td></tr></form>
+</table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155" bgcolor="#fef7d7">
+<tr><td colspan="3"><img src="/images/component/divider_rail_top.png" width="155" height="1" /></td></tr><tr><td rowspan="3"><img src="/images/common/spacer.png" width="5" height="1"/></td><td><img src="/images/common/spacer.png" width="145" height="10"/></td><td rowspan="3"><img src="/images/common/spacer.png" width="5" height="1"/></td></tr><tr> <td><b>Living</b><br><img src="/images/palette/blue_complement/hr_2px_light.png" width="145" height="2" border="0" vspace="2" /><table border="0" cellpadding="0" cellspacing="0" width="145">
+<tr><td><img src="/images/common/spacer.png" width="12" height="1" /></td><td><img src="/images/common/spacer.png" width="96" height="1" /></td><td><img src="/images/common/spacer.png" width="25" height="1" /></td></tr>
+
+
+
+
+<tr><td colspan="3" bgcolor="#fef7d7"><b><a href="/mld/bayarea/living/columnists/" name="1030">Columnists</a></b>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr><td colspan="3" align="center"><img src="/images/component/hr_grey_dots_125w.png" width="125" height="1" border="0"  vspace="6"/></td></tr>
+
+<tr><td colspan="3" bgcolor="#fef7d7"><b><a href="/mld/bayarea/living/community/" name="1770">Community</a></b>
+</td></tr>
+
+<tr><td colspan="3" align="center"><img src="/images/component/hr_grey_dots_125w.png" width="125" height="1" border="0"  vspace="6"/></td></tr>
+
+<tr><td colspan="3" bgcolor="#fef7d7"><b><a href="/mld/bayarea/living/education/" name="1775">Education</a></b>
+</td></tr>
+
+
+
+
+
+
+
+<tr><td colspan="3" align="center"><img src="/images/component/hr_grey_dots_125w.png" width="125" height="1" border="0"  vspace="6"/></td></tr>
+
+<tr><td colspan="3" bgcolor="#fef7d7"><b><a href="/mld/bayarea/living/food/" name="2990">Food</a></b>
+</td></tr>
+
+<tr><td colspan="3" align="center"><img src="/images/component/hr_grey_dots_125w.png" width="125" height="1" border="0"  vspace="6"/></td></tr>
+
+<tr><td colspan="3" bgcolor="#fef7d7"><b><a href="/mld/bayarea/living/health/" name="2815">Health</a></b>
+</td></tr>
+
+
+
+<tr><td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td colspan="2"><img src="/images/palette/blue_complement/panel_arrow_0.png" width="12" height="9" border="0" alt="" align="left" /><b><a href="/mld/bayarea/living/health/alternative_health/" name="2820">Alternative Medicine</a></b></td>
+</tr>
+
+
+
+<tr><td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td colspan="2"><img src="/images/palette/blue_complement/panel_arrow_0.png" width="12" height="9" border="0" alt="" align="left" /><b><a href="/mld/bayarea/living/health/childrens_health/" name="2825">Children's Health</a></b></td>
+</tr>
+
+
+
+<tr><td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td colspan="2"><img src="/images/palette/blue_complement/panel_arrow_0.png" width="12" height="9" border="0" alt="" align="left" /><b><a href="/mld/bayarea/living/health/conditions_diseases/" name="2830">Conditions & Diseases</a></b></td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr><td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td colspan="2"><img src="/images/palette/blue_complement/panel_arrow_0.png" width="12" height="9" border="0" alt="" align="left" /><b><a href="/mld/bayarea/living/health/fitness/" name="2885">Fitness</a></b></td>
+</tr>
+
+
+
+
+
+<tr><td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td colspan="2"><img src="/images/palette/blue_complement/panel_arrow_0.png" width="12" height="9" border="0" alt="" align="left" /><b><a href="/mld/bayarea/living/health/mens_health/" name="2895">Men's Health</a></b></td>
+</tr>
+
+
+
+<tr><td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td colspan="2"><img src="/images/palette/blue_complement/panel_arrow_0.png" width="12" height="9" border="0" alt="" align="left" /><b><a href="/mld/bayarea/living/health/nutrition/" name="2900">Nutrition</a></b></td>
+</tr>
+
+
+
+<tr><td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td colspan="2"><img src="/images/palette/blue_complement/panel_arrow_0.png" width="12" height="9" border="0" alt="" align="left" /><b><a href="/mld/bayarea/living/health/pharmacy/" name="2905">Pharmacy</a></b></td>
+</tr>
+
+
+
+<tr><td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td colspan="2"><img src="/images/palette/blue_complement/panel_arrow_0.png" width="12" height="9" border="0" alt="" align="left" /><b><a href="/mld/bayarea/living/health/senior_health/" name="2910">Seniors' Health</a></b></td>
+</tr>
+
+
+
+<tr><td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td colspan="2"><img src="/images/palette/blue_complement/panel_arrow_0.png" width="12" height="9" border="0" alt="" align="left" /><b><a href="/mld/bayarea/living/health/specialties/" name="2920">Specialties</a></b></td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr><td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td colspan="2"><img src="/images/palette/blue_complement/panel_arrow_0.png" width="12" height="9" border="0" alt="" align="left" /><b><a href="/mld/bayarea/living/health/womens_health/" name="2965">Women's Health</a></b></td>
+</tr>
+
+<tr><td colspan="3" align="center"><img src="/images/component/hr_grey_dots_125w.png" width="125" height="1" border="0"  vspace="6"/></td></tr>
+
+<tr><td colspan="3" bgcolor="#fef7d7"><b><a href="/mld/bayarea/living/home/" name="2975">Home</a></b>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr><td colspan="3" align="center"><img src="/images/component/hr_grey_dots_125w.png" width="125" height="1" border="0"  vspace="6"/></td></tr>
+
+<tr><td colspan="3" bgcolor="#fef7d7"><b><a href="/mld/bayarea/living/occasions/" name="3065">Occasions</a></b>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr><td colspan="3" align="center"><img src="/images/component/hr_grey_dots_125w.png" width="125" height="1" border="0"  vspace="6"/></td></tr>
+
+<tr><td colspan="3" bgcolor="#fef7d7"><b><a href="/mld/bayarea/living/travel/" name="3105">Travel</a></b>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+</td></tr><tr><td valign="top"><img src="/images/common/spacer.png" width="145" height="15"/></td></tr><tr><td colspan="3"><img src="/images/component/divider_rail_bottom.png" width="155" height="2" /></td></tr></table>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tr><td><img src="/images/component/divider_rail_top.png" width="155" height="1" ></td></tr><tr><td><img src="/images/common/spacer.png" width="1" height="10" /></td></tr><tr><td align="center">
+<IFRAME WIDTH=120 HEIGHT=60 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="000000" SRC=http://krd.realcities.com/html.ng/site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=button&pos=left1&c1=living&c2=health&c3=none>
+<SCRIPT LANGUAGE="JavaScript1.1" SRC=http://krd.realcities.com/js.ng/Params.richmedia=yes&site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=button&pos=left1&c1=living&c2=health&c3=none>
+</SCRIPT>
+</IFRAME>
+
+</td></tr><tr><td><img src="/images/common/spacer.png" width="1" height="10" /></td></tr><tr><td><img src="/images/component/divider_rail_bottom.png" width="155" height="2" ></td></tr></table>
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155" bgcolor="#2b4e9d">
+<tr><td bgcolor="#2b4e9d" rowspan="4"><img src="/images/common/spacer.png" width="5" height="1" /></td><td bgcolor="#2b4e9d" class="mainarea"><img src="/images/common/spacer.png" width="1" height="5" border="0" /><br><b>Our Site Tools</b><br><img src="/images/common/spacer.png" width="1" height="5" border="0" /></td><td bgcolor="#2b4e9d" rowspan="4"><img src="/images/common/spacer.png" width="5" height="1" /></td></tr><tr><td valign="top" bgcolor="#d4cdaf" width="142">
+<img src="/images/common/spacer.png" width="141" height="5" /><br>&nbsp;&nbsp;<a href="/mld/bayarea/news/weather/" class="relatedbold">Weather</a>
+</td></tr><tr><td bgcolor="#fef7d7"><img src="/images/common/spacer.png" width="100" height="5" /><br>
+<table border="0" cellpadding="1" cellspacing="0" width="135" align="center"><tr valign="top">
+<td class="mediumarea" width="90%"><b>San Francisco</b></td><td class="mediumarea" nowrap="nowrap" align="right"><img src=/images/component/weather_temp_up.gif width="6" height="7"/>72</td><td class="mediumarea" nowrap="nowrap" align="right"><img src=/images/component/weather_temp_down.gif width="6" height="7"/>52</td></tr><tr valign="top">
+<td class="mediumarea" width="90%"><b>San Jose</b></td><td class="mediumarea" nowrap="nowrap" align="right"><img src=/images/component/weather_temp_up.gif width="6" height="7"/>77</td><td class="mediumarea" nowrap="nowrap" align="right"><img src=/images/component/weather_temp_down.gif width="6" height="7"/>53</td></tr><tr valign="top">
+<td class="mediumarea" width="90%"><b>Oakland</b></td><td class="mediumarea" nowrap="nowrap" align="right"><img src=/images/component/weather_temp_up.gif width="6" height="7"/>73</td><td class="mediumarea" nowrap="nowrap" align="right"><img src=/images/component/weather_temp_down.gif width="6" height="7"/>52</td></tr></table>
+<img src="/images/common/spacer.png" width="100" height="5" /><br></td></tr><tr><td bgcolor="#d4cdaf"><img src="/images/palette/blue_complement/hr_2px_medium.png" width="141" height="2" vspace="2" /><br>&nbsp;&nbsp;<a href="/mld/bayarea/entertainment/events/" class="relatedbold">Local Events</a><br><img src="/images/palette/blue_complement/hr_2px_medium.png" width="141" height="2" vspace="2" /><br>&nbsp;&nbsp;<a href="http://yp.bayarea.com/bin/cgidir.dll?&MEM=1201" class="relatedbold">Yellow Pages</a><br><img src="/images/palette/blue_complement/hr_2px_medium.png" width="141" height="2" vspace="2" /><br>&nbsp;&nbsp;<a href="http://forums.realcities.com/category.cfm?oid=1243023515783636" class="relatedbold">Discussion Boards</a><br><img src="/images/palette/blue_complement/hr_2px_medium.png" width="141" height="2" vspace="2" /><br>&nbsp;&nbsp;<a href="http://maps.bayarea.com/jump.cgi/refsrc=KR.1201" class="relatedbold">Maps & Directions</a><br><img src="/images/common/spacer.png" width="141" height="5" /></td></tr><tr><td colspan="3" bgcolor="#2b4e9d"><img src="/images/common/spacer.png" width="1" height="5" /></td></tr></table>
+
+
+</td><td bgcolor="#000000" rowspan="2"><img src="/images/common/spacer.png" width="1" height="1"></td><TD ROWSPAN="2" VALIGN="top" BGCOLOR="#FFFFFF">
+
+<div align="center">
+<table border="0" cellpadding="0" cellspacing="2" width="97%">
+<tr><td valign="middle"><a href="/mld/bayarea/" class=" related">Back to Home</a>&nbsp;&gt;&nbsp;
+<a href="/mld/bayarea/living"> Living </a> &gt;
+</td><td align="right" class="byline">Sunday, Sep 08, 2002</td></tr><tr><td colspan="2" align="center" bgcolor="#ffffff"> <img src="/images/common/spacer.png" width="1" height="1" /><br></td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" width="97%">
+<tr> <td align="center" class="pagetitle" width="100%">Health</td><td align="right" width="1" valign="top"><img src="/images/common/spacer.png" width="1" height="1" /></td><td align="right"  valign="top">
+
+</td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="97%" align="center">
+<tr><td align="center">
+<img src="/images/common/spacer.png" width="1" height="2" /><br></td></tr><tr><td align="center" bgcolor="#cccccc">
+<img src="/images/common/spacer.png" width="1" height="2" /><br></td></tr><tr><td align="center">
+<img src="/images/common/spacer.png" width="1" height="2" /><br></td></tr><tr><td align="center" bgcolor="#cccccc">
+<img src="/images/common/spacer.png" width="1" height="1" /><br></td></tr></table><img src="/images/common/spacer.png" width="100%" height="5" /><br></div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td colspan="4"><hr size="1" color="#cccccc" width="97%"/></td></tr><tr><td width="15" rowspan="7"><img src=/images/common/spacer.gif width="15" height="1" /></td><td>Posted on Fri, Sep. 06, 2002</td><td align="right" valign="top">
+<img src=/images/component/topstory_fromthe_txt.gif width="46" height="13"  border="0"/><img src="/images/logos/site/bayarea/cctimes/archives_title.png" alt="story:PUB_DESC" border="0"/></td><td width="15" rowspan="7"><img src=/images/common/spacer.gif width="15" height="1" /></td></tr><tr><td colspan="2"><img src=/images/common/spacer.gif width="1" height="10" /></td></tr><tr><td colspan="2">
+<div class="body-head">
+
+
+
+<span class="headline">New dietary guidelines urge more exercise</span><br>
+
+<b><span class="deck"> They want people to eat more fiber and less sugar, while setting maximum calories consumed based mainly on level of activity</span></b><br>
+
+<b><font size="-1"><span class="byline">By Sally Squires</span></font></b><br>
+
+<b><font size="-1"><span class="creditline">WASHINGTON POST</span></font></b><br>
+</div>
+<table border="0" width = "100" cellpadding="0" cellspacing="5" align="right">
+
+
+</table>
+<span class="body-content">
+<!-- begin body-content -->
+<span class="body-content">
+<p><b><span class="dateline">WASHINGTON</span><span class="dateline-separator"> - </span></b>Sweeping new nutritional recommendations issued Thursday urge Americans to exercise an hour a day, boost their fiber intake and significantly cut back on consuming foods with added sugar including such popular fare as soft drinks and candy.</p>
+<p>Instead of setting a single average target for the maximum number of calories people should consume every day -- the previous guidelines advised about 2,900 calories a day for men and 2,200 for most women -- the new guidelines conclude that how much people eat should be tied directly to how much physical activity they get.</p>
+<p>For example, a sedentary woman might only need 1,800 calories a day, the report notes, but a very active woman the same age and size could eat as much as another 1,000 calories a day to maintain a healthy body weight.</p>
+<p>For the first time, the guidelines set a recommended daily intake for carbohydrates -- a move that many nutritionist said is likely to influence the ongoing debate about a low-carbohydrate versus a high-carbohydrate approach to dieting.</p>
+<p>Both children and adults need a minimum of 130 grams a day of carbohydrates to provide enough glucose to the brain, the guidelines state, noting that most people more than achieve that goal.</p>
+<p>That's about six times as much as what low-carbohydrate regimens like the Atkins diet advise during the weight-loss phase.</p>
+<p>Carbohydrates can come from bread, crackers, pasta, fruit, vegetables, potatoes, beans and a host of other foods.</p>
+<p>But only 25 percent of total calories each day should come from foods with added sugar, such as full-strength soft drinks, candy, cookies and even fruit drinks with added sugar, according to the guidelines.</p>
+<p>Issued by the National Academy of Sciences after more than two years of study, the report is called the Dietary Reference Intakes and takes the place of what were formerly called the Recommended Dietary Allowances -- better known as the RDAs.</p>
+<p>The new report is the latest in a series from the academy revising all its dietary recommendations for the first time since 1989.</p>
+<p>The new guidelines also ease up a little on fat. Instead of urging a blanket approach that about 30 percent of total daily calories can come from fat, they say that a healthy diet can include from 20 percent calories from fat to as much as 35 percent.</p>
+<p>That upper limit echoes the latest guidelines issued by the National Heart, Lung and Blood Institute, but goes further than current recommendations set by the American Heart Association.</p>
+<p>Healthful fats are emphasized in the new guidelines, which set a daily intake for two types of polyunsaturated fat that appear to help reduce sudden death from heart disease.</p>
+<p>These beneficial fats can't be manufactured by the body and so need to be eaten every day, the report notes. While dietary supplements can supply them, Joann Lupton, chair of the committee that drafted the report, said that it's important to "meet these requirements with food."</p>
+<p>Good sources include milk, nuts, avocados, olives, flaxseed, soybeans as well as safflower, canola and corn oils.</p>
+<p>At the same time, the report underscores the dangers of saturated fat -- such as that found in fatty cuts of meat or whole fat dairy products -- and of trans fatty acids, which often appear in baked goods and fried food.</p>
+<p>Dietary cholesterol, the report notes, should also be eaten sparingly, because the body naturally makes all that it needs. All three of these fats contribute to the risk of heart disease, the report notes.</p>
+<p>"It's definitely a step in the right direction,"' said Dean Ornish, director of the Preventive Medicine Research Institute in Sausalito and an advocate of the low-fat approach.</p>
+<p>Fiber, on the other hand, is a food that the report found is often lacking in most people's diets. For this reason, the guidelines establish the first recommended dietary allowance for fiber, setting 38 grams for men ages 50 and younger and 25 grams a day for women the same age.</p>
+<p>This requirement can be met by eating more fruit and vegetables, beans and whole grains, such as whole wheat bread, oatmeal and other whole grain cereals and brown rice, the report notes.</p>
+<p>Most importantly, experts said that the new report underscores the need for Americans to reach a healthy weight and maintain it.</p>
+<p>Government figures show that more than half of adults 18 and older are overweight or obese. This growing epidemic results in an estimated 300,000 deaths per year and billions of dollars in health care expenses.</p>
+<p>Childhood obesity is also increasing, and with it the incidence of health problems once seen only in adults, including type two diabetes.</p>
+<p>With its emphasis on an hour a day of activity, the new report goes further than some groups, including the American Heart Association, in advocating exercise.</p>
+<p>"We need to assess that," said AHA president Robert Bonow. "The last thing we want to do is to have messages that appear to be conflicting."</p>
+<p>The new guidelines stress that people can fulfill the need for 60 minutes of exercise a day in smaller increments throughout the day and don't necessarily have to spend a full hour exercising all at once.</p>
+<p>Some experts applauded the inclusion of physical activity but worried that consumers might find it confusing to calculate calories based on exercise.</p>
+<p>"It's a hard concept to get across, " said Judith Stern, professor of nutrition and internal medicine at the UC Davis. "But it is really important for people to recognize that energy balance -- energy in and energy out -- is what contributes to obesity."</p>
+</span>
+<!-- end body-content -->
+</span>
+</td></tr></table>
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+<tr><td align="right">
+<table border="0" cellpadding="1" cellspacing="0">
+<tr align="center">
+<td></td><td><a href="4014930.htm?template=contentModules/emailstory.jsp"><img src="/images/common/button_email_this.png" width="22" height="15" border="0" /></a></td><td><a href="4014930.htm?template=contentModules/printstory.jsp"><img src="/images/common/button_print_this.png" width="22" height="15" border="0" /></a>
+</td></tr><tr>
+
+
+<td></td>
+<td nowrap><a href="4014930.htm?template=contentModules/emailstory.jsp" class="related">&nbsp;email this</a> |</td><td nowrap><a href="4014930.htm?template=contentModules/printstory.jsp" class="related">&nbsp;print this</a></td></tr></table>
+</td></tr></table>
+<br><div align="center">
+
+
+
+
+<img src="/images/common/spacer.png" width="100" height="25" /><br></div>
+
+</TD>
+<td bgcolor="#000000" rowspan="2"><img src="/images/common/spacer.png" width="1" height="1"></td>
+
+<td valign="top" bgcolor="#E9E9E9">
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155" bgcolor="#2b4e9d">
+<tr><td bgcolor="#2b4e9d" rowspan="2"><img src="/images/common/spacer.png" width="5" height="1" /></td><td class="mainarea" colspan="3">
+<img src="/images/common/spacer.png" width="5" height="6" /><br><a href="/mld/bayarea/shopping"><b>Shopping &amp; Services</b></a><br><img src="/images/common/spacer.png" width="5" height="5" /></td><td bgcolor="#2b4e9d" rowspan="2"><img src="/images/common/spacer.png" width="5" height="1" /></td></tr><tr bgcolor="#fef7d7">
+<td><img src="/images/common/spacer.png" width="5" height="1" /></td><td valign="top"><img src="/images/common/spacer.png" width="1" height="5" /><br><a href="http://www.bayarea.com/mld/bayarea/classifieds/employment">Find a <b>Job</b></a>,
+<a href="/mld/bayarea/classifieds/automotive">a <b>Car</b></a>,<br><a href="http://www.apartments.com/bayarea">an <b>Apartment</b></a>,<br><a href="/mld/bayarea/classifieds/real_estate/">a <b>Home</b></a>,
+<a href="/mld/bayarea/shopping">and more...</a><br><img src="/images/common/spacer.png" width="1" height="5" /></td><td><img src="/images/common/spacer.png" width="5" height="1" /></td></tr><tr><td colspan="5" bgcolor="#2b4e9d"><img src="/images/common/spacer.png" width="4" height="6" /></td></tr></table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tr><td><img src="/images/component/divider_rail_top.png" width="155" height="1" ></td></tr><tr><td><img src="/images/common/spacer.png" width="1" height="10" /></td></tr><tr><td align="center">
+<IFRAME WIDTH=120 HEIGHT=60 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="000000" SRC=http://krd.realcities.com/html.ng/site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=button&pos=right1&c1=living&c2=health&c3=none>
+<SCRIPT LANGUAGE="JavaScript1.1" SRC=http://krd.realcities.com/js.ng/Params.richmedia=yes&site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=button&pos=right1&c1=living&c2=health&c3=none>
+</SCRIPT>
+</IFRAME>
+
+</td></tr><tr><td><img src="/images/common/spacer.png" width="1" height="10" /></td></tr><tr><td><img src="/images/component/divider_rail_bottom.png" width="155" height="2" ></td></tr></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tr><td><img src="/images/component/divider_rail_top.png" width="155" height="1" ></td></tr><tr><td><img src="/images/common/spacer.png" width="1" height="10" /></td></tr><tr><td align="center">
+<IFRAME WIDTH=120 HEIGHT=600 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="000000" SRC=http://krd.realcities.com/html.ng/site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=tower&pos=right2&c1=living&c2=health&c3=none>
+<SCRIPT LANGUAGE="JavaScript1.1" SRC=http://krd.realcities.com/js.ng/Params.richmedia=yes&site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=tower&pos=right2&c1=living&c2=health&c3=none>
+</SCRIPT>
+</IFRAME>
+
+</td></tr><tr><td><img src="/images/common/spacer.png" width="1" height="10" /></td></tr><tr><td><img src="/images/component/divider_rail_bottom.png" width="155" height="2" ></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="155">
+<tr><td><img src="/images/component/divider_rail_top.png" width="155" height="1" ></td></tr><tr><td><img src="/images/common/spacer.png" width="1" height="10" /></td></tr><tr><td align="center">
+<IFRAME WIDTH=120 HEIGHT=60 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="000000" SRC=http://krd.realcities.com/html.ng/site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=button&pos=right3&c1=living&c2=health&c3=none>
+<SCRIPT LANGUAGE="JavaScript1.1" SRC=http://krd.realcities.com/js.ng/Params.richmedia=yes&site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=button&pos=right3&c1=living&c2=health&c3=none>
+</SCRIPT>
+</IFRAME>
+
+</td></tr><tr><td><img src="/images/common/spacer.png" width="1" height="10" /></td></tr><tr><td><img src="/images/component/divider_rail_bottom.png" width="155" height="2" ></td></tr></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tr><td><img src="/images/component/divider_rail_top.png" width="155" height="1" ></td></tr><tr><td><img src="/images/common/spacer.png" width="1" height="10" /></td></tr><tr><td align="center">
+<IFRAME WIDTH=120 HEIGHT=60 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="000000" SRC=http://krd.realcities.com/html.ng/site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=button&pos=right4&c1=living&c2=health&c3=none>
+<SCRIPT LANGUAGE="JavaScript1.1" SRC=http://krd.realcities.com/js.ng/Params.richmedia=yes&site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=button&pos=right4&c1=living&c2=health&c3=none>
+</SCRIPT>
+</IFRAME>
+
+</td></tr><tr><td><img src="/images/common/spacer.png" width="1" height="10" /></td></tr><tr><td><img src="/images/component/divider_rail_bottom.png" width="155" height="2" ></td></tr></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="155" BGCOLOR="#fef7d7">
+<tr><TD COLSPAN="3"><img src="/images/component/divider_rail_top.png" width="155" height="1" ></td></tr><tr><TD><IMG src="/images/common/spacer.png" width="5" height="1" ></td><td bgcolor="#fef7d7">
+<table border="0" cellpadding="1" cellspacing="0" width="143">
+<tr><FORM action="http://yp.bayarea.com/bin/cgidir.dll" method="" name="swbgetcat">
+<INPUT type="hidden" name="MEM" value="1201">
+<INPUT type="hidden" name="FUNC" value="FORMATSEARCH">
+<td><br><b>Search Yellow Pages</b><br><div align="center">
+<img src="/images/palette/blue_complement/hr_2px_light.png" width="140" height="2" border=0 vspace="2" ></div>
+<A class="callout" href="http://yp.bayarea.com/bin/cgidir.dll?func=catlist&mem=1201">
+<B>SELECT A CATEGORY</B></A>
+</td></tr><tr><TD><IMG src="/images/common/spacer.png" width="1" height="1" ></td></tr><tr><TD class="mediumarea"><I>OR type one in:</I><BR></td></tr><tr><TD><IMG src="/images/common/spacer.png" width="1" height="1" ></td></tr><tr><TD class="mediumarea">Business name or category<br><INPUT type="text" size="12" name="L" value=""></td></tr><tr><TD><IMG src="/images/common/spacer.png" width="1" height="1" ></td></tr><tr><TD class="mediumarea">City<br><INPUT type="text" size="12" name="T" value="" maxlength="31"></td></tr><tr><TD><IMG src="/images/common/spacer.png" width="1" height="1" ></td></tr><tr><TD class="mediumarea">State<br><SELECT name="s" class="smallformelement">
+<OPTION value="">Choose a state
+<OPTION value="AK">Alaska</option><OPTION value="AZ">Arizona</option><OPTION value="AR">Arkansas</option><OPTION value="CA">California</option><OPTION value="CO">Colorado</option><OPTION value="CT">Connecticut</option><OPTION value="DE">Delaware</option><OPTION value="DC">Wash DC</option><OPTION value="FL">Florida</option><OPTION value="GA">Georgia</option><OPTION value="HI">Hawaii</option><OPTION value="ID">Idaho</option><OPTION value="IL">Illinois</option><OPTION value="IN">Indiana</option><OPTION value="IA">Iowa</option><OPTION value="KS">Kansas</option><OPTION value="KY">Kentucky</option><OPTION value="LA">Louisianna</option><OPTION value="ME">Maine</option><OPTION value="MD">Maryland</option><OPTION value="MA">Massachusetts</option><OPTION value="MI">Michigan</option><OPTION value="MN">Minnesota</option><OPTION value="MS">Mississippi</option><OPTION value="MO">Missouri</option><OPTION value="MT">Montana</option><OPTION value="NE">Nebraska</option><OPTION value="NV">Nevada</option><OPTION value="NH">New Hampshire</option><OPTION value="NJ">New Jersey</option><OPTION value="NM">New Mexico</option><OPTION value="NY">New York</option><OPTION value="NC">North Carolina</option><OPTION value="ND">North Dakota</option><OPTION value="OH">Ohio</option><OPTION value="OK">Oklahoma</option><OPTION value="OR">Oregon</option><OPTION value="PA">Pennsylvania</option><OPTION value="RI">Rhode Island</option><OPTION value="SC">South Carolina</option><OPTION value="SD">South Dakota</option><OPTION value="TN">Tennessee</option><OPTION value="TX">Texas</option><OPTION value="UT">Utah</option><OPTION value="VT">Vermont</option><OPTION value="VA">Virginia</option><OPTION value="WA">Washington</option><OPTION value="WV">West Virginia</option><OPTION value="WI">Wisconsin</option><OPTION value="WY">Wyoming</option><OPTION value="AL">Alabama</option></SELECT></td></tr><tr><TD><IMG src="/images/common/spacer.png" width="1" height="1" ></td></tr><tr><TD ALIGN="right">  <input value="go"type="image" src="/images/palette/blue_complement/navigation/en/button_go.png" border="0"></td></form>
+</tr><tr><TD ALIGN="center">
+<img src="/images/palette/blue_complement/hr_2px_light.png" width="140" height="2" border=0 vspace="2" ></TD></tr><tr><TD class="mediumarea"><IMG src="/images/palette/blue_complement/panel_arrow.png" width="15" height="9"  hspace="2"><A class="callout" href="http://maps.bayarea.com/jump.cgi/refsrc=KR.1201"><B>Get Maps &amp; Directions</B></A></td></tr><tr><TD class="mediumarea"><IMG src="/images/palette/blue_complement/panel_arrow.png" width="15" height="9"  hspace="2"><A class="callout" href="http://yp.bayarea.com/bin/cgiqa.dll?MEM=1201"><B>White Pages Search</B></A></td></tr><tr><TD class="mediumarea"><IMG src="/images/palette/blue_complement/panel_arrow.png" width="15" height="9"  hspace="2"><A class="callout" href="http://yp.bayarea.com/bin/cgiemail.dll?MEM=1201"><B>Email Search</B></A></td></tr><tr><TD><IMG src="/images/common/spacer.png" width="1" height="5" ></td></tr></FORM>
+</TABLE>
+</td><TD><IMG src="/images/common/spacer.png" width="5" height="1" ></td></tr><tr><TD COLSPAN="3" BGCOLOR="#d4cdaf"><img src="/images/component/divider_rail_bottom.png" width="155" height="2" ></td></tr></table>
+
+
+
+</td></tr><tr><td valign="bottom" bgcolor="#e9e9e9"><br><img src="/images/component/divider_rail_bottom.png" width="155" height="2"></td><td valign="bottom" bgcolor="#e9e9e9"><img src="/images/component/divider_rail_bottom.png" width="155" height="2"></td></tr></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td bgcolor="#000000"><img src="/images/common/spacer.png" width="1" height="1" /></td><td bgcolor="#3399cc"><img src="/images/common/spacer.png" width="760" height="1"/></td><td bgcolor="#000000"><img src="/images/common/spacer.png" width="1" height="1" /></td></tr><tr><td bgcolor="#3399cc"><img src="/images/common/spacer.png" width="1" height="21"/></td><td bgcolor="#2b4e9d" align="center" class="mainarea"><strong><a href="/mld/bayarea/news/">News</a> | <a href="/mld/bayarea/business/">Business</a> | <a href="/mld/bayarea/sports/">Sports</a> | <a href="/mld/bayarea/entertainment/">Entertainment</a> | <a href="/mld/bayarea/living/">Living</a> | <a href="/mld/bayarea/classifieds/">Classifieds</a> </strong> </td><td bgcolor="#003366"><img src="/images/common/spacer.png" width="1" height="1" /></td></tr><tr><td bgcolor="#000000"><img src="/images/common/spacer.png" width="1" height="1" /></td><td bgcolor="#003366"><img src="/images/common/spacer.png" width="1" height="1" /></td><td bgcolor="#000000"><img src="/images/common/spacer.png" width="1" height="1" /></td></tr></table><table border="0" cellpadding="5" cellspacing="0" width="100%"><tr><td align="center" class="lightgreylinks"><a href="/mld/bayarea/contact_us/help">Help |</a> <a href="/mld/bayarea/contact_us">Contact Us |</a> <a href="/mld/bayarea/contact_us/site_index">Site Index |</a> <a href="/mld/bayarea/archives">Archives |</a> <a href="/mld/bayarea/contact_us/advertise/">Place an Ad |</a> <a href="/mld/bayarea/contact_us/subscriptions_np1">Newspaper Subscriptions |</a> <a href="/edc/servlet/edcSubscriber?action=Q_REDIRECT&NEXT=EDIT_DISPATCH">Email Dispatches  </a></td></tr><tr><td align="center" class="lightgreylinks"><a href="/mld/bayarea/contact_us/about">About BayArea.com |</a> <a href="http://www.knightridderdigital.com/about/about.htm">About Realcities Network |</a> <a href="/mld/bayarea/contact_us/terms_of_use">Terms of Use |</a> <a href="http://www.knightridderdigital.com/press/index.html">Press Center |</a> <a href="/mld/bayarea/contact_us/copyright">Copyright  </a></td></tr><tr><td><img src="/images/common/spacer.png" width="760" height="1"/></td></tr></table>
+<IFRAME WIDTH=0 HEIGHT=0 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="000000" SRC=http://krd.realcities.com/html.ng/site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=sponsor&pos=popup&c1=living&c2=health&c3=none>
+<SCRIPT LANGUAGE="JavaScript1.1" SRC=http://krd.realcities.com/js.ng/Params.richmedia=yes&site=krwest&proptype=krd_city&webprop=bayarea&product=mld&subproduct=bayarea&size=sponsor&pos=popup&c1=living&c2=health&c3=none>
+</SCRIPT>
+</IFRAME>
+
+<div class=menu id="news">
+<table cellspacing="0" cellpadding="4" width="130" bgcolor="#d4cdaf" border="0">
+<tbody><tr><td class=pulldown>
+<a href="/mld/bayarea/news/breaking_news/" name="3115">Breaking News</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/news/columnists/" name="3125">Columnists</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/news/local/" name="4160">Local</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/news/nation/" name="4175">Nation</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/news/politics/" name="4185">Politics</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/news/transportation/" name="4210">Transportation</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/news/weather/" name="4215">Weather</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/news/weird_news/" name="4230">Weird News</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/news/world/" name="4235">World</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br>
+</td></tr></tbody></table>
+</div><div class=menu id="business">
+<table cellspacing="0" cellpadding="4" width="130" bgcolor="#d4cdaf" border="0">
+<tbody><tr><td class=pulldown>
+<a href="/mld/bayarea/business/columnists/" name="20">Columnists</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/business/companies/" name="335">Companies</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/business/financial_markets/" name="395">Financial Markets</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/business/industries/" name="400">Industries</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/business/local/" name="570">People & Events</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/business/personal_finance/" name="585">Personal Finance</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/business/regional_indicators/" name="610">Regional Indicators</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/business/technology/" name="630">Technology</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br>
+</td></tr></tbody></table>
+</div><div class=menu id="sports">
+<table cellspacing="0" cellpadding="4" width="130" bgcolor="#d4cdaf" border="0">
+<tbody><tr><td class=pulldown>
+<a href="/mld/bayarea/sports/baseball/" name="4275">Baseball</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/sports/basketball/" name="4380">Basketball</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/sports/colleges/" name="4465">Colleges</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/sports/columnists/" name="4710">Columnists</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/sports/football/" name="5400">Football</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/sports/golf/" name="5475">Golf</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/sports/hockey/" name="5495">Hockey</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/sports/motorsports/" name="5615">Motorsports</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/sports/other_sports/" name="5646">Other Sports</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/sports/soccer/" name="5660">Soccer</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/sports/womens/" name="5716">Women</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br>
+</td></tr></tbody></table>
+</div><div class=menu id="entertainment">
+<table cellspacing="0" cellpadding="4" width="130" bgcolor="#d4cdaf" border="0">
+<tbody><tr><td class=pulldown>
+<a href="/mld/bayarea/entertainment/gossip/" name="1000542">Celebrities</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/columnists/" name="671">Columnists</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/comics/" name="1000482">Comics & Games</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/dining/" name="970">Dining</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/events/" name="975">Events</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/horoscopes/" name="985">Horoscopes</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/movies/" name="990">Movies</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/music/" name="995">Music</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/nightlife/" name="1000">Nightlife</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/performing_arts/" name="1005">Performing Arts</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/television/" name="1015">Television</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/visitors_guide/" name="1002163">Visitors Guide</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/entertainment/visual_arts/" name="1020">Visual Arts</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br>
+</td></tr></tbody></table>
+</div><div class=menu id="living">
+<table cellspacing="0" cellpadding="4" width="130" bgcolor="#d4cdaf" border="0">
+<tbody><tr><td class=pulldown>
+<a href="/mld/bayarea/living/columnists/" name="1030">Columnists</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/living/community/" name="1770">Community</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/living/education/" name="1775">Education</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/living/food/" name="2990">Food</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/living/health/" name="2815">Health</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/living/home/" name="2975">Home</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/living/occasions/" name="3065">Occasions</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/living/travel/" name="3105">Travel</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br>
+</td></tr></tbody></table>
+</div><div class=menu id="classifieds">
+<table cellspacing="0" cellpadding="4" width="130" bgcolor="#d4cdaf" border="0">
+<tbody><tr><td class=pulldown>
+<a href="/mld/bayarea/classifieds/automotive/" name="645">Automotive</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/classifieds/employment/" name="15">Employment</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/classifieds/personals/" name="1001238">Personals</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br><a href="/mld/bayarea/classifieds/real_estate/" name="650">Real Estate</a><br><img height="2" src="/images/palette/blue_complement/hr_2px_medium.png" width="120" vspace="3" border="0"><br>
+</td></tr></tbody></table>
+</div>
+
+</body>
+</html>
+

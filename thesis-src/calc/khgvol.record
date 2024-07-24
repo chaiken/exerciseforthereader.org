@@ -1,0 +1,66 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;									     ;;
+;;	File:     khgvol.record						     ;;
+;;	Author:   Alison Chaiken					     ;;
+;;	Created:  Mon Apr 18 21:45:03 EST 1988				     ;;
+;;	Contents: calculation of the amount of KHg alloy needed		     ;;
+;;	to make C_{4}KHg_{1.0}						     ;;
+;;									     ;;
+;;	Copyright (c) 1988 Alison Chaiken.				     ;;
+;;	All rights reserved.						     ;;
+;;									     ;;
+;;	$Log$								     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq float-output-format "4e")
+"4e"
+;calculation of graphite volume in mm^3
+(* 20.0 20 0.3)
+1.2000e+02 ;approximately, since graphite thickness will vary
+;calculation of graphite mass
+(* 120.0 2.25 1e-3) ;graphite density is 2.25 g/cm^3
+2.7000e-01 ;grams of graphite
+(setq mcarbon 12.011)
+1.2011e+01
+;calculation of number of graphite atoms 
+(/ 0.27 (* phys-mproton mcarbon))
+1.3437e+22 ;number of carbon atoms in the piece of graphite
+(/ 1.3437e+22 4)
+3.3592e+21 ;desired number of K and Hg atoms
+;calculation of K mass
+(setq mK 39.083)
+3.9083e+01
+(*  3.3592e+21 phys-mproton mK)
+2.1964e-01 ;grams of K desired
+
+;calculation of Hg mass needed
+(setq mHg 200.59)
+2.0059e+02
+(* 3.3592e+21 phys-mproton mHg)
+1.1273e+00 ;grams of Hg needed
+
+(* 2.0 (+ 1.0982e-01 5.6365e-01))
+1.3469e+00 ;total mass of needed KHg alloy
+
+;El Makrini in his thesis, p. 127. in Table 31, gives the density of KHg alloy
+;to be 5.47 g/cm^3.
+(/ 1.3469e+00 5.47)
+2.4623e-01 ;volume of needed KHg alloy
+
+;An independent estimate; assume density is intermediate
+;between that of K and Hg
+(ave 13.55  0.86)
+7.2050e+00 ;in grams per cm^3
+(* 2.0 (/ 6.7347e-01 7.205))
+1.8695e-01 ;volume of needed KHg alloy in cm^3
+
+;calculation of length of tube 8mm in diameter which is needed
+(/ (* 8 8 pi 1e-2) 4)
+5.0265e-01 ;area of KHg ampoule in cm^2
+(/ 2.4623e-01 5.0265e-01)
+4.8986e-01 ;cm of K tube needed
+
+;length of 8mm KHg ampoule needed is 4.89 mm
+;thus for 3 pieces of graphite of about the size described above, about
+;1.5 cm of KHg alloy would be needed, and 2 cm would be a safe amount for
+;saturation

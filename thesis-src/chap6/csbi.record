@@ -1,0 +1,30 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;									     ;;
+;;	File:     csbi.record						     ;;
+;;	Author:   Alison Chaiken					     ;;
+;;	Created:  Mon Jul 18 11:08:47 EDT 1988				     ;;
+;;	Contents: estimate of CsBi 4.2K resistivity                          ;;
+;;									     ;;
+;;	Copyright (c) 1988 Alison Chaiken.				     ;;
+;;	All rights reserved.						     ;;
+;;									     ;;
+;;	$Log$								     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+rho = (/ (* A (/ V I))  ell)
+
+V = 1.45e-6 V [145 mV with 1e5 gain]
+I = 1e-2 A
+A = (* 0.2 0.4) = 0.08 cm^2
+ell = 0.4 cm
+
+(/ (* 0.08 (/ 1.45e-6 1e-2)) 0.4)
+2.9e-05 = 29 microohm-cm at 4.2 K (alpha plus beta phase)
+
+
+V = 4e-7 V [40 mV with 1e5 gain]
+(/ (* 0.08 (/ 4.0e-7 1e-2)) 0.4)
+8e-06 = 8 microohm-cm at 4.2 K  (alpha phase)
+
+

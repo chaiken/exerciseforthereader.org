@@ -1,0 +1,168 @@
+_Thinking Fast and Slow_
+
+Overall comment: having reached p.216, how can it be that racial, religious, gender bias are not mentioned?? There is also therefore no grappling with Steven Pinker's argument that racial bias is evolutionarily adaptive since organisms that assist relatives are more likely to propagate their genes.
+
+The beating the two-systems concept to death in first part of book is tedious.
+
+p. 6-7: I'd like to the question wording that uncovered resemblance bias. I study partipants are asked to use certain information to make a judgement, perhaps it's a bit unfair to expect them immediately afterward to ignore it.
+
+p. 422: "Deviations are not corrected as a chance process unfolds, they are merely diluted."
+
+p. 430: "Statistical principles are not learned from everday experience because the relevant experiences are not coded appropriately." What is meant by coded? People are unfamiliar with statiscal principles and cannot discover or abstract them from examples.
+
+P. 11: "Intuition is nothing more and nothing less than recognition." -- Herbert Simon
+
+P. 12: "the affect heuristic, where decisions are guided directly by feelings of like and dislike, with little deliberation or reasoning."
+"an answer may come quickly to mind -- but it is not an answer to the original question." "This is the essence of intuitive heuristics: when faced with a difficult question, we often answer qn easier one instead, often without noticing the substitution."
+
+P. 34: Contributor to distracted droving (and walking). "We found that people, when engaged in a mental sprint, may become effectively blind."
+
+P. 37: "Any task that requires you to keep several ideas in mind at the same time has the same hurried character. Unless you have the good fortune of a capacious working memory, you may be forced to work uncomfortably hard. The most effortful forms of slow thinking are those that require you to think fast."
+
+P.40: "Self-control and deliberate thought draw on the same limited budget of effort."
+
+P.43: "Ego depletion is not the same as cognitive busyness." Ego depletion affects subsequent tasks, while busyness does not.
+
+P. 44: Food at meetings is a good idea.
+
+P. 51: "Your body reacted in an attenuated replica of a reaction to the real thing, and the emotional response and physical recoil were part of the interpretation of the event. As cognitive scientists have emphasized in recent years, cognition is embodied; you think with your body, not only with your brain."
+P. 54: The ideomotor effect is nearly impossible for AI to simulate or reproduce.
+
+P. 61: "you experience greater cognitive ease in perceiving a word you have seen earlier, and it is this sense of ease that gives you the impression of familiarity." Bullshit: the word IS familiar.
+
+P. 65: Why I don't use an IDE. "90% of the students who saw the CRT in normal font made at least one mistake in the test, but the proportion dropped to 35% when the font was barely legible. You read this correctly: performance was better with the bad font." Whiteboard is obviously best of all.
+
+P. 68: "Now try this: dive light rocket This problem is much harder, but it has a unique correct answer, which every speaker of English recognizes, although less than 20% of a sample of students found it within 15 seconds. The answer is sky." Disagree: "sky" and "rocket" go together? "stage" is better. Brainstorming in a nutshell: "A happy mood loosens the control of System 2 over performance: when in a good mood, people become more intuitive and more creative but also less vigilant and more prone to logical errors."
+
+P. 74: What makes debugging hard: "When I mention a table, without specifying further, you understand that I mean a normal table. You know with certainty that its surface is approximately level and that it has far fewer than 25 legs."
+
+p. 79: "Jumping to conclusions is efficient if the conclusions are likely to be correct and the costs of an occasional mistake acceptable, and if the jump saves much time and effort."
+
+P. 81: "In a later test of memory, the depleted participants ended up thinking that many of the false sentences were true. The moral is significant: when System 2 is otherwise engaged, we will believe almost anything." BS: this a failure to remember a label, not a belief!!
+
+_Crucial Convserations_: "Why would a reasonable person do X?" Don't let System 1 jump to conclusions, then get angry. Instead, reflect with System 2. Similarly, don't fabricate condemnatory stories about others to justify own less admirable actions. "It's true I cut that car off, but they were merging without putting their turn signal on."
+
+P. 84: "The principle of independent judgments (and decorrelated errors) has immediate applications for the conduct of meetings . . . before an issue is discussed, all members of the committee should be asked to write a very brief summary of their position." Independent judgement aggregation is not valuable if some judgements are thoughtful and well-informed and some are cursory.
+
+P. 89: "consider the ability to discriminate friend from foe at a glance." Clearly the basis of racial bias.
+
+P. 95: "Participants in one experiment *listened* to pairs of words, with the instruction to press a key as quickly as possible whenever they detected that the words rhymed. The words rhyme in both these pairs: VOTE—NOTE VOTE—GOAT The difference is obvious to you because you see the two pairs. VOTE and GOAT rhyme, but they are spelled differently." Really no visual presentation? Result is then odd. This distraction is why fonts, colors, etc. matter.
+
+P. 138: Why people believe cycling is unreasonably dangerous: "Death by disease is 18 times as likely as accidental death, but the two were judged about equally likely." Sudden death is more painful for survivors, who thus overreact.
+
+P. 141: Sunstein: "existing system of regulation in the United States displays a very poor setting of priorities, which reflects reaction to public pressures more than careful objective analysis."
+
+P. 142: "danger is increasingly exaggerated as the media compete for attention-grabbing headlines." Drone surveillance! Flesh-eating bacteria! Toyota sudden acceleration!
+
+P. 146: Tom W problem seems very sensitive to question wording. "The following is a personality sketch of Tom W written during Tom's senior year in high school by a psychologist, on the basis of psychological tests of uncertain validity:" If "uncertain validity" came after description, would result differ?
+
+P.160: People who lie have always known this. "The two questions have the same logical structure as the Linda problem, but they cause no fallacy, because the more detailed outcome is only more detailed—it is not more plausible, or more coherent, or a better story. The evaluation of plausibility and coherence does not suggest an answer to the probability question."
+
+P. 166: Pblue_when_observed_blue = Pactual_blue*Pcorrect_blue_detection = Pactual_blue*(Ptrue_blue_positive/(Ptrue_blue_positive + Pfalse_blue_positive)
+
+P. 200: Google story and x-ray satellite, MIT Museum. Effect of peer review participation.
+
+P. 201: "Our comforting conviction that the world makes sense rests on a secure foundation: our almost unlimited ability to ignore our ignorance."
+
+P. 204: "The illusion that one has understood the past feeds the further illusion that one can predict and control the future." "Beginner mind" may mostly amount to acknowledgement that one has not understood the past.
+
+P. 207: "You are probably tempted to think of causal explanations for these observations: perhaps the successful firms became complacent, the less successful firms tried harder. But this is the wrong way to think about what happened. The average gap must shrink, because the original gap was due in good part to luck, which contributed both to the success of the top firms and to the lagging performance of the rest". Perhaps though the causal explanation is also true!
+
+Chapter 20, p. 209: It's incomprehensible that index funds are not mentioned. Even by 2011, the average investor knew of Vanguard.
+
+P. 212: "Having observed one hour of a soldier's behavior in an artificial situation, we felt we knew how well he would face the challenges of officer training and of leadership in combat." No terror in training!
+
+P.216: 'When we were done, one of the executives I had dined with the previous evening drove me to the airport. He told me, with a trace of defensiveness, "I have done very well for the firm and no one can take that away from me."' The executive's statement is true! Financial advisers get paid dependent on their commissions and fees, not dependent on whether clients make money. Some executives don't really care if clients make money.
+
+P.226: Why rules of thumb are useful. "an algorithm that is constructed on the back of an envelope is often good enough to compete with an optimally weighted formula, and certainly good enough to outdo expert judgment."
+
+P. 232: Listing criteria for making a decision before gathering data is a good practice. "
+do not simply trust intuitive judgment—your own or that of others—but do not dismiss it, either."
+
+P. 238: Skill development essentially involves induction of patterns from observations resulting in the ability to quickly classify and diagnose future instances.
+
+P.240: "Meehl's clinicians were not inept and their failure was not due to lack of talent. They performed poorly because they were assigned tasks that did not have a simple solution." Assuredly the jobs where human judgement is of negative value compared to algoritms will be immediately automated.
+
+P. 249: "Medical statistics and baseline predictions come up with increasing frequency in conversations between patients and physicians. However, the remaining ambivalence about the outside view in the medical profession is expressed in concerns about the impersonality of procedures that are guided by statistics and checklists." Dentists claim I'm crazy for refusing "regular" x-ray "checkups" because they are free. What is likelihood of finding aproblem in asymptomatic patient vs. odds of cancer induction?
+
+P. 251: Reference class forecasting sounds extremely useful for JIRA. At a higher level, tracking how many bugs each vendor kernel release or application has and applying these statistics to future projects could be very valuable.
+
+P.253: "The outside view was much easier to ignore than bad news in our own effort. I can best describe our state as a form of lethargy—an unwillingness to think about what had happened. So we carried on. There was no further attempt at rational planning for the rest of the time"
+
+P. 256: "the people who have the greatest influence on the lives of others are likely to be optimistic and overconfident, and to take more risks than they realize."
+
+P. 257: "the financial benefits of self-employment are mediocre: given the same qualifications, people achieve higher average returns by selling their skills to employers than by setting out on their own."
+
+P. 260: "the outcome of a start-up depends as much on the achievements of its competitors and on changes in the market as on its own efforts. . . . The consequence of competition neglect is excess entry: more competitors enter the market than the market can profitably sustain, so their average outcome is a loss."
+
+P.263: "Experts who acknowledge the full extent of their ignorance may expect to be replaced by more confident competitors, who are better able to gain the trust of clients." Why global warming science has problems.
+
+P. 263: "someone who lacks a delusional sense of significance will wilt in the face of repeated experiences of multiple small failures and rare successes, the fate of most researchers." Also debugging!
+
+P. 280: "people become risk seeking when all their options are bad,"
+
+P. 281: "attitudes to gains and losses are not derived from your evaluation of your wealth. You know something about your preferences that utility theorists do not—that your attitudes to risk would not be different if your net worth were higher or lower by a few thousand dollars (unless you are abjectly poor). And you also know that your attitudes to gains and losses are not derived from your evaluation of your wealth. You just like winning and dislike losing—and you almost certainly dislike losing more than you like winning."
+
+p. 282: "asymmetry between the power of positive and negative expectations or experiences has an evolutionary history. Organisms that treat threats as more urgent than opportunities have a better chance to survive and reproduce."
+
+P. 283: Roald Dahl story "The South"
+
+P. 284: "The "loss aversion ratio" has been estimated in several experiments and is usually in the range of 1.5 to 2.5. . . .The pain of losing $900 is more than 90% of the pain of losing $1,000."
+
+P. 291: NIMBYism is due to "preference for the status quo is a consequence of loss aversion." Equally, P. 305: "Loss aversion is a powerful conservative force that favors minimal changes from the status quo in the lives of both institutions and individuals."
+
+P. 317: "The possibility effect in the bottom left cell explains why lotteries are popular. When the top prize is very large, ticket buyers appear indifferent to the fact that their chance of winning is minuscule. A lottery ticket is the ultimate example of the possibility effect."
+
+P. 330: Patent trolls: 'Now consider "frivolous litigation," when a plaintiff with a flimsy case files a large claim that is most likely to fail in court. Both sides are aware of the probabilities, and both know that in a negotiated settlement the plaintiff will get only a small fraction of the amount of the claim. The negotiation is conducted in the bottom row of the fourfold pattern. The plaintiff is in the left-hand cell, with a small chance to win a very large amount; the frivolous claim is a lottery ticket for a large prize. Overweighting the small chance of success is natural in this situation, leading the plaintiff to be bold and aggressive in the negotiation. For the defendant, the suit is a nuisance with a small risk of a very bad outcome. Overweighting the small chance of a large loss favors risk aversion, and settling for a modest amount is equivalent to purchasing insurance against the unlikely event of a bad verdict.'
+
+P. 322: "how terrorism works and why it is so effective: it induces an availability cascade."
+
+P. 325: Disagree: people enjoy placing bets. No one claims that the primary purpose of betting is economic. "The fans not only overestimated the probability of the events they focused on—they were also much too willing to bet on them. These findings shed new light on the planning fallacy and other manifestations of optimism."
+
+P. 327: Well-known to be true of lies. "The story, I believe, is that a rich and vivid representation of the outcome, whether or not it is emotional, reduces the role of probability in the evaluation of an uncertain prospect."
+
+P. 336: "Broad framing will be superior (or at least not inferior) in every case in which several decisions are to be contemplated together."
+
+p. 340: "He asked them to consider a risky option in which, with equal probabilities, they could lose a large amount of the capital they controlled or earn double that amount. None of the executives was willing to take such a dangerous gamble." May be sensible if their business would punish losses.
+
+P. 342: "we refuse to cut losses when doing so would admit failure," Presumably primary cause of irrational loss aversion.
+
+P. 344: "A rational agent would have a comprehensive view of the portfolio and sell the stock that is least likely to do well in the future, without considering whether it is a winner or a loser." Unless the stock is clearly overvalued or unbalances the portfolio. Losers are often counter-trending hedges to winners: "A rational agent would have a comprehensive view of the portfolio and sell the stock that is least likely to do well in the future, without considering whether it is a winner or a loser."
+
+P. 345: "investors sell more losers in December, when taxes are on their mind. The tax advantage is available all year, of course, but for 11 months of the year mental accounting prevails over financial common sense." Ignored procrastination.
+
+P. 348: 'Regardless of the question, saying yes was associated with much more regret than saying no if the outcome was bad! The question evidently suggests a default response, which is, "I don't have a strong wish to do it." It is the departure from the default that produces regret.'
+
+P. 351: 'As the jurist Cass Sunstein points out, the precautionary principle is costly, and when interpreted strictly it can be paralyzing. He mentions an impressive list of innovations that would not have passed the test, including "airplanes, air conditioning, antibiotics, automobiles, chlorine, the measles vaccine, open-heart surgery, radio, refrigeration, smallpox vaccine, and X-rays."' About to play out with AVs, where being statistically safer than humans won't be good enough.
+
+P. 362: Loss leaders: "Salespeople quickly learn that manipulation of the context in which customers see a good can profoundly influence preferences." "Except for such cases of deliberate manipulation, there is a presumption that the comparative judgment, which necessarily involves System 2, is more likely to be stable than single evaluations, which often reflect the intensity of emotional responses of System 1. We would expect that any institution that wishes to elicit thoughtful judgments would seek to provide the judges with a broad context for the assessments of individual cases."
+
+P. 363: What makes NLP hard. "the meaning of a sentence is what happens in your associative machinery while you understand it."
+
+P. 364: "losses evokes stronger negative feelings than costs."
+
+P. 370: "Your moral feelings are attached to frames, to descriptions of reality rather than to reality itself. The message about the nature of framing is stark: framing should not be viewed as an intervention that masks or distorts an underlying preference. At least in this instance—and also in the problems of the Asian disease and of surgery versus radiation for lung cancer—there is no underlying preference that is masked or distorted by the frame. Our preferences are about framed problems, and our moral intuitions are about descriptions, not about substance."
+
+P. 378: "in decision theory the only basis for judging that a decision is wrong is inconsistency with other preferences."
+
+P. 381: Why people continue to sign up for marathons and write books. "Confusing experience with the memory of it is a compelling cognitive illusion—and it is the substitution that makes us believe a past experience can be ruined. The experiencing self does not have a voice. The remembering self is sometimes wrong, but it is the one that keeps score and governs what we learn from living, and it is the one that makes decisions."
+
+P. No mention of drug abuse?? "Other classic studies showed that electrical stimulation of specific areas in the rat brain (and of corresponding areas in the human brain) produce a sensation of intense pleasure, so intense in some cases that rats who can stimulate their brain by pressing a lever will die of starvation without taking a break to feed themselves."
+
+P. 386: "A story is about significant events and memorable moments, not about time passing. Duration neglect is normal in a story, and the ending often defines its character. The same core features appear in the rules of narratives and in the memories of colonoscopies, vacations, and films."
+
+P. 388: "The frenetic picture taking of many tourists suggests that storing memories is often an important goal" of vacations. Sometimes it appears to be the primary goal, with photo-taking replacing looking almost completely. Perhaps impressive Facebook postings is now the primary goal. Assuredly the popularity of mindfulness is all about returning more emphasis to experiencing. Memories without accompanying deep experiences are impoverished.
+
+P. 394: "For 1,000 American women in a Midwestern city, the U-index was 29% for the morning commute, 27% for work, 24% for child care, 18% for housework, 12% for socializing, 12% for TV watching, and 5% for sex." Commuting is the most unpleasant experience most Americans have, at least in a duration-weighted sense. p.395: "From the social perspective, improved transportation for the labor force, availability of child care for working women, and improved socializing opportunities for the elderly may be relatively efficient ways to reduce the U-index of society—even a reduction by 1% would be a significant achievement, amounting to millions of hours of avoided suffering."
+
+P. 397: "Life satisfaction is not a flawed measure of their experienced well-being, as I thought some years ago. It is something else entirely."
+
+P. 399: "Before they began that task, however, he asked them to photocopy a sheet of paper for him. Half the respondents found a dime on the copying machine, planted there by the experimenter. The minor lucky incident caused a marked improvement in subjects' reported satisfaction with their life as a whole! A mood heuristic is one way to answer life-satisfaction questions." The power of swag and snacks at work and events. Mints in restaurant lobbies; fortune cookies.
+
+P. 402: "The goals that people set for themselves are so important to what they do and how they feel about it that an exclusive focus on experienced well-being is not tenable. We cannot hold a concept of well-being that ignores what people want."
+
+P. 406: "Daniel Gilbert and Timothy Wilson introduced the word miswanting to describe bad choices that arise from errors of affective forecasting." Carr's _The Glass Cage_ discusses miswanting at length.
+
+P. 407: "The same focus on the transition to the new state and the same neglect of time and adaptation are found in forecasts of the reaction to chronic diseases, and of course in the focusing illusion." Duration neglect is a factor in addiction, where it's the initial rush that people crave, not intoxication (Source: Duhigg)
+
+P. 413: "the framing of the individual's decision—Thaler and Sunstein call it choice architecture—has a huge effect on the outcome. The nudge is based on sound psychology, which I described earlier. The default option is naturally perceived as the normal choice. Deviating from the normal choice is an act of commission, which requires more effortful deliberation, takes on more responsibility, and is more likely to evoke regret than doing nothing. These are powerful forces that may guide the decision of someone who is otherwise unsure of what to do." "A world in which firms compete by offering better products is preferable to one in which the winner is the firm that is best at obfuscation."

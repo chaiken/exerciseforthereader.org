@@ -1,0 +1,12 @@
+#!/bin/sh
+cd /u/local/www/data
+for FILE in /u/local/www/data/alison/books/*.html
+do
+	echo $FILE
+done
+
+for FILE in /u/local/www/data/alison/recipes/*.html
+do
+	echo $FILE
+done
+

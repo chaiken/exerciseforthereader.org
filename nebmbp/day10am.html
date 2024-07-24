@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for NetBSD (vers 1st March 2002), see www.w3.org" />
+<title>Day 10 Morning</title>
+    <meta name="description" content=
+    "Alison Chaiken's home page" />
+    <meta name="keywords" content=
+    "molecular biology, hybridization, cloning, vector, PCR, DNA,
+    fingerprinting, RNA, mRNA, cDNA, primer, polymerase, E. coli,
+    operon, promoter, plasmid, gel, electrophoresis, southern blot,
+    yokazaki, Eco R1, restriction enzyme, intron, exon, siRNA, gene
+    expression, array, 5' UTR, poly-A tail, tRNA, translation, transcription" />
+    <meta name="resource-type" content="document" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=utf-8" />
+    <meta name="GENERATOR" content=
+    "GnuEmacs/19.34 [en] (X11; I; NetBSD 1.2G i386) [emacs]" />
+    <link rev="made" href=
+    "mailto:alchaiken@gmail.com" />
+    <link rel="start" href="/" />
+    <link rel="icon" href="/fermi-16.png" type=
+    "image/png" />
+    <link rel="stylesheet" href="/pt_style.css" type="text/css" />
+    <!--    $Id: index.html,v 1.25 2005/10/22 20:58:32 alison Exp $  -->
+    <link rel="up" href="../" />
+    <link rel="next" href="coolstuff.html" />
+    <link rel="up" href="/" />
+<!--    $Id: day10am.html,v 1.2 2004/07/04 06:05:35 alison Exp $  -->
+</head>
+<body>
+<a href="index.html">Up</a>
+<a href="day9eve.html">Previous</a>
+<a href="day10pm.html">Next</a>
+
+<h2><p align="center">Day 10 Morning Lecture Notes</p></h2> <h3><p
+align="center"> Steve Williams, Smith College</p></h3><h3><p
+align="center">June 15, 2004</p></h3>
+
+<p>A "polylinker" is the same thing as a "multiple cloning site" (MCS)
+region.  These terms refer to the part of a plasmid with many
+restriction sites.  Restriction sites outside of lac Z occur naturally
+but are generally not used.
+</p>
+
+<p>A few viruses and protozoans have all their genes on a single
+dedicated template strand of DNA.  Most organisms have some genes on
+one strand and some on the other.
+</p>
+
+<p>Directionality of cloning matters only for cDNAs, not genomic DNA.
+Genomic fragments may not even include genes, after all.
+Directionality makes no difference in libraries used for sequencing
+since the computer programs that do reassembly can easily reverse
+fragments.  Genomic libraries are not usually used for expression
+since plasmids don't usually contain eukaryotic promoters so that
+E. coli can't transcribe them anyway.
+</p>
+
+<p>To cut with two restriction enzymes sequentially, cut with one, and
+then supplement the buffer to the conditions of the second enzyme.
+</p>
+
+<p>Phenol dissolves proteins but not negatively charged DNA, which is
+more hydrophilic.  Chisam helps wash phenol off DNA.
+</p>
+
+<h3>Properties of a Good Plasmid Cloning Vector</h3>
+
+<ul>
+
+<li>High copy number of replication.    As many as 100-200 copies of a
+plasmid can be made per cell if the origin of replication is
+favorable.
+</li>
+
+<li>At least one antibiotic resistance gene for transformant
+selection.   Without transformant selection, finding the 1/1000 cells
+that are transformants is impossible.
+</li>
+
+<li>Blue-white selection for recombinants as not all transformants are
+recombinants.
+</li>
+
+<li>Unique restriction sites for cloning, or if using PCR cloning, T
+or U overhang.</li>
+
+</ul>
+
+<p>Types of vectors: plasmids, cosmids, BACs and YACs.  Plasmids are
+usually used for subcloning.  Making a library directly in a plasmid
+would be too difficult due to 1000x loss; the 7x coverage would be
+very difficult to achieve.  Instead, make the library in lambda,
+screen for and extract the gene of interest, and then subclone into
+the plasmid.   Plasmids of 3-4 kbp can take very large inserts of
+70-80 kbp.   However large plasmids are harder to get into E. coli.
+</p>
+
+<p>A cosmid allows cloning of 30-40 kbp fragments.  How to get these
+cosmids into E. coli?  How can lambda help with the transformation?
+Ligate the insert into a linearized plasmid (called a concatomer) that
+has antibiotic resistance, cos sites and lac Z.  (Recall that the cos
+region of lambda is the site that can be cut to give 12 bp overhangs.)
+Add packaging extract which will cut at the cos sites and insert the
+DNA into lambda.  In this case the plasmid DNA can be small and the
+insert can be large.  The Phage delivers the plasmid to E. coli which
+replicates it.  We get white colonies of E. coli with no phage DNA
+except as ends.  Note that the packaging extract is proteins, not DNA.
+Concatomers are long chains which form in high concentration solutions
+as opposed to circles which form in low concentration solutions.
+</p>
+
+<p>BAC vectors = bacterial artificial chromosomes.  They are like a
+second small bacterial chromosome in that they're big and one copy per
+cell is produced.  Why is one copy per cell useful?  Because 2 large
+fragments in a cell would inevitably recombine.  One copy per cell is
+a slow form of reproduction but cells are cheap and growing a liter of
+them is easy.  BAC libraries are used in big genomic sequencing
+projects.  They also use cDNA libraries and smaller-insert libraries.
+</p>
+
+<p>YAC = yeast artificial chromosomes.  Their utility is limited by
+rapid recombination.  The inserts can be up to 3x10<sup>5</sup> bases.
+A yeast is a single-celled eukaryote.
+</p>
+
+<p>Eukaryotic chromosomes need centromeres, telomeres and a
+replication origin.  A method for seeking transformants is also
+important.  YACs are mostly based on Saccharomyces cerevisiae, better
+known as brewer's yeast.  A YAC has an E. coli origin of replication
+and antibiotic resistance.  After cutting the YAC with a BAMH1
+restriction enzyme, expose it to telomeres surrounding a centromere
+(CEN4).  The yeast origin of replication is called ARS (autonomous
+replication sequence).
+</p>
+
+<p align=center>
+<img src="YAC.png">
+</p>
+
+<p>TRP1 and URA3 genes make tryptophan and uracil.  YACs are inserted
+into yeast via electroporation.  Choose a yeast that can't make
+tryptophan and uracil and plate onto a medium that doesn't contain
+these necessary nutrients.  This is another form of transformant
+selection.
+</p>
+
+<p>BAC vectors have much more stable inserts than YACs.  YACs were
+used early in the Human Genome Project but now have largely been
+supplanted by BACs.
+</p>
+
+<h3>More about Gene Expression in Prokaryotes</h3>
+
+<p align=center>
+<img src="prokaryotepromoter.png">
+</p>
+
+<p> RNA polymerase recognizes the -35 and -10 boxes.  -10 is where the
+unwinding of the strands begins.  +1 is where transcription starts as
+opposed to the "start codon" where translation of mRNA begins.
+Sometimes the initial methionine of a protein may be cleaved off.
+Multiple ribosomes may translate an mRNA at once.
+</p>
+
+<p>The open reading frame is a region that has no stop codons and can
+be translated into a protein.  Note that all ORFs are not genes but
+all genes are ORFs.  An ORF is a candidate to be a real gene.
+</p>
+
+<p align=center>
+<img src="lacZgene.png">
+</p>
+
+<p>Promoters vary in E. coli; that's why some genes are expressed more
+than others.  The lac promoter doesn't bind polymerase very
+efficiently.  Transcription proceeds from the promoter to terminator
+while translation proceeds from the ribosome binding site (rbs) to the
+stop codon.  Note that the length of gene >= the length of the mRNA >=
+the length of a protein.  The non-coding parts of the mRNA affect its
+folding and thus its degree of expression.  Transcription is performed
+by RNA polymerase which must bind at a promoter.  DNA polymerase can
+bind at any 3' chain end and does not require a promoter.
+</p>
+
+<p>There are 3 stop codons that prokaryotes and eukaryotes have in
+common.  Mitochondria have one additional stop codon.
+</p>
+
+<a href="index.html">Up</a>
+<a href="day9eve.html">Previous</a>
+<a href="day10pm.html">Next</a>
+
+</body>
+</html>

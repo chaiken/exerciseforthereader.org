@@ -1,0 +1,241 @@
+TEMPERATURE DEPENDENCE OF MAGNETORESISTANCE IN Fe-Cr-Fe 
+SANDWICHES
+
+A. Chaiken*, T.M. Tritt, D.J. Gillespie, J.J. Krebs,  P. Lubitz,  M.Z. 
+Harford, and G.A. Prinz, Naval Research Laboratory, Washington, DC 
+20375
+
+ABSTRACT
+
+Resistivity  measurements have been performed as a function of 
+temperature (1-300K) and magnetic field (0-10T) on 
+antiferromagnetically coupled Fe-Cr-Fe sandwiches.    Two types of 
+samples were studied:  MBE-grown  sandwiches  deposited 
+epitaxially on the ZnSe (100) surface, and evaporated polycrystalline 
+sandwiches deposited on glass substrates.  The magnetic saturation 
+field Hs determined from  the resistivity r(H,T) is linear with 
+temperature throughout the full temperature range for all samples.   
+In the polycrystalline sandwiches, where the observed in-plane 
+magnetic anisotropy is small, the linearity of Hs(T) implies that the 
+antiferromagnetic interlayer exchange coupling A12 is also linear 
+with temperature.  The magnetoresistance of the sandwiches  is 
+constant at low temperature, and decreases linearly with increasing 
+temperature above about 70 K.   
+
+*NRC-NRL postdoctoral fellow.
+Work supported  by the Office of Naval Research and DARPA.
+
+PACS numbers: 75.70.-i, 76.50.+g, 75.60.Ej, 72.15.Gd
+
+
+	The discovery of antiferromagnetic interlayer coupling1 and 
+giant magnetoresistance2 in Fe-Cr superlattices and sandwiches 
+raises a number of  challenging questions, both experimental and 
+theoretical.   Recently several  models for the interlayer coupling3,4 
+and magnetoresistance3,5 have been put forward, but so far detailed 
+experimental tests of these models are lacking.   In particular, the 
+role of the various  carrier scattering mechanisms (phonon, impurity, 
+spin-wave, etc.) in the magnetoresistance is still unclear.   Because  
+these  scattering processes  vary differently  with temperature,  
+measurement of the temperature dependence of the 
+magnetoresistance may give some insight into its microscopic origin.
+
+	The temperature  and field dependences of the resistance were  
+measured on both single-crystal and polycrystalline Fe-Cr-Fe 
+sandwiches.   The   single-crystal  samples, which have been 
+described previously,6  were grown by molecular-beam epitaxy 
+(MBE) on ZnSe (100) epilayers on GaAs substrates.   The 
+polycrystalline  samples were evaporated at a rate of 2 Å/second 
+onto glass substrates held at about 200oC.   Fe films made by 
+evaporation have  a (110) texture according to x-ray diffraction, but 
+magnetization  and angle-dependent ferromagnetic resonance 
+measurements show that they have an in-plane magnetic anisotropy 
+of only a few Oe.  On both sets of samples, data were taken with the 
+magnetic field  applied in the  film plane, using a dc current of about 
+100 mA. 
+
+	A typical H^I magnetoresistance trace for an MBE-grown 
+specimen is shown in Figure 1.    At zero applied field, the moments 
+of the two Fe films are antialigned due to the exchange coupling 
+A12.1  As has been explained previously,6 at the  field indicated  in 
+Figure 1 as HJ, the magnetic  moment of one of the  two Fe layers 
+jumps by about 90 degrees toward the applied field direction.    
+Magnetic saturation is finally  achieved at the field Hs.  In the 
+analysis of the data, HJ is defined as the applied field where |dr/dH|, 
+the slope of the resistivity, has a  maximum.  Hs is determined by 
+fitting the linear portion of the magnetoresistance data for HJ<H<Hs, 
+and taking the field at which the linear fit reaches the saturation 
+resistance.  The fields HJ and Hs are shown in Figure 2 as a function 
+of temperature for an Fe-Cr-Fe sandwich with a chromium thickness, 
+tCr, of 16 Å.   Clearly the temperature variation of  Hs is well-
+described by a  straight line, but HJ shows no temperature 
+dependence within experimental error.  The temperature variation of 
+Hs, though small,  is significant since Hs is a function of the 
+antiferromagnetic exchange.  When H is along a hard axis, as in 
+Figure 2,   the relation is:
+
+		Hs = 4A12/tFeMs + 2K1/Ms     			(1)
+
+where A12 is the interlayer exchange coupling per unit area, K1 is the 
+fourth-order cubic magnetocrystalline anisotropy energy  
+characteristic of Fe, tFe is the thickness of a single Fe layer, and Ms is 
+the saturation magnetization.2,6   There is at the moment no closed-
+form formula for HJ, but it is also  a function of K1 and A12.
+
+	The saturation field Hs was determined for the evaporated 
+samples in a similar fashion as for the MBE-grown samples.  The 
+slope and zero-intercepts of the linear fits to Hs(T) for both kinds of 
+sandwiches are presented in Table I.  Also included are parameters 
+derived from a linear fit to Hs(T)  data  in Ref. 2.  This data was taken  
+on an  MBE-grown Fe-Cr superlattice with twenty repeats of tFe = 16 
+Å and tCr=12 Å.2 
+
+	The magnetoresistance itself as a function of temperature was 
+also determined from individual field sweeps like  that shown in 
+Figure 1.   Figure 3(a) shows the  temperature variation of the H^I 
+magnetoresistance for two MBE-grown samples, while Figure 3(b) 
+displays  the temperature dependence of both the H^I and H||I 
+magnetoresistance for a polycrystalline sandwich. The data for the 
+other evaporated polycrystalline sandwich (not shown) are nearly 
+identical to those in Figure 3(b).   From these plots one can  see that 
+Dr/r(T) in all samples is nearly constant up to  about 70 K,  above 
+which  it decreases linearly with temperature.   
+
+	The values of the exchange constant A12 in Table I were 
+determined using Equation (1) along with (K1/Ms) @ 0.25 kOe for the 
+MBE-grown samples, a value determined by ferromagnetic resonance 
+(FMR)  measurements.6   For the polycrystalline sandwiches,  which  
+have a small observed in-plane magnetic anisotropy, Hs @  
+(4A12/tFeMs).  The linearity of Hs(T) then implies that the 
+antiferromagnetic exchange A12 is also approximately linear with 
+temperature.   In the Fe-Cr superlattices, where the exchange is very 
+large,2 the linearity of Hs(T) similarly requires a linear temperature 
+dependence of the exchange.  The linearity of A12(T)  is a potentially  
+useful clue about the fundamental nature of the  interlayer exchange 
+interaction.    
+
+  	Figure 2 shows that Hs for the tCr =16 Å MBE-grown sandwich 
+increases by 0.48 kOe between 300 K and 77 K.  A previous FMR 
+study of single Fe films grown on GaAs found that K1/Ms increases 
+by about 0.06 kOe  when T  decreases from 300 to 77 K.7    
+Assuming that K1(T) is similar for the Fe-Cr sandwiches grown on 
+ZnSe epilayers, the change of K1/Ms with temperature can account 
+for  only a  0.12 kOe increase in Hs from 300 K to 77 K.  Therefore  
+the increase of Hs(T) in the MBE-grown samples, while  coming partly 
+from the temperature dependence of K1/Ms, is dominated by A12(T), 
+just as in the polycrystalline and superlattice samples.   Currently, 
+efforts are underway to determine A12(T) and K1(T) independently 
+by fitting the HJ(T) and Hs(T) data of Figure 2.
+
+	The temperature dependence of the magnetoresistance in the 
+Fe-Cr sandwiches is more complex.    Like Hs, Dr/r has two terms, one  
+arising  from the intrinsic anisotropy of the Fe layers, and another 
+arising from effects related to the interlayer electron transport.8 The 
+Fe-layer contribution, which is known as the anisotropic 
+magnetoresistance (AMR), is about the same size  as in bulk Fe.8  The 
+AMR is a sinusoidal function of the angle between H and I.  It is the 
+second term, however,  which is responsible for the anomalously 
+large magnetoresistance reported in Ref. 2.   This anomalous 
+contribution,  which has been called the spin-valve 
+magnetoresistance, depends only on the relative orientation of the Fe 
+moments, and not  on their absolute orientation.9     Therefore, the 
+spin-valve magnetoresistance should be isotropic with respect to the 
+applied field orientation.  This fact allows one to separate the AMR 
+and spin-valve contributions to the  H||I and H^I data of Figure 
+3(b): the AMR is the difference between the H||I and H^I traces, 
+while the spin-valve component is half the sum of the two data sets.   
+The  temperature dependences of the separate AMR and spin-valve 
+terms are shown in Figure 4.    The AMR is nearly constant with 
+temperature, but the spin-valve part of the magnetoresistance, while 
+constant below about 70 K, has a  linear decrease at higher 
+temperatures.  
+
+	Barthelemy et al. have  suggested that the decrease  of the 
+magnetoresistance  with  increasing temperature is due in part to 
+spin-wave scattering.2   Interlayer  spin fluctuations  could also be 
+responsible for the linear decrease of A12 with T.  In this regard it is 
+relevant to point out that Dr, the field-induced change in resistivity, 
+is itself a function of  temperature.   The temperature dependence of 
+the spin-valve effect is  therefore not  just a trivial consequence of 
+the temperature variation of the resistivity.   The data shown in 
+Figure 4 thus contain real information about the scattering processes 
+responsible for the spin-valve magnetoresistance.    At the present 
+time, however, the true nature of these scattering processes remains 
+unknown. 
+
+	  There are still many unanswered questions about the Fe-Cr 
+system.   For example,  Table I shows that the magnitude of the 
+magnetoresistance in the Fe-Cr sandwiches does not appear to be 
+correlated with either  the residual resistivity ratio or A12.   
+Nonetheless, significant  progress has been made towards 
+understanding the antiferromagnetic exchange and giant 
+magnetoresistance of the Fe-Cr superlattices and sandwiches.3,4,5  
+The linearity of the   temperature dependence of the 
+antiferromagnetic exchange and spin-valve magnetoresistance  
+should prove helpful in understanding the role of spin waves and 
+spin-flip scattering in the Fe-Cr  system.   
+
+ACKNOWLEDGEMENTS
+		The authors would like to thank J.R. Cullen, K.B. 
+Hathaway, and A.C. Ehrlich for useful discussions,  W.S. Rupprecht for 
+help with data analysis,  and D.R. King and F. Kovanic for technical 
+assistance.
+
+1.	P. Grünberg, R. Schreiber, Y. Pang, U. Walz, M.B. Brodsky and H. 
+	Sowers, J. Appl. Phys. 61, 3750 (1987).
+
+2. 	A. Barthelemy, A. Fert, M.N. Baibich,  S. Hadjoudj, F. Petroff, 
+	P. Etienne, R. Cabanel, S. Lequien,  F. Nguyen van Dau, G. 
+	Creuzet,  J. Appl. Phys. 67, 5908 (1990).
+
+3.      P.M. Levy, K. Ounadjela, S. Zhang, Y. Wang, C.B. Sommers, and A. 
+	Fert, J. Appl. Phys. 67, 5914 (1990).  
+
+4.	H. Hasegawa, Phys. Rev. B42, 2368 (1990).
+
+5.	P.M. Levy and S. Zhang, to be published. 
+
+6.      J.J.  Krebs, P. Lubitz, A. Chaiken, and G.A. Prinz, J. Appl. Phys. 
+	67, 5920 (1990); J.J. Krebs, P. Lubitz, A. Chaiken, and G.A. 
+	Prinz, Phys. Rev. Lett  63, 1645 (1989).
+
+7.	J.J. Krebs, F.J. Rachford, P. Lubitz, and G.A. Prinz, J. Appl. Phys. 
+	53, 8058 (1982).
+
+8.	A. Chaiken, G.A. Prinz, and J.J. Krebs,   J. Appl. Phys. 67, 4892 
+	(1990).
+
+9.	J.C. Slonczewski, Phys. Rev. B39, 6995 (1989).
+
+
+FIGURE CAPTIONS
+
+Figure 1:   Magnetoresistance data with H along a [110] direction for 
+an  MBE-grown Fe-Cr-Fe sandwich with a 16 Å Cr layer. Here the 
+magnetoresistance Dr/r(%) is defined to be 100*[r(H=Hs)- 
+r(H=0)]/r(H=0).  The solid-headed arrows indicate the orientation of 
+the moments of the two Fe films at a given applied field.    The 
+positions of the characteristic fields HJ and Hs are indicated.
+
+Figure 2:   Characteristic fields of an  MBE-grown Fe-Cr-Fe sandwich 
+with a 16 Å Cr layer.   The fields  HJ and Hs are defined as indicated 
+in Figure 1.   The  indicated  line fit  has the functional form Hs(T) = 
+2.40 kOe - (2.44x10-3 kOe/K)◊T.
+ 
+Figure 3:  Temperature dependence of the magnetoresistance for two 
+types of Fe-Cr sandwiches.  The  error bars represent the uncertainty 
+due to temperature drift.  a)  H^I data for two MBE-grown 
+sandwiches. The fit parameters are: 
+-Dr/r(T) = 2.0% - (3.3x10-3 %/K)◊T for the tCr=16 Å sample, and 
+-Dr/r(T) = 1.4% - (2.2x10-3 %/K)◊T for the tCr=17 Å sample.  b)  H||I 
+and H^I  data  for an  evaporated polycrystalline Fe-Cr sandwich 
+with tCr=12Å.  Both applied field directions are in the plane of the 
+films.  For H^I,  the fit is -Dr/r(T) = 1.5% - (3.0x10-3 %/K)◊T, while 
+for H||I it is -Dr/r(T) = 1.0% - (2.8x10-3 %/K)◊T.
+
+Figure  4:  Temperature dependence of the two components of the 
+magnetoresistance for the sample of Figure 3(b).  The anisotropic 
+magnetoresistance (AMR) is the difference between the H||I and H^I  
+curves in Figure 3(b),  while the spin-valve effect is their average.    
+The fit to the spin-valve data  is given by -Dr/r(T) = 1.3% - (2.9x10-3 
+%/K)◊T.

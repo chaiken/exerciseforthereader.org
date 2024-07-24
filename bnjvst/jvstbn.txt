@@ -1,0 +1,343 @@
+Morphology and Bonding Measured from Boron-
+Nitride Powders and Films Using Near-Edge X-ray 
+Absorption Fine Structure
+
+L.J. Terminello, and A.  Chaiken, 
+<body bgcolor=#f4eaff vlink=#551a8b alink=#ff0000 link=#0000ee text=#000000>
+
+
+D. A. Lapiano-Smith,
+IBM Research, Yorktown Heights, NY
+
+G.L. Doll,
+Physics Department,
+ GM Research Laboratory,  Warren, MI
+
+T. Sato
+National Institute for Research in Inorganic Materials
+Tsukuba City, Japan
+
+Submitted to J. Vac. Sci. and Technol.
+40th Annual AVS Meeting, Paper AS-WeM4, 
+November 17, 1993
+
+Bonding in the  hexagonal, cubic, rhombohedral, and wurtzite phases of boron 
+nitride was characterized using core-level photoabsorption.  In the boron and 
+nitrogen 1s photoabsorption cross section we observed resonances that were 
+unique to each of the phases and that were associated with the sp2 or sp3 
+bonding present.  These spectroscopic standards were then used to characterize 
+the bonding and morphology in an incoherent thin-film of BN based on its core-
+level photoabsorption.   The film studied had predominantly sp2 (hexagonal-like) 
+bonding with some evidence of sp3 (cubic-phase) bonds.
+
+I. Introduction
+The technological importance of boron nitride is evident from the increasing use 
+of this material in tribological and electronic device applications. 1 - 4     In 
+particular, BN's use in thin-films has drawn attention to it as an abrasive coating, 
+or as an insulator / buffer layer in electronic device heterostructures.   Recent 
+work by Doll et al.    5   has shown that the wide band gap cubic phase can be 
+grown on a silicon substrate using ion-assisted, pulsed laser deposition.  Other 
+routes of fabricating unique BN thin-films have been reported, including a 
+hexagonal phase film  synthesized from boron and nitrogen containing precursor 
+gases using a photo-assisted process. 6     Unfortunately, these meta-stable thin-
+films of BN require non-equilibrium growth conditions that frequently produce 
+amorphous, or incoherent, thin films.  Therefore, quantitative structural methods 
+would be instrumental in determining the morphology of these films and would 
+reveal structural information that could lead to new thin film fabrication 
+methods.
+
+Recently, we have shown that core-level photoabsorption  can be used to 
+characterize the bonding and structure of fine-grained thin-films of boron 
+nitride 7   .  In this earlier report we showed that core-level photoabsorption can be 
+used to identify the bonding in an incommensurate thin-film - a film that exhibits 
+no long range order.  The boron and nitrogen 1s photoabsorption , or Near Edge 
+X-ray Absorption Fine Structure (NEXAFS), probes the element-specific empty 
+electronic states. 8     This synchrotron-based spectroscopy has been shown to be a 
+useful structural tool that has local electronic and bonding structure sensitivity.   
+NEXAFS spectroscopy is not subject to the constraint of long range order, which 
+makes it complementary to other structure determination methods.  
+
+In this work, we have characterized the bonding of the hexagonal, cubic, 
+rhombohedral, and wurtzite phases of BN using core-level photoabsorption.  In 
+our measurements we can identify unique spectral features in the 
+photoabsorption cross section and associate these resonances with each phase.  
+Also, because core-level photoabsorption obeys dipole optical selection rules, we 
+can concurrently identify the type of bonding present in the structurally 
+characterized material, in particular, identify the presence of conjugated p bands 
+indicative of sp2 -like bonding in an incoherent BN/ Si(100) film.  
+
+II. Experiment
+Hexagonal, cubic, rhombohedral, and wurtzite boron nitride (hBN, cBN, rBN, 
+and wBN, respectively) powders were pressed into a Ta foil for introduction into 
+the ultra-high vacuum apparatus that was used in the core-level photoabsorption 
+measurements.  Samples prepared in this fashion were free of possible B or N 
+containing contamination, and were less susceptible to charging during 
+measurement owing to the conductive substrate.   The metastable wBN, 9    rBN, 10    
+and cBN powders that would serve as our spectroscopic standards were 
+measured using x-ray diffraction to determine the phase purity. 11    The cubic 
+material was found to be pure cBN with trace metallic impurities, and the rBN 
+and wBN were found to be 94 and 93 % pure respectively, with the remainder 
+being the hexagonal phase source material used in synthesizing these two 
+powders.   The crystal structures of these materials are shown in Figure 1.
+
+An incoherent BN/Si film (BN/Si) was prepared using ion-assisted, pulsed-laser 
+deposition according to procedures described previously.  5    The 700 Å thick  film 
+showed no long-range structural ordering as determined from  X-ray diffraction.  
+This indicates that this film had an amorphous, or incoherent structure (i.e., the 
+grain or domain size was smaller than the coherence length of the x-ray probe).  12     
+Other spectroscopic studies of this fine-grained film using infrared absorption 
+indicate the domain size of the BN films are smaller than the phonon wavelength 
+(about 2000 Å) and confirm the amorphous character of this film.   Thin-film 
+samples prepared by other methods have produced fine-grained, or amorphous 
+films as well. 13  
+
+The boron and nitrogen 1s photoabsorption from each of these samples were 
+measured using monochomatized synchrotron radiation .  These measurements 
+were performed at  the IBM/U8 beam line at the National Synchrotron Light 
+Source 14,15  and at the 8-1 and 8-2 beamlines at the Stanford Synchrotron 
+Radiation Laboratory.  16    The NEXAFS from each of the BN samples was 
+measured in one of two ways: a secondary-electron, partial yield mode, and a 
+total-electron yield mode.  In both modes, nearly identical results were obtained.  
+Briefly, to measure the core-level photoabsorption cross section the photon 
+energy of monochromatic synchrotron radiation is scanned through the core-
+level edge while monitoring the electron yield.  In the partial-yield mode, the 
+secondary electrons emitted from the samples below 10 eV are measured, and in 
+the total-yield mode, all emitted electrons are recorded.  In both instances the 
+low-energy, long mean-free-path electron emission dominates the signal and 
+therefore makes the measurements bulk sensitive and surface contaminant 
+insensitive.
+
+In our earlier report, the boron and nitrogen  1s core-level photoemission was 
+measured and it revealed a B:N ratio of 1:1 in the powders, but was larger for the 
+film.  The non-stoiciometry of the thin films is typical of rapid, non-equilibrium 
+growth conditions. 13    The film made for this study was fabricated using a N+ 
+ion assisted growth procedure, 5   and hence, had a B:N ratio close to 1:1. 11    
+Charging of our insulating BN powders during photoemission reduced the 
+tractable chemical information from this method, however, the NEXAFS 
+measurements are much less sensitive to charging.
+
+The B 1s near-edge photoabsorption for the four powders and the BN/Si film is 
+shown in Figure 2.  In each spectrum the electron yield was normalized to the 
+energy and temporal dependent photon flux that was measured during the 
+NEXAFS measurement.  These spectra were then scaled to the largest feature for 
+comparison purposes.  Similar procedures were used to prepare the N 1s 
+photoabsorption data presented in Figure 3.  For each measurement, the sample 
+normal was 54o with respect to the synchrotron radiation  polarization vector, 
+thereby averaging out any angle-dependence to the absorption intensity. 17    
+
+III RESULTS
+Boron and nitrogen core-level photoabsorption was analyzed using the methods 
+described by Stöhr 8   where resonances in the NEXAFS are interpreted as 
+transitions from bound, localized core-levels with discrete angular-momentum to 
+quasi-bound or continuum states.  Dipole selection rules, which govern these 
+optical transitions, predict allowed transitions for 1s initial states into p-like 
+empty final states.  These p-like final states - or p* states - are associated with 
+anti-bonding molecular orbitals or empty bands in systems with p-bonding. 18    
+These empty states are predicted for the hexagonal BN 19  , much like structurally 
+similar graphite.  
+
+In Figure 2, the most prominent feature in the B 1s NEXAFS spectrum for hBN is 
+the narrow and intense transition at 192.0 eV.  This resonance has been observed 
+and assigned as a 1s-p* transition in previous photoabsorption 
+measurements. 4,20    These p-bond related resonances are associated with sp2 
+hybridized, planar bonding and should be absent in sp3 tetrahedrally bonded 
+materials.  In fact, the cubic phase BN with the diamond structure  pictured in 
+Figure 1 is predicted to have sp3 bonding and should not have any strong p* 
+NEXAFS resonances. 19    Figure 2 clearly supports this by illustrating that cBN 
+does not exhibit this sharp 1s-p* resonance at 192.0 eV, but instead has an 
+absorption maximum into s* continuum states at 194 eV as its dominant feature.  
+The same conclusion can be made for the n-edge results in Figure 3; the feature at 
+399 eV for the hBN  sample can be attributed to a p* resonance and is absent in 
+the cBN NEXAFS.  This striking difference in the absorption cross section 
+between two phases of the same material make NEXAFS measurements a 
+valuable tool for better understanding the relationship amongst the bonding,  
+atomic, and electronic structure in solids.
+
+The rhombohedral phase of BN is formed by heat treating a mixture of NaBH4, 
+NH4CL, and KCN. 10    Its structure (pictured in Figure 1) can be viewed as a 
+distortion of the hBN structure.  Hexagonal BN has A-B-A stacking of 
+hexagonally bonded planes, but rBN has A-B-C-A stacking.  Because the intra-
+planar bonding/electronic interaction is greater than the inter-planar interaction  
+- and the intra-planar bonding is identical - for these materials, the B 1s NEXAFS 
+of rBN should be similar to that of hBN.  In fact, the rBN B 1s photoabsorption in 
+Figure 2 exhibits a strong 1s - p* resonance indicative of sp2 bonding and is 
+nearly identical to the hBN NEXAFS.  Using the core-level photoabsorption 
+alone, it would be difficult to distinguish between the hexagonal and 
+rhombohedral phases of BN.  This is not surprising because of the nearly 
+identical local bonding and chemical environment surrounding each 
+photoabsorber.  For the nitrogen edges illustrated in Figure 3, a similar 
+conclusion can be drawn: there is little to distinguish the hexagonal and 
+rhombohedral phases in the NEXAFS structure.  Again, this can be explained by 
+the dominance of the 1s - p* transition in the near-edge structure.  As mentioned, 
+both phases would have a similar sp2, conjugated p-bond leading to these 
+resonances.
+
+The wurtzite BN was formed by a shock compression process 9   and has a 
+structure that can be viewed as a distorted cubic structure (Figure 1).  
+Qualitatively, this would imply that the bonding in this phase of the material 
+would be more sp3 -like than sp2 and should not have quasi-bound p-states.  
+Band calculations predict 19   ample dispersion along all three dimensions and 
+supports this qualitative view that the bonding in wBN is three dimensional - 
+like cBN - and dissimilar to the planar hBN  - which has little or no electronic-
+state dispersion along the c-axis of the material.  This assessment is supported by 
+the B 1s NEXAFS in Figure 2.  In these data, there is no evidence of the 1s -p* 
+resonances such as those found in hBN, and the edge onset is close to that of sp3 - 
+bonded cBN (194 eV).  The resonances present in wBN are similar to those found 
+in cBN and can be correlated with 1s - s* transitions.  Comparing the B 1s  
+photoabsorption structure of cBN and wBN, we observe many similarities, which 
+is expected for similarly bonded material with the same chemical composition, 
+but near the excitation edge there is a more prominent resonance at 196 eV in the 
+wBN NEXAFS than in the cBN.  This comparison is not as striking as the 
+difference between hBN and cBN, but at the edge - and between 210 and 216 eV - 
+the dissimilarity is clear.  Calculations that model the NEXAFS excitation 
+process, and take into account the final-state core-hole interaction, should be able 
+to model the effects of structural changes on the core-level photoabsorption 
+features. 11  
+
+Using the NEXAFS measured from these four phases of BN, we can then proceed 
+to qualitatively assess the bonding of the BN/Si thin film.  Immediately it is 
+evident from the B 1s photoabsorption in Figure 2 that the BN/Si sample has the 
+strong 1s - p* resonance at 192 eV indicative of sp2 bonding as is observed in the 
+hexagonal phase of BN.  The same is true for the nitrogen 1s photoabsorption 
+edge shown in Figure 3.  One difference is noticeable between the BN/Si and 
+hBN boron 1s spectra: the resonance at 200 eV is more pronounced in the BN/Si 
+film than in the hBN sample.  In the nitrogen spectrum in Figure 3, the resonance 
+at 407 eV is higher than the edge peak for the BN/Si sample, but the opposite is 
+true for the hBN sample.  One explanation for this could be contribution of cubic-
+phase, or sp3 related, resonances to the NEXAFS.  This is supported by infrared 
+absorption measurements on this BN/Si film which indicate the presence of 
+approximately 15% cBN. 11    While there is no unique evidence of cBN in this 
+qualitative assessment of the near-edge structure of BN/Si, the NEXAFS 
+measurements are useful for determining the sp2 bonding present in the thin 
+film.
+
+In our earlier report on using NEXAFS to determine the bonding in a BN thin 
+film, we were able to determine that the film was mainly sp2 bonded material, 
+but was not entirely amorphous.  It was determined through a polarization 
+dependent NEXAFS measurement that the BN film was preferentially ordered 
+with the BN hexagonal planes lying nearly perpendicular to the surface normal 
+(within 20 degrees).  This method of determining the angular orientation of the 
+p* states in a material has been described previously. 17     Our earlier observation 
+of the hBN - like film being preferentially oriented with the BN c-axis lying near 
+the surface plane was also seen in this film (data not shown).  This 
+counterintuitive film structure was supported by recently published TEM 
+results 21    that show laser ablated BN films can have such an oriented hBN-like 
+component.  In fact, electron diffraction measurements of our film confirm this 
+perpendicular stacking of hexagonal BN sheets. 22     McKenzie 23    has also 
+suggested that  during the growth of carbon films in-plane compressive stresses 
+due to ion irradiation can cause the c-axis of graphite to orient parallel to the 
+substrate surface.
+
+IV  CONCLUSIONS
+
+We have measured the boron and nitrogen 1s photoabsorption cross section from 
+hexagonal, cubic, rhombohedral, wurtzite BN powders and from an incoherent 
+boron nitride thin-film.  From the near edge resonances in these measurements, 
+we observe unique cross section features that can be associated with either sp2 or 
+sp3 bonding.  The hBN and rBN exhibit sp2 bonding (as determined by the 
+presence of an intense B 1s - p* resonance), while cBN and wBN NEXAFS 
+indicate that only sp3 bonding is present in these phases.  All four observations 
+are consistent with first-principles, electronic-structure calculations for each 
+phase.  The identification of sp2 or sp3 bonding in these samples using B and N 
+1s NEXAFS enable us to evaluate the bonding in an incoherent film of BN.  This 
+BN thin film was grown on a Si substrate using ion assisted laser ablation and 
+was shown to have predominantly sp2 bonding, like hBN.  However, there was 
+additional evidence in the core-level photoabsorption that there was sp3, or 
+cubic-like, bonding as well.  This work demonstrates that NEXAFS can provide 
+valuable structural information from fine-grained, or amorphous, BN films.
+
+
+Acknowledgments		
+The authors would like to thank F. Corrigan (General Electric Superabrasives) for 
+providing the wurtzite BN powder used in this study.  This work was conducted 
+under the auspices of the US Department of Energy by the Lawrence Livermore 
+National Laboratory under contract No. W-7405-ENG-48, and was performed at 
+the National Synchrotron Light Source, Brookhaven National Laboratory, which 
+is supported by the Department of Energy (Division of Materials Sciences and 
+Division of Chemical Sciences of Basic Energy Sciences) under Contract No. DE-
+AC02-76CH0016, and at the Stanford Synchrotron Radiation Laboratory, which is 
+supported by the Department of Energy, Office of Basic Energy Sciences.
+
+References
+
+ 1.	R. F. Davis, Proc. IEEE  79, 702 (1991).
+
+2.	T. Lei, M. Fanciulli, R. J. Molnar, and  T. D. Moustakas, Appl. Phys. Lett.  
+59, 944 (1991).
+
+3.	J. H. Edgar, J. Mater. Res.  7, 235 (1992).
+
+4.	P. King, L. Pan, P. Pianetta, A. Shimkunas, P. Mauger, D. Seligson, J. Vac. 
+Sci. and Technol. B 6, 162 (1988).
+
+5.	A. L. Ballal, L. Salamanca Riba, G. L. Doll, C. A. Taylor II, and  R. Clarke, J. 
+Mater. Res.  7, 1618 (1992).
+
+6.	D. R. Strongin, J. K. Mowlem, M. W. Ruckman, and  M. Strongin, Appl. 
+Phys. Lett.  60, 2561 (1992).
+
+7.	A. Chaiken, L. J. Terminello, J. Wong, G. L. Doll, and  C. A. Taylor II,  
+Appl. Phys. Lett., 63, 2112 (1993).
+
+8.	J. Stöhr, in Chemistry and Physics of Solid Surfaces , R. Vanselow,  R. Howe, 
+Eds. (Springer Verlag, New York, 1984).
+
+9.	F. Corrigan, private communication.
+
+10.	T. Sato,Proc. Jap. Acad. 61 Ser. B, 459 (1985).
+
+11.	A. Chaiken, L. J. Terminello, D. A. Lapiano-Smith, E. Hudson, G. L. Doll, 
+and  C. A. Taylor II, to be published.
+
+12.	C. A. Taylor II, S. Kidner, and  R. Clarke, personal communication.
+
+13.	T. Wada and N. Yamashita, J. Vac. Sci. Technol.  A10, 515 (1992).
+
+14.	D. E. Eastman, J. J. Donelon, N. C. Hien, and  F. J. Himpsel, Nucl. Instrum. 
+Meth.  172, 327 (1980).
+
+15.	F. J. Himpsel, Y. Jugnet, D. E. Eastman, J. J. Donelon, D. Grimm, G. 
+Landgren, A. Marx, J. F. Morar, C. Oden, R. A. Pollack, J. Schneir, and  C. Crider, 
+Nucl. Instrum. Meth. Phys. Res.  222, 107 (1984).
+
+16.	K. G. Tirsell and V. Karpenko, Nucl. Instr. and Meth. A 291 (1990) 511.
+
+17.	D. A. Outka and J. Stöhr, J. Chem. Phys.  88, 3539 (1988).
+
+18.	J. Stöhr and D. A. Outka, Phys. Rev.  B36, 7891 (1987).
+
+19.	K. T. Park, K. Terakura, and N. Hamada, J. Phys. C: Solid State Phys. 20, 
+1241 (1987).
+
+20.	B. M. Davies, F. Bassani, F. C. Brown, and  C. G. Olson, Phys. Rev.  B24, 
+3537 (1981); A. Mansour and S. E. Schnatterly, Phys. Rev.  B36, 9234 (1987).
+
+21.	D. J. Kester, K. S. Ailey, R. F. Davis, and K. L. More, J. Mater. Res. 8, 1213 
+(1993).
+
+22.	A. Ballal, L. Salamanca Riba, and G. L. Doll, to be published.
+
+23.	D. R. McKenzie, J. Vac. Sci. Technol. , to be published (1993).
+ 
+
+Figure Captions
+
+Figure 1: Schematic of the boron nitride crystal structures.  The hexagonal (hBN), 
+cubic(cBN), rhombohedral(rBN), and wurtzite(wBN) phases of boron nitride are 
+shown  with dark balls representing boron atoms and white balls representing 
+nitrogen.  Note that the hexagonal crystal structure has A-B-A stacking, while the 
+rBN has A-B-C-A stacking of the hexagonal-like sheets.  The wurtzite crystal 
+structure can be viewed as a distortion of the cubic phase where the tetrahedral 
+bonds in one direction are expanded to form a layered compound.
+
+Figure 2: Boron 1s core-level photoabsorption for hBN, cBN, rBN, and wBN 
+phases of boron nitride and a BN thin film grown by ion-assisted, pulsed laser 
+deposition.  Each spectrum was photon flux normalized and scaled.  Note that 
+the p* feature at 192.0 eV that is identified with hBN is also present in the rBN 
+and BN/Si samples.
+
+Figure 3: Nitrogen 1s photoabsorption for the hBN, cBN, rBN, wBN, and BN/Si 
+samples presented in Figure 1.  Here the resonances are not as prominant as 
+those at the B 1s edge, however, the relative energy positions and intensities are 
+valuable for understanding the atomic distribution for the electronic density of 
+states when compared to the corresponding B 1s features.

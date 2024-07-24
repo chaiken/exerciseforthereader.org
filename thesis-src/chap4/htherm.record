@@ -1,0 +1,69 @@
+;For Iye's sample #3
+kappa at 0 K  is 0.77
+(* (/ 1.0 (+ 1.0 (squared (/ 0.4 0.73)))) 0.77)
+0.5922 ;kappa par c at 0.4 K
+54.3 is h_therm for T_c = 0.73 at 0 K
+(* 54.3 (- 1.0 (squared (/ 0.4 0.73))))
+38 ;h_therm at 0.4 K
+Then sample is type I for theta < 40 deg.!
+measured hc2(0 deg.) = 26 g
+Then measured kappa is (/ 26.0 (* (sqrt 2.0) 38.0))
+0.4838
+if this measured quantity is actually Hc, Hc2 = (* (sqrt 2.0) 26 0.5922)
+21.77 ;actual (??) Hc2
+
+;For sample 13c
+First calculate h_therm:
+(sqrt (* 2.0 pi gamma 0.95 0.95))
+70.72 ;H_{therm}(0) in gauss for C_4KHg 13c
+(* 70.72 (- 1.0 (squared (/ 0.44 0.95))))
+55.55 ;thermodynamic critical field at 0.44 K
+This implies that 13c is type I for theta < about 65 degreees!
+kappa par. c is 0.70 for 13c at 0 K
+at 0.44 K, (* (/ 1.0 (+ 1.0 (squared (/ 0.44 0.95)))) 0.70)
+0.5764 ;value of kappa at 0.44 K for H par. c
+Measured H_{c2, par. c} at 0.44 K is 25.4 g
+If this measured quantity is actually H_c, then H_{c2} really is:
+(* (sqrt 2.0) 0.5764 25.4)
+20.7 ;true H_{c2, par. c} at 0.44 K
+
+;For Sample 8b 
+114.6 is h_therm for T_c = 1.54 K at 0 K
+(* 114.6 (- 1.0 (squared (/ 0.44 1.54))))
+105.2 ;h_therm at 0.44 K
+Then 8b is type I for theta < 70 degrees
+(* 114.6 (- 1.0 (squared (/ 0.88 1.54))))
+77.18 ;hterm at 0.88 K
+Expect type I for theta less than 72 degrees
+(* 114.6 (- 1.0 (squared (/ 1.2 1.54))))
+45.02 ; h_therm at 1.2 K
+Then 8b is still type I for theta < 70 degrees
+kappa par c at 0 K for 8b is 0.53
+(* 0.53 (/ 1.0 (+ 1.0 (squared (/ 0.44 1.54)))))
+0.49 ;kappa par. c at 0.44 K
+Expected Hc2 is (* 0.49 (sqrt 2.0) 105.2)
+72.9 ;expected Hc2 par. c for 0.44 K par. c-axis
+Measured Hc2 par. is 60.5 g
+Then kappa is (/ 60.5 (* (sqrt 2.0) 105.2))
+0.4067 ;measured kappa at 0.44 K
+
+(setq gamma 318.4)
+318.4 ;gamma for T_c = 1.5 K phase in erg/(cm^3 * K^2) calculated from
+slope of H_{c2} (see orlando.record)
+Now get H_c:
+(sqrt (* 2.0 pi 318.4 (squared 1.54)))
+68.88 ;in gauss
+(setq h_therm 68.88)
+(* h_therm (- 1.0 (squared 0.29)))
+63.09 ;H_c at 0.44 K
+(* h_therm (- 1.0 (squared 0.57)))
+46.5 ;H_c at 0.88 K
+(* h_therm (- 1.0 (squared 0.78)))
+26.97 ;H_c at 1.2 K
+Now calculate N(0):
+N(0) = (* 2e7 phys-e (/ gamma (/ (* 2.0 (squared (* cgs-k pi))) 3.0)))
+8.135e+21 ; in states/(eV * cm^3) total DOS for C_4KHg
+2.2640e+22 ;in 1/(eV * cm^3), Total DOS for C_4KHg  (from prop.record)
+4.0868e+21 ;in 1/(eV * cm^3), Total DOS for C_8KHg (from prop.record)
+
+

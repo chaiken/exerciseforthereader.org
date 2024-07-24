@@ -1,0 +1,6 @@
+#!/bin/sh
+nice -20 qlatex qthesis
+mv qthesis.log qthesis.log~
+nice -20 qlatex qthesis
+/bin/rm qthesis.log~ 
+

@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for NetBSD (vers 1st March 2002), see www.w3.org" />
+<title>Day 4 Afternoon</title>
+    <meta name="description" content=
+    "Alison Chaiken's home page" />
+    <meta name="keywords" content=
+    "molecular biology, hybridization, cloning, vector, PCR, DNA,
+    fingerprinting, RNA, mRNA, cDNA, primer, polymerase, E. coli,
+    operon, promoter, plasmid, gel, electrophoresis, southern blot,
+    yokazaki, Eco R1, restriction enzyme, intron, exon, siRNA, gene
+    expression, array, 5' UTR, poly-A tail, tRNA, translation, transcription" />
+    <meta name="resource-type" content="document" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=utf-8" />
+    <meta name="GENERATOR" content=
+    "GnuEmacs/19.34 [en] (X11; I; NetBSD 1.2G i386) [emacs]" />
+    <link rev="made" href=
+    "mailto:alchaiken@gmail.com" />
+    <link rel="start" href="/" />
+    <link rel="icon" href="/fermi-16.png" type=
+    "image/png" />
+    <link rel="stylesheet" href="/pt_style.css" type="text/css" />
+    <!--    $Id: index.html,v 1.25 2005/10/22 20:58:32 alison Exp $  -->
+    <link rel="up" href="../" />
+    <link rel="next" href="coolstuff.html" />
+    <link rel="up" href="/" />
+<!--    $Id: day4pm.html,v 1.2 2004/07/04 06:05:35 alison Exp $  -->
+</head>
+<body>
+<a href="index.html">Up</a>
+<a href="day4am.html">Previous</a>
+<a href="day5pm.html">Next</a>
+
+<h2><p align="center">Day 4 Afternoon Lecture Notes</p></h2> <h3><p
+align="center"> Steve Williams, Smith College</p></h3><h3><p
+align="center">June 9, 2004</p></h3>
+
+<h3>Details of the Polymerase Chain Reaction</h3>
+
+<p>How does the PCR reaction in a given elongation step stop?   
+</p>
+
+<ul>
+
+<li>The polymerase may hit the end of the template;</li>
+
+<li>The polymerase may randomly unbind after 3 or 4 kb.</li>
+
+</ul>
+
+<p>The <b>processivity</b> of  an enzyme is the nucleotide length it
+will travel without unbinding.    PCR is more efficient with shorter
+templates.   As a result of random unbinding, the length of sequences
+after PCR is somewhat variable.   Shorter PCR products can only
+template shorter products of subsequent generations.   Therefore long
+pieces increase arithmetically while smaller copies will amplify
+geometrically.   The vast majority of molecules will have their length
+determined by the forward-primer-to-reverse-primer span.
+</p>
+
+<p>With perfect efficiency and n cycles of the reaction, there are
+2<sup>n</sup> product molecules.   In real reactions,
+</p>
+
+<p align="center">P = T * (1 + E)<sup>n</sup>
+</p>
+
+<p>where P is the number of product molecules, T is the amount of
+template at the start and 0 <= E <= 1 is the efficiency.
+</p>
+
+<p>Taq Gold is a proprietary version of Taq polymerase that, until
+heating to 95&#176;C for 10-12 minutes, is bound to another molecule.
+Taq Gold permits RT-PCR to be performed in one tube since Taq isn't
+active during the RT step and the heating that activates Taq denatures
+the reverse transcriptase.  Taq Gold has also enabled "hot start" PCR
+which discourages mis-priming at lower temperatures.  If DNA
+polymerase is active near room temperature, then misprimed sequences
+can be amplified.  With Taq Gold, mis-primers unbind during its
+activation.  For this reason, hot start is considerably more
+efficient.  Before Taq Gold, hot start required the addition of DNA
+polymerase during a brief cooling step after a 95&#176;C denaturing
+step.
+</p>
+
+<h3>Hybridization and Melting</h3>
+
+<p>Ligation and hybridization are the most common steps to fail in a
+protocol.  Hybridization temperature is variable and depends
+critically on the exact sequence of the probe.  Hybridized DNA or RNA
+molecules are characterized by their melting temperature
+T<sub>m</sub>.
+</p>
+
+<p align="center">
+<img src="melttemp.png">
+</p>
+
+<p>DNA has a maximum in optical absorbance at 260 nm.  ssDNA has a
+greater absorbance due to lower degree of order.  Highly repetitive
+sequences like ALU have more AT pairs than exons and will melt first.
+Mammalian genomes are on the average 60% AT.  Probe and primer
+hybridization conditions must be selected based on a calculation of
+T<sub>m</sub>.
+</p>
+
+<h3>Factors Influencing Hybridization</h3>
+
+<ol>
+
+<li>Temperature</li>
+
+<p>The higher the temperature, the great the <b>stringency</b>: the
+more the probe and template must match exactly.  When a probe from
+another species or in the same gene family is used, less stringency is
+required than when part of the sequence of the gene in question is
+known.
+</p>
+
+<li>Salt concentration of buffer</li>
+
+<p>Usually Na ions are used in hybridization reactions although K ions
+or pH modification could equally well be employed.  Every nucleotide
+on each strand carries one negative charge due to the phosphate group.
+Electrostatic repulsion of the two strands can cause AT-rich DNA to
+denature in pure water at room temperature.  Na ions greatly stabilize
+DNA.  The higher the Na concentration, the lower the stringency.  
+</p>
+
+<p>Examples: 6X SSC buffer = 1 m (molar) Na<sup>+</sup><br>
+5X SSC buffer = 0.83 m  Na<sup>+</sup>
+</p>
+
+<li>Formamide concentration</li>
+
+<p>Formamide is a denaturing agent that competes with nucleotides for
+H bonds.  The higher the formamide, the greater the stringency.  Why
+use formamide rather than increase the temperature?  Mostly due to the
+desire to avoid unreasonably high temperatures where tissues may
+degrade.
+</p>
+
+<li>Probe length</li>
+
+<p>Longer probes bind more tightly because they have more H bonds.
+</p>
+
+<li>Mismatch between probe and target</li>
+
+<li>%GC</li>
+
+<p>For lengths >= 200 bp, the empirically determined melting
+temperature is
+</p>
+
+<p align=center>T<sub>m</sub> = 81.5&#176;C + 16.6*(log m) +
+0.41*(%GC) - (500/length) - 0.63*(%formamide)
+</p>
+
+
+<p>Thus T<sub>m</sub> is 81.5&#176;C for a long probe that's all AT
+binding to a perfectly matched target where [Na<sup>+</sup>] = 1 m and
+there's no formamide.   6x SSC buffer has [Na<sup>+</sup>] = 1 m.
+Note that in the equation above for %GC = 50%, plug in "50," not 0.5. 
+</p>
+
+<p>For 6x SSC buffer, a long probe in the absence of formamide has 
+</p>
+
+<p align=center>T<sub>m</sub> = 81.5&#176;C + 0.41*(%GC)
+</p>
+
+<p>Thermophilic organisms can have %GC = 80% which is why their DNA
+doesn't denature at temperatures greater than 100&#176;C.  For our
+plaque lifts in Experiment 1, we're using 5x SSC and LINE1 is 78% AT,
+so for 1400 bp probes, T<sub>m</sub> = 89&#176;C.  For a reasonable
+degree of stringency in hybridization, use (T<sub>m</sub> - 25&#176;C)
+<= T<sub>hyb</sub> <= (T<sub>m</sub> - 15&#176;C).  The lower
+temperature gives a less stringent condition and is appropriate for
+our for our attempt to match our probe to all members of the RevT
+family, not just the same exact gene.
+</p>
+
+<p>To match a C. elegans gene to mouse, an even lower temperature like
+(T<sub>m</sub> - 35&#176;C) can be tried, although false positives
+will undoubtedly occur.  Note that primers (oligos) are too short for
+the equation above to apply.  The equation for primers is much more
+complex.
+</p>
+
+</ol>
+
+<h3>Pre-hybridization solutions</h3>
+
+<p>5x Denhardt's solution is a common blocking agent.   The
+composition of the 100X stock is
+</p>
+
+<ul>
+
+<li>2% Ficoll;</li>
+<li>2% polyvinylpyrollidone;</li>
+<li>2% BSA.</li>
+
+</ul>
+
+<p>BLOTTO (bovine lacto transfer technique optimizer) is another
+popular pre-hybridization solution that's basically Carnation non-fat
+dry milk.  Milk cannot be used as a blocking agent for RNA since it
+contains ribonucleases.
+</p>
+
+<h3><p align="center">A Few Notes from Day 4 Evening Bioinformatics
+Lecture</p></h3> <h3><p align="center">by Barton Slatko, New England
+Biolabs</p></h3><h3><p align="center">June 9, 2004</p></h3>
+
+<p>(Other notes taken directly onto handouts)</p>
+
+<p>The <a href="http://www.ncbi.nih.gov">National Center for
+Biotechnology Information website</a> is an invaluable source of
+information.
+</p>
+
+<p>Most of the companies that sell reagents like oligos and
+restriction enzymes have software on their website to aid in
+selection.  The software calculates useful quantities like
+T<sub>m</sub>, finds restriction sites in sequences, checks for
+hairpins in primers, etc.
+</p>
+
+
+<a href="index.html">Up</a>
+<a href="day4am.html">Previous</a>
+<a href="day5pm.html">Next</a>
+
+</body>
+</html>

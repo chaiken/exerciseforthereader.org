@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for NetBSD (vers 1st March 2002), see www.w3.org" />
+<title>Day 6 AM</title>
+    <meta name="description" content=
+    "Alison Chaiken's home page" />
+    <meta name="keywords" content=
+    "molecular biology, hybridization, cloning, vector, PCR, DNA,
+    fingerprinting, RNA, mRNA, cDNA, primer, polymerase, E. coli,
+    operon, promoter, plasmid, gel, electrophoresis, southern blot,
+    yokazaki, Eco R1, restriction enzyme, intron, exon, siRNA, gene
+    expression, array, 5' UTR, poly-A tail, tRNA, translation, transcription" />
+    <meta name="resource-type" content="document" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=utf-8" />
+    <meta name="GENERATOR" content=
+    "GnuEmacs/19.34 [en] (X11; I; NetBSD 1.2G i386) [emacs]" />
+    <link rev="made" href=
+    "mailto:alchaiken@gmail.com" />
+    <link rel="start" href="/" />
+    <link rel="icon" href="/fermi-16.png" type=
+    "image/png" />
+    <link rel="stylesheet" href="/pt_style.css" type="text/css" />
+    <!--    $Id: index.html,v 1.25 2005/10/22 20:58:32 alison Exp $  -->
+    <link rel="up" href="../" />
+    <link rel="next" href="coolstuff.html" />
+    <link rel="up" href="/" />
+<!--    $Id: day6am.html,v 1.2 2004/07/04 06:05:35 alison Exp $  -->
+</head>
+<body>
+<a href="index.html">Up</a>
+<a href="day5pm.html">Previous</a>
+<a href="day6pm.html">Next</a>
+
+<h2><p align="center">Day 6 Morning Lecture Notes</p></h2> <h3><p
+align="center"> Steve Williams, Smith College</p></h3><h3><p
+align="center">June 11, 2004</p></h3>
+
+<h3>Subcloning from Lambda Phage to a Plasmid</h3>
+
+<p>Why transfer a foreign gene from lambda vector to a plasmid?
+</p>
+
+<ol>
+
+<li>Lambda DNA is linear and is therefore less stable than circular
+plasmid DNA.  Once a gene has been cloned, we can store it
+indefinitely in a plasmid.   The reason that linear DNA is less stable
+is the existence of exonucleases that attack the ends of DNA.
+Plasmids are not susceptible to exonuclease degradation.
+</li>
+
+<li>The insert makes up a greater fraction of the plasmid's DNA than
+it does of lambda's.  Plasmids are typically about 3 kbp in size so
+RevT at 1.4 kbp will make up about 1/3 of the total.   In contrast
+the lambda vector has about 39 kbp of DNA so the yield is 10x lower.
+Plasmid DNA is also easier to isolate than lambda.
+</li>
+
+<li>Plasmids are excellent templates for sequencing an insert while
+lambda are poor for this purpose.  The reason why this is so is
+obscure.
+</li>
+
+<li>Lambda Zap Express can take an insert up to 12 kbp in length while
+plasmids can accommodate larger inserts.
+</li>
+
+</ol>
+
+
+<h3>Traditional, One-Week Method of Subcloning</h3>
+
+<ol>
+
+<li>Pick positive lambda clone from a plaque and elute the phage into
+a buffer solution.
+</li>
+
+<li>Mix the phage with E. coli at the right ratio to get a good yield
+of phage.
+</li>
+
+<li>Isolate lambda phage via gradient centrifugation.
+</li>
+
+<li>Purify DNA from lambda phage via phenol-chisam extraction and then
+remove solvents via drop dialysis or ethanol precipitation.
+</li>
+
+<li>Cleave the insert out of the lambda phage via a restriction digest
+(here EcoR1).
+</li>
+
+<li>Run a check and check the digest composition.  With EcoR1 and
+Lambda Zap Express, the gel should show bands for the left arm of
+lambda, the right arm of lambda and the insert.  This step confirms
+that the previous reactions worked at the same time that it separates
+out the lambda DNA.
+</li>
+
+<li>Cut the insert out of the gel and purify it.
+</li>
+
+<li>Ligate the insert into a plasmid.
+</li>
+
+</ol>
+
+<p>Note that steps 2 through 7 are necessary due to the low yield of
+phage from step 1.
+</p>
+
+<h3>New Subcloning Method using PCR</h3>
+
+<ol>
+
+<li>Pick lambda clone from a plaque and elute the phage into a buffer
+solution.
+</li>
+
+<li>PCR amplify the insert.
+</li>
+
+<li>Ligate the insert into a plasmid.
+</li>
+
+</ol>
+
+<p>There's an optional purification process between the first and
+second steps but only for sequencing, not for subcloning.
+</p>
+
+<h3>Special Vectors for PCR Subcloning</h3>
+
+<p>Vectors that are specially designed for convenient PCR subcloning
+are available.    They produce a PCR product that has about 100 bp of
+lambda DNA at either end of the insert.
+</p>
+
+<p align=center>
+<img src="pcrsubclone.png">
+</p>
+
+<p>For some reason the products of Taq polymerase are always
+terminated with a single A at the 3' end.  These PCR products can be
+terminated with vectors that have a single T overhang.  EcoR1
+overhangs will ligate only to other EcoR1 overhangs, while blunt ends
+are not at all specific.  Single-A overhangs turn out to be fairly
+specific because naturally occurring single-T overhangs are unknown.
+</p>
+
+<p>How to prepare single-T overhangs on plasmid DNA?  Use a
+blunt-cutter enzyme on the plasmid and then employ DNA polymerase to
+add a T at each 3' end.  A specially modified T NTP allows addition of
+only one base pair.  After heat-killing the DNA polymerase, unblock
+the single T.  In actual fact you can purchase a cut plasmid already
+terminated with the single T.  The insertion into the plasmid is chose
+to occur at a place that doesn't interfere with an E. coli gene.
+</p>
+
+<p align=center>
+<img src="cutplasmid.png">
+</p>
+
+<p>Note that the A overhangs don't ligate with each other.  The only
+product should be the desired one except that not all the plasmid
+blunt ends will acquire T's, so there may be some plasmid without
+inserts as a background.    
+</p>
+
+
+<h3><p align=center>Quantitative Reverse-Transcription PCR</p></h3>
+<h3><p align=center>Lori Saunders, <a
+href="http://www.gwathmey.com/">Gwathmey, Inc.</a></p></h3>
+
+<p>Formation of loops and unintended products like primer-dimers
+lowers the efficiency of PCR and causes problems.  If the efficiency
+is 100%, the amount of product P = T*2<sup>n</sup> where T is the
+amount of starting RNA template and n is the number of cycles.  More
+realistically P = T*(1 + E)<sup>n</sup>.  Even so the efficiency will
+vary from cycle to cycle.
+</p>
+
+<p>The goal of quantitative PCR is to back out the amount of template
+T (that is, the amount of gene expression) from P(n) data.  Real-time
+or kinetic PCR is a technique that has been developed in the last 10
+years to address this goal.  The leading instruments are the TaqMan
+7700 and 7000 developed by Applied Biosystems ($30-40K).  In TaqMan
+the amount of product is detected very 7 seconds via fluorescence.
+The plot below shows the kind of raw data produced by real-time PCR.
+The product P is measured in fluorescence units.  The complete
+real-time PCR experiment typically takes about 2 hours.  The vendors
+who make PCR primers also sell fluorescent probes for real-time PCR.
+</p>
+
+<p align=center>
+<img src="realtimepcr.png">
+</p>
+
+<p>As the initial amount of template T decreases, the cycle at which
+saturation occurs moves out to higher n.  Due to noise, data at low n
+are unreliable.  At high n all the curves for various values of T are
+the same.  The steepest part of the curve is the best place to
+determine kinetic coefficients.  Customarily one plots the amount of
+product at a given cycle versus T or the cycle at which P reaches a
+given value versus T (a "fixed fluorescence plot").  These plots can
+incorporate data for T values so low that saturation is never reached.
+</p>
+
+<p align=center>
+<img src="decreasingT.png">
+</p>
+
+
+<a href="index.html">Up</a>
+<a href="day5pm.html">Previous</a>
+<a href="day6pm.html">Next</a>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script src="navigate.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="GNU Emacs 23.2.1 (x86_64-redhat-linux-gnu, GTK+ Version 2.20.1) of 2010-05-13 on x86-07.phx2.fedoraproject.org"/>
+
+<link rel="stylesheet" href="slides.css" type="text/css"/>
+
+<title>LinuxCon Highlights, August 2010</title>
+
+</head>
+<body onkeydown="keyAlert(event);" onclick="whichButton(event);">
+
+    <h1 class="title">Subtleties of runtime power management
+    framework</h1>
+
+<ul class="spaced">
+
+<li>Devices run if they please: OS does not, in general, force a shut-down.</li>
+
+<!-- <li>Problem: some devices won't generate wake-up interrupts when --
+  -- they're sleeping.</li> -->
+
+<li><em>System</em> hibernate and wakeup must bring all devices up and down.</li>
+
+<li>Settings are configured through /sys/devices/&lt;device&gt;/power.</li>
+
+<li>Event-listener-callback paradigm for wakeup.</li>
+
+<li>A queue holds per-device requests to sleep and wake.</li>
+
+<li>Reference-counting mechanism blocks suspension of devices.</li>
+
+</ul>
+
+
+</body>
+
+</html>

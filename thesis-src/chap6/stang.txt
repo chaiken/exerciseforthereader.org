@@ -1,0 +1,10 @@
+0.563 <0.05 #stang88 #stage I alpha
+1.0 4.55 #stang88 #stage I (alpha + beta)
+1.0 4.69 #stang88 #stage I (alpha + beta)
+1.08 4.69 #stang88 #stage I (alpha + beta)
+1.08 4.69 #stang88 #stage I (alpha + beta)
+1.08 <0.05 #stang88 #stage I (alpha + beta)
+1.56 4.73 #stang88 #stage II beta 
+1.56 4.71 stang88 #stage III beta
+1.56 <0.05 #stang88 #stage III beta 
+1.56 4.72 #stang88 #stage III beta

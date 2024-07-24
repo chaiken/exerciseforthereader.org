@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="GNU Emacs 23.2.1 (x86_64-redhat-linux-gnu, GTK+ Version 2.20.1) of 2010-05-13 on x86-07.phx2.fedoraproject.org"/>
+ <meta name="keywords" content="linux kernel oracle qualcomm power
+				cpu_idle wakelock earlysuspend patch
+				meego maemo Nokia fork redhat
+				filesystem xfs btrfs ext3 ext4 novell driver"/>
+<link rel="stylesheet" href="chaiken.css" type="text/css"/>
+<title>LinuxCon Notes August 11, 2010</title>
+</head>
+<body>
+<h1>Day 1 Notes, LinuxCon 2010</h1>
+
+<h2>Tuesday August 11, 2010<br/>Boston, MA</h2>
+
+Prepared by <a href="mailto:alchaiken@gmail.com">Alison Chaiken</a>
+and offered under <a href="
+http://creativecommons.org/licenses/by-sa/3.0/">cc-by-sa</a>
+
+<h3>"A Technical Look at Oracle Linux"</h3>
+Wim Coekaerts, Oracle<br/>
+
+<p>Coekaerts discussed Oracle's contributions to Linux, which in truth
+are substantial.  [Jonathan Corbet's Thursday talk showed Oracle with
+2% of kernel commits, which puts them well into the top 10.]  Most
+notable of Oracle's recent contributions are the btrfs filesystem
+developed by Chris Mason and
+the <a href="http://kernelnewbies.org/Linux_2_6_30#head-a2a6119d7751900fa0befe181824a1ec7b8b4abe">Reliable
+Datagram Protocol</a> for high-bandwidth communications.
+
+He did not mention Open Solaris/Illumos debate or the controversy over
+the recent shutdown of Postgresql servers.  The btrfs filesystem was
+in fact one of the conference's most popular topics, as described
+further below, and its full incorporation into the kernel is clearly
+eagerly anticipated.</p>
+
+<p>Coekaerts complained about the lack of pre-release testing of
+kernels.   He said that testing is an area in which Oracle hopes to
+contributed in the future.  [In Tuesday night's "Linux Kernel Panel,"
+participants generally agreed that Coekaerts had a point.]</p>
+
+<h3>"Mobile Linux: Adapting Practices, Driving Innovation, Collaboration
+and Scalability"</h3>
+Rob Chandok, Qualcomm<br/>
+
+<p>Chandok complained that "A lot of the kernel is unintentionally
+optimized for x86, which create problems for ARM architectures."  He
+pointed listeners to <a href="https://www.codeaurora.org/">Qualcomm's mobile open source forum</a>.  Chandok highlighted Qualcomm's
+contributions to Android with the implication that these were
+contributions to Linux even if they weren't included in the mainline
+kernel tree, a contention which would generate a bitter dispute if
+made aloud.  (Compare to <a href="#garrett">Garrett's comments</a>.)</p>
+
+<p>In late 2010, Qualcomm will come out with a dual-core 1.5 GHz clock
+processor for handsets.    The investment that Qualcomm has made in
+mobile processors is illustrated by the HTC Aria, which has only a 600
+MHz processor but is as fast as the Nexus One with its 1 GHz
+Snapdragon.</p>
+
+<p>Qualcomm's goal is to "introduce compositing of OS components" and "to
+reduce fragmentation at a level where there's no politics or controversy."
+</p>
+
+
+<h3><a name="rafael">"Runtime Power Management Framework for I/O
+Devices in the Linux Kernel"</a></h3> Rafael J. Wysocki, University of
+Warsaw<br/>
+
+<a href="http://lwn.net/Articles/347573">Reference</a>
+
+<p><a href="http://events.linuxfoundation.org/slides/2010/linuxcon2010_wysocki.pdf">Slides</a></p>
+
+<p>The relatively soft-spoken Wysocki described his mainline approach to
+power management based on the runtime_suspend approach.  He introduced
+the new methods that drivers should define in order to allow partial
+shutdown of unused components without hibernating the entire system.
+Each bus and device has its own power-management configuration.
+cpu_freq and cpu_idle APIs have existed for a while, but the detailed
+support for per-driver power management is new.</p>
+
+<p>Care must be taken in shutting down devices properly.  For example, a
+bus controller cannot power off unless all its connected devices are
+already down.   The new methods are described in pm.h and dev_pm_ops.
+New sysfs files support the configuration of the device power
+management system.   Dynamic power management configuration changes
+are now supported based on states like whether a device is plugged in
+or whether the battery is low.</p>
+
+<p>The case of PCIe devices is illustrative.  PCI devices do not generate
+interrupts when they are sleeping, so they cannot announce their
+wakeup to the CPU directly.  Instead the bus controller must do so.
+The variety of device shutdown and wakeup conditions makes the power
+management system complex.</p>
+
+<p>No controversy was apparent at Wysocki's talk, which treated much the
+same topic as <a href="#garrett">Garrett's controversial remarks</a>.</p>
+
+<h3><a name="garrett">"Android/Linux Kernel: Lessons Learned"</a></h3>
+Matthew Garrett, RedHat<br/>
+
+Press
+coverage: <a href="http://www.linux.com/news/embedded-mobile/mobile-linux/344486-garretta-linuxcon-talk-emphasizes-lessons-learned-from-androidkernel-saga">linux.com</a>
+<a href="http://www.zdnet.com/blog/open-source/googles-android-fork-defended-debated-dissected-again/7067">ZDnet</a>
+
+<p><a href="http://events.linuxfoundation.org/slides/2010/linuxcon2010_garrett.pdf">Slides</a></p>
+
+<p>Garrett's talk was the second of three fine presentations about recent
+power-management enhancements to the Linux kernel, following Rafael
+Wysocki and preceeding Len Brown.   While Wysocki focussed on
+mainline's approach to device power management, Brown spoke about
+successive power-down states of processors.</p>
+
+<p>Android has been ported to ARM, x86 and MIPS.  The only GPL'ed code in
+Android besides the kernel is BlueZ.  Other Android components are not
+standard GNU/Linux.  For example, Binder is the remote procedure call
+mechanism in Android which is totally different than what ships with
+GNU/Linux.  The problem for the mainline Linux kernel is that
+upstream-contributed drivers depend on Binder.  Drivers contributed to
+mainline from Android rely on the Android userland libraries, so they
+cannot be used by mainline with substantial modification.</p>
+
+<p>Android apps, for better or worse, do not undergo the kind of testing
+that Apple applies to candidates for their store.  The wakelocks
+mechanism was submitted by Android to mainline kernel in order to
+upstream the solution to the problem of badly behaved drivers draining
+the battery. In contrast, Apple's way of preventing poorly designed
+apps from ruining the user experience is to squelch them.  Wakelocks
+have proven to be a giant source of contention.  Wakelocks rely
+instead on an OS-level determination that the phone is not in use so
+that all apps should be suspended.  The mechanism has none of ACPI's
+granularity of control.   For example, Rafael Wysocki's recently
+contributed runtime_suspend state can be readily awoken, while
+system_suspend is a full-on hibernation state.   [See <a href="#rafael">Rafael's talk</a>.]</p>
+
+<p>Why are wakelocks needed?  A race condition can occur when a user
+presses a button while a suspend is occuring.  The result can be, for
+example, failure to answer a phone call.  The baseband CPU can take
+the call, but the pickup has to be synchronous, unless the vast
+majority of actions on the desktop.  Google's solution for Android was
+the wakelock mechanism.</p>
+
+<p>With Google's initial submission of wakelock/earlysuspend to the LKML,
+the description of the problem being solved was not clear.  Wakelock
+and earlysuspend should really have been separated.  Also, Google's
+submission did not include an API description of how to use wakelock.   </p>
+
+<p>Maemo/MeeGo cannot benefit from the wakelock mechanism, as they employ
+the traditional GNU/Linux power management methodology that is covered
+by GPL.    Nokia therefore opposed wakelock's inclusion.   [My
+observation: opposition by users of the full GNU/Linux stack to the
+incorporation of features into the kernel that duplicate the
+functionality of GPL'ed software is liable to be a growing source of
+contention going forwared. ]</p>
+
+<p>Clumping of patches, some of which are more desirable than others, is
+a common problem with new developers.  The more modular patch
+submissions are, the more likely that some pieces will accepted.</p>
+
+<p>Garrett's personal hope is that the Android userspace will always run
+on the mainline kernel with a minimum of patching.    Hopefully too
+all drivers ported from Android to mainline will require the *same*
+patches rather than handcrafting of patches in each case.    If MeeGo
+ran on top of the Android kernel, that would be even better.   </p>
+
+<p>Unfortunately, few Android drivers are being contributed back to
+mainline.   Even bad contributed drivers can be ported.</p>
+
+<p>The crux is that Android is a platform, not a distro with quality
+control and checking of apps for compatibility and stability.   The
+choice of unscreened apps has always been a hallmark of Linux and is
+desirable, but some type of power management enforcement, either
+wakelock or Rafael Wysocki's new PM/QOS will be necessary to prevent
+badly behaved apps from draining down handset batteries.</p>
+
+
+<h3>"One Billion Files: Scalability Limits in Linux File Systems"</h3>
+Ric Wheeler, Red Hat<br/>
+
+<p>With the growth in the size of disk drives and the relative stability
+of file size, we can foresee the day when it's common for filesystems
+to have a billion files.  What will the consequences be for stability
+and performance?  Wheeler has tested the billion-tiny-file scenario
+with mainline's mostly deprecated ext3, mainline's newly adopted ext4,
+SGI's enterprise-oriented xfs and the much discussed new btrfs.
+Ideally the physical bandwidth of the drive's channel will always
+limit communications.  In practice, that ultimate hardware-limited
+level of performance is never quite achieved.</p>
+
+<p>The upshot is that ext3's well documented performance problems are
+apparent, that ext4 is (as expected) much faster than ext3, and that
+xfs and btrfs generally perform better than ext4, although each has
+its own failings.</p>
+
+<p>For file metadata-bound actions like ls, where stat() must be run on
+each file, btrfs and xfs are much faster than ext3 and ext4 and btrfs
+is faster than xfs.    PCIe also far outstrips SATA.   xfs is slower
+for data-intensive actions, while btrfs continues to shine and ext4
+does reasonably well.     xfs is terribly slow at removing files.
+It's now easy to create a filesystem that can't be fscked due to
+memory limitations.   A patch to fix fsck is coming.   </p>
+
+<p>The lack of relationship between inode number and physical disk
+position is a performance limit.    Sync causes a huge delay.  Sorting
+the inodes before disk accesses can help a great deal.   acp written
+by Chris Mason, the btrfs creator, is a command-line tool that will
+peform the sort.</p>
+
+<h3>"Linux Kernel Panel"</h3>
+featuring James Bottomley, Novell; Jon Corbet, LWN; Dave Jones,
+Fedora; Chris Mason, Oracle; Ted Ts'o, Google
+
+<p>This surprisingly sleepy discussion produced few highlights.  Notably
+the panelists agreed to disagree about the Android wakelocks
+controvery, with Ted Ts'o representing Google's viewpoint and James
+Bottomley of Novell sounding a more critical note.</p>
+
+<h3><a href="index.html">Back to Top</a></h3>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for NetBSD (vers 1st March 2002), see www.w3.org" />
+<title>Day 5 Afternoon</title>
+    <meta name="description" content=
+    "Alison Chaiken's home page" />
+    <meta name="keywords" content=
+    "molecular biology, hybridization, cloning, vector, PCR, DNA,
+    fingerprinting, RNA, mRNA, cDNA, primer, polymerase, E. coli,
+    operon, promoter, plasmid, gel, electrophoresis, southern blot,
+    yokazaki, Eco R1, restriction enzyme, intron, exon, siRNA, gene
+    expression, array, 5' UTR, poly-A tail, tRNA, translation, transcription" />
+    <meta name="resource-type" content="document" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=utf-8" />
+    <meta name="GENERATOR" content=
+    "GnuEmacs/19.34 [en] (X11; I; NetBSD 1.2G i386) [emacs]" />
+    <link rev="made" href=
+    "mailto:alchaiken@gmail.com" />
+    <link rel="start" href="/" />
+    <link rel="icon" href="/fermi-16.png" type=
+    "image/png" />
+    <link rel="stylesheet" href="/pt_style.css" type="text/css" />
+    <!--    $Id: index.html,v 1.25 2005/10/22 20:58:32 alison Exp $  -->
+    <link rel="up" href="../" />
+    <link rel="next" href="coolstuff.html" />
+    <link rel="up" href="/" />
+<!--    $Id: day5pm.html,v 1.2 2004/07/04 06:05:35 alison Exp $  -->
+</head>
+
+<a href="index.html">Up</a>
+<a href="day4pm.html">Previous</a>
+<a href="day6am.html">Next</a>
+
+<h2><p align="center">Day 5 Afternoon Lecture Notes</p></h2> <h3><p
+align="center"> Steve Williams, Smith College</p></h3><h3><p
+align="center">June 10, 2004</p></h3>
+
+<p>Different RevT genes from the family have sequences that are about
+90% the same.  When genes are copied from one part of the genome to
+another, they start to diverge evolutionarily.  Most copies of RevT
+are non-functional "pseudogenes."
+</p>
+
+<p>RevT codes for reverse transcriptase, which copies RevT to other
+places in the genome.  RevT's tendency to copy itself explains why
+LINE1 has so many occurrences in the genome.  Retroviruses may well be
+RevT genes that escaped from the host genome.  "RevT is something like
+an endogenous retrovirus."  If LINE1 by chance inserts into genes, it
+may cause a mutation in protein production.
+</p>
+
+<h3>Primer Design Considerations</h3>
+
+<ol>
+
+<li>Desirable length is 18-30 nt.  Shorter primers are not specific
+enough; longer primers don't work any better.</li>
+
+<li>Base composition should be near random as a primer too rich in one
+base is likely not to hybridize specifically enough.</li>
+
+<li>Pick primers that don't form hairpins.  These can be excluded
+using a computer program.  A GC-rich hairpin is more stable (and
+worse) than an AT-rich one.   For example
+
+<p align="center">GCTACGGGGCCCCTGTG</p>
+
+<p>would likely fold in the center forming four G-C bonds and fail to
+hybridize with template DNA.
+</p>
+
+<li>Avoid primer-primer hybridization.  Hairpins are an example of
+intraprimer hybridization.  Another example is when reverse and
+forward primers bind to each other.   
+</li>
+
+<li>Melting temperatures of the primers should be close.  Primers
+should be hybridized under fairly stringent conditions at
+(T<sub>m</sub> - 10&#176;C) <= T <= (T<sub>m</sub> - 5&#176;C).  Too
+low a temperature may cause mishybridization.
+</li>
+
+<li>Some mismatch of the primer and template can be tolerated but not
+at the 3' end.  The 3' end is where synthesis and elongation start, so
+if it is dangling, these processes will fail.
+</li>
+
+</ol>
+
+<p>Forensic investigations use standard primers that hybridize to
+highly conserved DNA regions but which, taken as a pair, span highly
+variable regions.  Some primer and software vendors: Molecular Biology
+Insights (including the Oligo program), DNAsis, LaserGene, IDT
+(Smith's provider) and the Primer3 program from MIT.
+</p>
+
+<h3>How to Confirm the Identity of PCR Products</h3>
+
+<ol>
+
+<li>A band on a gel at the right mass is an indication of the right
+product.  For a routine process using a gel to check the mass is
+adequate.  For a new PCR process with new primers, more verification
+is called for.
+</li>
+
+<li>Use an internal hybridization probe.</li>
+
+<p>Design a 3rd nucleotide that hybridizes to the known sequence of
+the expected PCR product.    Often this test is performed using a
+Southern blot: running a DNA gel, then transferring DNA to a membrane
+where hybridization with the probe is checked.
+</p>
+
+<p align="center">
+<img src="southern.png">
+</p>
+
+<p>The buffer goes up the wick, through the gel, through the membrane
+and into the paper.  DNA follows the buffer through the gel and onto
+the membrane, which it can't permeate.  In so doing it moves purely
+vertically and stays registered with its position in the gel.  The DNA
+transfer is always performed with the gel upside-down as the top
+surface is too wavy to make good contact to the membrane.
+</p>
+
+<p>The DNA on the membrane can be UV-crosslinked on for attachment and
+then hybridized with a probe.  The probe can be labeled with
+fluorescein or biotin.  Any DNA in marker lanes will also be
+transferred to the membrane and will serve as a negative control for
+the hybridization.  Oligos can be ordered with attached probes for
+added convenience.  Any ethidium bromide left in the gel doesn't
+interfere with the hybridization.  Hybridization of a probe to a
+Southern membrane should used high stringency since the method is
+intended to be a strict confirmation of earlier results.
+</p>
+
+<li>Perform a second PCR reaction with different primers from the
+first one.  A second PCR reaction is a better test than Southern blot
+as it requires the matching of two new oligos.  This method is known
+as "nested" PCR.
+</li>
+
+<li>Perform a restriction enzyme digest.  If the PCR product is the
+desired one, the products on the gel should appear at predictable
+masses.  The restriction enzyme method used to be known as the "DNA
+fingerprint" although it has nothing to do with the forensic method
+now known by that name.
+</li>
+
+<li>Sequence the DNA of the PCR product.  Sequencing is now the method
+of choice now that it's easy and cheap.
+</li>
+
+</ol>
+
+<a href="index.html">Up</a>
+<a href="day4pm.html">Previous</a>
+<a href="day6am.html">Next</a>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\center
+\beginpicture
+\setcoordinatesystem units <50mm,20mm>
+\setplotarea x from 0 to 2, y from 0 to 5
+\linethickness=1pt
+\setdashes
+\putrule from 0.25 0 to 0.25 2.7
+\putrule from 0.25 3.3 to 0.25 5
+\putrule from 0.6667 0 to 0.6667 2.5
+\putrule from 0.6667 3.5 to 0.6667 5
+\putrule from 0.8 0 to 0.8 0.25
+\putrule from 0.8 0.7 to 0.8 0.95
+\putrule from 0.8 1.7 to 0.8 2.5 
+\putrule from 0.8 3.5 to 0.8 5
+\setsolid
+\axis bottom label {Bi/Cs ratio of starting alloy} ticks 
+	numbered from 0 to 2 by 0.5
+	in unlabeled short quantity 9 /
+\axis left label {\lines {$\rm T_c$ (K)}} ticks
+	numbered from 0 to 5 by 1
+	in unlabeled short quantity 11 /
+\axis right ticks
+	in unlabeled long quantity 6 
+	in unlabeled short quantity 11 /
+\axis top ticks
+	in unlabeled long quantity 5 
+	in unlabeled short quantity 9 /
+\multiput {$\bigotimes$} at 0.8 0.5  0.8 1.2 / %mit.plot
+\multiput {$\bigtriangleup$} at  0.8 1.5  1.0 1.5 / %yang.plot
+\multiput {$\bigcirc$} at 0.563 0.05 %stang.plot
+1.0 4.55 
+1.0 4.69 
+1.08 4.69 
+1.08 4.69 
+1.08 0.05 
+1.56 4.73 
+1.56 4.71
+1.56 0.05 
+1.56 4.72 /
+\multiput {X} at 0.8 0  2.0 4.72 / %alloy data
+\multiput {$\downarrow$} [t] at 0.8 0.5  0.8 1.2 0.563 0.05  0.8 1.5  1.0 1.5
+1.08 0.05 1.56 0.05 /
+\begin{small}
+\put {\lines {\underline{Cs$_3$Bi}\cr \underline{+ Cs}\cr}} at 0.15 3
+\put {\lines {\underline{Cs$_3$Bi}\cr \underline{+ Cs$_3$Bi$_2$}\cr}} at 0.45 3
+\put {\lines {\underline{Cs$_3$Bi$_2$}\cr +\cr \underline{Cs$_5$Bi$_4$}\cr}} at 0.75 3
+\put {\lines {\underline{Cs$_5$Bi$_4$}\cr \underline{+ CsBi$_2$}\cr}} at 1.3 3
+\end{small}
+\endpicture
+\caption[Dependence of $\rm T_c$ on intercalant composition for MBi-GIC's ]{A plot of superconducting transition temperature $\rm T_c$ for
+$\rm C_{4n}CsBi_{x}$ versus  starting alloy Bi/Cs ratio.  $\bigotimes$, MIT
+data from  Ref.~\cite{E291}; $\bigtriangleup$, University  of Kentucky data
+from Ref.~\cite{yang88}; and  $\bigcirc$, Freie  Universit\"at Berlin  data
+from Ref.~\cite{stang88}.   The X are  alloy (not GIC) data from the
+CRC  Handbook.  The  presence  of  $\downarrow$  means that the   nearest point
+represents an upper bound on $\rm T_c$.   Data from the University of Nancy
+is not  included because precise starting  alloy compositions are not given
+for their samples.}
+\label{csbi:alloytc}
+\end{figure}
+\end{document}

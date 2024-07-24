@@ -1,0 +1,33 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{bothfactors}
+\beginpicture
+\setcoordinatesystem units <0.3333mm,0.2285mm>
+\setplotarea x from 0 to 300, y from 0 to 350
+\axis bottom label {$\theta$} ticks 
+	numbered from 0 to 300 by 30
+	unlabeled short quantity 31 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+	numbered from 0 to 350 by 50
+	unlabeled short quantity 8 /
+\put {$\rm H \perp \hat{c}$} at 90 50
+%\multiput {$\bullet$} at "/users/alison/angdata/stI/8b/medt/tilt/tiltfit.6"
+\multiput {$\bullet$} at "tiltfit.6"
+%\multiput {$\bigcirc$} at "/users/alison/angdata/stI/8b/medt/tilt/medtang.shift"
+\multiput {$\circ$} at "medtang.shift"
+\endpicture
+%\caption[Best $\rm H_{c2}(\theta)$ fit obtainable using both sample tilt
+%and mosaic spread as parameters.]{A  $\rm H_{c2}(\theta)$ fit obtained
+%using both sample tilt and mosaic spread as  parameters.  The data is for a
+%$\rm T_c$ = 1.54  K sample at T/$\rm  T_c$ = 0.57.   The was produced using
+%the composition of Equations~\ref{mostheta}   and ~\ref{tilthc2}   and  the
+%following parameters: $\rm H_{c2,\parallel \hat{c}}$ = 33 gauss; anisotropy
+%= 1/$\epsilon$ = 12; tilt angle  $\phi$ = 0;  and  mosaic spread HWHM angle
+%$\delta$ = 10$^{\circ}$.}
+\end{figure}
+\end{document}

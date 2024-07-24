@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- For use by book.xsd -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Photo">
+    <xs:complexType>
+      <xs:annotation>
+	<xs:documentation> Use ASIN/ISBN for ID
+	</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="ID" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

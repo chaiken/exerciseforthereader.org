@@ -1,0 +1,33 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{mospread}
+\beginpicture
+\setcoordinatesystem units <0.8333mm,0.1143mm>
+\setplotarea x from 0 to 120, y from 0 to 700
+\axis bottom label {$\theta$} ticks 
+	numbered from 0 to 120 by 15
+	unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+	numbered from 0 to 700 by 100
+	unlabeled short quantity 15 /
+\put {$\rm H \perp \hat{c}$} at 90 50
+%\multiput {$\circ$} at "/users/alison/angdata/stI/8b/lowt/smeared/smeared.0deg"
+\multiput {$\circ$} at "smeared.0deg"
+%\multiput {$\bullet$} at  "/users/alison/angdata/stI/8b/lowt/smeared/smeared.3deg"
+\multiput {$\bullet$} at  "smeared.3deg"
+%\multiput {$\diamond$} at "/users/alison/angdata/stI/8b/lowt/smeared/smeared.10deg"
+\multiput {$\diamond$} at "smeared.10deg"
+\endpicture
+%\caption[Effect of mosaic spread on $\rm H_{c2}(\theta)$.]{The effect of
+%mosaic    spread       on     $\rm  H_{c2}(\theta)$,     calculated   using
+%Equation~\ref{mostheta}.   The    same    parameters were   used    as   in
+%Figure~\ref{tilteffect}, except  that here the mosaic  spread, $\delta$, is
+%non-zero: $\circ$  $\delta$ =  0$^{\circ}$; $\bullet$  $\delta$ =
+%3$^{\circ}$; $\diamond$ $\delta$ = 10$^{\circ}$.}
+\end{figure}
+\end{document}

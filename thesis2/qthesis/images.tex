@@ -1,0 +1,2078 @@
+\batchmode
+\documentstyle[12pt]{report}
+\makeatletter
+%
+
+
+\input{chap2/tmdc}
+
+
+\makeatother
+\newenvironment{tex2html_wrap}{}{}
+\newwrite\lthtmlwrite
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newbox\sizebox
+\begin{document}
+\pagestyle{empty}
+\stepcounter{chapter}
+\setcounter{chapter}{1}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{15cm}
+
+\label{c8kstruct}
+\end{figure}
+}
+
+\setcounter{chapter}{1}
+\stepcounter{chapter}
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{equation}\rm   H_{c2} \;  =   \;  \Phi_0/   2\pi \xi^2 \; ,
+\label{xi_def}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 127
+\rm H_{c2}(\theta) \; = \; \frac{H_{c2}(0^{\circ})}{\sqrt{\cos^2\theta \,
++ \, \epsilon^2 \sin^2\theta}} \; .
+\label{ldtheor1}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm \epsilon \; \equiv \; H_{c2,\parallel \hat{c}}/ H_{c2,\perp \hat{c}} \; \; .
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 154
+\label{tinkham1}
+\rm \left| \frac{H_{c2}(\theta) \: sin(\theta)}{H_{c2}(90^{\circ})} \right| \; + \;
+\left( \frac{H_{c2}(\theta) \: cos(\theta)}{H_{c2}(0^{\circ})} \right)^2 \;
+= \; 1 \; .
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\label{klbparam1}
+r \equiv \frac{16}{\pi} \left( \frac{\xi_{\parallel \hat{c}}(0)}{s}
+\right)^2
+\end{equation}
+}
+
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{table}% latex2html id marker 201
+\vspace{18cm}
+\caption[Properties of some of the artificially structured superlattices.]
+{Properties of some of the artificially structured superlattices.  Adapted
+from Ref.\cite{ruggiero85}, where references are given.}
+\label{summtable}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{12cm}
+
+\label{nbgetemp}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{12cm}
+
+\label{assltemp}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{15cm}
+
+\label{assltheta}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{15cm}
+
+\label{assltc}
+\end{figure}
+}
+
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{12cm}
+
+\label{hitctheta}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}\begin{center}
+
+\label{hitctable}
+\begin{tabular}{|ccccc|}
+\hline
+& & & & \\ 
+Compound& $\rm T_c$ (K)& 1/$\epsilon$ & $\xi(0)$ (\AA)& Ref. \\ 
+& & & & \\ 
+\hline
+%
+La$_{2-x}$Sr$_x$CuO$_{4-y}$ & 38.1 & NR & 13 & \cite{orlando87b}\\ 
+La$_{1.92}$Sr$_{0.08}$CuO$_{4-y}$$^{\dagger}$ & 20  & 5 & 37($\rm \perp \hat{c}$); 7($\rm \parallel \hat{c}$) & \cite{iye88}\\ 
+La$_{2-x}$Sr$_x$CuO$_{4-y}$ & $\approx$30 & 13 & NR  & \cite{uchida87}\\ 
+La$_{2-x}$Sr$_x$CuO$_{4-y}$ & 36 & 4-5 & 26.6 & \cite{vanbentum87}\\ 
+YBa$_2$Cu$_3$O$_{(7-y)}$ & 81-90 & 20 & NR & \cite{mcguire87}\\ 
+YBa$_2$Cu$_3$O$_{(7-y)}$ & 91.4 & $<$12 & 14.1 & \cite{orlando87}\\ 
+YBa$_2$Cu$_3$O$_{(7-y)}$ & $\approx$90 & NR & 15.2 & \cite{rettori87}\\ 
+YBa$_2$Cu$_3$O$_{(7-y)}$ & 89.5 & NR & 17 & \cite{orlando87a}\\ 
+YBa$_2$Cu$_3$O$_{(7-y)}$$^{\dagger}$ & 88.8 &10  & NR & \cite{dinger87}\\ 
+YBa$_2$Cu$_3$O$_{(7-y)}$ & 92 & 4-5 & 12.6 & \cite{vanbentum87}\\ 
+YBa$_2$Cu$_3$O$_{(7-y)}$$^{\dagger}$ & 88.8 & 4.8 &34 ($\rm \perp \hat{c}$); 7 ($\rm \parallel \hat{c}$)  & \cite{worthington87}\\  
+YBa$_2$Cu$_3$O$_{(7-y)}$ & 93 & 25-50 & NR & \cite{welch87}\\ 
+YBa$_2$Cu$_3$O$_{(7-y)}$$^{\dagger}$ & 89.7 & 3.6 & 23 ($\rm \perp \hat{c}$); 6.3 ($\rm \parallel \hat{c}$)  & \cite{moodera88}\\  
+YBa$_2$Cu$_3$O$_{(7-y)}$$^{\dagger}$ & 91 & 2 (90 K); 5 (86.5 K) & 33.9 ($\rm \perp \hat{c}$); 10 ($\rm \parallel \hat{c}$)  & \cite{iye87}\\  
+YBa$_2$Cu$_3$O$_{(7-y)}$$^{\dagger}$ & 94 & 6 & 22 ($\rm \perp \hat{c}$); 6 ($\rm \parallel \hat{c}$)  & \cite{sakakibara87}\\  
+HoBa$_2$Cu$_3$O$_{(7-y)}$$^{\dagger}$ & 88.1 & 3-7 & 22-24 ($\rm \perp \hat{c}$); 6-7 ($\rm \parallel \hat{c}$)  & \cite{iye87a}\\  
+Bi$_2$Sr$_2$CaCu$_2$O$_{(8+x)}$$^{\dagger}$ & 80 & 6 &30-40 ($\rm \perp \hat{c}$); 1-3 ($\rm \parallel \hat{c}$)  & \cite{iye88}\\  
+%
+TmBa$_2$Cu$_3$O$_{(7-y)}$$^{\dagger}$ & 86 & 8 &NR & \cite{noel87}\\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+\stepcounter{section}
+\setcounter{chapter}{2}
+\stepcounter{chapter}
+\stepcounter{section}
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{8in}
+
+\label{phasediag}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{7in}
+
+\label{alloychoice}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}
+\label{stiitc}
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+& & \\ 
+$\rm T_c$ (K) & Method of Preparation & Ref.\\ 
+& & \\ 
+\hline
+& & \\ 
+1.70 & KHg$_2$  & \cite{koike81}\\ 
+& & \\ 
+1.82&  sequential  & \cite{iye83}\\ 
+& & \\ 
+1.84 & sequential  & \cite{iye83}\\ 
+& & \\ 
+1.848 & KHg$_2$ & \cite{delong82a} \\ 
+& & \\ 
+1.870 & sequential & \cite{delong82a} \\ 
+& & \\ 
+1.896 & KHg$_2$ & present work \\ 
+& & \\ 
+1.90 & KHg$_2$  & \cite{koike81}\\  
+& & \\ 
+1.90 & sequential   & \cite{vogel81}\\ 
+& & \\ 
+1.90 & sequential  & \cite{pendrys81} \\ 
+& & \\ 
+1.90 & KHg$_2$  & \cite{tanuma81} \\ 
+& & \\ 
+1.93 & sequential  & \cite{alexander81} \\ 
+& & \\ 
+1.94 & KHg$_2$  & \cite{tanuma81} \\ 
+& & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}
+\label{stitc}
+\begin{center}
+\begin{tabular}{||c|c|c|c|c|c||}
+\hline
+& & & & & \\ 
+$\rm T_c$ (K) & T$\rm _{prep}$ & $\Delta$T & Time & Color & Ref.\\ 
+& & & & & \\ 
+\hline
+& & & & & \\ 
+$<$1.5 & 200$^{\circ}$C  & 0?  & one week & copper & \cite{koike81}\\ 
+$<$0.8 & 200$^{\circ}$C  & 0? & ?  &  copper & \cite{alexander81}\\ 
+0.719$^{\dagger}$ & 200$^{\circ}$C  & 0 & two weeks & gold& present work\\ 	%
+0.72 & 200$^{\circ}$C & 0? & several days & copper-pink & \cite{iye82}\\ 
+0.726 & 200$^{\circ}$  & 6$^{\circ}$ & two weeks &gold & present work\\    %
+0.73 & 200$^{\circ}$C & 0? & several days & copper-pink & \cite{iye82}\\ 
+0.822$^{\dagger}$ & 200$^{\circ}$C & 0 & two weeks & gold & present work\\ 	%
+0.86 & 200$^{\circ}$C & 0?  & several days & copper-pink & \cite{iye82}\\ 
+0.875$^{\dagger}$ & 200$^{\circ}$C  & 10$^{\circ}$C  & two weeks & gold & present work \\ 	%
+0.949$^{\dagger}$ & 200$^{\circ}$C  & 6$^{\circ}$C  & two weeks & gold & present work \\  %
+1.09 & 200$^{\circ}$C & 10$^{\circ}$C & ? & gold & \cite{J140}\\ 
+1.198 &234$^{\circ}$C   & 0$^{\circ}$C  & two weeks & copper & present work\\ 	%
+1.317$^{\dagger}$ &260$^{\circ}$C  & 0$^{\circ}$C   & two weeks& copper & present work\\ 	%
+1.36$^{\dagger}$ & 200$^{\circ}$C$^{\ddagger}$ & 0$^{\circ}$C ? & two weeks
+& ? & \cite{delong82} \\ 
+1.459 &200$^{\circ}$C & 0$^{\circ}$C & two weeks &pink & From Timp. \\ 	%
+1.46$^{\dagger}$ & 200 $^{\circ}$C & 0$^{\circ}$C  & two weeks  & yellow/pink & present work \\ 	%
+1.472$^{\dagger}$ &260$^{\circ}$C & 0$^{\circ}$C  & two weeks & copper & present work\\ 	%
+1.508$^{\dagger}$ & 200$^{\circ}$C  & 0$^{\circ}$C  & two weeks & yellow/pink & present work \\    %
+1.526 & 200$^{\circ}$C  & 0$^{\circ}$ & two weeks & pink & present work\\ 	%
+1.528 & 200$^{\circ}$C  & 0$^{\circ}$C  & three weeks & pink & present work \\ 	%
+1.536 & 200$^{\circ}$C & 0$^{\circ}$C  & three weeks & pink & present work \\ 	%
+1.539 & 200$^{\circ}$C  & 0$^{\circ}$C  & three weeks & pink  & present work  \\ 	%
+1.56 & 200$^{\circ}$C & 0$^{\circ}$C  & 14 days & pink & \cite{J140,timp83}\\ 
+1.65 & 200$^{\circ}$C  & 5$^{\circ}$C & 14 days & red & \cite{J140,timp83}\\ 
+& & & & & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{20cm}
+
+\label{stixr}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{20cm}
+
+\label{hydxrd}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{19cm}
+
+\label{csbixray}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{7.5in}
+
+\label{ramfig}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{20cm}
+
+\label{14cneut}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{20cm}
+
+\label{6bneut}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 816
+\label{stfact}
+\rm F^{cal}_{(00\ell)} \; = \; \sum_i A_i N_i \exp{ \left[ -B_i \left( \sin \theta_{\ell}/ \lambda \right)^2 \right]} \: \cos \left( \frac{2 \pi z_i \ell}{I_c} \right)
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{12cm}
+%
+
+\label{zeedef}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\label{hamilton}
+ \cal R \rm \; \equiv \; \left[  \frac{\sum_{\ell} w_{\ell} \left( F_{\ell}^{exp} \: - \: |F_{\ell}^{calc}| \right)^2}{\sum_{\ell} w_{\ell} \left(F_{\ell}^{exp} \right)^2} \right]^{1/2}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}
+\label{neutnum}
+\begin{center}
+\begin{tabular}{|ccccc|}
+\hline
+& & & & \\ 
+Type & $\rm I_c$ (\AA) & $\rm N_{Hg}$  & $\rm z_K$ (\AA) & $\Delta$z (\AA) \\ 
+& & & & \\ 
+\hline
+& & & & \\ 
+gold, majority  & 10.24 & 1.09 & 1.997 & 0.184 \\ 
+& & & & \\ 
+pink, majority  & 10.24 & 0.96 & 2.287 & 0.0 \\ 
+& & & & \\ 
+hydrogenated, majority  & 10.24 & 1.3 & 2.4 & 0.24 \\  
+& & & & \\ 
+majority\cite{yang84} & 10.24 & 1.0 & 2.1 & 0.0 \\ 
+& & & & \\ 
+minority\cite{yang84} & 10.83 & 1.3 & 2.8 & 0.0 \\ 
+& & & & \\ 
+majority\cite{elmakrini80} & 10.16 & 1.0 & 2.34 & 0.25 \\ 
+& & & & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\label{denscalc}
+\rm \rho(z) \; = \; \sum_l \: F^{exp}_{(00\ell)} \: \cos \left( \frac{2\pi
+\ell z}{I_c} \right)
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{19cm}
+
+\label{rhofig}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{table}
+\label{stoichtab}
+\begin{center}
+\begin{tabular}{|c|ccccc|}
+\hline
+& & & & \\ 
+Compound & C/K ratio & Hg/K ratio & Experiment & Ref.\\ 
+& & & & \\ 
+\hline
+& & & & \\ 
+gold  & ND & $(1.09 \pm 0.07)$ & diffraction  & this work\\ 
+& & & & \\ 
+pink  & ND & $(0.96 \pm 0.03)$ &  diffraction  & this work \\ 
+& & & & \\ 
+majority  & NR & 1.0 & diffraction  & \cite{yang84}\\ 
+& & & & \\ 
+minority  & NR & 1.3 &  diffraction  & \cite{yang84} \\ 
+& & & & \\ 
+majority  & 1.0 & 1.0 &  diffraction  & \cite{elmakrini80}\\ 
+& & & & \\ 
+majority  & ($3.0 \pm 1.5$) & ($0.77 \pm 0.08$) & RBS &  \cite{S175}\\ 
+& & & & \\ 
+$\rm T_c$ = 0.73 K  & 4.74 & 1.2 & chem. anal. & this work \\ 
+& & & & \\ 
+$\rm T_c$ = 1.3 K   & 3.33 & 0.8 & chem. anal. & this work\\ 
+& & & & \\ 
+$\rm T_c$ = 1.54  & 4.3 & 1.05 & chem. anal. & this work \\ 
+& & & & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{12cm}
+
+\label{tcdef}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}
+\label{tcfreq}
+\begin{center}
+\begin{tabular}{|ccc|}
+\hline
+& & \\ 
+$\rm T_c$ (K) & $\rm \Delta T_c/ T_c$ & color \\ 
+& & \\ 
+\hline
+& & \\ 
+0.719 & 0.20 & gold \\ 	%
+& & \\ 
+0.726 & 0.20 & gold \\   %
+& & \\ 
+0.822 & 0.17 & gold \\ 	%
+& & \\ 
+0.875 & 0.073 & gold \\  %
+& & \\ 
+0.949 & 0.20   & gold \\   %
+& & \\ 
+1.198 & 0.21 & copper \\ 	%
+& & \\ 
+1.317 & 0.138  & pink \\ 	%
+& & \\ 
+1.443 & 0.075  & pink; from Timp \\  %
+& & \\ 
+1.46 & 0.096 & pink \\ 	%
+& & \\ 
+1.472 & 0.03 & pink \\ 	%
+& & \\ 
+1.508 & 0.1 & pink \\   %
+& & \\ 
+1.526 & 0.042 & pink \\ 	%
+& & \\ 
+1.528 & 0.047 & pink \\ 	%
+& & \\ 
+1.536 & 0.04 & pink \\ 	%
+& & \\ 
+1.539 & 0.02 & pink \\ 	%
+& & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+\stepcounter{section}
+\setcounter{chapter}{3}
+\stepcounter{chapter}
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{14cm}
+%
+
+
+
+
+
+
+
+
+
+\label{fig:meiss}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\rm H_{c2}\; = \; \frac{\Phi_0}{2\pi \xi^2} \; ,
+\label{cohlen}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\begin{array}{ll}
+\lambda \, < \, \xi, & \rm type \;  I \\ 
+\lambda \, > \, \xi, & \rm type \; II
+   \end{array} \; .
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\begin{array}{ll}
+\ell \, \gg \, \xi, & \rm clean \; limit \\ 
+\ell \, \ll \, \xi, & \rm dirty \; limit 
+   \end{array} \; .
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\begin{array}{ll}
+\xi \; > \; s, & \rm 3D \; coupling\\ 
+\xi \; < \; s, & \rm 2D \; coupling
+   \end{array}
+\end{displaymath}
+}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{5in}
+
+\label{fig:holder}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\setlength{\unitlength}{0.0125in}
+\begin{picture}(520,455)(120,330)
+\thicklines
+\put( 20,580){\circle{0}}
+\put( 40,680){\circle{14}}
+\put( 38,360){\circle{14}}
+\put(460,640){\circle{14}}
+\put(460,400){\circle{14}}
+\put(160,642){\circle{6}}
+\put(160,642){\circle{16}}
+\put(162,482){\circle{16}}
+\put(317,642){\circle{16}}
+\put(320,482){\circle{16}}
+\put(320,482){\circle{6}}
+\put(510,400){\vector( 0,-1){ 60}}
+\put(510,640){\vector( 0, 1){ 60}}
+\put(180,750){\vector(-1, 0){  0}}
+\put(180,750){\vector( 1, 0){120}}
+\put(480,340){\line( 1, 0){ 60}}
+\put(480,700){\line( 1, 0){ 60}}
+\put(300,780){\line( 0,-1){ 60}}
+\put(180,780){\line( 0,-1){ 60}}
+\put(140,540){\framebox(200,120){}}
+\put(140,380){\framebox(200,120){}}
+\put(180,340){\framebox(120,360){}}
+\put(340,560){\line( 1, 0){ 40}}
+\put(380,560){\line( 0,-1){ 80}}
+\put(380,480){\line(-1, 0){ 40}}
+\put(340,480){\line( 0, 1){  1}}
+\put(340,400){\line( 1, 0){120}}
+\put(340,640){\line( 1, 0){120}}
+\put(180,680){\line(-1, 0){140}}
+\put(180,360){\line(-1, 0){140}}
+\put(156,488){\line( 1,-1){ 12}}
+\put(168,488){\line(-1,-1){ 12}}
+\put(323,648){\line(-1,-1){ 12}}
+\put(311,648){\line( 1,-1){ 12}}
+\put (500,600) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm 30 mm}}}
+\put (25,545) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Primary }}}
+\put (30,520) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Coil}}}
+\put (440,545) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Secondary }}}
+\put (450,520) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Coil}}}
+\put (220,765) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm 4.0 mm}}}
+\put (205,725) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm inner diameter}}}
+\end{picture}
+
+\label{ibridge}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\setlength{\unitlength}{0.0125in}
+\begin{picture}(535,415)(125,310)
+\thicklines
+\put(520,642){\oval(30,30)}
+\put( 40,640){\oval(30,30)}
+\put(200,480){\line( 0, 1){200}}
+\put(200,680){\line(-1, 0){ 80}}
+\put(175,480){\line( 1, 0){ 25}}
+\put(120,480){\line( 1, 0){ 25}}
+\put(120,600){\line( 0,-1){120}}
+\put(465,665){\framebox(30,30){}}
+\put(145,465){\framebox(30,30){}}
+\put(520,600){\line( 0,-1){105}}
+\put(520,495){\line(-1, 0){ 40}}
+\put(120,625){\line( 0,-1){ 25}}
+\put(120,600){\line(-1, 0){ 80}}
+\put( 40,600){\line( 0, 1){ 25}}
+\put( 40,655){\line( 0, 1){ 25}}
+\put( 40,680){\line( 1, 0){ 80}}
+\put(120,680){\line( 0,-1){ 20}}
+\put(360,440){\line( 0,-1){ 40}}
+\put(380,440){\line( 0,-1){ 40}}
+\put(320,320){\framebox(160,80){}}
+\put(360,670){\line( 0, 1){ 10}}
+\put(360,680){\line(-1, 0){ 20}}
+\put(340,680){\line( 0,-1){160}}
+\put(360,610){\line( 0,-1){ 90}}
+\put(360,650){\line( 0,-1){ 20}}
+\put(480,465){\line( 1, 0){ 80}}
+\put(560,465){\line( 0, 1){215}}
+\put(560,680){\line(-1, 0){ 40}}
+\put(520,625){\line( 0,-1){ 25}}
+\put(520,600){\line(-1, 0){120}}
+\put(400,600){\line( 0, 1){ 10}}
+\put(495,680){\line( 1, 0){ 25}}
+\put(520,680){\line( 0,-1){ 20}}
+\put(400,670){\line( 0, 1){ 10}}
+\put(400,680){\line( 1, 0){ 65}}
+\put(320,440){\framebox(160,80){}}
+\put(115,625){\framebox(10,35){}}
+\put( 80,560){\dashbox{4}(360,160){}}
+\put(385,680){\line( 0,-1){ 80}}
+\put(375,680){\line( 0,-1){ 80}}
+\put(395,610){\framebox(10,60){}}
+\put(355,610){\framebox(10,20){}}
+\put(355,650){\framebox(10,20){}}
+\put (460,705) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Ammeter}}}
+\put (135,450) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Voltmeter}}}
+\put (320,690) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Inductance Bridge}}}
+\put (135,640) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Ge Thermometer}}}
+\put (345,480) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Lock In Amplifier}}}
+\put (340,445) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Output}}}
+\put (340,360) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Flatbed Plormer}}}
+\put (490,480) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Reference}}}
+\put (335,510) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Signal Input}}}
+\put (475,675) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm A}}}
+\put (510,635) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Osc.}}}
+\put (35,640) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm I}}}
+\put (175,700) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twlrm Cryostat}}}
+\end{picture}
+
+
+\label{schematic}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 1238
+\rm V_{secondary} \; = \; -\frac{\alpha A B_{mod} \omega_{mod}}{c}
+\label{vbridge}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\setlength{\unitlength}{0.0125in}
+\begin{picture}(325,395)(169,350)
+\thicklines
+\put(340,662){\circle{16}}
+\put(340,662){\circle{6}}
+\put(340,622){\circle{6}}
+\put(340,622){\circle{16}}
+\put(340,582){\circle{16}}
+\put(340,582){\circle{6}}
+\put(340,542){\circle{6}}
+\put(340,542){\circle{16}}
+\put(340,502){\circle{16}}
+\put(340,502){\circle{6}}
+\put(340,462){\circle{6}}
+\put(340,462){\circle{16}}
+\put(340,422){\circle{16}}
+\put(340,422){\circle{6}}
+\put(177,662){\circle{16}}
+\put(171,668){\line( 1,-1){ 12}}
+\put(183,668){\line(-1,-1){ 12}}
+\put(177,622){\circle{16}}
+\put(183,628){\line(-1,-1){ 12}}
+\put(171,628){\line( 1,-1){ 12}}
+\put(177,582){\circle{16}}
+\put(171,588){\line( 1,-1){ 12}}
+\put(183,588){\line(-1,-1){ 12}}
+\put(177,542){\circle{16}}
+\put(183,548){\line(-1,-1){ 12}}
+\put(171,548){\line( 1,-1){ 12}}
+\put(177,502){\circle{16}}
+\put(171,508){\line( 1,-1){ 12}}
+\put(183,508){\line(-1,-1){ 12}}
+\put(177,462){\circle{16}}
+\put(183,468){\line(-1,-1){ 12}}
+\put(171,468){\line( 1,-1){ 12}}
+\put(177,422){\circle{16}}
+\put(171,428){\line( 1,-1){ 12}}
+\put(183,428){\line(-1,-1){ 12}}
+\put(177,382){\circle{16}}
+\put(183,388){\line(-1,-1){ 12}}
+\put(171,388){\line( 1,-1){ 12}}
+\put(340,382){\circle{6}}
+\put(340,382){\circle{16}}
+\multiput(260,680)(0.00000,8.00000){8}{\line( 0, 1){  4.000}}
+\put(260,740){\vector( 0, 1){0}}
+\multiput(360,520)(8.00000,0.00000){8}{\line( 1, 0){  4.000}}
+\put(420,520){\vector( 1, 0){0}}
+\multiput(280,400)(8.20513,0.00000){20}{\line( 1, 0){  4.103}}
+\multiput(280,640)(8.20513,0.00000){20}{\line( 1, 0){  4.103}}
+\put(240,400){\framebox(40,240){}}
+\put(320,680){\line( 0,-1){320}}
+\put(200,680){\line( 0,-1){320}}
+\put (280,720) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twltt $\rm H_{mod}$}}}
+\put (440,510) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twltt c-axis}}}
+\put (440,535) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twltt Graphite }}}
+\put (450,400) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twltt z = 0}}}
+\put (450,640) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twltt z = L}}}
+\end{picture}
+
+\label{scingfract}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}% latex2html id marker 1390
+\setlength{\unitlength}{0.0125in}
+\begin{picture}(324,335)(160,350)
+\thicklines
+\put(260,540){\vector( 1,-2){ 80}}
+\put(260,540){\vector( 1, 0){155}}
+\put(320,680){\line( 0,-1){220}}
+\put(320,460){\line(-6,-5){120}}
+\put(160,600){\line( 3, 2){120}}
+\put(280,680){\line( 1, 0){ 40}}
+\put(320,680){\line(-3,-2){120}}
+\put(200,600){\line( 1, 0){  1}}
+\put(160,360){\framebox(40,240){}}
+\put (430,540) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twltt $\hat{c}$}}}
+\put (370,460) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twltt $\theta$}}}
+\put (360,380) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twltt $\vec{H}$}}}
+\put (345,645) {\makebox(0,0) [lb] {\raisebox{0pt}[0pt][0pt]{\twltt Graphite Planes}}}
+\end{picture}
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\label{hc2def}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{8in}
+
+\label{transwidth}
+\end{figure}
+}
+
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{7.5in}
+
+\label{hc2theta}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 1662
+\rm H_{c2}(\theta) \; = \; \frac{H_{c2}(0^{\circ})}{\sqrt{\cos^2\theta \,
++ \, \epsilon^2 \sin^2\theta}}
+\label{ldtheor}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm \epsilon \; \equiv \; H_{c2,\parallel \hat{c}}/ H_{c2,\perp \hat{c}} \; \; .
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}{\cal R} \; = \; \sum_i \rm (H_i^{exp} \, - \, H_i^{theor})^2 /
+\left( \sigma_i^2 \nu \right)
+\label{residef}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}% latex2html id marker 7196
+\rm  \sigma_i  \; = \; 0.1  H_i^{\rm exp} \left(1.0 \, + \, \sin\theta
+\right) \; \; .
+\end{displaymath}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 1729
+\label{tilthc2}
+\rm H_{c2}^{eff}(\theta,\, \phi) \; = \; \frac{H_{c2, \parallel
+\hat{c}}/\sqrt{\cos^2\phi \: + \: \epsilon^2\sin^2\phi}}{\sqrt{\cos^2\theta
+\: + \: \epsilon^2\sin^2\theta / \sqrt{\cos^2\phi \: + \: \epsilon^2\sin^2\phi}}} \; .
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}%
+
+
+
+\vspace{6in}
+
+\label{misalign}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{4.5in}
+
+\label{tilteffect}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 1800
+\label{mostheta}
+\rm Corrected \; H_{c2}(\theta) \; = \; \frac{\sum_{i} \exp{[-(\theta \, -
+\, \theta_i)^2/(2 \delta^2)]} \: H_{c2}(\theta_i)}{\sum_{i} \exp{[-(\theta
+\, - \, \theta_i)^2/(2\delta^2)]}}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{4.5in}
+
+\label{mospread}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{4.5in}
+
+\label{ninety-tangent}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{10cm} %
+
+\label{Khc2theta}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\begin{array}{l}
+\rm \kappa \equiv \frac{\lambda}{\xi} \; \approx \; \kappa_1 \equiv
+\frac{H_{c2}}{\sqrt{2}H_{c}} \\ 
+\\ 
+\rm H_{c}(0) \; = \; \sqrt{2 \pi \gamma T_c^2}
+\end{array}
+\label{kappadef}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}
+\label{kappatable}
+\begin{center}
+\begin{tabular}{|l|ccccc|}
+\hline
+& & & & & \\ 
+Sample origin & $\rm T_c$ (K) & $\rm H_{c2,\perp\hat{c}}(0)$ (g) & $\rm H_{c2,\parallel\hat{c}}(0)$ (g) & $\rm \kappa_{\parallel\hat{c}}(0)$ & $\rm \kappa_{\perp\hat{c}}(0)$\\ 
+& & & & & \\ 
+\hline
+MIT & 1.53 & 749 & 89 & 0.56 & 4.7\\ 
+& & & & & \\ 
+MIT & 1.54 & 748 & 86 & 0.54 & 4.7\\ 
+& & & & & \\ 
+MIT & 0.95 & 407 & 46 & 0.70 & 5.6\\ 
+& & & & & \\ 
+Ref.~\cite{iye82} & 0.72 & 715 & 62.4 & 0.81 & 9.3\\ 
+& & & & & \\ 
+Ref.~\cite{iye82} & 0.86 & 654 & 49.2 & 0.64 & 8.5\\ 
+& & & & & \\ 
+Ref.~\cite{iye82} & 0.73 & 575 & 58.8 & 0.77 & 7.5\\ 
+& & & & & \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\kappa \, \propto \, \frac{1}{1 + t^2}
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{18cm}
+
+\label{TaN}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}%
+\vspace{7.5in}
+
+\label{thetatemp}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 1960
+\label{typeItheta}
+\rm H_{c2}^{eff}(\theta) \; = \; \left\{ \begin{array}{lll}
+				  \rm H_{c2}, & \rm H_{c2}(\theta) > H_c & {\rm
+(type \;  II \; region)} \\  
+\rm H_c, & \rm H_{c2}(\theta) < H_c & {\rm (type \; I \; region)}
+				  \end{array} \right.
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}%
+\vspace{7.5in}
+
+\label{hctemp}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}% latex2html id marker 2016
+
+\label{htherm_table}
+\begin{center}
+\begin{tabular}{|l|ccc|}
+\hline
+$\rm T_c$ (K) & $\rm H_c(t = 0.29)$ (g)& $\rm H_c(t = 0.55)$ (g)&  $\rm H_c(t =
+0.76)$ (g) \\ 
+\hline
+1.53 ($\rm H_{c2}(\theta)$) & 65 & Not measured & 24 \\ 
+1.54 ($\rm H_{c2}(\theta)$) & 65 & 41 & 24 \\ 
+1.53 ($\rm C_v$) & 104.5 & 79.6 & 43.8 \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{15cm}
+
+\label{transhape}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{5in}
+
+\label{hcfig}
+\end{figure}
+}
+
+\stepcounter{subsection}
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 2134
+\label{tinkham}
+\rm \left| \frac{H_{c2}(\theta) \: sin(\theta)}{H_{c2}(90^{\circ})} \right| \; + \;
+\left( \frac{H_{c2}(\theta) \: cos(\theta)}{H_{c2}(0^{\circ})} \right)^2 \;
+= \; 1 \; .
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}
+\label{residsum}
+\begin{center}
+\begin{tabular}{|l|cccccc|}
+\hline
+$\rm T_c$ & t$\rm \equiv T/T_c$ & Fit Type & $\cal R$ & $\rm H_{c2}(0^{\circ})$ (g)& 1/$\epsilon$ & $\rm H_c$ (g) \\ 
+\hline
+& & & & & & \\ 
+1.54 &  0.76 & AGL &1.43 & 23.1 & 4.5 & 0 \\  
+& & & & & & \\ 
+1.54 &  0.76 & AGL &1.11 & 14.5   & 12.5& 24.5 \\ 
+& & & & & & \\ 
+1.54 &  0.76 &  TF & 1.06 & 17.5   & 8.2 & 0 \\ 
+& & & & & & \\ 
+1.54 &  0.76 &  TF & 0.58 & 14.8   & 12& 24 \\ 
+& & & & & & \\ 
+\hline
+& & & & & & \\ 
+1.54 & 0.55 &AGL & 1.24 & 33 & 5.5 & 0 \\ 
+& & & & & & \\ 
+1.54 & 0.55 &AGL & 0.84 & 19 & 15.5  & 43 \\ 
+& & & & & & \\ 
+1.54 & 0.55 &TF  & 0.75 & 33 &  7  &  0 \\ 
+& & & & & & \\ 
+1.54 & 0.55 &TF  & 0.47 & 23 & 13  & 41 \\ 
+& & & & & & \\ 
+\hline
+& & & & & & \\ 
+1.54 & 0.29 &AGL & 1.18 & 47 & 9.5  & 0 \\ 
+& & & & & & \\ 
+1.54 & 0.29 &AGL & 0.39 & 35 & 14  & 65 \\ 
+& & & & & & \\ 
+1.54 & 0.29 &TF  & 0.83 & 50 & 9.5  & 0 \\ 
+& & & & & & \\ 
+1.54 & 0.29 &TF  & 0.26 & 35.8 & 16  & 65 \\ 
+& & & & & & \\ 
+\hline
+\hline
+& & & & & & \\ 
+0.95 & 0.45 & AGL& 0.24 & 24 & 10 & 0 \\ 
+& & & & & & \\ 
+\hline
+\hline
+& & & & & & \\ 
+0.73\cite{iye82} & 0.55 & AGL & 0.08 & 26 & 11.3 & 0 \\ 
+& & & & & & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{5in}
+
+\label{TINKvsAGL}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm H_{c2, \perp \hat{c}} \; = \; \frac{2 \sqrt{6} H_c \lambda_{\parallel \hat{c}}}{d}
+\end{displaymath}
+}
+
+\stepcounter{subsection}
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{15cm}
+
+\label{hc2temp}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\label{eqn:linear}
+\rm H_{c2}(t) \; = \; H_{c2}(0) \: (1 \, - \, t)
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm \sigma_i \; = \; H_{c2,i}^{exp} \; .
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\sigma^2 \; = \; \sum_i \rm (H_i^{exp} \, - \, H_i^{theor})^2 / \nu
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}
+\label{linearparams}
+\begin{center}
+\begin{tabular}{|c|ccccc|}
+\hline
+Exp. $\rm T_c$ (K) & $\perp$ or $\parallel$ & $\rm H_{c2}(0)$ (g) & Fit $\rm T_c$ (K) & $\rm \left| dH_{c2}/dT \right|$ (g/K) & {\cal R} $\times$ 100\\ 
+\hline
+& & & & & \\ 
+0.72\cite{iye82} & $\perp$ & 715 & NR & 993 &  NR \\ 
+                 & $\parallel$ & 62.4 & NR & 86.7 & NR\\ 
+& & & & & \\ 
+0.73\cite{iye82} & $\perp$ & 570 & 0.73 & 786 & 4.4 \\ 
+                 & $\parallel$ & 58.5 & 0.73& 80.3 & 0.01 \\ 
+& & & & & \\ 
+0.86\cite{iye82} & $\perp$ & 654 & NR & 760.5 & NR \\ 
+                 & $\parallel$ & 49.2 & NR & 57.2 & NR \\ 
+& & & & & \\ 
+0.95            & $\perp$ & 407 & 1.09 & 374 & 0.79 \\ 
+                 & $\parallel$ & 45.9 & 1.04 & 44.0 & 0.13 \\ 
+& & & & & \\ 
+1.53 &           $\perp$   & 749 & 1.53 & 488 & 7.88 \\ 
+                & $\parallel$ & 89.7 & 1.65 & 54.4 & 0.63 \\ 
+& & & & & \\ 
+1.54 &           $\perp$   & 748 & 1.52 & 493 & 0.69 \\ 
+                 & $\parallel$ & 85.8 & 1.62 & 53.0 & 0.16 \\ 
+& & & & & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{7.5in}
+
+\label{hparvst}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\rm \ln \: t \; = \; \psi\left(\frac{1}{2}\right) \; - \; \psi\left(
+\frac{1}{2} \; + \; \frac{D e H_{c2}}{2 \pi k_B T_c}  \right)
+\label{makidegennes}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm \psi (x) \; \equiv \; \frac{d}{dx} \ln \Gamma(x) \; .
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{16cm}
+
+\label{whhfit}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm H_{c2}(0) \: \approx \: 0.7 \left.  \frac{dH_{c2}}{dT} \right|_{T_c}  T_c
+\; .
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm h^* \; = \;  H_{c2}/ \left( \left. \frac{dH_{c2}}{dT}\right|_{T_c} T_c \right)
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{5.5in}
+
+\label{sumtemp}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm 1 / \epsilon \; = \; \left[ dH_{c2, \parallel \hat{c}}/dT \right] /
+\left[ dH_{c2, \perp \hat{c}}/dT  \right]
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}% latex2html id marker 2523
+
+\label{epstab}
+\begin{center}
+\begin{tabular}{|l|ccc|}
+\hline
+$\rm T_c$ & 1/$\epsilon$ from $\rm H_{c2}(T)$ & 1/$\epsilon$, AGL $\rm
+H_{c2}(\theta)$ & 1/$\epsilon$, TF $\rm H_{c2}(\theta)$  \\ 
+\hline
+& & & \\ 
+0.72\cite{iye82} & NR & 11.5 at t=0.55 & NR \\ 
+& & & \\ 
+0.73\cite{iye82} & 9.7 & 11.3 at t=0.55 & NA \\ 
+& & & \\ 
+0.86\cite{iye82} & NR & 10.4 at t=0.47 & NR \\ 
+& & & \\ 
+0.95 & 8.9 & 10.0 at t=0.46 & NA \\ 
+& & & \\ 
+1.53 & 8.4 & 13.5 at t=0.29 & 14.8 at t=0.29 \\ 
+& & 10.0 at t=0.76 & 7.7 at t= 0.76 \\ 
+& & & \\ 
+1.54 & 8.7 & 14.0 at t=0.29 & 16.0 at t=0.29\\ 
+& & 15.5 at t=0.55  & 13.0 at t=0.55\\ 
+& & 12.5 at t=0.76 & 12.0 at t=0.76\\ 
+& & & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{5in}
+
+\label{epstemp}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{5in}
+
+\label{stiiepstemp}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{5.5in}
+
+\label{rbhct}
+\end{figure}
+}
+
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 2664
+\label{deltaf}
+\rm \Delta F \;  =  \; \alpha \left| \psi \right|^2 \, + \,
+\frac{1}{2m^*}\left| \left( \frac{\hbar}{i}\vec{\nabla} \: - \:
+\frac{e^*}{c}\vec{A} \right) \right|^2 \, + \, \frac{H}{8\pi}^2
+\end{equation}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{6.5in}
+
+\label{klbfig} 
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\label{klbparam}
+\rm T^* \, > \, 0 \; when \; r \; \equiv \; \frac{16}{\pi} \left( \frac{\xi_{\parallel \hat{c}}(0)}{s}
+\right)^2  \; < \; \frac{\pi}{1.78} \; .
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \dag
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}
+\label{klbgics}
+\begin{center}
+\begin{tabular}{|c|ccccc|}
+\hline
+& & & & & \\ 
+Compound & $r$ & 1/$\epsilon$ & $\xi_{\parallel \hat{c}}(0)$ & $\rm I_c$ (\AA) & Ref.\\ 
+& & & & & \\ 
+\hline
+& & & & & \\ 
+$\rm C_8KHg$ & 64-76& 30-31& 52 & 13.6  & \cite{koike81,tanuma81} \\ 
+& & & & & \\ 
+$\rm C_8KHg$ & 91& 25& 57 & 13.56  & \cite{pendrys83} \\ 
+& & & & & \\ 
+$\rm C_8RbHg$ & 86-176& 20-41& 58-83 & 13.56  & \cite{iye82} \\ 
+& & & & & \\ 
+$\rm C_4KTl_{1.5}$ & 514& 5 &57 & 12.1 & \cite{pendrys83,vogel81} \\ 
+& & & & & \\ 
+$\rm C_4KHg$ & 2000& 6-16& 200-300 & 10.24  & this work \\ 
+& & & & & \\ 
+$\rm C_4KHg$ & 2000-2800$^{\dagger}$& 10-11& 200-240 & 10.24  & \cite{iye83} \\ 
+& & & & & \\ 
+$\rm C_4RbHg$ & 3000-4500$^{\dagger}$& 10& 261-320 & 10.76  & \cite{iye82} \\ 
+& & & & & \\ 
+$\rm C_8K$ & 6.7e5& 4.7-6.2 & 1500-2900& 5.4  & \cite{koike81,koike80} \\ 
+& & & & & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{5in}
+
+\label{proxeff}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 2819
+\label{alphadef}
+\begin{array}{l}
+\rm \alpha \; = \; 3e^2\hbar \gamma \rho_n/2 m \pi^2 k_B^2 \\ 
+\\ 
+\rm \alpha \; = \; 5.2758\times10^{-5} \left. \frac{dH_{c2}}{dT}
+\right|_{T_c} \; .
+\end{array}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}% latex2html id marker 2841
+\begin{center}
+\begin{tabular}{|c|cccc|}
+\hline
+& & & &  \\ 
+$\rm T_c$  & $\rm \alpha_{\parallel \hat{c}}$ (from $\rho$) & $\rm \alpha_{\parallel \hat{c}}$ (from slope) & $\rm \alpha_{\perp \hat{c}}$ (from $\rho$)
+& $\rm \alpha_{\perp}$ (from slope) \\ 
+& & & &  \\ 
+\hline
+& & & &  \\ 
+0.72\cite{iye82} & 1.48$\times 10^{-3}$ & 4.24$\times 10^{-3}$  & 2.48$\times 10^{-2}$ & 4.14$\times 10^{-2}$\\ 
+& & & &  \\ 
+0.95 & 1.48$\times 10^{-3}$ & 2.32$\times 10^{-3}$  & 2.48$\times 10^{-2}$ & 1.98$\times 10^{-2}$\\ 
+& & & &  \\ 
+1.53 & 1.48$\times 10^{-3}$ & 3.78$\times 10^{-3}$  & 2.48$\times 10^{-2}$ & 2.58$\times 10^{-2}$\\ 
+& & & &  \\ 
+1.54 & 1.48$\times 10^{-3}$ & 2.78$\times 10^{-3}$ & 2.48$\times 10^{-2}$ & 2.60$\times 10^{-2}$\\ 
+& & & &  \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\label{alphatable}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm T_c \; = \; \frac{\Theta_D}{1.45} \: \exp{-\left[ \frac{1.04 \left( 1
+\, + \, \lambda_{ep} \right)}{\lambda_{ep} \; - \; \mu^* \left(1 \; + \; 0.62\lambda_{ep} \right)}  \right]}
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\label{mcmillan}
+\rm \lambda_{ep} \; = \; \frac{1.04 \; + \; 0.1 \ln{\left( \Theta_D/1.45 T_c
+\right)}}{0.938 \ln{\left( \Theta_D/1.45 T_c \right)} - 1.04}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}
+\label{lambdatable}
+\begin{center}
+\begin{tabular}{|c|ccc|}
+\hline
+& & & \\ 
+Compound & $\rm T_c$ (K) & $\rm \Theta_D$ (K) & $\lambda_{ep}$ \\ 
+& & & \\ 
+\hline
+& & & \\ 
+$\rm C_4KHg$ & 0.73\cite{iye82} & 269\cite{alexander81} & 0.38\cite{iye82} \\ 
+& & & \\ 
+$\rm C_8RbHg$ & 1.44\cite{alexander81} & 235\cite{alexander81} & 0.44\cite{iye82,alexander81} \\ 
+& & & \\ 
+$\rm C_8KHg$ & 1.93\cite{alexander81} & 260\cite{alexander81}, 301\cite{alexander80} & 0.46\cite{tanuma81,alexander80} \\ 
+& & & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\label{carter}
+\rm \ln \: t \; = \; \psi\left(\frac{1}{2}\right) \; - \; \int dD \, \psi\left(
+\frac{1}{2} \; + \; \frac{D e H_{c2}}{2 \pi k_B T c}  \right) \, P(D) 
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{7.5in}
+
+\label{inhomo}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm \oint d\vec{q} \:  N(\vec{q}) \: v_{\perp \vec{H}}(\vec{q})
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{8in}
+%
+
+\label{perpexplain}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{5in}
+%
+
+\label{butlerellipse}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{16cm}
+%
+
+\label{nbse2fit}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{5in}
+%
+
+\label{entelfit}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{5in}
+
+\label{holzfs}
+\end{figure}
+}
+
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{16cm}
+
+\label{c6k}
+\end{figure}
+}
+
+\setcounter{chapter}{4}
+\stepcounter{chapter}
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{table}% latex2html id marker 3311
+\begin{center}
+
+\label{pink-gold}
+\begin{tabular}{||c|c|c|c||}
+\hline
+& & & \\  Property & Experiment & Pink & Gold \\  & & & \\ 
+\hline
+& & & \\ 
+Primary $\rm I_c$ &  diffraction\cite{kamitakahara84,lagrange83}& 10.24 \AA\ & 10.24 \\ 
+& & & \\ 
+Secondary $\rm I_c$ & diffraction\cite{kamitakahara84,lagrange83}& NA  &10.83 \AA \\ 
+& & & \\ 
+Primary structure & neutrons\cite{kamitakahara84};TEM\cite{J140} & $(2 \times 2)$R0$^{\circ}$ &  $(2 \times 2)$R0$^{\circ}$  \\ 
+& & & \\ 
+Secondary  structure & neutrons\cite{kamitakahara84};TEM\cite{J140} &NA & $(\sqrt{3} \times 2)$R(30$^{\circ}$, 0$^{\circ}$) \\ 
+& & & \\ 
+Stoichiometry & chem. anal. & C$_{4.3}$KHg$_{1.1}$ & C$_{4.7}$KHg$_{1.2}$ \\ 
+& & & \\ 
+$\theta_D$ & $\rm C_P$\cite{alexander81} & unknown & 269 K\cite{alexander81} \\ 
+& & & \\ 
+$\rm \lambda_{ep}$ & $\rm C_P$\cite{alexander81} + $\rm T_c$ &  unknown & 0.38\cite{iye82} \\ 
+& & & \\ 
+N(0) & $\rm C_P$\cite{alexander81} & unknown & 0.094/(eV $\cdot$ atom)$^{dagger}$\\ 
+& & & \\ 
+$\rm T_c$ & inductive & 1.5 K & 0.8 K \\ 
+& & & \\ 
+$\rm \kappa_{\parallel\hat{c}}(0)$ & critical field  & 0.55 & 0.75 \\ 
+& & & \\ 
+$\rm \kappa_{\perp\hat{c}}(0)$& critical field  & 4.7 & 8.5 \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm T_c \; = \; \Theta_D \exp{\left(-\frac{1}{N(0)V}\right)}
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\label{lambdacalc}
+\rm \lambda_{ep} \, \approx \, \lambda_{metal} \, + \, \lambda_{H} \; = \; \frac{\eta_{metal}}{M_{metal} \Omega_D^2} \, + \, \frac{\eta_H}{M_{H} \langle \omega_{optic}^2 \rangle}
+\end{equation}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{table}\begin{center}
+
+\vspace{0.5in}
+\label{khtctable}
+\begin{tabular}{|cccc|}
+\hline
+& & & \\ 
+Compound (stage) & Method of Preparation & $\rm T_c$ (K) & Ref. \\ 
+& & & \\ 
+\hline
+& & & \\ 
+$\rm C_8KH_{2/3}$ (II)& chemisorption & $<$0.052 & \cite{sano80}\\ 
+& & & \\ 
+$\rm C_4KH_x$ (I)& KH powder & $<$0.070 & \cite{suzuki85b}\\ 
+& & & \\ 
+$\rm C_8K$ (I) & NA & 0.150 & \cite{koike80}\\ 
+& & & \\ 
+$\rm C_8KH_{0.19}$ (53\% I + 47\% II)& chemisorption& 0.22 & \cite{kaneiwa82}\\ 
+& & & \\ 
+$\rm C_8KH_x$ + $\rm C_{24}K$ (II)& KH powder & 0.31 & \cite{suzuki85b}\\ 
+& & & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{17cm}
+
+\label{khC_v}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}\begin{center}
+
+\vspace{0.5in}
+\label{khcvtable}
+\begin{tabular}{|c|ccccc|}
+\hline
+& & & & & \\ 
+Compound & $\rm T_c$ (K) & $\Theta_D$ (K) & $\rm T_E$ (K) & N(0)
+(states/eV$\cdot$C-atom) & $\rm \lambda_{ep}$\\ 
+& & & & & \\ 
+\hline
+& & & & & \\ 
+$\rm C_8K$ & 0.15 & 393.5& 82.2 & 0.31 & 0.30 \\ 
+& & & & & \\ 
+$\rm C_8Rb$  & 0.026 & 245.4 & 60.3 & 0.28 & 0.27 \\ 
+& & & & & \\ 
+$\rm C_8KH_{0.05}$ & 0.19$^{\dagger}$ & 403& 90.7 & 0.29 & 0.31 \\ 
+& & & & & \\ 
+$\rm C_8RbH_{0.05}$ & ? & 319.1 & 56.2 & ? & ? \\ 
+& & & & & \\ 
+$\rm C_8KH_{0.65}$  & $<$0.05 & 350& 58.1 & 0.10 & 0.87\\ 
+& & & & & \\ 
+& & & & & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{16cm}
+
+\label{khdos}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{18cm}
+
+\label{tmdcHfig}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{15cm}
+
+\label{tase2resist}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\label{bilbro}
+\rm T_{CDW} \; = \; \left[ \frac{T_{c0}}{T_c} \right]^{N/N_1} \: T_c
+\end{equation}
+}
+
+\stepcounter{section}
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{table}\begin{center}
+
+\vspace{0.5in}
+\label{hydtctable}
+\begin{tabular}{|ccccc|}
+\hline
+& & & & \\ 
+Initial $\rm T_c$ (K) & Initial $\Delta T_c$/$\rm T_c$ & Initial color &
+Final $\rm T_c$ (K) & Final $\rm \Delta T_c$/$\rm T_c$ \\ 
+& & & & \\ 
+\hline
+& & & & \\ 
+0.719 & 0.20 & gold & 0.941 & 0.21\\  	%
+& & & & \\ 
+0.875 & 7.3$\times 10^{-2}$ & gold & 1.519 & 1.2$\times 10^{-2}$\\  %
+& & & & \\ 
+0.875 & 7.3$\times 10^{-2}$ & gold & 1.535$^{\S}$	& 7.8$\times 10{-3}$\\  %
+& & & & \\ 
+1.317 & 0.14& copper & 1.497 & 6.5$\times 10^{-2}$\\ 	%
+& & & & \\ 
+1.472$^{\ast}$ & 3.0$\times 10^{-2}$ & copper & 1.562 & 2.4$\times 10^{-2}$\\  %
+& & & & \\ 
+1.497$^{\dagger}$ & 6.5$\times 10^{-2}$ & violet$^{\dagger}$ & 1.491 & 6.2$\times 10^{-2}$\\  %
+& & & & \\ 
+1.528 & 4.7$\times 10^{-2}$ & pink & 1.515 & 2.2$\times 10^{-2}$ \\  %
+& & & & \\ 
+1.879 & 8.5$\times 10^{-2}$ & blue & $<$1.2 & NA \\  %
+& & & & \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{20cm}
+
+\label{hydeffect}
+\end{figure}
+}
+
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{20cm}
+
+\label{stitcvsP}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{12cm}
+
+\label{nesting}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{20cm}
+
+\label{stitransdata}
+\end{figure}
+}
+
+\stepcounter{section}
+\setcounter{chapter}{5}
+\stepcounter{chapter}
+\stepcounter{section}
+\stepcounter{section}
+\stepcounter{subsection}
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{table}% latex2html id marker 3749
+
+\label{mbi:tc}
+\begin{center}
+\begin{tabular}{|lc|cccc|}
+\hline
+Compound & Stage/Phase & $\rm T_c$ (K) & Scy. Vol. \%  & Alloy & Reference \\ 
+\hline\\ 
+$\rm C_4CsBi_{0.5}$ & 1 ($\alpha$) & 4.05 & NA$^*$ & NR & \cite{mcrae85}\\ 
+$\rm C_4CsBi_{0.5}$ & 1 ($\alpha$) & $<$1.5$^{\dagger}$ & NR & $\rm Cs_5Bi_4$ & \cite{yang88}\\ 
+$\rm C_4CsBi_{0.5}$ & 1 ($\alpha$) & $<$0.5 & $<$2 & $\rm Cs_5Bi_4$& \cite{E291}\\ 
+$\rm C_4CsBi_{0.5}$ & 1 ($\alpha$) & $<$0.05 & $<$0.1 & $\rm Cs_{64}Bi_{36}$& \cite{stang88}\\ 
+$\rm C_4CsBi_{x}$ & 1 ($\alpha + \beta$) & $<$1.2 & $<$2 & $\rm Cs_5Bi_4$ & \cite{E291}\\ 
+$\rm C_4CsBi_{x}$ & 1 ($\alpha + \beta$) & 4.55 & 0.13 & $\rm CsBi$& \cite{stang88}\\ 
+$\rm C_4CsBi_{x}$ & 1 ($\alpha + \beta$) & 4.69 & 0.12 & $\rm CsBi$ & \cite{stang88}\\ 
+$\rm C_4CsBi_{x}$ & 1 ($\alpha + \beta$) & 4.69 & 0.24 & $\rm Cs_{48}Bi_{52}$ & \cite{stang88}\\ 
+$\rm C_4CsBi_{x}$ & 1 ($\alpha + \beta$) & 4.69 & 0.8 & $\rm Cs_{48}Bi_{52}$ & \cite{stang88}\\ 
+$\rm C_4CsBi_{x}$ & 1 ($\alpha + \beta$) & $<$0.05 & $<$0.1 & $\rm Cs_{48}Bi_{52}$ & \cite{stang88}\\ 
+$\rm C_4CsBi_{1.0}$ & 1 ($\beta$) & 2.3 & NA$^*$ & NR &\cite{mcrae85}\\ 
+$\rm C_4CsBi_{1.0}$ & 1 ($\beta$) & $<$1.5$^{\dagger}$ & NR & CsBi & \cite{yang88}\\ 
+$\rm C_4CsBi_{x}$ & (1+2) ($\alpha + \beta$) & 4.72 & 1.9 & $\rm Cs_{47}Bi_{53}$ & \cite{stang88}\\ 
+$\rm C_8CsBi_{1.0}$ & 2 ($\beta$) & 2.7 & NA$^*$ & NR & \cite{mcrae85}\\ 
+$\rm C_8CsBi_{1.0}$ & 2 ($\beta$) & 3.45 & NR & NR & \cite{bendriss86}\\ 
+$\rm C_8CsBi_{1.0}$ & 2 ($\beta$) & 4.73 & 5 & $\rm Cs_{39}Bi_{61}$ & \cite{stang88}\\ 
+$\rm C_8CsBi_{1.0}$ & 2 ($\beta$) & $<$1.5$^{\dagger}$ & NR & $\rm Cs_5Bi_4$ & \cite{yang88}\\ 
+$\rm C_8CsBi_{1.0}$ & 3 ($\beta$) & 4.71 & 4 & $\rm Cs_{39}Bi_{61}$ & \cite{stang88}\\ 
+$\rm C_8CsBi_{1.0}$ & 3 ($\beta$) & $<$0.05 & $<$0.1 & $\rm Cs_{39}Bi_{61}$ & \cite{stang88}\\ 
+$\rm C_8CsBi_{1.0}$ & 3 ($\beta$) & 4.72 & 1 & $\rm Cs_{39}Bi_{61}$ & \cite{stang88}\\ 
+$\rm C_8RbBi_{0.5}$ & 2 ($\alpha$) & 1.25-1.5 & NA$^*$ & NR & \cite{mcrae85}\\ 
+KBi & NA &  3.6 & NA & NA & \cite{bendriss86}\\ 
+$\rm KBi_2$ & NA & 3.58 & NA & NA & \cite{mcrae85}\\ 
+$\rm RbBi_2$ & NA & 4.25 & NA & NA & \cite{mcrae85}\\ 
+$\rm CsBi_2$ & 4.75 & NA & NA & NA &\cite{mcrae85}\\ 
+\hline
+\end{tabular}
+\end{center}
+$^*$Resistive measurements.  Volume fraction of superconductivity not determined.\\ 
+$^{\dagger}$Also checked up to 7.0 kbar applied pressure.\\ 
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{15cm}
+
+\label{inclusion}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\vspace{15cm}
+
+\label{csbi:alloytc}
+\end{figure}
+}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}\center
+\vskip 9.cm 
+
+\label{mr}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{equation}\label{amplit}
+\rm A(T, H) \; = \; T \, \exp \frac{- 2 \pi^2 k_B (T \, + \, T_D)}{\hbar \omega_c}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm T_D \; = \; \frac{\hbar}{\pi k_B \tau_{col}}
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\center
+\vskip 9.cm 
+
+\label{sdh:calc}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\label{sdh:E_F}
+\rm {\cal A}_{max}^e \; = \; \frac{4 \pi}{3a_0^2 \gamma_0^2 (1 \, + \, 2\gamma_4/\gamma_0)^2}(E_3 \, - \, E_F)(E_2 \, - \, E_F)\\ 
+= \frac{2\pi {\mit e}\nu_{max}}{\hbar {\mit c}}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm V_{cyl} \; = \; \frac{2 \pi}{I_c} {\cal A}_{max}^e
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\center
+\vskip 9.cm 
+
+\label{csbistruct}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}% latex2html id marker 3963
+
+\label{electronicparams}
+\begin{center}
+\begin{tabular}{|lc|cccc|}
+\hline
+Compound & $\rm T_c$ (K) & $\rm E_F (eV)$ &  $\omega_p$ (eV) & $\rm f_C$ \\ 
+\hline
+$\rm C_8Cs$ (1) & $<$0.06\cite{tanuma81} & 1.9\cite{lagues84}&-& -0.05\cite{takahashi86,dicenzo86}\\ 
+$\rm C_{24}Cs$ (2) & $\approx$0 &-&-& -0.040\cite{fretigny85}\\ 
+$\rm C_{24}K$ (2) & $<$0.011\cite{koike80} & 1.42\cite{doll87} & 4.2\cite{doll87} & -0.042\cite{doll87,I63,preil84}\\ 
+& &-& 0.85\cite{preil84,preil83} &-& \\ 
+$\rm C_4KH_{0.8}$  (1) & $<$0.070$^{\ast}$\cite{suzuki85b} &
+$\approx$1.58$^{\ast}$\cite{doll87} & 3.31$^{\ast}$\cite{doll87} & $\approx$-0.052$^{\ast}$\cite{doll87}\\ 
+&-& 0.89$^{\ast}$\cite{O353} & - & -0.02$^{\ast}$\cite{Z260}\\ 
+$\rm C_8KH_{2/3}$ (2) & $<$0.052$^{\ddag}$\cite{sano80} & - & -  \\ 
+$\rm C_8KH_{0.8}$ (2) & - & 1.13$^{\ast}$\cite{doll87} & 3.26$^{\ast}$\cite{doll87} & -0.026$^{\ddag}$\cite{doll87} \\ 
+&-& 1.15$^{\ast}$\cite{Z260} &-& -0.033$^{\ast}$\cite{Z260}\\ 
+$\rm C_4CsBi_{0.6}$ (1$\alpha$) & $<$0.050\cite{stang88} & 1.3\cite{yang88} & 2.6\cite{yang88} & -0.04\cite{yang88}\\ 
+& $<$0.5\cite{E291} & 0.93\cite{E291} &-& -0.027$^*$\\ 
+$\rm C_4CsBi_{1.0}$ (1$\beta$) & $<$0.4\cite{E291} & 0.95\cite{yang88} & 2.5\cite{yang88} & -0.02\cite{yang88}\\ 
+$\rm C_8K$ (1) & 0.15\cite{kaneiwa82} & 1.6\cite{doll87} & 4.5\cite{doll87} & -0.075\cite{tanuma78}\\ 
+&-& 1.4\cite{tanuma78} & 4.65\cite{fischer85} & -0.125\cite{preil84}\\ 
+$\rm C_8KH_{0.05}$ (1) & 0.19$^{\dagger\ddag}$\cite{enoki85} & - & - & -\\ 
+$\rm C_8KH_{0.19}$ (1+2) & 0.22$^{\S\ddag}$\cite{kaneiwa82} & - & - & -\\ 
+$\rm C_8KH_{0.8}$ (2) & 0.31$^{\ast}$\cite{suzuki85b} & - & - & -\\ 
+$\rm C_4KHg$ (1) & 1.5\cite{W179} & 1.53\cite{W179} &  & -0.063\cite{W179}\\ 
+& 0.73\cite{tanuma81} & 1.6\cite{yang88} & 5.1\cite{yang88} & -0.06\cite{yang88}\\ 
+&-& 1.47\cite{preil84} & 5.0\cite{fischer85} & -0.073\cite{conard81}\\ 
+$\rm C_8KHg$ (2) & 1.9\cite{pendrys81} & 1.2 & 4.7\cite{yang88} & -0.03\cite{yang88} \\ 
+&-& 1.0\cite{W179}  &  & -0.049\cite{W179} \\ 
+&-& 0.87\cite{preil84} &-& -0.0417\cite{preil84}\\ 
+\hline
+\end{tabular}
+\end{center}
+$^{\dagger}$Calculated through interpolation in Ref.~\cite{enoki85}.\\ 
+$^{\S}$Superconductivity is attributed only to the stage 1  phase $\rm
+C_8KH_{0.1}$ in Ref.~\cite{enoki85}.\\ 
+$^{\ast}$Made from KH powder.\\ 
+$^{\ddag}$Chemisorbed from $\rm C_8K$ starting material.\\ 
+$^*$Calculated here from data in Ref.~\cite{E291}.
+\end{table}
+}
+
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{table}[p]
+
+\label{resistanis}
+\end{table}
+}
+
+\setcounter{chapter}{6}
+\stepcounter{chapter}
+\stepcounter{section}
+\stepcounter{section}
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{15cm}
+
+\label{softmode}
+\end{figure}
+}
+
+\appendix
+\stepcounter{chapter}
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm E \; \approx \; m \omega^2 \langle x^2 \rangle  \; \approx \; \frac{\hbar}{m \omega}
+\end{displaymath}
+}
+
+\stepcounter{chapter}
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 4229
+\rm H_{c2}(\theta) =  \Phi_0/2 \pi  \xi_a  \xi(\theta)
+\label{xitheta}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 4238
+\label{ldtheor2}
+\rm H_{c2}(\theta) \; = \; \frac{H_{c2}(0^{\circ})}{\sqrt{\cos^2\theta \,
++ \, \epsilon^2 \sin^2\theta}}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{15cm}
+
+\label{fquant}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}\vspace{18cm}
+
+\label{xsection}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}% latex2html id marker 11697
+\rm  \xi(\theta) \, = \,  \xi_a
+\sqrt{\cos^2 \phi \, + \,   \epsilon^2 \sin^2  \phi} \:  \sqrt{\epsilon_{eff}^2 \sin^2\theta \, +  \,
+\cos^2 \theta} \;   
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}% latex2html id marker 4287
+\label{tilthc21}
+\rm H_{c2}^{eff}(\theta,\, \phi) \; = \; \frac{H_{c2, \parallel
+\hat{c}}/\sqrt{\cos^2\phi \: + \: \epsilon^2\sin^2\phi}}{\sqrt{\cos^2\theta
+\: + \: \epsilon^2\sin^2\theta / \sqrt{\cos^2\phi \: + \: \epsilon^2\sin^2\phi}}} 
+\end{equation}
+}
+
+\stepcounter{chapter}
+{\newpage
+\clearpage
+\samepage \begin{displaymath}0.882  \xi_0 / \ell \end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm \xi_0 \equiv    0.18   \hbar  v_F  /   k_B   T_c   \end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm \rho_a(4.2K) \, \approx \, \rho_c(4.2K) \frac{\rho_a(100K)}{\rho_c(100K)} \; .\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm \ell_a \,  = \, \hbar  k_F / n e^2 \rho_a \; . \end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm n \; = \; \frac{4k_F^2}{3 \pi I_c}
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm \ell \; = \; \frac{4 \pi \hbar I_c}{3 e^2 \rho_a k_F} \; .
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\rm \lambda_{tr} \; = \; 0.72 \frac{\rho_a k_F}{T_c I_c}
+\end{displaymath}
+}
+
+
+\end{document}

@@ -1,0 +1,64 @@
+\documentstyle[12pt]{report}
+\headheight 8pt
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{tinktemp}
+%C_4KHg 8b data and TINKHAM'S FORMULA fits at t = 0.3, 0.6, 0.8
+\beginpicture
+\setcoordinatesystem units <0.8333mm,0.07287mm>
+\setplotarea x from 0 to 120, y from 0 to 700
+\axis bottom label {$\theta$} ticks 
+ numbered from 0 to 120 by 15
+ unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+ numbered from 0 to 700 by 100
+ unlabeled short quantity 15 /
+\put {\lines [l] {a)\cr t = 0.29\cr}} at 20 500
+\put {$\rm H \perp \hat{c}$} at 90 50
+%\multiput {$\circ$} at 2.000000 60.513054 %/users/alison/angdata/C_4KHg/8b/lowt/lotang.8b.strip
+\multiput {$\circ$} at "lotang.8b.strip"
+%\multiput {.} at /users/alison/angdata/C_4KHg/8b/lowt/tink.3
+\multiput {.} at "tink.3"
+\setcoordinatesystem units <0.8333mm,0.1729mm> point at 0 400
+\setplotarea x from 0 to 120, y from 0 to 300
+\axis bottom label {$\theta$} ticks 
+ numbered from 0 to 120 by 15
+ unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+ numbered from 0 to 300 by 50 /
+\put {\lines [l] {b)\cr t = 0.57\cr}} at 20 250
+\put {$\rm H \perp \hat{c}$} at 90 50
+%\multiput {$\circ$} at 0.000000 38.400000 %/users/alison/angdata/C_4KHg/8b/medt/folded.8b.strip
+\multiput {$\circ$} at "folded.8b.strip"
+%\multiput {.} at /users/alison/angdata/C_4KHg/8b/medt/tinkfit.1
+\multiput {.} at "tinkfit.1"
+\setcoordinatesystem units <0.8333mm,0.2572mm> point at 0 532
+\setplotarea x from 0 to 120, y from 0 to 200
+\axis bottom label {$\theta$} ticks 
+ numbered from 0 to 120 by 15
+ unlabeled short quantity 25 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+ numbered from 0 to 200 by 50
+ unlabeled short quantity 9 /
+\put {\lines [l] {c)\cr t = 0.78\cr}} at 20 167
+\put {$\rm H \perp \hat{c}$} at 90 30
+%\multiput {$\circ$} at -3 23.2 %/users/alison/angdata/C_4KHg/8b/hight/hitang.8b.strip
+\multiput {$\circ$} at "hitang.8b.strip"
+%\multiput {.} at /users/alison/angdata/C_4KHg/8b/hight/tink.2
+\multiput {.} at "tink.2"
+\endpicture
+%\caption[Quality of fits to Tinkham's formula as a function of
+%temperature.]{Quality of  fits  to Tinkham's formula as a function of
+%temperature for a $\rm T_c$ = 1.54  K $\rm C_4KHg$  GIC.  All fits produced
+%with the parameters tilt = 0$^{\circ}$ and mosaic spread = 0$^{\circ}$.  a)
+%t = 0.29.  $\rm H_{c2,\parallel\hat{c}}$ = 41 g, anisotropy = 14,  and $\rm
+%H_c$ = 62 g.  The residual parameter $\cal R$ = 0.30  for this fit.  b) t =
+%0.57.  $\rm H_{c2, \parallel\hat{c}}$ = 27 gauss, anisotropy = 11, and $\rm
+%H_c$ = 40 g.  $\cal R$ = 0.43.  c) t = 0.78.  $\rm H_{c2,\parallel\hat{c}}$
+%= 16 gauss, anisotropy = 11, and $\rm H_c$ = 24 g.  $\cal R$ = 0.56.}
+\end{figure}
+\end{document}

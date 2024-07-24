@@ -1,0 +1,35 @@
+(defun rparam (xiparc I_c)
+  "KLB r-parameter"
+  (* (/ 4 pi) (squared (/ (* 2.0 xiparc) I_c)))
+  )
+
+(defun T* (tc xiparc I_c)
+  "dimensionality crossover temperature"
+  (* tc (- 1.0 (* 2.0 (squared (/ xiparc I_c)))))
+  )
+
+;first check that calculations are working for C_4KHg
+(xipar 70 800)
+189.8
+(rparam 200.0 10.24)
+1943
+
+KLB say that decoupling occurs for r = 1.7 (or less).
+
+Takahashi and Tachiki say that decoupling occurs when (/ I_c xiparc) = 0.4
+(T&T, PRB33, p. 4624)
+Then (/ xiparc I_c) = 2.5
+This is equivalent to (rparam 1.0 0.4)
+31.83
+Proximity-coupled multilayers decouple faster than Josephson-tunnelling coupled
+layers do!
+
+KLB model has r = 1.7 when (/ xiparc I_c)  = (/ 4.0 (sqrt (* 1.7 pi)))
+1.731
+
+
+Summary: T&T xi_{critical} is 2.5 I_c
+         KLB xi_{critical} is 1.7 I_c
+
+
+

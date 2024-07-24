@@ -1,0 +1,31 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\beginpicture
+%2B x-rays
+\setcoordinatesystem units <0.4162cm,0.8cm>
+\setplotarea x from 2 to 36, y from 0 to 10
+\axis bottom label {2$\theta$} ticks 
+	numbered from 2 to 32 by 6
+	unlabeled short quantity 35 /
+\put {a)} at 4 9
+%1C x-rays
+\setcoordinatesystem units <0.4162cm,0.8cm> point at 0 14
+\setplotarea x from 2 to 36, y from 0 to 10
+\axis bottom label {2$\theta$} ticks 
+	numbered from 2 to 32 by 6
+	unlabeled short quantity 35 /
+\put {b)} at 4 9
+\endpicture
+\caption[$(00\ell)$ x-ray scans for $\alpha$-phase  stage 1 CsBi-GIC's.]{$(00\ell)$ x-ray scans for $\alpha$-phase  stage 1 CsBi-GIC's.  The broad hump
+from about 6$^{\circ}$  to 14$^{\circ}$  is due  to the glass tube that the
+sample holder is in.  a) $\rm I_c$ = $(10.61  \pm 0.03)$ \AA $\alpha$-phase
+sample.        b)    Similar       $(00\ell)$       scan       taken     by
+Bendriss-Rerhrhaye\cite{bendriss88}.}
+\label{stixr}
+\end{figure}
+\end{document}

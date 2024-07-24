@@ -1,0 +1,74 @@
+(setq  ratio (/ 26.6 2.46)) ;ratio of C_4CsBi_{0.5} lattice constant ot a_{graphite}
+10.81
+(/ ratio (sqrt 3.0))
+6.243
+(/ ratio (sqrt 5.0))
+4.836
+(/ ratio (sqrt 7.0))
+4.087
+(/ ratio (sqrt 8.0))
+3.823
+(/ ratio (sqrt 6.0))
+4.414
+(/ ratio (sqrt 10.0))
+3.419
+(/ ratio (sqrt 11.0))
+3.26
+(/ ratio (sqrt 12.0))
+3.121
+(/ ratio (sqrt 13.0))
+2.999
+(* 3.0 (sqrt 13.0))
+10.82
+(* 10.82 2.46)
+26.62
+(* 9.0 13)
+117
+
+The  unit  cell of C_4CsBi_{0.5}  appears to  be  approximately (3root13  X
+8)R(15,0) according to Bendriss' thesis, p. 126.
+
+(* 3 (sqrt 13.0) 8)
+86.53 ; size of unit cell compared to graphite one
+192 C atoms per unit cell
+
+         V_{FS}
+f_C = -----------
+      V_{BZ} * #C
+
+(setq float-output-format "4f")
+"4f"
+(* (/ 1120.0 1100) 0.25)
+0.2545
+(setq vfs 0.2545)
+0.2545 ;volume of FS in inverse Angstroms. cubed
+
+(setq ag 7.53)
+7.53 ;area of graphite BZ in inv. ang. squared
+(setq abz (/ ag 86.53))
+0.08702
+
+(setq vbz (* (/ (* 2 pi) 10.61) abz))
+0.05153 ;volume of the C_4CsBi_{0.5} BZ in inv. ang. cubed
+
+(/ vfs (* vbz 192))
+-0.02572 ;charge transfer per C atom 
+
+(* 0.02572 4)
++0.1029 ;charge transferred per CsBi_{0.5} unit.
+
+If f_{Cs} = +1, then f_{Bi} = -1.8.
+
+Superconducting compound in the CsBi system is CsBi_{2}, in which f_{Bi} is
+presumably -0.5.
+
+
+Use of BR model to calculate f_C from E_F:
+gamma_0 = 3.16 eV [Ref. 60]
+gamma_0 = 2.9 eV [Ref. 8]
+f_C = (/ (squared (/ E_F gamma_0)) (* (sqrt 3.0) pi))
+(/ (squared (/ 1.3 2.9)) (* (sqrt 3.0) pi))
+0.03693; Eklund's number
+(/ (squared (/ 0.93 2.9)) (* (sqrt 3.0) pi))
+0.0189
+

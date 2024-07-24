@@ -1,0 +1,54 @@
+(setq hc0 113.9)
+113.9
+(defun hct (x)
+  "thermodynamic critical field at temperature x"
+  (* hc0 (- 1.0 (squared (/ x 1.53))))
+  )
+(hct 0.44)
+104.5
+(hct 1.2)
+43.83
+(* 0.55 1.53)
+0.8415
+(hct 0.84)
+79.57
+
+;measured H_c values: 62; 40; 24
+(/ 104.5 62)
+1.685
+(/ 79.6 40)
+1.99
+(/ 43.8 24)
+1.825
+(/ (+ 1.685 1.99 1.825) 3.0)
+1.833 ;average demagnetization factor?
+
+;from ~/thesis/calc/orlando.record
+;5. London penetration depth, lambda_L(0) for C_4KHg:
+;lambda_L(0) = (/ (* 1.33e8 (sqrt gamma)) n_scaled)
+;2.498e-05 cm
+;(* 2.498e-05 1e8)
+;2498 ;penetration depth along c for in-plane transport in Angstroms 
+2.498e-05 cm
+(recip (sqrt (/ 2.498e-5 0.1)))
+63.27
+(recip 63.27)
+0.01581
+(setq lambda0 2.498e-5)
+2.498e-05
+(setq tc 1.53)
+1.53
+(defun lambdat (x)
+  "temperature dependence of the scing penetration depth; output is in cm"
+  (* lambda0 (sqrt (recip (- 1.0 (expt (/ x tc) 4.0)))))
+)
+
+(lambdat 0.44)
+2.507e-05
+(lambdat 1.2)
+3.168e-05
+
+(* 100 (sqrt (/ 3.168e-5 0.1)))
+1.78 ;percent change in H_c due to demagnetization (livingston69, p. 1239)
+(* 100 (sqrt (/ 2.507e-5 0.1)))
+1.583

@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for NetBSD (vers 1st March 2002), see www.w3.org" />
+<title>Day 9 Morning</title>
+    <meta name="description" content=
+    "Alison Chaiken's home page" />
+    <meta name="keywords" content=
+    "molecular biology, hybridization, cloning, vector, PCR, DNA,
+    fingerprinting, RNA, mRNA, cDNA, primer, polymerase, E. coli,
+    operon, promoter, plasmid, gel, electrophoresis, southern blot,
+    yokazaki, Eco R1, restriction enzyme, intron, exon, siRNA, gene
+    expression, array, 5' UTR, poly-A tail, tRNA, translation, transcription" />
+    <meta name="resource-type" content="document" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="Content-Type" content=
+    "text/html; charset=utf-8" />
+    <meta name="GENERATOR" content=
+    "GnuEmacs/19.34 [en] (X11; I; NetBSD 1.2G i386) [emacs]" />
+    <link rev="made" href=
+    "mailto:alchaiken@gmail.com" />
+    <link rel="start" href="/" />
+    <link rel="icon" href="/fermi-16.png" type=
+    "image/png" />
+    <link rel="stylesheet" href="/pt_style.css" type="text/css" />
+    <!--    $Id: index.html,v 1.25 2005/10/22 20:58:32 alison Exp $  -->
+    <link rel="up" href="../" />
+    <link rel="next" href="coolstuff.html" />
+    <link rel="up" href="/" />
+<!--    $Id: day9am.html,v 1.2 2004/07/04 06:05:35 alison Exp $  -->
+</head>
+<body>
+<a href="index.html">Up</a>
+<a href="day7am.html">Previous</a>
+<a href="day9pm.html">Next</a>
+
+<h2><p align="center">Day 9 Morning Lecture Notes</p></h2> <h3><p
+align="center"> Steve Williams, Smith College</p></h3><h3><p
+align="center">June 14, 2004</p></h3>
+
+<h3>How to Interpret Spectrophotometry Results<br>
+(see also spectrophotometry handout)
+</h3>
+
+<p align=center>
+<img src="spectro.png">
+</p>
+
+<p>The concentration of DNA = (spec reading at 260 nm)X(50 &#181;g/nL)
+assuming a 1 cm path length.  For a high-quality DNA sample, 1.6 <=
+(Abs<sub>260</sub>/Abs<sub>280</sub>) <= 1.9.  A higher ratio
+typically indicates RNA contamination while a lower ratio typically
+indicates protein contamination.  The former can be treated with RNAse
+while the latter should be be addressed using a second phenol-chisam
+extraction and dialysis.  Note that temperature and pH don't affect
+spectrophotometry results unless the DNA actually denatures.
+</p>
+
+<p>If RNA is degraded but not separated,
+(Abs<sub>260</sub>/Abs<sub>280</sub>) will be large due to absorption
+by free nucleotides.  Always run DNA on a gel when doing
+spectrophotometry just to make sure no obvious contamination shows up.
+Lipids also absorb strongly at 260 nm and can give a false impression
+of concentrated DNA.  Contamination with cell debris from NaOH+SDS
+lysis also calls a low (Abs<sub>260</sub>/Abs<sub>280</sub>) reading.
+</p>
+
+<p>Chisam (chiz-um) is used to eliminate phenol from the DNA sample.
+Dialysis gets rid of chisam.  For a 50-100 &#181;L sample, 3 hours of
+dialysis is fine.  Larger volumes will require longer dialysis times.
+Ligation is especially sensitive is particularly sensitive to
+phenol/chisam and requires a thorough analysis.
+</p>
+
+<h3>DNA Fingerprint Analysis</h3>
+
+<p>DNA fingerprint analysis looks at "short tandem repeats."  LINE1 is
+7 kbp long and is a long tandem repeat of which RevT is 1.4 kbp.  A
+STR unit on the other hand is 4-7 bp long.  An example is D18S51 which
+is (AGAA)<sub>n</sub> where n = number of repeats.  D18S51 is found on
+chromosome 18, arm 1, band 21.3 at the locus called 18q21.3.  At this
+locus the STR has 68 to 85 repeats.  The variability in n means that
+the STR locus is "polymorphic."  Not all STR loci in the human genome
+are polymorphic.  Another example of a polymorphic STR is D5S818 which
+has sequence (AGAT)<sub>n</sub> and has 34 to 43 repeats at locus
+5q21.31.
+</p>
+
+<p>The length of STR sequences varies over evolutionary time but is
+stable in an individual's cells.  Usually the length of these repeats
+doesn't vary from parents to offspring.  Biochemical experiments in
+vitro have shown that DNA polymerase does make more errors in copying
+STRs, which tend to be AT-rich.
+</p>
+
+<p>A typical DNA fingerprinting experiment will use 10 loci.  The
+pattern of 10 loci will be repeated only once on average in every 82
+billion people.  The distribution of STR lengths is not random and
+varies in populations around the world.  The technique used in
+Experiment 5 is called AmpFl STR Profiler Plus from Applied
+Biosystems.
+</p>
+
+<p>DNA fingerprinting is used by immigration services to see if
+claimants are really close relatives.  It also can be used in
+paternity tests.  The method works well with degraded DNA from crime
+scenes since the sequences of interest are short and therefore
+unlikely to be degraded.
+</p>
+
+<p>The PCR used in fingerprinting uses primers that hybridize upstream
+to conserved sequences on either side of the STR.  One of the the
+primers is fluorescently labeled.  Fluorescently labeled primers
+give more efficient amplification than fluorescently labeled
+nucleotides.  The labels affect the T<sub>m</sub> of primers only by a
+couple of degrees.  Fluorescently labeled primers result in only one
+dye molecule per product as opposed to many for labeled dNTPs, so the
+resulting DNA also runs better on dyes.  The PCR product is a labeled
+STR with some additional material on either side.
+</p>
+
+<p>Of the 10 STRs we will run in Experiment 5, one differs between men
+and women.  The other 9 are polymorphic.  The PCR will be multiplex
+with 10 pairs of primers.  The choice of the primers is tricky since
+they must have nearly the same T<sub>m</sub>, must not hybridize with
+one another and must not form hairpins.
+</p>
+
+<p>Because STRs are on different chromosomes, the patterns are
+separately inherited during egg fertilization.  If the father has
+(A,B) values of n for a given STR repeat number and the mother has
+(C,D), the children can have (A,C), (A,D), (B,C) or (B,D) and should
+be different from one another.  Individuals may be heterozygous or
+homozygous for STR lengths on different chromosomes.  Being homozygous
+means that the parents have the same STR length.  Parents and children
+have 1/2 their STR lengths in common; cousins should be 1/4 the same,
+etc.
+</p>
+
+<a href="index.html">Up</a>
+<a href="day7am.html">Previous</a>
+<a href="day9pm.html">Next</a>
+
+</body>
+</html>

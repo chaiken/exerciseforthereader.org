@@ -1,0 +1,117 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;									     ;;
+;;	File:     calc.record     					     ;;
+;;	Author:   Alison Chaiken					     ;;
+;;	Created:  Mon Jul 25 14:58:09 EDT 1988				     ;;
+;;	Contents: Calculation     of        quantities      for		     ;;
+;;	~/thesis/chap4/expsum.txt using   numbers from Iye  and		     ;;
+;;	Tanuma, Phys. Rev. B25, 4583 (1982).				     ;;
+;;									     ;;
+;;	Copyright (c) 1988 Alison Chaiken.				     ;;
+;;	All rights reserved.						     ;;
+;;									     ;;
+;;	$Log$								     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq fquant (* 1e16 phys-fquant))
+2.07e+09
+(setq gamma 881.89)
+881.9
+
+(sqrt (* 2.0 pi gamma (* 1.5 1.5)))
+1.1166e+02 ;thermodynamic critical field in gauss at 0 K for C_4KHg assuming
+;x=1 and T_c = 1.5 K
+(setq h_therm 111.6)
+111.6
+(sqrt (* 2.0 pi gamma (* 0.73 0.73)))
+5.4340e+01 ;thermodynamic critical field in gauss at 0 K for C_4KHg assuming
+;x=1 and T_c = 0.73 K, the T_c most frequently seen by Iye
+(setq h_therm 54.3)
+54.3
+
+lambda_perp = (* kappa_small kzee_big)
+lambda_par = (* kzee_small (/ (squared kappa_big) kappa_small)) 
+
+;Iye's C_4KHg #1
+(setq h_therm (sqrt (* 2.0 pi gamma (squared 0.72))))
+53.6
+(/ 715 (* (sqrt 2.0) h_therm))
+9.433 ;kappa perp. c at 0 K
+(/ 62.4 (* (sqrt 2.0) h_therm))
+0.8233 ;kappa par. c at 0 K
+(* 0.8233 2300)
+1894 ;lambda perp. c in Ang.
+(* 200 (/ (squared 9.433) 0.8233))
+2.162e+04 ;lambda par. c in Ang.
+
+;Iye's C_4KHg #2
+(setq h_therm (sqrt (* 2.0 pi gamma (squared 0.86))))
+64.02 g at 0 K
+(/ 654 (* (sqrt 2.0) h_therm))
+7.224 ;kappa perp. c 
+(/ 49.2 (* (sqrt 2.0) h_therm))
+0.5434 ;kappa par. c 
+(* 0.5434 2600)
+1413 ;lambda perp. c in Ang.
+(* 200 (/ (squared 7.224) 0.5434))
+1.921e+04 ;lambda par. c in Ang.
+
+;Iye's C_4KHg #3
+(setq h_therm (sqrt (* 2.0 pi gamma (squared 0.73))))
+54.34
+(/  575 (* (sqrt 2.0) h_therm))
+7.482 ;kappa perp. c 
+(/ 58.8 (* (sqrt 2.0) h_therm))
+0.7651 ;kappa par. c
+(* 0.7651 2400)
+1836 ;lambda perp. c in Ang.
+(* 240 (/ (squared 7.482) 0.7651))
+1.756e+04 ;lambda par. c in Ang.
+
+;C_4KHg 7a
+(setq h_therm (sqrt (* 2.0 pi gamma (squared 1.53))))
+113.9
+(sqrt (/ fquant (* 2 pi 88.8)))
+1926
+(/ fquant (* 2 pi 1926 749))
+228.4
+(/ 88.8 (* (sqrt 2.0) h_therm))
+0.5513
+(/ 749 (* (sqrt 2.0) h_therm))
+4.65
+(* 0.5513 1926)
+1062 ;lambda perp. c in Ang.
+(* 228.4 (/ (squared 4.65) 0.5513))
+8958 ;lambda par. c in Ang.
+
+;C_4KHg 8b
+(setq h_therm (sqrt (* 2.0 pi gamma (squared 1.54))))
+114.6
+(sqrt (/ fquant (* 2 pi 85.8)))
+1960
+(/ fquant (* 2 pi 1960 748))
+224.7
+(/ 85.8 (* (sqrt 2.0) h_therm))
+0.5292
+(/ 748 (* (sqrt 2.0) h_therm))
+4.614
+(* 0.5292 1960)
+1037 ;lambda perp. c in Ang.
+(* 224.7 (/ (squared 4.614) 0.5292))
+9039
+ 
+;C_4KHg 13c
+(setq h_therm (sqrt (* 2.0 pi gamma (squared 0.95))))
+70.72
+(sqrt (/ fquant (* 2 pi 69.9)))
+2171
+(/ fquant (* 2 pi 2171 557.7))
+272.1
+(/  69.9 (* (sqrt 2.0) h_therm))
+0.6989
+(/ 557.7 (* (sqrt 2.0) h_therm))
+5.577
+(* 0.6989 2171)
+1517 ;lambda perp. c in Ang.
+(* 272.1 (/ (squared 5.577) 0.6989))
+1.211e+04 ;lambda par. c in Ang.

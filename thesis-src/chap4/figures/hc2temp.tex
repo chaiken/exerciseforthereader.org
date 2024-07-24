@@ -1,0 +1,85 @@
+\documentstyle[12pt]{report}
+\input{/usr/local/lib/tex/macros/prepictex.tex}
+\input{/usr/local/lib/tex/macros/pictex.tex}
+\input{/usr/local/lib/tex/macros/postpictex.tex}
+\input{/users/alison/thesis/horizerrbar.tex}
+\input{/users/alison/thesis/verterrbar.tex}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\label{hc2temp}
+\beginpicture
+%Figure~\ref{hc2temp}a
+\crossbarlength=5pt
+\setcoordinatesystem units <100mm,0.1333mm>
+\setplotarea x from 0 to 1, y from 0 to 600
+\axis bottom label {Reduced temperature} ticks 
+	numbered from 0 to 1 by 0.2
+	unlabeled short quantity 11 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+	numbered from 0 to 600 by 100
+	unlabeled short quantity 13 /
+\put {a)} at 0.8 500
+\put {$\rm \perp \hat{c}$} at 0.2 380
+\put {$\rm \parallel \hat{c}$} at 0.2 80
+\putyerrorbar at 0.397248 244.3 with fuzz 23.6 %13c perp. c
+\putxerrorbar at 0.397248 244.3 with fuzz 0.08 %40 mK uncertainty for T_c=0.95
+%\putyerrorbar at with fuzz 1.5 %8b par. c
+%\multiput {} at "/users/alison/hctdata/stI/13c/redtpertang.13c"
+\multiput {$\circ$} at "redtpertang.13c"
+%\multiput {} at "/users/alison/hctdata/stI/iye/iyec4khg_per.redt"
+\multiput {$\diamond$} at "iyec4khg_per.redt"
+%\multiput {} at "/users/alison/hctdata/stI/13c/redtlpertangtheor.13c"
+\multiput {.} at "redtlpertangtheor.13c"
+%\multiput {} at "/users/alison/hctdata/stI/iye/ltheorc4khg_per.redt"
+\multiput {.} at "ltheorc4khg_per.redt"
+\multiput {$\bullet$} at "redtpartang.13c"
+\multiput {$\times$} at "iyec4khg_par.redt"
+\multiput {.} at "redtlpartangtheor.13c"
+\multiput {.} at "ltheorc4khg_par.redt"
+%Figure~\ref{hc2temp}b
+\setcoordinatesystem units <100mm,0.1333mm> point at 0 750
+\setplotarea x from 0 to 1, y from 0 to 600
+\axis bottom label {Reduced Temperature} ticks 
+	numbered from 0 to 1 by 0.2
+	unlabeled short quantity 11 /
+\axis left label {\lines {$\rm H_{c2}$\cr (gauss)\cr}} ticks
+	numbered from 0 to 600 by 100
+	unlabeled short quantity 13 /
+\put {b)} at 0.8 500
+\put {$\rm \perp \hat{c}$} at 0.3 400
+\put {$\rm \parallel \hat{c}$} at 0.3 120
+%\putyerrorbar at 0.287582 525.5 with fuzz 31.72 %7a perp. c
+\putxerrorbar at 0.311184 538.7 with fuzz 0.06 %40 mK error for 1.54 K Tc
+\putxerrorbar at 0.854605 116.199997 with fuzz 0.012 %10 mK error for 1.54 K Tc
+%\putyerrorbar at with fuzz 5.26 %7a par. c
+\putyerrorbar at 0.311184 538.7 with fuzz 35.36 %8b perp. c
+%\putyerrorbar at with fuzz 2.8 %8b par. c
+%\multiput {} at "/users/alison/hctdata/stI/7a/redtshiftsumper.7a"
+\multiput {$\circ$} at "redtshiftsumper.7a"
+%\multiput {} at /users/alison/hctdata/stI/8b/tangent/pertang_8b.redt
+\multiput {$\diamond$} at "pertang_8b.redt"
+%\multiput {} at /users/alison/hctdata/stI/7a/redtshiftsumpar.7a
+\multiput {$\bullet$} at "redtshiftsumpar.7a"
+%\multiput {} at "/users/alison/hctdata/stI/8b/tangent/partang_8b.redt"
+\multiput {$\times$} at "partang_8b.redt"
+\multiput {.} at "redtheorshiftper.7a"
+\multiput {.} at "redtheorshiftpar.7a"
+%\multiput {.} at "lpartangtheor_8b.redt"
+%\multiput {.} at "lpertangtheor_8b.redt"
+\endpicture
+
+%\caption[Critical field $\rm H_{c2}$ as a function of reduced temperature
+%for $\rm  C_4KHg$.]{Critical field $\rm  H_{c2}$  as a function  of reduced
+%temperature for $\rm C_4KHg$.  Dotted curves are least-squares line fits to
+%the data.   Fit parameters  are given in Table~\ref{linearparams}.  a) Data
+%for a $\rm C_4KHg$ with $\rm T_c$  = 0.95 K:  ($\circ$), $\rm \vec{H} \perp
+%\hat{c}$.   ($\bullet$), $\rm  \vec{H} \parallel  \hat{c}$.
+%Data  for    a $\rm  T_c$ =    0.73   K sample  from  Ref.~\cite{tanuma81}:
+%($\diamond$), $\rm \vec{H} \perp \hat{c}$.  ($\times$), $\rm \vec{H}
+%\parallel \hat{c}$.  b) Data for two $\rm C_4KHg$-GIC's with $\rm  T_c \,
+%\approx$ 1.5 K.  $\rm T_c$  =  1.53 K sample:  ($\circ$), $\rm \vec{H}
+%\perp \hat{c}$.  ($\bullet$), $\rm \vec{H} \parallel \hat{c}$. $\rm T_c$ = 1.54
+%K sample: ($\diamond$), $\rm \vec{H} \perp \hat{c}$.  ($\times$), $\rm \vec{H} \parallel \hat{c}$.}
+\end{figure}
+\end{document}
