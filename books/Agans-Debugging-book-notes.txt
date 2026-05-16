@@ -1,0 +1,80 @@
+Notes from David J. Agans' _Debugging: the 9 Indispensable Rules for Finding
+Even the Most Elusive Software and Hardware Problems_
+
+https://www.harpercollinsleadership.com/9780814474570/debugging/
+
+P. 6 "Debugging usually means figuring out why a design doesn't work as planned. Troubleshooting usually means figuring out what's broken in a particular copy of a product"
+
+P. 13 "If you don't understand some part of the system, that always seems to be where the problem is."
+
+Using code from LMMs is akin to using a reference design, only worse.
+
+P. 16 "If you've never heard a chain saw, you might think the problem has something to do with that godawful loud buzzing noise."
+
+P. 24 "Know the fundamentals. Chain saws are supposed to be loud."
+
+P. 29 "follow your own written procedure to make sure it really causes the error. . . .Try to start the sequence from a known state . . .I didn't wait for the next big storm; I got out there with a ladder and a hose and made it leak."  Write rhe regression test before finding the failure!
+
+P 30 "Simulating the conditions that stimulate the failure is okay. But try to avoid simulating the failure mechanism itself. . . In cases where you guess at the failure mechanism, simulation is often unsuccessful."  Successful debugging means withholding premature judgement.   Failures seem random until all triggers are identified.
+
+P. 54 "the measure of a good debugger is not how soon you come up with a guess or how good your guesses are, but how few bad guesses you actually act on."
+
+
+P. 32 "The red flag to watch out for is substituting a seemingly identical environment and expecting it to fail in the same way.  
+. . .  could locate the leak better with a hose than with the occasional rainstorm."
+
+P. 40 Always save copies of debugging and testing tools in version-control systems.
+
+P. 45 Describes tale of how checking single-byte writes failed to detect double-writes caused by line noise.  Each readback byte matched the one written, but wrong sequence caused a checksum failure.
+
+P. 49 "When you're all done disproving your bad guesses, you still have to find the bug. You still have the same amount of work to do that you had before, only now you have less time."
+
+P. 54 "How deep should you go before you stop looking and start thinking again? The simple answer is, "Keep looking until the failure you can see has a limited number of possible causes"
+
+P. 55 "Once you have this view of the failure, when you think you've fixed the bug, it's easy to prove that you did fix the bug. You don't have to rely on statistics"
+
+P. 58 "Make sure that instrumentation is part of the product requirements."
+
+P. 62: "Natural gas has a rotten egg odor added to it for the sole purpose of making it detectable when it's leaking."  Exemplifies planning to debug.  Debuggong should be incorporated in all phases of the product lifecycle.
+
+P. 63 "after you've added instrumentation to a failing system, make it fail again"
+
+P. 64 "you should guess only to focus the search. . . when you make a particular guess because that problem is both very likely and easy to fix, that's the one time you should try a fix without actually seeing the details of the failure."
+
+P. 65 "You can think up thousands of possible reasons for a failure. You can see only the actual cause."
+
+P 70 "But the rule that our technician demonstrated particularly well with this debugging session was "Divide and Conquer." He narrowed the search by repeatedly splitting up the search space into a good half and a bad half, then looking further into the bad half for the problem."  Newton-Raphson!
+
+P. 71 "The common technique used in any efficient target search is called successive approximation"
+
+P. 82 "Fix the bugs you know about. Bugs defend and hide one another. . . . Our software engineer made a change to try to fix the problem, but when it didn't fix the problem, he assumed that it had no effect. This was a really bad assumption . . . .
+
+P. 84 "Our software engineer made a change to try to fix the problem, but when it didn't fix the problem, he assumed that it had no effect. This was a really bad assumption . . . .  When his change didn't fix the problem, he should have backed it out immediately."
+
+P. 88 "On nuclear-powered subs, there's a brass bar in front of the control panel for the power plant. When status alarms begin to go off, the engineers are trained to grab the brass bar with both hands and hold on until they've looked at all the dials and indicators, and understand exactly what's going on in the system."
+
+P. 91 "if a change doesn't seem to have an effect, back it out right away!  . . . .
+When you look at a long, complex log, you'll be tempted to look at suspect areas only, and that's fine if you find something right away. But if you don't, be prepared to look at the whole log—you don't know where the difference will show up."  Helps turn suspicion away fromirrelevant error messages and warnings.
+
+P. 109 'It's classic to say, "Hmm, this new code works just like the old code" and then find out that, in fact, you didn't actually load the new code. You loaded the old code, or you loaded the new code but it's still executing the old code because you didn't reboot your computer or you left an easier-to-find copy of the old code on your system.'
+
+P. 110 "Your car won't start. Before you take apart the carburetor, are you out of gas?"
+
+P. 111 "Your bad assumptions may not be about the product you're building, but rather about the tools you're using to build it, as in the consultant story. Default settings are a common problem."
+
+P. 116 "It's hard to see the big picture from the bottom of a rut."
+
+P. 121"Report symptoms, not theories. The reason you went to someone else for fresh insight is that your theories aren't getting you anywhere. If you go to somebody fresh and lay a theory on her, you drag her right down into the same rut you're in. At the same time, you've probably hidden some key details she needs to know, because your bias says they're not important. So be firm about this. When you ask for help, describe what happened. Describe what you've seen. Describe conditions if you can. Make sure you tell her what's intermittent and what isn't. But don't talk about what you think is the cause of the problem."
+
+
+P. 122 "Bugs happen. Take pride in getting rid of them, not in getting rid of them by yourself."
+
+P.127 "Until you've cycled from fixed to broken and back to fixed again, changing only the intended fix, you haven't proved that you fixed it."
+
+P. 148 "just because the leak is in somebody else's end of the boat doesn't mean my end won't sink when theirs does.)"
+
+P. 160 Regarding remote help desk work, "If you have built-in configuration reporting tools, you can get an accurate sense of what's installed and how it's configured. If you don't have those tools, this would be a good time to march on down to the product planning group and pound on their desks until they put configuration reporting tools into the requirements for all future versions of your product."  Consider Debian's reportbug.
+
+P. 165 "As you instruct the users to do or undo something, make them tell you when they're done, before you go on to the next step. In fact, have them tell you what they did, rather than just asking them if they did what you asked; that way you can verify that they did the right thing."
+
+P. 168 "remember that users are more easily satisfied that the problem has been fixed than a good debugger would be. Invite them to be on the lookout for vestiges of the problem or side effects of the fix. Have them get in touch immediately if anything comes up, so you can get back into it before too many other random changes happen."
