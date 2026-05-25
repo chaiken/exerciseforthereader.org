@@ -40,3 +40,87 @@ P. 101: "The sole function of mathematical statements is to help you generate me
 P. 106: "The shy little voice that's telling you that you don't understand, that's your mathematical intuition. Don't confuse it with the loud noisy voice that's telling you that you're not smart enough."
 
 P. 109: "Mathematical work isn't a series of lightning insights and strokes of genius. It's first of all a work of reeducation based on the repetition of the same exercises of imagination."
+
+P. 120: "The essence of mental plasticity is to transform audacity into competence."
+
+P. 131: "Logic is something inert, like a pebble. My intuition is organic, it is living and growing."
+
+P. 132: "System 1 has an edge: it isn't bound by the constraints of language and writing."
+
+P. 135: "Solving a problem is only ever a pretext. The important thing is that you have the power to reeducate your intuition, to gain confidence in your body and thoughts. . . . Kahneman says that the first time you stand up on a surfboard, you'll fall in the water, and concludes that humans are born with a defective sense of balance and that getting up on a surfboard can never become intuitive. His advice is to get out of the water and learn the laws of physics by heart. My advice is to get back up on the board."
+
+P. 141: "There are no tricks. There never were any and there never will be. Believing in the existence of tricks is as toxic as believing in the existence of truths that are counterintuitive by nature. . . . Believing that tricks exist is to accept the idea that there are things you'll never understand and that you have to learn by heart. It's to confuse the line-by-line verification of a proof with its intuitive understanding. It's to enter into a submissive relationship to System 2."
+
+P. 144: "Looking for and finding the right way of seeing things is the driving force of mathematics. It's the main source of pleasure you can take from it. . . . things is enough to make them exist, and we can dispense with the effort of really imagining them. . . . Naming things certainly allows us to evoke them, but not to make them present in our mind with the intensity and clarity that allow for creative thinking."
+
+P. 155: "Mathematics is the science of imagination. . . . logic isn't the enemy of imagination. It can even be a close ally. The real enemy of imagination, that which blocks understanding and makes us feel like fools, is fear."
+
+P. 159: "mathematicians have a saying, that the only thing a math lesson is good for is to allow the professor to understand. . . . The simpler my talks were, the more intelligent people thought I was."
+
+P. 161: "The first level consists of following the reasoning step by step and accepting that it's correct. Accepting is not the same as understanding. The second level is real understanding. It requires seeing where the reasoning comes from and why it's natural."
+
+P. 162: "The real imposters are the ones without the syndrome."
+
+P. 163: "It might be hard to bluff and pretend that you understand. It's even harder to stop bluffing altogether and ask all the stupid questions that come to mind, without filter, without shame."
+
+P. 166: "It's normal not to understand. It's normal to be afraid. It's normal to have to struggle to contain your fear. It is, in fact, precisely what's at stake."
+
+P. 179: "Our insecurity is such that we've abandoned the idea that real understanding is even possible. Because we refuse to believe that it could really be simple, we look for knowledge in the opposite direction, in the complicated and difficult."
+
+P. 185: "Doubt is a technique of mental clarification. It serves to construct rather than destroy."
+
+P. 188: 'openness to doubt: an attitude of curiosity that excludes all fear as regards one's own mistakes, that allows us to detect and constantly correct them." per Descartes
+
+P. 207: "Writing down dreams, in my experience, is the closest you can get to mathematical writing."
+
+P. 235: "Presenting a problem as structurally being a paradox is just a pompous way of saying you can't solve it."
+
+P. 242: cThe most spectacular illustration of our inability to give a precise meaning to words comes from the pen of Charles Darwin himself, in 1859, in the opening lines of the second chapter of Origin of Species: "Nor shall I here discuss the various definitions which have been given of the term species. No one definition has as yet satisfied all naturalists; yet every naturalist knows vaguely what he means when he speaks of a species."' ---> Can't define pornography, but know it when I see it.
+
+P. 269: "I used my intuition to get ahead in math. At least that's what I believed I was doing at first, when I still thought that what counted was the official math, the stuff in the books. As I matured, I came to the realization that it worked the other way around. I was using math to develop my intuition. Math is first and foremost an inner tool. Its main purpose is to enhance human cognition. With the correct exercises of imagination, we have the ability to develop an intuitive and familiar understanding of mathematical notions. We can appropriate them and make them an extension of our bodies. The true math is the secret math, the one that extends our intuitive understanding of the world that surrounds us."
+
+P. 278: "I studied math because I couldn't understand how it was possible to understand it. I expected someone would explain to me why it was possible and how to do it. The explanation never came. The subject was never even raised."
+
+P. 281: "To understand math is to reprogram your intuition. It is, above all, a matter of neuroplasticity."
+
+P. 282: "the fastest way to learn is to follow the path of maximum perplexity."
+
+P. 285: "Mathematical imagination is all the more visionary and limitless in that it is guided by mathematical truth, the secret ingredient that makes it possible to figure out the right things to imagine, the ones that will eventually solidify and expand our intuitive understanding of the world around us. This is where the true foundations of mathematics are to be found, and not in formal logic . . . if we dream and if we daydream, it's because this allows us to fabricate understanding. What we imagine modifies the actual wiring of our brain and literally changes the way we see the world."
+
+P. 286: "Now that we're teaching machines the secrets of intelligence, it's about time we start teaching humans."
+
+https://arxiv.org/pdf/math/9404236
+ON PROOF AND PROGRESS IN MATHEMATICS
+by William Thurston
+"People have very powerful
+facilities for taking in information visually or kinesthetically, and thinking
+with their spatial sense. On the other hand, they do not have a very
+good built-in facility for inverse vision, that is, turning an internal spatial
+understanding back into a two-dimensional image. Consequently, mathe-
+maticians usually have fewer and poorer figures in their papers and books
+than in their heads. . . . Personally, I put a lot of effort into "listening"
+to my intuitions and associations, and building them into metaphors and
+connections. This involves a kind of simultaneous quieting and focusing of
+my mind. Words, logic, and detailed pictures rattling around can inhibit
+intuitions and associations."
+"more easily
+recorded and communicated formalism and machinery tend to gradually take over
+from other modes of thinking." As with Feynman diagrams.
+
+Particularly true of C++: "We mathematicians need to put far greater effort into communicating mathe-
+matical ideas. To accomplish this, we need to pay much more attention to com-
+municating not just our definitions, theorems, and proofs, but also our ways of
+thinking. We need to appreciate the value of different ways of thinking about the
+same mathematical structure.  We need to focus far more energy on understanding and explaining the basic
+mental infrastructure of mathematics—with ***consequently less energy on the most
+recent results.*** This entails developing mathematical language that is effective for
+the radical purpose of conveying ideas to people who don't already know them."
+
+"I think that mathematics is one of the most intellectually gratifying of human activities. Because we have a high standard for clear and convincing thinking and because we place a high value on listening to and trying to understand each other, we don't engage in interminable arguments and endless redoing of our mathematics.
+We are prepared to be convinced by others."
+
+"reliability does not primarily come from mathematicians formally checking formal arguments; it comes from mathematicians thinking carefully and critically about mathematical ideas."
+
+"However, we should recognize that the humanly understandable and humanly checkable proofs that we actually do are what is most important to us, and that they are quite different from formal proofs. For the present, formal proofs are out of reach and mostly irrelevant: we have good human processes for checking mathematical validity."
+
+"What we are producing is human understanding. We have many different ways to understand and many different processes that contribute to our understanding. We will be more satisfied, more productive and happier if we recognize and focus on this."
